@@ -6,7 +6,7 @@
     <title>Agent Notes Demo</title>
     <meta
       name="description"
-      content="一个真正多页的静态 blog demo，包含首页卡片页与文章详情页。"
+      content="一个真正多页的静态 blog demo，包含首页卡片页、封面精选区、作者区与分页。"
     />
     <link rel="stylesheet" href="./styles.css" />
     <script src="./script.js" defer></script>
@@ -15,24 +15,81 @@
     <header class="site-header">
       <div class="site-header__inner">
         <a class="site-brand" href="./index.html">Agent Notes Demo</a>
-        <button id="theme-toggle" type="button" aria-label="切换主题">切换主题</button>
+
+        <div class="site-header__right">
+          <nav class="top-nav" aria-label="Primary">
+            <a href="./index.html" aria-current="page">Home</a>
+            <a href="#featured-post">Featured</a>
+            <a href="#authors">Authors</a>
+            <a href="#latest-posts-title">Archive</a>
+          </nav>
+
+          <button id="theme-toggle" type="button" aria-label="切换主题">切换主题</button>
+        </div>
       </div>
     </header>
 
     <main class="page-shell">
-      <section class="hero hero--home" aria-labelledby="home-title">
-        <p class="eyebrow">Multi-page blog demo</p>
-        <h1 id="home-title">Agent Notes Demo</h1>
-        <p id="home-description" class="hero__text">
-          这是一个真正多页的 blog 演示：首页展示文章卡片流，点击后进入独立文章详情页。
-        </p>
+      <section id="featured-post" class="hero hero--cover" aria-labelledby="home-title">
+        <div class="hero__body">
+          <p class="eyebrow">OpenClaw / Pi / Multi-page blog</p>
+          <h1 id="home-title">Agent Notes Demo</h1>
+          <p id="home-description" class="hero__text">
+            这是一个更接近真实博客的首页：首页包含封面精选区、导航、作者区和分页卡片流。
+          </p>
+
+          <div class="hero__actions">
+            <a id="hero-primary-link" class="button-link" href="./post.html">阅读精选文章</a>
+            <a class="button-link button-link--ghost" href="#latest-posts-title">浏览最新文章</a>
+          </div>
+        </div>
+
+        <aside class="hero-feature" aria-label="Featured post summary">
+          <p class="eyebrow eyebrow--muted">Featured article</p>
+          <h2 id="featured-title">正在加载精选文章…</h2>
+          <p id="featured-excerpt" class="hero-feature__excerpt">
+            页面将根据 articles.json 自动选择一篇精选文章展示在封面区。
+          </p>
+          <p id="featured-meta" class="hero-feature__meta">正在加载元信息…</p>
+        </aside>
+      </section>
+
+      <section class="stats-row" aria-label="Blog statistics">
+        <article class="stat-card">
+          <span id="stat-post-count" class="stat-card__value">—</span>
+          <span class="stat-card__label">Posts</span>
+        </article>
+        <article class="stat-card">
+          <span id="stat-author-count" class="stat-card__value">—</span>
+          <span class="stat-card__label">Authors</span>
+        </article>
+        <article class="stat-card">
+          <span id="stat-source-count" class="stat-card__value">—</span>
+          <span class="stat-card__label">Sources</span>
+        </article>
+      </section>
+
+      <section id="authors" class="authors-section" aria-labelledby="authors-title">
+        <div class="section-head section-head--stacked">
+          <div>
+            <p class="eyebrow eyebrow--muted">Author spotlight</p>
+            <h2 id="authors-title">作者区</h2>
+            <p class="section-copy">聚合当前站点文章作者，显示发文数量与来源分布。</p>
+          </div>
+        </div>
+
+        <div id="author-list" class="author-grid" aria-live="polite" aria-busy="true">
+          <article class="empty-state empty-state--compact">
+            <p>正在加载作者信息…</p>
+          </article>
+        </div>
       </section>
 
       <section class="section-head" aria-labelledby="latest-posts-title">
         <div>
           <p class="eyebrow eyebrow--muted">Homepage cards</p>
           <h2 id="latest-posts-title">Latest posts</h2>
-          <p class="section-copy">卡片页负责概览、筛读和跳转；详情页负责完整阅读。</p>
+          <p class="section-copy">首页卡片流负责概览、筛读和跳转；详情页负责完整阅读。</p>
         </div>
         <p id="post-count" class="section-badge">正在加载…</p>
       </section>
@@ -43,6 +100,10 @@
           <p>页面将从 <code>articles.json</code> 读取文章数据并渲染首页卡片。</p>
         </article>
       </section>
+
+      <nav id="pagination" class="pagination" aria-label="Pagination" aria-live="polite">
+        <span class="pagination__link is-disabled">正在准备分页…</span>
+      </nav>
     </main>
   </body>
 </html>
