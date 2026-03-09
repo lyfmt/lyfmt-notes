@@ -1,0 +1,41 @@
+{
+  "available": true,
+  "layout": "detail-zh",
+  "translatedFrom": "https://hackaday.com/2026/03/09/building-a-class-100-semiconductor-cleanroom-inside-a-shed/",
+  "sourceName": "Hackaday",
+  "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "https://hackaday.com/wp-content/uploads/2026/03/shed_cleanroom_outside_dr.semiconductor_youtube.jpg",
+      "alt": "Just your typical backyard cleanroom shed. (Credit: Dr. Semiconductor, YouTube)",
+      "caption": "Just your typical backyard cleanroom shed. (Credit: Dr. Semiconductor, YouTube)"
+    },
+    {
+      "type": "paragraph",
+      "html": "多数人眼里，那间花园小棚不过就是拿来堆放园艺工具的地方；但如果你像 [Dr. Semiconductor] 一样看问题，你看到的则可能是一间潜在的 <a href=\"https://www.youtube.com/watch?v=HfSO-LCKmrA\" target=\"_blank\" rel=\"noreferrer noopener\">用于半导体制造的洁净室</a>。这话听起来也许有些离谱，但不同等级的 <a href=\"https://en.wikipedia.org/wiki/Cleanroom\" target=\"_blank\" rel=\"noreferrer noopener\">洁净室</a> 背后的那些基础步骤，无论是用在造价数百万美元的晶圆厂，还是一个普通棚屋里，其实都同样适用。"
+    },
+    {
+      "type": "paragraph",
+      "html": "整个系统的关键在于 HEPA 过滤与正压控制：持续把洁净空气压入洁净室，同时防止外部的脏空气倒流进入。这个棚屋还被分隔成两个区域，第一间用作更衣间，进入真正的洁净室之前，需要先在这里换上洁净室装备。"
+    },
+    {
+      "type": "paragraph",
+      "html": "除了使用阻燃石膏板之外，内部墙面还涂覆了一层水性环氧涂料，使表面更加平整，也尽量避免残留碎屑。与此同时，HEPA 过滤系统会持续过滤棚屋内的空气，并引入一部分室外新风；空调设备则负责将温度维持在稳定状态。"
+    },
+    {
+      "type": "paragraph",
+      "html": "实测结果显示，这间棚屋内对大于 0.5 µm 颗粒的污染控制，已经好到足以达到 FED STD 209E 的 Class 100 等效水平；换算到现行标准，就是 ISO 5，即每立方米最多 3,520 个颗粒。相比之下，普通室内空气通常只有 ISO 9，颗粒数最高可达每立方米 35,200,000 个。换句话说，这间棚屋的洁净度已经足以支撑至少一部分半导体 R&amp;D 实验室工作，而这也正是 Dr. Semiconductor 频道一直聚焦的内容。"
+    },
+    {
+      "type": "paragraph",
+      "html": "感谢 <a href=\"https://hackaday.com/author/thayer/\" target=\"_blank\" rel=\"noreferrer noopener\">Thayer</a> 提供线索。"
+    },
+    {
+      "type": "embed",
+      "provider": "youtube",
+      "src": "https://www.youtube.com/embed/HfSO-LCKmrA?feature=oembed",
+      "title": "There’s a Class 100 semiconductor cleanroom inside this backyard shed."
+    }
+  ]
+}

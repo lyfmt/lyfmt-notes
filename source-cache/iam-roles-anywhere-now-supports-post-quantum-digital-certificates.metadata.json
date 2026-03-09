@@ -1,0 +1,13 @@
+{
+  "item": {
+    "id": 2639,
+    "title": "IAM Roles Anywhere now supports post-quantum digital certificates",
+    "blog": "AWS Architecture Blog",
+    "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/iam-roles-anywhere-post-quantum-digital-certificates",
+    "published": "2026-03-09T19:53:00Z",
+    "discovered": "2026-03-09T23:00:49.140843054Z",
+    "is_read": false
+  },
+  "probe": {},
+  "classification": "normal"
+}

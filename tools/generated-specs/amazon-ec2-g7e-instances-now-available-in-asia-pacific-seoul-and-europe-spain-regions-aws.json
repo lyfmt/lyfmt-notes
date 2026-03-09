@@ -1,0 +1,59 @@
+{
+  "slug": "amazon-ec2-g7e-instances-now-available-in-asia-pacific-seoul-and-europe-spain-regions-aws",
+  "title": "Amazon EC2 G7e instances now available in Asia Pacific (Seoul) and Europe (Spain) regions",
+  "author": "AWS Architecture Blog",
+  "publishedAt": "2026-03-09",
+  "source": "AWS Architecture Blog",
+  "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-ec2-g7e-seoul-spain-regions/",
+  "tags": [
+    "AI",
+    "Infrastructure",
+    "GPU"
+  ],
+  "excerpt": "AWS 将搭载 NVIDIA RTX PRO 6000 Blackwell Server Edition GPU 的 EC2 G7e 实例扩展到首尔和西班牙区域，主打 LLM、agentic AI、多模态与 spatial computing 工作负载。",
+  "content": [
+    {
+      "heading": "文章核心",
+      "paragraphs": [
+        "EC2 G7e 现已进入亚太（首尔）和欧洲（西班牙）区域，继续强化 AWS 在高性能 AI / 图形混合算力上的区域覆盖。",
+        "这类实例面向的是既要跑大模型推理、又可能需要多 GPU、图形处理或空间计算能力的工作负载。"
+      ]
+    },
+    {
+      "heading": "值得关注的点",
+      "paragraphs": [
+        "从规格看，G7e 把 Blackwell GPU、较高显存、P2P / RDMA 与高网络带宽组合在一起，明显是在承接更重的多 GPU 推理与多模态场景。",
+        "区域扩展后，欧洲和东北亚团队部署本地化 AI 服务时，不必总是回落到更远的区域来拿到同级别算力。"
+      ]
+    }
+  ],
+  "detail": {
+    "available": true,
+    "layout": "detail-zh",
+    "translatedFrom": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-ec2-g7e-seoul-spain-regions/",
+    "sourceName": "AWS Architecture Blog",
+    "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "html": "即日起，搭载 NVIDIA RTX PRO 6000 Blackwell Server Edition GPU 的 Amazon EC2 G7e 实例，已在亚太地区（首尔）和欧洲地区（西班牙）正式可用。与 G6e 相比，G7e 的推理性能最高可提升至 2.3 倍。"
+      },
+      {
+        "type": "paragraph",
+        "html": "客户可以使用 G7e 实例来部署大语言模型（LLM）、Agentic AI 模型、多模态生成式 AI 模型，以及 Physical AI 模型。对于空间计算类工作负载，以及同时需要图形处理与 AI 计算能力的任务，G7e 实例可提供最高性能。G7e 实例最高配备 8 块 NVIDIA RTX PRO 6000 Blackwell Server Edition GPU，每块 GPU 提供 96 GB 显存，并搭载第五代 Intel Xeon 处理器；同时支持最高 192 个虚拟 CPU（vCPU）和最高 1600 Gbps 的网络带宽。G7e 还支持 NVIDIA GPUDirect Peer-to-Peer（P2P），可提升多 GPU 工作负载的性能。多 GPU 的 G7e 实例在 EC2 UltraClusters 中还支持结合 EFA 使用 NVIDIA GPUDirect Remote Direct Memory Access（RDMA），从而降低小规模多节点工作负载的延迟。"
+      },
+      {
+        "type": "paragraph",
+        "html": "目前，你可以在以下 AWS 区域使用 Amazon EC2 G7e 实例：美国西部（俄勒冈）、美国东部（弗吉尼亚北部、俄亥俄）、欧洲（西班牙）以及亚太地区（东京、首尔）。购买方式方面，G7e 实例支持按需实例（On-Demand Instances）、竞价型实例（Spot Instances），也可纳入 Savings Plans。"
+      },
+      {
+        "type": "paragraph",
+        "html": "如果你想开始使用，可以前往 <a href=\"https://console.aws.amazon.com/\" target=\"_blank\" rel=\"noreferrer noopener\">AWS Management Console</a>、<a href=\"https://aws.amazon.com/cli/\" target=\"_blank\" rel=\"noreferrer noopener\">AWS Command Line Interface</a>（CLI）以及 AWS SDKs。想了解更多，可查看 <a href=\"https://aws.amazon.com/ec2/instance-types/g7e/\" target=\"_blank\" rel=\"noreferrer noopener\">G7e instances</a>。"
+      }
+    ]
+  },
+  "workflow": {
+    "articleId": 2640,
+    "rssTitle": "Amazon EC2 G7e instances now available in Asia Pacific (Seoul) and Europe (Spain) regions"
+  }
+}

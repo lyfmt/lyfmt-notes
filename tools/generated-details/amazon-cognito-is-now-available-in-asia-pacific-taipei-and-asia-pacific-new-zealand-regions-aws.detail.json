@@ -1,0 +1,21 @@
+{
+  "available": false,
+  "layout": "draft",
+  "translatedFrom": "https://aws.amazon.com/about-aws/whats-new/2026/03/cognito-taipei-and-new-zealand-regions/",
+  "sourceName": "AWS Architecture Blog",
+  "sourceDescription": "以下为根据原文结构自动生成的详情草稿，已保留段落层次、图片与媒体；默认尚未完成中文翻译润色。",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "html": "Amazon Cognito is now available in the AWS Asia Pacific (Taipei) and Asia Pacific (New Zealand) Regions. This launch introduces all Amazon Cognito features and tiers, allowing customers to implement secure sign-in and access control for users, AI agents, and microservices in minutes."
+    },
+    {
+      "type": "paragraph",
+      "html": "For a full list of regions where Amazon Cognito is available, refer to the <a href=\"https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/\" target=\"_blank\" rel=\"noreferrer noopener\">AWS Region Table</a>."
+    },
+    {
+      "type": "paragraph",
+      "html": "To learn more about Amazon Cognito, refer to the <a href=\"https://docs.aws.amazon.com/cognito/latest/developerguide/what-is-amazon-cognito.html\" target=\"_blank\" rel=\"noreferrer noopener\">Developer Guide</a>, <a href=\"https://aws.amazon.com/cognito/\" target=\"_blank\" rel=\"noreferrer noopener\">Product Detail Page</a>, and <a href=\"https://aws.amazon.com/cognito/pricing/\" target=\"_blank\" rel=\"noreferrer noopener\">Pricing Detail Page</a>."
+    }
+  ]
+}

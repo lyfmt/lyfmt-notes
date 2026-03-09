@@ -1,0 +1,21 @@
+{
+  "available": true,
+  "layout": "detail-zh",
+  "translatedFrom": "https://aws.amazon.com/about-aws/whats-new/2026/03/cognito-taipei-and-new-zealand-regions/",
+  "sourceName": "AWS Architecture Blog",
+  "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "html": "Amazon Cognito 现已在 AWS 亚太（台北）和亚太（新西兰）区域正式可用。此次发布带来了 Amazon Cognito 的全部功能与各个层级，使客户只需几分钟，就能为用户、AI 代理和微服务建立安全的登录与访问控制能力。"
+    },
+    {
+      "type": "paragraph",
+      "html": "如需查看 Amazon Cognito 支持的全部区域列表，请参阅 <a href=\"https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/\" target=\"_blank\" rel=\"noreferrer noopener\">AWS Region Table</a>。"
+    },
+    {
+      "type": "paragraph",
+      "html": "如果你想进一步了解 Amazon Cognito，可以参阅 <a href=\"https://docs.aws.amazon.com/cognito/latest/developerguide/what-is-amazon-cognito.html\" target=\"_blank\" rel=\"noreferrer noopener\">开发者指南</a>、<a href=\"https://aws.amazon.com/cognito/\" target=\"_blank\" rel=\"noreferrer noopener\">产品详情页</a>以及 <a href=\"https://aws.amazon.com/cognito/pricing/\" target=\"_blank\" rel=\"noreferrer noopener\">定价详情页</a>。"
+    }
+  ]
+}

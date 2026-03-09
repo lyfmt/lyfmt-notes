@@ -1,0 +1,20 @@
+{
+  "item": {
+    "id": 2641,
+    "title": "Building a Class 100 Semiconductor Cleanroom Inside a Shed",
+    "blog": "Hackaday",
+    "url": "https://hackaday.com/2026/03/09/building-a-class-100-semiconductor-cleanroom-inside-a-shed/",
+    "published": "2026-03-09T23:00:09Z",
+    "discovered": "2026-03-09T23:00:49.452861047Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://hackaday.com/2026/03/09/building-a-class-100-semiconductor-cleanroom-inside-a-shed/",
+    "ok": true,
+    "title": "Building A Class 100 Semiconductor Cleanroom Inside A Shed",
+    "description": "Most people see that garden shed as little more than a place to store some gardening tools in, but if you’re like [Dr. Semiconductor], then what you see is a potential cleanroom for semicondu…",
+    "fetched_bytes": 95297,
+    "error": null
+  },
+  "classification": "normal"
+}

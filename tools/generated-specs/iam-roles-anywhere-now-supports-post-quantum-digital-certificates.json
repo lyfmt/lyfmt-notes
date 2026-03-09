@@ -1,0 +1,59 @@
+{
+  "slug": "iam-roles-anywhere-now-supports-post-quantum-digital-certificates",
+  "title": "IAM Roles Anywhere now supports post-quantum digital certificates",
+  "author": "AWS Architecture Blog",
+  "publishedAt": "2026-03-09",
+  "source": "AWS Architecture Blog",
+  "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/iam-roles-anywhere-post-quantum-digital-certificates",
+  "tags": [
+    "Security",
+    "Infrastructure",
+    "PKI"
+  ],
+  "excerpt": "IAM Roles Anywhere 现已支持 NIST 标准化的抗量子签名算法 ML-DSA，让依赖 X.509 证书在 AWS 外部认证工作负载的场景，可以提前为量子时代的证书信任链做准备。",
+  "content": [
+    {
+      "heading": "文章核心",
+      "paragraphs": [
+        "AWS 这次给 IAM Roles Anywhere 加上的不是普通功能开关，而是对抗量子数字签名算法 ML-DSA 的支持。",
+        "它面向的是那些在 AWS 外部运行、但通过 X.509 证书向 AWS 申请临时凭证的工作负载，核心意义在于保护证书信任链不因未来量子计算能力而被削弱。"
+      ]
+    },
+    {
+      "heading": "值得关注的点",
+      "paragraphs": [
+        "这类更新触及的是 PKI 和证书签名算法层，而不是单纯的 IAM 权限语义，因此对混合云、边缘和本地系统接入 AWS 的长期安全路线更有影响。",
+        "一旦企业已经在规划证书体系升级，这次支持意味着 IAM Roles Anywhere 也可以更早纳入抗量子迁移路径。"
+      ]
+    }
+  ],
+  "detail": {
+    "available": true,
+    "layout": "detail-zh",
+    "translatedFrom": "https://aws.amazon.com/about-aws/whats-new/2026/03/iam-roles-anywhere-post-quantum-digital-certificates",
+    "sourceName": "AWS Architecture Blog",
+    "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "html": "发表于：2026 年 3 月 9 日"
+      },
+      {
+        "type": "paragraph",
+        "html": "<a href=\"https://aws.amazon.com/iam/roles-anywhere/\" target=\"_blank\" rel=\"noreferrer noopener\">AWS Identity and Access Management (IAM) Roles Anywhere</a> 现已支持 <a href=\"https://csrc.nist.gov/pubs/fips/204/final\" target=\"_blank\" rel=\"noreferrer noopener\">FIPS 204 Module-Lattice Digital Signature Standard (ML-DSA)</a>。这是一种由美国国家标准与技术研究院（NIST）制定标准的抗量子数字签名算法，可帮助防范那些掌握大规模量子计算机的威胁行为者。对于通过证书颁发机构签发的 X.509 证书向 AWS 认证工作负载的 IAM Roles Anywhere 客户来说，ML-DSA 尤其重要，因为一旦所用签名算法被削弱，原本不应具备权限的用户就可能借此签发证书并获得未授权访问。"
+      },
+      {
+        "type": "paragraph",
+        "html": "IAM Roles Anywhere 让运行在 AWS 之外的工作负载，也能借助 X.509 证书获取临时 AWS 凭证，从而访问 AWS 资源。要在 AWS 环境与您的公钥基础设施（PKI）之间建立信任关系，需要先创建一个信任锚点：既可以引用您的 <a href=\"https://aws.amazon.com/private-ca/\" target=\"_blank\" rel=\"noreferrer noopener\">AWS Private Certificate Authority</a>，也可以将您自己的证书颁发机构（CA）注册到 IAM Roles Anywhere 中。现在，您已经可以把由 ML-DSA 签名的 CA 证书用作 IAM Roles Anywhere 的信任锚点，并签发绑定到 ML-DSA 密钥的终端实体证书。"
+      },
+      {
+        "type": "paragraph",
+        "html": "该功能现已在所有提供 IAM Roles Anywhere 的 <a href=\"https://docs.aws.amazon.com/general/latest/gr/rolesanywhere.html\" target=\"_blank\" rel=\"noreferrer noopener\">AWS 区域</a> 中可用，其中包括 AWS GovCloud（美国）区域、AWS European Sovereign Cloud（Germany）区域以及中国区域。想进一步了解，请参阅 <a href=\"https://docs.aws.amazon.com/rolesanywhere/latest/userguide/authentication-sign-process.html\" target=\"_blank\" rel=\"noreferrer noopener\">IAM Roles Anywhere 用户指南</a>。"
+      }
+    ]
+  },
+  "workflow": {
+    "articleId": 2639,
+    "rssTitle": "IAM Roles Anywhere now supports post-quantum digital certificates"
+  }
+}
