@@ -6,114 +6,42 @@
     <title>Agent Notes Demo</title>
     <meta
       name="description"
-      content="一个多篇文章博客首页 demo，用于展示文章列表与文章详情的双栏布局。"
+      content="一个真正多页的静态 blog demo，包含首页卡片页与文章详情页。"
     />
     <link rel="stylesheet" href="./styles.css" />
-    <style>
-      .home-intro,
-      .home-summary {
-        max-width: var(--content-width);
-        margin: 0 auto;
-      }
-
-      .home-summary {
-        margin-top: 1.5rem;
-      }
-
-      .home-summary h2 {
-        margin: 0 0 0.75rem;
-        font-size: clamp(1.2rem, 2vw, 1.5rem);
-      }
-
-      .home-summary p {
-        margin: 0;
-        color: var(--text-soft);
-      }
-
-      .home-grid {
-        display: grid;
-        grid-template-columns: minmax(260px, 320px) minmax(0, 1fr);
-        gap: 1.5rem;
-        margin-top: 2rem;
-        align-items: start;
-      }
-
-      .runtime-panel {
-        min-height: 24rem;
-        padding: 1.25rem;
-        border: 1px solid var(--border);
-        border-radius: var(--radius-lg);
-        background: linear-gradient(
-          180deg,
-          color-mix(in srgb, var(--surface-strong) 92%, transparent),
-          var(--surface)
-        );
-        box-shadow: var(--shadow-soft);
-      }
-
-      .loading-placeholder {
-        margin: 0;
-        color: var(--text-soft);
-      }
-
-      @media (max-width: 860px) {
-        .home-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .runtime-panel {
-          min-height: 16rem;
-        }
-      }
-    </style>
     <script src="./script.js" defer></script>
   </head>
-  <body>
+  <body data-page="home">
     <header class="site-header">
       <div class="site-header__inner">
-        <p class="site-title">Agent Notes Demo</p>
+        <a class="site-brand" href="./index.html">Agent Notes Demo</a>
         <button id="theme-toggle" type="button" aria-label="切换主题">切换主题</button>
       </div>
     </header>
 
-    <main>
-      <section class="post" aria-labelledby="home-title">
-        <header class="post-header home-intro">
-          <p class="post-source">多篇文章博客首页 Demo</p>
-          <h1 id="home-title">Agent Notes Demo</h1>
-          <p class="post-excerpt">
-            这是一个多篇文章博客首页演示，左侧展示文章列表，右侧展示选中文章详情，内容将由 JavaScript 在运行时加载并渲染。
-          </p>
-        </header>
+    <main class="page-shell">
+      <section class="hero hero--home" aria-labelledby="home-title">
+        <p class="eyebrow">Multi-page blog demo</p>
+        <h1 id="home-title">Agent Notes Demo</h1>
+        <p id="home-description" class="hero__text">
+          这是一个真正多页的 blog 演示：首页展示文章卡片流，点击后进入独立文章详情页。
+        </p>
+      </section>
 
-        <section class="home-summary" aria-labelledby="home-summary-title">
-          <h2 id="home-summary-title">首页说明</h2>
-          <p>
-            该页面用于演示多篇文章博客的首页外壳，重点是双栏布局与运行时渲染容器，而不是在 HTML 中硬编码文章内容。
-          </p>
-        </section>
-
-        <div class="home-grid" aria-label="博客首页双栏布局">
-          <aside
-            id="post-list"
-            class="runtime-panel"
-            aria-label="文章列表"
-            aria-live="polite"
-            aria-busy="true"
-          >
-            <p class="loading-placeholder">正在加载文章列表…</p>
-          </aside>
-
-          <section
-            id="post-detail"
-            class="runtime-panel"
-            aria-label="文章详情"
-            aria-live="polite"
-            aria-busy="true"
-          >
-            <p class="loading-placeholder">正在加载文章详情…</p>
-          </section>
+      <section class="section-head" aria-labelledby="latest-posts-title">
+        <div>
+          <p class="eyebrow eyebrow--muted">Homepage cards</p>
+          <h2 id="latest-posts-title">Latest posts</h2>
+          <p class="section-copy">卡片页负责概览、筛读和跳转；详情页负责完整阅读。</p>
         </div>
+        <p id="post-count" class="section-badge">正在加载…</p>
+      </section>
+
+      <section id="home-posts" class="card-grid" aria-live="polite" aria-busy="true">
+        <article class="empty-state">
+          <h3>正在加载文章</h3>
+          <p>页面将从 <code>articles.json</code> 读取文章数据并渲染首页卡片。</p>
+        </article>
       </section>
     </main>
   </body>

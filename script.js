@@ -1,14 +1,9 @@
 const THEME_KEY = "pi-blog-demo-theme";
+const DATA_URL = "./articles.json";
 
 const themeToggle = document.getElementById("theme-toggle");
-const postList = document.getElementById("post-list");
-const postDetail = document.getElementById("post-detail");
-
-const state = {
-  site: {},
-  posts: [],
-  selectedSlug: ""
-};
+const body = document.body;
+const pageType = body?.dataset?.page || "home";
 
 function getStoredTheme() {
   try {
@@ -35,11 +30,10 @@ function getPreferredTheme() {
 
 function applyTheme(theme) {
   const nextTheme = theme === "dark" ? "dark" : "light";
-
   document.documentElement.dataset.theme = nextTheme;
 
-  if (document.body) {
-    document.body.dataset.theme = nextTheme;
+  if (body) {
+    body.dataset.theme = nextTheme;
   }
 
   if (themeToggle) {
@@ -65,98 +59,12 @@ function initThemeToggle() {
   });
 }
 
-function setBusy(isBusy) {
-  const value = String(Boolean(isBusy));
-
-  if (postList) {
-    postList.setAttribute("aria-busy", value);
-  }
-
-  if (postDetail) {
-    postDetail.setAttribute("aria-busy", value);
-  }
-}
-
-function applyStyles(element, styles) {
-  Object.assign(element.style, styles);
-  return element;
-}
-
-function clearNode(node) {
-  if (node) {
-    node.replaceChildren();
-  }
-}
-
-function createTextElement(tagName, text, styles) {
-  const element = document.createElement(tagName);
-  element.textContent = text;
-
-  if (styles) {
-    applyStyles(element, styles);
-  }
-
-  return element;
-}
-
-function createMessageCard(title, message, detail, isError) {
-  const card = document.createElement("section");
-
-  if (isError) {
-    card.setAttribute("role", "alert");
-  }
-
-  applyStyles(card, {
-    display: "grid",
-    gap: "0.75rem",
-    padding: "1rem",
-    borderRadius: "1rem",
-    border: isError
-      ? "1px solid rgba(220, 38, 38, 0.35)"
-      : "1px solid var(--border, rgba(15, 23, 42, 0.1))",
-    background: isError
-      ? "rgba(220, 38, 38, 0.08)"
-      : "var(--surface-soft, rgba(255, 255, 255, 0.7))"
-  });
-
-  card.appendChild(
-    createTextElement("h2", title, {
-      margin: "0",
-      fontSize: "1.1rem",
-      lineHeight: "1.3",
-      color: "var(--heading, #0f172a)"
-    })
-  );
-
-  card.appendChild(
-    createTextElement("p", message, {
-      margin: "0",
-      color: "var(--text, #162033)",
-      lineHeight: "1.7"
-    })
-  );
-
-  if (detail) {
-    card.appendChild(
-      createTextElement("p", detail, {
-        margin: "0",
-        fontSize: "0.95rem",
-        color: "var(--text-soft, #4f5d73)",
-        lineHeight: "1.6"
-      })
-    );
-  }
-
-  return card;
-}
-
 function formatDate(value) {
   if (typeof value !== "string" || !value.trim()) {
     return "";
   }
 
   const date = new Date(value);
-
   if (Number.isNaN(date.getTime())) {
     return value;
   }
@@ -164,550 +72,302 @@ function formatDate(value) {
   return new Intl.DateTimeFormat(undefined, { dateStyle: "medium" }).format(date);
 }
 
-function getHashSlug() {
-  const rawHash = window.location.hash.startsWith("#")
-    ? window.location.hash.slice(1)
-    : window.location.hash;
+function qs(id) {
+  return document.getElementById(id);
+}
 
-  if (!rawHash) {
-    return "";
-  }
-
-  try {
-    return decodeURIComponent(rawHash);
-  } catch {
-    return rawHash;
+function clear(node) {
+  if (node) {
+    node.replaceChildren();
   }
 }
 
-function toHash(slug) {
-  return `#${encodeURIComponent(slug)}`;
-}
-
-function replaceHash(slug) {
-  if (!slug) {
-    return;
+function createElement(tag, className, text) {
+  const element = document.createElement(tag);
+  if (className) {
+    element.className = className;
   }
-
-  const nextHash = toHash(slug);
-
-  if (window.location.hash === nextHash) {
-    return;
+  if (typeof text === "string") {
+    element.textContent = text;
   }
-
-  if (window.history && typeof window.history.replaceState === "function") {
-    const nextUrl = `${window.location.pathname}${window.location.search}${nextHash}`;
-    window.history.replaceState(null, "", nextUrl);
-    return;
-  }
-
-  window.location.hash = nextHash;
+  return element;
 }
 
-function updateHash(slug) {
-  if (!slug) {
-    return;
-  }
-
-  const nextHash = toHash(slug);
-
-  if (window.location.hash === nextHash) {
-    renderSelectedPost(slug);
-    return;
-  }
-
-  window.location.hash = nextHash;
+function createTag(tagText) {
+  const item = createElement("span", "tag", tagText);
+  return item;
 }
 
-function isValidPost(post) {
-  return Boolean(post && typeof post.slug === "string" && typeof post.title === "string");
-}
-
-function getPosts() {
-  return state.posts;
-}
-
-function findPostBySlug(slug) {
-  return getPosts().find((post) => post.slug === slug) || null;
-}
-
-function createTagList(tags) {
-  const safeTags = Array.isArray(tags)
-    ? tags.filter((tag) => typeof tag === "string" && tag.trim())
-    : [];
-
-  if (!safeTags.length) {
+function createTagRow(tags) {
+  if (!Array.isArray(tags) || !tags.length) {
     return null;
   }
 
-  const list = document.createElement("div");
-  applyStyles(list, {
-    display: "flex",
-    flexWrap: "wrap",
-    gap: "0.45rem"
-  });
+  const row = createElement("div", "tag-row");
+  tags
+    .filter((tag) => typeof tag === "string" && tag.trim())
+    .forEach((tag) => row.appendChild(createTag(tag.trim())));
 
-  safeTags.forEach((tag) => {
-    const item = createTextElement("span", tag.trim(), {
-      display: "inline-flex",
-      alignItems: "center",
-      padding: "0.22rem 0.65rem",
-      borderRadius: "999px",
-      background: "var(--accent-soft, rgba(51, 102, 255, 0.12))",
-      color: "var(--heading, #0f172a)",
-      fontSize: "0.82rem",
-      fontWeight: "600",
-      lineHeight: "1.4"
-    });
-
-    list.appendChild(item);
-  });
-
-  return list;
+  return row.childNodes.length ? row : null;
 }
 
-function createMetaText(post) {
+function buildPostHref(slug) {
+  return `./post.html?slug=${encodeURIComponent(slug)}`;
+}
+
+function createMetaLine(post) {
   return [post.author, formatDate(post.publishedAt), post.source]
     .filter((part) => typeof part === "string" && part.trim())
     .join(" • ");
 }
 
-function createPostButton(post, isSelected) {
-  const button = document.createElement("button");
-  button.type = "button";
-  button.dataset.slug = post.slug;
-  button.setAttribute("aria-pressed", String(isSelected));
+function renderHome(site, posts) {
+  const description = qs("home-description");
+  const count = qs("post-count");
+  const container = qs("home-posts");
 
-  if (isSelected) {
-    button.setAttribute("aria-current", "true");
-  }
-
-  applyStyles(button, {
-    width: "100%",
-    display: "grid",
-    gap: "0.55rem",
-    padding: "1rem",
-    textAlign: "left",
-    borderRadius: "1rem",
-    border: isSelected
-      ? "1px solid var(--accent, #3366ff)"
-      : "1px solid var(--border, rgba(15, 23, 42, 0.1))",
-    background: isSelected
-      ? "var(--accent-soft, rgba(51, 102, 255, 0.12))"
-      : "var(--surface-soft, rgba(255, 255, 255, 0.7))",
-    color: "inherit",
-    cursor: "pointer",
-    boxShadow: isSelected ? "0 10px 24px rgba(51, 102, 255, 0.12)" : "none"
-  });
-
-  button.appendChild(
-    createTextElement("strong", post.title, {
-      color: "var(--heading, #0f172a)",
-      fontSize: "1rem",
-      lineHeight: "1.4"
-    })
-  );
-
-  const metaText = createMetaText(post);
-  if (metaText) {
-    button.appendChild(
-      createTextElement("span", metaText, {
-        color: "var(--text-soft, #4f5d73)",
-        fontSize: "0.88rem",
-        lineHeight: "1.5"
-      })
-    );
-  }
-
-  if (typeof post.excerpt === "string" && post.excerpt.trim()) {
-    button.appendChild(
-      createTextElement("span", post.excerpt.trim(), {
-        color: "var(--text, #162033)",
-        fontSize: "0.95rem",
-        lineHeight: "1.65"
-      })
-    );
-  }
-
-  const tagList = createTagList(post.tags);
-  if (tagList) {
-    button.appendChild(tagList);
-  }
-
-  button.addEventListener("click", () => {
-    updateHash(post.slug);
-  });
-
-  return button;
-}
-
-function renderPostList() {
-  if (!postList) {
+  if (!container) {
     return;
   }
 
-  clearNode(postList);
-
-  const wrapper = document.createElement("div");
-  applyStyles(wrapper, {
-    display: "grid",
-    gap: "1rem"
-  });
-
-  const siteTitle = typeof state.site.title === "string" && state.site.title.trim()
-    ? state.site.title.trim()
-    : "Posts";
-  const siteDescription = typeof state.site.description === "string" && state.site.description.trim()
-    ? state.site.description.trim()
-    : "";
-
-  const header = document.createElement("section");
-  applyStyles(header, {
-    display: "grid",
-    gap: "0.5rem"
-  });
-
-  header.appendChild(
-    createTextElement("h2", siteTitle, {
-      margin: "0",
-      color: "var(--heading, #0f172a)",
-      fontSize: "1.35rem",
-      lineHeight: "1.25"
-    })
-  );
-
-  if (siteDescription) {
-    header.appendChild(
-      createTextElement("p", siteDescription, {
-        margin: "0",
-        color: "var(--text-soft, #4f5d73)",
-        lineHeight: "1.7"
-      })
-    );
+  if (description && site?.description) {
+    description.textContent = site.description;
   }
 
-  wrapper.appendChild(header);
+  if (count) {
+    count.textContent = `${posts.length} 篇文章`;
+  }
 
-  const posts = getPosts();
+  clear(container);
+  container.setAttribute("aria-busy", "false");
+
   if (!posts.length) {
-    wrapper.appendChild(
-      createMessageCard(
-        "No posts available",
-        "articles.json loaded, but there are no posts to show.",
-        "Add at least one post object to the posts array.",
-        false
-      )
+    const empty = createElement("article", "empty-state");
+    empty.append(
+      createElement("h3", "", "暂无文章"),
+      createElement("p", "", "articles.json 已加载，但 posts 数组为空。")
     );
-    postList.appendChild(wrapper);
+    container.appendChild(empty);
     return;
   }
 
-  const list = document.createElement("div");
-  applyStyles(list, {
-    display: "grid",
-    gap: "0.85rem"
-  });
+  posts.forEach((post, index) => {
+    const card = createElement("article", "post-card");
 
-  posts.forEach((post) => {
-    list.appendChild(createPostButton(post, post.slug === state.selectedSlug));
-  });
+    const meta = createElement("p", "post-card__meta", createMetaLine(post));
+    const title = createElement("h3", "post-card__title");
+    const titleLink = createElement("a", "post-card__link", post.title);
+    titleLink.href = buildPostHref(post.slug);
+    title.appendChild(titleLink);
 
-  wrapper.appendChild(list);
-  postList.appendChild(wrapper);
+    const excerpt = createElement("p", "post-card__excerpt", post.excerpt || "");
+
+    const footer = createElement("div", "post-card__footer");
+    const more = createElement("a", "post-card__more", "阅读详情 →");
+    more.href = buildPostHref(post.slug);
+    footer.appendChild(more);
+
+    const tagRow = createTagRow(post.tags);
+    if (tagRow) {
+      footer.prepend(tagRow);
+    }
+
+    const indexBadge = createElement("span", "post-card__index", String(index + 1).padStart(2, "0"));
+
+    card.append(indexBadge, meta, title, excerpt, footer);
+    container.appendChild(card);
+  });
 }
 
-function createSectionParagraph(text) {
-  return createTextElement("p", text, {
-    margin: "0",
-    color: "var(--text, #162033)",
-    lineHeight: "1.8"
-  });
-}
+function renderPost(post, relatedPosts) {
+  const article = qs("post-article");
+  const related = qs("related-posts");
 
-function renderContentSections(container, content) {
-  const sections = Array.isArray(content) ? content : [];
-
-  if (!sections.length) {
-    container.appendChild(
-      createMessageCard(
-        "No content available",
-        "This post does not have any content sections yet.",
-        "Populate the content array in articles.json.",
-        false
-      )
-    );
+  if (!article) {
     return;
   }
 
-  sections.forEach((entry) => {
-    const section = document.createElement("section");
-    applyStyles(section, {
-      display: "grid",
-      gap: "0.75rem"
-    });
-
-    if (typeof entry === "string" && entry.trim()) {
-      section.appendChild(createSectionParagraph(entry.trim()));
-      container.appendChild(section);
-      return;
-    }
-
-    if (!entry || typeof entry !== "object") {
-      return;
-    }
-
-    if (typeof entry.heading === "string" && entry.heading.trim()) {
-      section.appendChild(
-        createTextElement("h3", entry.heading.trim(), {
-          margin: "0",
-          color: "var(--heading, #0f172a)",
-          fontSize: "1.15rem",
-          lineHeight: "1.35"
-        })
-      );
-    }
-
-    const paragraphs = Array.isArray(entry.paragraphs)
-      ? entry.paragraphs.filter((paragraph) => typeof paragraph === "string" && paragraph.trim())
-      : [];
-
-    paragraphs.forEach((paragraph) => {
-      section.appendChild(createSectionParagraph(paragraph.trim()));
-    });
-
-    if (section.childNodes.length) {
-      container.appendChild(section);
-    }
-  });
-
-  if (!container.childNodes.length) {
-    container.appendChild(
-      createMessageCard(
-        "No content available",
-        "This post does not have any renderable content sections.",
-        "Check the content array shape in articles.json.",
-        false
-      )
-    );
-  }
-}
-
-function updateDocumentTitle(post) {
-  const siteTitle = typeof state.site.title === "string" && state.site.title.trim()
-    ? state.site.title.trim()
-    : "Blog";
-
-  document.title = post ? `${post.title} — ${siteTitle}` : siteTitle;
-}
-
-function renderPostDetail(post) {
-  if (!postDetail) {
-    return;
-  }
-
-  clearNode(postDetail);
+  clear(article);
+  article.setAttribute("aria-busy", "false");
 
   if (!post) {
-    postDetail.appendChild(
-      createMessageCard(
-        "No post selected",
-        "Choose a post from the list to view its details.",
-        "",
-        false
-      )
+    const empty = createElement("section", "empty-state");
+    empty.append(
+      createElement("h2", "", "未找到文章"),
+      createElement("p", "", "请从首页重新选择文章。")
     );
-    updateDocumentTitle(null);
+    article.appendChild(empty);
+    document.title = "Post not found — Agent Notes Demo";
     return;
   }
 
-  const article = document.createElement("article");
-  applyStyles(article, {
-    display: "grid",
-    gap: "1.25rem"
-  });
+  document.title = `${post.title} — Agent Notes Demo`;
 
-  const header = document.createElement("header");
-  applyStyles(header, {
-    display: "grid",
-    gap: "0.75rem"
-  });
+  const header = createElement("header", "article-header");
+  const source = createElement("p", "eyebrow", post.source || "Post");
+  const title = createElement("h1", "article-title", post.title);
+  const meta = createElement("p", "article-meta", createMetaLine(post));
+  const excerpt = createElement("p", "article-excerpt", post.excerpt || "");
 
-  header.appendChild(
-    createTextElement("p", post.source || "Post", {
-      margin: "0",
-      color: "var(--text-soft, #4f5d73)",
-      fontSize: "0.92rem",
-      fontWeight: "600",
-      lineHeight: "1.5"
-    })
-  );
-
-  header.appendChild(
-    createTextElement("h2", post.title, {
-      margin: "0",
-      color: "var(--heading, #0f172a)",
-      fontSize: "clamp(1.75rem, 3vw, 2.5rem)",
-      lineHeight: "1.15"
-    })
-  );
-
-  const metaText = createMetaText(post);
-  if (metaText) {
-    header.appendChild(
-      createTextElement("p", metaText, {
-        margin: "0",
-        color: "var(--text-soft, #4f5d73)",
-        lineHeight: "1.6"
-      })
-    );
+  header.append(source, title);
+  if (meta.textContent) {
+    header.appendChild(meta);
+  }
+  if (excerpt.textContent) {
+    header.appendChild(excerpt);
   }
 
-  if (typeof post.excerpt === "string" && post.excerpt.trim()) {
-    header.appendChild(
-      createTextElement("p", post.excerpt.trim(), {
-        margin: "0",
-        color: "var(--text, #162033)",
-        lineHeight: "1.75",
-        fontSize: "1rem"
-      })
-    );
-  }
-
-  const headerTags = createTagList(post.tags);
+  const headerTags = createTagRow(post.tags);
   if (headerTags) {
     header.appendChild(headerTags);
   }
 
-  if (typeof post.url === "string" && post.url.trim()) {
-    const sourceLink = document.createElement("a");
-    sourceLink.href = post.url;
-    sourceLink.target = "_blank";
-    sourceLink.rel = "noreferrer noopener";
-    sourceLink.textContent = "Open original article";
-    applyStyles(sourceLink, {
-      color: "var(--accent, #3366ff)",
-      fontWeight: "600",
-      lineHeight: "1.6"
-    });
-    header.appendChild(sourceLink);
-  }
+  const sourceLink = createElement("a", "article-source-link", "查看原文 ↗");
+  sourceLink.href = post.url;
+  sourceLink.target = "_blank";
+  sourceLink.rel = "noreferrer noopener";
+  header.appendChild(sourceLink);
 
   article.appendChild(header);
 
-  const content = document.createElement("div");
-  applyStyles(content, {
-    display: "grid",
-    gap: "1.5rem"
+  const contentWrap = createElement("div", "article-content");
+  const sections = Array.isArray(post.content) ? post.content : [];
+
+  sections.forEach((section) => {
+    const sectionNode = createElement("section", "article-section");
+
+    if (typeof section === "string") {
+      sectionNode.appendChild(createElement("p", "", section));
+      contentWrap.appendChild(sectionNode);
+      return;
+    }
+
+    if (section?.heading) {
+      sectionNode.appendChild(createElement("h2", "article-section__title", section.heading));
+    }
+
+    if (Array.isArray(section?.paragraphs)) {
+      section.paragraphs
+        .filter((paragraph) => typeof paragraph === "string" && paragraph.trim())
+        .forEach((paragraph) => {
+          sectionNode.appendChild(createElement("p", "", paragraph.trim()));
+        });
+    }
+
+    if (sectionNode.childNodes.length) {
+      contentWrap.appendChild(sectionNode);
+    }
   });
 
-  renderContentSections(content, post.content);
-  article.appendChild(content);
-
-  postDetail.appendChild(article);
-  updateDocumentTitle(post);
-}
-
-function renderSelectedPost(slug) {
-  const posts = getPosts();
-
-  if (!posts.length) {
-    state.selectedSlug = "";
-    renderPostList();
-    renderPostDetail(null);
-    return;
-  }
-
-  const post = findPostBySlug(slug) || posts[0];
-  state.selectedSlug = post.slug;
-  renderPostList();
-  renderPostDetail(post);
-}
-
-function syncSelectionWithHash() {
-  const posts = getPosts();
-
-  if (!posts.length) {
-    renderSelectedPost("");
-    return;
-  }
-
-  const slugFromHash = getHashSlug();
-  const matchedPost = slugFromHash ? findPostBySlug(slugFromHash) : null;
-  const nextPost = matchedPost || posts[0];
-
-  if (!slugFromHash || !matchedPost) {
-    replaceHash(nextPost.slug);
-  }
-
-  renderSelectedPost(nextPost.slug);
-}
-
-function renderFetchError(error) {
-  const detail = error instanceof Error && error.message ? error.message : "Unknown error.";
-
-  if (postList) {
-    clearNode(postList);
-    postList.appendChild(
-      createMessageCard(
-        "Failed to load posts",
-        "The page could not load ./articles.json.",
-        detail,
-        true
-      )
+  if (!contentWrap.childNodes.length) {
+    const empty = createElement("section", "empty-state empty-state--compact");
+    empty.append(
+      createElement("h3", "", "暂无正文"),
+      createElement("p", "", "这篇文章还没有可渲染的正文段落。")
     );
+    contentWrap.appendChild(empty);
   }
 
-  if (postDetail) {
-    clearNode(postDetail);
-    postDetail.appendChild(
-      createMessageCard(
-        "Content unavailable",
-        "Post details are unavailable because the content source could not be loaded.",
-        detail,
-        true
-      )
+  article.appendChild(contentWrap);
+
+  if (related) {
+    const listWrap = related.querySelector(".side-list");
+    if (listWrap) {
+      clear(listWrap);
+      related.setAttribute("aria-busy", "false");
+
+      relatedPosts
+        .filter((item) => item.slug !== post.slug)
+        .forEach((item) => {
+          const card = createElement("article", "side-card");
+          const titleNode = createElement("h3", "side-card__title");
+          const link = createElement("a", "side-card__link", item.title);
+          link.href = buildPostHref(item.slug);
+          titleNode.appendChild(link);
+          const metaLine = createElement("p", "side-card__meta", createMetaLine(item));
+          card.append(titleNode, metaLine);
+          listWrap.appendChild(card);
+        });
+
+      if (!listWrap.childNodes.length) {
+        const empty = createElement("article", "empty-state empty-state--compact");
+        empty.appendChild(createElement("p", "", "暂无其他文章。"));
+        listWrap.appendChild(empty);
+      }
+    }
+  }
+}
+
+function renderError(message) {
+  const targetIds = ["home-posts", "post-article", "related-posts"];
+
+  targetIds.forEach((id) => {
+    const node = qs(id);
+    if (!node) {
+      return;
+    }
+
+    if (id === "related-posts") {
+      const listWrap = node.querySelector(".side-list");
+      if (listWrap) {
+        clear(listWrap);
+        const box = createElement("article", "empty-state empty-state--compact");
+        box.appendChild(createElement("p", "", message));
+        listWrap.appendChild(box);
+      }
+      node.setAttribute("aria-busy", "false");
+      return;
+    }
+
+    clear(node);
+    node.setAttribute("aria-busy", "false");
+    const box = createElement("article", "empty-state");
+    box.append(
+      createElement("h3", "", "加载失败"),
+      createElement("p", "", message)
     );
-  }
+    node.appendChild(box);
+  });
+}
 
-  console.error(error);
+function getSlugFromQuery() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get("slug") || "";
+}
+
+function validatePosts(posts) {
+  return Array.isArray(posts)
+    ? posts.filter((post) => post && typeof post.slug === "string" && typeof post.title === "string")
+    : [];
 }
 
 async function loadBlog() {
-  setBusy(true);
-
   try {
-    const response = await fetch("./articles.json");
-
+    const response = await fetch(DATA_URL);
     if (!response.ok) {
       throw new Error(`Request failed with status ${response.status}`);
     }
 
     const data = await response.json();
-    const posts = Array.isArray(data && data.posts)
-      ? data.posts.filter(isValidPost)
-      : [];
+    const site = data && typeof data.site === "object" ? data.site : {};
+    const posts = validatePosts(data?.posts);
 
-    state.site = data && typeof data.site === "object" && data.site ? data.site : {};
-    state.posts = posts;
+    if (pageType === "post") {
+      const slug = getSlugFromQuery();
+      const current = posts.find((post) => post.slug === slug) || posts[0] || null;
+      renderPost(current, posts);
+      return;
+    }
 
-    syncSelectionWithHash();
+    renderHome(site, posts);
   } catch (error) {
-    state.site = {};
-    state.posts = [];
-    state.selectedSlug = "";
-    renderFetchError(error);
-  } finally {
-    setBusy(false);
+    const message = error instanceof Error && error.message
+      ? error.message
+      : "无法加载 articles.json";
+    renderError(message);
+    console.error(error);
   }
 }
-
-window.addEventListener("hashchange", () => {
-  if (!getPosts().length) {
-    return;
-  }
-
-  syncSelectionWithHash();
-});
 
 initThemeToggle();
 void loadBlog();

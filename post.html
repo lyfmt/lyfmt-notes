@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Post — Agent Notes Demo</title>
+    <meta
+      name="description"
+      content="文章详情页，运行时从 articles.json 加载文章内容。"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body data-page="post">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-brand" href="./index.html">Agent Notes Demo</a>
+        <button id="theme-toggle" type="button" aria-label="切换主题">切换主题</button>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="./index.html">← 返回首页</a>
+      </nav>
+
+      <div class="article-layout">
+        <article id="post-article" class="article-shell" aria-live="polite" aria-busy="true">
+          <section class="empty-state">
+            <h2>正在加载文章详情</h2>
+            <p>页面将根据 URL 参数中的 slug 从 <code>articles.json</code> 加载内容。</p>
+          </section>
+        </article>
+
+        <aside id="related-posts" class="side-panel" aria-live="polite" aria-busy="true">
+          <div class="side-panel__inner">
+            <p class="eyebrow eyebrow--muted">More posts</p>
+            <h2>相关文章</h2>
+            <p class="section-copy">你可以从这里快速切换到其他文章详情页。</p>
+            <div class="side-list">
+              <article class="empty-state empty-state--compact">
+                <p>正在加载相关文章…</p>
+              </article>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+  </body>
+</html>
