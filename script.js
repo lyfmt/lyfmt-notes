@@ -134,12 +134,113 @@ function createTagRow(tags) {
   return row.childNodes.length ? row : null;
 }
 
+function renderTags(id, tags) {
+  const container = qs(id);
+  if (!container) {
+    return;
+  }
+
+  clear(container);
+  const row = createTagRow(tags);
+  if (row) {
+    container.appendChild(row);
+  }
+}
+
+function normalizeTag(tag) {
+  return typeof tag === "string" ? tag.trim().toLowerCase() : "";
+}
+
+function collectTags(posts) {
+  const seen = new Set();
+  const tags = [];
+
+  posts.forEach((post) => {
+    if (!Array.isArray(post.tags)) {
+      return;
+    }
+
+    post.tags.forEach((tag) => {
+      if (typeof tag !== "string" || !tag.trim()) {
+        return;
+      }
+
+      const value = tag.trim();
+      const key = normalizeTag(value);
+      if (seen.has(key)) {
+        return;
+      }
+
+      seen.add(key);
+      tags.push(value);
+    });
+  });
+
+  return tags;
+}
+
+function filterPostsByTag(posts, activeTag) {
+  const normalizedTag = normalizeTag(activeTag);
+  if (!normalizedTag) {
+    return posts;
+  }
+
+  return posts.filter((post) =>
+    Array.isArray(post.tags)
+    && post.tags.some((tag) => normalizeTag(tag) === normalizedTag)
+  );
+}
+
+function createTagFilterChip(tag, href, isActive) {
+  const chip = createElement("a", "tag", tag);
+  chip.href = href;
+
+  if (isActive) {
+    chip.setAttribute("aria-current", "true");
+    chip.style.background = "var(--accent)";
+    chip.style.color = "#fff";
+  }
+
+  return chip;
+}
+
+function renderTagFilters(tags, activeTag) {
+  const container = qs("tag-filter-list");
+  if (!container) {
+    return;
+  }
+
+  clear(container);
+
+  const row = createElement("div", "tag-row");
+  row.appendChild(createTagFilterChip("全部", buildIndexHref(1), !normalizeTag(activeTag)));
+
+  tags.forEach((tag) => {
+    const isActive = normalizeTag(tag) === normalizeTag(activeTag);
+    row.appendChild(createTagFilterChip(tag, buildIndexHref(1, tag), isActive));
+  });
+
+  container.appendChild(row);
+}
+
 function buildPostHref(slug) {
   return `./post.html?slug=${encodeURIComponent(slug)}`;
 }
 
-function buildIndexHref(page) {
-  return page > 1 ? `./index.html?page=${page}` : "./index.html";
+function buildIndexHref(page, tag) {
+  const params = new URLSearchParams();
+  const trimmedTag = typeof tag === "string" ? tag.trim() : "";
+
+  if (page > 1) {
+    params.set("page", String(page));
+  }
+
+  if (trimmedTag) {
+    params.set("tag", trimmedTag);
+  }
+
+  const query = params.toString();
+  return query ? `./index.html?${query}` : "./index.html";
 }
 
 function createMetaLine(post) {
@@ -159,36 +260,50 @@ function getSlugFromQuery() {
   return params.get("slug") || "";
 }
 
+function getTagFromQuery() {
+  return new URLSearchParams(window.location.search).get("tag")?.trim() || "";
+}
+
 function validatePosts(posts) {
   return Array.isArray(posts)
     ? posts.filter((post) => post && typeof post.slug === "string" && typeof post.title === "string")
     : [];
 }
 
-function renderFeatured(site, posts) {
+function renderFeatured(site, posts, activeTag) {
   const siteTitle = typeof site?.title === "string" && site.title.trim()
     ? site.title.trim()
     : "Agent Notes Demo";
   const description = typeof site?.description === "string" && site.description.trim()
     ? site.description.trim()
     : "一个更接近真实博客的首页演示。";
+  const tagLabel = typeof activeTag === "string" ? activeTag.trim() : "";
 
   setText("home-title", siteTitle);
   setText("home-description", description);
+  setText(
+    "featured-supporting-copy",
+    tagLabel
+      ? `当前正在按「${tagLabel}」标签浏览，可先查看这一主题的精选内容，再继续阅读作者与最新文章。`
+      : "在这里快速查看精选内容、作者信息与最新文章动态。"
+  );
 
-  const featured = posts[0] || null;
+  const featured = Array.isArray(posts) ? posts[0] || null : null;
+
   if (!featured) {
     setText("featured-title", "暂无精选文章");
     setText("featured-excerpt", "当前还没有文章可展示。请先在 articles.json 中添加内容。");
     setText("featured-meta", "等待内容中");
     setHref("hero-primary-link", "#latest-posts-title");
+    renderTags("featured-tags", []);
     return;
   }
 
   setText("featured-title", featured.title);
-  setText("featured-excerpt", featured.excerpt || "这篇文章暂无摘要。" );
+  setText("featured-excerpt", featured.excerpt || "这篇文章暂无摘要。");
   setText("featured-meta", createMetaLine(featured));
   setHref("hero-primary-link", buildPostHref(featured.slug));
+  renderTags("featured-tags", featured.tags);
 }
 
 function renderStats(posts) {
@@ -287,7 +402,7 @@ function renderAuthors(posts) {
   });
 }
 
-function renderPagination(totalPages, currentPage) {
+function renderPagination(totalPages, currentPage, activeTag) {
   const container = qs("pagination");
   if (!container) {
     return;
@@ -305,7 +420,7 @@ function renderPagination(totalPages, currentPage) {
   const prev = currentPage > 1
     ? (() => {
         const link = createElement("a", "pagination__link", "← 上一页");
-        link.href = buildIndexHref(currentPage - 1);
+        link.href = buildIndexHref(currentPage - 1, activeTag);
         return link;
       })()
     : createElement("span", "pagination__link is-disabled", "← 上一页");
@@ -319,7 +434,7 @@ function renderPagination(totalPages, currentPage) {
       container.appendChild(current);
     } else {
       const link = createElement("a", "pagination__link", String(page));
-      link.href = buildIndexHref(page);
+      link.href = buildIndexHref(page, activeTag);
       container.appendChild(link);
     }
   }
@@ -327,7 +442,7 @@ function renderPagination(totalPages, currentPage) {
   const next = currentPage < totalPages
     ? (() => {
         const link = createElement("a", "pagination__link", "下一页 →");
-        link.href = buildIndexHref(currentPage + 1);
+        link.href = buildIndexHref(currentPage + 1, activeTag);
         return link;
       })()
     : createElement("span", "pagination__link is-disabled", "下一页 →");
@@ -345,22 +460,31 @@ function renderHome(site, posts) {
   }
 
   const siteTitle = typeof site?.title === "string" && site.title.trim() ? site.title.trim() : "Agent Notes Demo";
+  const activeTag = getTagFromQuery();
+  const allTags = collectTags(posts);
+  const filteredPosts = filterPostsByTag(posts, activeTag);
+  const featuredPosts = filteredPosts.length ? filteredPosts : posts;
   const requestedPage = getPageFromQuery();
-  const totalPages = Math.max(1, Math.ceil(posts.length / HOME_PAGE_SIZE));
+  const totalPages = Math.max(1, Math.ceil(filteredPosts.length / HOME_PAGE_SIZE));
   const currentPage = Math.min(Math.max(1, requestedPage), totalPages);
 
-  document.title = currentPage > 1 ? `${siteTitle} — Page ${currentPage}` : siteTitle;
+  document.title = activeTag
+    ? `${siteTitle} — ${activeTag}`
+    : currentPage > 1 ? `${siteTitle} — Page ${currentPage}` : siteTitle;
 
   if (description && site?.description) {
     description.textContent = site.description;
   }
 
-  renderFeatured(site, posts);
+  renderTagFilters(allTags, activeTag);
+  renderFeatured(site, featuredPosts, activeTag);
   renderStats(posts);
   renderAuthors(posts);
 
   if (count) {
-    count.textContent = `第 ${currentPage} 页 / 共 ${totalPages} 页 · ${posts.length} 篇文章`;
+    count.textContent = activeTag
+      ? `标签「${activeTag}」下共 ${filteredPosts.length} 篇文章`
+      : `第 ${currentPage} 页，共 ${totalPages} 页 · 当前共 ${filteredPosts.length} 篇文章`;
   }
 
   clear(container);
@@ -373,12 +497,23 @@ function renderHome(site, posts) {
       createElement("p", "", "articles.json 已加载，但 posts 数组为空。")
     );
     container.appendChild(empty);
-    renderPagination(1, 1);
+    renderPagination(1, 1, activeTag);
+    return;
+  }
+
+  if (!filteredPosts.length) {
+    const empty = createElement("article", "empty-state");
+    empty.append(
+      createElement("h3", "", "当前标签暂无文章"),
+      createElement("p", "", `标签「${activeTag}」下还没有文章，稍后再来看看。`)
+    );
+    container.appendChild(empty);
+    renderPagination(1, 1, activeTag);
     return;
   }
 
   const start = (currentPage - 1) * HOME_PAGE_SIZE;
-  const pagePosts = posts.slice(start, start + HOME_PAGE_SIZE);
+  const pagePosts = filteredPosts.slice(start, start + HOME_PAGE_SIZE);
 
   pagePosts.forEach((post, index) => {
     const card = createElement("article", "post-card");
@@ -405,7 +540,67 @@ function renderHome(site, posts) {
     container.appendChild(card);
   });
 
-  renderPagination(totalPages, currentPage);
+  renderPagination(totalPages, currentPage, activeTag);
+}
+
+function renderPostPager(post, posts) {
+  if (!post || !Array.isArray(posts)) {
+    return null;
+  }
+
+  const currentIndex = posts.findIndex((item) => item && item.slug === post.slug);
+  if (currentIndex === -1) {
+    return null;
+  }
+
+  const previousPost = currentIndex > 0 ? posts[currentIndex - 1] : null;
+  const nextPost = currentIndex < posts.length - 1 ? posts[currentIndex + 1] : null;
+
+  if (!previousPost && !nextPost) {
+    return null;
+  }
+
+  const wrapper = createElement("section", "post-pager");
+  const nav = createElement("nav", "post-pager__nav");
+  nav.setAttribute("aria-label", "文章翻页");
+
+  function createPagerLink(label, targetPost, modifierClass) {
+    const link = createElement("a", `post-pager__link ${modifierClass}`);
+    link.href = buildPostHref(targetPost.slug);
+    link.setAttribute("aria-label", `${label}：${targetPost.title}`);
+
+    const labelNode = createElement("span", "post-pager__label", label);
+    const titleNode = createElement("span", "post-pager__title", targetPost.title);
+
+    link.appendChild(labelNode);
+    link.appendChild(titleNode);
+    return link;
+  }
+
+  if (previousPost) {
+    nav.appendChild(createPagerLink("上一篇", previousPost, "post-pager__link--prev"));
+  }
+
+  if (nextPost) {
+    nav.appendChild(createPagerLink("下一篇", nextPost, "post-pager__link--next"));
+  }
+
+  wrapper.appendChild(nav);
+  return wrapper;
+}
+
+function appendPostPager(article, post, posts) {
+  if (!article || typeof article.appendChild !== "function") {
+    return null;
+  }
+
+  const pager = renderPostPager(post, posts);
+  if (!pager) {
+    return null;
+  }
+
+  article.appendChild(pager);
+  return pager;
 }
 
 function renderPost(post, relatedPosts) {
@@ -498,6 +693,7 @@ function renderPost(post, relatedPosts) {
   }
 
   article.appendChild(contentWrap);
+  appendPostPager(article, post, relatedPosts);
 
   if (related) {
     const listWrap = related.querySelector(".side-list");
