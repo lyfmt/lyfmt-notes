@@ -38,6 +38,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--pi-bin", default="pi", help="Pi CLI binary (default: pi)")
     parser.add_argument("--timeout-seconds", type=int, default=180, help="Timeout per Pi invocation (default: 180)")
     parser.add_argument("--start-index", type=int, default=0, help="Start refining from this block index (0-based).")
+    parser.add_argument("--resume-untranslated", action="store_true", help="Start from the first block that does not already look Chinese.")
     parser.add_argument("--limit", type=int, default=0, help="Only refine this many blocks after start-index (0 means all).")
     parser.add_argument("--force", action="store_true", help="Refine blocks even if they already look Chinese.")
     parser.add_argument("--continue-on-error", action="store_true", help="Keep the original block when one refinement call fails.")
@@ -353,6 +354,11 @@ def refine_detail_payload(
         raise SystemExit("detail.blocks must be a list.")
 
     start = max(0, int(args.start_index or 0))
+    if args.resume_untranslated and not args.force:
+        for idx, block in enumerate(blocks):
+            if not block_has_cjk(block):
+                start = idx
+                break
     limit = max(0, int(args.limit or 0))
     end = len(blocks) if limit == 0 else min(len(blocks), start + limit)
 

@@ -88,7 +88,7 @@ python3 tools/refine_detail_to_chinese.py --spec tools/generated-specs/how-conte
 ```bash
 python3 tools/refine_detail_to_chinese.py \
   --spec tools/generated-specs/how-context-rot-drags-down-ai-and-llm-results-for-enterprises-and-how-to-fix-it.json \
-  --start-index 0 \
+  --resume-untranslated \
   --limit 3 \
   --continue-on-error
 ```
