@@ -1,0 +1,149 @@
+{
+  "slug": "moving-ai-apps-from-prototype-to-production-requires-enterprise-grade-postgres-infrastructure",
+  "title": "Moving AI apps from prototype to production requires enterprise-grade postgres infrastructure",
+  "author": "Meredith Shubel",
+  "publishedAt": "2026-03-09",
+  "source": "The New Stack",
+  "url": "https://thenewstack.io/ai-prototype-to-production-postgres/",
+  "tags": [
+    "AI",
+    "Postgres",
+    "Infrastructure",
+    "Enterprise"
+  ],
+  "excerpt": "很多 AI 应用不是卡在模型，而是卡在数据库能力、系统集成和合规约束。文章认为，AI 从原型走向生产需要企业级的 Postgres 基础设施。",
+  "content": [
+    {
+      "heading": "为什么 prototype 很难走到 production",
+      "paragraphs": [
+        "文章认为，AI 项目从试验走向大规模生产时，会遇到高可用、数据主权、安全与合规等要求，而这些往往不是原型环境能满足的。",
+        "传统数据库并没有为向量检索、混合排序和语义检索而设计，而单独的向量数据库或云上的原型方案在企业落地时又会暴露出合规和集成问题。"
+      ]
+    },
+    {
+      "heading": "数据层重新成为瓶颈",
+      "paragraphs": [
+        "文章特别强调，AI 应用如果要真正生产化，就必须能与企业现有数据库体系集成，而不是停留在孤立的原型栈里。",
+        "除了集成复杂度，审计、加密、访问控制以及区域数据驻留等要求，也使数据库基础设施重新成为 AI 落地的关键限制项。"
+      ]
+    }
+  ],
+  "detail": {
+    "available": true,
+    "layout": "detail-zh",
+    "translatedFrom": "https://thenewstack.io/ai-prototype-to-production-postgres/",
+    "sourceName": "The New Stack",
+    "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+    "blocks": [
+      {
+        "type": "image",
+        "src": "https://cdn.thenewstack.io/media/2026/03/aa5b3ca7-masantocreative-oourfi-kiys-unsplash-scaled.jpg",
+        "alt": "AI 原型走向生产环境的主题头图",
+        "caption": "文章头图，来源：The New Stack / Masantocreative for Unsplash+。"
+      },
+      {
+        "type": "paragraph",
+        "html": "这篇文章的基本判断是：AI 热潮确实已经席卷企业，但真正能跑到生产环境、并在规模化场景里持续产生回报的应用仍然不多。问题并不主要出在模型本身，而是卡在数据层、系统集成和合规要求上。"
+      },
+      {
+        "type": "paragraph",
+        "html": "文中引用 Stanford AI Index 的数据称，2024 年已有 78% 的组织报告在使用 AI，较前一年明显上升；但与此同时，Apptio 的一项调研又显示，90% 的技术负责人仍然很难衡量 AI 投资带来的实际 ROI。作者借此强调：从“能做出原型”到“能规模化上线”，中间还有一段非常崎岖的路。"
+      },
+      {
+        "type": "paragraph",
+        "html": "尤其当 Lovable、Replit、Bolt 这类面向非程序员的 AI 开发工具不断降低原型门槛后，任何人都更容易做出一个看上去能跑的 demo；但把它们真正部署到企业环境、满足可靠性和合规要求，难度一点都没有消失。"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "从 prototype 到 production 的颠簸之路"
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "数据库限制"
+      },
+      {
+        "type": "paragraph",
+        "html": "文章首先把矛头指向数据库能力。传统事务型数据库并不是为 AI 工作负载设计的，天然缺少向量相似度检索、混合排序和语义检索等能力。于是很多团队在原型阶段会转向专门的向量数据库，或者使用某种便捷的云上 Postgres 服务。"
+      },
+      {
+        "type": "paragraph",
+        "html": "但作者认为，这些方案一旦进入生产阶段就容易暴露问题：一方面，专门的向量数据库未必满足企业级安全与合规要求；另一方面，很多云服务虽然以 Postgres 为核心，却依然带有强烈的供应商绑定属性，而受监管企业往往无法接受把关键数据与应用长期托管在这类专有云环境里。"
+      },
+      {
+        "type": "paragraph",
+        "html": "文章的一个核心论点是：真正有用的企业 AI 应用，最终必须接到企业已经在跑的数据库体系上，而不是永远停留在一套孤立的原型栈里。把老数据库整体迁进新云环境既昂贵又缓慢，而且也未必能满足安全和合规要求。"
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "集成复杂度"
+      },
+      {
+        "type": "paragraph",
+        "html": "第二个问题是集成。无论是 agentic AI、RAG 还是企业知识问答，今天很多应用都建立在一串脆弱的工具、API 和数据流水线拼装之上。原型阶段也许还能靠人工缝合维持运转，但到了生产阶段，这种拼接式架构就很容易变成扩展与治理的负担。"
+      },
+      {
+        "type": "paragraph",
+        "html": "文中举的例子是一个建立在现有知识库之上的聊天机器人：即便团队选择 Postgres 作为底层，也仍然要处理数据分块、索引、连接器、工作流以及环境迁移等一整套自定义逻辑。把这些从实验环境迁移到生产级 Postgres 基础设施，本身就是一项复杂工程，而且还可能在过程中引入新的合规缝隙。"
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "安全与合规并发症"
+      },
+      {
+        "type": "paragraph",
+        "html": "在金融、医疗、政府等强监管行业里，生产环境的门槛远高于“软件能跑起来”。文章强调，企业需要能证明谁在什么时候访问了哪些数据，需要有加密、基于角色的访问控制，以及 HIPAA、SOC 2、GDPR 等合规体系支撑。"
+      },
+      {
+        "type": "paragraph",
+        "html": "数据主权也是同样重要的限制条件。比如处理欧洲消费者数据的组织，为了满足 GDPR，可能必须把数据留在特定区域，不能落在美国机房里；这就要求底层数据库具备多区域分布和数据驻留能力。"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "MCP 在这个问题里扮演什么角色"
+      },
+      {
+        "type": "paragraph",
+        "html": "文章随后把话题转到 MCP。作者的观点是，MCP 之所以重要，在于它有机会把 AI agent 与外部系统之间的连接方式标准化，减少每个项目都要自己写一套数据库、API 与工作流连接器的重复劳动。"
+      },
+      {
+        "type": "paragraph",
+        "html": "文中还批评了当前不少 Postgres MCP server 的现状：它们往往和厂商自家的云数据库深度绑定，结果是把“标准化接入”又重新变成了新的锁定形式。作者因此强调，真正有价值的 MCP 能力，应该能作用于企业现有数据库，而不是只在某个闭环产品中可用。"
+      },
+      {
+        "type": "paragraph",
+        "html": "换句话说，没有 MCP，团队就得维护一堆定制连接器；有了 MCP，系统间交互至少有机会被标准化。但文章也提醒，这件事的前提仍然是底层基础设施必须从一开始就愿意、也有能力支持 MCP。"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "真正决定上限的还是数据库架构"
+      },
+      {
+        "type": "paragraph",
+        "html": "把集成问题说清之后，文章又把重点拉回到底层架构：如果企业想让 AI 应用稳定地进入生产，就必须有高可用、全球分布、安全、合规，并且能与既有数据库共存的数据库体系。对很多受监管或关键业务场景来说，Postgres 是自然候选，但单有 Postgres 这个名字并不够，还需要企业级的部署与运营能力。"
+      },
+      {
+        "type": "paragraph",
+        "html": "文末的产品落点是 pgEdge Agentic AI Toolkit for Postgres。作者把它作为一种示例：既提供企业级 Postgres 基础设施，又提供面向 AI 的工具层，并声称它兼容标准 Postgres、可部署在本地、自管云账户以及未来的托管云服务中。"
+      },
+      {
+        "type": "paragraph",
+        "html": "文章同时把 pgEdge 的 MCP server 描述为连接新旧 Postgres 数据库的关键组件，目的是帮助组织在不抛弃现有数据基础的前提下，把 AI 工作负载从原型推进到生产。"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "从“淘金热”回到真实 ROI"
+      },
+      {
+        "type": "paragraph",
+        "html": "全文最后的结论是：市场上已经不缺 AI 原型，真正稀缺的是能满足企业运行条件、能被治理、也能规模化扩张的生产系统。作者因此主张，企业如果想把 AI 投资变成可量化回报，就必须把注意力从模型演示转向数据库架构、集成标准与合规基础设施。"
+      }
+    ]
+  }
+}

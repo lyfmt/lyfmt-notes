@@ -1,0 +1,103 @@
+{
+  "available": true,
+  "layout": "detail-zh",
+  "translatedFrom": "https://www.servethehome.com/amd-expands-ryzen-ai-embedded-p100-family-with-8-to-12-core-parts/",
+  "sourceName": "ServeTheHome",
+  "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "html": "AMD 这次把 Ryzen AI Embedded P100 家族向上补齐，新增 8 核、10 核和 12 核型号。它们与此前已经发布的 4 核、6 核版本形成一条更完整的产品线，继续面向车载、工业以及其他需要长生命周期支持的非 PC 边缘设备。"
+    },
+    {
+      "type": "image",
+      "src": "https://www.servethehome.com/wp-content/uploads/2026/01/Ryzen-AI-Embedded-Hero.jpg",
+      "alt": "Ryzen AI Embedded 产品家族头图",
+      "caption": "Ryzen AI Embedded 产品家族头图。"
+    },
+    {
+      "type": "paragraph",
+      "html": "ServeTheHome 把这次发布放在 AMD 整体 Ryzen Embedded 更新的大背景下来看：新一代产品围绕 Zen 5 时代的芯片展开，相较更早的 Ryzen Embedded 8000 系列，在 CPU、GPU 和 NPU 上都明显更强。"
+    },
+    {
+      "type": "image",
+      "src": "https://www.servethehome.com/wp-content/uploads/2026/03/Ryzen-AI-Embedded-P100-8-12c-Overview.png",
+      "alt": "Ryzen AI Embedded P100 8 到 12 核概览图",
+      "caption": "Ryzen AI Embedded P100 8~12 核产品概览。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Ryzen AI Embedded P100：最高来到 12 个 Zen 5 CPU 核与 16 个 GPU CU"
+    },
+    {
+      "type": "paragraph",
+      "html": "AMD 实际上是在从低端往上把这条产品栈逐步铺满：先发低端型号，现在补上 8 到 12 核的中高阶部分，后续还计划推出更高端的 X100 系列，把 CPU 核心数进一步推到 16 核。"
+    },
+    {
+      "type": "paragraph",
+      "html": "较低端的 P100 芯片基于 Krackan Point，而这次新加入的高性能型号则把 Strix Point 这一代能力正式带进工业和嵌入式市场。"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Embedded 8000：Zen 4 CPU、RDNA 2 图形、第一代 XDNA NPU，基于 Phoenix。",
+        "Ryzen AI Embedded P100：Zen 5 CPU、RDNA 3.5 图形、XDNA 2 NPU，覆盖 Krackan Point 与 Strix Point。",
+        "Ryzen AI Embedded X100：同样采用 Zen 5 / RDNA 3.5 / XDNA 2，但会进一步走到 Strix Halo 级别。"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "html": "文章指出，这批高阶 P100 虽然在体系结构上与首批产品一致，但算力幅度明显上探：由于核心数更多，CPU 性能最高可达先前型号的约两倍，GPU 性能最高则可达到约四倍。"
+    },
+    {
+      "type": "paragraph",
+      "html": "这意味着它们适用的工作负载也更重。AMD 在文中重点提到工业自动化、physical AI 与机器人、医疗场景，以及部分专业广播类应用，这些都比 4 核、6 核版本更吃本地算力和图形/AI 加速资源。"
+    },
+    {
+      "type": "image",
+      "src": "https://www.servethehome.com/wp-content/uploads/2026/03/Ryzen-AI-Embedded-P100-SKUs.png",
+      "alt": "Ryzen AI Embedded P100 SKU 表",
+      "caption": "Ryzen AI Embedded P100 SKU 一览。"
+    },
+    {
+      "type": "paragraph",
+      "html": "AMD 这次一共加入了 6 个 SKU：3 个标准温度版本，分别对应 8 核、10 核和 12 核；另外还有这 3 款的工业温度版本，可下探到 -40°C。"
+    },
+    {
+      "type": "paragraph",
+      "html": "ServeTheHome 还提醒读者，AMD 在公开营销材料里没有特别强调哪些核心是完整 Zen 5、哪些是更紧凑的 Zen 5c，但这些芯片实际上采用了混合搭配。报道里提到，顶配 12 核 SKU 由 4 个 Zen 5 核心加 8 个 Zen 5c 核心组成。"
+    },
+    {
+      "type": "paragraph",
+      "html": "GPU 规模的提升也很明显。首批偏低端的 P100 最高只有 4 个图形计算单元，而新款高阶型号从 12 个 CU 起步，最高可到 16 个 CU。对既要处理图形又要承担本地 AI 加速的边缘设备来说，这种提升很关键。"
+    },
+    {
+      "type": "paragraph",
+      "html": "平台层面的其他能力则在家族内部保持一致：厂商既可以选用 LPDDR5X-8533，也可以选用 DDR5-5600；标称 TDP 仍是 28W，可配置范围为 15W 到 54W；非车规 SKU 还支持两个 USB4 端口。"
+    },
+    {
+      "type": "image",
+      "src": "https://www.servethehome.com/wp-content/uploads/2026/03/Ryzen-AI-Embedded-P100-Reference-Board.png",
+      "alt": "Ryzen AI Embedded P100 参考板",
+      "caption": "AMD 为 P100 提供的参考开发板。"
+    },
+    {
+      "type": "paragraph",
+      "html": "AMD 还预告了一块经过预验证的参考板，会在今年稍晚些时候提供。板上带有 DDR5 SO-DIMM 插槽、PCIe x4 插槽、USB、DisplayPort，以及一组能帮助嵌入式软硬件项目快速起步的通用 I/O。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "最后的话"
+    },
+    {
+      "type": "paragraph",
+      "html": "按照 AMD 的说法，这批新处理器已经开始向客户送样，相关文档和工具也已经可用。"
+    },
+    {
+      "type": "paragraph",
+      "html": "正式量产计划安排在 2026 年第三季度，比更低端的那批芯片晚一个季度；参考板则预计会在今年下半年上市。整体趋势很清楚：AMD 正在把更完整的 CPU / GPU / NPU 组合继续往嵌入式与边缘 AI 市场下沉。"
+    }
+  ]
+}

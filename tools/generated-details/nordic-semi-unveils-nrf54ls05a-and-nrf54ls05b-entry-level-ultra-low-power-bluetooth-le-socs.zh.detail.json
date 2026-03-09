@@ -1,0 +1,71 @@
+{
+  "available": true,
+  "layout": "detail-zh",
+  "translatedFrom": "https://www.cnx-software.com/2026/03/09/nordic-semi-nrf54ls05a-nrf54ls05b-entry-level-ultra-low-power-bluetooth-le-socs/",
+  "sourceName": "CNX Software",
+  "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "html": "Nordic Semiconductor 这次发布的是 nRF54LS05A 与 nRF54LS05B，两颗定位入门级、超低功耗的 Bluetooth LE SoC。它们都基于 128 MHz 的 Arm Cortex-M33，可作为简单无线设备的主 SoC 使用，也可以在更复杂产品里充当蓝牙协处理器。文章给出的典型场景包括传感器、标签、信标、遥控器和 PC 外设。"
+    },
+    {
+      "type": "paragraph",
+      "html": "两颗芯片的基础架构高度一致：都采用 Nordic 第四代 Bluetooth LE radio，带模拟/数字接口与安全能力，并集成大约 0.5 MB 的非易失性存储。二者最直接的区别主要在 RAM：nRF54LS05A 为 64 KB，nRF54LS05B 为 96 KB。"
+    },
+    {
+      "type": "image",
+      "src": "https://www.cnx-software.com/wp-content/uploads/2026/03/Nordic-nRF54LS05A-nRF54LS05B.jpg",
+      "alt": "nRF54LS05A 与 nRF54LS05B 产品图",
+      "caption": "Nordic nRF54LS05A / nRF54LS05B 产品图。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "主要规格与能力"
+    },
+    {
+      "type": "list",
+      "items": [
+        "处理器：Arm Cortex-M33，主频 128 MHz；文中列出的性能指标为 250 CoreMark/mA @ 3V，总体 500 CoreMark。",
+        "存储：nRF54LS05A 配 64 KB RAM，nRF54LS05B 配 96 KB RAM；两者都提供 508 KB NVM。",
+        "无线：支持 1 Mbps / 2 Mbps Bluetooth LE，以及 2.4 GHz 私有模式下的 1/2/4 Mbps GFSK。",
+        "射频与安全：单端天线输出（片上 balun），集成 128-bit AES/ECB/CCM/AAR 协处理器；发射功率可在 -10 dBm 到 +4 dBm 间配置，1 Mbps BLE 接收灵敏度为 -96 dBm。",
+        "外设：最多 37 个 GPIO，三组支持 EasyDMA 的串口接口，可用于 I2C、SPI 控制器/从设备与 UART；另有 SAADC、全局 RTC、PWM、QDEC、看门狗、32 位定时器与温度传感器。",
+        "电源与封装：供电范围 1.7V 至 3.6V；3V 下无线接收约 3.4 mA、0 dBm 发射约 4.8 mA；休眠模式约 0.6 到 1.2 μA；封装为 6 x 6 mm 的 QFN48。"
+      ]
+    },
+    {
+      "type": "image",
+      "src": "https://www.cnx-software.com/wp-content/uploads/2026/03/nRF54LS05A-nRF54LS05B-block-diagram.webp",
+      "alt": "nRF54LS05 系列简化框图",
+      "caption": "nRF54LS05 系列简化框图。"
+    },
+    {
+      "type": "paragraph",
+      "html": "软件侧，这一代器件由 nRF Connect SDK 提供支持，并且还包含 bare metal 选项。Nordic 在宣传里特别强调了从 nRF52 系列向新平台平滑迁移的路径，希望借此降低旧项目升级到新一代蓝牙 SoC 的门槛。"
+    },
+    {
+      "type": "paragraph",
+      "html": "不过文章也明确提到它的能力边界：nRF54LS05A/B 不支持 Bluetooth Channel Sounding，也不支持 Bluetooth Mesh。换句话说，这是一组更偏入门级、低成本和低功耗的器件，而不是试图覆盖蓝牙标准里的所有高级特性。"
+    },
+    {
+      "type": "paragraph",
+      "html": "Nordic 强调的卖点还包括更低的设计复杂度、更小的尺寸、更低的整体成本、成熟的 Bluetooth LE radio 与协议栈、更长的电池寿命，以及在 nRF54 家族内部的 pin-to-pin 兼容性。"
+    },
+    {
+      "type": "image",
+      "src": "https://www.cnx-software.com/wp-content/uploads/2026/03/nRF54LS05-DK.webp",
+      "alt": "nRF54LS05-DK 开发板",
+      "caption": "nRF54LS05-DK 开发板，基于 nRF54LS05B。"
+    },
+    {
+      "type": "paragraph",
+      "html": "开发者若想尽快上手，可以使用 nRF54LS05-DK。文章称，这块板卡基于 nRF54LS05B，但也支持对内存更小的 nRF54LS05A 进行“仿真式”开发。开发板上还带有 nRF5340 调试芯片、电源管理芯片、全套 I/O 引脚、四个用户按键和四个 LED。"
+    },
+    {
+      "type": "paragraph",
+      "html": "时间表方面，Nordic 表示这两颗 SoC 与开发板已经通过 early access program 提供给合作方，正式量产计划安排在 2026 年第三季度。整体来看，这更像是 Nordic 在超低功耗 BLE 市场的一次向下覆盖：用更轻量、更低成本的器件去承接大量简单无线终端。"
+    }
+  ]
+}

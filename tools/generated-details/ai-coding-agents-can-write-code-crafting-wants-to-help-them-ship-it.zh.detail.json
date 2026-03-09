@@ -1,0 +1,88 @@
+{
+  "available": true,
+  "layout": "detail-zh",
+  "translatedFrom": "https://thenewstack.io/crafting-ai-agents-platform/",
+  "sourceName": "The New Stack",
+  "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "https://cdn.thenewstack.io/media/2026/03/8de6f426-hartono-creative-studio-aztt0gfdu44-unsplash-scaled.jpg",
+      "alt": "Crafting 文章头图",
+      "caption": "文章头图，来源：The New Stack / Hartono Creative Studio for Unsplash+。"
+    },
+    {
+      "type": "paragraph",
+      "html": "文章开头先点出一个已经越来越明显的现实：AI coding agent 现在写代码的能力进步很快，但在企业环境里，“会生成代码”还只是第一步。真正拖慢落地速度的，往往是测试、验证，以及把这些改动放进接近真实生产条件的环境里反复跑通。"
+    },
+    {
+      "type": "paragraph",
+      "html": "Crafting 的定位，就是补上这段从生成到交付之间的断层。它由来自 Google、Meta、Uber 和 Discord 的前工程负责人创立，主张给 agent 提供带有真实依赖、真实数据和更严格访问控制的类生产环境，而不是只让 agent 待在干净却失真的沙箱里。"
+    },
+    {
+      "type": "paragraph",
+      "html": "CEO Sumeet Vaidya 的说法是，过去六到九个月，行业的注意力几乎都放在“怎样让 agent 更快地产生代码”上；但当工程组织规模一上去，真正麻烦的问题会变成编排、协同、资源使用效率，以及如何让大量 agent 在企业约束下安全工作。公司此次同时宣布了 Crafting for Agents 的正式可用，以及由 Mischief 领投的 550 万美元种子轮融资。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "从沙箱走向类生产环境"
+    },
+    {
+      "type": "paragraph",
+      "html": "Crafting 原本就为人类工程师提供云端开发环境，能力包括 Kubernetes interception 和可热切换的服务，让开发者能在更贴近生产的拓扑里调试系统。现在，这套基础设施被直接扩展给 AI agent 使用。"
+    },
+    {
+      "type": "paragraph",
+      "html": "文章描述的理想工作流是：一个 coding agent 先像今天那样负责生成代码，随后再由另一个 testing agent 通过 Crafting 拉起带真实依赖的环境，在里面执行测试、观察结果并继续迭代。换句话说，Crafting 不是替代 agent 写代码，而是把 agent 往更真实的工程流水线里推进。"
+    },
+    {
+      "type": "image",
+      "src": "https://cdn.thenewstack.io/media/2026/03/a485189c-crafting-overview.png",
+      "alt": "Crafting 平台概览图",
+      "caption": "Crafting 平台概览图，展示 agent 与受控基础设施之间的关系。"
+    },
+    {
+      "type": "paragraph",
+      "html": "Vaidya 直言，只待在沙箱里的 agent 其实做不了太多事。按照他的说法，关键在于“受控访问”：如果某个 agent 正在处理支付相关任务，那平台就应该只给它访问 staging 支付基础设施所需的那一小部分凭证和权限，而不是让它什么都看不到，或者什么都能碰。"
+    },
+    {
+      "type": "paragraph",
+      "html": "因此，Crafting 的赌注并不在“帮企业起一个容器”这种基础动作上，而在于更难复制的那部分：怎样把一家公司的网络拓扑、凭证管理方式、合规要求和内部依赖关系，足够真实地映射进一个 agent 能安全工作的环境里。文中引用 Faire 的工程经理评价说，此前团队尝试过的方案要么只是点状工具，要么需要自己东拼西凑；而 Crafting 让他们能在安全前提下，把 agent 接到内部系统、MCP server 和云资源上。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "企业导入本身就是重服务过程"
+    },
+    {
+      "type": "paragraph",
+      "html": "文章接着说明，这种产品的 onboarding 天然不会是“注册即用”模式。Crafting 需要先理解客户的网络结构，再配置尽量贴近生产的 Kubernetes 集群，并代为处理凭证访问与控制。文中点到的早期客户包括 Brex、Faire、Webflow、Verkada、Persona 和 Instabase。"
+    },
+    {
+      "type": "paragraph",
+      "html": "Vaidya 还特别强调，很多企业内部所谓的 staging 环境其实并不足以真实反映生产条件；所以他们更倾向于帮助客户搭出“直接模仿当前任务所需生产片段”的环境，而不是满足于一个名义上存在的预发布环境。"
+    },
+    {
+      "type": "paragraph",
+      "html": "这也意味着，Crafting 的服务很难完全标准化。作者在文中转述 Vaidya 的判断：每家企业在基础设施结构和安全预期上都非常不同，因此总会需要一定程度的定制化、白手套式支持，才能把 agent 安全地接入进去。"
+    },
+    {
+      "type": "paragraph",
+      "html": "从市场侧看，最积极的需求主要来自金融科技和其他强监管行业，因为这些组织对安全访问、审计和受控权限有非常明确的要求。Crafting 给出的效果数据是：使用平台的团队季度 pull request 出货量提升约 25%，工程师每周仅环境搭建就可节省约 2.5 小时，而客户环境中的 AI 生成代码占比在一年内从个位数上升到最高 70%。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "更大的愿景：做 agent 的操作系统"
+    },
+    {
+      "type": "paragraph",
+      "html": "Vaidya 认为，软件工程只是起点。更长期的方向，是把 Crafting 做成一个“agent 的操作系统”式基础层：企业里的任意 agent 在需要时，都可以通过它获得经过控制的凭证和系统访问能力，不管任务属于开发、观测、监控还是协作。"
+    },
+    {
+      "type": "paragraph",
+      "html": "文章最后的态度也很明确：即便底层技术还在快速变化，企业也没有太大必要等待“六个月后更成熟的版本”再开始投入。因为如果今天已经能获得可观的生产力提升，那么等待本身也是一种机会成本。"
+    }
+  ]
+}

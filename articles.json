@@ -1,658 +1,1150 @@
 {
-    "site": {
-        "title": "lyfmt's Notes",
-        "description": "记录 AI、工程工具、基础设施与硬件方向的阅读笔记，当前收录 lucumr、The New Stack、Simon Willison、CNX Software、Hackaday 与 ServeTheHome 的文章。"
-    },
-    "posts": [
+  "site": {
+    "title": "lyfmt's Notes",
+    "description": "记录 AI、工程工具、基础设施与硬件方向的阅读笔记，当前收录 lucumr、The New Stack、Simon Willison、CNX Software、Hackaday 与 ServeTheHome 的文章。"
+  },
+  "posts": [
+    {
+      "slug": "ask-hackaday-what-will-an-llm-be-good-for-in-the-plateau-of-productivity",
+      "title": "Ask Hackaday: What Will An LLM Be Good For In The Plateau of Productivity?",
+      "author": "Jenny List",
+      "publishedAt": "2026-03-09",
+      "source": "Hackaday",
+      "url": "https://hackaday.com/2026/03/09/ask-hackaday-what-will-an-llm-be-good-for-in-the-plateau-of-productivity/",
+      "excerpt": "Hackaday 这篇评论认为，当前 AI 热潮和大量“AI 垃圾内容”终会退潮，真正留在“生产力平台期”的，更可能是重视隐私的本地 LLM，以及进入家电与边缘设备的轻量对话式 AI。",
+      "tags": [
+        "AI",
+        "Privacy",
+        "Embedded",
+        "Hardware"
+      ],
+      "content": [
         {
-            "slug": "ask-hackaday-what-will-an-llm-be-good-for-in-the-plateau-of-productivity",
-            "title": "Ask Hackaday: What Will An LLM Be Good For In The Plateau of Productivity?",
-            "author": "Jenny List",
-            "publishedAt": "2026-03-09",
-            "source": "Hackaday",
-            "url": "https://hackaday.com/2026/03/09/ask-hackaday-what-will-an-llm-be-good-for-in-the-plateau-of-productivity/",
-            "excerpt": "Hackaday 这篇评论认为，当前 AI 热潮和大量“AI 垃圾内容”终会退潮，真正留在“生产力平台期”的，更可能是重视隐私的本地 LLM，以及进入家电与边缘设备的轻量对话式 AI。",
-            "tags": [
-                "AI",
-                "Privacy",
-                "Embedded",
-                "Hardware"
-            ],
-            "content": [
-                {
-                    "heading": "文章核心",
-                    "paragraphs": [
-                        "作者认为，围绕 LLM 的夸张预期与垃圾内容扩散迟早会撞上现实，但这不意味着技术会消失；泡沫退去之后，真正能留下来的，会是那些在具体场景里持续创造价值的应用。",
-                        "在作者看来，普通用户今天把 ChatGPT 当成“会写字的魔法工具”，但成熟期的 AI 不会只是泛化聊天机器人，而会转向更受约束、更贴近实际需求的产品形态。"
-                    ]
-                },
-                {
-                    "heading": "作者看好的方向",
-                    "paragraphs": [
-                        "第一类机会是本地化、私有化的 LLM：例如部署在企业内网、用于文档库和知识检索的模型接口，既能利用敏感资料，又避免把商业信息送到外部 AI 服务商。",
-                        "第二类机会是边缘与家电场景。随着 Raspberry Pi、微处理器和微控制器继续演进，语音式聊天能力可能会下沉到消费电子中，带来一批“会说话”的设备，其中大多数也许很烦人，但少数会真正有用。"
-                    ]
-                },
-                {
-                    "heading": "为什么值得关注",
-                    "paragraphs": [
-                        "这篇文章的重点不是鼓吹 agents 全面接管生活，而是提醒读者：AI 真正进入成熟阶段后，胜出的往往不是最喧闹的概念，而是那些更注重隐私、成本、部署约束和真实使用体验的具体实现。"
-                    ]
-                }
-            ],
-            "detail": {
-                "available": true,
-                "layout": "detail-zh",
-                "translatedFrom": "https://hackaday.com/2026/03/09/ask-hackaday-what-will-an-llm-be-good-for-in-the-plateau-of-productivity/",
-                "sourceName": "Hackaday",
-                "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
-                "blocks": [
-                    {
-                        "type": "paragraph",
-                        "html": "我有一位朋友，在过去近五十年里的大部分时间都在做软件开发，打过交道的系统从 20 世纪 60 年代的大型机一直延续到今天的计算机。最近，她也试了试 AI 编程工具，想看看大家到底为什么对它议论纷纷；对她来说，这不是那种几乎不费力、纯靠“vibe coding”的工具，而是用来辅助她多年编程经验的帮手。她的反应让我印象很深：她提起自己的祖父——一位出生于 19 世纪末、成长在美国乡村的人——并回忆起他曾如何描述自己第一次见到汽车时的感受。"
-                    },
-                    {
-                        "type": "heading",
-                        "level": 2,
-                        "text": "在我们之后，便是崩盘"
-                    },
-                    {
-                        "type": "image",
-                        "src": "./assets/posts/ask-hackaday-what-will-an-llm-be-good-for-in-the-plateau-of-productivity/figure-01.jpg",
-                        "alt": "Gartner 技术成熟度曲线图",
-                        "caption": "Gartner 技术成熟度曲线图。Jeremykemp，CC BY-SA 3.0。"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "如今我们正身处一波充斥着 AI 垃圾内容与不切实际炒作的浪潮之中，所以拿 LLM 开涮几乎总能轻松得分。但如果把这一切放进 Gartner 技术成熟度曲线来看，当它一路爬向“期望膨胀顶点”时，也许我们该开始把目光投向更后面了。这一轮 AI 热潮终究很可能会迎来一场崩塌，可崩塌之后还会留下什么？在那条漫长的“生产力平台期”尾部，留下来的会是那些真正让 LLM 取得成功的应用场景——但它们究竟会是什么？我们暂时还没能攒出一颗真正好用的水晶球，不过现在或许依然值得朝未来望一眼。"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "对大多数人来说，AI——而在他们的理解里，这往往主要就是 ChatGPT——像是一种带着魔法色彩的工具：它能替人写东西；只要不是让它去画一张“猫像人一样做事”的图，它甚至还能让人显得比实际更聪明。对很多人而言，它已经取代了搜索引擎；对另一些人来说，它更成了倾诉对象，甚至到了 <a href=\"https://en.wikipedia.org/wiki/Chatbot_psychosis\" target=\"_blank\" rel=\"noreferrer noopener\">Chatbot psychosis</a> 这个说法都进入日常词汇的地步。"
-                    },
-                    {
-                        "type": "image",
-                        "src": "./assets/posts/ask-hackaday-what-will-an-llm-be-good-for-in-the-plateau-of-productivity/figure-02.jpeg",
-                        "alt": "一只熟睡的猫，对 AI 垃圾内容毫无兴趣",
-                        "caption": "这只猫是真的，而且对 AI 垃圾内容毫无兴趣。Izemeh，CC BY-SA 4.0。"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "有了这种“你让它写什么，它就能写什么”的工具，AI 垃圾内容当然会大量涌现：不管是毫无价值的网页，还是你公司里同样空洞无用的报告，我们都在逐渐练出识别伪内容的能力。确实有人因此预言，人类写作者会走向消亡；但尽管 <a href=\"https://hackaday.com/2025/05/16/chatgpt-me-chatgpt-is-me/\" target=\"_blank\" rel=\"noreferrer noopener\">聊天机器人在模仿作者文风这件事上已经做得相当不错</a>，我并不认同这种看法。等我们真正走到那段漫长的平台期，肉身人类写出来的内容反而会更有价值，因为读者对这类 AI 糊弄货早已形成近乎条件反射般的警觉。所以尽可放心，Hackaday 不会沦陷。"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "如果让我对这些聊天机器人做个预测，我会说它们大概率会重演过去那些行业繁荣与崩盘的剧本：芯片制造商与 AI 公司之间这种彼此循环强化的经济幻象，终究会脱轨；而且就像 2000 年代初期的搜索引擎一样，它们中的大多数都无法存活下来。"
-                    },
-                    {
-                        "type": "heading",
-                        "level": 2,
-                        "text": "哦，我懂了，你是“废话流”那一派的"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "我那位做软件开发的朋友认为，LLM 作为编程时的效率工具，显然是有前景的；但如果换成我这个写作者、也是 Hackaday 撰稿人的视角，我会觉得它们最终会走向哪里？这个问题我认真想过不少，而我的结论并没有那么无所不包。把自己最私密的想法、商业决策，或者任何其他有价值的信息交给第三方，相关的隐私风险迟早会反噬整个 LLM 行业：可能是某笔不够光彩的数据共享交易，也可能是 LLM 把本不该透露的内容泄露给了别人。因此，我认为未来最普及的 LLM，很可能会是更偏本地化的版本，没那么依赖那些耗电惊人的数据中心。至于它们最终会有哪些应用，我没法全部预言；不过就当下而言，已经有几个例子引起了我的注意，下面我会举两个来说说。"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "第一个例子，来自我在 Hackaday 之外的亲身经验——我在出版和文档行业工作了很多年。很多机构的内网里都堆着规模庞大的信息库，而这些内容往往商业敏感到根本不能离开本地，更不可能交给外部 AI 公司去处理。比如技术文档、产品规格说明之类的资料。事实上，这个领域早就有一整套成熟的内网搜索与检索产品，AI 公司当然也想分一杯羹。我完全可以想象这样一种未来：会出现一种本地部署的 LLM，某种意义上像当年那些黄色的 Google Search 机架服务器，为这些数据宝库提供更聪明的访问入口；既不用担心数据泄露，也能避免模型一路跑偏。"
-                    },
-                    {
-                        "type": "image",
-                        "src": "./assets/posts/ask-hackaday-what-will-an-llm-be-good-for-in-the-plateau-of-productivity/figure-03.jpg",
-                        "alt": "Bill Dudley 制作的 Talkie Toaster 复制品",
-                        "caption": "这是 Hackaday 在 2020 年介绍过的 Talkie Toaster 复制品，由 Bill Dudley 制作。"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "第二种想象，一方面来自一部 1980 年代的英国情景喜剧，另一方面也来自我们如今开始在 Hackaday 上看到的那些 LLM 项目。简而言之，我认为，可与人对话的家电迟早会进入消费市场；到那时，谁也躲不开 <em>Red Dwarf</em> 里的 <a href=\"https://reddwarf.fandom.com/wiki/Talkie_Toaster\" target=\"_blank\" rel=\"noreferrer noopener\">Talkie Toaster</a> 式产品。"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "先把“发疯的厨房电器”这类玩笑放一边，如今我们已经来到这样一个阶段：最新款的 Raspberry Pi，基本上已经能勉强跑起一个可用的语音聊天机器人了。再给微处理器和微控制器几年的发展时间，现在还需要一块 Pi 外加加速板才能完成的任务，未来很可能只要一颗几美元级别的高端微控制器就能做到。"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "在我看来，这几乎是不可避免的：很快就会出现一类芯片，出厂时就自带某种 LLM 能力；再往后，用不了多久，连那些原本最不可能“有个性”的电器设备，也都会被塞进某种人格设定。这种趋势大概率会很烦人，但在这一波令人厌烦的尝试里，最后应该还是会出现少数几个真正有用的例子。"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "所以，我和一位搞软件开发的朋友一起，试着先放下我这个写作者对 LLM 泡沫那些显而易见负面面的反感，转而把目光放到更远一点的未来：当使用聊天机器人不再被当成一件能让人显得聪明的事时，它会变成什么样？再过几年，LLM 也许会成为那种只是 <em>在那里</em> 的东西，而它最终会以什么形态存在？就像 20 世纪初某个美国人看着汽车，意识到它注定会深刻影响未来一样，我也知道，自己眼前这东西无论我喜不喜欢，都会长期留下来。上面我已经从几个角度猜想过它可能会如何发展，但你怎么看？当下正被 AI 圈热捧的 agents，会接管我们的生活吗？还是最后会是别的东西？"
-                    }
-                ]
-            }
+          "heading": "文章核心",
+          "paragraphs": [
+            "作者认为，围绕 LLM 的夸张预期与垃圾内容扩散迟早会撞上现实，但这不意味着技术会消失；泡沫退去之后，真正能留下来的，会是那些在具体场景里持续创造价值的应用。",
+            "在作者看来，普通用户今天把 ChatGPT 当成“会写字的魔法工具”，但成熟期的 AI 不会只是泛化聊天机器人，而会转向更受约束、更贴近实际需求的产品形态。"
+          ]
         },
         {
-            "slug": "ai-coding-agents-can-write-code-crafting-wants-to-help-them-ship-it",
-            "title": "AI coding agents can write code, Crafting wants to help them ship it",
-            "author": "Frederic Lardinois",
-            "publishedAt": "2026-03-09",
-            "source": "The New Stack",
-            "url": "https://thenewstack.io/crafting-ai-agents-platform/",
-            "tags": [
-                "AI",
-                "Agents",
-                "DevTools",
-                "Infrastructure"
-            ],
-            "excerpt": "Crafting 获得 550 万美元种子轮融资，核心方向不是让 AI agent 单纯生成代码，而是让它们进入更接近生产环境的测试、验证与交付流程。",
-            "content": [
-                {
-                    "heading": "文章核心",
-                    "paragraphs": [
-                        "文章指出，企业里的 AI coding agent 已经越来越擅长生成代码，但真正的瓶颈仍然在测试、验证以及面向真实生产基础设施的交付过程。",
-                        "Crafting 的定位是给 agent 提供生产态近似环境，包括真实依赖、真实数据和更可控的访问路径，让 agent 不只会写代码，也能在接近生产的条件下迭代。"
-                    ]
-                },
-                {
-                    "heading": "值得关注的点",
-                    "paragraphs": [
-                        "这反映了行业关注点正在从代码生成本身，转向工程流水线接入、权限管理、环境复制与交付治理。",
-                        "文中还提到受监管行业和大企业更关心安全访问、合规控制与环境还原，这说明 agent 基础设施层正在变成新的竞争点。"
-                    ]
-                }
-            ],
-            "detail": {
-                "available": false
-            }
+          "heading": "作者看好的方向",
+          "paragraphs": [
+            "第一类机会是本地化、私有化的 LLM：例如部署在企业内网、用于文档库和知识检索的模型接口，既能利用敏感资料，又避免把商业信息送到外部 AI 服务商。",
+            "第二类机会是边缘与家电场景。随着 Raspberry Pi、微处理器和微控制器继续演进，语音式聊天能力可能会下沉到消费电子中，带来一批“会说话”的设备，其中大多数也许很烦人，但少数会真正有用。"
+          ]
         },
         {
-            "slug": "moving-ai-apps-from-prototype-to-production-requires-enterprise-grade-postgres-infrastructure",
-            "title": "Moving AI apps from prototype to production requires enterprise-grade postgres infrastructure",
-            "author": "Meredith Shubel",
-            "publishedAt": "2026-03-09",
-            "source": "The New Stack",
-            "url": "https://thenewstack.io/ai-prototype-to-production-postgres/",
-            "tags": [
-                "AI",
-                "Postgres",
-                "Infrastructure",
-                "Enterprise"
-            ],
-            "excerpt": "很多 AI 应用不是卡在模型，而是卡在数据库能力、系统集成和合规约束。文章认为，AI 从原型走向生产需要企业级的 Postgres 基础设施。",
-            "content": [
-                {
-                    "heading": "为什么 prototype 很难走到 production",
-                    "paragraphs": [
-                        "文章认为，AI 项目从试验走向大规模生产时，会遇到高可用、数据主权、安全与合规等要求，而这些往往不是原型环境能满足的。",
-                        "传统数据库并没有为向量检索、混合排序和语义检索而设计，而单独的向量数据库或云上的原型方案在企业落地时又会暴露出合规和集成问题。"
-                    ]
-                },
-                {
-                    "heading": "数据层重新成为瓶颈",
-                    "paragraphs": [
-                        "文章特别强调，AI 应用如果要真正生产化，就必须能与企业现有数据库体系集成，而不是停留在孤立的原型栈里。",
-                        "除了集成复杂度，审计、加密、访问控制以及区域数据驻留等要求，也使数据库基础设施重新成为 AI 落地的关键限制项。"
-                    ]
-                }
-            ],
-            "detail": {
-                "available": false
-            }
-        },
-        {
-            "slug": "perhaps-not-boring-technology-after-all",
-            "title": "Perhaps not Boring Technology after all",
-            "author": "Simon Willison",
-            "publishedAt": "2026-03-09",
-            "source": "Simon Willison",
-            "url": "https://simonwillison.net/2026/Mar/9/not-so-boring/#atom-everything",
-            "tags": [
-                "AI",
-                "Agents",
-                "Coding",
-                "Tools"
-            ],
-            "excerpt": "Simon Willison 讨论了一个常见担忧：LLM 是否会把技术选型进一步推向训练语料中最常见的主流工具栈。",
-            "content": [
-                {
-                    "heading": "作者的观察",
-                    "paragraphs": [
-                        "文章认为，早期模型确实更偏向在 Python、JavaScript 这类高频技术栈上给出更好结果，但在最新模型和更好的 coding agent harness 下，这种限制似乎没有以前明显了。",
-                        "作者举了自己新工具的例子：只要给 agent 足够的文档入口和上下文，它也能快速学会使用训练语料里并不常见的新工具。"
-                    ]
-                },
-                {
-                    "heading": "为什么这很重要",
-                    "paragraphs": [
-                        "这意味着 coding agent 未必会天然把团队推向“最无聊、最主流”的技术选型，尤其是在 agent 会主动读文档、读现有代码和通过测试迭代的时候。",
-                        "文章还补充提到 Skills 机制越来越关键，因为它能显式教 agent 如何使用特定项目或工具。"
-                    ]
-                }
-            ],
-            "detail": {
-                "available": false
-            }
-        },
-        {
-            "slug": "nordic-semi-unveils-nrf54ls05a-and-nrf54ls05b-entry-level-ultra-low-power-bluetooth-le-socs",
-            "title": "Nordic Semi unveils nRF54LS05A and nRF54LS05B entry-level, ultra-low-power Bluetooth LE SoCs",
-            "author": "Jean-Luc Aufranc",
-            "publishedAt": "2026-03-09",
-            "source": "CNX Software",
-            "url": "https://www.cnx-software.com/2026/03/09/nordic-semi-nrf54ls05a-nrf54ls05b-entry-level-ultra-low-power-bluetooth-le-socs/",
-            "tags": [
-                "Hardware",
-                "Bluetooth",
-                "Embedded",
-                "IoT"
-            ],
-            "excerpt": "Nordic 发布 nRF54LS05A / nRF54LS05B 两款入门级超低功耗 Bluetooth LE SoC，面向传感器、标签、遥控器和轻量 IoT 设备。",
-            "content": [
-                {
-                    "heading": "硬件定位",
-                    "paragraphs": [
-                        "这两颗芯片基于 128 MHz Arm Cortex-M33，属于超低功耗蓝牙 SoC，适合传感器、信标、遥控器、PC 外设等简单无线场景，也可以作为更复杂产品里的蓝牙协处理器。",
-                        "两者主要差异在内存容量：nRF54LS05A 提供 64 KB RAM，nRF54LS05B 提供 96 KB RAM。"
-                    ]
-                },
-                {
-                    "heading": "关键特征",
-                    "paragraphs": [
-                        "文章提到它们带有第四代 Bluetooth LE radio、先进安全能力、0.5 MB NVM，以及较低的休眠功耗。",
-                        "Nordic 还强调这代器件支持从 nRF52 系列平滑迁移，但不支持 Bluetooth Channel Sounding 和 Bluetooth Mesh。"
-                    ]
-                }
-            ],
-            "detail": {
-                "available": false
-            }
-        },
-        {
-            "slug": "secure-communication-buried-in-a-news-app",
-            "title": "Secure Communication, Buried In A News App",
-            "author": "Al Williams",
-            "publishedAt": "2026-03-09",
-            "source": "Hackaday",
-            "url": "https://hackaday.com/2026/03/09/secure-communication-buried-in-a-news-app/",
-            "tags": [
-                "Security",
-                "Privacy",
-                "Messaging",
-                "Systems"
-            ],
-            "excerpt": "Hackaday 介绍了 The Guardian 与剑桥大学合作的 CoverDrop：一种嵌入新闻应用中的隐蔽安全通信系统，重点不只是加密，还包括“看起来不像在通信”。",
-            "content": [
-                {
-                    "heading": "它解决什么问题",
-                    "paragraphs": [
-                        "文章指出，在一些环境里，哪怕只是安装了加密通信应用，或者出现明显的加密流量，都可能本身就带来风险。",
-                        "CoverDrop 的目标不是只保护消息内容，而是同时降低“你正在秘密通信”这件事本身的可见性。"
-                    ]
-                },
-                {
-                    "heading": "大致做法",
-                    "paragraphs": [
-                        "系统被集成进所有新闻应用副本中，每个客户端都会定期发送看似相同长度、相同节奏的加密消息；绝大多数是无意义 cover traffic，真实消息被藏在其中。",
-                        "接收端再通过多层处理筛出真实消息，并把它们交给记者，从而实现更强的可否认性与双向通信能力。"
-                    ]
-                }
-            ],
-            "detail": {
-                "available": false
-            }
-        },
-        {
-            "slug": "amd-expands-ryzen-ai-embedded-p100-family-with-8-to-12-core-parts",
-            "title": "AMD Expands Ryzen AI Embedded P100 Family With 8 to 12 Core Parts",
-            "author": "Patrick Kennedy",
-            "publishedAt": "2026-03-09",
-            "source": "ServeTheHome",
-            "url": "https://www.servethehome.com/amd-expands-ryzen-ai-embedded-p100-family-with-8-to-12-core-parts/",
-            "tags": [
-                "Hardware",
-                "AMD",
-                "Embedded",
-                "AI"
-            ],
-            "excerpt": "AMD 扩展 Ryzen AI Embedded P100 系列，新增 8、10、12 核 SKU，继续把更强的 CPU/GPU/NPU 能力推向工业、边缘和嵌入式 AI 市场。",
-            "content": [
-                {
-                    "heading": "产品方向",
-                    "paragraphs": [
-                        "这次新增的是更高性能的 P100 系列芯片，目标市场仍然是工业、车载及其他非 PC 边缘设备，但性能范围进一步向上扩展。",
-                        "文章提到这些高阶型号基于更新的 Zen 5 / RDNA 3.5 / XDNA 2 组合，在 CPU、GPU 和 NPU 上相对上一代都有明显提升。"
-                    ]
-                },
-                {
-                    "heading": "应用含义",
-                    "paragraphs": [
-                        "除了工业自动化，AMD 也在把这类嵌入式 AI 芯片推向 physical AI、机器人和医疗等更高算力需求场景。",
-                        "新系列继续强化一个趋势：AI 计算能力正在从传统 PC/服务器，进一步向长期支持的边缘与嵌入式平台下沉。"
-                    ]
-                }
-            ],
-            "detail": {
-                "available": false
-            }
-        },
-        {
-            "slug": "pi-the-minimal-agent-within-openclaw",
-            "title": "Pi: The Minimal Agent Within OpenClaw",
-            "author": "Armin Ronacher",
-            "publishedAt": "2026-01-31",
-            "source": "lucumr.pocoo.org",
-            "url": "https://lucumr.pocoo.org/2026/1/31/pi/",
-            "tags": [
-                "AI",
-                "Agents",
-                "OpenClaw",
-                "Pi"
-            ],
-            "excerpt": "Pi 是 OpenClaw 底层所使用的极简 coding agent。它默认只有 Read、Write、Edit、Bash 四个工具，但依靠扩展系统、会话树和可持久化状态，能够作为更复杂 agent 的基础。",
-            "content": [
-                {
-                    "heading": "Pi 是什么",
-                    "paragraphs": [
-                        "Pi 是一个极简的 coding agent。和很多功能堆得很满的 agent 不同，它刻意保持很小的核心，只提供最基本的文件读写、编辑和命令执行能力。",
-                        "作者认为 Pi 值得注意的两个点是：第一，system prompt 和工具集合都非常克制；第二，它通过扩展系统把能力开放出去，而且扩展还能把状态写入 session。"
-                    ]
-                },
-                {
-                    "heading": "为什么它和 OpenClaw 有关",
-                    "paragraphs": [
-                        "文章明确指出，OpenClaw 底层有一个叫 Pi 的小型 coding agent。OpenClaw 并不是凭空实现了所有 agent 能力，而是建立在 Pi 这些可组合组件之上。",
-                        "Pi 不只是一个 CLI，它也是一组能被上层系统复用的基础模块，因此像 OpenClaw 这种连接消息渠道、设备节点和自动化能力的系统，可以把 Pi 作为核心执行引擎。"
-                    ]
-                },
-                {
-                    "heading": "设计哲学",
-                    "paragraphs": [
-                        "Pi 的哲学不是预装一切，而是鼓励 agent 通过写代码来扩展自己。它不把 MCP 之类能力作为默认内建，而更强调让 agent 去构造技能、扩展和工作流。",
-                        "这种“用软件继续制造软件”的思路，也正是作者认为 OpenClaw 代表未来方向的重要原因之一。"
-                    ]
-                }
-            ],
-            "detail": {
-                "layout": "lucumr",
-                "available": true,
-                "translatedFrom": "https://lucumr.pocoo.org/2026/1/31/pi.md",
-                "sourceName": "Armin Ronacher's Thoughts and Writings",
-                "sourceDescription": "以下为原文结构对应的中文翻译版，尽量保留原作者行文节奏、段落顺序、图片与嵌入内容。",
-                "blocks": [
-                    {
-                        "type": "paragraph",
-                        "html": "如果你这周不是与世隔绝，大概已经注意到我朋友 Peter 的一个项目在互联网上火了起来。它有过很多名字；最近更常见的名字是 <a href=\"https://openclaw.ai/\" target=\"_blank\" rel=\"noreferrer noopener\">OpenClaw</a>，不过如果你是在不同时间点看到相关消息，也可能见过它被叫作 ClawdBot 或 MoltBot。它本质上是一个接到你所选通信渠道上的 agent，会去<a href=\"https://lucumr.pocoo.org/2025/7/3/tools/\" target=\"_blank\" rel=\"noreferrer noopener\">直接跑代码</a>。"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "但你未必知道的是，OpenClaw 底下真正跑着的，是一个叫 <a href=\"https://github.com/badlogic/pi-mono/\" target=\"_blank\" rel=\"noreferrer noopener\">Pi</a> 的小型 coding agent。而在目前这个阶段，Pi 几乎已经成了我唯一在用的 coding agent。过去几周里，我对这个小 agent 越来越像布道者。前阵子我刚做过一次相关分享，后来才意识到：我居然还没在博客里正式写过 Pi。所以这篇文章想补上这个背景——为什么我对它这么着迷，以及它和 OpenClaw 到底是什么关系。"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "Pi 的作者是 <a href=\"https://mariozechner.at/\" target=\"_blank\" rel=\"noreferrer noopener\">Mario Zechner</a>。和 Peter 那种“带一点疯狂感的科幻”路线不同，Mario 非常务实。尽管两人的风格差异很大，OpenClaw 和 Pi 其实遵循的是同一个判断：LLM 特别擅长写代码、跑代码，那就应该顺势而为。从某种意义上说，这也不算偶然，因为正是 Peter 在去年把我和 Mario 一起拉进了这套思路，以及 agent 这件事本身。"
-                    },
-                    {
-                        "type": "heading",
-                        "level": 2,
-                        "text": "什么是 Pi？"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "Pi 是一个 coding agent。而如今的 coding agent 已经很多了。说实话，现在你随便挑一个现成产品，基本都能体验到所谓 agentic programming 是什么感觉。我之前在博客里对 AMP 的评价就挺正面，其中一个原因是：它确实像是由一群既沉迷 agentic programming、又真的试过很多不同路线的人做出来的产品，而不只是给现成能力套了一层花哨 UI。"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "Pi 之所以让我特别感兴趣，主要有两个原因："
-                    },
-                    {
-                        "type": "list",
-                        "items": [
-                            "第一，它的核心极小。它的 system prompt 是我见过所有 agent 里最短的之一，而且默认只带四个工具：Read、Write、Edit、Bash。",
-                            "第二，它用扩展系统来弥补这个极小核心；更重要的是，这个扩展系统允许扩展把状态持久化进 session，这一点威力非常大。"
-                        ]
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "另外还有个加分项：Pi 本身是一份写得非常漂亮的软件。它不会闪烁，不怎么吃内存，不会莫名其妙坏掉，非常稳定，而且你能明显感觉到作者对每一项进入软件的东西都很克制。"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "Pi 还不只是一个 CLI，它本身就是一组小组件，你可以在它上面拼出自己的 agent。OpenClaw 就是这么搭出来的；我自己的 Telegram bot 是这么搭的；Mario 的 <a href=\"https://github.com/badlogic/pi-mono/tree/main/packages/mom\" target=\"_blank\" rel=\"noreferrer noopener\">mom</a> 也是这么来的。如果你想做一个能连上某个外部系统的 agent，把 Pi 指向它自己，再配上 mom，它就能帮你把那个 agent 变出来。"
-                    },
-                    {
-                        "type": "heading",
-                        "level": 2,
-                        "text": "Pi 里刻意没有什么"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "想理解 Pi 里有什么，反而更重要的是先理解 Pi 里没有什么、为什么没有、以及更关键的一点：为什么它以后大概率也不会加进去。最明显的缺失就是 MCP 支持。Pi 里没有内建 MCP。你当然可以自己写扩展去接；或者像 OpenClaw 一样，直接用 <a href=\"https://github.com/steipete/mcporter\" target=\"_blank\" rel=\"noreferrer noopener\">mcporter</a> 来做。mcporter 会把 MCP 调用通过 CLI 或 TypeScript 绑定暴露出来，至于 agent 最后能不能把这套能力用好，那就另当别论了。"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "而这不是偷懒造成的缺失，而是 Pi 工作哲学的一部分。Pi 的核心想法是：如果 agent 现在还不会做某件事，你不应该第一反应是去下载一个扩展、一个 skill 或类似的东西；你应该让 agent 自己扩展自己。Pi 推崇的是“写代码，再运行代码”这套路径。"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "这当然不意味着你不能下载扩展。Pi 明确支持这么做。但它并不天然鼓励你去拿别人现成的能力；相反，你也可以直接指给 agent 看一个已有扩展，然后说：照着这个做，但把这里和这里改成我想要的样子。"
-                    },
-                    {
-                        "type": "heading",
-                        "level": 2,
-                        "text": "为“让 agent 构建 agent”而设计的 agent"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "如果你去看 Pi，以及由它延伸出来的 OpenClaw，到底在做什么，你会看到一种像泥巴一样可塑的软件形态。而这种形态，会直接反过来要求底层架构必须满足一些条件；换句话说，它迫使某些约束在系统最核心的设计层就被考虑进去。"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "举个例子，Pi 底层的 AI SDK 被设计成：一个 session 里真的可以混杂来自多个不同模型提供商的消息。它承认 session 在不同模型提供商之间并不能完全无损迁移，所以它不会过度押注那些无法跨模型迁移的 provider 专属能力。"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "另一个关键点是，除了模型消息本身，Pi 还会在 session 文件中维护自定义消息。这些消息可以被扩展拿来存状态，也可以被系统自己拿来记录一些信息——这些信息要么完全不会发给 AI，要么只会把其中一部分发进去。"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "正因为有了这套机制，扩展状态也能落盘持久化，所以它内建了 hot reloading：agent 可以自己写代码、重载、测试，然后不断循环，直到扩展真的可用为止。它还自带文档和示例，而这些文档和示例本身又能被 agent 拿来继续扩展自己。更妙的是：Pi 的 session 不是线性的，而是树状的。你可以在 session 里分支、跳转，这带来很多有意思的工作流——比如开一个旁支去修一个坏掉的 agent 工具，而不必把主 session 的上下文浪费掉。工具修好后，我可以回退到早先的节点，让 Pi 对另一条分支上发生的事做个总结。"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "这些设计之所以重要，是因为以 MCP 为例：在大多数模型提供商那里，MCP 工具和其他 LLM 工具一样，需要在 session 启动时就载入到 system context 或对应的 tool 区块里。这样一来，你几乎很难在不中断整个缓存、或者不把模型搞糊涂的前提下，真正热重载某个工具的行为。"
-                    },
-                    {
-                        "type": "heading",
-                        "level": 2,
-                        "text": "上下文之外的工具"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "Pi 里的扩展可以注册工具，让 LLM 直接调用。有时候我确实觉得这很有用。比如尽管我一直在吐槽 Beads 的实现方式，但我仍然认为，让 agent 拥有一个待办列表，是非常有价值的。我自己就让 agent 给我造过一个本地运行的 issue tracker。因为我希望它也能管理 to-do，所以这个场景里我最终给了它一个工具，而不是一个 CLI。对于这个问题范围来说，这样做很合适；而这也是目前我唯一一个额外放进上下文里的工具。"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "但在大多数情况下，我给 agent 增加的东西要么是 skills，要么是 TUI 扩展，用来让人和 agent 协作得更顺手。除了 slash commands 之外，Pi 扩展还能直接在终端里渲染自定义 TUI 组件：spinner、progress bar、交互式文件选择器、数据表、预览面板等等。这个 TUI 足够灵活，Mario 甚至证明了它可以<a href=\"https://x.com/badlogicgames/status/2008702661093454039\" target=\"_blank\" rel=\"noreferrer noopener\">在里面跑 Doom</a>。虽然这事并不实用，但如果 Doom 都能跑，那做一个实用的 dashboard 或调试界面当然也没问题。"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "我想挑几个自己在用的扩展举例，让你更直观地看到它的可塑性。虽然你可以不加改动地直接拿去用，但这套体系真正鼓励的，还是你把一个现成扩展交给 agent，再让它按你的喜好改出新版本。"
-                    },
-                    {
-                        "type": "heading",
-                        "level": 3,
-                        "text": "/answer"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "我<a href=\"https://lucumr.pocoo.org/2025/12/17/what-is-plan-mode/\" target=\"_blank\" rel=\"noreferrer noopener\">不用 plan mode</a>。我更喜欢 agent 主动提问，大家来回沟通；但我不喜欢给它“提问工具”之后那种结构化问卷式对话。我更偏好 agent 用自然语言来表达，中间插一点解释、图示之类的东西。"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "问题在于：如果直接在正文里回答这些问题，界面会变得很乱。所以 <code>/answer</code> 会去读取 agent 上一条回复，把里面的所有问题抽出来，再重排进一个更适合输入的对话框里。"
-                    },
-                    {
-                        "type": "image",
-                        "src": "https://lucumr.pocoo.org/static/pi-answer.png",
-                        "alt": "The /answer extension showing a question dialog",
-                        "caption": "/answer 扩展把 agent 的问题提炼进一个更适合回答的输入框。"
-                    },
-                    {
-                        "type": "heading",
-                        "level": 3,
-                        "text": "/todos"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "虽然我批评过 <a href=\"https://github.com/steveyegge/beads\" target=\"_blank\" rel=\"noreferrer noopener\">Beads</a> 的实现方式，但“给 agent 一个 to-do list”这件事本身真的很有用。<code>/todos</code> 命令会把 <code>.pi/todos</code> 里的所有条目当成 markdown 文件列出来；agent 和我都可以修改它们，session 还可以认领某个任务，把它标成进行中。"
-                    },
-                    {
-                        "type": "embed",
-                        "provider": "youtube",
-                        "src": "https://www.youtube.com/embed/ZcKbzxziA5k",
-                        "title": "Pi /todos extension demo"
-                    },
-                    {
-                        "type": "heading",
-                        "level": 3,
-                        "text": "/review"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "随着越来越多代码开始由 agent 写出来，在把半成品直接丢给人类之前，先让另一个 agent 做一轮 review，显然更合理。由于 Pi 的 session 是树状结构，我可以分出一个全新的 review 分支，在那里拿到问题清单，再把修复带回主 session。"
-                    },
-                    {
-                        "type": "image",
-                        "src": "https://lucumr.pocoo.org/static/pi-review.png",
-                        "alt": "The /review extension showing review preset options",
-                        "caption": "/review 扩展提供了接近 Codex 风格的 review 入口。"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "这个 UI 的设计参考了 Codex：可以很方便地审 commit、diff、未提交改动，或者远端 PR。提示词也会特别关注我在意的东西，所以我能拿到更对味的提醒——比如我会要求它明确指出新增依赖。"
-                    },
-                    {
-                        "type": "heading",
-                        "level": 3,
-                        "text": "/control"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "这是一个我还在实验、但并没有日常重度使用的扩展。它允许一个 Pi agent 给另一个 Pi agent 发 prompt。本质上是个非常简单的多 agent 系统，没有复杂编排，适合做实验。"
-                    },
-                    {
-                        "type": "heading",
-                        "level": 3,
-                        "text": "/files"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "它会列出当前 session 里被修改过或被引用过的所有文件。你可以在 Finder 里显示它们、在 VS Code 里 diff、快速预览，或者在 prompt 里再次引用。<code>shift+ctrl+r</code> 还能快速预览最近一次提到的文件；当 agent 产出 PDF 的时候，这个功能很顺手。"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "其他人也做了不少扩展，比如 <a href=\"https://github.com/nicobailon/pi-subagents\" target=\"_blank\" rel=\"noreferrer noopener\">Nico 的 subagent 扩展</a>，以及 <a href=\"https://www.npmjs.com/package/pi-interactive-shell\" target=\"_blank\" rel=\"noreferrer noopener\">interactive-shell</a>，它能让 Pi 在一个可观察的 TUI 覆层里自主跑交互式 CLI。"
-                    },
-                    {
-                        "type": "heading",
-                        "level": 2,
-                        "text": "软件继续制造软件"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "这些都只是“你可以让 agent 做些什么”的例子。真正关键的是：这里面绝大多数东西都不是我亲手写的，而是 agent 按照我的规格帮我做出来的。我只是告诉 Pi：做一个这样的扩展；它就真的做了。这里没有 MCP，没有社区技能商店之类的东西。别误会，我其实用了很多 skills，但它们都是我的 clanker 为我手工打造的，而不是从某个市场下载来的。比如我已经完全不用一堆现成的浏览器自动化 CLI 或 MCP 了，改成了一个只走 <a href=\"https://github.com/mitsuhiko/agent-stuff/blob/main/skills/web-browser/SKILL.md\" target=\"_blank\" rel=\"noreferrer noopener\">CDP 的 skill</a>。这不是因为别的方案不行，而是因为这样做对我来说更自然、更顺手；agent 也能自己维护自己的能力。"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "我的 agent 现在有<a href=\"https://github.com/mitsuhiko/agent-stuff/tree/main/skills\" target=\"_blank\" rel=\"noreferrer noopener\">不少 skills</a>，而且关键是：不用了我就会删掉。我曾给它做过一个 skill，让它能读其他工程师共享出来的 Pi session，用在 code review 上；我也有专门帮助 agent 按我喜欢的方式写 commit message、处理提交习惯、更新 changelog 的 skill。这些东西原本是 slash command，现在我正在把它们迁到 skill 体系里，看看效果是否一样好。我还给它做过一个 skill，希望它优先用 <code>uv</code> 而不是 <code>pip</code>；同时我又写了自定义扩展去拦截 <code>pip</code> 和 <code>python</code> 的调用，把它们重定向到 <code>uv</code>。"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "和 Pi 这种极简 agent 一起工作的迷人之处之一，就是它会逼着你真正活在“软件继续制造软件”这个想法里。而这条路走到极致，就是把 UI 和输出层拿掉，直接接到聊天里去——这正是 OpenClaw 在做的事。考虑到它最近增长得这么快，我越来越觉得：无论我们喜不喜欢，这大概都会成为未来的一部分。"
-                    },
-                    {
-                        "type": "footnote",
-                        "html": "<a href=\"https://x.com/steipete/status/2017313990548865292\" target=\"_blank\" rel=\"noreferrer noopener\">注 1：原文引用链接</a>"
-                    }
-                ]
-            }
-        },
-        {
-            "slug": "ai-and-the-ship-of-theseus",
-            "title": "AI And The Ship of Theseus",
-            "author": "Armin Ronacher",
-            "publishedAt": "2026-03-05",
-            "source": "lucumr.pocoo.org",
-            "url": "https://lucumr.pocoo.org/2026/3/5/theseus/",
-            "tags": [
-                "AI",
-                "Licensing",
-                "Codegen"
-            ],
-            "excerpt": "随着代码生成成本不断下降，借助测试集和 API 约束重写旧项目会越来越常见。文章讨论了这种“slopfork”现象对 GPL、MIT、闭源软件和版权边界带来的冲击。",
-            "content": [
-                {
-                    "heading": "问题从哪里来",
-                    "paragraphs": [
-                        "文章从 AI 辅助重写库和跨语言移植谈起：当 agent 可以只依靠 API 和测试集重做一份实现时，新的代码在行为上可能一致，但在内部设计上却完全不同。",
-                        "作者引用 chardet 的争议说明：新的维护者认为重写版本是新的作品，而原作者则质疑它仍然属于派生作品。"
-                    ]
-                },
-                {
-                    "heading": "对许可证的冲击",
-                    "paragraphs": [
-                        "作者认为，copyleft 很大程度依赖版权和执行摩擦；但当公开代码越来越容易被 agent 重新实现，原有的约束会变得更难维持。",
-                        "这不仅影响 GPL 代码，也可能让很多闭源废弃软件在功能层面被重新实现，从而模糊软件所有权和版权边界。"
-                    ]
-                },
-                {
-                    "heading": "Ship of Theseus 的新版本",
-                    "paragraphs": [
-                        "文章借“忒修斯之船”来比喻：如果旧代码被完全丢弃，只保留行为和名字，新实现究竟还是不是原来的作品？作者倾向于认为它已经是一艘新船。",
-                        "他也因此提出，在 AI 时代，也许商标和品牌会比传统许可证更重要，因为功能实现本身越来越容易被重做。"
-                    ]
-                }
-            ],
-            "detail": {
-                "layout": "lucumr",
-                "available": true,
-                "translatedFrom": "https://lucumr.pocoo.org/2026/3/5/theseus.md",
-                "sourceName": "Armin Ronacher's Thoughts and Writings",
-                "sourceDescription": "以下为原文结构对应的中文翻译版，尽量保持原文段落顺序与论证节奏。",
-                "blocks": [
-                    {
-                        "type": "paragraph",
-                        "html": "随着写代码的成本越来越低，这件事自然也包括“重新实现”。我前阵子提到过，我让 AI 把我一个库移植到另一门语言里，结果它最终选了一套不同的实现设计。从很多方面看，功能还是那个功能，但到达目标的路径已经变了。那个移植工作的核心做法，就是绕过原实现，直接依赖测试集。"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "还有一件相关、但又不完全相同的事发生在 <a href=\"https://github.com/chardet/chardet/issues/327#issuecomment-4005195078\" target=\"_blank\" rel=\"noreferrer noopener\">chardet</a> 上。现在的维护者只把 API 和测试集提供给 agent，让它从零重做了一份实现。这样做的动机，是把许可证从 LGPL 改成 MIT。顺带一提，我自己在这件事里也有立场，因为很多年以来我也一直希望 chardet 能换到一个非 GPL 的许可证。所以你完全可以把我看成一个带偏见的人。"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "这份新实现果不其然引发了争议。尤其是原作者 Mark Pilgrim 明确反对，认为它仍然属于派生作品。而那位已经维护这个项目 12 年的新维护者，则认为这是一个全新的作品，并且就是让自己的 coding agent 去按这个方向做。据他说，拿 JPlag 去验证之后，新实现和旧实现是明显不同的。你如果真的去看它的工作方式，这也不算奇怪：它比原版快得多，支持多核，而且采用了从根子上不同的设计。"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "但对我来说，更有意思的其实不是这场争论本身，而是它所揭示的后果。像 GPL 这样的 copyleft 代码，在很大程度上依赖版权体系以及执行成本带来的摩擦力。可一旦代码天然公开，不管有没有测试，现在你都能很轻松地把它重写一遍。这几年我自己也一直想对一些 GPL 库这么做，readline 的一个重写我之前就已经开了头，理由也类似——就是它的 GPL 许可证。这里当然有道德问题，但那并不是我此刻最关心的点。因为不仅 GPL 软件可能以 MIT 形式重新出现，那些被放弃的专有软件，也可能出现同样的命运。"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "对我个人来说，更有意思的一点在于：这些“新作品”甚至可能根本无法被版权保护。法院完全有可能裁定，AI 生成代码由于缺乏足够的人类输入，所以应当直接落入公有领域。当然，这种结果未必最可能发生，但它绝不是不可能。"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "但无论如何，这些变化都在逼出一些我们还没准备好的新局面。比如 Vercel 可以很开心地用 Clankers <a href=\"https://just-bash.dev/\" target=\"_blank\" rel=\"noreferrer noopener\">重做 bash</a>，可当有人用同样方法重做 Next.js 时，它又会表现得<a href=\"https://x.com/cramforce/status/2027155457597669785\" target=\"_blank\" rel=\"noreferrer noopener\">非常不高兴</a>。"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "这里面的后果非常大。如果生成代码的成本真的降到这么低，而且我们只靠测试集就能把一套软件重新实现出来，那这会如何改变软件的未来？我们会不会看到大量软件以更宽松的许可证重新出现？会不会看到大量专有软件重新作为开源出现？又或者，是否也会有很多软件重新以专有形式出现？"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "这是一个全新的世界，而我们几乎还不知道该怎么在其中导航。短期内，我们大概会先看到一轮关于版权的争吵；但我总觉得，真正把这些争端送进法院的情况可能不会很多，因为所有相关方其实都会害怕：一旦判例被立下来，后果可能远超当下这次冲突本身。"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "如果只看 GPL 这个方向，我觉得这会重新点燃一些已经沉寂很久的老争论：copyleft 和 permissive license 到底谁更合理。自己的作品被一个 Clanker 重写，署名感被抹掉，这当然不会让人好受。但和“忒修斯之船”不同的是，这里的边界对我来说反而更清楚：如果你把所有旧代码都扔掉，从零开始重写，即便最后行为一致，那它也已经是一艘新船了。它只是还顶着旧名字而已。反过来看，这或许也说明：作者也许更应该抓住的是商标，而不是单纯依赖许可证和合同法。"
-                    },
-                    {
-                        "type": "paragraph",
-                        "html": "就我个人而言，我觉得这一切很令人兴奋。我一直支持尽可能少用许可证约束地把东西公开出去；我相信当大家愿意共享时，社会整体会变得更好，而 GPL 在我看来恰恰与这种精神相悖，因为它限制了别人能拿这些东西做什么。眼下的变化正好印证了我的世界观。当然，我也完全理解并不是每个人都这么看，所以我预计围绕 slopforks 还会有更多争执。毕竟，它把两个本来就极易引发争论的话题——许可证和 AI——以一种最糟糕的方式绑在了一起。"
-                    }
-                ]
-            }
+          "heading": "为什么值得关注",
+          "paragraphs": [
+            "这篇文章的重点不是鼓吹 agents 全面接管生活，而是提醒读者：AI 真正进入成熟阶段后，胜出的往往不是最喧闹的概念，而是那些更注重隐私、成本、部署约束和真实使用体验的具体实现。"
+          ]
         }
-    ]
+      ],
+      "detail": {
+        "available": true,
+        "layout": "detail-zh",
+        "translatedFrom": "https://hackaday.com/2026/03/09/ask-hackaday-what-will-an-llm-be-good-for-in-the-plateau-of-productivity/",
+        "sourceName": "Hackaday",
+        "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "html": "我有一位朋友，在过去近五十年里的大部分时间都在做软件开发，打过交道的系统从 20 世纪 60 年代的大型机一直延续到今天的计算机。最近，她也试了试 AI 编程工具，想看看大家到底为什么对它议论纷纷；对她来说，这不是那种几乎不费力、纯靠“vibe coding”的工具，而是用来辅助她多年编程经验的帮手。她的反应让我印象很深：她提起自己的祖父——一位出生于 19 世纪末、成长在美国乡村的人——并回忆起他曾如何描述自己第一次见到汽车时的感受。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "在我们之后，便是崩盘"
+          },
+          {
+            "type": "image",
+            "src": "./assets/posts/ask-hackaday-what-will-an-llm-be-good-for-in-the-plateau-of-productivity/figure-01.jpg",
+            "alt": "Gartner 技术成熟度曲线图",
+            "caption": "Gartner 技术成熟度曲线图。Jeremykemp，CC BY-SA 3.0。"
+          },
+          {
+            "type": "paragraph",
+            "html": "如今我们正身处一波充斥着 AI 垃圾内容与不切实际炒作的浪潮之中，所以拿 LLM 开涮几乎总能轻松得分。但如果把这一切放进 Gartner 技术成熟度曲线来看，当它一路爬向“期望膨胀顶点”时，也许我们该开始把目光投向更后面了。这一轮 AI 热潮终究很可能会迎来一场崩塌，可崩塌之后还会留下什么？在那条漫长的“生产力平台期”尾部，留下来的会是那些真正让 LLM 取得成功的应用场景——但它们究竟会是什么？我们暂时还没能攒出一颗真正好用的水晶球，不过现在或许依然值得朝未来望一眼。"
+          },
+          {
+            "type": "paragraph",
+            "html": "对大多数人来说，AI——而在他们的理解里，这往往主要就是 ChatGPT——像是一种带着魔法色彩的工具：它能替人写东西；只要不是让它去画一张“猫像人一样做事”的图，它甚至还能让人显得比实际更聪明。对很多人而言，它已经取代了搜索引擎；对另一些人来说，它更成了倾诉对象，甚至到了 <a href=\"https://en.wikipedia.org/wiki/Chatbot_psychosis\" target=\"_blank\" rel=\"noreferrer noopener\">Chatbot psychosis</a> 这个说法都进入日常词汇的地步。"
+          },
+          {
+            "type": "image",
+            "src": "./assets/posts/ask-hackaday-what-will-an-llm-be-good-for-in-the-plateau-of-productivity/figure-02.jpeg",
+            "alt": "一只熟睡的猫，对 AI 垃圾内容毫无兴趣",
+            "caption": "这只猫是真的，而且对 AI 垃圾内容毫无兴趣。Izemeh，CC BY-SA 4.0。"
+          },
+          {
+            "type": "paragraph",
+            "html": "有了这种“你让它写什么，它就能写什么”的工具，AI 垃圾内容当然会大量涌现：不管是毫无价值的网页，还是你公司里同样空洞无用的报告，我们都在逐渐练出识别伪内容的能力。确实有人因此预言，人类写作者会走向消亡；但尽管 <a href=\"https://hackaday.com/2025/05/16/chatgpt-me-chatgpt-is-me/\" target=\"_blank\" rel=\"noreferrer noopener\">聊天机器人在模仿作者文风这件事上已经做得相当不错</a>，我并不认同这种看法。等我们真正走到那段漫长的平台期，肉身人类写出来的内容反而会更有价值，因为读者对这类 AI 糊弄货早已形成近乎条件反射般的警觉。所以尽可放心，Hackaday 不会沦陷。"
+          },
+          {
+            "type": "paragraph",
+            "html": "如果让我对这些聊天机器人做个预测，我会说它们大概率会重演过去那些行业繁荣与崩盘的剧本：芯片制造商与 AI 公司之间这种彼此循环强化的经济幻象，终究会脱轨；而且就像 2000 年代初期的搜索引擎一样，它们中的大多数都无法存活下来。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "哦，我懂了，你是“废话流”那一派的"
+          },
+          {
+            "type": "paragraph",
+            "html": "我那位做软件开发的朋友认为，LLM 作为编程时的效率工具，显然是有前景的；但如果换成我这个写作者、也是 Hackaday 撰稿人的视角，我会觉得它们最终会走向哪里？这个问题我认真想过不少，而我的结论并没有那么无所不包。把自己最私密的想法、商业决策，或者任何其他有价值的信息交给第三方，相关的隐私风险迟早会反噬整个 LLM 行业：可能是某笔不够光彩的数据共享交易，也可能是 LLM 把本不该透露的内容泄露给了别人。因此，我认为未来最普及的 LLM，很可能会是更偏本地化的版本，没那么依赖那些耗电惊人的数据中心。至于它们最终会有哪些应用，我没法全部预言；不过就当下而言，已经有几个例子引起了我的注意，下面我会举两个来说说。"
+          },
+          {
+            "type": "paragraph",
+            "html": "第一个例子，来自我在 Hackaday 之外的亲身经验——我在出版和文档行业工作了很多年。很多机构的内网里都堆着规模庞大的信息库，而这些内容往往商业敏感到根本不能离开本地，更不可能交给外部 AI 公司去处理。比如技术文档、产品规格说明之类的资料。事实上，这个领域早就有一整套成熟的内网搜索与检索产品，AI 公司当然也想分一杯羹。我完全可以想象这样一种未来：会出现一种本地部署的 LLM，某种意义上像当年那些黄色的 Google Search 机架服务器，为这些数据宝库提供更聪明的访问入口；既不用担心数据泄露，也能避免模型一路跑偏。"
+          },
+          {
+            "type": "image",
+            "src": "./assets/posts/ask-hackaday-what-will-an-llm-be-good-for-in-the-plateau-of-productivity/figure-03.jpg",
+            "alt": "Bill Dudley 制作的 Talkie Toaster 复制品",
+            "caption": "这是 Hackaday 在 2020 年介绍过的 Talkie Toaster 复制品，由 Bill Dudley 制作。"
+          },
+          {
+            "type": "paragraph",
+            "html": "第二种想象，一方面来自一部 1980 年代的英国情景喜剧，另一方面也来自我们如今开始在 Hackaday 上看到的那些 LLM 项目。简而言之，我认为，可与人对话的家电迟早会进入消费市场；到那时，谁也躲不开 <em>Red Dwarf</em> 里的 <a href=\"https://reddwarf.fandom.com/wiki/Talkie_Toaster\" target=\"_blank\" rel=\"noreferrer noopener\">Talkie Toaster</a> 式产品。"
+          },
+          {
+            "type": "paragraph",
+            "html": "先把“发疯的厨房电器”这类玩笑放一边，如今我们已经来到这样一个阶段：最新款的 Raspberry Pi，基本上已经能勉强跑起一个可用的语音聊天机器人了。再给微处理器和微控制器几年的发展时间，现在还需要一块 Pi 外加加速板才能完成的任务，未来很可能只要一颗几美元级别的高端微控制器就能做到。"
+          },
+          {
+            "type": "paragraph",
+            "html": "在我看来，这几乎是不可避免的：很快就会出现一类芯片，出厂时就自带某种 LLM 能力；再往后，用不了多久，连那些原本最不可能“有个性”的电器设备，也都会被塞进某种人格设定。这种趋势大概率会很烦人，但在这一波令人厌烦的尝试里，最后应该还是会出现少数几个真正有用的例子。"
+          },
+          {
+            "type": "paragraph",
+            "html": "所以，我和一位搞软件开发的朋友一起，试着先放下我这个写作者对 LLM 泡沫那些显而易见负面面的反感，转而把目光放到更远一点的未来：当使用聊天机器人不再被当成一件能让人显得聪明的事时，它会变成什么样？再过几年，LLM 也许会成为那种只是 <em>在那里</em> 的东西，而它最终会以什么形态存在？就像 20 世纪初某个美国人看着汽车，意识到它注定会深刻影响未来一样，我也知道，自己眼前这东西无论我喜不喜欢，都会长期留下来。上面我已经从几个角度猜想过它可能会如何发展，但你怎么看？当下正被 AI 圈热捧的 agents，会接管我们的生活吗？还是最后会是别的东西？"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "ai-coding-agents-can-write-code-crafting-wants-to-help-them-ship-it",
+      "title": "AI coding agents can write code, Crafting wants to help them ship it",
+      "author": "Frederic Lardinois",
+      "publishedAt": "2026-03-09",
+      "source": "The New Stack",
+      "url": "https://thenewstack.io/crafting-ai-agents-platform/",
+      "tags": [
+        "AI",
+        "Agents",
+        "DevTools",
+        "Infrastructure"
+      ],
+      "excerpt": "Crafting 获得 550 万美元种子轮融资，核心方向不是让 AI agent 单纯生成代码，而是让它们进入更接近生产环境的测试、验证与交付流程。",
+      "content": [
+        {
+          "heading": "文章核心",
+          "paragraphs": [
+            "文章指出，企业里的 AI coding agent 已经越来越擅长生成代码，但真正的瓶颈仍然在测试、验证以及面向真实生产基础设施的交付过程。",
+            "Crafting 的定位是给 agent 提供生产态近似环境，包括真实依赖、真实数据和更可控的访问路径，让 agent 不只会写代码，也能在接近生产的条件下迭代。"
+          ]
+        },
+        {
+          "heading": "值得关注的点",
+          "paragraphs": [
+            "这反映了行业关注点正在从代码生成本身，转向工程流水线接入、权限管理、环境复制与交付治理。",
+            "文中还提到受监管行业和大企业更关心安全访问、合规控制与环境还原，这说明 agent 基础设施层正在变成新的竞争点。"
+          ]
+        }
+      ],
+      "detail": {
+        "available": true,
+        "layout": "detail-zh",
+        "translatedFrom": "https://thenewstack.io/crafting-ai-agents-platform/",
+        "sourceName": "The New Stack",
+        "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+        "blocks": [
+          {
+            "type": "image",
+            "src": "./assets/posts/ai-coding-agents-can-write-code-crafting-wants-to-help-them-ship-it/figure-01.jpg",
+            "alt": "Crafting 文章头图",
+            "caption": "文章头图，来源：The New Stack / Hartono Creative Studio for Unsplash+。"
+          },
+          {
+            "type": "paragraph",
+            "html": "文章开头先点出一个已经越来越明显的现实：AI coding agent 现在写代码的能力进步很快，但在企业环境里，“会生成代码”还只是第一步。真正拖慢落地速度的，往往是测试、验证，以及把这些改动放进接近真实生产条件的环境里反复跑通。"
+          },
+          {
+            "type": "paragraph",
+            "html": "Crafting 的定位，就是补上这段从生成到交付之间的断层。它由来自 Google、Meta、Uber 和 Discord 的前工程负责人创立，主张给 agent 提供带有真实依赖、真实数据和更严格访问控制的类生产环境，而不是只让 agent 待在干净却失真的沙箱里。"
+          },
+          {
+            "type": "paragraph",
+            "html": "CEO Sumeet Vaidya 的说法是，过去六到九个月，行业的注意力几乎都放在“怎样让 agent 更快地产生代码”上；但当工程组织规模一上去，真正麻烦的问题会变成编排、协同、资源使用效率，以及如何让大量 agent 在企业约束下安全工作。公司此次同时宣布了 Crafting for Agents 的正式可用，以及由 Mischief 领投的 550 万美元种子轮融资。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "从沙箱走向类生产环境"
+          },
+          {
+            "type": "paragraph",
+            "html": "Crafting 原本就为人类工程师提供云端开发环境，能力包括 Kubernetes interception 和可热切换的服务，让开发者能在更贴近生产的拓扑里调试系统。现在，这套基础设施被直接扩展给 AI agent 使用。"
+          },
+          {
+            "type": "paragraph",
+            "html": "文章描述的理想工作流是：一个 coding agent 先像今天那样负责生成代码，随后再由另一个 testing agent 通过 Crafting 拉起带真实依赖的环境，在里面执行测试、观察结果并继续迭代。换句话说，Crafting 不是替代 agent 写代码，而是把 agent 往更真实的工程流水线里推进。"
+          },
+          {
+            "type": "image",
+            "src": "./assets/posts/ai-coding-agents-can-write-code-crafting-wants-to-help-them-ship-it/figure-02.png",
+            "alt": "Crafting 平台概览图",
+            "caption": "Crafting 平台概览图，展示 agent 与受控基础设施之间的关系。"
+          },
+          {
+            "type": "paragraph",
+            "html": "Vaidya 直言，只待在沙箱里的 agent 其实做不了太多事。按照他的说法，关键在于“受控访问”：如果某个 agent 正在处理支付相关任务，那平台就应该只给它访问 staging 支付基础设施所需的那一小部分凭证和权限，而不是让它什么都看不到，或者什么都能碰。"
+          },
+          {
+            "type": "paragraph",
+            "html": "因此，Crafting 的赌注并不在“帮企业起一个容器”这种基础动作上，而在于更难复制的那部分：怎样把一家公司的网络拓扑、凭证管理方式、合规要求和内部依赖关系，足够真实地映射进一个 agent 能安全工作的环境里。文中引用 Faire 的工程经理评价说，此前团队尝试过的方案要么只是点状工具，要么需要自己东拼西凑；而 Crafting 让他们能在安全前提下，把 agent 接到内部系统、MCP server 和云资源上。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "企业导入本身就是重服务过程"
+          },
+          {
+            "type": "paragraph",
+            "html": "文章接着说明，这种产品的 onboarding 天然不会是“注册即用”模式。Crafting 需要先理解客户的网络结构，再配置尽量贴近生产的 Kubernetes 集群，并代为处理凭证访问与控制。文中点到的早期客户包括 Brex、Faire、Webflow、Verkada、Persona 和 Instabase。"
+          },
+          {
+            "type": "paragraph",
+            "html": "Vaidya 还特别强调，很多企业内部所谓的 staging 环境其实并不足以真实反映生产条件；所以他们更倾向于帮助客户搭出“直接模仿当前任务所需生产片段”的环境，而不是满足于一个名义上存在的预发布环境。"
+          },
+          {
+            "type": "paragraph",
+            "html": "这也意味着，Crafting 的服务很难完全标准化。作者在文中转述 Vaidya 的判断：每家企业在基础设施结构和安全预期上都非常不同，因此总会需要一定程度的定制化、白手套式支持，才能把 agent 安全地接入进去。"
+          },
+          {
+            "type": "paragraph",
+            "html": "从市场侧看，最积极的需求主要来自金融科技和其他强监管行业，因为这些组织对安全访问、审计和受控权限有非常明确的要求。Crafting 给出的效果数据是：使用平台的团队季度 pull request 出货量提升约 25%，工程师每周仅环境搭建就可节省约 2.5 小时，而客户环境中的 AI 生成代码占比在一年内从个位数上升到最高 70%。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "更大的愿景：做 agent 的操作系统"
+          },
+          {
+            "type": "paragraph",
+            "html": "Vaidya 认为，软件工程只是起点。更长期的方向，是把 Crafting 做成一个“agent 的操作系统”式基础层：企业里的任意 agent 在需要时，都可以通过它获得经过控制的凭证和系统访问能力，不管任务属于开发、观测、监控还是协作。"
+          },
+          {
+            "type": "paragraph",
+            "html": "文章最后的态度也很明确：即便底层技术还在快速变化，企业也没有太大必要等待“六个月后更成熟的版本”再开始投入。因为如果今天已经能获得可观的生产力提升，那么等待本身也是一种机会成本。"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "moving-ai-apps-from-prototype-to-production-requires-enterprise-grade-postgres-infrastructure",
+      "title": "Moving AI apps from prototype to production requires enterprise-grade postgres infrastructure",
+      "author": "Meredith Shubel",
+      "publishedAt": "2026-03-09",
+      "source": "The New Stack",
+      "url": "https://thenewstack.io/ai-prototype-to-production-postgres/",
+      "tags": [
+        "AI",
+        "Postgres",
+        "Infrastructure",
+        "Enterprise"
+      ],
+      "excerpt": "很多 AI 应用不是卡在模型，而是卡在数据库能力、系统集成和合规约束。文章认为，AI 从原型走向生产需要企业级的 Postgres 基础设施。",
+      "content": [
+        {
+          "heading": "为什么 prototype 很难走到 production",
+          "paragraphs": [
+            "文章认为，AI 项目从试验走向大规模生产时，会遇到高可用、数据主权、安全与合规等要求，而这些往往不是原型环境能满足的。",
+            "传统数据库并没有为向量检索、混合排序和语义检索而设计，而单独的向量数据库或云上的原型方案在企业落地时又会暴露出合规和集成问题。"
+          ]
+        },
+        {
+          "heading": "数据层重新成为瓶颈",
+          "paragraphs": [
+            "文章特别强调，AI 应用如果要真正生产化，就必须能与企业现有数据库体系集成，而不是停留在孤立的原型栈里。",
+            "除了集成复杂度，审计、加密、访问控制以及区域数据驻留等要求，也使数据库基础设施重新成为 AI 落地的关键限制项。"
+          ]
+        }
+      ],
+      "detail": {
+        "available": true,
+        "layout": "detail-zh",
+        "translatedFrom": "https://thenewstack.io/ai-prototype-to-production-postgres/",
+        "sourceName": "The New Stack",
+        "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+        "blocks": [
+          {
+            "type": "image",
+            "src": "./assets/posts/moving-ai-apps-from-prototype-to-production-requires-enterprise-grade-postgres-infrastructure/figure-01.jpg",
+            "alt": "AI 原型走向生产环境的主题头图",
+            "caption": "文章头图，来源：The New Stack / Masantocreative for Unsplash+。"
+          },
+          {
+            "type": "paragraph",
+            "html": "这篇文章的基本判断是：AI 热潮确实已经席卷企业，但真正能跑到生产环境、并在规模化场景里持续产生回报的应用仍然不多。问题并不主要出在模型本身，而是卡在数据层、系统集成和合规要求上。"
+          },
+          {
+            "type": "paragraph",
+            "html": "文中引用 Stanford AI Index 的数据称，2024 年已有 78% 的组织报告在使用 AI，较前一年明显上升；但与此同时，Apptio 的一项调研又显示，90% 的技术负责人仍然很难衡量 AI 投资带来的实际 ROI。作者借此强调：从“能做出原型”到“能规模化上线”，中间还有一段非常崎岖的路。"
+          },
+          {
+            "type": "paragraph",
+            "html": "尤其当 Lovable、Replit、Bolt 这类面向非程序员的 AI 开发工具不断降低原型门槛后，任何人都更容易做出一个看上去能跑的 demo；但把它们真正部署到企业环境、满足可靠性和合规要求，难度一点都没有消失。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "从 prototype 到 production 的颠簸之路"
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "数据库限制"
+          },
+          {
+            "type": "paragraph",
+            "html": "文章首先把矛头指向数据库能力。传统事务型数据库并不是为 AI 工作负载设计的，天然缺少向量相似度检索、混合排序和语义检索等能力。于是很多团队在原型阶段会转向专门的向量数据库，或者使用某种便捷的云上 Postgres 服务。"
+          },
+          {
+            "type": "paragraph",
+            "html": "但作者认为，这些方案一旦进入生产阶段就容易暴露问题：一方面，专门的向量数据库未必满足企业级安全与合规要求；另一方面，很多云服务虽然以 Postgres 为核心，却依然带有强烈的供应商绑定属性，而受监管企业往往无法接受把关键数据与应用长期托管在这类专有云环境里。"
+          },
+          {
+            "type": "paragraph",
+            "html": "文章的一个核心论点是：真正有用的企业 AI 应用，最终必须接到企业已经在跑的数据库体系上，而不是永远停留在一套孤立的原型栈里。把老数据库整体迁进新云环境既昂贵又缓慢，而且也未必能满足安全和合规要求。"
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "集成复杂度"
+          },
+          {
+            "type": "paragraph",
+            "html": "第二个问题是集成。无论是 agentic AI、RAG 还是企业知识问答，今天很多应用都建立在一串脆弱的工具、API 和数据流水线拼装之上。原型阶段也许还能靠人工缝合维持运转，但到了生产阶段，这种拼接式架构就很容易变成扩展与治理的负担。"
+          },
+          {
+            "type": "paragraph",
+            "html": "文中举的例子是一个建立在现有知识库之上的聊天机器人：即便团队选择 Postgres 作为底层，也仍然要处理数据分块、索引、连接器、工作流以及环境迁移等一整套自定义逻辑。把这些从实验环境迁移到生产级 Postgres 基础设施，本身就是一项复杂工程，而且还可能在过程中引入新的合规缝隙。"
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "安全与合规并发症"
+          },
+          {
+            "type": "paragraph",
+            "html": "在金融、医疗、政府等强监管行业里，生产环境的门槛远高于“软件能跑起来”。文章强调，企业需要能证明谁在什么时候访问了哪些数据，需要有加密、基于角色的访问控制，以及 HIPAA、SOC 2、GDPR 等合规体系支撑。"
+          },
+          {
+            "type": "paragraph",
+            "html": "数据主权也是同样重要的限制条件。比如处理欧洲消费者数据的组织，为了满足 GDPR，可能必须把数据留在特定区域，不能落在美国机房里；这就要求底层数据库具备多区域分布和数据驻留能力。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "MCP 在这个问题里扮演什么角色"
+          },
+          {
+            "type": "paragraph",
+            "html": "文章随后把话题转到 MCP。作者的观点是，MCP 之所以重要，在于它有机会把 AI agent 与外部系统之间的连接方式标准化，减少每个项目都要自己写一套数据库、API 与工作流连接器的重复劳动。"
+          },
+          {
+            "type": "paragraph",
+            "html": "文中还批评了当前不少 Postgres MCP server 的现状：它们往往和厂商自家的云数据库深度绑定，结果是把“标准化接入”又重新变成了新的锁定形式。作者因此强调，真正有价值的 MCP 能力，应该能作用于企业现有数据库，而不是只在某个闭环产品中可用。"
+          },
+          {
+            "type": "paragraph",
+            "html": "换句话说，没有 MCP，团队就得维护一堆定制连接器；有了 MCP，系统间交互至少有机会被标准化。但文章也提醒，这件事的前提仍然是底层基础设施必须从一开始就愿意、也有能力支持 MCP。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "真正决定上限的还是数据库架构"
+          },
+          {
+            "type": "paragraph",
+            "html": "把集成问题说清之后，文章又把重点拉回到底层架构：如果企业想让 AI 应用稳定地进入生产，就必须有高可用、全球分布、安全、合规，并且能与既有数据库共存的数据库体系。对很多受监管或关键业务场景来说，Postgres 是自然候选，但单有 Postgres 这个名字并不够，还需要企业级的部署与运营能力。"
+          },
+          {
+            "type": "paragraph",
+            "html": "文末的产品落点是 pgEdge Agentic AI Toolkit for Postgres。作者把它作为一种示例：既提供企业级 Postgres 基础设施，又提供面向 AI 的工具层，并声称它兼容标准 Postgres、可部署在本地、自管云账户以及未来的托管云服务中。"
+          },
+          {
+            "type": "paragraph",
+            "html": "文章同时把 pgEdge 的 MCP server 描述为连接新旧 Postgres 数据库的关键组件，目的是帮助组织在不抛弃现有数据基础的前提下，把 AI 工作负载从原型推进到生产。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "从“淘金热”回到真实 ROI"
+          },
+          {
+            "type": "paragraph",
+            "html": "全文最后的结论是：市场上已经不缺 AI 原型，真正稀缺的是能满足企业运行条件、能被治理、也能规模化扩张的生产系统。作者因此主张，企业如果想把 AI 投资变成可量化回报，就必须把注意力从模型演示转向数据库架构、集成标准与合规基础设施。"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "perhaps-not-boring-technology-after-all",
+      "title": "Perhaps not Boring Technology after all",
+      "author": "Simon Willison",
+      "publishedAt": "2026-03-09",
+      "source": "Simon Willison",
+      "url": "https://simonwillison.net/2026/Mar/9/not-so-boring/#atom-everything",
+      "tags": [
+        "AI",
+        "Agents",
+        "Coding",
+        "Tools"
+      ],
+      "excerpt": "Simon Willison 讨论了一个常见担忧：LLM 是否会把技术选型进一步推向训练语料中最常见的主流工具栈。",
+      "content": [
+        {
+          "heading": "作者的观察",
+          "paragraphs": [
+            "文章认为，早期模型确实更偏向在 Python、JavaScript 这类高频技术栈上给出更好结果，但在最新模型和更好的 coding agent harness 下，这种限制似乎没有以前明显了。",
+            "作者举了自己新工具的例子：只要给 agent 足够的文档入口和上下文，它也能快速学会使用训练语料里并不常见的新工具。"
+          ]
+        },
+        {
+          "heading": "为什么这很重要",
+          "paragraphs": [
+            "这意味着 coding agent 未必会天然把团队推向“最无聊、最主流”的技术选型，尤其是在 agent 会主动读文档、读现有代码和通过测试迭代的时候。",
+            "文章还补充提到 Skills 机制越来越关键，因为它能显式教 agent 如何使用特定项目或工具。"
+          ]
+        }
+      ],
+      "detail": {
+        "available": true,
+        "layout": "detail-zh",
+        "translatedFrom": "https://simonwillison.net/2026/Mar/9/not-so-boring/#atom-everything",
+        "sourceName": "Simon Willison",
+        "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "html": "围绕把 LLM 用于编程，一个反复被提起的担忧是：它们可能会把开发者进一步推向那些在训练数据中覆盖最充分的工具，这也会让更新、或不那么常见的技术更难真正打开局面。"
+          },
+          {
+            "type": "paragraph",
+            "html": "Simon Willison 表示，这种担忧在几年前看起来确实很有道理：当时模型对 Python 或 JavaScript 这类语言给出的回答，明显比对那些没那么广泛使用的语言和工具要好得多。"
+          },
+          {
+            "type": "paragraph",
+            "html": "他的看法是，最新一代模型如果放在设计良好的 coding-agent harness 中使用，似乎会削弱那种效应。"
+          },
+          {
+            "type": "paragraph",
+            "html": "他提到，自己在 showboat、rodney 和 chartroom 这类全新的工具上看到了相当出色的效果。具体做法是，先让 agent 从阅读这些工具自身的 help 输出开始；而较新的模型拥有更长的上下文窗口，这也意味着它们在真正开始执行任务前，就能先消化掉相当大体量的文档。"
+          },
+          {
+            "type": "paragraph",
+            "html": "他还提到，即便把一个 coding agent 投入到现有代码库中，而其中使用的库或工具因为过于私有、或太新，导致它们在训练数据里代表性不足，这个 agent 依然可能表现良好。按他的经验，agent 会先研究现有示例，推断出本地的模式与约定，然后通过不断迭代和测试，把缺失的部分逐步补上。"
+          },
+          {
+            "type": "paragraph",
+            "html": "让他感到意外的是，至少在当下，coding agents 似乎并没有像他原先预想的那样，显著地把他自己的技术选型推向“Choose Boring Technology”这套思路。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "更新"
+          },
+          {
+            "type": "paragraph",
+            "html": "Willison 还补充说，另外还有一个相对独立的问题：由 LLM 驱动的工具在默认情况下，究竟会推荐哪些技术栈。"
+          },
+          {
+            "type": "paragraph",
+            "html": "他还提到一项题为“What Claude Code Actually Chooses”的研究。研究发现，Claude Code 明显表现出一种“更倾向自己搭建、而不是购买现成方案”的偏好，并且会反复选择某些固定工具；在各自的类别里，GitHub Actions、Stripe 和 shadcn/ui 的占优程度甚至已经接近事实上的垄断。"
+          },
+          {
+            "type": "paragraph",
+            "html": "不过在这篇文章里，他更关心的是：当人类已经先选好了另一套技术栈，并把这个选择交给 agent 之后，接下来会发生什么。"
+          },
+          {
+            "type": "paragraph",
+            "html": "他还特别强调，Skills 的重要性正在不断上升。如今，越来越多的 coding-agent 生态已经开始支持这类 skills：它们会明确地教 agent 如何使用某个特定框架或产品。"
+          },
+          {
+            "type": "paragraph",
+            "html": "他举了 Remotion、Supabase、Vercel 和 Prisma 这些项目作为例子，说明如今已经有团队开始发布官方 skills，帮助 agents 更顺畅地使用它们的工具。"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "nordic-semi-unveils-nrf54ls05a-and-nrf54ls05b-entry-level-ultra-low-power-bluetooth-le-socs",
+      "title": "Nordic Semi unveils nRF54LS05A and nRF54LS05B entry-level, ultra-low-power Bluetooth LE SoCs",
+      "author": "Jean-Luc Aufranc",
+      "publishedAt": "2026-03-09",
+      "source": "CNX Software",
+      "url": "https://www.cnx-software.com/2026/03/09/nordic-semi-nrf54ls05a-nrf54ls05b-entry-level-ultra-low-power-bluetooth-le-socs/",
+      "tags": [
+        "Hardware",
+        "Bluetooth",
+        "Embedded",
+        "IoT"
+      ],
+      "excerpt": "Nordic 发布 nRF54LS05A / nRF54LS05B 两款入门级超低功耗 Bluetooth LE SoC，面向传感器、标签、遥控器和轻量 IoT 设备。",
+      "content": [
+        {
+          "heading": "硬件定位",
+          "paragraphs": [
+            "这两颗芯片基于 128 MHz Arm Cortex-M33，属于超低功耗蓝牙 SoC，适合传感器、信标、遥控器、PC 外设等简单无线场景，也可以作为更复杂产品里的蓝牙协处理器。",
+            "两者主要差异在内存容量：nRF54LS05A 提供 64 KB RAM，nRF54LS05B 提供 96 KB RAM。"
+          ]
+        },
+        {
+          "heading": "关键特征",
+          "paragraphs": [
+            "文章提到它们带有第四代 Bluetooth LE radio、先进安全能力、0.5 MB NVM，以及较低的休眠功耗。",
+            "Nordic 还强调这代器件支持从 nRF52 系列平滑迁移，但不支持 Bluetooth Channel Sounding 和 Bluetooth Mesh。"
+          ]
+        }
+      ],
+      "detail": {
+        "available": true,
+        "layout": "detail-zh",
+        "translatedFrom": "https://www.cnx-software.com/2026/03/09/nordic-semi-nrf54ls05a-nrf54ls05b-entry-level-ultra-low-power-bluetooth-le-socs/",
+        "sourceName": "CNX Software",
+        "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "html": "Nordic Semiconductor 这次发布的是 nRF54LS05A 与 nRF54LS05B，两颗定位入门级、超低功耗的 Bluetooth LE SoC。它们都基于 128 MHz 的 Arm Cortex-M33，可作为简单无线设备的主 SoC 使用，也可以在更复杂产品里充当蓝牙协处理器。文章给出的典型场景包括传感器、标签、信标、遥控器和 PC 外设。"
+          },
+          {
+            "type": "paragraph",
+            "html": "两颗芯片的基础架构高度一致：都采用 Nordic 第四代 Bluetooth LE radio，带模拟/数字接口与安全能力，并集成大约 0.5 MB 的非易失性存储。二者最直接的区别主要在 RAM：nRF54LS05A 为 64 KB，nRF54LS05B 为 96 KB。"
+          },
+          {
+            "type": "image",
+            "src": "./assets/posts/nordic-semi-unveils-nrf54ls05a-and-nrf54ls05b-entry-level-ultra-low-power-bluetooth-le-socs/figure-01.jpg",
+            "alt": "nRF54LS05A 与 nRF54LS05B 产品图",
+            "caption": "Nordic nRF54LS05A / nRF54LS05B 产品图。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "主要规格与能力"
+          },
+          {
+            "type": "list",
+            "items": [
+              "处理器：Arm Cortex-M33，主频 128 MHz；文中列出的性能指标为 250 CoreMark/mA @ 3V，总体 500 CoreMark。",
+              "存储：nRF54LS05A 配 64 KB RAM，nRF54LS05B 配 96 KB RAM；两者都提供 508 KB NVM。",
+              "无线：支持 1 Mbps / 2 Mbps Bluetooth LE，以及 2.4 GHz 私有模式下的 1/2/4 Mbps GFSK。",
+              "射频与安全：单端天线输出（片上 balun），集成 128-bit AES/ECB/CCM/AAR 协处理器；发射功率可在 -10 dBm 到 +4 dBm 间配置，1 Mbps BLE 接收灵敏度为 -96 dBm。",
+              "外设：最多 37 个 GPIO，三组支持 EasyDMA 的串口接口，可用于 I2C、SPI 控制器/从设备与 UART；另有 SAADC、全局 RTC、PWM、QDEC、看门狗、32 位定时器与温度传感器。",
+              "电源与封装：供电范围 1.7V 至 3.6V；3V 下无线接收约 3.4 mA、0 dBm 发射约 4.8 mA；休眠模式约 0.6 到 1.2 μA；封装为 6 x 6 mm 的 QFN48。"
+            ]
+          },
+          {
+            "type": "image",
+            "src": "./assets/posts/nordic-semi-unveils-nrf54ls05a-and-nrf54ls05b-entry-level-ultra-low-power-bluetooth-le-socs/figure-02.webp",
+            "alt": "nRF54LS05 系列简化框图",
+            "caption": "nRF54LS05 系列简化框图。"
+          },
+          {
+            "type": "paragraph",
+            "html": "软件侧，这一代器件由 nRF Connect SDK 提供支持，并且还包含 bare metal 选项。Nordic 在宣传里特别强调了从 nRF52 系列向新平台平滑迁移的路径，希望借此降低旧项目升级到新一代蓝牙 SoC 的门槛。"
+          },
+          {
+            "type": "paragraph",
+            "html": "不过文章也明确提到它的能力边界：nRF54LS05A/B 不支持 Bluetooth Channel Sounding，也不支持 Bluetooth Mesh。换句话说，这是一组更偏入门级、低成本和低功耗的器件，而不是试图覆盖蓝牙标准里的所有高级特性。"
+          },
+          {
+            "type": "paragraph",
+            "html": "Nordic 强调的卖点还包括更低的设计复杂度、更小的尺寸、更低的整体成本、成熟的 Bluetooth LE radio 与协议栈、更长的电池寿命，以及在 nRF54 家族内部的 pin-to-pin 兼容性。"
+          },
+          {
+            "type": "image",
+            "src": "./assets/posts/nordic-semi-unveils-nrf54ls05a-and-nrf54ls05b-entry-level-ultra-low-power-bluetooth-le-socs/figure-03.webp",
+            "alt": "nRF54LS05-DK 开发板",
+            "caption": "nRF54LS05-DK 开发板，基于 nRF54LS05B。"
+          },
+          {
+            "type": "paragraph",
+            "html": "开发者若想尽快上手，可以使用 nRF54LS05-DK。文章称，这块板卡基于 nRF54LS05B，但也支持对内存更小的 nRF54LS05A 进行“仿真式”开发。开发板上还带有 nRF5340 调试芯片、电源管理芯片、全套 I/O 引脚、四个用户按键和四个 LED。"
+          },
+          {
+            "type": "paragraph",
+            "html": "时间表方面，Nordic 表示这两颗 SoC 与开发板已经通过 early access program 提供给合作方，正式量产计划安排在 2026 年第三季度。整体来看，这更像是 Nordic 在超低功耗 BLE 市场的一次向下覆盖：用更轻量、更低成本的器件去承接大量简单无线终端。"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "secure-communication-buried-in-a-news-app",
+      "title": "Secure Communication, Buried In A News App",
+      "author": "Al Williams",
+      "publishedAt": "2026-03-09",
+      "source": "Hackaday",
+      "url": "https://hackaday.com/2026/03/09/secure-communication-buried-in-a-news-app/",
+      "tags": [
+        "Security",
+        "Privacy",
+        "Messaging",
+        "Systems"
+      ],
+      "excerpt": "Hackaday 介绍了 The Guardian 与剑桥大学合作的 CoverDrop：一种嵌入新闻应用中的隐蔽安全通信系统，重点不只是加密，还包括“看起来不像在通信”。",
+      "content": [
+        {
+          "heading": "它解决什么问题",
+          "paragraphs": [
+            "文章指出，在一些环境里，哪怕只是安装了加密通信应用，或者出现明显的加密流量，都可能本身就带来风险。",
+            "CoverDrop 的目标不是只保护消息内容，而是同时降低“你正在秘密通信”这件事本身的可见性。"
+          ]
+        },
+        {
+          "heading": "大致做法",
+          "paragraphs": [
+            "系统被集成进所有新闻应用副本中，每个客户端都会定期发送看似相同长度、相同节奏的加密消息；绝大多数是无意义 cover traffic，真实消息被藏在其中。",
+            "接收端再通过多层处理筛出真实消息，并把它们交给记者，从而实现更强的可否认性与双向通信能力。"
+          ]
+        }
+      ],
+      "detail": {
+        "available": true,
+        "layout": "detail-zh",
+        "translatedFrom": "https://hackaday.com/2026/03/09/secure-communication-buried-in-a-news-app/",
+        "sourceName": "Hackaday",
+        "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "html": "这篇 Hackaday 文章从一个常被忽略的问题切入：加密并不总是足够的。即便对手根本看不懂消息内容，只要他们能看出你装了某个安全通信应用、或者正在向一个“明显可疑”的服务器发送加密流量，你就可能已经暴露在风险里。"
+          },
+          {
+            "type": "paragraph",
+            "html": "The Guardian 与剑桥大学研究者合作推出的 CoverDrop，正是试图解决这个层面的问题。它的目标不是单纯保护消息内容，而是尽可能让“这件事根本像没有发生过一样”，让外部观察者难以证明你曾经在秘密通信。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "把秘密通信藏进普通新闻应用里"
+          },
+          {
+            "type": "paragraph",
+            "html": "文章指出，许多端到端加密消息应用虽然安全性各异，但有一个共同弱点：它们本身就像信号弹。如果某人手机里出现一个知名的高强度加密通信应用，或者网络侧长期能看到此人向某个敏感服务器传送密文，即便密文无法解开，也足以引起怀疑。"
+          },
+          {
+            "type": "image",
+            "src": "./assets/posts/secure-communication-buried-in-a-news-app/figure-01.png",
+            "alt": "CoverDrop 系统架构图",
+            "caption": "CoverDrop 系统架构总览图。"
+          },
+          {
+            "type": "paragraph",
+            "html": "CoverDrop 的思路是，把安全投稿能力埋进每一份 Guardian 新闻应用副本里。所有客户端都会按固定节奏、固定规模向系统发送少量加密数据；绝大多数情况下，这些数据都只是没有实际意义的 cover traffic，用来把真正的通信淹没在背景噪声里。"
+          },
+          {
+            "type": "paragraph",
+            "html": "当用户真的想联系记者时，消息内容与信源公钥会一起用记者的公钥加密，然后伪装成与普通 cover traffic 完全一样的传输。换句话说，真消息和假消息在大小、节奏和加密外观上都尽量保持一致，从网络观察者视角看，很难直接区分。"
+          },
+          {
+            "type": "image",
+            "src": "./assets/posts/secure-communication-buried-in-a-news-app/figure-02.png",
+            "alt": "应用内的消息提交界面",
+            "caption": "消息在应用内被加密并隐藏在背景流量中。"
+          },
+          {
+            "type": "paragraph",
+            "html": "在接收端，CoverDrop 的安全服务器会先剥掉一层外层加密，以便把真实消息从诱饵流量中筛出来。筛出的消息随后再通过一种类似 dead drop 的方式交给记者，而这个投递阶段同样会用额外的伪装消息把包大小垫平，避免不同投递批次泄露模式。"
+          },
+          {
+            "type": "paragraph",
+            "html": "因为每条真实消息里还包含信源的公钥，记者也可以沿着相反方向回复，从而把系统从单向匿名爆料箱扩展成真正可双向往返的保密通信渠道。"
+          },
+          {
+            "type": "image",
+            "src": "./assets/posts/secure-communication-buried-in-a-news-app/figure-03.png",
+            "alt": "CoverDrop 双向通信界面",
+            "caption": "CoverDrop 支持记者与信源之间的安全双向通信。"
+          },
+          {
+            "type": "paragraph",
+            "html": "文章还强调了设备本地侧的保护：应用会把消息数据存进加密 vault 中，而且这些 vault 会维持固定大小，并在固定节奏下修改，不管用户是否真的在进行隐蔽通信。这样一来，只要没有口令，设备本身也尽量不会暴露“这里面藏着秘密消息”这一事实。"
+          },
+          {
+            "type": "paragraph",
+            "html": "Hackaday 还提到，CoverDrop 的代码已经公开在 GitHub 上，任何想审计这套设计、或在其他场景里实现类似机制的人都可以进一步研究。对很多需要保护信源的新闻机构来说，这种“可否认的投稿渠道”显然很有吸引力。"
+          },
+          {
+            "type": "paragraph",
+            "html": "文章最后的结论并不夸张：没有任何系统能做到绝对安全，但如果一个通信工具同时关注可否认性、流量伪装和本地痕迹控制，而不只是消息加密本身，它就能实质性地降低记者与信源面临的风险。"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "amd-expands-ryzen-ai-embedded-p100-family-with-8-to-12-core-parts",
+      "title": "AMD Expands Ryzen AI Embedded P100 Family With 8 to 12 Core Parts",
+      "author": "Patrick Kennedy",
+      "publishedAt": "2026-03-09",
+      "source": "ServeTheHome",
+      "url": "https://www.servethehome.com/amd-expands-ryzen-ai-embedded-p100-family-with-8-to-12-core-parts/",
+      "tags": [
+        "Hardware",
+        "AMD",
+        "Embedded",
+        "AI"
+      ],
+      "excerpt": "AMD 扩展 Ryzen AI Embedded P100 系列，新增 8、10、12 核 SKU，继续把更强的 CPU/GPU/NPU 能力推向工业、边缘和嵌入式 AI 市场。",
+      "content": [
+        {
+          "heading": "产品方向",
+          "paragraphs": [
+            "这次新增的是更高性能的 P100 系列芯片，目标市场仍然是工业、车载及其他非 PC 边缘设备，但性能范围进一步向上扩展。",
+            "文章提到这些高阶型号基于更新的 Zen 5 / RDNA 3.5 / XDNA 2 组合，在 CPU、GPU 和 NPU 上相对上一代都有明显提升。"
+          ]
+        },
+        {
+          "heading": "应用含义",
+          "paragraphs": [
+            "除了工业自动化，AMD 也在把这类嵌入式 AI 芯片推向 physical AI、机器人和医疗等更高算力需求场景。",
+            "新系列继续强化一个趋势：AI 计算能力正在从传统 PC/服务器，进一步向长期支持的边缘与嵌入式平台下沉。"
+          ]
+        }
+      ],
+      "detail": {
+        "available": true,
+        "layout": "detail-zh",
+        "translatedFrom": "https://www.servethehome.com/amd-expands-ryzen-ai-embedded-p100-family-with-8-to-12-core-parts/",
+        "sourceName": "ServeTheHome",
+        "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "html": "AMD 这次把 Ryzen AI Embedded P100 家族向上补齐，新增 8 核、10 核和 12 核型号。它们与此前已经发布的 4 核、6 核版本形成一条更完整的产品线，继续面向车载、工业以及其他需要长生命周期支持的非 PC 边缘设备。"
+          },
+          {
+            "type": "image",
+            "src": "./assets/posts/amd-expands-ryzen-ai-embedded-p100-family-with-8-to-12-core-parts/figure-01.jpg",
+            "alt": "Ryzen AI Embedded 产品家族头图",
+            "caption": "Ryzen AI Embedded 产品家族头图。"
+          },
+          {
+            "type": "paragraph",
+            "html": "ServeTheHome 把这次发布放在 AMD 整体 Ryzen Embedded 更新的大背景下来看：新一代产品围绕 Zen 5 时代的芯片展开，相较更早的 Ryzen Embedded 8000 系列，在 CPU、GPU 和 NPU 上都明显更强。"
+          },
+          {
+            "type": "image",
+            "src": "./assets/posts/amd-expands-ryzen-ai-embedded-p100-family-with-8-to-12-core-parts/figure-02.png",
+            "alt": "Ryzen AI Embedded P100 8 到 12 核概览图",
+            "caption": "Ryzen AI Embedded P100 8~12 核产品概览。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Ryzen AI Embedded P100：最高来到 12 个 Zen 5 CPU 核与 16 个 GPU CU"
+          },
+          {
+            "type": "paragraph",
+            "html": "AMD 实际上是在从低端往上把这条产品栈逐步铺满：先发低端型号，现在补上 8 到 12 核的中高阶部分，后续还计划推出更高端的 X100 系列，把 CPU 核心数进一步推到 16 核。"
+          },
+          {
+            "type": "paragraph",
+            "html": "较低端的 P100 芯片基于 Krackan Point，而这次新加入的高性能型号则把 Strix Point 这一代能力正式带进工业和嵌入式市场。"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Embedded 8000：Zen 4 CPU、RDNA 2 图形、第一代 XDNA NPU，基于 Phoenix。",
+              "Ryzen AI Embedded P100：Zen 5 CPU、RDNA 3.5 图形、XDNA 2 NPU，覆盖 Krackan Point 与 Strix Point。",
+              "Ryzen AI Embedded X100：同样采用 Zen 5 / RDNA 3.5 / XDNA 2，但会进一步走到 Strix Halo 级别。"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "html": "文章指出，这批高阶 P100 虽然在体系结构上与首批产品一致，但算力幅度明显上探：由于核心数更多，CPU 性能最高可达先前型号的约两倍，GPU 性能最高则可达到约四倍。"
+          },
+          {
+            "type": "paragraph",
+            "html": "这意味着它们适用的工作负载也更重。AMD 在文中重点提到工业自动化、physical AI 与机器人、医疗场景，以及部分专业广播类应用，这些都比 4 核、6 核版本更吃本地算力和图形/AI 加速资源。"
+          },
+          {
+            "type": "image",
+            "src": "./assets/posts/amd-expands-ryzen-ai-embedded-p100-family-with-8-to-12-core-parts/figure-03.png",
+            "alt": "Ryzen AI Embedded P100 SKU 表",
+            "caption": "Ryzen AI Embedded P100 SKU 一览。"
+          },
+          {
+            "type": "paragraph",
+            "html": "AMD 这次一共加入了 6 个 SKU：3 个标准温度版本，分别对应 8 核、10 核和 12 核；另外还有这 3 款的工业温度版本，可下探到 -40°C。"
+          },
+          {
+            "type": "paragraph",
+            "html": "ServeTheHome 还提醒读者，AMD 在公开营销材料里没有特别强调哪些核心是完整 Zen 5、哪些是更紧凑的 Zen 5c，但这些芯片实际上采用了混合搭配。报道里提到，顶配 12 核 SKU 由 4 个 Zen 5 核心加 8 个 Zen 5c 核心组成。"
+          },
+          {
+            "type": "paragraph",
+            "html": "GPU 规模的提升也很明显。首批偏低端的 P100 最高只有 4 个图形计算单元，而新款高阶型号从 12 个 CU 起步，最高可到 16 个 CU。对既要处理图形又要承担本地 AI 加速的边缘设备来说，这种提升很关键。"
+          },
+          {
+            "type": "paragraph",
+            "html": "平台层面的其他能力则在家族内部保持一致：厂商既可以选用 LPDDR5X-8533，也可以选用 DDR5-5600；标称 TDP 仍是 28W，可配置范围为 15W 到 54W；非车规 SKU 还支持两个 USB4 端口。"
+          },
+          {
+            "type": "image",
+            "src": "./assets/posts/amd-expands-ryzen-ai-embedded-p100-family-with-8-to-12-core-parts/figure-04.png",
+            "alt": "Ryzen AI Embedded P100 参考板",
+            "caption": "AMD 为 P100 提供的参考开发板。"
+          },
+          {
+            "type": "paragraph",
+            "html": "AMD 还预告了一块经过预验证的参考板，会在今年稍晚些时候提供。板上带有 DDR5 SO-DIMM 插槽、PCIe x4 插槽、USB、DisplayPort，以及一组能帮助嵌入式软硬件项目快速起步的通用 I/O。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "最后的话"
+          },
+          {
+            "type": "paragraph",
+            "html": "按照 AMD 的说法，这批新处理器已经开始向客户送样，相关文档和工具也已经可用。"
+          },
+          {
+            "type": "paragraph",
+            "html": "正式量产计划安排在 2026 年第三季度，比更低端的那批芯片晚一个季度；参考板则预计会在今年下半年上市。整体趋势很清楚：AMD 正在把更完整的 CPU / GPU / NPU 组合继续往嵌入式与边缘 AI 市场下沉。"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "pi-the-minimal-agent-within-openclaw",
+      "title": "Pi: The Minimal Agent Within OpenClaw",
+      "author": "Armin Ronacher",
+      "publishedAt": "2026-01-31",
+      "source": "lucumr.pocoo.org",
+      "url": "https://lucumr.pocoo.org/2026/1/31/pi/",
+      "tags": [
+        "AI",
+        "Agents",
+        "OpenClaw",
+        "Pi"
+      ],
+      "excerpt": "Pi 是 OpenClaw 底层所使用的极简 coding agent。它默认只有 Read、Write、Edit、Bash 四个工具，但依靠扩展系统、会话树和可持久化状态，能够作为更复杂 agent 的基础。",
+      "content": [
+        {
+          "heading": "Pi 是什么",
+          "paragraphs": [
+            "Pi 是一个极简的 coding agent。和很多功能堆得很满的 agent 不同，它刻意保持很小的核心，只提供最基本的文件读写、编辑和命令执行能力。",
+            "作者认为 Pi 值得注意的两个点是：第一，system prompt 和工具集合都非常克制；第二，它通过扩展系统把能力开放出去，而且扩展还能把状态写入 session。"
+          ]
+        },
+        {
+          "heading": "为什么它和 OpenClaw 有关",
+          "paragraphs": [
+            "文章明确指出，OpenClaw 底层有一个叫 Pi 的小型 coding agent。OpenClaw 并不是凭空实现了所有 agent 能力，而是建立在 Pi 这些可组合组件之上。",
+            "Pi 不只是一个 CLI，它也是一组能被上层系统复用的基础模块，因此像 OpenClaw 这种连接消息渠道、设备节点和自动化能力的系统，可以把 Pi 作为核心执行引擎。"
+          ]
+        },
+        {
+          "heading": "设计哲学",
+          "paragraphs": [
+            "Pi 的哲学不是预装一切，而是鼓励 agent 通过写代码来扩展自己。它不把 MCP 之类能力作为默认内建，而更强调让 agent 去构造技能、扩展和工作流。",
+            "这种“用软件继续制造软件”的思路，也正是作者认为 OpenClaw 代表未来方向的重要原因之一。"
+          ]
+        }
+      ],
+      "detail": {
+        "layout": "lucumr",
+        "available": true,
+        "translatedFrom": "https://lucumr.pocoo.org/2026/1/31/pi.md",
+        "sourceName": "Armin Ronacher's Thoughts and Writings",
+        "sourceDescription": "以下为原文结构对应的中文翻译版，尽量保留原作者行文节奏、段落顺序、图片与嵌入内容。",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "html": "如果你这周不是与世隔绝，大概已经注意到我朋友 Peter 的一个项目在互联网上火了起来。它有过很多名字；最近更常见的名字是 <a href=\"https://openclaw.ai/\" target=\"_blank\" rel=\"noreferrer noopener\">OpenClaw</a>，不过如果你是在不同时间点看到相关消息，也可能见过它被叫作 ClawdBot 或 MoltBot。它本质上是一个接到你所选通信渠道上的 agent，会去<a href=\"https://lucumr.pocoo.org/2025/7/3/tools/\" target=\"_blank\" rel=\"noreferrer noopener\">直接跑代码</a>。"
+          },
+          {
+            "type": "paragraph",
+            "html": "但你未必知道的是，OpenClaw 底下真正跑着的，是一个叫 <a href=\"https://github.com/badlogic/pi-mono/\" target=\"_blank\" rel=\"noreferrer noopener\">Pi</a> 的小型 coding agent。而在目前这个阶段，Pi 几乎已经成了我唯一在用的 coding agent。过去几周里，我对这个小 agent 越来越像布道者。前阵子我刚做过一次相关分享，后来才意识到：我居然还没在博客里正式写过 Pi。所以这篇文章想补上这个背景——为什么我对它这么着迷，以及它和 OpenClaw 到底是什么关系。"
+          },
+          {
+            "type": "paragraph",
+            "html": "Pi 的作者是 <a href=\"https://mariozechner.at/\" target=\"_blank\" rel=\"noreferrer noopener\">Mario Zechner</a>。和 Peter 那种“带一点疯狂感的科幻”路线不同，Mario 非常务实。尽管两人的风格差异很大，OpenClaw 和 Pi 其实遵循的是同一个判断：LLM 特别擅长写代码、跑代码，那就应该顺势而为。从某种意义上说，这也不算偶然，因为正是 Peter 在去年把我和 Mario 一起拉进了这套思路，以及 agent 这件事本身。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "什么是 Pi？"
+          },
+          {
+            "type": "paragraph",
+            "html": "Pi 是一个 coding agent。而如今的 coding agent 已经很多了。说实话，现在你随便挑一个现成产品，基本都能体验到所谓 agentic programming 是什么感觉。我之前在博客里对 AMP 的评价就挺正面，其中一个原因是：它确实像是由一群既沉迷 agentic programming、又真的试过很多不同路线的人做出来的产品，而不只是给现成能力套了一层花哨 UI。"
+          },
+          {
+            "type": "paragraph",
+            "html": "Pi 之所以让我特别感兴趣，主要有两个原因："
+          },
+          {
+            "type": "list",
+            "items": [
+              "第一，它的核心极小。它的 system prompt 是我见过所有 agent 里最短的之一，而且默认只带四个工具：Read、Write、Edit、Bash。",
+              "第二，它用扩展系统来弥补这个极小核心；更重要的是，这个扩展系统允许扩展把状态持久化进 session，这一点威力非常大。"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "html": "另外还有个加分项：Pi 本身是一份写得非常漂亮的软件。它不会闪烁，不怎么吃内存，不会莫名其妙坏掉，非常稳定，而且你能明显感觉到作者对每一项进入软件的东西都很克制。"
+          },
+          {
+            "type": "paragraph",
+            "html": "Pi 还不只是一个 CLI，它本身就是一组小组件，你可以在它上面拼出自己的 agent。OpenClaw 就是这么搭出来的；我自己的 Telegram bot 是这么搭的；Mario 的 <a href=\"https://github.com/badlogic/pi-mono/tree/main/packages/mom\" target=\"_blank\" rel=\"noreferrer noopener\">mom</a> 也是这么来的。如果你想做一个能连上某个外部系统的 agent，把 Pi 指向它自己，再配上 mom，它就能帮你把那个 agent 变出来。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Pi 里刻意没有什么"
+          },
+          {
+            "type": "paragraph",
+            "html": "想理解 Pi 里有什么，反而更重要的是先理解 Pi 里没有什么、为什么没有、以及更关键的一点：为什么它以后大概率也不会加进去。最明显的缺失就是 MCP 支持。Pi 里没有内建 MCP。你当然可以自己写扩展去接；或者像 OpenClaw 一样，直接用 <a href=\"https://github.com/steipete/mcporter\" target=\"_blank\" rel=\"noreferrer noopener\">mcporter</a> 来做。mcporter 会把 MCP 调用通过 CLI 或 TypeScript 绑定暴露出来，至于 agent 最后能不能把这套能力用好，那就另当别论了。"
+          },
+          {
+            "type": "paragraph",
+            "html": "而这不是偷懒造成的缺失，而是 Pi 工作哲学的一部分。Pi 的核心想法是：如果 agent 现在还不会做某件事，你不应该第一反应是去下载一个扩展、一个 skill 或类似的东西；你应该让 agent 自己扩展自己。Pi 推崇的是“写代码，再运行代码”这套路径。"
+          },
+          {
+            "type": "paragraph",
+            "html": "这当然不意味着你不能下载扩展。Pi 明确支持这么做。但它并不天然鼓励你去拿别人现成的能力；相反，你也可以直接指给 agent 看一个已有扩展，然后说：照着这个做，但把这里和这里改成我想要的样子。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "为“让 agent 构建 agent”而设计的 agent"
+          },
+          {
+            "type": "paragraph",
+            "html": "如果你去看 Pi，以及由它延伸出来的 OpenClaw，到底在做什么，你会看到一种像泥巴一样可塑的软件形态。而这种形态，会直接反过来要求底层架构必须满足一些条件；换句话说，它迫使某些约束在系统最核心的设计层就被考虑进去。"
+          },
+          {
+            "type": "paragraph",
+            "html": "举个例子，Pi 底层的 AI SDK 被设计成：一个 session 里真的可以混杂来自多个不同模型提供商的消息。它承认 session 在不同模型提供商之间并不能完全无损迁移，所以它不会过度押注那些无法跨模型迁移的 provider 专属能力。"
+          },
+          {
+            "type": "paragraph",
+            "html": "另一个关键点是，除了模型消息本身，Pi 还会在 session 文件中维护自定义消息。这些消息可以被扩展拿来存状态，也可以被系统自己拿来记录一些信息——这些信息要么完全不会发给 AI，要么只会把其中一部分发进去。"
+          },
+          {
+            "type": "paragraph",
+            "html": "正因为有了这套机制，扩展状态也能落盘持久化，所以它内建了 hot reloading：agent 可以自己写代码、重载、测试，然后不断循环，直到扩展真的可用为止。它还自带文档和示例，而这些文档和示例本身又能被 agent 拿来继续扩展自己。更妙的是：Pi 的 session 不是线性的，而是树状的。你可以在 session 里分支、跳转，这带来很多有意思的工作流——比如开一个旁支去修一个坏掉的 agent 工具，而不必把主 session 的上下文浪费掉。工具修好后，我可以回退到早先的节点，让 Pi 对另一条分支上发生的事做个总结。"
+          },
+          {
+            "type": "paragraph",
+            "html": "这些设计之所以重要，是因为以 MCP 为例：在大多数模型提供商那里，MCP 工具和其他 LLM 工具一样，需要在 session 启动时就载入到 system context 或对应的 tool 区块里。这样一来，你几乎很难在不中断整个缓存、或者不把模型搞糊涂的前提下，真正热重载某个工具的行为。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "上下文之外的工具"
+          },
+          {
+            "type": "paragraph",
+            "html": "Pi 里的扩展可以注册工具，让 LLM 直接调用。有时候我确实觉得这很有用。比如尽管我一直在吐槽 Beads 的实现方式，但我仍然认为，让 agent 拥有一个待办列表，是非常有价值的。我自己就让 agent 给我造过一个本地运行的 issue tracker。因为我希望它也能管理 to-do，所以这个场景里我最终给了它一个工具，而不是一个 CLI。对于这个问题范围来说，这样做很合适；而这也是目前我唯一一个额外放进上下文里的工具。"
+          },
+          {
+            "type": "paragraph",
+            "html": "但在大多数情况下，我给 agent 增加的东西要么是 skills，要么是 TUI 扩展，用来让人和 agent 协作得更顺手。除了 slash commands 之外，Pi 扩展还能直接在终端里渲染自定义 TUI 组件：spinner、progress bar、交互式文件选择器、数据表、预览面板等等。这个 TUI 足够灵活，Mario 甚至证明了它可以<a href=\"https://x.com/badlogicgames/status/2008702661093454039\" target=\"_blank\" rel=\"noreferrer noopener\">在里面跑 Doom</a>。虽然这事并不实用，但如果 Doom 都能跑，那做一个实用的 dashboard 或调试界面当然也没问题。"
+          },
+          {
+            "type": "paragraph",
+            "html": "我想挑几个自己在用的扩展举例，让你更直观地看到它的可塑性。虽然你可以不加改动地直接拿去用，但这套体系真正鼓励的，还是你把一个现成扩展交给 agent，再让它按你的喜好改出新版本。"
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "/answer"
+          },
+          {
+            "type": "paragraph",
+            "html": "我<a href=\"https://lucumr.pocoo.org/2025/12/17/what-is-plan-mode/\" target=\"_blank\" rel=\"noreferrer noopener\">不用 plan mode</a>。我更喜欢 agent 主动提问，大家来回沟通；但我不喜欢给它“提问工具”之后那种结构化问卷式对话。我更偏好 agent 用自然语言来表达，中间插一点解释、图示之类的东西。"
+          },
+          {
+            "type": "paragraph",
+            "html": "问题在于：如果直接在正文里回答这些问题，界面会变得很乱。所以 <code>/answer</code> 会去读取 agent 上一条回复，把里面的所有问题抽出来，再重排进一个更适合输入的对话框里。"
+          },
+          {
+            "type": "image",
+            "src": "https://lucumr.pocoo.org/static/pi-answer.png",
+            "alt": "The /answer extension showing a question dialog",
+            "caption": "/answer 扩展把 agent 的问题提炼进一个更适合回答的输入框。"
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "/todos"
+          },
+          {
+            "type": "paragraph",
+            "html": "虽然我批评过 <a href=\"https://github.com/steveyegge/beads\" target=\"_blank\" rel=\"noreferrer noopener\">Beads</a> 的实现方式，但“给 agent 一个 to-do list”这件事本身真的很有用。<code>/todos</code> 命令会把 <code>.pi/todos</code> 里的所有条目当成 markdown 文件列出来；agent 和我都可以修改它们，session 还可以认领某个任务，把它标成进行中。"
+          },
+          {
+            "type": "embed",
+            "provider": "youtube",
+            "src": "https://www.youtube.com/embed/ZcKbzxziA5k",
+            "title": "Pi /todos extension demo"
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "/review"
+          },
+          {
+            "type": "paragraph",
+            "html": "随着越来越多代码开始由 agent 写出来，在把半成品直接丢给人类之前，先让另一个 agent 做一轮 review，显然更合理。由于 Pi 的 session 是树状结构，我可以分出一个全新的 review 分支，在那里拿到问题清单，再把修复带回主 session。"
+          },
+          {
+            "type": "image",
+            "src": "https://lucumr.pocoo.org/static/pi-review.png",
+            "alt": "The /review extension showing review preset options",
+            "caption": "/review 扩展提供了接近 Codex 风格的 review 入口。"
+          },
+          {
+            "type": "paragraph",
+            "html": "这个 UI 的设计参考了 Codex：可以很方便地审 commit、diff、未提交改动，或者远端 PR。提示词也会特别关注我在意的东西，所以我能拿到更对味的提醒——比如我会要求它明确指出新增依赖。"
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "/control"
+          },
+          {
+            "type": "paragraph",
+            "html": "这是一个我还在实验、但并没有日常重度使用的扩展。它允许一个 Pi agent 给另一个 Pi agent 发 prompt。本质上是个非常简单的多 agent 系统，没有复杂编排，适合做实验。"
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "/files"
+          },
+          {
+            "type": "paragraph",
+            "html": "它会列出当前 session 里被修改过或被引用过的所有文件。你可以在 Finder 里显示它们、在 VS Code 里 diff、快速预览，或者在 prompt 里再次引用。<code>shift+ctrl+r</code> 还能快速预览最近一次提到的文件；当 agent 产出 PDF 的时候，这个功能很顺手。"
+          },
+          {
+            "type": "paragraph",
+            "html": "其他人也做了不少扩展，比如 <a href=\"https://github.com/nicobailon/pi-subagents\" target=\"_blank\" rel=\"noreferrer noopener\">Nico 的 subagent 扩展</a>，以及 <a href=\"https://www.npmjs.com/package/pi-interactive-shell\" target=\"_blank\" rel=\"noreferrer noopener\">interactive-shell</a>，它能让 Pi 在一个可观察的 TUI 覆层里自主跑交互式 CLI。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "软件继续制造软件"
+          },
+          {
+            "type": "paragraph",
+            "html": "这些都只是“你可以让 agent 做些什么”的例子。真正关键的是：这里面绝大多数东西都不是我亲手写的，而是 agent 按照我的规格帮我做出来的。我只是告诉 Pi：做一个这样的扩展；它就真的做了。这里没有 MCP，没有社区技能商店之类的东西。别误会，我其实用了很多 skills，但它们都是我的 clanker 为我手工打造的，而不是从某个市场下载来的。比如我已经完全不用一堆现成的浏览器自动化 CLI 或 MCP 了，改成了一个只走 <a href=\"https://github.com/mitsuhiko/agent-stuff/blob/main/skills/web-browser/SKILL.md\" target=\"_blank\" rel=\"noreferrer noopener\">CDP 的 skill</a>。这不是因为别的方案不行，而是因为这样做对我来说更自然、更顺手；agent 也能自己维护自己的能力。"
+          },
+          {
+            "type": "paragraph",
+            "html": "我的 agent 现在有<a href=\"https://github.com/mitsuhiko/agent-stuff/tree/main/skills\" target=\"_blank\" rel=\"noreferrer noopener\">不少 skills</a>，而且关键是：不用了我就会删掉。我曾给它做过一个 skill，让它能读其他工程师共享出来的 Pi session，用在 code review 上；我也有专门帮助 agent 按我喜欢的方式写 commit message、处理提交习惯、更新 changelog 的 skill。这些东西原本是 slash command，现在我正在把它们迁到 skill 体系里，看看效果是否一样好。我还给它做过一个 skill，希望它优先用 <code>uv</code> 而不是 <code>pip</code>；同时我又写了自定义扩展去拦截 <code>pip</code> 和 <code>python</code> 的调用，把它们重定向到 <code>uv</code>。"
+          },
+          {
+            "type": "paragraph",
+            "html": "和 Pi 这种极简 agent 一起工作的迷人之处之一，就是它会逼着你真正活在“软件继续制造软件”这个想法里。而这条路走到极致，就是把 UI 和输出层拿掉，直接接到聊天里去——这正是 OpenClaw 在做的事。考虑到它最近增长得这么快，我越来越觉得：无论我们喜不喜欢，这大概都会成为未来的一部分。"
+          },
+          {
+            "type": "footnote",
+            "html": "<a href=\"https://x.com/steipete/status/2017313990548865292\" target=\"_blank\" rel=\"noreferrer noopener\">注 1：原文引用链接</a>"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "ai-and-the-ship-of-theseus",
+      "title": "AI And The Ship of Theseus",
+      "author": "Armin Ronacher",
+      "publishedAt": "2026-03-05",
+      "source": "lucumr.pocoo.org",
+      "url": "https://lucumr.pocoo.org/2026/3/5/theseus/",
+      "tags": [
+        "AI",
+        "Licensing",
+        "Codegen"
+      ],
+      "excerpt": "随着代码生成成本不断下降，借助测试集和 API 约束重写旧项目会越来越常见。文章讨论了这种“slopfork”现象对 GPL、MIT、闭源软件和版权边界带来的冲击。",
+      "content": [
+        {
+          "heading": "问题从哪里来",
+          "paragraphs": [
+            "文章从 AI 辅助重写库和跨语言移植谈起：当 agent 可以只依靠 API 和测试集重做一份实现时，新的代码在行为上可能一致，但在内部设计上却完全不同。",
+            "作者引用 chardet 的争议说明：新的维护者认为重写版本是新的作品，而原作者则质疑它仍然属于派生作品。"
+          ]
+        },
+        {
+          "heading": "对许可证的冲击",
+          "paragraphs": [
+            "作者认为，copyleft 很大程度依赖版权和执行摩擦；但当公开代码越来越容易被 agent 重新实现，原有的约束会变得更难维持。",
+            "这不仅影响 GPL 代码，也可能让很多闭源废弃软件在功能层面被重新实现，从而模糊软件所有权和版权边界。"
+          ]
+        },
+        {
+          "heading": "Ship of Theseus 的新版本",
+          "paragraphs": [
+            "文章借“忒修斯之船”来比喻：如果旧代码被完全丢弃，只保留行为和名字，新实现究竟还是不是原来的作品？作者倾向于认为它已经是一艘新船。",
+            "他也因此提出，在 AI 时代，也许商标和品牌会比传统许可证更重要，因为功能实现本身越来越容易被重做。"
+          ]
+        }
+      ],
+      "detail": {
+        "layout": "lucumr",
+        "available": true,
+        "translatedFrom": "https://lucumr.pocoo.org/2026/3/5/theseus.md",
+        "sourceName": "Armin Ronacher's Thoughts and Writings",
+        "sourceDescription": "以下为原文结构对应的中文翻译版，尽量保持原文段落顺序与论证节奏。",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "html": "随着写代码的成本越来越低，这件事自然也包括“重新实现”。我前阵子提到过，我让 AI 把我一个库移植到另一门语言里，结果它最终选了一套不同的实现设计。从很多方面看，功能还是那个功能，但到达目标的路径已经变了。那个移植工作的核心做法，就是绕过原实现，直接依赖测试集。"
+          },
+          {
+            "type": "paragraph",
+            "html": "还有一件相关、但又不完全相同的事发生在 <a href=\"https://github.com/chardet/chardet/issues/327#issuecomment-4005195078\" target=\"_blank\" rel=\"noreferrer noopener\">chardet</a> 上。现在的维护者只把 API 和测试集提供给 agent，让它从零重做了一份实现。这样做的动机，是把许可证从 LGPL 改成 MIT。顺带一提，我自己在这件事里也有立场，因为很多年以来我也一直希望 chardet 能换到一个非 GPL 的许可证。所以你完全可以把我看成一个带偏见的人。"
+          },
+          {
+            "type": "paragraph",
+            "html": "这份新实现果不其然引发了争议。尤其是原作者 Mark Pilgrim 明确反对，认为它仍然属于派生作品。而那位已经维护这个项目 12 年的新维护者，则认为这是一个全新的作品，并且就是让自己的 coding agent 去按这个方向做。据他说，拿 JPlag 去验证之后，新实现和旧实现是明显不同的。你如果真的去看它的工作方式，这也不算奇怪：它比原版快得多，支持多核，而且采用了从根子上不同的设计。"
+          },
+          {
+            "type": "paragraph",
+            "html": "但对我来说，更有意思的其实不是这场争论本身，而是它所揭示的后果。像 GPL 这样的 copyleft 代码，在很大程度上依赖版权体系以及执行成本带来的摩擦力。可一旦代码天然公开，不管有没有测试，现在你都能很轻松地把它重写一遍。这几年我自己也一直想对一些 GPL 库这么做，readline 的一个重写我之前就已经开了头，理由也类似——就是它的 GPL 许可证。这里当然有道德问题，但那并不是我此刻最关心的点。因为不仅 GPL 软件可能以 MIT 形式重新出现，那些被放弃的专有软件，也可能出现同样的命运。"
+          },
+          {
+            "type": "paragraph",
+            "html": "对我个人来说，更有意思的一点在于：这些“新作品”甚至可能根本无法被版权保护。法院完全有可能裁定，AI 生成代码由于缺乏足够的人类输入，所以应当直接落入公有领域。当然，这种结果未必最可能发生，但它绝不是不可能。"
+          },
+          {
+            "type": "paragraph",
+            "html": "但无论如何，这些变化都在逼出一些我们还没准备好的新局面。比如 Vercel 可以很开心地用 Clankers <a href=\"https://just-bash.dev/\" target=\"_blank\" rel=\"noreferrer noopener\">重做 bash</a>，可当有人用同样方法重做 Next.js 时，它又会表现得<a href=\"https://x.com/cramforce/status/2027155457597669785\" target=\"_blank\" rel=\"noreferrer noopener\">非常不高兴</a>。"
+          },
+          {
+            "type": "paragraph",
+            "html": "这里面的后果非常大。如果生成代码的成本真的降到这么低，而且我们只靠测试集就能把一套软件重新实现出来，那这会如何改变软件的未来？我们会不会看到大量软件以更宽松的许可证重新出现？会不会看到大量专有软件重新作为开源出现？又或者，是否也会有很多软件重新以专有形式出现？"
+          },
+          {
+            "type": "paragraph",
+            "html": "这是一个全新的世界，而我们几乎还不知道该怎么在其中导航。短期内，我们大概会先看到一轮关于版权的争吵；但我总觉得，真正把这些争端送进法院的情况可能不会很多，因为所有相关方其实都会害怕：一旦判例被立下来，后果可能远超当下这次冲突本身。"
+          },
+          {
+            "type": "paragraph",
+            "html": "如果只看 GPL 这个方向，我觉得这会重新点燃一些已经沉寂很久的老争论：copyleft 和 permissive license 到底谁更合理。自己的作品被一个 Clanker 重写，署名感被抹掉，这当然不会让人好受。但和“忒修斯之船”不同的是，这里的边界对我来说反而更清楚：如果你把所有旧代码都扔掉，从零开始重写，即便最后行为一致，那它也已经是一艘新船了。它只是还顶着旧名字而已。反过来看，这或许也说明：作者也许更应该抓住的是商标，而不是单纯依赖许可证和合同法。"
+          },
+          {
+            "type": "paragraph",
+            "html": "就我个人而言，我觉得这一切很令人兴奋。我一直支持尽可能少用许可证约束地把东西公开出去；我相信当大家愿意共享时，社会整体会变得更好，而 GPL 在我看来恰恰与这种精神相悖，因为它限制了别人能拿这些东西做什么。眼下的变化正好印证了我的世界观。当然，我也完全理解并不是每个人都这么看，所以我预计围绕 slopforks 还会有更多争执。毕竟，它把两个本来就极易引发争论的话题——许可证和 AI——以一种最糟糕的方式绑在了一起。"
+          }
+        ]
+      }
+    }
+  ]
 }

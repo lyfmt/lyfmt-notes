@@ -1,0 +1,89 @@
+{
+  "slug": "perhaps-not-boring-technology-after-all",
+  "title": "Perhaps not Boring Technology after all",
+  "author": "Simon Willison",
+  "publishedAt": "2026-03-09",
+  "source": "Simon Willison",
+  "url": "https://simonwillison.net/2026/Mar/9/not-so-boring/#atom-everything",
+  "tags": [
+    "AI",
+    "Agents",
+    "Coding",
+    "Tools"
+  ],
+  "excerpt": "Simon Willison 讨论了一个常见担忧：LLM 是否会把技术选型进一步推向训练语料中最常见的主流工具栈。",
+  "content": [
+    {
+      "heading": "作者的观察",
+      "paragraphs": [
+        "文章认为，早期模型确实更偏向在 Python、JavaScript 这类高频技术栈上给出更好结果，但在最新模型和更好的 coding agent harness 下，这种限制似乎没有以前明显了。",
+        "作者举了自己新工具的例子：只要给 agent 足够的文档入口和上下文，它也能快速学会使用训练语料里并不常见的新工具。"
+      ]
+    },
+    {
+      "heading": "为什么这很重要",
+      "paragraphs": [
+        "这意味着 coding agent 未必会天然把团队推向“最无聊、最主流”的技术选型，尤其是在 agent 会主动读文档、读现有代码和通过测试迭代的时候。",
+        "文章还补充提到 Skills 机制越来越关键，因为它能显式教 agent 如何使用特定项目或工具。"
+      ]
+    }
+  ],
+  "detail": {
+    "available": true,
+    "layout": "detail-zh",
+    "translatedFrom": "https://simonwillison.net/2026/Mar/9/not-so-boring/#atom-everything",
+    "sourceName": "Simon Willison",
+    "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "html": "围绕把 LLM 用于编程，一个反复被提起的担忧是：它们可能会把开发者进一步推向那些在训练数据中覆盖最充分的工具，这也会让更新、或不那么常见的技术更难真正打开局面。"
+      },
+      {
+        "type": "paragraph",
+        "html": "Simon Willison 表示，这种担忧在几年前看起来确实很有道理：当时模型对 Python 或 JavaScript 这类语言给出的回答，明显比对那些没那么广泛使用的语言和工具要好得多。"
+      },
+      {
+        "type": "paragraph",
+        "html": "他的看法是，最新一代模型如果放在设计良好的 coding-agent harness 中使用，似乎会削弱那种效应。"
+      },
+      {
+        "type": "paragraph",
+        "html": "他提到，自己在 showboat、rodney 和 chartroom 这类全新的工具上看到了相当出色的效果。具体做法是，先让 agent 从阅读这些工具自身的 help 输出开始；而较新的模型拥有更长的上下文窗口，这也意味着它们在真正开始执行任务前，就能先消化掉相当大体量的文档。"
+      },
+      {
+        "type": "paragraph",
+        "html": "他还提到，即便把一个 coding agent 投入到现有代码库中，而其中使用的库或工具因为过于私有、或太新，导致它们在训练数据里代表性不足，这个 agent 依然可能表现良好。按他的经验，agent 会先研究现有示例，推断出本地的模式与约定，然后通过不断迭代和测试，把缺失的部分逐步补上。"
+      },
+      {
+        "type": "paragraph",
+        "html": "让他感到意外的是，至少在当下，coding agents 似乎并没有像他原先预想的那样，显著地把他自己的技术选型推向“Choose Boring Technology”这套思路。"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "更新"
+      },
+      {
+        "type": "paragraph",
+        "html": "Willison 还补充说，另外还有一个相对独立的问题：由 LLM 驱动的工具在默认情况下，究竟会推荐哪些技术栈。"
+      },
+      {
+        "type": "paragraph",
+        "html": "他还提到一项题为“What Claude Code Actually Chooses”的研究。研究发现，Claude Code 明显表现出一种“更倾向自己搭建、而不是购买现成方案”的偏好，并且会反复选择某些固定工具；在各自的类别里，GitHub Actions、Stripe 和 shadcn/ui 的占优程度甚至已经接近事实上的垄断。"
+      },
+      {
+        "type": "paragraph",
+        "html": "不过在这篇文章里，他更关心的是：当人类已经先选好了另一套技术栈，并把这个选择交给 agent 之后，接下来会发生什么。"
+      },
+      {
+        "type": "paragraph",
+        "html": "他还特别强调，Skills 的重要性正在不断上升。如今，越来越多的 coding-agent 生态已经开始支持这类 skills：它们会明确地教 agent 如何使用某个特定框架或产品。"
+      },
+      {
+        "type": "paragraph",
+        "html": "他举了 Remotion、Supabase、Vercel 和 Prisma 这些项目作为例子，说明如今已经有团队开始发布官方 skills，帮助 agents 更顺畅地使用它们的工具。"
+      }
+    ]
+  }
+}

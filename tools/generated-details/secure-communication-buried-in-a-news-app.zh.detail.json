@@ -1,0 +1,72 @@
+{
+  "available": true,
+  "layout": "detail-zh",
+  "translatedFrom": "https://hackaday.com/2026/03/09/secure-communication-buried-in-a-news-app/",
+  "sourceName": "Hackaday",
+  "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "html": "这篇 Hackaday 文章从一个常被忽略的问题切入：加密并不总是足够的。即便对手根本看不懂消息内容，只要他们能看出你装了某个安全通信应用、或者正在向一个“明显可疑”的服务器发送加密流量，你就可能已经暴露在风险里。"
+    },
+    {
+      "type": "paragraph",
+      "html": "The Guardian 与剑桥大学研究者合作推出的 CoverDrop，正是试图解决这个层面的问题。它的目标不是单纯保护消息内容，而是尽可能让“这件事根本像没有发生过一样”，让外部观察者难以证明你曾经在秘密通信。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "把秘密通信藏进普通新闻应用里"
+    },
+    {
+      "type": "paragraph",
+      "html": "文章指出，许多端到端加密消息应用虽然安全性各异，但有一个共同弱点：它们本身就像信号弹。如果某人手机里出现一个知名的高强度加密通信应用，或者网络侧长期能看到此人向某个敏感服务器传送密文，即便密文无法解开，也足以引起怀疑。"
+    },
+    {
+      "type": "image",
+      "src": "https://hackaday.com/wp-content/uploads/2026/02/architecture-overview.png",
+      "alt": "CoverDrop 系统架构图",
+      "caption": "CoverDrop 系统架构总览图。"
+    },
+    {
+      "type": "paragraph",
+      "html": "CoverDrop 的思路是，把安全投稿能力埋进每一份 Guardian 新闻应用副本里。所有客户端都会按固定节奏、固定规模向系统发送少量加密数据；绝大多数情况下，这些数据都只是没有实际意义的 cover traffic，用来把真正的通信淹没在背景噪声里。"
+    },
+    {
+      "type": "paragraph",
+      "html": "当用户真的想联系记者时，消息内容与信源公钥会一起用记者的公钥加密，然后伪装成与普通 cover traffic 完全一样的传输。换句话说，真消息和假消息在大小、节奏和加密外观上都尽量保持一致，从网络观察者视角看，很难直接区分。"
+    },
+    {
+      "type": "image",
+      "src": "https://hackaday.com/wp-content/uploads/2026/02/screenshot_2.png",
+      "alt": "应用内的消息提交界面",
+      "caption": "消息在应用内被加密并隐藏在背景流量中。"
+    },
+    {
+      "type": "paragraph",
+      "html": "在接收端，CoverDrop 的安全服务器会先剥掉一层外层加密，以便把真实消息从诱饵流量中筛出来。筛出的消息随后再通过一种类似 dead drop 的方式交给记者，而这个投递阶段同样会用额外的伪装消息把包大小垫平，避免不同投递批次泄露模式。"
+    },
+    {
+      "type": "paragraph",
+      "html": "因为每条真实消息里还包含信源的公钥，记者也可以沿着相反方向回复，从而把系统从单向匿名爆料箱扩展成真正可双向往返的保密通信渠道。"
+    },
+    {
+      "type": "image",
+      "src": "https://hackaday.com/wp-content/uploads/2026/02/screenshot_4.png",
+      "alt": "CoverDrop 双向通信界面",
+      "caption": "CoverDrop 支持记者与信源之间的安全双向通信。"
+    },
+    {
+      "type": "paragraph",
+      "html": "文章还强调了设备本地侧的保护：应用会把消息数据存进加密 vault 中，而且这些 vault 会维持固定大小，并在固定节奏下修改，不管用户是否真的在进行隐蔽通信。这样一来，只要没有口令，设备本身也尽量不会暴露“这里面藏着秘密消息”这一事实。"
+    },
+    {
+      "type": "paragraph",
+      "html": "Hackaday 还提到，CoverDrop 的代码已经公开在 GitHub 上，任何想审计这套设计、或在其他场景里实现类似机制的人都可以进一步研究。对很多需要保护信源的新闻机构来说，这种“可否认的投稿渠道”显然很有吸引力。"
+    },
+    {
+      "type": "paragraph",
+      "html": "文章最后的结论并不夸张：没有任何系统能做到绝对安全，但如果一个通信工具同时关注可否认性、流量伪装和本地痕迹控制，而不只是消息加密本身，它就能实质性地降低记者与信源面临的风险。"
+    }
+  ]
+}
