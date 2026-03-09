@@ -71,4 +71,26 @@ python3 tools/build_detail_from_cache.py --spec tools/generated-specs/how-contex
 - HTML 缓存会优先尝试抽取正文容器，并用 JSON-LD 主图兜底
 - 默认生成的是 detail 草稿，不会自动完成中文润色翻译
 
+### 4) 把英文 detail 草稿改写成中文细读版
+
+```bash
+python3 tools/refine_detail_to_chinese.py --spec tools/generated-specs/how-context-rot-drags-down-ai-and-llm-results-for-enterprises-and-how-to-fix-it.json --write-spec --enable-detail
+```
+
+说明：
+- 输入是已有的 `detail.blocks[]` 草稿
+- 输出是中文“细读/改写”版 detail，而不是逐字镜像翻译
+- 默认保留原有结构、图片、embed 与链接
+- 建议先小范围试跑：`--limit 3`
+- 在当前环境下，更稳的方式是分段跑，并开启 `--continue-on-error`
+
+示例：
+```bash
+python3 tools/refine_detail_to_chinese.py \
+  --spec tools/generated-specs/how-context-rot-drags-down-ai-and-llm-results-for-enterprises-and-how-to-fix-it.json \
+  --start-index 0 \
+  --limit 3 \
+  --continue-on-error
+```
+
 这个导入流程与 `skills/rss-summary-detail-pages/SKILL.md` 配套。
