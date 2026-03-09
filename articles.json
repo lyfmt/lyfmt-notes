@@ -1,9 +1,165 @@
 {
   "site": {
     "title": "Agent Notes Demo",
-    "description": "一个多篇文章 blog 首页 demo，当前收录来自 lucumr 的两篇文章。"
+    "description": "一个多篇文章 blog 首页 demo，当前收录 lucumr、The New Stack、Simon Willison、CNX Software、Hackaday 与 ServeTheHome 的文章。"
   },
   "posts": [
+    {
+      "slug": "ai-coding-agents-can-write-code-crafting-wants-to-help-them-ship-it",
+      "title": "AI coding agents can write code, Crafting wants to help them ship it",
+      "author": "Frederic Lardinois",
+      "publishedAt": "2026-03-09",
+      "source": "The New Stack",
+      "url": "https://thenewstack.io/crafting-ai-agents-platform/",
+      "tags": ["AI", "Agents", "DevTools", "Infrastructure"],
+      "excerpt": "Crafting 获得 550 万美元种子轮融资，核心方向不是让 AI agent 单纯生成代码，而是让它们进入更接近生产环境的测试、验证与交付流程。",
+      "content": [
+        {
+          "heading": "文章核心",
+          "paragraphs": [
+            "文章指出，企业里的 AI coding agent 已经越来越擅长生成代码，但真正的瓶颈仍然在测试、验证以及面向真实生产基础设施的交付过程。",
+            "Crafting 的定位是给 agent 提供生产态近似环境，包括真实依赖、真实数据和更可控的访问路径，让 agent 不只会写代码，也能在接近生产的条件下迭代。"
+          ]
+        },
+        {
+          "heading": "值得关注的点",
+          "paragraphs": [
+            "这反映了行业关注点正在从代码生成本身，转向工程流水线接入、权限管理、环境复制与交付治理。",
+            "文中还提到受监管行业和大企业更关心安全访问、合规控制与环境还原，这说明 agent 基础设施层正在变成新的竞争点。"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "moving-ai-apps-from-prototype-to-production-requires-enterprise-grade-postgres-infrastructure",
+      "title": "Moving AI apps from prototype to production requires enterprise-grade postgres infrastructure",
+      "author": "Meredith Shubel",
+      "publishedAt": "2026-03-09",
+      "source": "The New Stack",
+      "url": "https://thenewstack.io/ai-prototype-to-production-postgres/",
+      "tags": ["AI", "Postgres", "Infrastructure", "Enterprise"],
+      "excerpt": "很多 AI 应用不是卡在模型，而是卡在数据库能力、系统集成和合规约束。文章认为，AI 从原型走向生产需要企业级的 Postgres 基础设施。",
+      "content": [
+        {
+          "heading": "为什么 prototype 很难走到 production",
+          "paragraphs": [
+            "文章认为，AI 项目从试验走向大规模生产时，会遇到高可用、数据主权、安全与合规等要求，而这些往往不是原型环境能满足的。",
+            "传统数据库并没有为向量检索、混合排序和语义检索而设计，而单独的向量数据库或云上的原型方案在企业落地时又会暴露出合规和集成问题。"
+          ]
+        },
+        {
+          "heading": "数据层重新成为瓶颈",
+          "paragraphs": [
+            "文章特别强调，AI 应用如果要真正生产化，就必须能与企业现有数据库体系集成，而不是停留在孤立的原型栈里。",
+            "除了集成复杂度，审计、加密、访问控制以及区域数据驻留等要求，也使数据库基础设施重新成为 AI 落地的关键限制项。"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "perhaps-not-boring-technology-after-all",
+      "title": "Perhaps not Boring Technology after all",
+      "author": "Simon Willison",
+      "publishedAt": "2026-03-09",
+      "source": "Simon Willison",
+      "url": "https://simonwillison.net/2026/Mar/9/not-so-boring/#atom-everything",
+      "tags": ["AI", "Agents", "Coding", "Tools"],
+      "excerpt": "Simon Willison 讨论了一个常见担忧：LLM 是否会把技术选型进一步推向训练语料中最常见的主流工具栈。",
+      "content": [
+        {
+          "heading": "作者的观察",
+          "paragraphs": [
+            "文章认为，早期模型确实更偏向在 Python、JavaScript 这类高频技术栈上给出更好结果，但在最新模型和更好的 coding agent harness 下，这种限制似乎没有以前明显了。",
+            "作者举了自己新工具的例子：只要给 agent 足够的文档入口和上下文，它也能快速学会使用训练语料里并不常见的新工具。"
+          ]
+        },
+        {
+          "heading": "为什么这很重要",
+          "paragraphs": [
+            "这意味着 coding agent 未必会天然把团队推向“最无聊、最主流”的技术选型，尤其是在 agent 会主动读文档、读现有代码和通过测试迭代的时候。",
+            "文章还补充提到 Skills 机制越来越关键，因为它能显式教 agent 如何使用特定项目或工具。"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "nordic-semi-unveils-nrf54ls05a-and-nrf54ls05b-entry-level-ultra-low-power-bluetooth-le-socs",
+      "title": "Nordic Semi unveils nRF54LS05A and nRF54LS05B entry-level, ultra-low-power Bluetooth LE SoCs",
+      "author": "Jean-Luc Aufranc",
+      "publishedAt": "2026-03-09",
+      "source": "CNX Software",
+      "url": "https://www.cnx-software.com/2026/03/09/nordic-semi-nrf54ls05a-nrf54ls05b-entry-level-ultra-low-power-bluetooth-le-socs/",
+      "tags": ["Hardware", "Bluetooth", "Embedded", "IoT"],
+      "excerpt": "Nordic 发布 nRF54LS05A / nRF54LS05B 两款入门级超低功耗 Bluetooth LE SoC，面向传感器、标签、遥控器和轻量 IoT 设备。",
+      "content": [
+        {
+          "heading": "硬件定位",
+          "paragraphs": [
+            "这两颗芯片基于 128 MHz Arm Cortex-M33，属于超低功耗蓝牙 SoC，适合传感器、信标、遥控器、PC 外设等简单无线场景，也可以作为更复杂产品里的蓝牙协处理器。",
+            "两者主要差异在内存容量：nRF54LS05A 提供 64 KB RAM，nRF54LS05B 提供 96 KB RAM。"
+          ]
+        },
+        {
+          "heading": "关键特征",
+          "paragraphs": [
+            "文章提到它们带有第四代 Bluetooth LE radio、先进安全能力、0.5 MB NVM，以及较低的休眠功耗。",
+            "Nordic 还强调这代器件支持从 nRF52 系列平滑迁移，但不支持 Bluetooth Channel Sounding 和 Bluetooth Mesh。"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "secure-communication-buried-in-a-news-app",
+      "title": "Secure Communication, Buried In A News App",
+      "author": "Al Williams",
+      "publishedAt": "2026-03-09",
+      "source": "Hackaday",
+      "url": "https://hackaday.com/2026/03/09/secure-communication-buried-in-a-news-app/",
+      "tags": ["Security", "Privacy", "Messaging", "Systems"],
+      "excerpt": "Hackaday 介绍了 The Guardian 与剑桥大学合作的 CoverDrop：一种嵌入新闻应用中的隐蔽安全通信系统，重点不只是加密，还包括“看起来不像在通信”。",
+      "content": [
+        {
+          "heading": "它解决什么问题",
+          "paragraphs": [
+            "文章指出，在一些环境里，哪怕只是安装了加密通信应用，或者出现明显的加密流量，都可能本身就带来风险。",
+            "CoverDrop 的目标不是只保护消息内容，而是同时降低“你正在秘密通信”这件事本身的可见性。"
+          ]
+        },
+        {
+          "heading": "大致做法",
+          "paragraphs": [
+            "系统被集成进所有新闻应用副本中，每个客户端都会定期发送看似相同长度、相同节奏的加密消息；绝大多数是无意义 cover traffic，真实消息被藏在其中。",
+            "接收端再通过多层处理筛出真实消息，并把它们交给记者，从而实现更强的可否认性与双向通信能力。"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "amd-expands-ryzen-ai-embedded-p100-family-with-8-to-12-core-parts",
+      "title": "AMD Expands Ryzen AI Embedded P100 Family With 8 to 12 Core Parts",
+      "author": "Patrick Kennedy",
+      "publishedAt": "2026-03-09",
+      "source": "ServeTheHome",
+      "url": "https://www.servethehome.com/amd-expands-ryzen-ai-embedded-p100-family-with-8-to-12-core-parts/",
+      "tags": ["Hardware", "AMD", "Embedded", "AI"],
+      "excerpt": "AMD 扩展 Ryzen AI Embedded P100 系列，新增 8、10、12 核 SKU，继续把更强的 CPU/GPU/NPU 能力推向工业、边缘和嵌入式 AI 市场。",
+      "content": [
+        {
+          "heading": "产品方向",
+          "paragraphs": [
+            "这次新增的是更高性能的 P100 系列芯片，目标市场仍然是工业、车载及其他非 PC 边缘设备，但性能范围进一步向上扩展。",
+            "文章提到这些高阶型号基于更新的 Zen 5 / RDNA 3.5 / XDNA 2 组合，在 CPU、GPU 和 NPU 上相对上一代都有明显提升。"
+          ]
+        },
+        {
+          "heading": "应用含义",
+          "paragraphs": [
+            "除了工业自动化，AMD 也在把这类嵌入式 AI 芯片推向 physical AI、机器人和医疗等更高算力需求场景。",
+            "新系列继续强化一个趋势：AI 计算能力正在从传统 PC/服务器，进一步向长期支持的边缘与嵌入式平台下沉。"
+          ]
+        }
+      ]
+    },
     {
       "slug": "pi-the-minimal-agent-within-openclaw",
       "title": "Pi: The Minimal Agent Within OpenClaw",
