@@ -1,0 +1,20 @@
+{
+  "item": {
+    "id": 2636,
+    "title": "Amazon CloudWatch Logs announces increased query concurrency and API limits",
+    "blog": "AWS Architecture Blog",
+    "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-cloudwatch-logs-increased-limits/",
+    "published": "2026-03-09T20:16:00Z",
+    "discovered": "2026-03-09T22:01:18.218515337Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-cloudwatch-logs-increased-limits/",
+    "ok": true,
+    "title": "Amazon CloudWatch Logs announces increased query concurrency and API limits - AWS",
+    "description": "Discover more about what",
+    "fetched_bytes": 181728,
+    "error": null
+  },
+  "classification": "thin"
+}

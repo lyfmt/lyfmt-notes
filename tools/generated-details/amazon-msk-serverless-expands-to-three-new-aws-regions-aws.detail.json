@@ -1,0 +1,25 @@
+{
+  "available": false,
+  "layout": "draft",
+  "translatedFrom": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-msk-serverless-3-regions/",
+  "sourceName": "AWS Architecture Blog",
+  "sourceDescription": "以下为根据原文结构自动生成的详情草稿，已保留段落层次、图片与媒体；默认尚未完成中文翻译润色。",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "html": "Posted on: Feb 20, 2026"
+    },
+    {
+      "type": "paragraph",
+      "html": "You can now connect your Apache Kafka applications to <a href=\"https://aws.amazon.com/msk/features/msk-serverless/\" target=\"_blank\" rel=\"noreferrer noopener\">Amazon MSK Serverless</a> in the Africa (Cape Town), Asia Pacific (Taipei), and Canada West (Calgary) <a href=\"https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/\" target=\"_blank\" rel=\"noreferrer noopener\">AWS Regions</a>."
+    },
+    {
+      "type": "paragraph",
+      "html": "Amazon MSK is a fully managed service that makes it easier for you to build and run applications that use Apache Kafka as a data store. Amazon MSK Serverless is a cluster type for Amazon MSK that allows you to run Apache Kafka without having to manage and scale cluster capacity. MSK Serverless automatically provisions and scales compute and storage resources, so you can use Apache Kafka on demand."
+    },
+    {
+      "type": "paragraph",
+      "html": "With these launches, Amazon MSK Serverless is now generally available in Africa (Cape Town), Asia Pacific (Mumbai), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Taipei), Asia Pacific (Tokyo), Asia Pacific (Seoul), Canada (Central), Canada West (Calgary), Europe (Frankfurt), Europe (Ireland), Europe (Stockholm), Europe (Paris), Europe (London), South America (Sao Paulo), US East (N. Virginia), US East (Ohio), and US West (Oregon) AWS regions. To learn more and get started, see our <a href=\"https://docs.aws.amazon.com/msk/latest/developerguide/serverless.html\" target=\"_blank\" rel=\"noreferrer noopener\">developer guide</a>."
+    }
+  ]
+}

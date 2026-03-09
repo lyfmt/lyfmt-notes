@@ -1,0 +1,59 @@
+{
+  "slug": "amazon-cloudwatch-logs-announces-increased-query-concurrency-and-api-limits-aws",
+  "title": "Amazon CloudWatch Logs announces increased query concurrency and API limits",
+  "author": "AWS Architecture Blog",
+  "publishedAt": "2026-03-09",
+  "source": "AWS Architecture Blog",
+  "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-cloudwatch-logs-increased-limits/",
+  "tags": [
+    "Infrastructure",
+    "Observability",
+    "API"
+  ],
+  "excerpt": "AWS 提高了 CloudWatch Logs Insights 的并发与 API 限额：单账号可同时运行 100 个查询，StartQuery / GetQueryResults 提升到每秒 10 次，更适合多人查询和仪表盘场景。",
+  "content": [
+    {
+      "heading": "文章核心",
+      "paragraphs": [
+        "AWS 将 CloudWatch Logs Insights QL 的并发查询上限从 30 提升到 100，同时把单账号、单区域的 StartQuery 与 GetQueryResults API 限额提高到每秒 10 次。",
+        "这意味着更多用户可以同时查日志，也更不容易在通过 API 或看板批量查询时被节流。"
+      ]
+    },
+    {
+      "heading": "影响与范围",
+      "paragraphs": [
+        "本次配额提升覆盖了大量 AWS 区域，包括美东、美西、加拿大、欧洲、亚太、非洲、中东与墨西哥等。",
+        "对依赖 Logs Insights 做运维排障、分析与可视化的团队来说，这是一项偏“容量与可用性增强”的更新。"
+      ]
+    }
+  ],
+  "detail": {
+    "available": true,
+    "layout": "detail-zh",
+    "translatedFrom": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-cloudwatch-logs-increased-limits/",
+    "sourceName": "AWS Architecture Blog",
+    "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "html": "发表于：2026 年 3 月 9 日"
+      },
+      {
+        "type": "paragraph",
+        "html": "现在，Amazon CloudWatch Logs 用户在使用 Logs Insights Query Language（Logs Insights QL）时，每个账户最多可同时运行 100 个查询；同时，StartQuery 和 GetQueryResults API 的调用上限也提升到每秒 10 次（按账户、按区域计算）。这些限额的提高，使客户能够支持更多用户同时使用，并发执行更多查询。"
+      },
+      {
+        "type": "paragraph",
+        "html": "随着并发能力从 30 提升到 100，更多用户可以同时运行查询，并借助 Logs Insights QL 使用仪表板。对于通过 Logs Insights QL 调用 StartQuery 和 GetQueryResults API 的客户来说，更高的配额也意味着不易因限流而被节流，从而能够执行更多查询，并更快看到结果。"
+      },
+      {
+        "type": "paragraph",
+        "html": "此次针对 Logs Insights 查询的限额提升，现已在 US East (N. Virginia)、US East (Ohio)、US West (N. California)、US West (Oregon)、Canada (Central)、Canada (Calgary)、South America (São Paulo)、Europe (Frankfurt)、Europe (Ireland)、Europe (London)、Europe (Paris)、Europe (Stockholm)、Europe (Milan)、Europe (Zurich)、Europe (Spain)、Africa (Cape Town)、Middle East (Tel Aviv)、Asia Pacific (Mumbai)、Asia Pacific (Hyderabad)、Asia Pacific (Singapore)、Asia Pacific (Sydney)、Asia Pacific (Melbourne)、Asia Pacific (Tokyo)、Asia Pacific (Osaka)、Asia Pacific (Seoul)、Asia Pacific (Hong Kong)、Asia Pacific (Jakarta)、Asia Pacific (Bangkok)、Asia Pacific (Malaysia)、Asia Pacific (Auckland)、Asia Pacific (Taipei) 以及 Mexico (Querétaro) 区域提供。更多信息请参阅 Amazon CloudWatch Logs <a href=\"https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AnalyzingLogData.html\" target=\"_blank\" rel=\"noreferrer noopener\">文档</a>。"
+      }
+    ]
+  },
+  "workflow": {
+    "articleId": 2636,
+    "rssTitle": "Amazon CloudWatch Logs announces increased query concurrency and API limits"
+  }
+}

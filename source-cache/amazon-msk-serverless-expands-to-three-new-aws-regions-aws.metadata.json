@@ -1,0 +1,20 @@
+{
+  "item": {
+    "id": 2637,
+    "title": "Amazon MSK Serverless expands to three new AWS regions",
+    "blog": "AWS Architecture Blog",
+    "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-msk-serverless-3-regions/",
+    "published": "2026-02-20T16:00:00Z",
+    "discovered": "2026-03-09T22:01:18.218515337Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-msk-serverless-3-regions/",
+    "ok": true,
+    "title": "Amazon MSK Serverless expands to three new AWS regions - AWS",
+    "description": "Discover more about what",
+    "fetched_bytes": 180980,
+    "error": null
+  },
+  "classification": "thin"
+}

@@ -1,0 +1,59 @@
+{
+  "slug": "amazon-msk-serverless-expands-to-three-new-aws-regions-aws",
+  "title": "Amazon MSK Serverless expands to three new AWS regions",
+  "author": "AWS Architecture Blog",
+  "publishedAt": "2026-02-20",
+  "source": "AWS Architecture Blog",
+  "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-msk-serverless-3-regions/",
+  "tags": [
+    "Infrastructure",
+    "Distributed Systems",
+    "Messaging"
+  ],
+  "excerpt": "AWS 将 Amazon MSK Serverless 扩展到开普敦、台北和加拿大西部（卡尔加里）三地，让 Apache Kafka 的无服务器托管能力覆盖更多区域。",
+  "content": [
+    {
+      "heading": "文章核心",
+      "paragraphs": [
+        "Amazon MSK Serverless 新增 Africa (Cape Town)、Asia Pacific (Taipei) 和 Canada West (Calgary) 三个可用区域。",
+        "这让部署在更多地区的 Kafka 应用可以直接接入无服务器版 MSK，而不必自己管理集群容量和扩缩容。"
+      ]
+    },
+    {
+      "heading": "影响与范围",
+      "paragraphs": [
+        "MSK Serverless 会自动配置和扩展计算与存储资源，适合希望按需使用 Kafka、又不想维护底层集群的团队。",
+        "扩区后，该服务已在多个亚太、欧洲、北美、南美和非洲区域提供，进一步降低多区域事件流系统的落地门槛。"
+      ]
+    }
+  ],
+  "detail": {
+    "available": true,
+    "layout": "detail-zh",
+    "translatedFrom": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-msk-serverless-3-regions/",
+    "sourceName": "AWS Architecture Blog",
+    "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "html": "发布于：2026 年 2 月 20 日"
+      },
+      {
+        "type": "paragraph",
+        "html": "现在，你可以将 Apache Kafka 应用连接到 <a href=\"https://aws.amazon.com/msk/features/msk-serverless/\" target=\"_blank\" rel=\"noreferrer noopener\">Amazon MSK Serverless</a>；Africa（Cape Town）、Asia Pacific（Taipei）和 Canada West（Calgary）<a href=\"https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/\" target=\"_blank\" rel=\"noreferrer noopener\">AWS Regions</a> 现已支持该服务。"
+      },
+      {
+        "type": "paragraph",
+        "html": "Amazon MSK 是一项全托管服务，旨在降低基于 Apache Kafka 构建和运行应用的门槛，尤其适合把 Kafka 作为数据存储来使用的场景。作为 Amazon MSK 的一种集群类型，Amazon MSK Serverless 让你无需自行管理集群容量，也不必手动处理扩缩容，就能运行 Apache Kafka。它会自动预置并弹性调整计算与存储资源，因此你可以按需使用 Apache Kafka。"
+      },
+      {
+        "type": "paragraph",
+        "html": "随着此次扩展，Amazon MSK Serverless 现已在以下 AWS 区域正式可用：非洲（开普敦）、亚太地区（孟买）、亚太地区（新加坡）、亚太地区（悉尼）、亚太地区（台北）、亚太地区（东京）、亚太地区（首尔）、加拿大（中部）、加拿大西部（卡尔加里）、欧洲（法兰克福）、欧洲（爱尔兰）、欧洲（斯德哥尔摩）、欧洲（巴黎）、欧洲（伦敦）、南美洲（圣保罗）、美国东部（弗吉尼亚北部）、美国东部（俄亥俄）以及美国西部（俄勒冈）。如需了解更多并开始使用，请参阅我们的 <a href=\"https://docs.aws.amazon.com/msk/latest/developerguide/serverless.html\" target=\"_blank\" rel=\"noreferrer noopener\">开发者指南</a>。"
+      }
+    ]
+  },
+  "workflow": {
+    "articleId": 2637,
+    "rssTitle": "Amazon MSK Serverless expands to three new AWS regions"
+  }
+}
