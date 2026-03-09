@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Agent Notes Demo</title>
+    <title>lyfmt's Notes</title>
     <meta
       name="description"
-      content="一个真正多页的静态 blog demo，包含首页卡片页、封面精选区、作者区与分页。"
+      content="一个多页静态博客首页，包含精选区、标签浏览、排序、作者区与分页。"
     />
     <link rel="stylesheet" href="./styles.css" />
     <script src="./script.js" defer></script>
@@ -14,7 +14,7 @@
   <body data-page="home">
     <header class="site-header">
       <div class="site-header__inner">
-        <a class="site-brand" href="./index.html">Agent Notes Demo</a>
+        <a class="site-brand" href="./index.html">lyfmt's Notes</a>
 
         <div class="site-header__right">
           <nav class="top-nav" aria-label="Primary">
@@ -33,9 +33,9 @@
       <section id="featured-post" class="hero hero--cover" aria-labelledby="home-title">
         <div class="hero__body">
           <p class="eyebrow">OpenClaw / Pi / Multi-page blog</p>
-          <h1 id="home-title">Agent Notes Demo</h1>
+          <h1 id="home-title">lyfmt's Notes</h1>
           <p id="home-description" class="hero__text">
-            这是一个更接近真实博客的首页：首页包含封面精选区、导航、作者区和分页卡片流。
+            这里记录 AI、工程工具、基础设施与硬件方向的阅读笔记与文章摘录。
           </p>
           <p id="featured-supporting-copy" class="hero__text">
             在这里快速查看精选内容、作者信息与最新文章动态。
@@ -94,17 +94,29 @@
           <div>
             <p class="eyebrow eyebrow--muted">Tag explorer</p>
             <h2 id="tag-filter-title">按标签浏览</h2>
-            <p class="section-copy">通过中文标签说明快速筛看不同主题与文章方向。</p>
+            <p class="section-copy">标签后会显示当前文章数，方便快速判断主题规模。</p>
           </div>
         </div>
 
         <div id="tag-filter-list"></div>
       </section>
 
+      <section class="sort-filter-section" aria-labelledby="sort-filter-title">
+        <div class="section-head section-head--stacked">
+          <div>
+            <p class="eyebrow eyebrow--muted">View options</p>
+            <h2 id="sort-filter-title">查看方式</h2>
+            <p class="section-copy">按加入站点的先后顺序切换文章列表。</p>
+          </div>
+        </div>
+
+        <div id="sort-filter-list"></div>
+      </section>
+
       <section class="section-head" aria-labelledby="latest-posts-title">
         <div>
-          <p class="eyebrow eyebrow--muted">Homepage cards</p>
-          <h2 id="latest-posts-title">Latest posts</h2>
+          <p class="eyebrow eyebrow--muted">Reading list</p>
+          <h2 id="latest-posts-title">文章列表</h2>
           <p class="section-copy">首页卡片流负责概览、筛读和跳转；详情页负责完整阅读。</p>
         </div>
         <p id="post-count" class="section-badge">正在加载…</p>

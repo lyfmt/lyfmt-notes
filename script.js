@@ -159,8 +159,7 @@ function normalizeTag(tag) {
 }
 
 function collectTags(posts) {
-  const seen = new Set();
-  const tags = [];
+  const map = new Map();
 
   posts.forEach((post) => {
     if (!Array.isArray(post.tags)) {
@@ -174,16 +173,13 @@ function collectTags(posts) {
 
       const value = tag.trim();
       const key = normalizeTag(value);
-      if (seen.has(key)) {
-        return;
-      }
-
-      seen.add(key);
-      tags.push(value);
+      const current = map.get(key) || { name: value, count: 0 };
+      current.count += 1;
+      map.set(key, current);
     });
   });
 
-  return tags;
+  return Array.from(map.values()).sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
 }
 
 function filterPostsByTag(posts, activeTag) {
@@ -214,7 +210,7 @@ function createTagFilterChip(tag, href, isActive) {
   return chip;
 }
 
-function renderTagFilters(tags, activeTag) {
+function renderTagFilters(tags, activeTag, sort) {
   const container = qs("tag-filter-list");
   if (!container) {
     return;
@@ -223,11 +219,11 @@ function renderTagFilters(tags, activeTag) {
   clear(container);
 
   const row = createElement("div", "tag-row");
-  row.appendChild(createTagFilterChip("全部", buildIndexHref(1), !normalizeTag(activeTag)));
+  row.appendChild(createTagFilterChip("全部", buildIndexHref(1, "", sort), !normalizeTag(activeTag)));
 
   tags.forEach((tag) => {
-    const isActive = normalizeTag(tag) === normalizeTag(activeTag);
-    row.appendChild(createTagFilterChip(tag, buildIndexHref(1, tag), isActive));
+    const isActive = normalizeTag(tag.name) === normalizeTag(activeTag);
+    row.appendChild(createTagFilterChip(`${tag.name} (${tag.count})`, buildIndexHref(1, tag.name, sort), isActive));
   });
 
   container.appendChild(row);
@@ -247,9 +243,10 @@ function buildTagHref(tag) {
   return `./tag.html?${params.toString()}`;
 }
 
-function buildIndexHref(page, tag) {
+function buildIndexHref(page, tag, sort) {
   const params = new URLSearchParams();
   const trimmedTag = typeof tag === "string" ? tag.trim() : "";
+  const resolvedSort = sort === "added-asc" ? "added-asc" : "added-desc";
 
   if (page > 1) {
     params.set("page", String(page));
@@ -257,6 +254,10 @@ function buildIndexHref(page, tag) {
 
   if (trimmedTag) {
     params.set("tag", trimmedTag);
+  }
+
+  if (resolvedSort !== "added-desc") {
+    params.set("sort", resolvedSort);
   }
 
   const query = params.toString();
@@ -267,6 +268,11 @@ function createMetaLine(post) {
   return [post.author, formatDate(post.publishedAt), post.source]
     .filter((part) => typeof part === "string" && part.trim())
     .join(" • ");
+}
+
+function sortPostsByAdded(posts, sort) {
+  const list = Array.isArray(posts) ? [...posts] : [];
+  return sort === "added-asc" ? [...list].reverse() : list;
 }
 
 function getPageFromQuery() {
@@ -287,6 +293,11 @@ function getAuthorFromQuery() {
 
 function getTagFromQuery() {
   return new URLSearchParams(window.location.search).get("tag")?.trim() || "";
+}
+
+function getSortFromQuery() {
+  const raw = new URLSearchParams(window.location.search).get("sort")?.trim();
+  return raw === "added-asc" ? "added-asc" : "added-desc";
 }
 
 function validatePosts(posts) {
@@ -327,7 +338,7 @@ function initHomeNavigation() {
   }
 
   document.addEventListener("click", (event) => {
-    const link = event.target.closest("#pagination a, #tag-filter-list a");
+    const link = event.target.closest("#pagination a, #tag-filter-list a, #sort-filter-list a");
     if (!link || isModifiedNavigation(event)) {
       return;
     }
@@ -373,7 +384,7 @@ function initHomeNavigation() {
 function renderFeatured(site, posts, activeTag) {
   const siteTitle = typeof site?.title === "string" && site.title.trim()
     ? site.title.trim()
-    : "Agent Notes Demo";
+    : "lyfmt's Notes";
   const description = typeof site?.description === "string" && site.description.trim()
     ? site.description.trim()
     : "一个更接近真实博客的首页演示。";
@@ -506,7 +517,33 @@ function renderAuthors(posts) {
   });
 }
 
-function renderPagination(totalPages, currentPage, activeTag) {
+function renderSortFilters(activeSort, activeTag) {
+  const container = qs("sort-filter-list");
+  if (!container) {
+    return;
+  }
+
+  clear(container);
+
+  const row = createElement("div", "sort-row");
+  const options = [
+    ["added-desc", "最新加入"],
+    ["added-asc", "最早加入"]
+  ];
+
+  options.forEach(([value, label]) => {
+    const link = createElement("a", `sort-chip${activeSort === value ? " is-active" : ""}`, label);
+    link.href = buildIndexHref(1, activeTag, value);
+    if (activeSort === value) {
+      link.setAttribute("aria-current", "true");
+    }
+    row.appendChild(link);
+  });
+
+  container.appendChild(row);
+}
+
+function renderPagination(totalPages, currentPage, activeTag, activeSort) {
   const container = qs("pagination");
   if (!container) {
     return;
@@ -524,7 +561,7 @@ function renderPagination(totalPages, currentPage, activeTag) {
   const prev = currentPage > 1
     ? (() => {
         const link = createElement("a", "pagination__link", "← 上一页");
-        link.href = buildIndexHref(currentPage - 1, activeTag);
+        link.href = buildIndexHref(currentPage - 1, activeTag, activeSort);
         return link;
       })()
     : createElement("span", "pagination__link is-disabled", "← 上一页");
@@ -538,7 +575,7 @@ function renderPagination(totalPages, currentPage, activeTag) {
       container.appendChild(current);
     } else {
       const link = createElement("a", "pagination__link", String(page));
-      link.href = buildIndexHref(page, activeTag);
+      link.href = buildIndexHref(page, activeTag, activeSort);
       container.appendChild(link);
     }
   }
@@ -546,7 +583,7 @@ function renderPagination(totalPages, currentPage, activeTag) {
   const next = currentPage < totalPages
     ? (() => {
         const link = createElement("a", "pagination__link", "下一页 →");
-        link.href = buildIndexHref(currentPage + 1, activeTag);
+        link.href = buildIndexHref(currentPage + 1, activeTag, activeSort);
         return link;
       })()
     : createElement("span", "pagination__link is-disabled", "下一页 →");
@@ -563,32 +600,36 @@ function renderHome(site, posts) {
     return;
   }
 
-  const siteTitle = typeof site?.title === "string" && site.title.trim() ? site.title.trim() : "Agent Notes Demo";
+  const siteTitle = typeof site?.title === "string" && site.title.trim() ? site.title.trim() : "lyfmt's Notes";
   const activeTag = getTagFromQuery();
+  const activeSort = getSortFromQuery();
   const allTags = collectTags(posts);
   const filteredPosts = filterPostsByTag(posts, activeTag);
-  const featuredPosts = filteredPosts.length ? filteredPosts : posts;
+  const sortedPosts = sortPostsByAdded(filteredPosts, activeSort);
+  const featuredPosts = sortedPosts.length ? sortedPosts : sortPostsByAdded(posts, activeSort);
   const requestedPage = getPageFromQuery();
-  const totalPages = Math.max(1, Math.ceil(filteredPosts.length / HOME_PAGE_SIZE));
+  const totalPages = Math.max(1, Math.ceil(sortedPosts.length / HOME_PAGE_SIZE));
   const currentPage = Math.min(Math.max(1, requestedPage), totalPages);
 
   document.title = activeTag
     ? `${siteTitle} — ${activeTag}`
-    : currentPage > 1 ? `${siteTitle} — Page ${currentPage}` : siteTitle;
+    : currentPage > 1 ? `${siteTitle} — 第 ${currentPage} 页` : siteTitle;
 
   if (description && site?.description) {
     description.textContent = site.description;
   }
 
-  renderTagFilters(allTags, activeTag);
+  renderTagFilters(allTags, activeTag, activeSort);
+  renderSortFilters(activeSort, activeTag);
   renderFeatured(site, featuredPosts, activeTag);
   renderStats(posts);
   renderAuthors(posts);
 
   if (count) {
+    const sortLabel = activeSort === "added-asc" ? "最早加入" : "最新加入";
     count.textContent = activeTag
-      ? `标签「${activeTag}」下共 ${filteredPosts.length} 篇文章`
-      : `第 ${currentPage} 页，共 ${totalPages} 页 · 当前共 ${filteredPosts.length} 篇文章`;
+      ? `标签「${activeTag}」下共 ${sortedPosts.length} 篇文章 · 按${sortLabel}`
+      : `第 ${currentPage} 页，共 ${totalPages} 页 · 当前共 ${sortedPosts.length} 篇文章 · 按${sortLabel}`;
   }
 
   clear(container);
@@ -601,23 +642,23 @@ function renderHome(site, posts) {
       createElement("p", "", "articles.json 已加载，但 posts 数组为空。")
     );
     container.appendChild(empty);
-    renderPagination(1, 1, activeTag);
+    renderPagination(1, 1, activeTag, activeSort);
     return;
   }
 
-  if (!filteredPosts.length) {
+  if (!sortedPosts.length) {
     const empty = createElement("article", "empty-state");
     empty.append(
       createElement("h3", "", "当前标签暂无文章"),
       createElement("p", "", `标签「${activeTag}」下还没有文章，稍后再来看看。`)
     );
     container.appendChild(empty);
-    renderPagination(1, 1, activeTag);
+    renderPagination(1, 1, activeTag, activeSort);
     return;
   }
 
   const start = (currentPage - 1) * HOME_PAGE_SIZE;
-  const pagePosts = filteredPosts.slice(start, start + HOME_PAGE_SIZE);
+  const pagePosts = sortedPosts.slice(start, start + HOME_PAGE_SIZE);
 
   pagePosts.forEach((post, index) => {
     const card = createElement("article", "post-card");
@@ -644,7 +685,7 @@ function renderHome(site, posts) {
     container.appendChild(card);
   });
 
-  renderPagination(totalPages, currentPage, activeTag);
+  renderPagination(totalPages, currentPage, activeTag, activeSort);
 }
 
 function renderArchivePostCards(container, posts) {
@@ -690,7 +731,7 @@ function renderAuthorPage(posts) {
   }
 
   if (!author) {
-    document.title = "Author — Agent Notes Demo";
+    document.title = "作者归档 — lyfmt's Notes";
     setText("author-page-title", "未指定作者");
     setText("author-page-description", "请从首页作者区进入具体作者页面。" );
     clear(postsNode);
@@ -707,7 +748,7 @@ function renderAuthorPage(posts) {
     return;
   }
 
-  document.title = `${author} — Agent Notes Demo`;
+  document.title = `${author} — lyfmt's Notes`;
   if (titleNode) {
     titleNode.textContent = author;
   }
@@ -768,7 +809,7 @@ function renderTagPage(posts) {
   }
 
   if (!tag) {
-    document.title = "Tag — Agent Notes Demo";
+    document.title = "标签归档 — lyfmt's Notes";
     setText("tag-page-title", "未指定标签");
     setText("tag-page-description", "请从首页标签区进入具体标签页面。" );
     clear(postsNode);
@@ -785,7 +826,7 @@ function renderTagPage(posts) {
     return;
   }
 
-  document.title = `${tag} — Agent Notes Demo`;
+  document.title = `${tag} — lyfmt's Notes`;
   if (titleNode) {
     titleNode.textContent = `标签：${tag}`;
   }
@@ -891,11 +932,11 @@ function renderPost(post, relatedPosts) {
       createElement("p", "", "请从首页重新选择文章。")
     );
     article.appendChild(empty);
-    document.title = "Post not found — Agent Notes Demo";
+    document.title = "文章未找到 — lyfmt's Notes";
     return;
   }
 
-  document.title = `${post.title} — Agent Notes Demo`;
+  document.title = `${post.title} — lyfmt's Notes`;
 
   const header = createElement("header", "article-header");
   const source = createElement("p", "eyebrow", post.source || "Post");

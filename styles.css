@@ -332,7 +332,8 @@ h2 {
 .authors-section,
 .section-head,
 .page-intro,
-.archive-section {
+.archive-section,
+.sort-filter-section {
   margin-top: 2rem;
 }
 
@@ -469,13 +470,15 @@ h2 {
   font-weight: 700;
 }
 
-.tag-row {
+.tag-row,
+.sort-row {
   display: flex;
   flex-wrap: wrap;
   gap: 0.45rem;
 }
 
-.tag {
+.tag,
+.sort-chip {
   display: inline-flex;
   align-items: center;
   padding: 0.22rem 0.65rem;
@@ -484,6 +487,11 @@ h2 {
   color: var(--heading);
   font-size: 0.82rem;
   font-weight: 700;
+}
+
+.sort-chip.is-active {
+  background: var(--accent);
+  color: #fff;
 }
 
 .pagination {

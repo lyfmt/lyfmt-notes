@@ -1,7 +1,7 @@
 {
   "site": {
-    "title": "Agent Notes Demo",
-    "description": "一个多篇文章 blog 首页 demo，当前收录 lucumr、The New Stack、Simon Willison、CNX Software、Hackaday 与 ServeTheHome 的文章。"
+    "title": "lyfmt's Notes",
+    "description": "记录 AI、工程工具、基础设施与硬件方向的阅读笔记，当前收录 lucumr、The New Stack、Simon Willison、CNX Software、Hackaday 与 ServeTheHome 的文章。"
   },
   "posts": [
     {

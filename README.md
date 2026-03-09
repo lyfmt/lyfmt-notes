@@ -1,6 +1,6 @@
-# Pi Blog Demo
+# lyfmt's Notes
 
-这是一个 framework-free 的静态多页 blog demo。
+这是一个 framework-free 的静态多页博客站点。
 
 ## 页面结构
 
