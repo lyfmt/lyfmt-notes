@@ -11,26 +11,27 @@ description: Use when running the hourly RSS watcher workflow: scan blogwatcher 
 
 - BlogWatcher 数据库：`~/.blogwatcher/blogwatcher.db`
 - 增量状态脚本：`/home/node/.openclaw/workspace/scripts/rss_hourly_digest_state.py`
+- 元数据探测脚本：`/home/node/.openclaw/workspace/scripts/article_metadata_probe.py`
+- 汇总脚本：`/home/node/.openclaw/workspace/scripts/rss_hourly_brief_bundle.py`
 - 排版 skill：`/home/node/.openclaw/workspace/skills/article-digest/SKILL.md`
 
 ## 工作流
 
-### 1. 先扫描 RSS
-使用 blogwatcher 触发一次扫描：
+### 1. 统一先跑汇总脚本
+不要自己散着调用 scan / new / probe。统一先执行：
 
 ```bash
-HOME=/home/node /home/node/.local/bin/blogwatcher scan
+python3 /home/node/.openclaw/workspace/scripts/rss_hourly_brief_bundle.py
 ```
 
-### 2. 读取本轮新增文章
-用状态脚本读取自上次检查以来的新增文章：
+这个脚本会：
+- 跑一次 `blogwatcher scan`
+- 读取自上次 checkpoint 以来的新增文章
+- 自动挑最多 3 篇做元数据探测
+- 即使抓取失败也返回结构化 JSON，而不是让任务报错退出
 
-```bash
-python3 /home/node/.openclaw/workspace/scripts/rss_hourly_digest_state.py new --limit 12
-```
-
-### 3. 如果没有新增
-直接回复：
+### 2. 如果没有新增
+当 bundle 输出里 `new_count = 0` 时，直接回复：
 
 ```text
 NO_REPLY
@@ -38,22 +39,22 @@ NO_REPLY
 
 不要发送任何额外说明。
 
-### 4. 如果有新增
+### 3. 如果有新增
 按下面规则处理：
 
 - 如果新增 `<= 5` 篇：全部纳入简报
 - 如果新增 `> 5` 篇：
   - 精选前 5 篇作为重点
   - 其余作为“其他更新”列标题目
-- 选取最多 **3 篇** 去抓正文
-- 优先抓：
-  - AI / 模型 / agent / infra 方向
-  - 来源多样化
-  - 标题信息量高的文章
+- 最多只参考 bundle 里挑出来的 **3 篇 probe_candidates / probes**
+- 优先使用 probe 拿到的 `title` / `description`
+- 如果 probe 失败，就只基于标题 + 来源 + 链接做快报，不要编造内容
 
-### 5. 抓正文
-对选中的文章使用 `web_fetch`，提炼核心结论。
-如果正文抓取失败，就只基于标题 + 来源 + 链接做快报，不要编造内容。
+### 4. 抓文/探测规则
+- 优先使用 bundle 已经返回的 `probes`
+- **不要**再额外写内联 Python 去临时抓网页
+- **不要**依赖 `requests` 包
+- **不要**因为探测失败就让整次任务失败
 
 ### 6. 使用 article-digest 的写法输出
 输出目标：
@@ -102,12 +103,14 @@ NO_REPLY
 一句话收束。
 ```
 
-### 7. 成功产出后再推进状态
+### 5. 成功产出后再推进状态
 只有在你已经准备好最终对用户发送的 digest 后，才运行：
 
 ```bash
 python3 /home/node/.openclaw/workspace/scripts/rss_hourly_digest_state.py commit --through-id <max_new_id>
 ```
+
+其中 `<max_new_id>` 取自 bundle 输出里的 `max_new_id`。
 
 ## 严格约束
 
@@ -116,4 +119,5 @@ python3 /home/node/.openclaw/workspace/scripts/rss_hourly_digest_state.py commit
 - **不要**把旧 backlog 重复发出
 - **不要**为所有文章都抓全文，最多抓 3 篇
 - **不要**编造未抓到正文的细节
+- **不要**写 `python3 - <<'PY'` 这类临时抓取脚本去碰网页
 - 如果新增很多，做“精选 + 其他更新”，不要输出超长墙文
