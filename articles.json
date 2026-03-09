@@ -5,6 +5,458 @@
   },
   "posts": [
     {
+      "slug": "ulysses-sequence-parallelism-training-with-million-token-contexts",
+      "title": "Ulysses Sequence Parallelism: Training with Million-Token Contexts",
+      "author": "Hugging Face / Snowflake AI Research",
+      "publishedAt": "2026-03-09",
+      "source": "Hugging Face Blog",
+      "url": "https://huggingface.co/blog/ulysses-sp",
+      "excerpt": "Hugging Face 介绍 Ulysses Sequence Parallelism：通过把超长序列注意力拆到多 GPU 上，让百万 token 级上下文训练更接近工程可用。",
+      "tags": [
+        "AI",
+        "LLM Training",
+        "Infrastructure",
+        "Distributed Systems"
+      ],
+      "content": [
+        {
+          "heading": "文章核心",
+          "paragraphs": [
+            "这篇文章解释了为什么长上下文训练会很快撞上显存上限：即便有 FlashAttention，注意力计算在超长序列下依然非常昂贵。",
+            "Ulysses 的核心思路是把序列与注意力头并行拆分到多张 GPU 上，并通过 all-to-all 通信重排数据，从而让超长上下文训练变得可行。"
+          ]
+        },
+        {
+          "heading": "值得关注的点",
+          "paragraphs": [
+            "文章真正重要的地方不只是算法解释，而是它已被接入 Accelerate、Transformers Trainer 与 TRL SFTTrainer，意味着主流 Hugging Face 训练栈开始把长序列并行当成一等能力。",
+            "当前站点已保留完整 detail 草稿；如后续需要，可以再把这篇系统文章做成更完整的中文细读版。"
+          ]
+        }
+      ],
+      "detail": {
+        "available": false,
+        "layout": "draft",
+        "translatedFrom": "https://huggingface.co/blog/ulysses-sp",
+        "sourceName": "Hugging Face Blog",
+        "sourceDescription": "以下为根据原文结构自动生成的详情草稿，已保留段落层次、图片与媒体；默认尚未完成中文翻译润色。",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "html": "Training large language models on long sequences has become essential for building capable AI systems. As models are increasingly used for tasks like document analysis, code understanding, complex reasoning, and RAG workloads, the need to process sequences of hundreds of thousands—or even millions—of tokens has grown dramatically. To put this in perspective, an average book is roughly 250k tokens, so training on multi-document contexts or book-length inputs requires handling sequences well beyond what fits on a single GPU. However, training with such long contexts presents significant memory challenges: the attention computation scales quadratically with sequence length, quickly exceeding GPU memory for contexts beyond tens of thousands of tokens."
+          },
+          {
+            "type": "paragraph",
+            "html": "Ulysses Sequence Parallelism (part of the Arctic Long Sequence Training protocol from Snowflake AI Research) provides an elegant solution by distributing the attention computation across multiple GPUs through attention head parallelism. In this post, we&#x27;ll explore how Ulysses works and how it&#x27;s been integrated across the Hugging Face ecosystem—from Accelerate to the Transformers Trainer and TRL&#x27;s SFTTrainer."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "The Challenge of Long Sequence Training"
+          },
+          {
+            "type": "paragraph",
+            "html": "The attention mechanism in transformers scales quadratically with sequence length. For very long sequences (32k+ tokens), even with FlashAttention, training still pushes the limits of single-GPU memory."
+          },
+          {
+            "type": "paragraph",
+            "html": "Long-context training matters for document understanding, large codebases, reasoning-heavy models, and retrieval-augmented generation. Traditional data parallelism doesn&#x27;t solve this because each GPU still needs the full sequence inside the attention block."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "How Ulysses Works"
+          },
+          {
+            "type": "paragraph",
+            "html": "Ulysses Sequence Parallelism takes a different approach: it splits the sequence across devices, then uses all-to-all communication so each GPU computes a subset of attention heads."
+          },
+          {
+            "type": "paragraph",
+            "html": "The core flow is:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Sequence sharding across GPUs.",
+              "Local QKV projection.",
+              "All-to-all communication to redistribute per-head data.",
+              "Local attention computation with FlashAttention or SDPA.",
+              "A second all-to-all to restore sequence-sharded format.",
+              "Local output projection."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "html": "The main advantage over Ring Attention is lower communication volume per GPU and better latency characteristics on supported hardware."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Integration Across the Hugging Face Stack"
+          },
+          {
+            "type": "paragraph",
+            "html": "The article walks through how Ulysses is integrated into Accelerate via ParallelismConfig and DeepSpeedSequenceParallelConfig, then into Transformers Trainer and TRL&#x27;s SFTTrainer."
+          },
+          {
+            "type": "paragraph",
+            "html": "It also covers practical configuration details such as <code>sp_size</code>, <code>sp_backend</code>, <code>sp_attn_implementation</code>, sequence divisibility, padding, loss aggregation, and 2D SP × DP setups."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Best Practices and Benchmarks"
+          },
+          {
+            "type": "paragraph",
+            "html": "The write-up recommends matching sequence length divisibility to <code>sp_size</code>, preferring Flash Attention, combining SP with DeepSpeed ZeRO, and using allocator settings that reduce memory fragmentation."
+          },
+          {
+            "type": "paragraph",
+            "html": "Benchmark examples on H100 80GB GPUs show that SP can cut per-GPU memory enough to reach much longer context lengths, while also improving token throughput at larger sequence sizes."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Why It Matters"
+          },
+          {
+            "type": "paragraph",
+            "html": "This is not just an algorithm note: it turns long-context training from a niche systems trick into something accessible through mainstream Hugging Face tooling. That lowers the barrier for teams that want to train or fine-tune models on book-scale, repository-scale, or multi-document inputs."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "lenovo-slim-7i-aura-edition-is-an-lightweight-laptop-with-intel-panther-lake",
+      "title": "Lenovo Slim 7i Aura Edition is an lightweight laptop with Intel Panther Lake",
+      "author": "Liliputing",
+      "publishedAt": "2026-03-09",
+      "source": "Liliputing",
+      "url": "https://liliputing.com/lenovo-slim-7i-aura-edition-is-an-lightweight-laptop-with-intel-panther-lake/",
+      "excerpt": "Liliputing 报道了联想 Slim 7i Aura Edition 新机，核心看点是搭载 Intel Panther Lake 平台；但当前源站正文被反爬页面拦住，只先落站摘要与草稿。",
+      "tags": [
+        "Hardware",
+        "Laptop",
+        "Intel",
+        "Mobile"
+      ],
+      "content": [
+        {
+          "heading": "文章核心",
+          "paragraphs": [
+            "从标题可见，这是一篇围绕 Lenovo Slim 7i Aura Edition 轻薄本的新品报道，重点在于它采用了 Intel Panther Lake 平台。",
+            "但当前自动抓取只拿到了 Cloudflare 的“Just a moment...”拦截页，没有拿到稳定可用的正文，因此本站先保留一个可追踪条目。"
+          ]
+        },
+        {
+          "heading": "当前处理状态",
+          "paragraphs": [
+            "这篇文章已写入站点索引，便于后续重新抓取、补充正文和细节页面。",
+            "在没有可靠原文内容前，不开启 detail.available=true，也不伪造规格、性能或评测结论。"
+          ]
+        }
+      ],
+      "detail": {
+        "available": false,
+        "layout": "draft",
+        "translatedFrom": "https://liliputing.com/lenovo-slim-7i-aura-edition-is-an-lightweight-laptop-with-intel-panther-lake/",
+        "sourceName": "Liliputing",
+        "sourceDescription": "当前缓存只拿到反爬拦截页，尚未获得可靠正文；因此仅保留草稿入口。",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "html": "当前自动抓取命中了站点反爬/Cloudflare 拦截，只拿到“Just a moment...”页面，未能提取出可发布的原文详情。"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "lerobot-v0-5-0-scaling-every-dimension",
+      "title": "LeRobot v0.5.0: Scaling Every Dimension",
+      "author": "LeRobot Team",
+      "publishedAt": "2026-03-09",
+      "source": "Hugging Face Blog",
+      "url": "https://huggingface.co/blog/lerobot-release-v050",
+      "excerpt": "LeRobot v0.5.0 是一次大版本扩张：新增 Unitree G1 人形支持、更多机器人策略、数据集加速、Hub 环境加载，以及更现代化的训练代码栈。",
+      "tags": [
+        "AI",
+        "Robotics",
+        "Open Source",
+        "Simulation"
+      ],
+      "content": [
+        {
+          "heading": "文章核心",
+          "paragraphs": [
+            "LeRobot v0.5.0 把项目同时向硬件、策略、数据集、仿真环境和代码基础设施几个方向一起推了一大步。",
+            "最醒目的变化包括首个人形机器人 Unitree G1 支持、更多开源机器人策略、数据录制/训练提速，以及对 Hugging Face Hub 仿真环境的直接接入。"
+          ]
+        },
+        {
+          "heading": "值得关注的点",
+          "paragraphs": [
+            "这一版不只是“多支持几台机器人”，而是在把 LeRobot 往一个更完整的开源机器人学习平台推进：从真机、遥操作、策略训练，到仿真环境分发和社区工具都在补齐。",
+            "由于 detail 草稿已经保留了较完整结构，后续若需要，可以继续做分段中文细化后再开放 detail.available=true。"
+          ]
+        }
+      ],
+      "detail": {
+        "available": false,
+        "layout": "draft",
+        "translatedFrom": "https://huggingface.co/blog/lerobot-release-v050",
+        "sourceName": "Hugging Face Blog",
+        "sourceDescription": "以下为根据原文结构自动生成的详情草稿，已保留段落层次、图片与媒体；默认尚未完成中文翻译润色。",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "html": "With over 200 merged PRs and over 50 new contributors since v0.4.0, LeRobot v0.5.0 is our biggest release yet — expanding in every direction at once. More robots (including our first humanoid), more policies (including the comeback of autoregressive VLAs), faster datasets, simulation environments you can load straight from the Hub, and a modernized codebase running on Python 3.12 and Transformers v5. Whether you&#x27;re training policies in simulation or deploying them on real hardware, v0.5.0 has something for you."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "TL;DR"
+          },
+          {
+            "type": "paragraph",
+            "html": "LeRobot v0.5.0 adds full Unitree G1 humanoid support (whole-body control models), new policies –including Pi0-FAST autoregressive VLAs and Real-Time Chunking for responsive inference–, and streaming video encoding that eliminates wait times between recording episodes. The release also introduces EnvHub for loading simulation environments from the Hugging Face Hub, NVIDIA IsaacLab-Arena integration, and a major codebase modernization with Python 3.12+, Transformers v5, and third-party policy plugins."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Hardware: More Robots Than Ever"
+          },
+          {
+            "type": "paragraph",
+            "html": "The biggest hardware addition in this release: full Unitree G1 humanoid support. This is LeRobot&#x27;s first humanoid integration, and it&#x27;s comprehensive:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Locomotion: Walk, navigate, and move through environments.",
+              "Manipulation: Perform dexterous object manipulation tasks.",
+              "Teleoperation: Control the G1 remotely with an intuitive teleoperation interface.",
+              "Whole-Body Control (WBC): Coordinate locomotion and manipulation simultaneously for complex, real-world tasks."
+            ]
+          },
+          {
+            "type": "image",
+            "src": "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/lerobot-blog/release-v0.5.0/unitree_bosswalk.JPG",
+            "alt": "",
+            "caption": ""
+          },
+          {
+            "type": "paragraph",
+            "html": "We&#x27;ve added support for the OpenArm robot and its companion OpenArm Mini teleoperator. Both support bi-manual configurations."
+          },
+          {
+            "type": "paragraph",
+            "html": "More hardware additions include Earth Rover, OMX Robot, SO-100/SO-101 consolidation, and CAN bus motor controller support via RobStride and Damiao."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Policies: A Growing Model Zoo"
+          },
+          {
+            "type": "paragraph",
+            "html": "This release brings six new policies and techniques into LeRobot."
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "Pi0-FAST: Autoregressive VLAs"
+          },
+          {
+            "type": "paragraph",
+            "html": "Pi0-FAST brings autoregressive Vision-Language-Action models to LeRobot with FAST (Frequency-space Action Sequence Tokenization), using a Gemma 300M-based action expert and configurable decoding."
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "Real-Time Chunking (RTC)"
+          },
+          {
+            "type": "paragraph",
+            "html": "Real-Time Chunking is an inference-time technique from Physical Intelligence that makes flow-matching policies dramatically more responsive by continuously blending new predictions with in-progress actions."
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "Wall-X / X-VLA / SARM / PEFT"
+          },
+          {
+            "type": "paragraph",
+            "html": "Wall-X builds on Qwen2.5-VL with flow-matching action prediction. X-VLA brings a Florence2-based VLA. SARM targets long-horizon tasks with stage-aware reward modeling. PEFT support allows fine-tuning large VLAs using LoRA and related techniques."
+          },
+          {
+            "type": "image",
+            "src": "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/lerobot-blog/release-v0.5.0/sarm_community.gif",
+            "alt": "",
+            "caption": ""
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Datasets: Faster Recording, Faster Training"
+          },
+          {
+            "type": "paragraph",
+            "html": "Streaming video encoding removes wait time between recording episodes. Under the hood, the release also improves image training speed by up to 10x, encoding by up to 3x, and adds more dataset editing operations, subtask support, and image-to-video conversion."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "EnvHub: Environments from the Hub"
+          },
+          {
+            "type": "paragraph",
+            "html": "EnvHub lets LeRobot load simulation environments directly from the Hugging Face Hub instead of requiring local environment package setup. The release also integrates NVIDIA IsaacLab-Arena for GPU-accelerated simulation."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Codebase: A Modern Foundation"
+          },
+          {
+            "type": "paragraph",
+            "html": "The codebase now targets Python 3.12+, Transformers v5, third-party policy plugins, remote Rerun visualization, improved installation flow, and versioned docs."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Community & Ecosystem"
+          },
+          {
+            "type": "paragraph",
+            "html": "The release also mentions a refreshed Discord, better GitHub templates and automated labeling, ICLR 2026 paper acceptance, an updated Visualizer, and LeRobot Annotation Studio."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "granite-4-0-1b-speech-compact-multilingual-and-built-for-the-edge",
+      "title": "Granite 4.0 1B Speech: Compact, Multilingual, and Built for the Edge",
+      "author": "IBM Granite / Hugging Face",
+      "publishedAt": "2026-03-09",
+      "source": "Hugging Face Blog",
+      "url": "https://huggingface.co/blog/ibm-granite/granite-4-speech",
+      "excerpt": "IBM 在 Hugging Face 发布 Granite 4.0 1B Speech：更小参数量下提升英文转写效果，支持多语 ASR/语音翻译，并面向边缘与资源受限设备。",
+      "tags": [
+        "AI",
+        "Speech",
+        "Edge",
+        "Models"
+      ],
+      "content": [
+        {
+          "heading": "文章核心",
+          "paragraphs": [
+            "Granite 4.0 1B Speech 是 IBM Granite Speech 系列的新模型，主打资源受限设备上的企业语音场景，覆盖多语言自动语音识别（ASR）与双向语音翻译（AST）。",
+            "和上一代 2B 模型相比，它把参数量砍到一半，但仍提升了英文转写准确率，并借助 speculative decoding 改善推理速度。"
+          ]
+        },
+        {
+          "heading": "值得关注的点",
+          "paragraphs": [
+            "这一版新增了日语 ASR 和关键词列表偏置能力，更适合姓名、缩写等企业实际语料中的高频难点。",
+            "模型采用 Apache 2.0 许可证，原生兼容 transformers 与 vLLM，说明其目标不只是研究演示，而是更直接面向可部署的开源语音栈。"
+          ]
+        }
+      ],
+      "detail": {
+        "available": true,
+        "layout": "detail-zh",
+        "translatedFrom": "https://huggingface.co/blog/ibm-granite/granite-4-speech",
+        "sourceName": "Hugging Face Blog",
+        "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "html": "我们很高兴分享 <a href=\"https://huggingface.co/ibm-granite/granite-4.0-1b-speech\" target=\"_blank\" rel=\"noreferrer noopener\">Granite 4.0 1B Speech</a>，这是 <a href=\"https://huggingface.co/collections/ibm-granite/granite-speech\" target=\"_blank\" rel=\"noreferrer noopener\">IBM&#x27;s Granite Speech collection</a> 的最新成员。Granite 4.0 1B Speech 面向资源受限设备上的企业应用而设计，是一款紧凑型语音-语言模型，支持多语言自动语音识别（ASR）和双向语音翻译（AST）。与上一代 <a href=\"https://huggingface.co/ibm-granite/granite-speech-3.3-2b\" target=\"_blank\" rel=\"noreferrer noopener\">granite-speech-3.3-2b</a> 相比，它的参数量只有前者的一半，却带来了更高的英文转写准确率、借助 speculative decoding 实现的更快推理速度，以及更广的语言覆盖范围，现已支持英语、法语、德语、西班牙语、葡萄牙语和日语。本次发布还新增了两项能力：其一是日语 ASR 支持，其二是关键词列表偏置（keyword list biasing），可提升对人名和首字母缩略词的识别效果；这两项也都是社区长期频繁提出的需求。Granite 4.0 1B Speech 最近还在 <a href=\"https://huggingface.co/spaces/hf-audio/open_asr_leaderboard\" target=\"_blank\" rel=\"noreferrer noopener\">OpenASR leaderboard</a> 上拿下第 1 名，进一步说明了它在开放语音识别系统中的强劲表现。"
+          },
+          {
+            "type": "paragraph",
+            "html": "尽管模型体量很小，Granite 4.0 1B Speech 在标准英语 ASR 基准测试中依然拿出了很有竞争力的成绩。这里用来衡量表现的指标是词错误率（WER），也就是转写中出错词语所占的比例；这一数值越低，说明识别越准确。正如图 1 所示，Granite 4.0 1B Speech 在多个数据集上都取得了不错的 WER 表现，同时所用参数量又明显少于许多同类可比模型。"
+          },
+          {
+            "type": "image",
+            "src": "./assets/posts/granite-4-0-1b-speech-compact-multilingual-and-built-for-the-edge/figure-01.png",
+            "alt": "",
+            "caption": ""
+          },
+          {
+            "type": "paragraph",
+            "html": "图表 1：尽管模型体量很小，granite-4.0-1B-speech 仍在多项基准测试中取得了具有竞争力的低词错误率（WER），这也说明它具备较强的 ASR 准确性。"
+          },
+          {
+            "type": "paragraph",
+            "html": "和所有 Granite 模型一样，Granite 4.0 1B Speech 采用 Apache 2.0 许可证发布，并原生支持 transformers 与 vLLM。我们在一系列标准的 ASR 和 AST 基准上对其进行了评测，覆盖英语、多语种以及翻译任务；结果显示，它的表现与那些参数规模远高于它的模型相当，甚至更好。完整的评测结果、架构细节、训练数据和使用示例，可在 <a href=\"https://huggingface.co/ibm-granite/granite-4.0-1b-speech\" target=\"_blank\" rel=\"noreferrer noopener\">model card</a> 中查看。对于需要额外风险检测的生产环境部署，我们建议将其与 <a href=\"https://huggingface.co/ibm-granite/granite-guardian-3.3-8b\" target=\"_blank\" rel=\"noreferrer noopener\">Granite Guardian</a> 搭配使用。"
+          },
+          {
+            "type": "paragraph",
+            "html": "不妨现在就试试看，也欢迎告诉我们你的感受！"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "last-year-in-sbcs",
+      "title": "Last Year in SBCs",
+      "author": "Hackaday",
+      "publishedAt": "2026-03-09",
+      "source": "Hackaday",
+      "url": "https://hackaday.com/2026/03/09/last-year-in-sbcs/",
+      "excerpt": "Hackaday 推荐了一篇 Bret.dk 的 2025 年 SBC 回顾：15 款单板计算机按价格段整理，并点评了内存价格、CIX 新平台与工具链支持。",
+      "tags": [
+        "Hardware",
+        "SBC",
+        "Embedded"
+      ],
+      "content": [
+        {
+          "heading": "文章核心",
+          "paragraphs": [
+            "这篇文章转介了 Bret.dk 对 2025 年单板计算机市场的回顾：总共盘点 8 家公司的 15 款板子，价格从 42 美元一路到 590 美元，并按 50 美元以下、50-100 美元、100 美元以上三个价格段归类。",
+            "除了逐板简评，文章还顺带讨论了 RAM 价格对市场的影响，以及 Qualcomm、RISC-V 和 CIX P1 这类平台在过去一年的存在感。"
+          ]
+        },
+        {
+          "heading": "值得关注的点",
+          "paragraphs": [
+            "作者特别提到 newcomer CIX：来自 Radxa 和 Orange Pi 的两块 CIX 平台板子在性能上颇为惊喜，但工具链与功耗方面仍有待打磨。",
+            "整篇回顾传达出的判断是：SBC 市场的分化并不只看裸算力，开发工具、软件支持和社区成熟度往往更决定一块板子是否真正值得买。"
+          ]
+        }
+      ],
+      "detail": {
+        "available": true,
+        "layout": "detail-zh",
+        "translatedFrom": "https://hackaday.com/2026/03/09/last-year-in-sbcs/",
+        "sourceName": "Hackaday",
+        "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "html": "虽然未必称得上面面俱到，<a href=\"https://bret.dk/every-single-board-computer-i-tested-in-2025/\" target=\"_blank\" rel=\"noreferrer noopener\">Bret.dk</a> 最近还是发了一篇回顾文章，题为 &quot;Every Single Board Computer I Tested in 2025.&quot; 文中盘点了来自 8 家不同公司的 15 款单板计算机。最便宜的一块售价 42 美元，而高端型号最高则达到 590 美元。"
+          },
+          {
+            "type": "paragraph",
+            "html": "我们很喜欢这篇文章的结构：这些板子先按 50 美元以下归为一组，再把 50 到 100 美元的放在另一组，最后把所有超过 100 美元的单独列为一组。随后，文章还分析了 RAM 价格正在如何影响整个市场，并点评了 CIX P1、Qualcomm、RISC-V 等话题。"
+          },
+          {
+            "type": "paragraph",
+            "html": "看得出来，这篇文章更多是在概括作者对每块板子的实际体验；就它想完成的目的来说，这样处理大概反而是件好事。另一方面，文中不少板子也都附了完整评测链接，如果你想了解更多细节，值得顺手点进去看看。Arduino Q 在评测中的表现不太理想，BeagleBoard Green Eco 也一样。不过真正让人意外的是新面孔 CIX：他们的 SoC 出现在两款产品里，一款来自 Radaxa，另一款来自 Orange Pi，而且这两块板子的性能都好得有些出人意料。当然，工具链方面仍有一些顾虑，像功耗之类的问题也还有几处小瑕疵；但如果这些地方能补上，今后 CIX 芯片出现的频率可能会高得多。"
+          },
+          {
+            "type": "paragraph",
+            "html": "<a href=\"https://bret.dk/every-single-board-computer-i-tested-in-2025/\" target=\"_blank\" rel=\"noreferrer noopener\">Bret 的</a>这篇文章信息量很足。我们也想听听你的看法：你是否不同意他的一些判断，或者你心里有没有一块没被列进这份清单、但你特别喜欢的 SBC。当然，市面上 <a href=\"https://hackaday.com/2026/01/16/trying-out-the-allwinner-based-walnut-pi-sbc/\" target=\"_blank\" rel=\"noreferrer noopener\">还有其他开发板</a>，但也不难看出，真正拉开产品差距的，往往不只是单纯的计算性能，更在于开发工具和配套支持。"
+          }
+        ]
+      }
+    },
+    {
       "slug": "ask-hackaday-what-will-an-llm-be-good-for-in-the-plateau-of-productivity",
       "title": "Ask Hackaday: What Will An LLM Be Good For In The Plateau of Productivity?",
       "author": "Jenny List",

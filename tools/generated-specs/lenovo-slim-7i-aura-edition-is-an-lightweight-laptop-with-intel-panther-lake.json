@@ -1,0 +1,44 @@
+{
+  "slug": "lenovo-slim-7i-aura-edition-is-an-lightweight-laptop-with-intel-panther-lake",
+  "title": "Lenovo Slim 7i Aura Edition is an lightweight laptop with Intel Panther Lake",
+  "author": "Liliputing",
+  "publishedAt": "2026-03-09",
+  "source": "Liliputing",
+  "url": "https://liliputing.com/lenovo-slim-7i-aura-edition-is-an-lightweight-laptop-with-intel-panther-lake/",
+  "tags": [
+    "Hardware",
+    "Laptop",
+    "Intel",
+    "Mobile"
+  ],
+  "excerpt": "Liliputing 报道了联想 Slim 7i Aura Edition 新机，核心看点是搭载 Intel Panther Lake 平台；但当前源站正文被反爬页面拦住，只先落站摘要与草稿。",
+  "content": [
+    {
+      "heading": "文章核心",
+      "paragraphs": [
+        "从标题可见，这是一篇围绕 Lenovo Slim 7i Aura Edition 轻薄本的新品报道，重点在于它采用了 Intel Panther Lake 平台。",
+        "但当前自动抓取只拿到了 Cloudflare 的“Just a moment...”拦截页，没有拿到稳定可用的正文，因此本站先保留一个可追踪条目。"
+      ]
+    },
+    {
+      "heading": "当前处理状态",
+      "paragraphs": [
+        "这篇文章已写入站点索引，便于后续重新抓取、补充正文和细节页面。",
+        "在没有可靠原文内容前，不开启 detail.available=true，也不伪造规格、性能或评测结论。"
+      ]
+    }
+  ],
+  "detail": {
+    "available": false,
+    "layout": "draft",
+    "translatedFrom": "https://liliputing.com/lenovo-slim-7i-aura-edition-is-an-lightweight-laptop-with-intel-panther-lake/",
+    "sourceName": "Liliputing",
+    "sourceDescription": "当前缓存只拿到反爬拦截页，尚未获得可靠正文；因此仅保留草稿入口。",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "html": "当前自动抓取命中了站点反爬/Cloudflare 拦截，只拿到“Just a moment...”页面，未能提取出可发布的原文详情。"
+      }
+    ]
+  }
+}

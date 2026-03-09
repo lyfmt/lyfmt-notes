@@ -1,0 +1,19 @@
+{
+  "item": {
+    "id": 2631,
+    "title": "LeRobot v0.5.0: Scaling Every Dimension",
+    "blog": "Hugging Face Blog",
+    "url": "https://huggingface.co/blog/lerobot-release-v050",
+    "published": "2026-03-09T00:00:00Z",
+    "discovered": "2026-03-09T18:41:04.922618524Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://huggingface.co/blog/lerobot-release-v050",
+    "ok": true,
+    "title": "LeRobot v0.5.0: Scaling Every Dimension",
+    "description": "We’re on a journey to advance and democratize artificial intelligence through open source and open science.",
+    "fetched_bytes": 140274,
+    "error": null
+  }
+}

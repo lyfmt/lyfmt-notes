@@ -1,0 +1,55 @@
+{
+  "slug": "last-year-in-sbcs",
+  "title": "Last Year in SBCs",
+  "author": "Hackaday",
+  "publishedAt": "2026-03-09",
+  "source": "Hackaday",
+  "url": "https://hackaday.com/2026/03/09/last-year-in-sbcs/",
+  "tags": [
+    "Hardware",
+    "SBC",
+    "Embedded"
+  ],
+  "excerpt": "Hackaday 推荐了一篇 Bret.dk 的 2025 年 SBC 回顾：15 款单板计算机按价格段整理，并点评了内存价格、CIX 新平台与工具链支持。",
+  "content": [
+    {
+      "heading": "文章核心",
+      "paragraphs": [
+        "这篇文章转介了 Bret.dk 对 2025 年单板计算机市场的回顾：总共盘点 8 家公司的 15 款板子，价格从 42 美元一路到 590 美元，并按 50 美元以下、50-100 美元、100 美元以上三个价格段归类。",
+        "除了逐板简评，文章还顺带讨论了 RAM 价格对市场的影响，以及 Qualcomm、RISC-V 和 CIX P1 这类平台在过去一年的存在感。"
+      ]
+    },
+    {
+      "heading": "值得关注的点",
+      "paragraphs": [
+        "作者特别提到 newcomer CIX：来自 Radxa 和 Orange Pi 的两块 CIX 平台板子在性能上颇为惊喜，但工具链与功耗方面仍有待打磨。",
+        "整篇回顾传达出的判断是：SBC 市场的分化并不只看裸算力，开发工具、软件支持和社区成熟度往往更决定一块板子是否真正值得买。"
+      ]
+    }
+  ],
+  "detail": {
+    "available": true,
+    "layout": "detail-zh",
+    "translatedFrom": "https://hackaday.com/2026/03/09/last-year-in-sbcs/",
+    "sourceName": "Hackaday",
+    "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "html": "虽然未必称得上面面俱到，<a href=\"https://bret.dk/every-single-board-computer-i-tested-in-2025/\" target=\"_blank\" rel=\"noreferrer noopener\">Bret.dk</a> 最近还是发了一篇回顾文章，题为 &quot;Every Single Board Computer I Tested in 2025.&quot; 文中盘点了来自 8 家不同公司的 15 款单板计算机。最便宜的一块售价 42 美元，而高端型号最高则达到 590 美元。"
+      },
+      {
+        "type": "paragraph",
+        "html": "我们很喜欢这篇文章的结构：这些板子先按 50 美元以下归为一组，再把 50 到 100 美元的放在另一组，最后把所有超过 100 美元的单独列为一组。随后，文章还分析了 RAM 价格正在如何影响整个市场，并点评了 CIX P1、Qualcomm、RISC-V 等话题。"
+      },
+      {
+        "type": "paragraph",
+        "html": "看得出来，这篇文章更多是在概括作者对每块板子的实际体验；就它想完成的目的来说，这样处理大概反而是件好事。另一方面，文中不少板子也都附了完整评测链接，如果你想了解更多细节，值得顺手点进去看看。Arduino Q 在评测中的表现不太理想，BeagleBoard Green Eco 也一样。不过真正让人意外的是新面孔 CIX：他们的 SoC 出现在两款产品里，一款来自 Radaxa，另一款来自 Orange Pi，而且这两块板子的性能都好得有些出人意料。当然，工具链方面仍有一些顾虑，像功耗之类的问题也还有几处小瑕疵；但如果这些地方能补上，今后 CIX 芯片出现的频率可能会高得多。"
+      },
+      {
+        "type": "paragraph",
+        "html": "<a href=\"https://bret.dk/every-single-board-computer-i-tested-in-2025/\" target=\"_blank\" rel=\"noreferrer noopener\">Bret 的</a>这篇文章信息量很足。我们也想听听你的看法：你是否不同意他的一些判断，或者你心里有没有一块没被列进这份清单、但你特别喜欢的 SBC。当然，市面上 <a href=\"https://hackaday.com/2026/01/16/trying-out-the-allwinner-based-walnut-pi-sbc/\" target=\"_blank\" rel=\"noreferrer noopener\">还有其他开发板</a>，但也不难看出，真正拉开产品差距的，往往不只是单纯的计算性能，更在于开发工具和配套支持。"
+      }
+    ]
+  }
+}

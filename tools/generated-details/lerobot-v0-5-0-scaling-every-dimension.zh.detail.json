@@ -1,0 +1,13 @@
+{
+  "available": true,
+  "layout": "detail-zh",
+  "translatedFrom": "https://huggingface.co/blog/lerobot-release-v050",
+  "sourceName": "Hugging Face Blog",
+  "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "html": "自 v0.4.0 以来，LeRobot 已合并 200 多个 PR，并迎来 50 多位新贡献者；因此，v0.5.0 也成为迄今为止规模最大的一次发布——几乎在所有方向上同步扩展：机器人更多了（包括我们的首个人形机器人）、策略更多了（包括自回归 VLA 的回归）、数据集更快了，仿真环境也可以直接从 Hub 加载，代码库则升级为运行在 Python 3.12 和 Transformers v5 之上的现代化版本。无论你是在仿真里训练策略，还是把它部署到真实硬件上，v0.5.0 都有值得关注的新内容。"
+    }
+  ]
+}

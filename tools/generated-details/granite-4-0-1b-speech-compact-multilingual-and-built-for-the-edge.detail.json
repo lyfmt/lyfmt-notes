@@ -1,0 +1,35 @@
+{
+  "available": false,
+  "layout": "draft",
+  "translatedFrom": "https://huggingface.co/blog/ibm-granite/granite-4-speech",
+  "sourceName": "Hugging Face Blog",
+  "sourceDescription": "以下为根据原文结构自动生成的详情草稿，已保留段落层次、图片与媒体；默认尚未完成中文翻译润色。",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "html": "We’re excited to share <a href=\"https://huggingface.co/ibm-granite/granite-4.0-1b-speech\" target=\"_blank\" rel=\"noreferrer noopener\">Granite 4.0 1B Speech</a>, the latest addition to <a href=\"https://huggingface.co/collections/ibm-granite/granite-speech\" target=\"_blank\" rel=\"noreferrer noopener\">IBM&#x27;s Granite Speech collection</a>. Designed for enterprise applications on resource-constrained devices, Granite 4.0 1B Speech is a compact speech-language model built for multilingual automatic speech recognition (ASR) and bidirectional speech translation (AST). With only half the parameters of its predecessor, <a href=\"https://huggingface.co/ibm-granite/granite-speech-3.3-2b\" target=\"_blank\" rel=\"noreferrer noopener\">granite-speech-3.3-2b</a>, the model delivers higher English transcription accuracy, faster inference through speculative decoding, and expanded language support, now covering English, French, German, Spanish, Portuguese, and Japanese. Two new additions in this release are Japanese ASR support and keyword list biasing for improved recognition of names and acronyms, both of which are frequently requested capabilities from the community. Granite 4.0 1B Speech also recently ranked #1 on the <a href=\"https://huggingface.co/spaces/hf-audio/open_asr_leaderboard\" target=\"_blank\" rel=\"noreferrer noopener\">OpenASR leaderboard</a>, highlighting its strong performance among open speech recognition systems."
+    },
+    {
+      "type": "paragraph",
+      "html": "Despite its small size, Granite 4.0 1B Speech achieves highly competitive results on standard English ASR benchmarks. Performance is measured using Word Error Rate (WER)—the percentage of words transcribed incorrectly—where lower scores indicate better accuracy. As shown in Chart 1, Granite 4.0 1B Speech delivers strong WER across multiple datasets while using far fewer parameters than many comparable models."
+    },
+    {
+      "type": "image",
+      "src": "https://cdn-uploads.huggingface.co/production/uploads/653fb52cbfd890805461d691/GRVvLzgEV0bcB-v1ij77b.png",
+      "alt": "",
+      "caption": ""
+    },
+    {
+      "type": "paragraph",
+      "html": "Chart 1: granite-4.0-1B-speech delivers competitively low WER, thus strong ASR accuracy, across many benchmarks while being a small model."
+    },
+    {
+      "type": "paragraph",
+      "html": "Like all Granite models, Granite 4.0 1B Speech is released under an Apache 2.0 license with native support in transformers and vLLM. We evaluated the model across a range of standard ASR and AST benchmarks — spanning English, multilingual, and translation tasks — and found it performs as well as or better than models well above its parameter count. Full evaluation results, architecture details, training data, and usage examples can be found on the <a href=\"https://huggingface.co/ibm-granite/granite-4.0-1b-speech\" target=\"_blank\" rel=\"noreferrer noopener\">model card</a>. We recommend pairing it with <a href=\"https://huggingface.co/ibm-granite/granite-guardian-3.3-8b\" target=\"_blank\" rel=\"noreferrer noopener\">Granite Guardian</a> for production deployments requiring additional risk detection."
+    },
+    {
+      "type": "paragraph",
+      "html": "Give it a try today and let us know what you think!"
+    }
+  ]
+}

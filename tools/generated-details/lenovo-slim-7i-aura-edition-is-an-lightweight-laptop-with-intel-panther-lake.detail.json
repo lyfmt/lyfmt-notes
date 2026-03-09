@@ -1,0 +1,13 @@
+{
+  "available": false,
+  "layout": "draft",
+  "translatedFrom": "https://liliputing.com/lenovo-slim-7i-aura-edition-is-an-lightweight-laptop-with-intel-panther-lake/",
+  "sourceName": "Liliputing",
+  "sourceDescription": "当前缓存只拿到反爬拦截页，尚未获得可靠正文；因此仅保留草稿入口。",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "html": "当前自动抓取命中了站点反爬/Cloudflare 拦截，只拿到“Just a moment...”页面，未能提取出可发布的原文详情。"
+    }
+  ]
+}
