@@ -470,15 +470,24 @@ h2 {
   font-weight: 700;
 }
 
-.tag-row,
-.sort-row {
+.tag-row {
   display: flex;
   flex-wrap: wrap;
   gap: 0.45rem;
 }
 
-.tag,
-.sort-chip {
+.segmented-control {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  padding: 0.28rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--surface-soft) 92%, transparent), var(--surface));
+  box-shadow: var(--shadow-soft);
+}
+
+.tag {
   display: inline-flex;
   align-items: center;
   padding: 0.22rem 0.65rem;
@@ -489,9 +498,27 @@ h2 {
   font-weight: 700;
 }
 
-.sort-chip.is-active {
+.segmented-control__item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 6.8rem;
+  padding: 0.48rem 0.95rem;
+  border-radius: 999px;
+  color: var(--text-soft);
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.segmented-control__item:hover {
+  background: var(--accent-soft);
+  color: var(--heading);
+}
+
+.segmented-control__item.is-active {
   background: var(--accent);
   color: #fff;
+  box-shadow: 0 8px 20px rgba(51, 102, 255, 0.22);
 }
 
 .pagination {

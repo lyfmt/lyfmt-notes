@@ -525,16 +525,22 @@ function renderSortFilters(activeSort, activeTag) {
 
   clear(container);
 
-  const row = createElement("div", "sort-row");
+  const row = createElement("div", "segmented-control");
+  row.setAttribute("role", "tablist");
+  row.setAttribute("aria-label", "按加入时间排序");
+
   const options = [
     ["added-desc", "最新加入"],
     ["added-asc", "最早加入"]
   ];
 
   options.forEach(([value, label]) => {
-    const link = createElement("a", `sort-chip${activeSort === value ? " is-active" : ""}`, label);
+    const isActive = activeSort === value;
+    const link = createElement("a", `segmented-control__item${isActive ? " is-active" : ""}`, label);
     link.href = buildIndexHref(1, activeTag, value);
-    if (activeSort === value) {
+    link.setAttribute("role", "tab");
+    link.setAttribute("aria-selected", String(isActive));
+    if (isActive) {
       link.setAttribute("aria-current", "true");
     }
     row.appendChild(link);
