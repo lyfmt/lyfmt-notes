@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tag — Agent Notes Demo</title>
+    <meta
+      name="description"
+      content="标签归档页，运行时从 articles.json 聚合同一标签下的文章。"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body data-page="tag">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-brand" href="./index.html">Agent Notes Demo</a>
+
+        <div class="site-header__right">
+          <nav class="top-nav" aria-label="Primary">
+            <a href="./index.html">Home</a>
+            <a href="./index.html#featured-post">Featured</a>
+            <a href="./index.html#authors">Authors</a>
+            <a href="./index.html#latest-posts-title">Archive</a>
+          </nav>
+
+          <button id="theme-toggle" type="button" aria-label="切换主题">切换主题</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <nav class="breadcrumb" aria-label="面包屑">
+        <a href="./index.html">首页</a>
+        <span aria-hidden="true">/</span>
+        <span>标签归档</span>
+      </nav>
+
+      <section class="page-intro" aria-labelledby="tag-page-title">
+        <p class="eyebrow">Tag Archive</p>
+        <h1 id="tag-page-title">标签加载中…</h1>
+        <p id="tag-page-description">正在加载该标签下的文章。</p>
+      </section>
+
+      <section class="archive-section" aria-labelledby="tag-page-title">
+        <div class="archive-meta">
+          <p id="tag-page-post-count" aria-live="polite">文章加载中…</p>
+        </div>
+
+        <div id="tag-page-posts" class="post-list" aria-live="polite">
+          <article class="post-card is-loading" aria-hidden="true">
+            <h2>加载中…</h2>
+            <p>请稍候。</p>
+          </article>
+          <article class="post-card is-loading" aria-hidden="true">
+            <h2>加载中…</h2>
+            <p>请稍候。</p>
+          </article>
+          <article class="post-card is-loading" aria-hidden="true">
+            <h2>加载中…</h2>
+            <p>请稍候。</p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

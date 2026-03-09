@@ -330,7 +330,9 @@ h2 {
 }
 
 .authors-section,
-.section-head {
+.section-head,
+.page-intro,
+.archive-section {
   margin-top: 2rem;
 }
 
@@ -411,11 +413,16 @@ h2 {
   color: var(--text-soft);
 }
 
-.card-grid {
+.card-grid,
+.post-list {
   margin-top: 1.2rem;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.2rem;
+}
+
+.archive-meta {
+  margin-top: 1rem;
 }
 
 .post-card {

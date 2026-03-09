@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Author — Agent Notes Demo</title>
+    <meta
+      name="description"
+      content="作者归档页，运行时从 articles.json 聚合同一作者的文章。"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body data-page="author">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-brand" href="./index.html">Agent Notes Demo</a>
+
+        <div class="site-header__right">
+          <nav class="top-nav" aria-label="Primary">
+            <a href="./index.html">Home</a>
+            <a href="./index.html#featured-post">Featured</a>
+            <a href="./index.html#authors">Authors</a>
+            <a href="./index.html#latest-posts-title">Archive</a>
+          </nav>
+
+          <button id="theme-toggle" type="button" aria-label="切换主题">切换主题</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="./index.html">← 返回首页</a>
+      </nav>
+
+      <section class="hero" aria-labelledby="author-page-title">
+        <div class="hero__body">
+          <p class="eyebrow">Author</p>
+          <h1 id="author-page-title">正在加载作者…</h1>
+          <p id="author-page-description" class="hero__text">正在加载作者简介…</p>
+        </div>
+      </section>
+
+      <section id="author-page-stats" class="stats-row" aria-label="Author statistics" aria-live="polite" aria-busy="true">
+        <article class="stat-card">
+          <span class="stat-card__value">—</span>
+          <span class="stat-card__label">Posts</span>
+        </article>
+        <article class="stat-card">
+          <span class="stat-card__value">—</span>
+          <span class="stat-card__label">Sources</span>
+        </article>
+        <article class="stat-card">
+          <span class="stat-card__value">—</span>
+          <span class="stat-card__label">Updated</span>
+        </article>
+      </section>
+
+      <section class="section-head" aria-labelledby="author-posts-title">
+        <div>
+          <p class="eyebrow eyebrow--muted">Author archive</p>
+          <h2 id="author-posts-title">作者文章</h2>
+          <p class="section-copy">按时间查看该作者的文章。</p>
+        </div>
+        <p id="author-page-post-count" class="section-badge">正在加载…</p>
+      </section>
+
+      <section id="author-page-posts" class="card-grid" aria-live="polite" aria-busy="true">
+        <article class="empty-state">
+          <h3>正在加载文章</h3>
+          <p>请稍候…</p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

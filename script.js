@@ -118,7 +118,10 @@ function getInitials(name) {
 }
 
 function createTag(tagText) {
-  return createElement("span", "tag", tagText);
+  const link = createElement("a", "tag", tagText);
+  link.href = buildTagHref(tagText);
+  link.title = `查看标签「${tagText}」归档`;
+  return link;
 }
 
 function createTagRow(tags) {
@@ -194,6 +197,9 @@ function filterPostsByTag(posts, activeTag) {
 function createTagFilterChip(tag, href, isActive) {
   const chip = createElement("a", "tag", tag);
   chip.href = href;
+  if (tag !== "全部") {
+    chip.title = `在首页按「${tag}」筛选`;
+  }
 
   if (isActive) {
     chip.setAttribute("aria-current", "true");
@@ -227,6 +233,16 @@ function buildPostHref(slug) {
   return `./post.html?slug=${encodeURIComponent(slug)}`;
 }
 
+function buildAuthorHref(author) {
+  const params = new URLSearchParams({ author: author.trim() });
+  return `./author.html?${params.toString()}`;
+}
+
+function buildTagHref(tag) {
+  const params = new URLSearchParams({ tag: tag.trim() });
+  return `./tag.html?${params.toString()}`;
+}
+
 function buildIndexHref(page, tag) {
   const params = new URLSearchParams();
   const trimmedTag = typeof tag === "string" ? tag.trim() : "";
@@ -258,6 +274,11 @@ function getPageFromQuery() {
 function getSlugFromQuery() {
   const params = new URLSearchParams(window.location.search);
   return params.get("slug") || "";
+}
+
+function getAuthorFromQuery() {
+  const author = new URLSearchParams(window.location.search).get("author");
+  return author ? author.trim() : "";
 }
 
 function getTagFromQuery() {
@@ -383,8 +404,12 @@ function renderAuthors(posts) {
     const header = createElement("div", "author-card__header");
     const avatar = createElement("div", "author-card__avatar", getInitials(author.name));
     const meta = createElement("div", "author-card__meta");
+    const nameHeading = createElement("h3", "author-card__name");
+    const nameLink = createElement("a", "author-card__link", author.name);
+    nameLink.href = buildAuthorHref(author.name);
+    nameHeading.appendChild(nameLink);
     meta.append(
-      createElement("h3", "author-card__name", author.name),
+      nameHeading,
       createElement("p", "author-card__copy", `${author.count} 篇文章 · 最近更新 ${formatDate(author.latest)}`)
     );
     header.append(avatar, meta);
@@ -541,6 +566,172 @@ function renderHome(site, posts) {
   });
 
   renderPagination(totalPages, currentPage, activeTag);
+}
+
+function renderArchivePostCards(container, posts) {
+  clear(container);
+  container.setAttribute("aria-busy", "false");
+
+  posts.forEach((post, index) => {
+    const card = createElement("article", "post-card");
+    const badge = createElement("span", "post-card__index", String(index + 1).padStart(2, "0"));
+    const meta = createElement("p", "post-card__meta", createMetaLine(post));
+    const title = createElement("h3", "post-card__title");
+    const titleLink = createElement("a", "post-card__link", post.title);
+    titleLink.href = buildPostHref(post.slug);
+    title.appendChild(titleLink);
+
+    const excerpt = createElement("p", "post-card__excerpt", post.excerpt || "");
+    const footer = createElement("div", "post-card__footer");
+    const more = createElement("a", "post-card__more", "阅读详情 →");
+    more.href = buildPostHref(post.slug);
+    footer.appendChild(more);
+
+    const tagRow = createTagRow(post.tags);
+    if (tagRow) {
+      footer.prepend(tagRow);
+    }
+
+    card.append(badge, meta, title, excerpt, footer);
+    container.appendChild(card);
+  });
+}
+
+function renderAuthorPage(posts) {
+  const author = getAuthorFromQuery();
+  const matchedPosts = posts.filter((post) => (post.author || "").trim() === author);
+  const titleNode = qs("author-page-title");
+  const descNode = qs("author-page-description");
+  const statsNode = qs("author-page-stats");
+  const countNode = qs("author-page-post-count");
+  const postsNode = qs("author-page-posts");
+
+  if (!postsNode) {
+    return;
+  }
+
+  if (!author) {
+    document.title = "Author — Agent Notes Demo";
+    setText("author-page-title", "未指定作者");
+    setText("author-page-description", "请从首页作者区进入具体作者页面。" );
+    clear(postsNode);
+    postsNode.setAttribute("aria-busy", "false");
+    const empty = createElement("article", "empty-state");
+    empty.append(
+      createElement("h3", "", "暂无作者信息"),
+      createElement("p", "", "当前页面缺少 author 参数。")
+    );
+    postsNode.appendChild(empty);
+    if (countNode) {
+      countNode.textContent = "0 篇文章";
+    }
+    return;
+  }
+
+  document.title = `${author} — Agent Notes Demo`;
+  if (titleNode) {
+    titleNode.textContent = author;
+  }
+  if (descNode) {
+    descNode.textContent = matchedPosts.length
+      ? `这里聚合了 ${author} 的文章与更新时间。`
+      : `暂时还没有找到作者「${author}」的文章。`;
+  }
+
+  if (statsNode) {
+    clear(statsNode);
+    statsNode.setAttribute("aria-busy", "false");
+    const sources = new Set(matchedPosts.map((post) => post.source).filter(Boolean));
+    const latest = matchedPosts[0]?.publishedAt || "";
+    [
+      [String(matchedPosts.length), "Posts"],
+      [String(sources.size), "Sources"],
+      [latest ? formatDate(latest) : "—", "Updated"]
+    ].forEach(([value, label]) => {
+      const card = createElement("article", "stat-card");
+      card.append(
+        createElement("span", "stat-card__value", value),
+        createElement("span", "stat-card__label", label)
+      );
+      statsNode.appendChild(card);
+    });
+  }
+
+  if (countNode) {
+    countNode.textContent = `${matchedPosts.length} 篇文章`;
+  }
+
+  if (!matchedPosts.length) {
+    clear(postsNode);
+    postsNode.setAttribute("aria-busy", "false");
+    const empty = createElement("article", "empty-state");
+    empty.append(
+      createElement("h3", "", "还没有文章"),
+      createElement("p", "", `作者「${author}」当前没有可展示的文章。`)
+    );
+    postsNode.appendChild(empty);
+    return;
+  }
+
+  renderArchivePostCards(postsNode, matchedPosts);
+}
+
+function renderTagPage(posts) {
+  const tag = getTagFromQuery();
+  const matchedPosts = filterPostsByTag(posts, tag);
+  const titleNode = qs("tag-page-title");
+  const descNode = qs("tag-page-description");
+  const countNode = qs("tag-page-post-count");
+  const postsNode = qs("tag-page-posts");
+
+  if (!postsNode) {
+    return;
+  }
+
+  if (!tag) {
+    document.title = "Tag — Agent Notes Demo";
+    setText("tag-page-title", "未指定标签");
+    setText("tag-page-description", "请从首页标签区进入具体标签页面。" );
+    clear(postsNode);
+    postsNode.setAttribute("aria-busy", "false");
+    const empty = createElement("article", "empty-state");
+    empty.append(
+      createElement("h3", "", "暂无标签信息"),
+      createElement("p", "", "当前页面缺少 tag 参数。")
+    );
+    postsNode.appendChild(empty);
+    if (countNode) {
+      countNode.textContent = "0 篇文章";
+    }
+    return;
+  }
+
+  document.title = `${tag} — Agent Notes Demo`;
+  if (titleNode) {
+    titleNode.textContent = `标签：${tag}`;
+  }
+  if (descNode) {
+    descNode.textContent = matchedPosts.length
+      ? `这里展示标签「${tag}」下的全部文章。`
+      : `标签「${tag}」当前还没有文章。`;
+  }
+  if (countNode) {
+    countNode.textContent = `${matchedPosts.length} 篇文章`;
+  }
+
+  if (!matchedPosts.length) {
+    clear(postsNode);
+    postsNode.setAttribute("aria-busy", "false");
+    const empty = createElement("article", "empty-state");
+    empty.append(
+      createElement("h3", "", "当前标签暂无文章"),
+      createElement("p", "", `标签「${tag}」下还没有文章，稍后再来看看。`)
+    );
+    postsNode.appendChild(empty);
+    return;
+  }
+
+  renderArchivePostCards(postsNode, matchedPosts);
 }
 
 function renderPostPager(post, posts) {
@@ -767,6 +958,16 @@ async function loadBlog() {
     const data = await response.json();
     const site = data && typeof data.site === "object" ? data.site : {};
     const posts = validatePosts(data?.posts);
+
+    if (pageType === "author") {
+      renderAuthorPage(posts);
+      return;
+    }
+
+    if (pageType === "tag") {
+      renderTagPage(posts);
+      return;
+    }
 
     if (pageType === "post") {
       const slug = getSlugFromQuery();
