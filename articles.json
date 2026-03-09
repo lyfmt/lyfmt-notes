@@ -1,0 +1,74 @@
+{
+  "site": {
+    "title": "Agent Notes Demo",
+    "description": "一个多篇文章 blog 首页 demo，当前收录来自 lucumr 的两篇文章。"
+  },
+  "posts": [
+    {
+      "slug": "pi-the-minimal-agent-within-openclaw",
+      "title": "Pi: The Minimal Agent Within OpenClaw",
+      "author": "Armin Ronacher",
+      "publishedAt": "2026-01-31",
+      "source": "lucumr.pocoo.org",
+      "url": "https://lucumr.pocoo.org/2026/1/31/pi/",
+      "tags": ["AI", "Agents", "OpenClaw", "Pi"],
+      "excerpt": "Pi 是 OpenClaw 底层所使用的极简 coding agent。它默认只有 Read、Write、Edit、Bash 四个工具，但依靠扩展系统、会话树和可持久化状态，能够作为更复杂 agent 的基础。",
+      "content": [
+        {
+          "heading": "Pi 是什么",
+          "paragraphs": [
+            "Pi 是一个极简的 coding agent。和很多功能堆得很满的 agent 不同，它刻意保持很小的核心，只提供最基本的文件读写、编辑和命令执行能力。",
+            "作者认为 Pi 值得注意的两个点是：第一，system prompt 和工具集合都非常克制；第二，它通过扩展系统把能力开放出去，而且扩展还能把状态写入 session。"
+          ]
+        },
+        {
+          "heading": "为什么它和 OpenClaw 有关",
+          "paragraphs": [
+            "文章明确指出，OpenClaw 底层有一个叫 Pi 的小型 coding agent。OpenClaw 并不是凭空实现了所有 agent 能力，而是建立在 Pi 这些可组合组件之上。",
+            "Pi 不只是一个 CLI，它也是一组能被上层系统复用的基础模块，因此像 OpenClaw 这种连接消息渠道、设备节点和自动化能力的系统，可以把 Pi 作为核心执行引擎。"
+          ]
+        },
+        {
+          "heading": "设计哲学",
+          "paragraphs": [
+            "Pi 的哲学不是预装一切，而是鼓励 agent 通过写代码来扩展自己。它不把 MCP 之类能力作为默认内建，而更强调让 agent 去构造技能、扩展和工作流。",
+            "这种“用软件继续制造软件”的思路，也正是作者认为 OpenClaw 代表未来方向的重要原因之一。"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "ai-and-the-ship-of-theseus",
+      "title": "AI And The Ship of Theseus",
+      "author": "Armin Ronacher",
+      "publishedAt": "2026-03-05",
+      "source": "lucumr.pocoo.org",
+      "url": "https://lucumr.pocoo.org/2026/3/5/theseus/",
+      "tags": ["AI", "Licensing", "Codegen"],
+      "excerpt": "随着代码生成成本不断下降，借助测试集和 API 约束重写旧项目会越来越常见。文章讨论了这种“slopfork”现象对 GPL、MIT、闭源软件和版权边界带来的冲击。",
+      "content": [
+        {
+          "heading": "问题从哪里来",
+          "paragraphs": [
+            "文章从 AI 辅助重写库和跨语言移植谈起：当 agent 可以只依靠 API 和测试集重做一份实现时，新的代码在行为上可能一致，但在内部设计上却完全不同。",
+            "作者引用 chardet 的争议说明：新的维护者认为重写版本是新的作品，而原作者则质疑它仍然属于派生作品。"
+          ]
+        },
+        {
+          "heading": "对许可证的冲击",
+          "paragraphs": [
+            "作者认为，copyleft 很大程度依赖版权和执行摩擦；但当公开代码越来越容易被 agent 重新实现，原有的约束会变得更难维持。",
+            "这不仅影响 GPL 代码，也可能让很多闭源废弃软件在功能层面被重新实现，从而模糊软件所有权和版权边界。"
+          ]
+        },
+        {
+          "heading": "Ship of Theseus 的新版本",
+          "paragraphs": [
+            "文章借“忒修斯之船”来比喻：如果旧代码被完全丢弃，只保留行为和名字，新实现究竟还是不是原来的作品？作者倾向于认为它已经是一艘新船。",
+            "他也因此提出，在 AI 时代，也许商标和品牌会比传统许可证更重要，因为功能实现本身越来越容易被重做。"
+          ]
+        }
+      ]
+    }
+  ]
+}
