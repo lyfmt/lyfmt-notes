@@ -60,4 +60,15 @@ python3 /home/node/.openclaw/workspace/scripts/rss_hourly_brief_bundle.py > /tmp
 python3 tools/build_post_spec_from_bundle.py --bundle /tmp/rss-bundle.json --id 2624 --cache-metadata --upsert
 ```
 
+### 3) 从 source-cache 生成 detail 草稿
+
+```bash
+python3 tools/build_detail_from_cache.py --spec tools/generated-specs/how-context-rot-drags-down-ai-and-llm-results-for-enterprises-and-how-to-fix-it.json --cache-html --write-spec
+```
+
+说明：
+- Markdown 缓存会提取段落、标题、列表、图片、iframe、脚注
+- HTML 缓存会优先尝试抽取正文容器，并用 JSON-LD 主图兜底
+- 默认生成的是 detail 草稿，不会自动完成中文润色翻译
+
 这个导入流程与 `skills/rss-summary-detail-pages/SKILL.md` 配套。

@@ -27,6 +27,170 @@
     }
   ],
   "detail": {
-    "available": false
+    "available": false,
+    "layout": "draft",
+    "translatedFrom": "https://thenewstack.io/context-rot-enterprise-ai-llms/",
+    "sourceName": "The New Stack",
+    "sourceDescription": "以下为根据原文结构自动生成的详情草稿，已保留段落层次、图片与媒体；默认尚未完成中文翻译润色。",
+    "blocks": [
+      {
+        "type": "image",
+        "src": "https://cdn.thenewstack.io/media/2026/03/1affd368-beatriz-camaleao-ao9f7kpvack-unsplash-1024x731.jpg",
+        "alt": "Featued image for: How context rot drags down AI and LLM results for enterprises, and how to fix it",
+        "caption": "Featued image for: How context rot drags down AI and LLM results for enterprises, and how to fix it"
+      },
+      {
+        "type": "paragraph",
+        "html": "One of the most quoted business mantras today states that if a company wants to be successful, <em>data is everything</em>. This has been repeated for decades, but with the furious expansion and broad use of AI and AI agents, it may no longer be true."
+      },
+      {
+        "type": "paragraph",
+        "html": "Instead, companies are learning every day that while data <em>is</em> still important, the <em>context</em> of that data may be even more critical when using AI."
+      },
+      {
+        "type": "paragraph",
+        "html": "So, what changed?"
+      },
+      {
+        "type": "paragraph",
+        "html": "As AI gained steam, unintended consequences started throwing wrenches into the works, including the vexing problem of “context rot,” which is when giant pools of critical data are amassed for use with AI. And for enterprises and data scientists, this context rot has been causing major challenges."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "What is “context rot?”"
+      },
+      {
+        "type": "paragraph",
+        "html": "It turns out that sometimes you <em>can</em> have too much of a good thing, particularly when bringing huge amounts of new data into AI agents and <a href=\"https://thenewstack.io/llm/\" target=\"_blank\" rel=\"noreferrer noopener\">Large Language Models</a> (LLMs)."
+      },
+      {
+        "type": "paragraph",
+        "html": "The problem is that as more fresh data is added, it can be at odds with the older data already there, diluting the results, introducing conflicting context, and causing agents and LLMs to become confused and lethargic. This context rot spoils the delicate brew that yields quality, trusted AI results. <a href=\"https://www.elastic.co/search-labs/blog/context-engineering-relevance-ai-agents-elasticsearch\" target=\"_blank\" rel=\"noreferrer noopener\">Context relevance turns out to be central</a> to successfully using massive pools of data with AI, agentic search, and hybrid search."
+      },
+      {
+        "type": "paragraph",
+        "html": "Because new data is brought in without removing out-of-date data, the LLMs processing it reach a saturation point when their “attention budgets” are exhausted. They become overloaded and simply cannot process every new piece of data they are receiving. The models then lose focus and derail their own reasoning, which defeats the strengths and speed of AI. The practice of context engineering was born from these needs to help enterprises learn to manage a model’s limited attention."
+      },
+      {
+        "type": "paragraph",
+        "html": "For business users, this serious disruption delivers a halting, growing mess within their critical business data."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "How the problem of context rot surfaces when enterprises use AI"
+      },
+      {
+        "type": "paragraph",
+        "html": "When context rot causes these problems in a company’s work with AI and LLMs, they will see and experience them in several notable ways, <a href=\"https://www.linkedin.com/in/abhimanyu-anand\" target=\"_blank\" rel=\"noreferrer noopener\">Abhimanyu Anand</a>, a senior data scientist at <a href=\"https://www.elastic.co/\" target=\"_blank\" rel=\"noreferrer noopener\"><strong>Elastic</strong></a>, an open-source AI search platform vendor, tells <em>The New Stack</em>."
+      },
+      {
+        "type": "paragraph",
+        "html": "“One is where your AI agent or your system falls into a loop, and you have clashing context,” Anand says. “The agent might establish that as a ground and then keep trying to get to an answer. But maybe it does not have relevant information, so it tries to make more tool calls to fetch more relevant documents.”"
+      },
+      {
+        "type": "paragraph",
+        "html": "For the company, that manifests as unwanted delays, as the AI agent or LLM takes longer to answer a question because it is still searching for the right answer, he says."
+      },
+      {
+        "type": "paragraph",
+        "html": "After trying for maybe 10 minutes, the agent is not able to find the right answer, but since it gathered so much context, it may hallucinate and provide you with a wrong answer.”"
+      },
+      {
+        "type": "paragraph",
+        "html": "The problems spiral from there."
+      },
+      {
+        "type": "paragraph",
+        "html": "“After trying for maybe 10 minutes, the agent is not able to find the right answer, but since it gathered so much context, it may hallucinate and provide you with a wrong answer,” which is a confounding result, he says."
+      },
+      {
+        "type": "paragraph",
+        "html": "“The LLMs, even the best of them, have been trained by different companies, but they have not yet been trained on one million or 10 million pieces of data. So, what we see is if your agent or your LLM has a really large context, it hallucinates a lot, and its reasoning capabilities go down.”"
+      },
+      {
+        "type": "paragraph",
+        "html": "With more tokens comes more data dilution and the dreaded context rot, says Anand."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "How to fix context rot"
+      },
+      {
+        "type": "paragraph",
+        "html": "To discover and monitor these issues, enterprises and IT administrators must track critical data performance metrics for their applications and LLMs to get to the roots of the problems, Anand says."
+      },
+      {
+        "type": "paragraph",
+        "html": "Those metrics can include how much time it takes to generate a response, how many tokens are consumed, and other factors. Tokens in AI and LLM data are entities that represent words or other content and are split into chunks. Those chunks, or tokens, are then identified by multi-digit numbers, which are then analyzed and processed by AI and the LLMs."
+      },
+      {
+        "type": "paragraph",
+        "html": "“Having a good evaluation setup with the right metrics is the best way to get the first signals of something going wrong,” says Anand. “Agents and other applications that are built on top of LLMs, their performance in terms of accuracy and reasoning ability degrade as you feed in more and more data.”"
+      },
+      {
+        "type": "paragraph",
+        "html": "For enterprises working with AI and LLMs, they want the best and most relevant context available, including documents, tools, external artifacts, and other sources, says Anand.<br> “This is where solutions like Elastic can really help because we have features that are built around fetching the most relevant context from unstructured data,” he says."
+      },
+      {
+        "type": "paragraph",
+        "html": "Elastic’s platforms include a full range of tools to help solve context rot challenges, including its Elasticsearch distributed search and analytics engine and distributed vector database where embeddings can be stored; its <a href=\"https://www.elastic.co/docs/explore-analyze/ai-features/elastic-agent-builder\" target=\"_blank\" rel=\"noreferrer noopener\">Elastic Agent Builder</a> framework, which is a layer in <a href=\"https://www.elastic.co/elasticsearch\" target=\"_blank\" rel=\"noreferrer noopener\">Elasticsearch</a> for using structured, unstructured and vector data; and a vector store, that allows enterprises to ingest data and then retrieve the most relevant context. Vectors are arrays of numbers, while embeddings are vectors that represent words, sentences, images, videos, and other real-world objects."
+      },
+      {
+        "type": "paragraph",
+        "html": "Also helping to solve context rot issues are <a href=\"https://www.elastic.co/observability\" target=\"_blank\" rel=\"noreferrer noopener\">Elastic’s built-in observability platform</a>, which allows administrators to view and monitor how AI agents, LLMs and more are performing; its Elastic Learned Sparse EncodeR (<a href=\"https://www.elastic.co/docs/explore-analyze/machine-learning/nlp/ml-nlp-elser\" target=\"_blank\" rel=\"noreferrer noopener\">ELSER</a>) that enables semantic search to retrieve more relevant search results based on contextual meaning rather than exact keyword matches; and its <a href=\"https://ir.elastic.co/news/news-details/2025/Elastic-Completes-Acquisition-of-Jina-AI-a-Leader-in-Frontier-Models-for-Multimodal-and-Multilingual-Search/default.aspx\" target=\"_blank\" rel=\"noreferrer noopener\">JINA AI</a> multilingual and multimodal embedding model that is used for processing images and texts into vector formats."
+      },
+      {
+        "type": "paragraph",
+        "html": "“That is a comprehensive package around the different things that you can do with Elastic,” says Anand. “It is hard to start from scratch and build things to do this.”"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Context rot requires enterprises to constantly fight back: Analyst"
+      },
+      {
+        "type": "paragraph",
+        "html": "<a href=\"https://www.linkedin.com/in/jameskobielus/\" target=\"_blank\" rel=\"noreferrer noopener\">James Kobielus</a>, research director and principal analyst <span>at Franconia Research, tells <em>The New Stack</em> that enterprises must wage a battle against context rot to ensure they use the most accurate and up-to-date data while purging old and invalid data</span> for their agentic AI and LLM operations. The business risks and impacts are even more severe when enterprises are using agentic AI systems, he says."
+      },
+      {
+        "type": "paragraph",
+        "html": "“Unless nipped in the bud through strong governance in the LLMOps pipeline context, rot can trigger a vicious cycle of diminishing model validity.”"
+      },
+      {
+        "type": "paragraph",
+        "html": "“Unless nipped in the bud through strong governance in the LLMOps pipeline context, rot can trigger a vicious cycle of diminishing model validity,” says Kobielus. “If the context window driving LLM-mediated conversation becomes polluted with false, obsolete, or irrelevant context, the end user, without their knowledge, may be mistargeted, misled, and otherwise mistreated by a deployed AI application.”"
+      },
+      {
+        "type": "paragraph",
+        "html": "This model drift and decay from context rot “is a form of technical debt that is intrinsic to any deployed LLM, foundation model, or other AI model,” says Kobielus. “It can silently undermine the continued accuracy and effectiveness of any model, no matter how well-trained upfront.”"
+      },
+      {
+        "type": "paragraph",
+        "html": "Reducing the susceptibility of an LLMOps practice to context rot requires some core governance practices, according to Kobielus. “That includes ensuring that inaccurate, conflicting, outdated, and irrelevant data and metadata are purged from a company’s knowledge base before the bad data is used to train an LLM reference within a retrieval-augmented generation (RAG) workflow,” he says."
+      },
+      {
+        "type": "paragraph",
+        "html": "For enterprises experiencing these problems, it is critical to find a vendor that focuses on solving them, says Kobielus."
+      },
+      {
+        "type": "paragraph",
+        "html": "“I like Elastic’s comprehensive approach to boosting context quality,” he says. “Within a RAG context, it comes down to boosting the value of context-data search and query across disparate and dynamic knowledge bases. Their features address the flexibility that LLM practitioners need in this regard, especially such features as temporal filtering, metadata boosting, data-chunk breakdown optimization, and calibration of retrieval volumes in order to optimize fact retrieval within token budgets and model windows.”"
+      },
+      {
+        "type": "image",
+        "src": "https://cdn.thenewstack.io/media/2025/01/7cc7b54c-elastic_logo-1.svg",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://thenewstack.io/wp-content/uploads/2024/07/00ef81b0-cropped-0a249176-todd-r.-weiss-headshot-2-600x600.jpg",
+        "alt": "",
+        "caption": ""
+      }
+    ]
   }
 }

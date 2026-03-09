@@ -1050,7 +1050,8 @@ function renderDetailBlocks(detail) {
       const section = createElement("section", "article-section");
       const list = createElement("ul");
       (Array.isArray(block.items) ? block.items : []).forEach((item) => {
-        const li = createElement("li", "", item);
+        const li = createElement("li");
+        li.innerHTML = typeof item === "string" ? item : "";
         list.appendChild(li);
       });
       if (list.childNodes.length) {

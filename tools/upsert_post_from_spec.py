@@ -119,7 +119,7 @@ def normalize_detail(detail) -> dict:
     else:
         result["available"] = bool(result["available"])
 
-    if not result["available"]:
+    if not result["available"] and not result["blocks"]:
         return {"available": False}
 
     result.setdefault("layout", "default")
