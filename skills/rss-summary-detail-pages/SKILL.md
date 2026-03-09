@@ -375,6 +375,104 @@ assets/posts/<slug>/cover.png
 - 保留原 `excerpt` / `content`
 - 只补 `detail`
 
+当前工作区已经提供了两层脚本：
+
+#### A. 单篇 spec 写回站点
+
+```bash
+cd /home/node/.openclaw/workspace/pi-blog-demo
+python3 tools/upsert_post_from_spec.py \
+  --spec tools/examples.rss-post-spec.json \
+  --articles articles.json
+```
+
+如果 detail 里有远程图片，并且你希望为 GitHub Pages 本地化媒体：
+
+```bash
+python3 tools/upsert_post_from_spec.py \
+  --spec tools/my-post.json \
+  --articles articles.json \
+  --localize-media
+```
+
+#### B. 从 RSS bundle 直接生成 spec
+
+先跑 bundle：
+
+```bash
+python3 /home/node/.openclaw/workspace/scripts/rss_hourly_brief_bundle.py > /tmp/rss-bundle.json
+```
+
+再把某一条变成站点 spec：
+
+```bash
+cd /home/node/.openclaw/workspace/pi-blog-demo
+python3 tools/build_post_spec_from_bundle.py \
+  --bundle /tmp/rss-bundle.json \
+  --id 2624 \
+  --cache-metadata
+```
+
+如果要一口气生成并写进站点：
+
+```bash
+python3 tools/build_post_spec_from_bundle.py \
+  --bundle /tmp/rss-bundle.json \
+  --id 2624 \
+  --cache-metadata \
+  --upsert
+```
+
+约定：
+
+- 输入 spec 是一个 JSON 对象，描述单篇文章
+- `upsert_post_from_spec.py` 会按 `slug` 更新已存在文章，否则插入新文章
+- `--localize-media` 目前会处理 `detail.blocks[]` 里的 `image` 块
+- 资源默认落到 `assets/posts/<slug>/`
+- `build_post_spec_from_bundle.py` 默认从 bundle 的 `focus_items` 生成 spec
+- `--cache-metadata` 会把条目元数据和 probe 信息写到 `source-cache/<slug>.metadata.json`
+- `--cache-html` 会尝试缓存原始 HTML 到 `source-cache/<slug>.html`
+
+#### C. 从 source-cache 生成 detail 草稿
+
+如果已经有 `source-cache/<slug>.md` 或 `.html`，可以直接生成 `detail.blocks[]` 草稿：
+
+```bash
+cd /home/node/.openclaw/workspace/pi-blog-demo
+python3 tools/build_detail_from_cache.py \
+  --spec tools/generated-specs/how-context-rot-drags-down-ai-and-llm-results-for-enterprises-and-how-to-fix-it.json \
+  --cache-html
+```
+
+如果希望把 detail 草稿直接写回 spec：
+
+```bash
+python3 tools/build_detail_from_cache.py \
+  --spec tools/generated-specs/how-context-rot-drags-down-ai-and-llm-results-for-enterprises-and-how-to-fix-it.json \
+  --cache-html \
+  --write-spec
+```
+
+如果希望直接开放详情模式：
+
+```bash
+python3 tools/build_detail_from_cache.py \
+  --spec tools/generated-specs/how-context-rot-drags-down-ai-and-llm-results-for-enterprises-and-how-to-fix-it.json \
+  --cache-html \
+  --write-spec \
+  --enable-detail
+```
+
+约定补充：
+
+- `build_detail_from_cache.py` 目前支持 `.md`、`.html`
+- 能提取：标题层级、段落、列表、图片、iframe、脚注
+- HTML 路径会优先尝试正文容器抽取，并用 JSON-LD 主图做兜底
+- 这是 **详情草稿生成器**，默认不会自动翻译润色整篇中文
+- `refine_detail_to_chinese.py` 可把英文 `detail.blocks[]` 改写成中文“细读版”详情结构
+- 在当前环境下，`pi` 更适合按小批量 block 分段跑；推荐结合 `--resume-untranslated` / `--limit` / `--continue-on-error`
+- 推荐流程：先生成草稿，再生成中文 detail；只有确认可发布时再 `--enable-detail`
+
 ### 第 7 步：本地验证
 至少做这些检查：
 
