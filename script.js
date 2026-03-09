@@ -308,8 +308,13 @@ function isHomePathname(pathname) {
   return pathname === "/" || pathname.endsWith("/index.html");
 }
 
-function renderCurrentHomePage() {
-  if (pageType !== "home" || !hasLoadedBlog) {
+async function renderCurrentHomePage(preferFresh = false) {
+  if (pageType !== "home") {
+    return;
+  }
+
+  if (preferFresh || !hasLoadedBlog) {
+    await loadBlog();
     return;
   }
 
@@ -345,7 +350,7 @@ function initHomeNavigation() {
     }
 
     window.history.pushState({ page: "home" }, "", nextUrl);
-    renderCurrentHomePage();
+    void renderCurrentHomePage(true);
   });
 
   window.addEventListener("popstate", () => {
@@ -353,7 +358,15 @@ function initHomeNavigation() {
       return;
     }
 
-    renderCurrentHomePage();
+    void renderCurrentHomePage(true);
+  });
+
+  window.addEventListener("focus", () => {
+    if (!hasLoadedBlog || !isHomePathname(window.location.pathname)) {
+      return;
+    }
+
+    void renderCurrentHomePage(true);
   });
 }
 
@@ -1016,7 +1029,7 @@ function renderError(message) {
 
 async function loadBlog() {
   try {
-    const response = await fetch(DATA_URL);
+    const response = await fetch(DATA_URL, { cache: "no-store" });
     if (!response.ok) {
       throw new Error(`Request failed with status ${response.status}`);
     }
