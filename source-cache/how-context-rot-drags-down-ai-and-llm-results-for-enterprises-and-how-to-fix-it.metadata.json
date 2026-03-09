@@ -1,0 +1,19 @@
+{
+  "item": {
+    "id": 2624,
+    "title": "How context rot drags down AI and LLM results for enterprises, and how to fix it",
+    "blog": "The New Stack",
+    "url": "https://thenewstack.io/context-rot-enterprise-ai-llms/",
+    "published": "2026-03-09T16:00:03Z",
+    "discovered": "2026-03-09T16:34:01.193752836Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://thenewstack.io/context-rot-enterprise-ai-llms/",
+    "ok": true,
+    "title": "How context rot drags down AI and LLM results for enterprises, and how to fix it",
+    "description": "Context rot is undermining enterprise AI and LLM performance. Elastic's Abhimanyu Anand and analyst James Kobielus explain what it is and how to fix it.",
+    "fetched_bytes": 1215053,
+    "error": null
+  }
+}

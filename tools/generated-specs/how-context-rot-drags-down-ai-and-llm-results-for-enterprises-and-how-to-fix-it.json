@@ -1,0 +1,32 @@
+{
+  "slug": "how-context-rot-drags-down-ai-and-llm-results-for-enterprises-and-how-to-fix-it",
+  "title": "How context rot drags down AI and LLM results for enterprises, and how to fix it",
+  "author": "",
+  "publishedAt": "2026-03-09",
+  "source": "The New Stack",
+  "url": "https://thenewstack.io/context-rot-enterprise-ai-llms/",
+  "tags": [
+    "Infrastructure",
+    "AI"
+  ],
+  "excerpt": "这篇文章围绕“How context rot drags down AI and LLM results for enterprises, and how to fix it”展开，RSS 摘要提到：Context rot is undermining enterprise AI and LLM performance. Elastic's Abhimanyu Anand and analyst James Kobielus explain what it is and...",
+  "content": [
+    {
+      "heading": "文章核心",
+      "paragraphs": [
+        "基于 RSS 摘要与页面元数据，原文重点是：Context rot is undermining enterprise AI and LLM performance. Elastic's Abhimanyu Anand and analyst James Kobielus explain what it is and how to fix it.",
+        "来源信息：The New Stack｜2026-03-09。"
+      ]
+    },
+    {
+      "heading": "值得继续补充的点",
+      "paragraphs": [
+        "如果后续补齐详情视图，重点可以继续展开架构取舍、生产约束、性能代价和工程实施方式。",
+        "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+      ]
+    }
+  ],
+  "detail": {
+    "available": false
+  }
+}

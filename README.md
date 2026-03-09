@@ -39,7 +39,9 @@ python3 -m http.server 8765
 
 ## RSS / Blog 导入脚本
 
-当前目录提供了一个最小可运行脚本，用来把 RSS / blog 文章按“总结 + 详情”数据模型写入站点：
+当前目录提供了两层导入工具，用来把 RSS / blog 文章按“总结 + 详情”数据模型写入站点。
+
+### 1) 从 spec 直接写入站点
 
 ```bash
 python3 tools/upsert_post_from_spec.py --spec tools/examples.rss-post-spec.json --articles articles.json
@@ -49,6 +51,13 @@ python3 tools/upsert_post_from_spec.py --spec tools/examples.rss-post-spec.json 
 
 ```bash
 python3 tools/upsert_post_from_spec.py --spec tools/my-post.json --articles articles.json --localize-media
+```
+
+### 2) 从 RSS bundle 生成 spec，再写入站点
+
+```bash
+python3 /home/node/.openclaw/workspace/scripts/rss_hourly_brief_bundle.py > /tmp/rss-bundle.json
+python3 tools/build_post_spec_from_bundle.py --bundle /tmp/rss-bundle.json --id 2624 --cache-metadata --upsert
 ```
 
 这个导入流程与 `skills/rss-summary-detail-pages/SKILL.md` 配套。
