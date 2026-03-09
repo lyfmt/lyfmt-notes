@@ -1,0 +1,69 @@
+{
+  "slug": "real-time-iss-tracker-shows-off-the-goods",
+  "title": "Real-Time ISS Tracker Shows Off The Goods",
+  "author": "Hackaday",
+  "publishedAt": "2026-03-09",
+  "source": "Hackaday",
+  "url": "https://hackaday.com/2026/03/09/real-time-iss-tracker-shows-off-the-goods/",
+  "tags": [
+    "Hardware",
+    "Embedded",
+    "Space"
+  ],
+  "excerpt": "Hackaday 展示了一台名为 Orbigator 的桌面国际空间站追踪器：透明地球仪围绕内部机构旋转，既更好看，也避开了传统方案里伺服走线缠绕的问题。",
+  "content": [
+    {
+      "heading": "文章核心",
+      "paragraphs": [
+        "Hackaday 介绍了 wyojustin 制作的 Orbigator，一台实时显示国际空间站位置的桌面轨道追踪器。它最吸睛的设计是透明地球仪绕着内部机构转动，让设备同时兼具展示感和机械观赏性。",
+        "相比早前让 ISS 模型在地球表面移动的做法，这种反向设计少了需要处理的拖尾伺服线，也让整机结构更利落。"
+      ]
+    },
+    {
+      "heading": "实现细节",
+      "paragraphs": [
+        "作者把可打印结构件、固件和电路设计都开源了：3D 部件用 OpenSCAD 建模，Raspberry Pi Pico 2 上的定位固件使用 MicroPython，PCB 则用 KiCad 设计。",
+        "这类作品的价值不只是“好看”，也展示了把轨道可视化、桌面装置和开源硬件工作流结合起来的完整实现路径。"
+      ]
+    }
+  ],
+  "detail": {
+    "available": true,
+    "layout": "detail-zh",
+    "translatedFrom": "https://hackaday.com/2026/03/09/real-time-iss-tracker-shows-off-the-goods/",
+    "sourceName": "Hackaday",
+    "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+    "blocks": [
+      {
+        "type": "image",
+        "src": "https://hackaday.com/wp-content/uploads/2026/03/orbigator_detail.jpg",
+        "alt": "Orbigator 实物图",
+        "caption": "Orbigator 实物图"
+      },
+      {
+        "type": "paragraph",
+        "html": "哪个硬件黑客会对透明外壳没点偏爱呢？虽说这种设计如今已经不算主流，但对所有喜欢电子设备或机械装置的人来说，它依然有种难以抗拒的魅力。也正因如此，在我们见过的同类桌面轨道追踪器里，<a href=\"https://wyolum.com/orbigator-real-time-satellite-tracker-with-overhead-alert-radar/\" target=\"_blank\" rel=\"noreferrer noopener\">由 wyojustin 打造的 Orbigator</a> 才会显得格外醒目。"
+      },
+      {
+        "type": "paragraph",
+        "html": "从概念上看，它与 <a href=\"https://hackaday.com/2025/07/08/touch-lamp-tracks-iss-with-style/\" target=\"_blank\" rel=\"noreferrer noopener\">Will Dana 在 2025 年制作的国际空间站追踪灯</a> 非常接近。事实上，wyojustin 也明确提到，那件作品正是这个项目的灵感来源之一。不过，这次的实现方式不一样：前者是让一个小型 ISS 模型沿着地球仪表面移动，而这里则是让一个透明地球仪围绕内部机构旋转。这样一来，不仅视觉效果更漂亮，也顺手解决了 Will 那套设计里的一个关键问题——不再有需要额外处理和避免缠绕的伺服器拖尾线材。"
+      },
+      {
+        "type": "paragraph",
+        "html": "如果你也想做一台自己的 Orbigator，wyojustin 已经把这套装置在硬件和软件两方面整理得非常清楚，相关文件也都放在 <a href=\"https://github.com/wyolum/orbigator\" target=\"_blank\" rel=\"noreferrer noopener\">这个项目的 GitHub 仓库</a> 里。"
+      },
+      {
+        "type": "paragraph",
+        "html": "3D 可打印部件是用 OpenSCAD 做的，负责在 Raspberry Pi Pico 2 上计算 ISS 当前位置的固件则使用 MicroPython 编写，PCB 则由 KiCad 设计完成。顺带一提，我们还注意到，Hackaday 校友 <a href=\"https://hackaday.com/author/anool/\" target=\"_blank\" rel=\"noreferrer noopener\">Anool Mahidharia</a> 似乎也为这块电路板的设计出了力。"
+      },
+      {
+        "type": "paragraph",
+        "html": "这类打磨精致的轨道追踪器我们当然很喜欢，但如果你并不需要做到这么复杂，<a href=\"https://hackaday.com/2025/04/07/tracking-the-iss-made-easy/\" target=\"_blank\" rel=\"noreferrer noopener\">其实也有更容易上手的方案</a>。如果你更想盯的是天上的飞机，而且手头能弄到一台云台安防摄像头，那么<a href=\"https://hackaday.com/2025/05/27/look-to-the-sky-with-this-simple-plane-tracker/\" target=\"_blank\" rel=\"noreferrer noopener\">实现起来就更简单了</a>。"
+      }
+    ]
+  },
+  "workflow": {
+    "articleId": 2635,
+    "rssTitle": "Real-Time ISS Tracker Shows Off the Goods"
+  }
+}

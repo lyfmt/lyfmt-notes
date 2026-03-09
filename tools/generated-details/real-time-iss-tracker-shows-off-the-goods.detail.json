@@ -1,0 +1,35 @@
+{
+  "available": false,
+  "layout": "draft",
+  "translatedFrom": "https://hackaday.com/2026/03/09/real-time-iss-tracker-shows-off-the-goods/",
+  "sourceName": "Hackaday",
+  "sourceDescription": "以下为根据原文结构自动生成的详情草稿，已保留段落层次、图片与媒体；默认尚未完成中文翻译润色。",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "https://hackaday.com/wp-content/uploads/2026/03/orbigator_detail.jpg",
+      "alt": "Orbigator 实物图",
+      "caption": "Orbigator 实物图"
+    },
+    {
+      "type": "paragraph",
+      "html": "What hardware hacker doesn’t have a soft spot for transparent cases? While they may have fallen out of mainstream favor, they have an undeniable appeal to anyone with an interest in electronic or mechanical devices. Which is why the <a href=\"https://wyolum.com/orbigator-real-time-satellite-tracker-with-overhead-alert-radar/\" target=\"_blank\" rel=\"noreferrer noopener\">Orbigator built by wyojustin</a> stands out among similar desktop orbital trackers we’ve seen."
+    },
+    {
+      "type": "paragraph",
+      "html": "Conceptually, it’s very similar to the <a href=\"https://hackaday.com/2025/07/08/touch-lamp-tracks-iss-with-style/\" target=\"_blank\" rel=\"noreferrer noopener\">International Space Station tracking lamp that Will Dana built in 2025</a>. In fact, wyojustin cites it specifically as one of the inspirations for this project. But unlike that build, which saw a small model of the ISS moving across the surface of the globe, a transparent globe is rotated around the internal mechanism. This not only looks gorgeous, but solves a key problem in Will’s design — that is, there’s no trailing servo wiring that needs to be kept track of."
+    },
+    {
+      "type": "paragraph",
+      "html": "For anyone who wants an Orbigator of their own, wyojustin has done a fantastic job of documenting the hardware and software aspects of the build, and all the relevant files are available in the <a href=\"https://github.com/wyolum/orbigator\" target=\"_blank\" rel=\"noreferrer noopener\">project’s GitHub repository</a>."
+    },
+    {
+      "type": "paragraph",
+      "html": "The 3D printable components have been created with OpenSCAD, the firmware responsible for calculating the current position of the ISS on the Raspberry Pi Pico 2 is written in MicroPython, and the PCB was designed in KiCad. Incidentally, we noticed that Hackaday alum <a href=\"https://hackaday.com/author/anool/\" target=\"_blank\" rel=\"noreferrer noopener\">Anool Mahidharia</a> appears to have been lending a hand with the board design."
+    },
+    {
+      "type": "paragraph",
+      "html": "As much as we love these polished orbital trackers, <a href=\"https://hackaday.com/2025/04/07/tracking-the-iss-made-easy/\" target=\"_blank\" rel=\"noreferrer noopener\">we’ve seen far more approachable builds</a> if you don’t need something so elaborate. If you’re more interested in keeping an eye out for planes and can get your hands on a pan-and-tilt security camera, <a href=\"https://hackaday.com/2025/05/27/look-to-the-sky-with-this-simple-plane-tracker/\" target=\"_blank\" rel=\"noreferrer noopener\">it’s even easier</a>."
+    }
+  ]
+}
