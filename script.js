@@ -6,6 +6,10 @@ const themeToggle = document.getElementById("theme-toggle");
 const body = document.body;
 const pageType = body?.dataset?.page || "home";
 
+let cachedSite = null;
+let cachedPosts = [];
+let hasLoadedBlog = false;
+
 function getStoredTheme() {
   try {
     const theme = window.localStorage.getItem(THEME_KEY);
@@ -289,6 +293,68 @@ function validatePosts(posts) {
   return Array.isArray(posts)
     ? posts.filter((post) => post && typeof post.slug === "string" && typeof post.title === "string")
     : [];
+}
+
+function isModifiedNavigation(event) {
+  return event.defaultPrevented
+    || event.button !== 0
+    || event.metaKey
+    || event.ctrlKey
+    || event.shiftKey
+    || event.altKey;
+}
+
+function isHomePathname(pathname) {
+  return pathname === "/" || pathname.endsWith("/index.html");
+}
+
+function renderCurrentHomePage() {
+  if (pageType !== "home" || !hasLoadedBlog) {
+    return;
+  }
+
+  renderHome(cachedSite || {}, Array.isArray(cachedPosts) ? cachedPosts : []);
+}
+
+function initHomeNavigation() {
+  if (pageType !== "home") {
+    return;
+  }
+
+  document.addEventListener("click", (event) => {
+    const link = event.target.closest("#pagination a, #tag-filter-list a");
+    if (!link || isModifiedNavigation(event)) {
+      return;
+    }
+
+    if (link.target && link.target !== "_self") {
+      return;
+    }
+
+    const url = new URL(link.href, window.location.href);
+    if (url.origin !== window.location.origin || !isHomePathname(url.pathname) || !hasLoadedBlog) {
+      return;
+    }
+
+    const nextUrl = `${url.pathname}${url.search}${url.hash}`;
+    const currentUrl = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+
+    event.preventDefault();
+    if (nextUrl === currentUrl) {
+      return;
+    }
+
+    window.history.pushState({ page: "home" }, "", nextUrl);
+    renderCurrentHomePage();
+  });
+
+  window.addEventListener("popstate", () => {
+    if (!hasLoadedBlog || !isHomePathname(window.location.pathname)) {
+      return;
+    }
+
+    renderCurrentHomePage();
+  });
 }
 
 function renderFeatured(site, posts, activeTag) {
@@ -959,6 +1025,10 @@ async function loadBlog() {
     const site = data && typeof data.site === "object" ? data.site : {};
     const posts = validatePosts(data?.posts);
 
+    cachedSite = site;
+    cachedPosts = posts;
+    hasLoadedBlog = true;
+
     if (pageType === "author") {
       renderAuthorPage(posts);
       return;
@@ -987,4 +1057,5 @@ async function loadBlog() {
 }
 
 initThemeToggle();
+initHomeNavigation();
 void loadBlog();
