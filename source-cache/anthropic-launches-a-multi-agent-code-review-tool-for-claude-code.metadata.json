@@ -1,0 +1,20 @@
+{
+  "item": {
+    "id": 2634,
+    "title": "Anthropic launches a multi-agent code review tool for Claude Code",
+    "blog": "The New Stack",
+    "url": "https://thenewstack.io/anthropic-launches-a-multi-agent-code-review-tool-for-claude-code/",
+    "published": "2026-03-09T19:00:51Z",
+    "discovered": "2026-03-09T20:00:24.215155109Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://thenewstack.io/anthropic-launches-a-multi-agent-code-review-tool-for-claude-code/",
+    "ok": true,
+    "title": "Anthropic launches a multi-agent code review tool for Claude Code",
+    "description": "As AI coding tools drive a surge in pull requests, Anthropic's Code Review dispatches parallel code review agents to catch bugs.",
+    "fetched_bytes": 1199232,
+    "error": null
+  },
+  "classification": "normal"
+}

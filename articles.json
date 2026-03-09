@@ -5,6 +5,165 @@
   },
   "posts": [
     {
+      "slug": "anthropic-launches-a-multi-agent-code-review-tool-for-claude-code",
+      "title": "Anthropic launches a multi-agent code review tool for Claude Code",
+      "author": "The New Stack",
+      "publishedAt": "2026-03-09",
+      "source": "The New Stack",
+      "url": "https://thenewstack.io/anthropic-launches-a-multi-agent-code-review-tool-for-claude-code/",
+      "excerpt": "Anthropic 为 Claude Code 推出云端多 agent Code Review：在 PR 打开时并行审查逻辑错误，试图在人工 review 之前先拦下 bug，但代价是更长等待时间和更高 token 成本。",
+      "tags": [
+        "AI",
+        "Agents",
+        "DevTools"
+      ],
+      "content": [
+        {
+          "heading": "文章核心",
+          "paragraphs": [
+            "Anthropic 新发布的 Code Review 会在 Claude Code 中为每个已启用仓库的 PR 拉起一组并行 agent，分别检查不同类型的问题，并在人工 reviewer 介入前先给出结论和修复建议。",
+            "它的设计重点不是样式或琐碎告警，而是更接近“真实 bug”的逻辑错误，以减少 AI 审查常见的误报噪音。"
+          ]
+        },
+        {
+          "heading": "值得关注的点",
+          "paragraphs": [
+            "Anthropic 内部数据表明，这类多 agent 审查已经在大 PR 上显著提高了发现问题的概率，也说明 AI coding 工具普及后，代码评审正成为新的团队瓶颈。",
+            "这套能力目前只在云端、按 token 计费运行，平均一次审查成本在 15 到 25 美元之间；如果未来进一步进入开发者本地 inner loop，它会更像一个持续伴随式的工程审查层。"
+          ]
+        }
+      ],
+      "detail": {
+        "available": true,
+        "layout": "detail-zh",
+        "translatedFrom": "https://thenewstack.io/anthropic-launches-a-multi-agent-code-review-tool-for-claude-code/",
+        "sourceName": "The New Stack",
+        "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+        "blocks": [
+          {
+            "type": "image",
+            "src": "./assets/posts/anthropic-launches-a-multi-agent-code-review-tool-for-claude-code/figure-01.jpg",
+            "alt": "Anthropic Claude Code Code Review 文章头图",
+            "caption": "Anthropic Claude Code Code Review 文章头图"
+          },
+          {
+            "type": "paragraph",
+            "html": "在 Claude Code、Codex、Cursor 等智能体式编程工具的推动下，开发者交付代码的速度和数量都比以往更高了。但另一面也随之出现：需要评审的代码更多了，而这已经成为许多团队的一大瓶颈。为缓解这个问题，Anthropic 在周一为 Claude Code 推出了 Code Review，这是一套新的多代理系统，试图在代码进入人工评审之前，就先把潜在 bug 尽量拦下来。"
+          },
+          {
+            "type": "paragraph",
+            "html": "目前，Claude Teams 和 Enterprise 用户已经可以在 Claude Code 的网页界面中使用 Code Review。管理员可以按代码仓库逐个开启这项功能；一旦某个仓库被启用，之后每次该仓库有 pull request 被创建时，它都会在云端自动运行。"
+          },
+          {
+            "type": "paragraph",
+            "html": "Anthropic 其实早已提供了 <a href=\"https://code.claude.com/docs/en/github-actions\" target=\"_blank\" rel=\"noreferrer noopener\">在 GitHub Actions 中借助 Claude Code 进行代码审查</a> 的能力。但正如该公司所说，“这<span>是一种比我们现有的 </span><span>代码审查 GitHub Action</span><span> 更全面（也更昂贵）的方案，而后者仍然保持开源并可继续使用。”</span>"
+          },
+          {
+            "type": "paragraph",
+            "html": "Anthropic 旗下 Claude Code 的产品负责人 Cat Wu 指出，如今代码审查越来越离不开一定程度的自动化。她在接受 <em>The New Stack</em> 采访时表示：“随着越来越多人开始使用 Claude Code，我们注意到，大家写出的 PR 数量比过去多了很多。这往往意味着，负担被转移到了代码审查者身上，因为现在只需要一名工程师、一个提示词，就能产出一份看起来相当像样的 PR。而代码审查者接下来却需要花不少时间，去核实各种边界情况。”"
+          },
+          {
+            "type": "image",
+            "src": "./assets/posts/anthropic-launches-a-multi-agent-code-review-tool-for-claude-code/figure-02.png",
+            "alt": "Claude Code Code Review 界面截图",
+            "caption": "Claude Code Code Review 界面截图"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "一组并行协作的代码审查代理"
+          },
+          {
+            "type": "paragraph",
+            "html": "在实际使用中，Code Review 会派出一组并行工作的代理，每个代理分别负责排查不同类型的错误。完成后，它们会以评论的形式给出各自的结论；如果发现了问题，还会进一步给出相应的解决建议。不过，这些代理并不会替人批准任何 pull request，是否通过，最终仍由工程师本人决定。"
+          },
+          {
+            "type": "paragraph",
+            "html": "这些代理的重点放在逻辑错误上，而这是一项有意为之的取舍。Wu 向 <em>The New Stack</em> 表示，这么做的原因是为了减少误报。"
+          },
+          {
+            "type": "paragraph",
+            "html": "她说：“很多时候，人类做代码审查时，既会指出逻辑错误，也会顺手挑出一大堆样式层面的问题。我们发现，在 AI 生成的审查意见里，人们真正希望优先看到的，其实是逻辑错误——这也是这里最核心的关注点。[…] 人们对误报非常敏感，所以如果我们只聚焦逻辑错误，只聚焦代码里真实存在的 bug，那么误报率就会很低；因为只要你已经确认那是个 bug，那几乎就一定应该修。”"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Anthropic 如何使用 Code Review"
+          },
+          {
+            "type": "paragraph",
+            "html": "Anthropic 内部一直在使用一套类似的系统。Wu 说，到现在，Anthropic 的开发者已经默认自己的 pull request 上会出现 Code Review 的评论；要是哪次没看到，他们反而会“有点紧张”。"
+          },
+          {
+            "type": "paragraph",
+            "html": "在 Anthropic 内部，如今几乎每一个 pull request 都会经过 Code Review。公司表示，在引入这套工具之前，只有 16% 的 pull request 会收到有实质内容的审查评论；现在，这个比例已经提高到 54%。对于改动超过 1,000 行的大型 pull request，这套系统能在 84% 的情况下找出 bug，平均每次会发现 7.5 个问题。"
+          },
+          {
+            "type": "paragraph",
+            "html": "至少就运行在 Anthropic 自家代码库上的这些 agent 而言，误报率仍然很低：开发者最终标记为“不正确”的结果，占比还不到 1%。"
+          },
+          {
+            "type": "image",
+            "src": "./assets/posts/anthropic-launches-a-multi-agent-code-review-tool-for-claude-code/figure-03.gif",
+            "alt": "Claude Code Code Review 运行演示动图",
+            "caption": "Claude Code Code Review 运行演示动图"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "稳扎稳打"
+          },
+          {
+            "type": "paragraph",
+            "html": "不过，这些 agent 确实需要一些时间。Anthropic 表示，一次平均审查大约需要 20 分钟，而具体耗时会随着 pull request 的复杂度而变化。简单的改动只会得到公司所说的“轻量级过一遍”，更复杂的 PR 则会调动更多 agent，接受更深入的审读。"
+          },
+          {
+            "type": "paragraph",
+            "html": "正如 Wu 提到的，这些代理通常会把整个代码库一并纳入考量，以确保某个文件的改动不会因为少数几个文件之间意料之外的交互关系，而引入新的 bug。"
+          },
+          {
+            "type": "paragraph",
+            "html": "“我们为用户做出的取舍是：我们希望它足够聪明、足够细致，而眼下要达到这一点，就得比其他代码审查工具多跑一会儿。”她说，“但你得到的回报，是更扎实、更可靠的输出。并且，这些 agent 不只是查看你改动过的代码，还能灵活地遍历整个代码库。”"
+          },
+          {
+            "type": "paragraph",
+            "html": "代码审查按 token 使用量计费，而考虑到这些 agent 会把代码挖得相当深入，这笔开销很容易一路往上加。Anthropic 表示，一次审查的平均成本通常在 15 到 25 美元之间。管理员可以设置月度费用上限，并通过分析仪表盘追踪有多少 pull request 被审查、被接受，以及整体到底花了多少钱。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "能在本地进行评审吗？"
+          },
+          {
+            "type": "paragraph",
+            "html": "目前，这个工具还只能在 pull request 被创建时运行。不过，Wu 提到，开发者对“让它在本地运行、进入开发者日常 inner loop”的需求非常强烈。她说：“我认为，这其实是 PMF（产品市场契合度）最有力的信号，因为这说明人们是在主动寻找这个能力。它不是某种被强加给他们的自动化流程。相反，他们看到了它的价值，并希望它能帮自己再做一层检查。”"
+          },
+          {
+            "type": "paragraph",
+            "html": "如果 Anthropic 很快也让开发者把这套工具放到本地运行，其实并不令人意外。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "那安全漏洞怎么办？"
+          },
+          {
+            "type": "paragraph",
+            "html": "就在几周前，Anthropic 还推出了 <a href=\"https://www.anthropic.com/news/claude-code-security\" target=\"_blank\" rel=\"noreferrer noopener\">Claude Code Security</a>，它会对整个代码库进行扫描，查找其中的安全漏洞。和更侧重逻辑错误的 Code Review 不同，Claude Code Security 完全聚焦于安全层面，强调持续运行、做更深入的一轮安全排查。Wu 说，如果 Code Review 发现了安全问题，它也会发出提示，“但它没有 Claude Code Security 那么全面、深入。”"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "可用性"
+          },
+          {
+            "type": "paragraph",
+            "html": "目前，管理员已经可以为 Teams 和 Enterprise 用户开启 Code Review。吴表示，如果后续需求足够明确，Anthropic 也可能将这项功能扩展到其他用户层级。"
+          }
+        ]
+      }
+    },
+    {
       "slug": "ulysses-sequence-parallelism-training-with-million-token-contexts",
       "title": "Ulysses Sequence Parallelism: Training with Million-Token Contexts",
       "author": "Hugging Face / Snowflake AI Research",
