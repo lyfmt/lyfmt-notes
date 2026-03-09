@@ -1,0 +1,33 @@
+# Ask Hackaday: What Will An LLM Be Good For In The Plateau of Productivity?
+
+A friend of mine has been a software developer for most of the last five decades, and has worked with everything from 1960s mainframes to the machines of today. She recently tried AI coding tools to see what all the fuss is about, as a helper to her extensive coding experience rather than as a zero-work vibe coding tool. Her reaction stuck with me; she referenced her grandfather who had been born in rural America in the closing years of the nineteenth century, and recalled him describing the first time he saw an automobile.
+
+## Après Nous, Le Krach
+
+![The Gartner hype cycle graph. Jeremykemp, CC BY-SA 3.0.](https://hackaday.com/wp-content/uploads/2026/02/gartner-hype-cycle.jpg?w=400 "The Gartner hype cycle graph. Jeremykemp, CC BY-SA 3.0.")
+
+We are living amid a wave of AI slop and unreasonable hype so it’s an easy win to dunk on LLMs, but as the whole thing climbs towards the peak of inflated expectations on the Gartner hype cycle perhaps it’s time to look forward. The current AI hype is inevitably going to crash and burn, but what comes afterwards? The long tail of the plateau of productivity will contain those applications in which LLMs are a success, but what will they be? We have yet to hack together a working crystal ball, but perhaps it’s still time to gaze into the future.
+
+To most of the population, AI, which for them mostly means ChatGPT, is a magic tool that can write stuff for them, and make them look smart when they’re not asking it to draw a picture of a cat doing something human. It has replaced a search engine for many people, and become a confidante to many others to the extent that the phrase [Chatbot psychosis](https://en.wikipedia.org/wiki/Chatbot_psychosis) has entered the lexicon.
+
+![This cat is real, and is not interested in AI slop. Izemeh, CC BY-SA 4.0.](https://hackaday.com/wp-content/uploads/2026/02/1280px-Domestic_cat_sleeping.jpeg?w=400 "This cat is real, and is not interested in AI slop. Izemeh, CC BY-SA 4.0.")
+
+Having a tool that can write anything you ask it to has of course unleashed that AI slop; whether it’s a useless web page or an equally useless report at your employer, we’re all acquiring the skill of spotting fake content. There are some people who have predicted the demise of human writers as a result, but though [the chatbots can do a pretty good job of copying a writer’s style](https://hackaday.com/2025/05/16/chatgpt-me-chatgpt-is-me/) I do not share that view. By the time we’ve reached that long plateau, there will be an enhanced value in content written by meatbags because the consumer will have evolved a hair-trigger response to slop, so rest assured, Hackaday will not succumb.
+
+If I have a prediction for those chatbots it will mirror previous booms and crashes; that the circular economic illusion between chipmakers and AI companies will inevitably derail, and like search engines in the early 2000s, most of them will not survive.
+
+## Ah, I See You’re A Waffle Man, Then
+
+My software developer friend sees an LLM as a productivity aid in her coding to be something with a future, but where do I as a writer and Hackaday scribe see them going? It’s something I’ve given quite some thought to, and my conclusion is one that is much less all-encompassing. The privacy aspect of sharing your innermost thoughts, business decisions, or whatever other valuable stuff with a third party will inevitably catch up with the LLM industry, whether it’s through an unscrupulous data sharing deal or an LLM revealing things it shouldn’t to others. I thus think that the most ubiquitous LLMs in our future will be ones that are much more local, with less reliance on those power-hungry datacentres. I can’t predict all their applications, but I’m going to give a couple of examples in the here and now which have caught my attention.
+
+The first example comes from my experience outside Hackaday, over a long career in the publishing and documentation industry. Many organisations have huge libraries of information on their intranets which is commercially sensitive enough that it can’t leave the site for processing by external AI company. Imagine documentation, product specifications, and the like. There’s already a thriving industry of intranet search and retrieval products in this space, and the AI companies naturally want a piece of it too. I can see a future in which a local LLM equivalent of those old yellow Google Search rack servers provides an intelligent interface to those troves of data, without the danger of leaks, or of going off piste.
+
+![We featured this Talkie Toaster replica made by Bill Dudley back in 2020.](https://hackaday.com/wp-content/uploads/2020/02/talkie-toaster-thumbnail.jpg?w=400 "We featured this Talkie Toaster replica made by Bill Dudley back in 2020.")
+
+The second comes from both a 1980s British TV sit-com, and from the LLM projects we’re starting to see here at Hackaday. In short, I think that appliances you can talk to will find their way into the consumer market, and nowhere will be safe from the *Red Dwarf* [Talkie Toaster](https://reddwarf.fandom.com/wiki/Talkie_Toaster).
+
+Jokes about maniacal kitchen appliances aside, we are now at the point at which the latest Raspberry Pi can just about run a functioning speech-based chatbot. Given a few years more microprocessor and microcontroller development, the current cost of a Pi with the accelerator board could drop to a few dollars for a high-end microcontroller to do the same task.
+
+I see it as inevitable that there will be a class of chip that will be offered out of the box with some kind of LLM capability, and that in no time the most unlikely of appliances will have personalities. It will inevitably be annoying, but out of that will come a few that might be useful.
+
+So along with my software developer friend I’ve tried to move beyond my writer’s disdain for the very obvious negative side of the LLM bubble, and look ahead to a future when using a chatbot is no longer thought to make you look smart. In a few years time an LLM will be one of those things that’s just *there*, and what form will it take? Like that early-20th-century American who looked at a car and saw it was going to have an impact on the future I know I’m looking at something that’s going to remain with me whether I like it or not. I’ve speculated on how that might happen in a couple of ways above, but what about you? Are the agents which are the darling of the AI crowd at the moment going to take over our lives? Or will it be something else?

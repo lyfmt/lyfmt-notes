@@ -1,0 +1,81 @@
+{
+  "available": true,
+  "layout": "detail-zh",
+  "translatedFrom": "https://hackaday.com/2026/03/09/ask-hackaday-what-will-an-llm-be-good-for-in-the-plateau-of-productivity/",
+  "sourceName": "Hackaday",
+  "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "html": "我有一位朋友，在过去近五十年里的大部分时间都在做软件开发，打过交道的系统从 20 世纪 60 年代的大型机一直延续到今天的计算机。最近，她也试了试 AI 编程工具，想看看大家到底为什么对它议论纷纷；对她来说，这不是那种几乎不费力、纯靠“vibe coding”的工具，而是用来辅助她多年编程经验的帮手。她的反应让我印象很深：她提起自己的祖父——一位出生于 19 世纪末、成长在美国乡村的人——并回忆起他曾如何描述自己第一次见到汽车时的感受。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "在我们之后，便是崩盘"
+    },
+    {
+      "type": "image",
+      "src": "./assets/posts/ask-hackaday-what-will-an-llm-be-good-for-in-the-plateau-of-productivity/figure-01.jpg",
+      "alt": "Gartner 技术成熟度曲线图",
+      "caption": "Gartner 技术成熟度曲线图。Jeremykemp，CC BY-SA 3.0。"
+    },
+    {
+      "type": "paragraph",
+      "html": "如今我们正身处一波充斥着 AI 垃圾内容与不切实际炒作的浪潮之中，所以拿 LLM 开涮几乎总能轻松得分。但如果把这一切放进 Gartner 技术成熟度曲线来看，当它一路爬向“期望膨胀顶点”时，也许我们该开始把目光投向更后面了。这一轮 AI 热潮终究很可能会迎来一场崩塌，可崩塌之后还会留下什么？在那条漫长的“生产力平台期”尾部，留下来的会是那些真正让 LLM 取得成功的应用场景——但它们究竟会是什么？我们暂时还没能攒出一颗真正好用的水晶球，不过现在或许依然值得朝未来望一眼。"
+    },
+    {
+      "type": "paragraph",
+      "html": "对大多数人来说，AI——而在他们的理解里，这往往主要就是 ChatGPT——像是一种带着魔法色彩的工具：它能替人写东西；只要不是让它去画一张“猫像人一样做事”的图，它甚至还能让人显得比实际更聪明。对很多人而言，它已经取代了搜索引擎；对另一些人来说，它更成了倾诉对象，甚至到了 <a href=\"https://en.wikipedia.org/wiki/Chatbot_psychosis\" target=\"_blank\" rel=\"noreferrer noopener\">Chatbot psychosis</a> 这个说法都进入日常词汇的地步。"
+    },
+    {
+      "type": "image",
+      "src": "./assets/posts/ask-hackaday-what-will-an-llm-be-good-for-in-the-plateau-of-productivity/figure-02.jpeg",
+      "alt": "一只熟睡的猫，对 AI 垃圾内容毫无兴趣",
+      "caption": "这只猫是真的，而且对 AI 垃圾内容毫无兴趣。Izemeh，CC BY-SA 4.0。"
+    },
+    {
+      "type": "paragraph",
+      "html": "有了这种“你让它写什么，它就能写什么”的工具，AI 垃圾内容当然会大量涌现：不管是毫无价值的网页，还是你公司里同样空洞无用的报告，我们都在逐渐练出识别伪内容的能力。确实有人因此预言，人类写作者会走向消亡；但尽管 <a href=\"https://hackaday.com/2025/05/16/chatgpt-me-chatgpt-is-me/\" target=\"_blank\" rel=\"noreferrer noopener\">聊天机器人在模仿作者文风这件事上已经做得相当不错</a>，我并不认同这种看法。等我们真正走到那段漫长的平台期，肉身人类写出来的内容反而会更有价值，因为读者对这类 AI 糊弄货早已形成近乎条件反射般的警觉。所以尽可放心，Hackaday 不会沦陷。"
+    },
+    {
+      "type": "paragraph",
+      "html": "如果让我对这些聊天机器人做个预测，我会说它们大概率会重演过去那些行业繁荣与崩盘的剧本：芯片制造商与 AI 公司之间这种彼此循环强化的经济幻象，终究会脱轨；而且就像 2000 年代初期的搜索引擎一样，它们中的大多数都无法存活下来。"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "哦，我懂了，你是“废话流”那一派的"
+    },
+    {
+      "type": "paragraph",
+      "html": "我那位做软件开发的朋友认为，LLM 作为编程时的效率工具，显然是有前景的；但如果换成我这个写作者、也是 Hackaday 撰稿人的视角，我会觉得它们最终会走向哪里？这个问题我认真想过不少，而我的结论并没有那么无所不包。把自己最私密的想法、商业决策，或者任何其他有价值的信息交给第三方，相关的隐私风险迟早会反噬整个 LLM 行业：可能是某笔不够光彩的数据共享交易，也可能是 LLM 把本不该透露的内容泄露给了别人。因此，我认为未来最普及的 LLM，很可能会是更偏本地化的版本，没那么依赖那些耗电惊人的数据中心。至于它们最终会有哪些应用，我没法全部预言；不过就当下而言，已经有几个例子引起了我的注意，下面我会举两个来说说。"
+    },
+    {
+      "type": "paragraph",
+      "html": "第一个例子，来自我在 Hackaday 之外的亲身经验——我在出版和文档行业工作了很多年。很多机构的内网里都堆着规模庞大的信息库，而这些内容往往商业敏感到根本不能离开本地，更不可能交给外部 AI 公司去处理。比如技术文档、产品规格说明之类的资料。事实上，这个领域早就有一整套成熟的内网搜索与检索产品，AI 公司当然也想分一杯羹。我完全可以想象这样一种未来：会出现一种本地部署的 LLM，某种意义上像当年那些黄色的 Google Search 机架服务器，为这些数据宝库提供更聪明的访问入口；既不用担心数据泄露，也能避免模型一路跑偏。"
+    },
+    {
+      "type": "image",
+      "src": "./assets/posts/ask-hackaday-what-will-an-llm-be-good-for-in-the-plateau-of-productivity/figure-03.jpg",
+      "alt": "Bill Dudley 制作的 Talkie Toaster 复制品",
+      "caption": "这是 Hackaday 在 2020 年介绍过的 Talkie Toaster 复制品，由 Bill Dudley 制作。"
+    },
+    {
+      "type": "paragraph",
+      "html": "第二种想象，一方面来自一部 1980 年代的英国情景喜剧，另一方面也来自我们如今开始在 Hackaday 上看到的那些 LLM 项目。简而言之，我认为，可与人对话的家电迟早会进入消费市场；到那时，谁也躲不开 <em>Red Dwarf</em> 里的 <a href=\"https://reddwarf.fandom.com/wiki/Talkie_Toaster\" target=\"_blank\" rel=\"noreferrer noopener\">Talkie Toaster</a> 式产品。"
+    },
+    {
+      "type": "paragraph",
+      "html": "先把“发疯的厨房电器”这类玩笑放一边，如今我们已经来到这样一个阶段：最新款的 Raspberry Pi，基本上已经能勉强跑起一个可用的语音聊天机器人了。再给微处理器和微控制器几年的发展时间，现在还需要一块 Pi 外加加速板才能完成的任务，未来很可能只要一颗几美元级别的高端微控制器就能做到。"
+    },
+    {
+      "type": "paragraph",
+      "html": "在我看来，这几乎是不可避免的：很快就会出现一类芯片，出厂时就自带某种 LLM 能力；再往后，用不了多久，连那些原本最不可能“有个性”的电器设备，也都会被塞进某种人格设定。这种趋势大概率会很烦人，但在这一波令人厌烦的尝试里，最后应该还是会出现少数几个真正有用的例子。"
+    },
+    {
+      "type": "paragraph",
+      "html": "所以，我和一位搞软件开发的朋友一起，试着先放下我这个写作者对 LLM 泡沫那些显而易见负面面的反感，转而把目光放到更远一点的未来：当使用聊天机器人不再被当成一件能让人显得聪明的事时，它会变成什么样？再过几年，LLM 也许会成为那种只是 <em>在那里</em> 的东西，而它最终会以什么形态存在？就像 20 世纪初某个美国人看着汽车，意识到它注定会深刻影响未来一样，我也知道，自己眼前这东西无论我喜不喜欢，都会长期留下来。上面我已经从几个角度猜想过它可能会如何发展，但你怎么看？当下正被 AI 圈热捧的 agents，会接管我们的生活吗？还是最后会是别的东西？"
+    }
+  ]
+}
