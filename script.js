@@ -229,8 +229,14 @@ function renderTagFilters(tags, activeTag, sort) {
   container.appendChild(row);
 }
 
-function buildPostHref(slug) {
-  return `./post.html?slug=${encodeURIComponent(slug)}`;
+function buildPostHref(slug, view) {
+  const params = new URLSearchParams();
+  const resolvedView = view === "detail" ? "detail" : "summary";
+  params.set("slug", slug);
+  if (resolvedView === "detail") {
+    params.set("view", "detail");
+  }
+  return `./post.html?${params.toString()}`;
 }
 
 function buildAuthorHref(author) {
@@ -298,6 +304,11 @@ function getTagFromQuery() {
 function getSortFromQuery() {
   const raw = new URLSearchParams(window.location.search).get("sort")?.trim();
   return raw === "added-asc" ? "added-asc" : "added-desc";
+}
+
+function getPostViewFromQuery() {
+  const raw = new URLSearchParams(window.location.search).get("view")?.trim();
+  return raw === "detail" ? "detail" : "summary";
 }
 
 function validatePosts(posts) {
@@ -860,7 +871,7 @@ function renderTagPage(posts) {
   renderArchivePostCards(postsNode, matchedPosts);
 }
 
-function renderPostPager(post, posts) {
+function renderPostPager(post, posts, activeView) {
   if (!post || !Array.isArray(posts)) {
     return null;
   }
@@ -883,7 +894,7 @@ function renderPostPager(post, posts) {
 
   function createPagerLink(label, targetPost, modifierClass) {
     const link = createElement("a", `post-pager__link ${modifierClass}`);
-    link.href = buildPostHref(targetPost.slug);
+    link.href = buildPostHref(targetPost.slug, activeView);
     link.setAttribute("aria-label", `${label}：${targetPost.title}`);
 
     const labelNode = createElement("span", "post-pager__label", label);
@@ -906,12 +917,12 @@ function renderPostPager(post, posts) {
   return wrapper;
 }
 
-function appendPostPager(article, post, posts) {
+function appendPostPager(article, post, posts, activeView) {
   if (!article || typeof article.appendChild !== "function") {
     return null;
   }
 
-  const pager = renderPostPager(post, posts);
+  const pager = renderPostPager(post, posts, activeView);
   if (!pager) {
     return null;
   }
@@ -920,57 +931,48 @@ function appendPostPager(article, post, posts) {
   return pager;
 }
 
-function renderPost(post, relatedPosts) {
-  const article = qs("post-article");
-  const related = qs("related-posts");
+function createPostViewHref(post, view) {
+  return buildPostHref(post?.slug || "", view);
+}
 
-  if (!article) {
+function renderPostViewSwitcher(post) {
+  const container = qs("post-view-switcher");
+  if (!container) {
     return;
   }
 
-  clear(article);
-  article.setAttribute("aria-busy", "false");
-
+  clear(container);
   if (!post) {
-    const empty = createElement("section", "empty-state");
-    empty.append(
-      createElement("h2", "", "未找到文章"),
-      createElement("p", "", "请从首页重新选择文章。")
-    );
-    article.appendChild(empty);
-    document.title = "文章未找到 — lyfmt's Notes";
     return;
   }
 
-  document.title = `${post.title} — lyfmt's Notes`;
+  const requestedView = getPostViewFromQuery();
+  const detailAvailable = Boolean(post?.detail?.available);
+  const activeView = requestedView === "detail" && detailAvailable ? "detail" : "summary";
+  const row = createElement("div", "segmented-control");
+  row.setAttribute("role", "tablist");
+  row.setAttribute("aria-label", "文章视图切换");
 
-  const header = createElement("header", "article-header");
-  const source = createElement("p", "eyebrow", post.source || "Post");
-  const title = createElement("h1", "article-title", post.title);
-  const meta = createElement("p", "article-meta", createMetaLine(post));
-  const excerpt = createElement("p", "article-excerpt", post.excerpt || "");
+  const summaryLink = createElement("a", `segmented-control__item${activeView === "summary" ? " is-active" : ""}`, "总结");
+  summaryLink.href = createPostViewHref(post, "summary");
+  summaryLink.setAttribute("role", "tab");
+  summaryLink.setAttribute("aria-selected", String(activeView === "summary"));
+  row.appendChild(summaryLink);
 
-  header.append(source, title);
-  if (meta.textContent) {
-    header.appendChild(meta);
+  const detailLink = createElement("a", `segmented-control__item${activeView === "detail" ? " is-active" : ""}${detailAvailable ? "" : " is-disabled"}`, detailAvailable ? "详情" : "详情（待补充）");
+  detailLink.href = detailAvailable ? createPostViewHref(post, "detail") : "#";
+  detailLink.setAttribute("role", "tab");
+  detailLink.setAttribute("aria-selected", String(activeView === "detail"));
+  if (!detailAvailable) {
+    detailLink.setAttribute("aria-disabled", "true");
+    detailLink.tabIndex = -1;
   }
-  if (excerpt.textContent) {
-    header.appendChild(excerpt);
-  }
+  row.appendChild(detailLink);
 
-  const headerTags = createTagRow(post.tags);
-  if (headerTags) {
-    header.appendChild(headerTags);
-  }
+  container.appendChild(row);
+}
 
-  const sourceLink = createElement("a", "article-source-link", "查看原文 ↗");
-  sourceLink.href = post.url;
-  sourceLink.target = "_blank";
-  sourceLink.rel = "noreferrer noopener";
-  header.appendChild(sourceLink);
-
-  article.appendChild(header);
-
+function renderSummaryContent(post) {
   const contentWrap = createElement("div", "article-content");
   const sections = Array.isArray(post.content) ? post.content : [];
 
@@ -1009,8 +1011,172 @@ function renderPost(post, relatedPosts) {
     contentWrap.appendChild(empty);
   }
 
+  return contentWrap;
+}
+
+function renderDetailBlocks(detail) {
+  const contentWrap = createElement("div", "article-content");
+
+  if (detail?.sourceDescription) {
+    contentWrap.appendChild(createElement("p", "article-mode-note", detail.sourceDescription));
+  }
+
+  const blocks = Array.isArray(detail?.blocks) ? detail.blocks : [];
+
+  blocks.forEach((block) => {
+    if (!block || typeof block !== "object") {
+      return;
+    }
+
+    if (block.type === "paragraph") {
+      const section = createElement("section", "article-section");
+      const p = createElement("p");
+      p.innerHTML = block.html || "";
+      section.appendChild(p);
+      contentWrap.appendChild(section);
+      return;
+    }
+
+    if (block.type === "heading") {
+      const section = createElement("section", "article-section");
+      const level = Number.isFinite(block.level) ? block.level : 2;
+      const tag = level >= 3 ? "h3" : "h2";
+      section.appendChild(createElement(tag, "article-section__title", block.text || ""));
+      contentWrap.appendChild(section);
+      return;
+    }
+
+    if (block.type === "list") {
+      const section = createElement("section", "article-section");
+      const list = createElement("ul");
+      (Array.isArray(block.items) ? block.items : []).forEach((item) => {
+        const li = createElement("li", "", item);
+        list.appendChild(li);
+      });
+      if (list.childNodes.length) {
+        section.appendChild(list);
+        contentWrap.appendChild(section);
+      }
+      return;
+    }
+
+    if (block.type === "image") {
+      const section = createElement("section", "article-section");
+      const figure = createElement("figure", "article-figure");
+      const img = document.createElement("img");
+      img.src = block.src || "";
+      img.alt = block.alt || "";
+      img.loading = "lazy";
+      figure.appendChild(img);
+      if (block.caption) {
+        figure.appendChild(createElement("figcaption", "", block.caption));
+      }
+      section.appendChild(figure);
+      contentWrap.appendChild(section);
+      return;
+    }
+
+    if (block.type === "embed") {
+      const section = createElement("section", "article-section");
+      const iframe = document.createElement("iframe");
+      iframe.className = "article-embed";
+      iframe.src = block.src || "";
+      iframe.title = block.title || "Embedded media";
+      iframe.loading = "lazy";
+      iframe.allowFullscreen = true;
+      section.appendChild(iframe);
+      contentWrap.appendChild(section);
+      return;
+    }
+
+    if (block.type === "footnote") {
+      const section = createElement("section", "article-section article-footnote");
+      const p = createElement("p");
+      p.innerHTML = block.html || "";
+      section.appendChild(p);
+      contentWrap.appendChild(section);
+    }
+  });
+
+  if (!contentWrap.childNodes.length) {
+    const empty = createElement("section", "empty-state empty-state--compact");
+    empty.append(
+      createElement("h3", "", "详情内容待补充"),
+      createElement("p", "", "当前文章还没有可渲染的原文翻译详情。")
+    );
+    contentWrap.appendChild(empty);
+  }
+
+  return contentWrap;
+}
+
+function renderPost(post, relatedPosts) {
+  const article = qs("post-article");
+  const related = qs("related-posts");
+
+  if (!article) {
+    return;
+  }
+
+  renderPostViewSwitcher(post);
+  clear(article);
+  article.setAttribute("aria-busy", "false");
+
+  if (!post) {
+    const empty = createElement("section", "empty-state");
+    empty.append(
+      createElement("h2", "", "未找到文章"),
+      createElement("p", "", "请从首页重新选择文章。")
+    );
+    article.appendChild(empty);
+    document.title = "文章未找到 — lyfmt's Notes";
+    return;
+  }
+
+  const activeView = getPostViewFromQuery();
+  const effectiveView = activeView === "detail" && post?.detail?.available ? "detail" : "summary";
+  article.dataset.viewMode = effectiveView;
+  article.dataset.detailLayout = effectiveView === "detail" ? (post?.detail?.layout || "default") : "summary";
+  document.title = `${post.title} — ${effectiveView === "detail" ? "详情" : "总结"} — lyfmt's Notes`;
+
+  const header = createElement("header", "article-header");
+  const source = createElement("p", "eyebrow", effectiveView === "detail" ? `${post.source || "Post"} · 原文译文` : post.source || "Post");
+  const title = createElement("h1", "article-title", post.title);
+  const meta = createElement("p", "article-meta", createMetaLine(post));
+  const excerpt = createElement("p", "article-excerpt", post.excerpt || "");
+
+  header.append(source, title);
+  if (meta.textContent) {
+    header.appendChild(meta);
+  }
+  if (excerpt.textContent) {
+    header.appendChild(excerpt);
+  }
+
+  const headerTags = createTagRow(post.tags);
+  if (headerTags) {
+    header.appendChild(headerTags);
+  }
+
+  if (effectiveView === "detail" && post?.detail?.translatedFrom) {
+    const sourceNote = createElement("p", "article-meta", `详情视图基于原文逐段翻译与原结构重排：${post.detail.sourceName || post.source || "原站"}`);
+    header.appendChild(sourceNote);
+  }
+
+  const sourceLink = createElement("a", "article-source-link", effectiveView === "detail" ? "查看原始英文文章 ↗" : "查看原文 ↗");
+  sourceLink.href = post.url;
+  sourceLink.target = "_blank";
+  sourceLink.rel = "noreferrer noopener";
+  header.appendChild(sourceLink);
+
+  article.appendChild(header);
+
+  const contentWrap = effectiveView === "detail"
+    ? renderDetailBlocks(post.detail)
+    : renderSummaryContent(post);
+
   article.appendChild(contentWrap);
-  appendPostPager(article, post, relatedPosts);
+  appendPostPager(article, post, relatedPosts, effectiveView);
 
   if (related) {
     const listWrap = related.querySelector(".side-list");
@@ -1024,7 +1190,7 @@ function renderPost(post, relatedPosts) {
           const card = createElement("article", "side-card");
           const titleNode = createElement("h3", "side-card__title");
           const link = createElement("a", "side-card__link", item.title);
-          link.href = buildPostHref(item.slug);
+          link.href = buildPostHref(item.slug, effectiveView);
           titleNode.appendChild(link);
           const metaLine = createElement("p", "side-card__meta", createMetaLine(item));
           card.append(titleNode, metaLine);

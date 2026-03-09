@@ -35,12 +35,16 @@
       </nav>
 
       <div class="article-layout">
-        <article id="post-article" class="article-shell" aria-live="polite" aria-busy="true">
-          <section class="empty-state">
-            <h2>正在加载文章详情</h2>
-            <p>页面将根据 URL 参数中的 slug 从 <code>articles.json</code> 加载内容。</p>
-          </section>
-        </article>
+        <div class="article-main">
+          <div id="post-view-switcher" class="post-view-switcher" aria-live="polite"></div>
+
+          <article id="post-article" class="article-shell" aria-live="polite" aria-busy="true">
+            <section class="empty-state">
+              <h2>正在加载文章详情</h2>
+              <p>页面将根据 URL 参数中的 slug 从 <code>articles.json</code> 加载内容。</p>
+            </section>
+          </article>
+        </div>
 
         <aside id="related-posts" class="side-panel" aria-live="polite" aria-busy="true">
           <div class="side-panel__inner">
