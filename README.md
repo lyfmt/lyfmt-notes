@@ -36,3 +36,19 @@ python3 -m http.server 8765
 - 支持主题切换
 - 详情页通过 `slug` 查询参数选择文章
 - 建议通过 HTTP 预览，不要直接双击 HTML 文件
+
+## RSS / Blog 导入脚本
+
+当前目录提供了一个最小可运行脚本，用来把 RSS / blog 文章按“总结 + 详情”数据模型写入站点：
+
+```bash
+python3 tools/upsert_post_from_spec.py --spec tools/examples.rss-post-spec.json --articles articles.json
+```
+
+如果 spec 中的 `detail.blocks[]` 包含远程图片，并且你希望为 GitHub Pages 本地化资源：
+
+```bash
+python3 tools/upsert_post_from_spec.py --spec tools/my-post.json --articles articles.json --localize-media
+```
+
+这个导入流程与 `skills/rss-summary-detail-pages/SKILL.md` 配套。

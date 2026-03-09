@@ -1,0 +1,29 @@
+{
+  "slug": "cursor-builds-always-on-agents-to-tackle-developer-task-tedium",
+  "title": "Cursor builds always-on agents to tackle developer task tedium",
+  "author": "Example Author",
+  "publishedAt": "2026-03-09",
+  "source": "The New Stack",
+  "url": "https://thenewstack.io/cursor-agents-developer-workflows/",
+  "tags": ["AI", "Agents", "DevTools"],
+  "excerpt": "Cursor 正在把 AI 编程工具从一次性问答助手推进到能持续执行工程任务的常驻代理。",
+  "content": [
+    {
+      "heading": "文章核心",
+      "paragraphs": [
+        "文章关注的是 always-on agents 进入软件开发流程后的变化，不再只是补代码，而是开始持续处理 review、修 bug 和分流问题。",
+        "这说明 AI coding assistant 正在往更像工程执行层的代理演化。"
+      ]
+    },
+    {
+      "heading": "值得关注的点",
+      "paragraphs": [
+        "重点不只是生成代码，而是长期接入开发工作流。",
+        "如果后续补齐详情视图，这篇文章还可以进一步加入原文翻译和截图。"
+      ]
+    }
+  ],
+  "detail": {
+    "available": false
+  }
+}
