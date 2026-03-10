@@ -1,0 +1,20 @@
+{
+  "item": {
+    "id": 2656,
+    "title": "Arduino’s New AI-Centric Board is the VENTUNO Q",
+    "blog": "Hackaday",
+    "url": "https://hackaday.com/2026/03/10/arduinos-new-ai-centric-board-is-the-ventuno-q/",
+    "published": "2026-03-10T11:00:22Z",
+    "discovered": "2026-03-10T11:00:44.585340082Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://hackaday.com/2026/03/10/arduinos-new-ai-centric-board-is-the-ventuno-q/",
+    "ok": true,
+    "title": "Arduino’s New AI-Centric Board Is The VENTUNO Q",
+    "description": "There have been many questions about what direction Arduino would take after being bought by Qualcomm. Now it would seem that we’re getting a clearer picture. Perhaps unsurprisingly the answe…",
+    "fetched_bytes": 147915,
+    "error": null
+  },
+  "classification": "normal"
+}

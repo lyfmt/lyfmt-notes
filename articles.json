@@ -5,6 +5,140 @@
   },
   "posts": [
     {
+      "slug": "arduino-s-new-ai-centric-board-is-the-ventuno-q",
+      "title": "Arduino’s New AI-Centric Board Is The VENTUNO Q",
+      "author": "Hackaday",
+      "publishedAt": "2026-03-10",
+      "source": "Hackaday",
+      "url": "https://hackaday.com/2026/03/10/arduinos-new-ai-centric-board-is-the-ventuno-q/",
+      "excerpt": "这篇文章围绕“Arduino’s New AI-Centric Board Is The VENTUNO Q”展开，RSS 摘要提到：There have been many questions about what direction Arduino would take after being bought by Qualcomm. Now it would seem that we’re getti...",
+      "tags": [
+        "Hardware",
+        "AI"
+      ],
+      "content": [
+        {
+          "heading": "文章核心",
+          "paragraphs": [
+            "基于 RSS 摘要与页面元数据，原文重点是：There have been many questions about what direction Arduino would take after being bought by Qualcomm. Now it would seem that we’re getting a clearer picture. Perhaps unsurprisingly the answe…",
+            "来源信息：Hackaday｜2026-03-10。"
+          ]
+        },
+        {
+          "heading": "值得继续补充的点",
+          "paragraphs": [
+            "如果后续补齐详情视图，重点可以继续展开芯片规格、接口能力、功耗指标和适用场景。",
+            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+          ]
+        }
+      ],
+      "detail": {
+        "available": false,
+        "layout": "detail-zh",
+        "translatedFrom": "https://hackaday.com/2026/03/10/arduinos-new-ai-centric-board-is-the-ventuno-q/",
+        "sourceName": "Hackaday",
+        "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+        "blocks": [
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Hackaday"
+          },
+          {
+            "type": "list",
+            "items": [
+              "by:"
+            ]
+          },
+          {
+            "type": "list",
+            "items": [
+              "<a href=\"https://www.facebook.com/sharer/sharer.php?u=https://hackaday.com/2026/03/10/arduinos-new-ai-centric-board-is-the-ventuno-q/\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>",
+              "<a href=\"https://twitter.com/intent/tweet?text=Arduino’s%20New%20AI-Centric%20Board%20Is%20The%20VENTUNO%20Q%20via%20@hackaday&amp;url=https://hackaday.com/2026/03/10/arduinos-new-ai-centric-board-is-the-ventuno-q/\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>",
+              "<a href=\"https://news.ycombinator.com/submitlink?u=https://hackaday.com/2026/03/10/arduinos-new-ai-centric-board-is-the-ventuno-q/&amp;t=Arduino’s%20New%20AI-Centric%20Board%20Is%20The%20VENTUNO%20Q\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>",
+              "<a href=\"https://www.reddit.com/submit?url=https://hackaday.com/2026/03/10/arduinos-new-ai-centric-board-is-the-ventuno-q/\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>"
+            ]
+          },
+          {
+            "type": "image",
+            "src": "https://hackaday.com/wp-content/uploads/2026/03/arduino_ventuno_q_header.jpg?w=800",
+            "alt": "",
+            "caption": ""
+          },
+          {
+            "type": "paragraph",
+            "html": "There have been many questions about what direction Arduino would take after being bought by Qualcomm. Now it would seem that we’re getting a clearer picture. Perhaps unsurprisingly the answer appears to be ‘AI’, with the new Arduino VENTUNO Q SBC being advertised as ‘democratizing AI’ in the <a href=\"https://www.qualcomm.com/news/releases/2026/03/arduino-announces-arduino-ventuno-q----powered-by-qualcomm-drago\" target=\"_blank\" rel=\"noreferrer noopener\">Qualcomm press release</a>, although it also references robotics."
+          },
+          {
+            "type": "paragraph",
+            "html": "This new board is based around the Dragonwing IQ-8275 SoC along with an STM32H5F5 MCU, making it somewhat of a beefier brother of the previously covered <a href=\"https://hackaday.com/2025/10/07/qualcomm-introduces-the-arduino-uno-q-linux-capable-sbc/\" target=\"_blank\" rel=\"noreferrer noopener\">Arduino Uno Q</a>, which also offers an SoC/MCU hybrid solution. On the <a href=\"https://www.arduino.cc/product-ventuno-q\" target=\"_blank\" rel=\"noreferrer noopener\">product page</a> we can see the overall specifications for this new board, where the release date is specified as ‘soon’."
+          },
+          {
+            "type": "paragraph",
+            "html": "Its <a href=\"https://www.qualcomm.com/internet-of-things/products/iq8-series/iq-8275\" target=\"_blank\" rel=\"noreferrer noopener\">IQ-8275</a> SoC is part of Qualcomm’s IQ8 series, with eight 2.35 GHz ARM cores and an Adreno 623 GPU, paired with 16 GB of LPDDR5. The Cortex M33-based <a href=\"https://www.st.com/en/microcontrollers-microprocessors/stm32h5e5-5f5.html\" target=\"_blank\" rel=\"noreferrer noopener\">STM32H5F5</a> MCU comes with its own 4 MB of Flash and 1.5 MB of RAM, all on a board that’s significantly larger than the Uno Q and isn’t crippled by a single USB-C port as SoC I/O."
+          },
+          {
+            "type": "paragraph",
+            "html": "Although clearly more aimed at industrial and automation applications than the solution-in-search-of-a-problem Uno Q board, it remains to be seen whether this board will catch on with Arduino fans, or whether Qualcomm’s goal is more to break into whole new markets under the Arduino brand."
+          },
+          {
+            "type": "image",
+            "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_face.png",
+            "alt": "",
+            "caption": ""
+          },
+          {
+            "type": "image",
+            "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_twitter.png",
+            "alt": "",
+            "caption": ""
+          },
+          {
+            "type": "image",
+            "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_in.png",
+            "alt": "",
+            "caption": ""
+          },
+          {
+            "type": "image",
+            "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_mail1.png",
+            "alt": "",
+            "caption": ""
+          },
+          {
+            "type": "list",
+            "items": [
+              "<a href=\"https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhackaday.com%2F2026%2F03%2F10%2Farduinos-new-ai-centric-board-is-the-ventuno-q%2F\" target=\"_blank\" rel=\"noreferrer noopener\"> <i> </i> </a>",
+              "<a href=\"https://twitter.com/intent/tweet?text=Arduino’s%20New%20AI-Centric%20Board%20Is%20The%20VENTUNO%20Q%20via%20@hackaday&amp;url=https://hackaday.com/2026/03/10/arduinos-new-ai-centric-board-is-the-ventuno-q/\" target=\"_blank\" rel=\"noreferrer noopener\"> <i></i> </a>",
+              "<a href=\"https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fhackaday.com%2F2026%2F03%2F10%2Farduinos-new-ai-centric-board-is-the-ventuno-q%2F\" target=\"_blank\" rel=\"noreferrer noopener\"> <i></i> </a>",
+              "<a href=\"mailto:?subject=Arduino%E2%80%99s+New+AI-Centric+Board+Is+The+VENTUNO+Q | Hackaday&amp;body=https%3A%2F%2Fhackaday.com%2F2026%2F03%2F10%2Farduinos-new-ai-centric-board-is-the-ventuno-q%2F\" target=\"_blank\" rel=\"noreferrer noopener\"> <i></i> </a>"
+            ]
+          }
+        ],
+        "refineErrors": [
+          {
+            "index": 0,
+            "type": "heading",
+            "message": "Empty Pi output."
+          },
+          {
+            "index": 1,
+            "type": "list",
+            "message": "Empty Pi output."
+          },
+          {
+            "index": 2,
+            "type": "list",
+            "message": "Empty Pi output."
+          }
+        ]
+      },
+      "workflow": {
+        "articleId": 2656,
+        "rssTitle": "Arduino’s New AI-Centric Board is the VENTUNO Q"
+      }
+    },
+    {
       "slug": "how-ai-can-improve-breast-cancer-detection-in-the-uk",
       "title": "How AI can improve breast cancer detection in the UK",
       "author": "Google AI Blog",
