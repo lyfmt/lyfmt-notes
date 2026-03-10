@@ -1,0 +1,84 @@
+{
+  "slug": "amazon-connect-enhances-ai-powered-predictive-insights-aws",
+  "title": "Amazon Connect enhances AI-powered predictive insights - AWS",
+  "author": "AWS Architecture Blog",
+  "publishedAt": "2026-03-10",
+  "source": "AWS Architecture Blog",
+  "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-connect-predictive-insights/",
+  "tags": [
+    "AI"
+  ],
+  "excerpt": "这篇文章围绕“Amazon Connect enhances AI-powered predictive insights - AWS”展开，RSS 摘要提到：Discover more about what",
+  "content": [
+    {
+      "heading": "文章核心",
+      "paragraphs": [
+        "基于 RSS 摘要与页面元数据，原文重点是：Discover more about what",
+        "来源信息：AWS Architecture Blog｜2026-03-10。"
+      ]
+    },
+    {
+      "heading": "值得继续补充的点",
+      "paragraphs": [
+        "如果后续补齐详情视图，可以继续沿着原文结构展开关键论点、案例、约束条件与结论。",
+        "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+      ]
+    }
+  ],
+  "detail": {
+    "available": true,
+    "layout": "detail-zh",
+    "translatedFrom": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-connect-predictive-insights/",
+    "sourceName": "AWS Architecture Blog",
+    "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+    "blocks": [
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Amazon Connect enhances AI-powered predictive insights"
+      },
+      {
+        "type": "paragraph",
+        "html": "Today, Amazon Connect is announcing enhancements to AI-powered predictive insights that make it easier for businesses to deliver proactive, personalized customer experiences at scale. Building on the five recommendation algorithms launched at re:Invent 2025, AI-powered predictive insights now support up to 40 million product catalog items (8X increase), are available in message templates for trigger-based campaigns, and deliver up to 14% improved model accuracy. These enhancements enable businesses to automatically engage customers with the right message at the right time, while reducing the time required to deploy AI-powered personalization."
+      },
+      {
+        "type": "paragraph",
+        "html": "Businesses can now deliver trigger-based campaigns to initiate personalized outreach based on customer behavior and predictive signals – such as sending product recommendations when a customer abandons their cart or offering complementary services after a purchase. Businesses can now deliver targeted campaigns for specific customer cohorts based on predicted preferences and behaviors. Improved model accuracy and reduced training time mean businesses can deploy personalized experiences faster with greater confidence in the recommendations provided to customers."
+      },
+      {
+        "type": "paragraph",
+        "html": "With Amazon Connect Customer Profiles, you only pay-as-you-go for utilized profiles. Public preview for AI-powered predictive insights enhancements is available in Europe (Frankfurt), US East (N. Virginia), Asia Pacific (Seoul), Asia Pacific (Tokyo), US West (Oregon), Asia Pacific (Singapore), Asia Pacific (Sydney), Canada (Central)."
+      },
+      {
+        "type": "paragraph",
+        "html": "To learn more, visit our webpages for Customer Profiles and explore the AI-powered <a href=\"https://docs.aws.amazon.com/connect/latest/adminguide/customer-profiles-predictive-insights.html\" target=\"_blank\" rel=\"noreferrer noopener\">predictive insights documentation</a>."
+      }
+    ],
+    "refineErrors": [
+      {
+        "index": 1,
+        "type": "paragraph",
+        "message": "Empty Pi output."
+      },
+      {
+        "index": 2,
+        "type": "paragraph",
+        "message": "Empty Pi output."
+      },
+      {
+        "index": 3,
+        "type": "paragraph",
+        "message": "Empty Pi output."
+      },
+      {
+        "index": 4,
+        "type": "paragraph",
+        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+      }
+    ]
+  },
+  "workflow": {
+    "articleId": 2682,
+    "rssTitle": "Amazon Connect enhances AI-powered predictive insights"
+  }
+}

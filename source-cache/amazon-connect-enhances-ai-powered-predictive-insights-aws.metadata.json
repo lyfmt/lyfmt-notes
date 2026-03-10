@@ -1,0 +1,20 @@
+{
+  "item": {
+    "id": 2682,
+    "title": "Amazon Connect enhances AI-powered predictive insights",
+    "blog": "AWS Architecture Blog",
+    "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-connect-predictive-insights/",
+    "published": "2026-03-10T16:00:00Z",
+    "discovered": "2026-03-10T19:00:20.660326849Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-connect-predictive-insights/",
+    "ok": true,
+    "title": "Amazon Connect enhances AI-powered predictive insights - AWS",
+    "description": "Discover more about what",
+    "fetched_bytes": 181305,
+    "error": null
+  },
+  "classification": "thin"
+}

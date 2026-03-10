@@ -1,0 +1,30 @@
+{
+  "available": false,
+  "layout": "draft",
+  "translatedFrom": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-connect-predictive-insights/",
+  "sourceName": "AWS Architecture Blog",
+  "sourceDescription": "以下为根据原文结构自动生成的详情草稿，已保留段落层次、图片与媒体；默认尚未完成中文翻译润色。",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Amazon Connect enhances AI-powered predictive insights"
+    },
+    {
+      "type": "paragraph",
+      "html": "Today, Amazon Connect is announcing enhancements to AI-powered predictive insights that make it easier for businesses to deliver proactive, personalized customer experiences at scale. Building on the five recommendation algorithms launched at re:Invent 2025, AI-powered predictive insights now support up to 40 million product catalog items (8X increase), are available in message templates for trigger-based campaigns, and deliver up to 14% improved model accuracy. These enhancements enable businesses to automatically engage customers with the right message at the right time, while reducing the time required to deploy AI-powered personalization."
+    },
+    {
+      "type": "paragraph",
+      "html": "Businesses can now deliver trigger-based campaigns to initiate personalized outreach based on customer behavior and predictive signals – such as sending product recommendations when a customer abandons their cart or offering complementary services after a purchase. Businesses can now deliver targeted campaigns for specific customer cohorts based on predicted preferences and behaviors. Improved model accuracy and reduced training time mean businesses can deploy personalized experiences faster with greater confidence in the recommendations provided to customers."
+    },
+    {
+      "type": "paragraph",
+      "html": "With Amazon Connect Customer Profiles, you only pay-as-you-go for utilized profiles. Public preview for AI-powered predictive insights enhancements is available in Europe (Frankfurt), US East (N. Virginia), Asia Pacific (Seoul), Asia Pacific (Tokyo), US West (Oregon), Asia Pacific (Singapore), Asia Pacific (Sydney), Canada (Central)."
+    },
+    {
+      "type": "paragraph",
+      "html": "To learn more, visit our webpages for Customer Profiles and explore the AI-powered <a href=\"https://docs.aws.amazon.com/connect/latest/adminguide/customer-profiles-predictive-insights.html\" target=\"_blank\" rel=\"noreferrer noopener\">predictive insights documentation</a>."
+    }
+  ]
+}

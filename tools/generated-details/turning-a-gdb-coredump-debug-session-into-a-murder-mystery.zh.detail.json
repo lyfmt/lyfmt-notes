@@ -1,0 +1,101 @@
+{
+  "available": true,
+  "layout": "detail-zh",
+  "translatedFrom": "https://hackaday.com/2026/03/10/turning-a-gdb-coredump-debug-session-into-a-murder-mystery/",
+  "sourceName": "Hackaday",
+  "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Hackaday"
+    },
+    {
+      "type": "list",
+      "items": [
+        "by:"
+      ]
+    },
+    {
+      "type": "list",
+      "items": [
+        "<a href=\"https://www.facebook.com/sharer/sharer.php?u=https://hackaday.com/2026/03/10/turning-a-gdb-coredump-debug-session-into-a-murder-mystery/\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>",
+        "<a href=\"https://twitter.com/intent/tweet?text=Turning%20A%20GDB%20Coredump%20Debug%20Session%20Into%20A%20Murder%20Mystery%20via%20@hackaday&amp;url=https://hackaday.com/2026/03/10/turning-a-gdb-coredump-debug-session-into-a-murder-mystery/\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>",
+        "<a href=\"https://news.ycombinator.com/submitlink?u=https://hackaday.com/2026/03/10/turning-a-gdb-coredump-debug-session-into-a-murder-mystery/&amp;t=Turning%20A%20GDB%20Coredump%20Debug%20Session%20Into%20A%20Murder%20Mystery\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>",
+        "<a href=\"https://www.reddit.com/submit?url=https://hackaday.com/2026/03/10/turning-a-gdb-coredump-debug-session-into-a-murder-mystery/\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>"
+      ]
+    },
+    {
+      "type": "image",
+      "src": "https://hackaday.com/wp-content/uploads/2026/03/fatal_core_dump_game_robopenguins.jpg?w=800",
+      "alt": "",
+      "caption": ""
+    },
+    {
+      "type": "paragraph",
+      "html": "Debugging an application crash can oftentimes feel like you’re an intrepid detective in a grimy noir detective story, tasked with figuring out the sordid details behind an ugly crime. Slogging through scarce clues and vapid hints, you find yourself down in the dumps, contemplating the deeper meaning of life and the true nature of man, before hitting that eureka moment and cracking the case. One might say that this makes for a good game idea, and [Jonathan] would agree with that notion, thus creating the <a href=\"https://www.robopenguins.com/fatal_core_dump/\" target=\"_blank\" rel=\"noreferrer noopener\">Fatal Core Dump game</a>."
+    },
+    {
+      "type": "paragraph",
+      "html": "Details can be found in the <a href=\"https://www.robopenguins.com/core-dump-game/\" target=\"_blank\" rel=\"noreferrer noopener\">(spoiler-rich) blog post</a> on how the game was conceived and implemented. The premise of the game is that of an inexplicable airlock failure on an asteroid mining station, with you being the engineer tasked to figure out whether it was ‘just a glitch’ or that something more sinister was afoot. Although an RPG-style game was also considered, ultimately that proved to be a massive challenge with RPG Maker, resulting in this more barebones game, making it arguably more realistic."
+    },
+    {
+      "type": "paragraph",
+      "html": "Suffice it to say that this game is not designed to be a cheap copy of real debugging, but the real deal. You’re expected to be very comfortable with C, GDB, core dump analysis, x86_64 ASM, Linux binary runtime details and more. At the end you should be able to tell whether it was just a silly mistake made by an under-caffeinated developer years prior, or a malicious attack that exploited or introduced some weakness in the code."
+    },
+    {
+      "type": "paragraph",
+      "html": "If you want to have a poke at the code behind the game, perhaps to feel inspired to make your own take on this genre, you can take a look at the <a href=\"https://github.com/axlan/fatal_core_dump\" target=\"_blank\" rel=\"noreferrer noopener\">GitHub project</a>."
+    },
+    {
+      "type": "image",
+      "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_face.png",
+      "alt": "",
+      "caption": ""
+    },
+    {
+      "type": "image",
+      "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_twitter.png",
+      "alt": "",
+      "caption": ""
+    },
+    {
+      "type": "image",
+      "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_in.png",
+      "alt": "",
+      "caption": ""
+    },
+    {
+      "type": "image",
+      "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_mail1.png",
+      "alt": "",
+      "caption": ""
+    },
+    {
+      "type": "list",
+      "items": [
+        "<a href=\"https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhackaday.com%2F2026%2F03%2F10%2Fturning-a-gdb-coredump-debug-session-into-a-murder-mystery%2F\" target=\"_blank\" rel=\"noreferrer noopener\"> <i> </i> </a>",
+        "<a href=\"https://twitter.com/intent/tweet?text=Turning%20A%20GDB%20Coredump%20Debug%20Session%20Into%20A%20Murder%20Mystery%20via%20@hackaday&amp;url=https://hackaday.com/2026/03/10/turning-a-gdb-coredump-debug-session-into-a-murder-mystery/\" target=\"_blank\" rel=\"noreferrer noopener\"> <i></i> </a>",
+        "<a href=\"https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fhackaday.com%2F2026%2F03%2F10%2Fturning-a-gdb-coredump-debug-session-into-a-murder-mystery%2F\" target=\"_blank\" rel=\"noreferrer noopener\"> <i></i> </a>",
+        "<a href=\"mailto:?subject=Turning+A+GDB+Coredump+Debug+Session+Into+A+Murder+Mystery | Hackaday&amp;body=https%3A%2F%2Fhackaday.com%2F2026%2F03%2F10%2Fturning-a-gdb-coredump-debug-session-into-a-murder-mystery%2F\" target=\"_blank\" rel=\"noreferrer noopener\"> <i></i> </a>"
+      ]
+    }
+  ],
+  "refineErrors": [
+    {
+      "index": 1,
+      "type": "list",
+      "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+    },
+    {
+      "index": 2,
+      "type": "list",
+      "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+    },
+    {
+      "index": 4,
+      "type": "paragraph",
+      "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+    }
+  ]
+}
