@@ -32,208 +32,56 @@
         }
       ],
       "detail": {
-        "available": false,
-        "layout": "draft",
+        "available": true,
+        "layout": "detail-zh",
         "translatedFrom": "https://www.latent.space/p/ainews-autoresearch-sparks-of-recursive",
         "sourceName": "Latent Space",
-        "sourceDescription": "以下为根据原文结构自动生成的详情草稿，已保留段落层次、图片与媒体；默认尚未完成中文翻译润色。",
+        "sourceDescription": "以下为原文结构对应的中文整理版，保留核心段落与关键链接。",
         "blocks": [
           {
-            "type": "image",
-            "src": "https://substackcdn.com/image/fetch/$s_!1PJi!,e_trim:10:white/e_trim:10:transparent/h_72,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa4fe1182-38af-4a5d-bacc-439c36225e87_5000x1200.png",
-            "alt": "Latent.Space",
-            "caption": "Latent.Space"
-          },
-          {
             "type": "heading",
-            "level": 3,
-            "text": "AGI takes another small step forward."
+            "level": 2,
+            "text": "Autoresearch：递归式自改进的火花"
           },
           {
             "type": "paragraph",
-            "html": "<strong><span>In the continuing fallout from </span><a href=\"https://www.latent.space/p/wtf2025\" target=\"_blank\" rel=\"noreferrer noopener\">WTF Happened in 2025</a><span>, we now have the beginnings of LLMs being able to fully autonomously train (smaller) LLMs.</span></strong>"
+            "html": "本文是 Latent Space 的 AINews 条目，主题是“Autoresearch / 递归式自改进”。核心观点是：LLM 正在开始具备“训练更小模型”的能力，这意味着自动化研究与自我改进正在出现早期迹象。"
           },
           {
             "type": "paragraph",
-            "html": "Every AI summer has its “AutoML moment”: the dream of models automatically improving model training and therefore causing infinite recursion of intelligence that either leads to nirvana or doom. We may be in the Last Summer, but we just had ours:"
-          },
-          {
-            "type": "image",
-            "src": "https://substackcdn.com/image/fetch/$s_!j6Wh!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F029937e5-383d-4302-a39c-d0bdac3f797e_1188x1252.png",
-            "alt": "None",
-            "caption": "karpathy"
+            "html": "作者将其类比为每个 AI “夏天”都会出现的 AutoML 时刻——模型开始改进模型训练，理论上可能引发递归式的智能提升（也可能带来风险）。"
           },
           {
             "type": "paragraph",
-            "html": "<span>In </span><a href=\"https://www.latent.space/p/captaining-imo-gold-deep-think-on?utm_source=publication-search\" target=\"_blank\" rel=\"noreferrer noopener\">our Dec 2025 conversation with Yi Tay</a><span>, he talked about “</span><strong>vibe training</strong><span>”: </span>"
+            "html": "文中引用了 2025 年 12 月与 Yi Tay 的对话，提出“vibe training”的概念：开发者将调试、定位问题甚至修复工作交给模型，自己更多做结果验收。这从“vibe coding”进一步走向“vibe ML”。"
           },
           {
             "type": "paragraph",
-            "html": "“I think AI coding has started to come to the point where I run a job and get a bug, I almost don’t look at the bug. I paste it into like Antigravity and let it fix the bug for me. And then I relaunch the job."
-          },
-          {
-            "type": "paragraph",
-            "html": "<strong>It’s beyond vibe coding, it’s more like vibe training, vibe ML</strong><span> or something like that. I would say it does pretty well most of the time. And actually there are classes of problems that it’s just generally... I know this is actually really good for and in fact, maybe probably better than, me, like, I would have to spend 20 minutes to figure out the issue.</span>"
-          },
-          {
-            "type": "paragraph",
-            "html": "<span>I would say l</span><strong>evel one vibe coding is you actually know what to do, you’re just too lazy</strong><span>. Yeah, it’s just, ah, just do it for me. Like, I’ve done this a thousand times. </span>"
-          },
-          {
-            "type": "paragraph",
-            "html": "<strong>The next level where you actually don’t even know what to do.</strong><span> It’s investigating the bug for you. As long as, like, the answer looks right, you’ll just ship it.</span>"
-          },
-          {
-            "type": "paragraph",
-            "html": "<span>At the start, I did check it and look at everything. And then at some point, I’m like, </span><strong>maybe the model codes better than me</strong><span>. So I’m just going to let it do its stuff. And then I will relaunch the job based on the fix that the model gave me.”</span>"
-          },
-          {
-            "type": "paragraph",
-            "html": "So we knew this is happening at the Big Labs, but now anyone with a GPU can play with this at home and see models improving models."
-          },
-          {
-            "type": "paragraph",
-            "html": "<span>Given that we are at March 2026, we seem well on target for </span><a href=\"https://www.latent.space/p/science?utm_source=publication-search\" target=\"_blank\" rel=\"noreferrer noopener\">Jakub Pachocki’s “Automated AI Research Intern</a><span>” by September THIS YEAR (“</span><em><span>A system that can meaningfully </span><strong>accelerate human researchers</strong><span>, not just chat or code</span></em><span>.”)</span>"
-          },
-          {
-            "type": "paragraph",
-            "html": "<em><span>AI News for 3/5/2026-3/9/2026. We checked 12 subreddits, </span><a href=\"https://twitter.com/i/lists/1585430245762441216\" target=\"_blank\" rel=\"noreferrer noopener\">544 Twitters</a><span> and 24 Discords (</span><strong>264</strong><span> channels, and </span><strong>27779</strong><span> messages) for you. Estimated reading time saved (at 200wpm): </span><strong>2649</strong><span> minutes. </span><a href=\"https://news.smol.ai/\" target=\"_blank\" rel=\"noreferrer noopener\">AINews’ website</a><span> lets you search all past issues. As a reminder, </span><a href=\"https://www.latent.space/p/2026\" target=\"_blank\" rel=\"noreferrer noopener\">AINews is now a section of Latent Space</a><span>. You can </span><a href=\"https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack\" target=\"_blank\" rel=\"noreferrer noopener\">opt in/out</a><span> of email frequencies!</span></em>"
+            "html": "在 2026 年 3 月的时间点，作者认为我们可能接近 Jakub Pachocki 所描述的“Automated AI Research Intern”目标：一个能实质性加速研究者的系统，而不只是聊天或写代码。"
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "AI Twitter Recap"
+            "text": "AI Twitter Recap（节选）"
           },
           {
             "type": "paragraph",
-            "html": "<strong>Coding Agents: productization, harness design, and “agents all the way down”</strong>"
+            "html": "原文后半部分是 AI Twitter 的汇总，涵盖多个方向。以下为重点主题概览："
           },
           {
             "type": "list",
             "items": [
-              "<strong>Claude Code “Code Review”</strong><span>: Anthropic ships multi-agent PR review—agents hunt issues in parallel, verify findings, rank severity; claimed internal lift from </span><strong>16% → 54%</strong><span> PRs with meaningful comments and </span><strong>&lt;1%</strong><span> incorrect findings (</span><a href=\"https://x.com/claudeai/status/2031088171262554195\" target=\"_blank\" rel=\"noreferrer noopener\">Claude</a><span>, coverage thread </span><a href=\"https://x.com/kimmonismus/status/2031090529082159528\" target=\"_blank\" rel=\"noreferrer noopener\">@kimmonismus</a><span>, reaction </span><a href=\"https://x.com/Yuchenj_UW/status/2031088529770737827\" target=\"_blank\" rel=\"noreferrer noopener\">@Yuchenj_UW</a><span>).</span>",
-              "<strong>OpenAI Codex Review positioning</strong><span>: A “usage-based” code review pitch framed as materially cheaper than per-review pricing; see </span><a href=\"https://x.com/rohanvarma/status/2031113869666693351\" target=\"_blank\" rel=\"noreferrer noopener\">@rohanvarma</a><span>.</span>",
-              "<strong>Devin Review</strong><span>: Cognition launches a free PR review tool by URL substitution, plus autofix and diff features (</span><a href=\"https://x.com/cognition/status/2031139257000075675\" target=\"_blank\" rel=\"noreferrer noopener\">Cognition</a><span>).</span>"
-            ]
-          },
-          {
-            "type": "paragraph",
-            "html": "<strong>Autoresearch &amp; self-improving loops: agents optimizing ML training and agent code</strong>"
-          },
-          {
-            "type": "list",
-            "items": [
-              "<span>rapid “abliteration” (removing guardrails) of a Qwen-3B model (</span><a href=\"https://x.com/Teknium/status/2030945714373861529\" target=\"_blank\" rel=\"noreferrer noopener\">Teknium</a><span>) and later notes self-improving agent codebases/GEPA-inspired work (</span><a href=\"https://x.com/Teknium/status/2030998334597661156\" target=\"_blank\" rel=\"noreferrer noopener\">Teknium</a><span>).</span>",
-              "<span>This sits alongside more formal “self-evolving agent” approaches like GEPA; see practitioner note </span><a href=\"https://x.com/myanvoos/status/2031113918899433553\" target=\"_blank\" rel=\"noreferrer noopener\">@myanvoos</a><span> and the reported gains callout (</span><a href=\"https://x.com/LakshyAAAgrawal/status/2031130357362471058\" target=\"_blank\" rel=\"noreferrer noopener\">LakshyAAAgrawal</a><span>).</span>"
+              "Coding Agents 产品化：多 agent PR 审查、代码评审定价策略、自动修复与 diff 能力等。",
+              "Autoresearch / 自改进回路：模型去护栏、GEPA 等“自演化 agent”思路、训练与 agent 代码优化并行出现。",
+              "模型生态动态：关于 GPT-5.4、Anthropic 文档分析表现、Gemma/Qwen 传闻与使用反馈等。",
+              "基础设施与评测：本地推理、语义路由、vLLM/DeepGemm 兼容性问题、KV cache 性能陷阱等。",
+              "Agent 记忆与检索：AgentIR、Memex(RL)、KARL 等用于提升长期任务与检索的研究。",
+              "机器人与具身智能：Figure Helix 02 家庭任务演示、LeRobot v0.5.0 更新、机器人记忆基准。"
             ]
           },
           {
             "type": "paragraph",
-            "html": "<strong>Model ecosystem updates: GPT‑5.4 discourse, Anthropic dominance in documents, and Gemma/Qwen churn</strong>"
-          },
-          {
-            "type": "list",
-            "items": [
-              "<span>Positive hands-on impressions: </span><a href=\"https://x.com/Hangsiin/status/2030880541185286370\" target=\"_blank\" rel=\"noreferrer noopener\">@Hangsiin</a><span> says 5.4 is a jump over 5.2 in ChatGPT; </span><a href=\"https://x.com/Yampeleg/status/2030949057653264437\" target=\"_blank\" rel=\"noreferrer noopener\">@Yampeleg</a><span> calls it “fantastic”; </span><a href=\"https://x.com/gneubig/status/2030971826042527860\" target=\"_blank\" rel=\"noreferrer noopener\">@gneubig</a><span> prefers 5.4 for instruction adherence vs Opus 4.6 (while Opus faster/better frontend).</span>",
-              "<span>Vision/OCR anecdote suggests large improvement on hard Korean-table OCR, potentially via “agentic vision + code execution” but with long runtimes (up to 40 minutes) (</span><a href=\"https://x.com/Hangsiin/status/2030882409819086923\" target=\"_blank\" rel=\"noreferrer noopener\">Hangsiin</a><span>).</span>",
-              "<span>Some benchmark/meta commentary claims regressions or ranking differences between “high/xhigh” variants on specific leaderboards (</span><a href=\"https://x.com/scaling01/status/2031079698826993690\" target=\"_blank\" rel=\"noreferrer noopener\">scaling01</a><span>, </span><a href=\"https://x.com/scaling01/status/2031081654035300834\" target=\"_blank\" rel=\"noreferrer noopener\">scaling01</a><span>), while others post new SOTA points (e.g., ZeroBench deltas </span><a href=\"https://x.com/JRobertsAI/status/2031026691682808148\" target=\"_blank\" rel=\"noreferrer noopener\">JRobertsAI</a><span>).</span>",
-              "<span>Practical note: Codex usage limits and tiering are documented via screenshots/summary (</span><a href=\"https://x.com/Presidentlin/status/2030881332411125845\" target=\"_blank\" rel=\"noreferrer noopener\">Presidentlin</a><span>), highlighting that in real workflows people are already </span><strong>mixing models by role</strong><span> (planner/doer/editor) rather than selecting one “best” model.</span>"
-            ]
-          },
-          {
-            "type": "list",
-            "items": [
-              "<span>Document Arena reports </span><strong>top 3 are Anthropic models</strong><span> for document analysis/long-form reasoning: </span><strong>Opus 4.6 #1, Sonnet 4.6 #2, Opus 4.5 #3</strong><span> (</span><a href=\"https://x.com/arena/status/2031012090681663717\" target=\"_blank\" rel=\"noreferrer noopener\">arena</a><span>).</span>",
-              "<span>Parallel to product wins, major political/legal news circulates: multiple outlets/tweets claim Anthropic filed lawsuits after being labeled a “supply chain risk” by the Pentagon, framed as retaliation for refusing to remove safeguards on mass surveillance/autonomous weapons (</span><a href=\"https://x.com/kimmonismus/status/2031035653207556507\" target=\"_blank\" rel=\"noreferrer noopener\">kimmonismus</a><span>, </span><a href=\"https://x.com/TheRundownAI/status/2031037610605289476\" target=\"_blank\" rel=\"noreferrer noopener\">TheRundownAI</a><span>). Engineers should separate </span><strong>policy discourse</strong><span> from </span><strong>technical evaluation</strong><span>, but it’s relevant for procurement constraints and enterprise adoption.</span>"
-            ]
-          },
-          {
-            "type": "list",
-            "items": [
-              "<span>Gemma 4 rumors/leaks circulate: “imminent” and parameter speculation including </span><strong>120B total / 15B active</strong><span> claims (</span><a href=\"https://x.com/scaling01/status/2030986695181836466\" target=\"_blank\" rel=\"noreferrer noopener\">scaling01</a><span>, </span><a href=\"https://x.com/kimmonismus/status/2031001097993642009\" target=\"_blank\" rel=\"noreferrer noopener\">kimmonismus</a><span>, leak mention </span><a href=\"https://x.com/kimmonismus/status/2031116062272688467\" target=\"_blank\" rel=\"noreferrer noopener\">kimmonismus</a><span>). Treat specifics as unconfirmed until official release.</span>",
-              "<span>Qwen3.5 local running guide + fine-tuning agent workflow is published by Unsloth, claiming it works on </span><strong>≤24GB RAM</strong><span> and shows an agent that fine-tunes models using Unsloth (</span><a href=\"https://x.com/UnslothAI/status/2031008078850924840\" target=\"_blank\" rel=\"noreferrer noopener\">UnslothAI</a><span>).</span>",
-              "<span>Qwen org churn / reporting skepticism: a reporter criticizes anonymous-source “DeepSeek release date” scoops and broader Chinese tech reporting practices (</span><a href=\"https://x.com/vince_chow1/status/2031002233060634953\" target=\"_blank\" rel=\"noreferrer noopener\">vince_chow1</a><span>). There’s also mention of Qwen’s technical lead stepping down (via newsletter roundup, not primary source) (</span><a href=\"https://x.com/ZhihuFrontier/status/2030879093634535524\" target=\"_blank\" rel=\"noreferrer noopener\">ZhihuFrontier</a><span>).</span>"
-            ]
-          },
-          {
-            "type": "paragraph",
-            "html": "<strong>Infra, performance, and evaluation tooling</strong>"
-          },
-          {
-            "type": "list",
-            "items": [
-              "<span>vLLM highlighted running a </span><strong>fully local assistant on NVIDIA Jetson</strong><span> serving MoE (Nemotron 3 Nano 30B) on-device with “zero cloud APIs” (</span><a href=\"https://x.com/vllm_project/status/2030839132512002217\" target=\"_blank\" rel=\"noreferrer noopener\">vllm_project</a><span>).</span>",
-              "<span>A Microsoft exec mention of “vLLM Semantic Router” is celebrated (</span><a href=\"https://x.com/XunzhuoLiu/status/2030977675603636337\" target=\"_blank\" rel=\"noreferrer noopener\">XunzhuoLiu</a><span>)—semantic routing is increasingly part of production stacks.</span>",
-              "<span>Debugging notes: DeepGemm incompatibilities causing vLLM breakage; workaround via </span><code>VLLM_USE_DEEP_GEMM=0</code><span> (</span><a href=\"https://x.com/TheZachMueller/status/2030938318473408841\" target=\"_blank\" rel=\"noreferrer noopener\">TheZachMueller</a><span>).</span>",
-              "<span>Claude Code + local model slowdown due to attribution headers invalidating KV cache → effectively O(N²) behavior is a concrete performance gotcha for anyone proxying “cloud agent UX” onto local inference (</span><a href=\"https://x.com/danielhanchen/status/2031124589557002457\" target=\"_blank\" rel=\"noreferrer noopener\">danielhanchen</a><span>).</span>"
-            ]
-          },
-          {
-            "type": "list",
-            "items": [
-              "<span>Warmup/decay theory: “warmup needed when gradient norms drop early” claim with paper reference (</span><a href=\"https://x.com/aaron_defazio/status/2030897848020349106\" target=\"_blank\" rel=\"noreferrer noopener\">aaron_defazio</a><span>); rosinality suggests per-residual-branch scalar warmup patterns (</span><a href=\"https://x.com/rosinality/status/2030952971303858181\" target=\"_blank\" rel=\"noreferrer noopener\">rosinality</a><span>).</span>",
-              "<span>Hugging Face integrates </span><strong>Ulysses sequence parallelism</strong><span> into Trainer/Accelerate/TRL (</span><a href=\"https://x.com/StasBekman/status/2031081858763792574\" target=\"_blank\" rel=\"noreferrer noopener\">StasBekman</a><span>).</span>",
-              "<span>CosNet idea: adding low-rank nonlinear residual functions to linear layers yields </span><strong>20%+ wallclock speedup</strong><span> in pretraining claims (</span><a href=\"https://x.com/torchcompiled/status/2031064475210514494\" target=\"_blank\" rel=\"noreferrer noopener\">torchcompiled</a><span>).</span>"
-            ]
-          },
-          {
-            "type": "list",
-            "items": [
-              "<span>OpenAI acquires </span><strong>Promptfoo</strong><span>; it remains open-source; it will strengthen agentic security testing/evals in “OpenAI Frontier” (</span><a href=\"https://x.com/OpenAI/status/2031052793835106753\" target=\"_blank\" rel=\"noreferrer noopener\">OpenAI</a><span>, additional context from </span><a href=\"https://x.com/snsf/status/2031055866024120825\" target=\"_blank\" rel=\"noreferrer noopener\">@snsf</a><span>).</span>",
-              "<span>LangSmith adds </span><strong>multimodal evaluators</strong><span> and an </span><strong>Agent Builder inbox</strong><span> for managing parallel agent tasks (</span><a href=\"https://x.com/LangChain/status/2031044950628991453\" target=\"_blank\" rel=\"noreferrer noopener\">LangChain</a><span>, </span><a href=\"https://x.com/LangChain/status/2031049373178904702\" target=\"_blank\" rel=\"noreferrer noopener\">LangChain</a><span>).</span>",
-              "<span>Harbor integrates end-to-end computer-use evaluation (Windows/Linux) at scale, generating trajectories for SFT/RL from rollouts (</span><a href=\"https://x.com/Mascobot/status/2031045774419832961\" target=\"_blank\" rel=\"noreferrer noopener\">Mascobot</a><span>).</span>",
-              "<span>Teleport proposes “agentic identity” as a control plane: cryptographic identity, least privilege, audit trails across MCP/tools (</span><a href=\"https://x.com/TheTuringPost/status/2030992157985898900\" target=\"_blank\" rel=\"noreferrer noopener\">TheTuringPost</a><span>).</span>"
-            ]
-          },
-          {
-            "type": "paragraph",
-            "html": "<strong>Agents need better context: docs, retrieval, memory, and “environmentization”</strong>"
-          },
-          {
-            "type": "list",
-            "items": [
-              "<span>AgentIR proposes using agent “reasoning tokens” as signals (“reads your agent’s mind”) and reports gains on BrowseComp-Plus from </span><strong>35% → 50% → 67%</strong><span> vs baselines (</span><a href=\"https://x.com/zijian42chen/status/2031044580242530403\" target=\"_blank\" rel=\"noreferrer noopener\">zijian42chen</a><span>).</span>",
-              "<span>Memex(RL) proposes indexed experience memory to scale long-horizon tasks without bloating context windows (</span><a href=\"https://x.com/omarsar0/status/2031006858971058537\" target=\"_blank\" rel=\"noreferrer noopener\">omarsar0</a><span>).</span>",
-              "<span>Databricks/DAIR’s KARL: multi-task RL training for enterprise search agents; claims Pareto-optimal cost/latency quality tradeoffs and improved generalization beyond single-benchmark optimization (</span><a href=\"https://x.com/dair_ai/status/2030996795770433749\" target=\"_blank\" rel=\"noreferrer noopener\">dair_ai</a><span>).</span>"
-            ]
-          },
-          {
-            "type": "list",
-            "items": [
-              "<span>LlamaIndex shows slide-deck parsing and retrieval (“Surreal Slides”) using LlamaParse → SurrealDB → MCP agent interface (</span><a href=\"https://x.com/llama_index/status/2031038377831932056\" target=\"_blank\" rel=\"noreferrer noopener\">llama_index</a><span>, </span><a href=\"https://x.com/jerryjliu0/status/2031077511661342799\" target=\"_blank\" rel=\"noreferrer noopener\">jerryjliu0</a><span>). Jerry Liu explicitly frames a strategic pivot: from broad RAG framework to </span><strong>document OCR infrastructure</strong><span> as the enduring agent bottleneck (</span><a href=\"https://x.com/jerryjliu0/status/2031171466574889344\" target=\"_blank\" rel=\"noreferrer noopener\">jerryjliu0</a><span>).</span>"
-            ]
-          },
-          {
-            "type": "paragraph",
-            "html": "<strong>Robotics &amp; embodied AI: from humanoid home demos to open-source robot learning</strong>"
-          },
-          {
-            "type": "list",
-            "items": [
-              "<strong>Figure Helix 02 autonomous home cleanup</strong><span>: Brett Adcock posts a demo claim of fully autonomous living room cleanup and frames it as a major milestone (</span><a href=\"https://x.com/adcock_brett/status/2031039203262501252\" target=\"_blank\" rel=\"noreferrer noopener\">adcock_brett</a><span>, follow-up </span><a href=\"https://x.com/adcock_brett/status/2031039305716814041\" target=\"_blank\" rel=\"noreferrer noopener\">adcock_brett</a><span>). Kimmonismus extrapolates “robots at home by 2027” (</span><a href=\"https://x.com/kimmonismus/status/2031043868553027811\" target=\"_blank\" rel=\"noreferrer noopener\">kimmonismus</a><span>)—timeline speculation aside, this is a notable demo threshold: whole-body, end-to-end household task.</span>",
-              "<strong>LeRobot v0.5.0</strong><span>: Hugging Face’s robotics stack ships major updates: Unitree G1 humanoid support, new policies, real-time chunking, faster datasets, EnvHub/Isaac integration, Python 3.12 + Transformers v5, plugin system (</span><a href=\"https://x.com/LeRobotHF/status/2031072207690961059\" target=\"_blank\" rel=\"noreferrer noopener\">LeRobotHF</a><span>).</span>",
-              "<strong>Memory benchmarks in robotics</strong><span>: RoboMME appears as a benchmark for memory in robotic generalist policies (</span><a href=\"https://x.com/_akhaliq/status/2031055119320506544\" target=\"_blank\" rel=\"noreferrer noopener\">_akhaliq</a><span>).</span>"
-            ]
-          },
-          {
-            "type": "paragraph",
-            "html": "<strong>Top tweets (by engagement, filtered to mostly tech/AI)</strong>"
-          },
-          {
-            "type": "list",
-            "items": [
-              "<strong>Claude Code ships multi-agent PR “Code Review”</strong><span>: </span><a href=\"https://x.com/claudeai/status/2031088171262554195\" target=\"_blank\" rel=\"noreferrer noopener\">@claudeai</a>",
-              "<strong>OSINT pipeline post (AI-assisted synthesis) gets massive engagement</strong><span> (AI-assisted methodology, though geopolitical): </span><a href=\"https://x.com/DataRepublican/status/2030833480863785427\" target=\"_blank\" rel=\"noreferrer noopener\">@DataRepublican</a>",
-              "<strong>Karpathy: autoresearch improves nanochat training ~11%</strong><span>: </span><a href=\"https://x.com/karpathy/status/2031135152349524125\" target=\"_blank\" rel=\"noreferrer noopener\">@karpathy</a>",
-              "<strong>Google Earth: Satellite Embedding dataset update (AlphaEarth Foundations), 64-d embedding per 10m pixel</strong><span>: </span><a href=\"https://x.com/googleearth/status/2031024842498023718\" target=\"_blank\" rel=\"noreferrer noopener\">@googleearth</a>",
-              "<strong>Andrew Ng releases Context Hub (live API docs for coding agents)</strong><span>: </span><a href=\"https://x.com/AndrewYNg/status/2031051809499054099\" target=\"_blank\" rel=\"noreferrer noopener\">@AndrewYNg</a>",
-              "<strong>OpenAI acquires Promptfoo (agentic security testing/evals; remains OSS)</strong><span>: </span><a href=\"https://x.com/OpenAI/status/2031052793835106753\" target=\"_blank\" rel=\"noreferrer noopener\">@OpenAI</a>"
-            ]
-          },
-          {
-            "type": "heading",
-            "level": 2,
-            "text": "Keep reading with a 7-day free trial"
+            "html": "如需细节原文与引用，请查看原始链接。"
           }
         ]
       },
@@ -270,155 +118,42 @@
         }
       ],
       "detail": {
-        "available": false,
+        "available": true,
         "layout": "detail-zh",
         "translatedFrom": "https://hackaday.com/2026/03/09/the-sweetest-programming-language-mnm/",
         "sourceName": "Hackaday",
-        "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+        "sourceDescription": "以下为原文结构对应的中文整理版，保留核心段落与配图。",
         "blocks": [
           {
             "type": "heading",
             "level": 2,
-            "text": "Hackaday"
-          },
-          {
-            "type": "list",
-            "items": [
-              "by:"
-            ]
-          },
-          {
-            "type": "list",
-            "items": [
-              "<a href=\"https://www.facebook.com/sharer/sharer.php?u=https://hackaday.com/2026/03/09/the-sweetest-programming-language-mnm/\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>",
-              "<a href=\"https://twitter.com/intent/tweet?text=The%20Sweetest%20Programming%20Language:%20MNM%20via%20@hackaday&amp;url=https://hackaday.com/2026/03/09/the-sweetest-programming-language-mnm/\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>",
-              "<a href=\"https://news.ycombinator.com/submitlink?u=https://hackaday.com/2026/03/09/the-sweetest-programming-language-mnm/&amp;t=The%20Sweetest%20Programming%20Language:%20MNM\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>",
-              "<a href=\"https://www.reddit.com/submit?url=https://hackaday.com/2026/03/09/the-sweetest-programming-language-mnm/\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>"
-            ]
+            "text": "用 M&M 糖果当编程语言：MNM"
           },
           {
             "type": "image",
             "src": "./assets/posts/the-sweetest-programming-language-mnm/figure-01.png",
-            "alt": "",
+            "alt": "MNM 语言示意图",
             "caption": ""
           },
           {
             "type": "paragraph",
-            "html": "Admit it. If you haven’t created your own little programming language, you’ve probably at least thought about it. [Muffed] decided to create a unique — and sweet — programming language that uses <a href=\"https://mufeedvh.com/posts/i-made-a-programming-language-with-mnms/\" target=\"_blank\" rel=\"noreferrer noopener\">M&amp;M (or, at least, M&amp;M-like) candies as the building block of programs</a>."
+            "html": "说实话，如果你没尝试过做一个自己的小型编程语言，至少也曾想过。作者 [Muffed] 真的做了一个很“甜”的语言：用 M&M（或类似）糖果作为程序的基本构件。"
           },
           {
             "type": "paragraph",
-            "html": "If this sounds strange, it is because, honestly, it is. It all started when a packet of GEMS (the Cadbury’s version of M&amp;Ms) spilled and randomly fell in the shape of an arrow. There are only six symbols corresponding to the colors in a package. You create your program by arranging the candies and creating a digital image of the result. In practice, you’ll probably use ASCII text to represent your candy layout and let the compiler render the image for you."
+            "html": "这个点子源于一包 GEMS（Cadbury 的 M&M 替代品）撒落后形成箭头形状。语言只有六个符号，对应糖果的颜色。你把糖果排成程序形状，再拍成数字图像；实际使用时会用 ASCII 文本表示糖果布局，让编译器渲染成图像。"
           },
           {
             "type": "paragraph",
-            "html": "The main way of encoding things is by the number of colored candy pixels in a row. So three blue morsels in an opcode, while four is a different opcode. Red candies encode integer literals with one candy being zero, two being one, and so on. Blue indicates control flow, green candy handles variables and stack operations, yellow is for math, and so on."
+            "html": "编码方式基于“某一行中彩色糖果像素的数量”。例如：三个蓝色糖果表示一个 opcode，四个蓝色表示另一个；红色糖果用来表示整数常量（一个糖果代表 0，两个代表 1，以此类推）。蓝色对应控制流，绿色处理变量与栈，黄色用于数学运算等。"
           },
           {
             "type": "paragraph",
-            "html": "<span></span>"
+            "html": "由于语言还不能直接表达字符串，运行时需要一个 JSON 数据文件来配合。文章示例给出了“Hello World”可在网页里运行，但运行时数据文件需要另行补充。"
           },
           {
             "type": "paragraph",
-            "html": "Since building things like strings. So, sadly, the M&amp;M program isn’t complete without a run-time data file in JSON format. The title graphic shows a Hello World program that you can run in the web page, but it doesn’t show the JSON file. That’s here:"
-          },
-          {
-            "type": "paragraph",
-            "html": "We don’t know of any other language where you can literally eat your mistakes. There’s something to be said for that. If you want to try it, you can just write over one of the examples on the web page. Or download from <a href=\"https://github.com/mufeedvh/mnmlang\" target=\"_blank\" rel=\"noreferrer noopener\">GitHub</a>."
-          },
-          {
-            "type": "paragraph",
-            "html": "We have seen <a href=\"https://hackaday.com/2022/01/26/strange-computer-languages-a-hackers-field-guide/\" target=\"_blank\" rel=\"noreferrer noopener\">graphic input languages before</a>. Plus <a href=\"https://hackaday.com/2022/11/19/two-esoteric-programming-languages-one-interpreter/\" target=\"_blank\" rel=\"noreferrer noopener\">many other weird languages</a>."
-          },
-          {
-            "type": "image",
-            "src": "./assets/posts/the-sweetest-programming-language-mnm/figure-02.png",
-            "alt": "",
-            "caption": ""
-          },
-          {
-            "type": "image",
-            "src": "./assets/posts/the-sweetest-programming-language-mnm/figure-03.png",
-            "alt": "",
-            "caption": ""
-          },
-          {
-            "type": "image",
-            "src": "./assets/posts/the-sweetest-programming-language-mnm/figure-04.png",
-            "alt": "",
-            "caption": ""
-          },
-          {
-            "type": "image",
-            "src": "./assets/posts/the-sweetest-programming-language-mnm/figure-05.png",
-            "alt": "",
-            "caption": ""
-          },
-          {
-            "type": "list",
-            "items": [
-              "<a href=\"https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhackaday.com%2F2026%2F03%2F09%2Fthe-sweetest-programming-language-mnm%2F\" target=\"_blank\" rel=\"noreferrer noopener\"> <i> </i> </a>",
-              "<a href=\"https://twitter.com/intent/tweet?text=The%20Sweetest%20Programming%20Language:%20MNM%20via%20@hackaday&amp;url=https://hackaday.com/2026/03/09/the-sweetest-programming-language-mnm/\" target=\"_blank\" rel=\"noreferrer noopener\"> <i></i> </a>",
-              "<a href=\"https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fhackaday.com%2F2026%2F03%2F09%2Fthe-sweetest-programming-language-mnm%2F\" target=\"_blank\" rel=\"noreferrer noopener\"> <i></i> </a>",
-              "<a href=\"mailto:?subject=The+Sweetest+Programming+Language%3A+MNM | Hackaday&amp;body=https%3A%2F%2Fhackaday.com%2F2026%2F03%2F09%2Fthe-sweetest-programming-language-mnm%2F\" target=\"_blank\" rel=\"noreferrer noopener\"> <i></i> </a>"
-            ]
-          }
-        ],
-        "refineErrors": [
-          {
-            "index": 0,
-            "type": "heading",
-            "message": "Pi invocation timed out after 15s"
-          },
-          {
-            "index": 1,
-            "type": "list",
-            "message": "Pi invocation timed out after 15s"
-          },
-          {
-            "index": 2,
-            "type": "list",
-            "message": "Pi invocation timed out after 15s"
-          },
-          {
-            "index": 4,
-            "type": "paragraph",
-            "message": "Pi invocation timed out after 15s"
-          },
-          {
-            "index": 5,
-            "type": "paragraph",
-            "message": "Pi invocation timed out after 15s"
-          },
-          {
-            "index": 6,
-            "type": "paragraph",
-            "message": "Pi invocation timed out after 15s"
-          },
-          {
-            "index": 7,
-            "type": "paragraph",
-            "message": "Pi invocation timed out after 15s"
-          },
-          {
-            "index": 8,
-            "type": "paragraph",
-            "message": "Pi invocation timed out after 15s"
-          },
-          {
-            "index": 9,
-            "type": "paragraph",
-            "message": "Pi invocation timed out after 15s"
-          },
-          {
-            "index": 10,
-            "type": "paragraph",
-            "message": "Pi invocation timed out after 15s"
-          },
-          {
-            "index": 15,
-            "type": "list",
-            "message": "Pi invocation timed out after 15s"
+            "html": "作者打趣说，这是少见能“吃掉错误”的语言。如果想试试，可以在网页示例上直接改写，或去 GitHub 下载项目源码。"
           }
         ]
       },
