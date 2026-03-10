@@ -26,15 +26,1358 @@
     }
   ],
   "detail": {
-    "available": false,
+    "available": true,
     "layout": "detail-zh",
     "translatedFrom": "https://huggingface.co/blog/async-rl-training-landscape",
     "sourceName": "Hugging Face Blog",
     "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
     "blocks": [
       {
+        "type": "heading",
+        "level": 2,
+        "text": "Keep the Tokens Flowing: Lessons from 16 Open-Source RL Libraries"
+      },
+      {
         "type": "paragraph",
-        "html": "当前缓存内容仍是站点反爬/挑战页，尚未获得可靠正文；因此只保留草稿入口，不生成可发布 detail。"
+        "html": "发布于 2026-03-10"
+      },
+      {
+        "type": "paragraph",
+        "html": "Amine Dirhoussi 的头像"
+      },
+      {
+        "type": "paragraph",
+        "html": "Amine Dirhoussi"
+      },
+      {
+        "type": "paragraph",
+        "html": "aminediroHF"
+      },
+      {
+        "type": "paragraph",
+        "html": "关注"
+      },
+      {
+        "type": "paragraph",
+        "html": "Quentin Gallouédec 的头像"
+      },
+      {
+        "type": "paragraph",
+        "html": "Quentin Gallouédec"
+      },
+      {
+        "type": "paragraph",
+        "html": "qgallouedec"
+      },
+      {
+        "type": "paragraph",
+        "html": "关注"
+      },
+      {
+        "type": "paragraph",
+        "html": "Kashif Rasul 的头像"
+      },
+      {
+        "type": "paragraph",
+        "html": "Kashif Rasul"
+      },
+      {
+        "type": "paragraph",
+        "html": "kashif"
+      },
+      {
+        "type": "paragraph",
+        "html": "关注"
+      },
+      {
+        "type": "paragraph",
+        "html": "Lewis Tunstall 的头像"
+      },
+      {
+        "type": "paragraph",
+        "html": "Lewis Tunstall"
+      },
+      {
+        "type": "paragraph",
+        "html": "lewtun"
+      },
+      {
+        "type": "paragraph",
+        "html": "关注"
+      },
+      {
+        "type": "paragraph",
+        "html": "Edward Beeching 的头像"
+      },
+      {
+        "type": "paragraph",
+        "html": "Edward Beeching"
+      },
+      {
+        "type": "paragraph",
+        "html": "edbeeching"
+      },
+      {
+        "type": "paragraph",
+        "html": "关注"
+      },
+      {
+        "type": "paragraph",
+        "html": "Albert Villanova del Moral 的头像"
+      },
+      {
+        "type": "paragraph",
+        "html": "Albert Villanova del Moral"
+      },
+      {
+        "type": "paragraph",
+        "html": "albertvillanova"
+      },
+      {
+        "type": "paragraph",
+        "html": "关注"
+      },
+      {
+        "type": "paragraph",
+        "html": "Nouamane Tazi 的头像"
+      },
+      {
+        "type": "paragraph",
+        "html": "Nouamane Tazi"
+      },
+      {
+        "type": "paragraph",
+        "html": "nouamanetazi"
+      },
+      {
+        "type": "paragraph",
+        "html": "关注"
+      },
+      {
+        "type": "paragraph",
+        "html": "Leandro von Werra 的头像"
+      },
+      {
+        "type": "paragraph",
+        "html": "Leandro von Werra"
+      },
+      {
+        "type": "paragraph",
+        "html": "lvwerra"
+      },
+      {
+        "type": "paragraph",
+        "html": "关注"
+      },
+      {
+        "type": "paragraph",
+        "html": "TL;DR —— 给那些没时间读 5,000 字异步 RL 基础设施细节的人（我们懂，你们还有模型要训练）："
+      },
+      {
+        "type": "paragraph",
+        "html": "问题：在同步 RL（强化学习）训练中，数据生成（模型推理生成数据样本）占据了绝大部分墙钟时间——一批 32K token 的 rollout 在 32B（320 亿参数）模型上可能要数小时，而用于训练的 GPU 则处于空闲。"
+      },
+      {
+        "type": "paragraph",
+        "html": "大家趋同的解决方案：把推理与训练拆分到不同的 GPU 池，通过 rollout buffer（模型输出的临时存储）连接，并异步传输权重（无需等待），让两边互不阻塞。"
+      },
+      {
+        "type": "paragraph",
+        "html": "我们调研了 16 个实现该模式的开源库，并从 7 个维度进行对比：编排原语、缓冲区设计、权重同步协议、陈旧性管理、部分 rollout 处理、LoRA 支持与分布式训练后端。"
+      },
+      {
+        "type": "paragraph",
+        "html": "关键发现：Ray 主导编排（16 个库中 8 个使用 Ray）。NCCL（NVIDIA Collective Communications Library）广播是传权的默认方式。陈旧性管理指如何处理过期样本，范围从直接丢弃到高级的重要性采样校正。LoRA（Low-Rank Adaptation）训练的支持并不普遍。分布式 MoE（Mixture of Experts）支持正在成为新的分化点。"
+      },
+      {
+        "type": "paragraph",
+        "html": "如果你想直接看重点，这里是完整对比表（无需阅读，我们不会评判）。"
+      },
+      {
+        "type": "paragraph",
+        "html": "但说真的，如果你愿意继续读下去，可能会明白你的 GPU 为什么有 60% 的时间在空闲。"
+      },
+      {
+        "type": "paragraph",
+        "html": "点击展开目录"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "1. 动机：从同步 RL 训练走向异步架构"
+      },
+      {
+        "type": "paragraph",
+        "html": "异步 RL 训练已成为大规模后训练的主流范式。现代后训练中的多种趋势让同步训练循环几乎无法扩展："
+      },
+      {
+        "type": "paragraph",
+        "html": "来自推理模型的长 rollout。链式思维训练会产生很长的 rollout，而单次同步生成批次在单张 GPU 上可能需要数小时完成。在此期间，训练 GPU 完全空闲。"
+      },
+      {
+        "type": "paragraph",
+        "html": "像 GRPO 这样的无价值函数训练器使用组相对优势。这意味着每个 prompt 需要生成最多 G 倍的 rollout，而整个批次受制于组内最慢的完成项。"
+      },
+      {
+        "type": "paragraph",
+        "html": "代理式 RL 训练的兴起。当模型与工具、沙箱和外部环境进行多轮交互时，rollout 长度与时延高度不稳定。简单的 API 调用可能几秒返回，而复杂的推理链加上工具使用可能持续数分钟甚至数小时。MiniMax 的 Forge 框架（用于训练 MiniMax-M2.5）展示了其规模：上下文长度可达 200K tokens，超过十万种不同的 agent scaffold 与环境，每天的吞吐量达到数百万样本。在这种规模下，生成与训练之间任何同步屏障都会成为严重瓶颈。仅“拖尾者”问题（少量慢 rollout 阻塞整个批次）就能让数百张 GPU 空闲。"
+      },
+      {
+        "type": "paragraph",
+        "html": "开源生态已趋同于同一架构应对：将推理与训练拆分到不同 GPU 池，用 rollout buffer 连接，让两边并发运行。"
+      },
+      {
+        "type": "paragraph",
+        "html": "我们正在为 TRL（最广泛使用的后训练库之一）开发新的异步训练器。为了指导设计，我们调研了 16 个从零构建、围绕异步训练的开源库，并从 7 个维度进行比较：编排原语、缓冲区设计、权重同步协议、陈旧性管理、部分 rollout 处理、LoRA 支持与分布式训练后端。本文提炼了我们从调研中抽取的设计原则。"
+      },
+      {
+        "type": "paragraph",
+        "html": "超出 RL 之外，异步基础设施的需求也愈发明显。例如，在 on-policy 蒸馏中，学生生成序列、教师评分，这与 GRPO 结构相同，只是把奖励函数换成教师前向。认识到这种结构相似性后，你会发现本文的全部内容同样适用于异步蒸馏。我们将在第 5 节回到这个更广泛的观点。"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "1.1 TRL 目前如何做 RL 训练"
+      },
+      {
+        "type": "paragraph",
+        "html": "TRL 现有的 GRPOTrainer 在单次同步的 training_step() 中实现完整 GRPO 循环（prompt 采样、生成、奖励评分、优势计算、梯度更新与权重同步）。该设计简单正确，但无法让生成与训练重叠，浪费大量 GPU 利用率。"
+      },
+      {
+        "type": "paragraph",
+        "html": "查看 GRPOTrainer，每个训练 step 依次包含以下阶段："
+      },
+      {
+        "type": "paragraph",
+        "html": "Prompt 采样：从数据集中抽取一批 prompt。没什么特别，我们继续。"
+      },
+      {
+        "type": "paragraph",
+        "html": "生成：调用 model.generate()（或向 vLLM server 转发请求）为每个 prompt 生成 G 个 completion。该过程是自回归的，且主导墙钟时间。"
+      },
+      {
+        "type": "paragraph",
+        "html": "奖励评分：将每个 completion 交给一个或多个奖励函数评估。"
+      },
+      {
+        "type": "paragraph",
+        "html": "优势计算。"
+      },
+      {
+        "type": "paragraph",
+        "html": "前向与反向传播：计算裁剪后的策略梯度损失并反向传播。"
+      },
+      {
+        "type": "paragraph",
+        "html": "优化器步：更新模型权重。"
+      },
+      {
+        "type": "paragraph",
+        "html": "权重同步：将更新后的权重推送给推理引擎（vLLM），以便下一次生成使用新策略。"
+      },
+      {
+        "type": "paragraph",
+        "html": "每个阶段必须完成后才能进入下一个阶段。时间线如下："
+      },
+      {
+        "type": "paragraph",
+        "html": "同步 TRL 训练时间线"
+      },
+      {
+        "type": "paragraph",
+        "html": "TRL 提供 steps_per_generation 配置选项，复用同一组 rollout 进行多次梯度更新（时间复用），以摊薄生成成本。但生成调用本身仍完全同步、阻塞；训练器必须等到批次内所有 completion 完成后才能开始梯度计算。"
+      },
+      {
+        "type": "paragraph",
+        "html": "该库也支持把 vLLM 以独立进程的 server 模式运行。它在生成时释放训练 GPU，但仍存在两个硬同步屏障：等待所有 HTTP 调用返回，以及权重同步会同时阻塞 trainer 与 vLLM 的传输。"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "1.2 同机部署 vs. 解耦部署"
+      },
+      {
+        "type": "paragraph",
+        "html": "在讨论异步训练之前，必须理解使用独立推理引擎时 RL 训练的两种部署拓扑："
+      },
+      {
+        "type": "paragraph",
+        "html": "同机（colocated）模式把推理与训练放在同一组 GPU 上。一张 GPU（或一个 TP 组）同时承载训练模型（FSDP 或 ZeRO）和推理引擎（vLLM 或 SGLang）。同一时刻只有一个角色在工作：生成时训练模型参数可能被卸载或重新分片成适合推理的布局（例如从 FSDP 分片变为 vLLM 的张量并行布局）；训练时推理引擎会暂停或休眠。权重“同步”几乎是免费的：最多只是同一 GPU 内的就地重分片，而不是网络传输。同机模式的优势是简单、成本低，所需 GPU 更少。根本限制是推理与训练无法重叠。例如，这就是 colocate_mode 下的 TRL + vLLM。"
+      },
+      {
+        "type": "paragraph",
+        "html": "解耦（disaggregated）模式把推理与训练放在不同 GPU 池。推理池持续运行 vLLM 或 SGLang；训练池持续运行优化器。两者通过权重同步协议（NCCL 广播、文件系统 checkpoint、HTTP 等）与数据传输机制（Ray 对象存储、Redis streams、共享内存等）进行通信。"
+      },
+      {
+        "type": "paragraph",
+        "html": "解耦模式的最大优势是推理与训练可以并发：当训练器在 batch N 上计算梯度时，推理池已在为 batch N+K 生成 rollouts，从而实现异步训练。但这也带来成本：需要更多 GPU。"
+      },
+      {
+        "type": "paragraph",
+        "html": "并发、异步、并行是不同概念，常被混用。本文中“异步训练”有明确含义：生成与训练并行运行并有效重叠；推理池在生成下一批 rollouts 的同时，训练池在计算当前 batch 的梯度。这是解耦模式才具备的能力。同机模式可以通过睡眠/唤醒内存管理或快速就地重分片优化推理，但无法实现真正的同时重叠；推理与训练仍在同一组 GPU 上轮流运行。本调研中所有具备有效异步重叠的库都以解耦模式为基础。"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "1.3 生成瓶颈"
+      },
+      {
+        "type": "paragraph",
+        "html": "在推理模型的 RL 训练中，自回归生成主导了墙钟时间。一个数学或编码任务的单次 rollout 可能产生 8K–64K token 的链式推理（参见 QED-Nano 的 rollout 长度）。"
+      },
+      {
+        "type": "paragraph",
+        "html": "为了具体量化，考虑单张 H100 80GB GPU 上的 vLLM benchmark（bf16，无量化，离线吞吐模式）。7B 模型（DeepSeek-R1-Distill-Qwen-7B）聚合吞吐约 6,300 输出 tokens/s；32B 模型（DeepSeek-R1-Distill-Qwen-32B）降至约 1,200 输出 tokens/s。这是推理引擎每秒可输出的总 token 数，与同 GPU 上并发多少序列无关。"
+      },
+      {
+        "type": "paragraph",
+        "html": "考虑一个典型 GRPO 训练 step：每个 prompt 生成 G=8 个 completion × 每 batch 64 个 prompt = 512 个 rollout。生成需要多久？"
+      },
+      {
+        "type": "paragraph",
+        "html": "每个 rollout 的输出长度 | 总输出 tokens（512 个 rollout） | 1×H100 上的时间（7B @ ~6K tok/s） | 1×H100 上的时间（32B @ ~1.2K tok/s）"
+      },
+      {
+        "type": "paragraph",
+        "html": "2K tokens（短 CoT） | ~1M tokens | ~3 分钟 | ~14 分钟"
+      },
+      {
+        "type": "paragraph",
+        "html": "8K tokens（中等 CoT） | ~4M tokens | ~11 分钟 | ~56 分钟"
+      },
+      {
+        "type": "paragraph",
+        "html": "32K tokens（长 CoT） | ~16M tokens | ~45 分钟 | ~3.7 小时"
+      },
+      {
+        "type": "paragraph",
+        "html": "即便在短端（7B 模型生成 2K tokens），仅生成就要消耗数分钟每步。长端则会在单张 GPU 上耗时数小时。扩展到 8 张推理 GPU 可将时间大致缩短 8 倍（假设线性吞吐扩展），但即便如此，32B 模型的 32K token rollout 仍需约 28 分钟每步。"
+      },
+      {
+        "type": "paragraph",
+        "html": "拖尾者问题进一步加剧这一点。在 GRPO 这类基于组的算法中，你会对每个 prompt 采样 G 个 completion。批次必须等待最慢的 completion 完成。链式思维输出长度高度可变；同一 prompt 的 completion 可能从 1K 到 32K tokens 不等。批次被最长 completion 所限制；连续批处理只能部分缓解：短序列会释放槽位让新请求进入，但一个 GRPO 组里最后的序列仍会阻塞该组的奖励计算与训练 step。"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "1.4 核心洞察"
+      },
+      {
+        "type": "paragraph",
+        "html": "本调研中的每个库都独立收敛到同一架构原则：将推理 GPU 与训练 GPU 物理分离，并异步推送权重，让生成不停止、训练不等待。"
+      },
+      {
+        "type": "paragraph",
+        "html": "推理池持续运行，将完成的 rollouts 喂入 buffer。训练池从 buffer 取数据，计算梯度更新，并定期把新权重推回推理池保持同步。两条循环以各自节奏运行，由 buffer 解耦。"
+      },
+      {
+        "type": "paragraph",
+        "html": "该设置高度可扩展，但引入了一类新问题：陈旧性（在旧策略下生成的 rollouts）、权重同步开销、部分 rollout 处理等。本文余下部分将深入剖析开源库如何处理这些问题。"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "2. 调研的库"
+      },
+      {
+        "type": "paragraph",
+        "html": "库 | 组织 | Repo | GitHub ⭐（2026 年 3 月）"
+      },
+      {
+        "type": "paragraph",
+        "html": "AReaL | inclusionAI/Ant Group | github.com/inclusionAI/AReaL | 4,338"
+      },
+      {
+        "type": "paragraph",
+        "html": "ART | CoreWeave | github.com/OpenPipe/ART | 8,952"
+      },
+      {
+        "type": "paragraph",
+        "html": "Atropos | NousResearch | github.com/NousResearch/atropos | 878"
+      },
+      {
+        "type": "paragraph",
+        "html": "MILES | radixark | github.com/radixark/miles | 950"
+      },
+      {
+        "type": "paragraph",
+        "html": "NeMo-RL | NVIDIA | github.com/NVIDIA-NeMo/RL | 1,383"
+      },
+      {
+        "type": "paragraph",
+        "html": "OAT | SAIL-SG | github.com/sail-sg/oat | 637"
+      },
+      {
+        "type": "paragraph",
+        "html": "open-instruct | AI2 (AllenAI) | github.com/allenai/open-instruct | 3,611"
+      },
+      {
+        "type": "paragraph",
+        "html": "PipelineRL | ServiceNow | github.com/ServiceNow/PipelineRL | 374"
+      },
+      {
+        "type": "paragraph",
+        "html": "PRIME-RL | PrimeIntellect | github.com/PrimeIntellect-ai/prime-rl | 1,114"
+      },
+      {
+        "type": "paragraph",
+        "html": "ROLL | Alibaba | github.com/alibaba/ROLL | 2,921"
+      },
+      {
+        "type": "paragraph",
+        "html": "SkyRL | NovaSky-AI | github.com/NovaSky-AI/SkyRL | 1,664"
+      },
+      {
+        "type": "paragraph",
+        "html": "SLIME | THUDM | github.com/THUDM/slime | 4,595"
+      },
+      {
+        "type": "paragraph",
+        "html": "TorchForge | Meta | github.com/meta-pytorch/torchforge | 632"
+      },
+      {
+        "type": "paragraph",
+        "html": "Tunix | Google | github.com/google/tunix | 2,175"
+      },
+      {
+        "type": "paragraph",
+        "html": "verl | ByteDance | github.com/verl-project/verl | 19,673"
+      },
+      {
+        "type": "paragraph",
+        "html": "verifiers-rl | PrimeIntellect | github.com/PrimeIntellect-ai/verifiers | 3,876"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "3. 对比框架：七个维度"
+      },
+      {
+        "type": "paragraph",
+        "html": "为了理解异步 RL 库的快速扩张生态，我们提出七个相互正交的对比维度。每个维度都刻画了一个影响库性能、复杂度与权衡的关键设计决策。"
+      },
+      {
+        "type": "paragraph",
+        "html": "维度 1——编排与并发原语：如何协调分布式组件（Ray actors、asyncio、pub/sub、HTTP）。"
+      },
+      {
+        "type": "paragraph",
+        "html": "维度 2——Rollout 缓冲区设计：rollout 如何从推理流向训练。"
+      },
+      {
+        "type": "paragraph",
+        "html": "维度 3——权重同步协议：更新后的权重如何到达推理服务器，以及系统是暂停接受还是继续生成。"
+      },
+      {
+        "type": "paragraph",
+        "html": "维度 4——陈旧性管理：如何处理 off-policy rollouts：版本拒绝、深度边界或重要性采样校正。"
+      },
+      {
+        "type": "paragraph",
+        "html": "维度 5——部分 rollout 处理：权重更新在序列进行中到来时该如何处理。"
+      },
+      {
+        "type": "paragraph",
+        "html": "维度 6——LoRA 训练支持：LoRA 总体支持与是否支持仅同步 adapter，从而实现亚毫秒级权重传输。"
+      },
+      {
+        "type": "paragraph",
+        "html": "维度 7——分布式训练后端与并行：采用何种训练并行策略，限制最大模型规模。"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "维度 1：编排与并发原语"
+      },
+      {
+        "type": "paragraph",
+        "html": "系统如何协调其分布式组件？"
+      },
+      {
+        "type": "paragraph",
+        "html": "编排框架的选择决定了编程模型、故障语义与可扩展上限。与其罗列每个库的实现细节，更清晰的做法是将版图分解为四类编排方式，它们在抽象层级、故障模型和部署要求上不同："
+      },
+      {
+        "type": "paragraph",
+        "html": "编排类型 | 定义 | 库 | 权衡"
+      },
+      {
+        "type": "paragraph",
+        "html": "分布式 Actor 模型 | 组件是 actor，隔离的有状态进程，带邮箱，由运行时负责调度、资源放置、故障容错与对象传输。通信是异步 RPC / futures / 对象存储。 | Ray：verl、SkyRL、NeMo-RL、SLIME、MILES、ROLL、OAT、open-instruct。Monarch：TorchForge。 | 抽象最丰富；开箱即用地解决调度与容错。引入不小的运行时依赖与框架特有的调试开销。"
+      },
+      {
+        "type": "paragraph",
+        "html": "原生 Python 并发 | 组件是线程、协程（asyncio）、线程原语、多进程子进程与队列。无外部编排运行时。 | verifiers-rl、PipelineRL（池内）、ART（asyncio + 子进程代理）、AReaL（基于 asyncio 的事件循环） | 依赖最少，易调试、全掌控。若要多机，需要额外 IPC（Redis、HTTP、NCCL）。"
+      },
+      {
+        "type": "paragraph",
+        "html": "Pub/Sub 消息总线 | 组件是解耦的生产者与消费者，通过追加式流或消息队列通信。不是编排本身，而是独立池之间的数据传输层。 | PipelineRL（跨池：Redis XADD/XREAD streams；单机：追加式 JSONL） | 跨池解耦干净，无需 RPC。但不管理生命周期、调度或故障恢复，必须与其他编排类型搭配。"
+      },
+      {
+        "type": "paragraph",
+        "html": "HTTP 微服务 | 组件是独立服务，通过 REST API 通信。语言无关，解耦最高。 | Atropos | 任意推理服务器，任意语言，零共享状态。延迟最高（若使用 NCCL），无共享对象存储，容错由用户负责。"
+      },
+      {
+        "type": "paragraph",
+        "html": "Tunix 说明：Tunix（Google）使用 JAX 原生 mesh 模型与 ThreadPoolExecutor 实现异步重叠，并用 jax.device_put 跨 mesh 传权。它在架构上与 PyTorch 生态有明显差异，直接比较编排并不合适；它处于 XLA/TPU 世界，拥有自己的一套协调原语。"
+      },
+      {
+        "type": "paragraph",
+        "html": "上面的表格显示出一个显著规律：16 个库中有 8 个用 Ray 作为编排骨干。这并非偶然，而是 actor 模型与 RL 训练结构高度契合的体现。Anyscale（Ray 公司）对 LLM 开源 RL 库的调研也证实了这种收敛。大规模 RL 训练包含本质上异构的组件（推理引擎、训练引擎、环境、奖励模型），需要在集群内跨不同硬件类型进行协调，规模与故障模式各异。Ray 的 actor 模型与此高度匹配："
+      },
+      {
+        "type": "paragraph",
+        "html": "Actor 隔离与异构资源。每个 RL 组件（vLLM 推理服务器、FSDP 训练器、奖励模型、环境池）都可成为 Ray actor，拥有自身资源需求（num_gpus、num_cpus、memory）。Placement groups 允许精细控制 GPU 亲和性，而无需手动 SSH/torchrun 编排。"
+      },
+      {
+        "type": "paragraph",
+        "html": "调度与自动扩缩容。Ray 调度器解决在集群内放置异构 actor 的组合优化问题。当生成需求需要比训练多 8 倍 GPU 小时，你可以让 Ray 独立扩展推理 actor。"
+      },
+      {
+        "type": "paragraph",
+        "html": "容错。长时间 RL 训练（数天至数周）会遭遇 GPU 故障、OOM kill 与网络分区。Ray 的 actor 重启策略与对象存储复制提供了韧性，否则用原生 asyncio/多进程需要额外大量基础设施。一个具体例子：open-instruct 依赖 Ray 的 actor 监督，在 rollout 中途 vLLM engine 崩溃时恢复。"
+      },
+      {
+        "type": "paragraph",
+        "html": "零拷贝对象存储。rollout 数据可能非常大，每个 batch 可达数十 GB。Ray 的共享内存对象存储让同机 actor 间零拷贝传输，避免 multiprocessing.Queue 的序列化开销。"
+      },
+      {
+        "type": "paragraph",
+        "html": "生态成熟度。Ray 自 2017 年起经历大规模生产验证，部署在数千张 GPU 上。调试开销确实存在（Ray Dashboard、分布式堆栈、placement group 失败），但替代方案——从零构建同等协调系统——代价更高。这也是 PRIME-RL、PipelineRL、AReaL 选择更轻量的原生 Python 协调（asyncio、threading、Redis streams）的原因——当你控制全栈且部署拓扑固定时，原生 Python 的简单与可调试性往往胜过 Ray 的便利。"
+      },
+      {
+        "type": "paragraph",
+        "html": "代价是对一个复杂运行时的硬依赖。在生产规模训练（64+ GPU、多天运行、复杂奖励计算）上，这种权衡往往值得。"
+      },
+      {
+        "type": "paragraph",
+        "html": "虽然 Ray 的 actor 模型是主力，但 Monarch 作为 Meta 的新 PyTorch 原生分布式 actor 框架出现了，专为 GPU 工作负载打造。与 Ray 类似，Monarch 也是 actor 模型：组件是独立 actor，通过消息邮箱通信，但它从一开始就为 PyTorch/CUDA 生态设计，而不是通用分布式运行时。"
+      },
+      {
+        "type": "paragraph",
+        "html": "Monarch 提供了多项与异步 RL 相关的能力。来自 GPU Mode 课程的一个 async RL 示例展示了该架构：生成器、回放缓冲区和训练器都建模为 Monarch actors，回放缓冲区吸收慢 rollout 的时延波动，RDMA 权重同步在不阻塞训练的情况下向生成器推送更新。该模式与 Ray 系方案（verl、SkyRL、open-instruct）结构等价，只是用纯 PyTorch 原生原语实现。"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "维度 2：Rollout 缓冲区设计"
+      },
+      {
+        "type": "paragraph",
+        "html": "生成的 rollouts 如何从推理流向训练？管道有多深？"
+      },
+      {
+        "type": "paragraph",
+        "html": "缓冲区是生成与训练之间的数据结构。其深度决定了最大异步程度，也决定了最大陈旧性。"
+      },
+      {
+        "type": "paragraph",
+        "html": "模式 | 深度 | 库 | 特征"
+      },
+      {
+        "type": "paragraph",
+        "html": "无缓冲（同步） | 0 | TRL（当前）、ART（先收集再训练） | 生成与训练严格交替；无陈旧性，但空闲时间最大"
+      },
+      {
+        "type": "paragraph",
+        "html": "双缓冲（一步领先） | 1 | verifiers-rl、SLIME（异步模式）、MILES、OAT | 在训练 step N 开始时提交生成 N+1；恰好重叠一个 batch"
+      },
+      {
+        "type": "paragraph",
+        "html": "有界异步队列 | 2–K | SkyRL、verl（完全异步）、NeMo-RL、ROLL、PRIME-RL、TorchForge、Tunix、open-instruct（async_steps）、AReaL（max_head_offpolicyness） | 多批次 in-flight；陈旧性由队列容量限制"
+      },
+      {
+        "type": "paragraph",
+        "html": "无界/流式 | 无限 | PipelineRL（Redis streams）、SLIME（完全异步模式）、Atropos | 持续生成；陈旧性仅由显式版本控制约束"
+      },
+      {
+        "type": "paragraph",
+        "html": "双缓冲模式是从同步到异步最简单的升级：它让生成与训练恰好重叠一个 batch，并引入最多一步的策略滞后。"
+      },
+      {
+        "type": "paragraph",
+        "html": "更深的队列可提升吞吐，但需要陈旧性管理。"
+      },
+      {
+        "type": "paragraph",
+        "html": "缓冲区控制 in-flight 数据量。但数据只是一半问题，另一半是把新权重及时送回推理服务器，否则 rollouts 会变陈旧。这就是权重同步。"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "维度 3：权重同步协议"
+      },
+      {
+        "type": "paragraph",
+        "html": "更新后的权重如何到达推理服务器？"
+      },
+      {
+        "type": "paragraph",
+        "html": "范围说明：本维度聚焦于解耦模式，因为只有该模式才有异步重叠（也才涉及权重同步的传输/中断权衡）。同机模式（同 GPU 同时做推理与训练）本质是同步，不面对下述传输与中断问题。"
+      },
+      {
+        "type": "paragraph",
+        "html": "这是最关键的架构维度。协议决定同步延迟、中断粒度，以及是否能处理部分 rollout。"
+      },
+      {
+        "type": "paragraph",
+        "html": "需要区分“传输机制”与“中断模型”。大多数库会在较粗的边界暂停生成（HTTP 请求、完整 batch、甚至完整训练 step），再进行权重传输。PipelineRL 是例外：它从不停止生成。"
+      },
+      {
+        "type": "paragraph",
+        "html": "传输机制："
+      },
+      {
+        "type": "paragraph",
+        "html": "机制 | 延迟 | 库"
+      },
+      {
+        "type": "paragraph",
+        "html": "NCCL Broadcast | ~100–500ms | PipelineRL、SkyRL、SLIME、MILES、ROLL、OAT、NeMo-RL、PRIME-RL、open-instruct、AReaL"
+      },
+      {
+        "type": "paragraph",
+        "html": "NCCL + Bucketing | ~20ms | verl"
+      },
+      {
+        "type": "paragraph",
+        "html": "KV + Shared Memory | 低 | TorchForge"
+      },
+      {
+        "type": "paragraph",
+        "html": "Filesystem + HTTP | 中 | PRIME-RL、AReaL、ART"
+      },
+      {
+        "type": "paragraph",
+        "html": "CUDA IPC（零拷贝） | 很低 | NeMo-RL、MILES"
+      },
+      {
+        "type": "paragraph",
+        "html": "JAX Cross-mesh | 低 | Tunix"
+      },
+      {
+        "type": "paragraph",
+        "html": "HTTP PUT | 高 | verifiers-rl"
+      },
+      {
+        "type": "paragraph",
+        "html": "Filesystem + Restart | 很高 | Atropos"
+      },
+      {
+        "type": "paragraph",
+        "html": "在中断模型中，生成会在何时暂停以接收新权重？"
+      },
+      {
+        "type": "paragraph",
+        "html": "这正是 PipelineRL 与所有其他库的根本差异所在。我们不逐一列出每个库，而是按从细到粗的中断粒度划分为五类："
+      },
+      {
+        "type": "paragraph",
+        "html": "中断粒度 | 发生的事 | 库"
+      },
+      {
+        "type": "paragraph",
+        "html": "从不（按 forward pass in-flight） | 序列从不被中断。权重在 token 解码步骤间切换（~1–10ms 间隙）。运行中的序列无缝继续使用新权重。 | PipelineRL、open-instruct（可选）"
+      },
+      {
+        "type": "paragraph",
+        "html": "按 HTTP 请求（中止+重同步） | in-flight HTTP 请求被中止。部分 token 通过前缀恢复机制重提交或回收重试。 | SkyRL、SLIME、MILES"
+      },
+      {
+        "type": "paragraph",
+        "html": "软暂停（等待 in-flight 完成） | 不再接收新生成请求，让在途请求自然完成。完成后同步权重并继续生成。 | PRIME-RL、AReaL、open-instruct（默认）、verl（异步）"
+      },
+      {
+        "type": "paragraph",
+        "html": "按训练 step/批次（阻塞） | 生成必须完全结束；训练器与推理引擎轮流阻塞。 | NeMo-RL、ROLL、OAT、TorchForge、Tunix、verifiers-rl、Atropos"
+      },
+      {
+        "type": "paragraph",
+        "html": "“从不停止”这一档本质上不同：例如 PipelineRL 挂钩推理引擎，使得锁在每个 Transformer forward pass（单 token 步）之间获得/释放。权重更新最多等待一个 forward pass（数毫秒）即可完成切换，生成马上恢复。其他库的停止粒度更粗，从一个 HTTP 请求（数百毫秒）到一个完整 batch 边界（秒级）。"
+      },
+      {
+        "type": "paragraph",
+        "html": "权重同步控制“新权重何时到”。但异步训练意味着 rollouts 总是在某个策略版本下生成，而这个版本可能落后训练器多个 step。如何处理这种策略滞后，就是陈旧性管理。"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "维度 4：陈旧性管理"
+      },
+      {
+        "type": "paragraph",
+        "html": "系统如何处理在旧策略下生成的 rollouts？"
+      },
+      {
+        "type": "paragraph",
+        "html": "一旦生成与训练重叠，样本就变成 off-policy。出现了三种正交的陈旧性管理策略，大多数生产系统会组合使用："
+      },
+      {
+        "type": "paragraph",
+        "html": "策略 1：按样本版本拒绝。为每个样本标记生成它的整数策略版本。训练时，若样本版本落后当前策略超过阈值，则直接丢弃。简单正确，但会浪费生成这些样本的计算。"
+      },
+      {
+        "type": "paragraph",
+        "html": "策略 2：深度边界。生成与训练之间的队列/缓冲区具有有界容量（或显式陈旧性门控），从结构上限制样本最大滞后。深度可为 1（一步领先的双缓冲，结构上不可能陈旧）到与版本差距相关的显式容量公式。不需要逐样本版本跟踪；边界由系统的管道深度保证。"
+      },
+      {
+        "type": "paragraph",
+        "html": "策略 3：IS 权重校正。到达训练器的陈旧样本会按重要性采样比率 π*θ(a|s) / π*old(a|s) 进行重加权，通常还会裁剪（Truncated IS）。有些库还会应用 OPSM（对优势为负的 off-policy 样本将损失置零）。该策略保留吞吐，不丢样本，但会带来 IS 比率引起的梯度方差。"
+      },
+      {
+        "type": "paragraph",
+        "html": "这些策略彼此正交：系统可以仅用版本拒绝、仅用深度边界、仅用 IS 校正，或任意组合。同步系统通过不重叠生成与训练，完全避免该问题。"
+      },
+      {
+        "type": "paragraph",
+        "html": "库 | 版本拒绝 | 深度边界 | IS 校正 | 关键配置/说明"
+      },
+      {
+        "type": "paragraph",
+        "html": "AReaL | ❌ | ✅ | ⚠️ | max_head_offpolicyness 容量公式；可选 use_decoupled_loss 使用 IS 权重（上限 5.0）"
+      },
+      {
+        "type": "paragraph",
+        "html": "ART | — | — | — | 同步；所有 rollouts 收集完再训练；无陈旧性"
+      },
+      {
+        "type": "paragraph",
+        "html": "Atropos | ❌ | ✅ | ❌ | max_batches_offpolicy，限制缓冲批次数"
+      },
+      {
+        "type": "paragraph",
+        "html": "MILES | ❌ | ❌ | ✅ | TIS + OPSM"
+      },
+      {
+        "type": "paragraph",
+        "html": "NeMo-RL | ✅ | ❌ | ❌ | max_trajectory_age_steps，逐样本版本丢弃"
+      },
+      {
+        "type": "paragraph",
+        "html": "OAT | ❌ | ❌ | ✅ | 裁剪 TIS 比率"
+      },
+      {
+        "type": "paragraph",
+        "html": "open-instruct | ❌ | ✅ | ⚠️ | async_steps 上限（默认 1，生产 8）；可选 --truncated_importance_sampling_ratio_cap ρ 添加裁剪 TIS"
+      },
+      {
+        "type": "paragraph",
+        "html": "PipelineRL | ✅ | ❌ | ❌ | max_lag，逐样本版本标记；超过阈值丢弃"
+      },
+      {
+        "type": "paragraph",
+        "html": "PRIME-RL | ✅ | ✅ | ✅ | 完整混合：max_async_level 版本差 + max_off_policy_steps 取消 + IPO trust-region IS"
+      },
+      {
+        "type": "paragraph",
+        "html": "ROLL | ❌ | ❌ | ✅ | 最丰富的 IS 方案：TIS、TOPR、CISPO、Kimi15，六种 off-policy 损失变体"
+      },
+      {
+        "type": "paragraph",
+        "html": "SkyRL | ❌ | ✅ | ❌ | max_staleness_steps，容量门控阻止新 rollouts"
+      },
+      {
+        "type": "paragraph",
+        "html": "SLIME | ❌ | ❌ | ✅ | TIS + OPSM（针对部分 rollout 的 off-policy 掩蔽）"
+      },
+      {
+        "type": "paragraph",
+        "html": "TorchForge | ✅ | ❌ | ❌ | max_policy_age，逐样本版本标记；硬丢弃"
+      },
+      {
+        "type": "paragraph",
+        "html": "Tunix | ❌ | ✅ | ❌ | 有界队列 + 每步同步；结构上限制陈旧性"
+      },
+      {
+        "type": "paragraph",
+        "html": "verl | ❌ | ❌ | ✅ | 裁剪 TIS 比率；可选 OPSM"
+      },
+      {
+        "type": "paragraph",
+        "html": "verifiers-rl | ❌ | ✅ | ❌ | 深度=1 FIFO + 每步同步；结构上无陈旧性"
+      },
+      {
+        "type": "paragraph",
+        "html": "✅ = 是，❌ = 否，⚠️ = 可选，— = 不适用（同步）"
+      },
+      {
+        "type": "paragraph",
+        "html": "版本拒绝简单正确，但会浪费计算。IS 校正保留吞吐，但带来梯度方差。深度边界最粗，但避免逐样本记账。生产系统（PRIME-RL、AReaL、open-instruct）的趋势是混合：用深度边界获取结构简单性，再用 IS 校正作为损失层的安全网。"
+      },
+      {
+        "type": "paragraph",
+        "html": "陈旧性管理处理的是旧策略下生成的数据。但如果权重更新到达时 rollouts 仍在生成中呢？"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "维度 5：部分 rollout 处理"
+      },
+      {
+        "type": "paragraph",
+        "html": "当权重更新在生成过程中到来时怎么办？"
+      },
+      {
+        "type": "paragraph",
+        "html": "这对长上下文任务至关重要，因为单次 rollout 可能持续数分钟。四种策略："
+      },
+      {
+        "type": "paragraph",
+        "html": "策略 | 库 | 描述"
+      },
+      {
+        "type": "paragraph",
+        "html": "隐式继续 | PipelineRL | 序列不被中断。权重在 forward pass 间切换；序列继续使用新权重。保存的 logprobs 仍有效，因为训练使用记录的 π_old，而非重算。"
+      },
+      {
+        "type": "paragraph",
+        "html": "中止 + 前缀重试 | SkyRL、SLIME | 在途序列被中止。已生成的部分 token 被累积，再用前缀恢复机制在新权重下重提交。"
+      },
+      {
+        "type": "paragraph",
+        "html": "显式保存/恢复 | verl（完全异步） | rollout worker 保存部分 token IDs 与 logprobs 到缓冲区，等待同步后从保存的前缀继续。"
+      },
+      {
+        "type": "paragraph",
+        "html": "组取消（生成继续） | PRIME-RL | 过期的 rollout 组会被取消异步任务；推理服务器仍继续处理在途 HTTP 请求，但结果会被丢弃。权重同步在 HTTP 请求之间触发，不中断正在生成的请求。"
+      },
+      {
+        "type": "paragraph",
+        "html": "不支持部分 rollout | verifiers-rl、OAT、Atropos、Tunix | 权重同步仅在 batch 边界发生；在途生成必须完成后才能同步。"
+      },
+      {
+        "type": "paragraph",
+        "html": "软暂停，in-flight 完成 | AReaL | 暂停信号会阻止新的 KV-cache 分配，但不会中止在途序列。任务调度停止提交新任务；运行中的任务自然完成。同步后恢复分发。"
+      },
+      {
+        "type": "paragraph",
+        "html": "完全休眠，同步时无在途 | ART | 设计上先收集所有 rollouts 再训练。同步时不存在在途序列。Level-1 休眠（在途请求存在）会将 KV cache 下放到 CPU；Level-2 休眠会直接丢弃。"
+      },
+      {
+        "type": "paragraph",
+        "html": "排空或 in-flight（可配置） | open-instruct | 默认：停止标志阻止新预取；权重更新等待在途任务排空。启用 in-flight 更新时，权重会在 token 仍在生成时广播；在途序列继续，但会混用旧/新权重。"
+      },
+      {
+        "type": "paragraph",
+        "html": "到目前为止，每个维度都默认全参训练。但在 LoRA 训练中，你只训练少量 adapter 参数，权重同步问题几乎消失。下面看看这些库如何支持 LoRA。"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "维度 6：LoRA 训练支持"
+      },
+      {
+        "type": "paragraph",
+        "html": "这些库是否支持 LoRA 适配器训练？支持哪些模式？是否利用仅同步 adapter 权重？"
+      },
+      {
+        "type": "paragraph",
+        "html": "LoRA 可说是对预算有限团队最关键的维度：它将可训练参数减少 99%+，峰值激活内存减半；当推理服务器支持 LoRA 时，仅同步 adapter 权重：相比广播完整 7B+ 模型（~100–500ms NCCL），仅传输 adapter delta（rank 32 时约 50MB），传输可低于 1ms。"
+      },
+      {
+        "type": "paragraph",
+        "html": "库 | LoRA 支持 | 模式限制 | LoRA 后端 | 仅同步 adapter"
+      },
+      {
+        "type": "paragraph",
+        "html": "AReaL | ✅ 是 | 仅 FSDP2（不支持 Megatron/Archon） | HF peft | ✅ 是（基于磁盘同步；仅传训练参数；vLLM adapter 热切换）"
+      },
+      {
+        "type": "paragraph",
+        "html": "ART | ✅ 是（主设计） | 两者（共享 + 专用 GPU） | Unsloth/peft（默认）；自定义 Megatron LoRA | ✅ 是（仅保存/加载 adapter；进程内或 HTTP 热切换；基座权重不移动）"
+      },
+      {
+        "type": "paragraph",
+        "html": "Atropos | ✅ 是 | 解耦 | HF peft | ✅ 是（lora_only / lora_restart 模式）"
+      },
+      {
+        "type": "paragraph",
+        "html": "MILES | ✅ 是 | 两者（同机 + 解耦） | Megatron-Bridge | ✅ 是（SGLang 的 adapter sync 配置）"
+      },
+      {
+        "type": "paragraph",
+        "html": "NeMo-RL | ✅ 部分* | 两者 | 自定义（非 peft） | ❌ 无证据"
+      },
+      {
+        "type": "paragraph",
+        "html": "OAT | ✅ 是 | 两者 | HF peft | ✅ 是（LoRA-only sync 模式）"
+      },
+      {
+        "type": "paragraph",
+        "html": "open-instruct | ⚠️ 代码存在但未接入‡ | — | HF peft（仅 SFT/DPO） | ❌ 否（RL trainer 未使用 LoRA）"
+      },
+      {
+        "type": "paragraph",
+        "html": "PipelineRL | ✅ 是 | 非同机 | HF peft | ❌ 否（全量 NCCL 广播）"
+      },
+      {
+        "type": "paragraph",
+        "html": "PRIME-RL | ✅ 是 | 解耦 | 自定义 MultiLoRA（非 peft） | ✅ 是（仅同步 adapter state dict）"
+      },
+      {
+        "type": "paragraph",
+        "html": "ROLL | ✅ 部分† | 仅 DeepSpeed 后端 | HF peft / TRL | ❌ 无证据"
+      },
+      {
+        "type": "paragraph",
+        "html": "SkyRL | ✅ 是 | 两者 | peft（FSDP）/ Megatron-Bridge（Megatron） | ✅ 是（基于文件系统的 adapter 同步）"
+      },
+      {
+        "type": "paragraph",
+        "html": "SLIME | ❌ 否 | — | — | ❌ 否"
+      },
+      {
+        "type": "paragraph",
+        "html": "TorchForge | ❌ 否 | — | — | ❌ 否"
+      },
+      {
+        "type": "paragraph",
+        "html": "Tunix | ✅ 是 | 两者 | qwix（JAX 原生） | ✅ 是（自动检测）"
+      },
+      {
+        "type": "paragraph",
+        "html": "verl | ✅ 是（最完整） | 两者 | peft（FSDP）/ Megatron-Bridge（Megatron） | ✅ 是（未合并 adapter 同步）"
+      },
+      {
+        "type": "paragraph",
+        "html": "verifiers-rl | ✅ 是（通过 prime-rl） | 解耦 | HF peft + FSDP2 + vLLM | ✅ 是（vLLM LoRA serving）"
+      },
+      {
+        "type": "paragraph",
+        "html": "* NeMo-RL：GRPO 与 DPO 的 LoRA 仅在 DTensor 后端支持；Megatron Core 后端仅支持 SFT（RL LoRA 标为“即将到来”）。使用自定义 DTensor 兼容 LoRA 模块（非 peft），可选 Triton 融合内核。"
+      },
+      {
+        "type": "paragraph",
+        "html": "† ROLL：官方仅在 DeepSpeed 后端支持 LoRA。Megatron 后端 LoRA 出现在 2026 年 2 月更新日志，但仍实验性。"
+      },
+      {
+        "type": "paragraph",
+        "html": "‡ open-instruct：模型配置暴露 LoRA 相关字段（use_peft、lora_r、lora_alpha），并在 checkpoint 逻辑中保存 adapter。但 RL 训练路径未初始化 peft 模型；截至 2026 年 3 月，LoRA 仍是 SFT/DPO 专用特性。"
+      },
+      {
+        "type": "paragraph",
+        "html": "三种 LoRA 实现家族："
+      },
+      {
+        "type": "paragraph",
+        "html": "HuggingFace peft（PipelineRL、SkyRL/FSDP、verifiers-rl、ROLL、OAT、Atropos）：最常见。标准 checkpoint 格式（adapter_model.safetensors），与 HF Transformers 训练循环兼容。与 ZeRO-3 的交互需要注意：例如 OAT 必须禁用融合 LM head；ROLL 必须禁用梯度 checkpointing。"
+      },
+      {
+        "type": "paragraph",
+        "html": "Megatron-Bridge（verl/Megatron、SkyRL/Megatron、MILES）：用于 3D 并行训练（TP × PP × DP）。支持多种 LoRA 类型：lora、canonical_lora（将合并 QKV 拆为独立 Q/K/V adapter）、vlm_lora、dora。canonical_lora 避免 QKV 合并，从而改善训练稳定性。MILES 同时以 HF peft 格式与 Megatron 原生 per-rank 格式保存 checkpoint。"
+      },
+      {
+        "type": "paragraph",
+        "html": "自定义实现（NeMo-RL、PRIME-RL、Tunix/qwix）：库内自定义 LoRA 模块，与 peft checkpoint 不兼容。PRIME-RL 独特地支持在单次训练中并行多个 adapter，用于多实验并行。Tunix 使用 Google 的 qwix JAX 库，提供内建 QLoRA（NF4 量化）与 TPU 原生梯度路由。NeMo-RL 使用自定义 DTensor 兼容模块与可选 Triton 融合内核。"
+      },
+      {
+        "type": "paragraph",
+        "html": "仅同步 adapter 的权重同步机会（与维度 3 的交互）："
+      },
+      {
+        "type": "paragraph",
+        "html": "13 个库中有 8 个支持只推送 LoRA adapter delta。这完全改变了权重同步问题的性质（维度 3）：在全参训练时，中断模型（每次 forward pass 锁 vs. 每 HTTP 请求中止 vs. 每 batch 暂停）决定 NCCL 广播时浪费多少生成；而在 LoRA adapter-only 同步时，传输极小，几乎任何中断模型都能达到类似吞吐！甚至 Atropos 的粗暴 HTTP 热切换也可行。"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "维度 7：分布式训练后端与并行"
+      },
+      {
+        "type": "paragraph",
+        "html": "这些库使用何种训练后端？并行策略如何？这如何限制或启用异步架构？"
+      },
+      {
+        "type": "paragraph",
+        "html": "该维度贯穿所有其他维度。训练后端决定每张 GPU 可容纳的模型规模、将权重广播到推理服务器前需要的 collective 操作数量，以及可训练的模型架构范围。它是影响 30B 以上模型或从稠密模型迈向 MoE 的最关键决策。"
+      },
+      {
+        "type": "paragraph",
+        "html": "库 | 训练后端 | 并行 | HF 模型加载 | MoE / EP 支持"
+      },
+      {
+        "type": "paragraph",
+        "html": "AReaL | FSDP2、Megatron、Archon | DP、SP、TP、PP、CP、EP | ✅ 直连/转换 | ✅"
+      },
+      {
+        "type": "paragraph",
+        "html": "ART | Unsloth、Megatron | DP、TP、EP | ✅ 直连/转换 | ✅"
+      },
+      {
+        "type": "paragraph",
+        "html": "Atropos | PyTorch 原生、TRL | DP | ✅ 直连 | ❌"
+      },
+      {
+        "type": "paragraph",
+        "html": "MILES | Megatron、FSDP2 | DP、TP、PP | 🔄 转换 | ✅"
+      },
+      {
+        "type": "paragraph",
+        "html": "NeMo-RL | FSDP2、Megatron | DP、SP、TP、PP、CP、EP | ✅ 直连/转换 | ✅"
+      },
+      {
+        "type": "paragraph",
+        "html": "OAT | DeepSpeed | DP、TP | ✅ 直连 | ❌"
+      },
+      {
+        "type": "paragraph",
+        "html": "open-instruct | DeepSpeed | DP、SP | ✅ 直连 | ❌"
+      },
+      {
+        "type": "paragraph",
+        "html": "PipelineRL | DeepSpeed | DP、SP | ✅ 直连 | ❌"
+      },
+      {
+        "type": "paragraph",
+        "html": "PRIME-RL | FSDP2 | DP、TP、CP、EP | ✅ 直连 | ✅"
+      },
+      {
+        "type": "paragraph",
+        "html": "ROLL | DeepSpeed、Megatron、FSDP2 | DP、SP、TP、PP、CP、EP | ✅ 直连/转换 | ✅"
+      },
+      {
+        "type": "paragraph",
+        "html": "SkyRL | FSDP、Megatron | DP、SP、TP、PP、EP | ✅ 直连/转换 | ✅"
+      },
+      {
+        "type": "paragraph",
+        "html": "SLIME | Megatron | DP、TP、PP、SP | 🔄 转换 | ✅"
+      },
+      {
+        "type": "paragraph",
+        "html": "TorchForge | FSDP2 | DP、TP、CP | ✅ via TorchTitan | ❌"
+      },
+      {
+        "type": "paragraph",
+        "html": "Tunix | JAX/XLA | DP、TP | ❌ 自定义 Flax | ❌"
+      },
+      {
+        "type": "paragraph",
+        "html": "verl | FSDP、Megatron | DP、SP、TP、PP、CP、EP | ✅ 直连/转换 | ✅"
+      },
+      {
+        "type": "paragraph",
+        "html": "verifiers-rl | DeepSpeed | DP | ✅ 直连 | ❌"
+      },
+      {
+        "type": "paragraph",
+        "html": "训练后端对异步 RL 架构的直接影响："
+      },
+      {
+        "type": "paragraph",
+        "html": "权重同步速度是训练后端的直接函数；同步越快，陈旧性越低。"
+      },
+      {
+        "type": "paragraph",
+        "html": "在解耦异步设置中，权重同步未必阻塞推理。关键设计是权重更新如何与 in-flight 生成交互。存在四种策略，按干扰程度从低到高排列："
+      },
+      {
+        "type": "paragraph",
+        "html": "原子交换，不中断。将完整权重更新作为单个阻塞 RPC 发给推理引擎。每个 forward pass 看到的要么全旧要么全新，绝不混合。生成最多暂停一个 forward pass 间隙（几毫秒）。（PipelineRL）"
+      },
+      {
+        "type": "paragraph",
+        "html": "逐参数流式，不中断。每个参数单独通过 RPC + NCCL 广播发送。forward pass 在单个参数更新间交错，因此 in-flight 序列会跨层混用新旧权重。重叠最大，但一致性最弱。（open-instruct，inflight 模式）"
+      },
+      {
+        "type": "paragraph",
+        "html": "分发门控，排空 in-flight，再同步。新请求被阻塞，在途序列自然完成后才广播权重。无浪费 token，但同步气泡与最长 in-flight 序列长度成正比。（PRIME-RL、AReaL、open-instruct 默认、verl 完全异步）"
+      },
+      {
+        "type": "paragraph",
+        "html": "硬暂停或中止。推理被暂停，或在传权前中止 in-flight 请求。最干净的一致性，最高的计算浪费。（verl、SkyRL）"
+      },
+      {
+        "type": "paragraph",
+        "html": "即便在推理继续的库中，较慢的同步也意味着更长的过期权重使用期。训练器与推理池之间的策略版本差距会随同步时长增长，需要关注。"
+      },
+      {
+        "type": "paragraph",
+        "html": "MoE 支持正在成为稀疏模型时代的关键分化点。趋势很明确：前沿模型越来越稀疏（DeepSeek-V3、Qwen3-MoE、Mixtral、DBRX），开源 MoE 正成为后训练默认起点。训练这些模型需要专家并行（EP），但多数异步 RL 库不支持。只有 Megatron 系库（verl、SLIME、MILES、ROLL、NeMo-RL）与 PRIME-RL 的 FSDP2+EP 路径能正确支持 EP。ZeRO 系库（PipelineRL、verifiers-rl、OAT、open-instruct）可以加载 MoE 的 HF 模型类，但没有 EP 时，每个专家会被分片到所有 ZeRO-3 rank，而不是放在专门的 rank 上；每次 forward pass 都需要 AllGather 每个专家，抵消稀疏优势。EP 也会让权重同步复杂化：在向 vLLM/SGLang 广播之前（这些推理引擎通常在单一 TP 组上提供全部专家），训练器必须从每个 EP rank AllGather 专家参数，带来 O(N*experts × E_size) 的通信（E_size 为每个专家参数量）。对于 235B MoE、256 专家，这一开销非常可观。想在下一代开源 MoE 后训练中保持相关性，必须同时具备 EP 感知训练与 EP 感知权重同步。"
+      },
+      {
+        "type": "paragraph",
+        "html": "MoE LoRA 是一个新兴且棘手的需求。稠密模型的 LoRA 已较成熟（维度 6）：在注意力投影上挂 adapter、训练并仅同步 adapter delta。MoE LoRA 更难，因为自然目标是专家 FFN 层，每个专家都需要自己的 adapter。对于 64 专家、每专家 rank-32 LoRA 的门控/上/下投影，adapter 数量从约 20（稠密）跳到 200+，且分布在 EP rank 上。权重同步需要从每个 EP rank 汇集 adapter 再推送给推理服务器，这是稠密 LoRA 中不存在的协调问题。调研库中，只有 ART 明确实现了 MoE 专家 LoRA（Megatron EP 路径，逐专家 LoRA + 手工 allreduce），MILES 通过 Megatron-Bridge 支持 LoRA 并可作用于专家层。verl 的 Megatron-Bridge 路径支持 vlm_lora 等类型，但未明确 MoE 专家 LoRA。vLLM 的 LoRA serving 不原生支持每专家 adapter；它加载的是统一 adapter，因此 MoE LoRA 的 adapter-only 同步需要自定义推理侧逻辑。随着 MoE 模型成为默认，具备高效 adapter-only 同步的 MoE LoRA 将是关键能力缺口。"
+      },
+      {
+        "type": "paragraph",
+        "html": "以上就是七个维度的全景。它们各自刻画了同一问题的不同面向。合在一起，就形成了完整的对比视角。现在把它们放在一页上。"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "4. 全局概览：16 个库一览"
+      },
+      {
+        "type": "paragraph",
+        "html": "注：该概览反映截至 2026 年 3 月的状态。生态演进迅速，具体功能、后端与集成可能很快变化。"
+      },
+      {
+        "type": "paragraph",
+        "html": "库 | 组织 | 编排类型 | 推理服务器 | 权重同步 | 陈旧性管理 | 部分 rollout | 训练后端 | 分布式并行 | LoRA 支持"
+      },
+      {
+        "type": "paragraph",
+        "html": "AReaL | inclusionAI | 原生 Python（asyncio + HTTP RPC）；可插拔 Ray/Slurm | vLLM, SGLang | NCCL 分块或文件系统 safetensors | 深度 + IS（可选） | 🟧 软暂停（in-flight 完成） | FSDP2 或 Megatron-LM 或 Archon | FSDP2：DP+SP+TP；Megatron：TP+SP+PP+CP+EP；Archon：FSDP2+TP+SP+PP+EP | ✅ peft（adapter-only）"
+      },
+      {
+        "type": "paragraph",
+        "html": "ART | OpenPipe | 原生 Python（asyncio + 多进程子进程） | vLLM | LoRA adapter 交换（不传全量权重） | 同步（无） | ❌ 无 | Unsloth（单 GPU）；Megatron-LM | 无（Unsloth）；TP×EP×DP（Megatron） | ✅ peft / Megatron LoRA（adapter-only）"
+      },
+      {
+        "type": "paragraph",
+        "html": "Atropos | NousResearch | HTTP 微服务（FastAPI） | vLLM, SGLang, OpenAI | 文件系统 checkpoint + vLLM 重启 | 深度边界 | ❌ 无 | 单 GPU PyTorch；TRL/Accelerate | 无（原生）；FSDP/ZeRO via TRL adapter | ✅ peft（adapter-only）"
+      },
+      {
+        "type": "paragraph",
+        "html": "MILES | radixark | 分布式 Actor（Ray） | SGLang | NCCL 或 CUDA IPC | IS 校正 | 🟧 中止 + 回收至缓冲 | Megatron-LM（主）；FSDP2 | Megatron：TP×PP×DP；FSDP2 可用；同机 CUDA IPC | ✅ Megatron-Bridge（adapter-only）"
+      },
+      {
+        "type": "paragraph",
+        "html": "NeMo-RL | NVIDIA | 分布式 Actor（Ray） | vLLM, SGLang, Megatron | NCCL 或 CUDA IPC-ZMQ 或 HTTP | 版本拒绝 | ✅ in-flight 继续 | DTensor（FSDP2+TP）或 Megatron-Bridge | DTensor：TP+SP+CP+FSDP2；Megatron：TP×PP×CP×EP×ETP + FSDP2 | 🟧 自定义（无 adapter-only 同步）"
+      },
+      {
+        "type": "paragraph",
+        "html": "OAT | SAIL-SG | 分布式 Actor（Ray） | vLLM | NCCL per-param + ZeRO-3 gather | IS 校正 | ❌ 无 | DeepSpeed ZeRO-2/3 | ZeRO-2 / ZeRO-3 DP；AutoTP | ✅ peft（adapter-only）"
+      },
+      {
+        "type": "paragraph",
+        "html": "open-instruct | AI2（AllenAI） | 分布式 Actor（Ray） | vLLM | NCCL broadcast；可选 in-flight 更新 | 深度 + IS（可选） | 🟧 排空或 in-flight（可配） | DeepSpeed ZeRO-0/2/3 | ZeRO-3 DP + Ulysses SP；vLLM TP（仅推理） | ❌ 无"
+      },
+      {
+        "type": "paragraph",
+        "html": "PipelineRL | ServiceNow | 原生 Python + Pub/Sub（asyncio + Redis/JSONL） | vLLM | NCCL pg + HTTP notify | 版本拒绝 | ✅ 隐式继续 | DeepSpeed ZeRO-3 | ZeRO-3 DP + Ring SP；ZeRO++ 可用 | ✅ peft（全量同步）"
+      },
+      {
+        "type": "paragraph",
+        "html": "PRIME-RL | PrimeIntellect | 原生 Python（asyncio + FS/ZMQ） | vLLM | 文件系统 safetensors + HTTP 或 NCCL | 版本 + 深度 + IS | 🟧 组取消 | FSDP2（仅） | FSDP2 per-block + TP + CP + EP；pp=1 | ✅ 自定义 MultiLoRA（adapter-only）"
+      },
+      {
+        "type": "paragraph",
+        "html": "ROLL | Alibaba | 分布式 Actor（Ray） | vLLM, SGLang | NCCL 专用更新组 | IS 校正 | ❌ 无 | DeepSpeed 或 Megatron 或 FSDP2 | DS：ZeRO+Ulysses SP；Megatron：TP×PP×CP×EP；FSDP2：HSDP+Ulysses | 🟧 peft（仅 DeepSpeed）"
+      },
+      {
+        "type": "paragraph",
+        "html": "SkyRL | NovaSky-AI | 分布式 Actor（Ray）+ 原生 Python | vLLM, SGLang | NCCL pg | 深度边界 | 🟧 中止 + 前缀重试 | FSDP/FSDP2 或 Megatron-Bridge | FSDP：ZeRO 分片 + Ulysses SP；Megatron：完整 5D via bridge；JAX 后端 | ✅ peft / Megatron-Bridge（adapter-only）"
+      },
+      {
+        "type": "paragraph",
+        "html": "SLIME | THUDM | 分布式 Actor（Ray） | SGLang | NCCL pg，分桶 | IS 校正 | 🟧 中止 + 回收至缓冲 | Megatron-LM | TP×PP×DP；Megatron→HF 转换；MoE EP all-gather | ❌ 无"
+      },
+      {
+        "type": "paragraph",
+        "html": "TorchForge | Meta | 分布式 Actor（Monarch） | vLLM | torchstore + 共享内存预取 | 版本拒绝 | ❌ 无 | FSDP2 via TorchTitan | FSDP2 + TP；CP 部分；PP 尚未实现 | ❌ 无"
+      },
+      {
+        "type": "paragraph",
+        "html": "Tunix | Google | 原生 Python（ThreadPoolExecutor + asyncio）；JAX 原生 | vLLM, SGLang, JAX | 跨 mesh 重分片 | 深度边界 | ❌ 无 | JAX/XLA 2D mesh | 2D JAX mesh：FSDP + TP；无 PP；TPU 优先 | ✅ qwix / QLoRA（adapter-only）"
+      },
+      {
+        "type": "paragraph",
+        "html": "verl | ByteDance | 分布式 Actor（Ray） | vLLM, SGLang | NCCL + checkpoint-engine 分桶 | IS 校正 | ✅ 显式保存/恢复 | FSDP1/FSDP2 或 Megatron-Core | FSDP：ZeRO-2/3/HSDP + Ulysses SP；Megatron：TP×PP×VPP×CP×EP×ETP | ✅ peft / Megatron-Bridge（adapter-only）"
+      },
+      {
+        "type": "paragraph",
+        "html": "verifiers-rl | PrimeIntellect | 原生 Python（threading + asyncio） | vLLM | PyNCCL broadcast | 深度边界（深度=1） | ❌ 无 | DeepSpeed ZeRO-3（Accelerate） | 仅 ZeRO-3 DP；无 TP/PP | ✅ peft（adapter-only）"
+      },
+      {
+        "type": "paragraph",
+        "html": "这就是当前的全貌。但领域变化很快，若干新趋势即将以未曾预料的方式压力测试这些架构。"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "5. 下一波：设计影响"
+      },
+      {
+        "type": "paragraph",
+        "html": "以下趋势不是新技术清单，而是对当下架构与算法选择的具体压力测试。问题不是“前沿是什么”，而是“如果这个趋势胜出，我的现有栈会断在哪里？”"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "5.1 无评论家算法：释放内存，但加大权重同步压力"
+      },
+      {
+        "type": "paragraph",
+        "html": "PPO 的价值网络将训练节点的内存占用翻倍。领域正收敛到无评论家变体（GRPO、REINFORCE++、Online DPO），因为长 CoT 推理让这个开销难以承受。"
+      },
+      {
+        "type": "paragraph",
+        "html": "带来的解锁：移除评论家释放 ~50% 训练 GPU 内存。这些余量可以用于：(a) 更大 rollout batch，直接降低拖尾方差问题；或 (b) 将推理与训练同机部署，从而消除独立 NCCL 权重同步进程组。"
+      },
+      {
+        "type": "paragraph",
+        "html": "没有解决的：无评论家方法仍需要频繁向推理服务器推送权重。事实上，它们可能增加同步压力：没有价值网络提供稳定基线，GRPO 类算法需要更大的组规模（G=8–32）来降低优势方差，这意味着每步更多 rollouts、策略漂移更快。只在粗粒度边界同步（每步或每 K 步）的库，会在无评论家训练下出现更严重的陈旧性。"
+      },
+      {
+        "type": "paragraph",
+        "html": "非对称轨迹过滤（GRPO-RoC：过采样 rollouts，严格过滤正样本，均匀下采样负样本；DeepSeek-V3.2 与 MiniMax-M1 中的 CISPO/DAPO 异步裁剪）对陈旧性有更微妙的影响。问题不是 batch 缩小，而是幸存样本的组成。正轨迹（容易问题的正确解）收敛更快、被优先保留；更难的 prompt 产出多数负轨迹被丢弃。结果是：幸存样本系统性更旧，因为它们来自更早训练中就能解决的简单 prompt。一个“名义上新鲜”的 buffer，可能包含跨多个策略版本的正样本。按 batch 级陈旧性门控（如 SkyRL 的 max_staleness_steps 容量门控、Atropos 的 max_batches_offpolicy）无法检测这种批内版本差。此时逐样本版本标记不是可选项；训练器必须能拒绝或 IS 校正那些版本差距过大的样本，即便它们所在的 batch 是最近进入的。"
+      },
+      {
+        "type": "paragraph",
+        "html": "无评论家方法简化了训练侧，但评分侧将更昂贵：过程奖励模型对中间推理步骤评分，而非仅终局答案，这会带来新的同步瓶颈。"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "5.2 过程奖励：新的同步屏障"
+      },
+      {
+        "type": "paragraph",
+        "html": "终局奖励是标量且便宜：rollout 结束时调用一次 verifier。过程奖励模型（PRM）会对中间步骤评分，这需要 (a) 对完整推理轨迹进行独立 PRM 前向，或 (b) 在生成过程中按 token 计算在线效用。"
+      },
+      {
+        "type": "paragraph",
+        "html": "PRPO（熵峰分段 + PRM 逐段评分）与 DEEP-GRPO（在线效用驱动的 pivot 识别）都会在生成与训练之间引入额外计算开销。在当前库生态中，这一阶段要么被映射到预处理池（PipelineRL），要么需要额外 Ray actor（verl、NeMo-RL），而这两者都不是为此设计。"
+      },
+      {
+        "type": "paragraph",
+        "html": "关键含义：基于 PRM 的 credit assignment 打破了“奖励很便宜”的假设。对 7B 模型的 32K-token 推理轨迹做一次 PRM 前向可能非常昂贵。在 G=8 completions/prompt 时，奖励计算可能与生成耗时同阶。两点后果："
+      },
+      {
+        "type": "paragraph",
+        "html": "异步奖励流水线变为必需。PRIME-RL 在完全异步的 Orchestrator–Trainer pipeline 中并行执行奖励评分；Orchestrator 负责评分，Trainer 独立做反向与优化器 step。对 PRM 来说，这种流水线不是可选项；同步评分会主导墙钟时间。"
+      },
+      {
+        "type": "paragraph",
+        "html": "独立预处理池变为必需。例如在专用 GPU 层运行参考 logprobs 计算与 PRM 评分，并在生成与训练之间流水化，这是密集 credit assignment 的正确架构。"
+      },
+      {
+        "type": "paragraph",
+        "html": "DEEP-GRPO 的 pivot 重采样引入了第三种生成模式，与标准 rollouts 与部分 rollout 恢复并列：从序列中途状态进行局部重采样。这需要在 pivot 点保存 KV cache，而当前任何异步库都未开箱支持。若权重在 pivot 生成与局部重采样之间发生变化，会破坏优势估计的正确性，可能需要在 pivot 边界进行权重同步。我们当然可以用一次 prefill 重算 KV cache，但这会浪费宝贵算力。"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "5.3 多智能体共进化：拖尾问题倍增"
+      },
+      {
+        "type": "paragraph",
+        "html": "单智能体 GRPO 每个 prompt 生成 G 个 completion。多智能体自博弈让“组”的有效范围跨多个模型串行调用，奖励要等链路中所有模型完成后才能得到。"
+      },
+      {
+        "type": "paragraph",
+        "html": "拖尾动态会质变。在单智能体 GRPO 中，拖尾是组内最长 completion，是单峰长度分布的尾部事件。在多智能体管线中，拖尾是多个长度分布的乘积。在 Proposer/Solver 架构中，若每个智能体的 90 分位 completion 时间是中位数的 5 倍，则联合 90 分位约为中位数的 25 倍。"
+      },
+      {
+        "type": "paragraph",
+        "html": "多智能体 RL 意味着新的工作单元。今天所有库的原子单位是单个 (prompt, completion, reward) 三元组。在多智能体训练中，原子单位变成一个 episode：由多轮对话、工具调用与智能体间消息组成的有向图。缓冲区设计、陈旧性追踪与优势计算都需要面向 episode 运作。episode 的重放或分叉也可能出现。"
+      },
+      {
+        "type": "paragraph",
+        "html": "多智能体的拖尾问题已经足够糟糕；当模型在推理与训练框架间不一致时（尤其是 MoE 架构），还会引出新一类问题。"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "5.4 训练–推理不匹配：Deepseek v3.2 MoE 案例"
+      },
+      {
+        "type": "paragraph",
+        "html": "训练–推理不匹配是异步 RL 的共性问题：rollout 数据在 π*old 下生成，而梯度更新在 π*θ 下计算，两者天然偏离。多数库用 IS 校正或硬版本拒绝处理，但 DeepSeek-V3.2 的生产经验揭示了 IS 无法修复的结构性不匹配来源。"
+      },
+      {
+        "type": "paragraph",
+        "html": "来源 1：MoE 专家路由不一致。MoE 模型每个 token 激活稀疏专家子集。推理框架（vLLM、SGLang）与训练框架（Megatron、FSDP）分别实现路由器，浮点舍入差异会导致相同输入激活不同专家。当路由分歧时，激活参数子空间发生离散跳变；在专家 A 下计算的梯度会应用到专家 B 激活的权重上。DeepSeek-V3.2 发现这会“导致激活参数子空间的突变，破坏优化稳定性并加剧 off-policy 问题”。"
+      },
+      {
+        "type": "paragraph",
+        "html": "他们的解决方案 Keep Routing：保留采样（推理）时的专家路由路径，并在训练前向中强制使用相同路由。这要求推理框架返回路由决策（与 token logprobs 一起），训练框架也要接受并应用这些路由。当前没有任何开源异步 RL 库实现这一点。对训练 MoE 模型的团队（DeepSeek-V3 级、Mixtral、未来开源 MoE），这是正确性问题而非性能问题。"
+      },
+      {
+        "type": "paragraph",
+        "html": "来源 2：采样截断 mask 不匹配。top-p/top-k 采样会在生成时截断词表，排除低概率 token。在训练中，π*θ 仍看到完整词表。这违反重要性采样等式：π*old（截断）与 π*θ（完整）的动作空间不同，因此 π*θ(o*_t)/π*old(o_t) 在被掩蔽 token 上不可定义。"
+      },
+      {
+        "type": "paragraph",
+        "html": "DeepSeek-V3.2 的 Keep Sampling Mask 解决方案：在采样时记录截断 mask，并在训练前向中应用到 π_θ，使两者在同一词表子集上运作。这需要从推理服务器向训练器回传 mask，这也是当前库数据流不支持的。"
+      },
+      {
+        "type": "paragraph",
+        "html": "对库设计的影响：Keep Routing 与 Keep Sampling Mask 要求推理服务器返回额外元数据（expert_routing、sampling_mask）与 token logprobs 一起传回。当前推理服务器与训练器的 API 约定是 (token_ids, logprobs, finish_reason)。扩展为 (token_ids, logprobs, finish_reason, expert_routing, sampling_mask) 将破坏每个库的数据流。"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "5.5 蒸馏：同一异步问题的另一种名字"
+      },
+      {
+        "type": "paragraph",
+        "html": "On-policy 蒸馏中，学生模型生成序列，教师模型用 token 级 logprobs 评分，这在结构上与 GRPO 的异步协调问题完全相同。"
+      },
+      {
+        "type": "paragraph",
+        "html": "本调研的每个维度——rollout 缓冲、权重同步协议、陈旧性管理、部分 rollout 处理——都直接适用于蒸馏。生成池产生学生 rollouts，教师评分（替代 verifier），训练器用优势修正的 GRPO 损失或独立 KL 目标进行反向。自蒸馏还引入一个协调需求：教师是学生在 N−k 步的冻结快照，因此系统必须周期性 checkpoint 策略并热切换教师服务器，而不打断流水线。当前没有库完全自动化这一点。"
+      },
+      {
+        "type": "paragraph",
+        "html": "对库设计的实践含义是：异步 RL 基础设施不应仅为 GRPO 构建。生成–评分–训练管线是一个通用模式，适用于 outcome reward 的 RL、process reward 的 RL、on-policy 蒸馏与自蒸馏。SLIME、MILES、PRIME-RL、AReaL、NeMo-RL 已支持 GRPO 与 on-policy 蒸馏，正是因为它们将评分阶段做成可插拔组件，而非硬编码 verifier 调用。任何希望具备通用性的异步训练器，都应把评分阶段定义为接口（HTTP endpoint、Ray actor 或同机前向），让 buffer、陈旧性与权重同步机制与评分内容无关。"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "6. TRL 异步训练器的设计选择"
+      },
+      {
+        "type": "paragraph",
+        "html": "在调研完整的生态（编排模型、buffer 设计、权重同步协议、陈旧性策略与部分 rollout 处理）之后，我们可以提出 TRL 异步训练器的具体设计选择，以及我们将探索的前瞻方向。"
+      },
+      {
+        "type": "paragraph",
+        "html": "设计原则：保持编排轻量"
+      },
+      {
+        "type": "paragraph",
+        "html": "TRL 现有实现的一大优势是，它不依赖沉重的编排系统来管理训练生命周期。库内数据仍是原生 Python 对象，没有外部框架“染色”。我们希望保持这一点：编排尽可能简单，不引入重量级外部框架。"
+      },
+      {
+        "type": "paragraph",
+        "html": "1. 采用带每 token model_version 的有界队列（不使用双缓冲）"
+      },
+      {
+        "type": "paragraph",
+        "html": "与其从双缓冲起步再过渡到更细粒度，我们直接采用带每 token model_version 的有界队列。这是最低粒度的起点：它支持 token 级 IS 校正，支持简单的准入门控（丢弃或降权超出陈旧性阈值的 token），并避免日后再为 batch 级 buffer 补丁式加入 token 级溯源。"
+      },
+      {
+        "type": "paragraph",
+        "html": "2. 使用带打包传输的 NCCL 权重同步"
+      },
+      {
+        "type": "paragraph",
+        "html": "NCCL 进程组是必需品，我们已在使用。下一步是加入分桶：vLLM 的 NCCLWeightTransferEngine 在 packed=True 时可直接进行分桶广播；它会将参数打包为可配置大小的 uint8 buffer（默认 1GB，双缓冲 CUDA streams），并通过独立 NCCL 通信器广播。这消除逐参数调用的开销，显著提升同步速度。"
+      },
+      {
+        "type": "paragraph",
+        "html": "超越 vLLM 内置引擎，我们还将探索更高性能的权重打包库，面向更苛刻场景："
+      },
+      {
+        "type": "paragraph",
+        "html": "Awex（inclusionAI），专用于 RL 训练的权重同步框架，解决跨引擎传输难题：训练引擎（Megatron、DeepSpeed）与推理引擎（SGLang、vLLM）采用完全不同的并行策略与张量布局。Awex 通过统一转换层与确定性的 P2P 传输方案抽象这一点，支持分离 GPU 与同机 CUDA IPC 模式。"
+      },
+      {
+        "type": "paragraph",
+        "html": "Mooncake Transfer Engine，SGLang 正在将 Mooncake 作为高性能传输层，覆盖 PD 解耦、分层 KV 缓存与弹性专家并行。权重同步方面，其伴随的 checkpoint-engine 使用 Mooncake 的 RDMA P2P 传输在 ~16–17 秒内更新万亿参数模型（Kimi-K2，256×H20 GPU）。Mooncake 已加入 PyTorch Ecosystem，并作为 NVIDIA NIXL 传输库的后端插件。"
+      },
+      {
+        "type": "paragraph",
+        "html": "3. 面向代理式工作负载的部分 rollout 支持"
+      },
+      {
+        "type": "paragraph",
+        "html": "多轮工具使用任务可能让单次 rollout 持续数分钟。若无法在权重更新时处理 in-flight rollouts，同步窗口会成为管线阻塞。我们可能会实验两种策略："
+      },
+      {
+        "type": "paragraph",
+        "html": "前缀恢复：权重更新发生在 rollout 过程中时，保存 KV cache 前缀，在新策略下从检查点恢复生成。这保留了部分计算，但要求推理引擎支持中途权重切换。"
+      },
+      {
+        "type": "paragraph",
+        "html": "中止并重试：丢弃超过陈旧性阈值的 in-flight rollouts 并重新排队。实现简单，但浪费的计算与平均 rollout 长度成正比。"
+      },
+      {
+        "type": "paragraph",
+        "html": "就是这样。敬请期待，我们正在为 TRL 构建具体的异步 GRPO 训练器，很快会发布 🧑‍🍳！"
       }
     ]
   },
