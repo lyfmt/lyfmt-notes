@@ -1452,7 +1452,7 @@
         }
       ],
       "detail": {
-        "available": false,
+        "available": true,
         "layout": "draft",
         "translatedFrom": "https://www.latent.space/p/nvidia-brev-dynamo",
         "sourceName": "Latent Space",
