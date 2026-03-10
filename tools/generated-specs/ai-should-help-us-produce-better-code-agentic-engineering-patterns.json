@@ -1,0 +1,286 @@
+{
+  "slug": "ai-should-help-us-produce-better-code-agentic-engineering-patterns",
+  "title": "AI should help us produce better code - Agentic Engineering Patterns",
+  "author": "Simon Willison",
+  "publishedAt": "2026-03-10",
+  "source": "Simon Willison",
+  "url": "https://simonwillison.net/guides/agentic-engineering-patterns/better-code/#atom-everything",
+  "tags": [
+    "AI",
+    "Tools",
+    "Agents",
+    "DevTools"
+  ],
+  "excerpt": "这篇文章围绕“AI should help us produce better code - Agentic Engineering Patterns”展开，RSS 摘要提到：AI should help us produce better code - Agentic Engineering Patterns",
+  "content": [
+    {
+      "heading": "文章核心",
+      "paragraphs": [
+        "基于 RSS 摘要与页面元数据，原文重点是：AI should help us produce better code - Agentic Engineering Patterns",
+        "来源信息：Simon Willison｜2026-03-10。"
+      ]
+    },
+    {
+      "heading": "值得继续补充的点",
+      "paragraphs": [
+        "从趋势上看，这类文章值得关注的点在于 AI 正在从一次性回答工具，进一步走向可持续嵌入工作流的执行层。",
+        "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+      ]
+    }
+  ],
+  "detail": {
+    "available": true,
+    "layout": "detail-zh",
+    "translatedFrom": "https://simonwillison.net/guides/agentic-engineering-patterns/better-code/#atom-everything",
+    "sourceName": "Simon Willison",
+    "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+    "blocks": [
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Simon Willison’s Weblog"
+      },
+      {
+        "type": "paragraph",
+        "html": "<a href=\"https://simonwillison.net/guides/\" target=\"_blank\" rel=\"noreferrer noopener\">Guides</a> &gt; <a href=\"https://simonwillison.net/guides/agentic-engineering-patterns/\" target=\"_blank\" rel=\"noreferrer noopener\">Agentic Engineering Patterns</a>"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "AI should help us produce better code"
+      },
+      {
+        "type": "paragraph",
+        "html": "Many developers worry that outsourcing their code to AI tools will result in a drop in quality, producing bad code that&#x27;s churned out fast enough that decision makers are willing to overlook its flaws."
+      },
+      {
+        "type": "paragraph",
+        "html": "If adopting coding agents demonstrably reduces the quality of the code and features you are producing, you should address that problem directly: figure out which aspects of your process are hurting the quality of your output and fix them."
+      },
+      {
+        "type": "paragraph",
+        "html": "Shipping worse code with agents is a <em>choice</em>. We can choose to ship code that is better instead."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Avoiding taking on technical debt"
+      },
+      {
+        "type": "paragraph",
+        "html": "I like to think about shipping better code in terms of technical debt. We take on technical debt as the result of trade-offs: doing things &quot;the right way&quot; would take too long, so we work within the time constraints we are under and cross our fingers that our project will survive long enough to pay down the debt later on."
+      },
+      {
+        "type": "paragraph",
+        "html": "The best mitigation for technical debt is to avoid taking it on in the first place."
+      },
+      {
+        "type": "paragraph",
+        "html": "In my experience, a common category of technical debt fixes is changes that are simple but time-consuming."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Our original API design doesn&#x27;t cover an important case that emerged later on. Fixing that API would require changing code in dozens of different places, making it quicker to add a very slightly different new API and live with the duplication.",
+          "We made a poor choice naming a concept early on - teams rather than groups for example - but cleaning up that nomenclature everywhere in the code is too much work so we only fix it in the UI.",
+          "Our system has grown duplicate but slightly different functionality over time which needs combining and refactoring.",
+          "One of our files has grown to several thousand lines of code which we would ideally split into separate modules."
+        ]
+      },
+      {
+        "type": "paragraph",
+        "html": "All of these changes are conceptually simple but still need time dedicated to them, which can be hard to justify given more pressing issues."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Coding agents can handle these for us"
+      },
+      {
+        "type": "paragraph",
+        "html": "Refactoring tasks like this are an <em>ideal</em> application of coding agents."
+      },
+      {
+        "type": "paragraph",
+        "html": "Fire up an agent, tell it what to change and leave it to churn away in a branch or worktree somewhere in the background."
+      },
+      {
+        "type": "paragraph",
+        "html": "I usually use asynchronous coding agents for this such as <a href=\"https://jules.google.com/\" target=\"_blank\" rel=\"noreferrer noopener\">Gemini Jules</a>, <a href=\"https://developers.openai.com/codex/cloud/\" target=\"_blank\" rel=\"noreferrer noopener\">OpenAI Codex web</a>, or <a href=\"https://code.claude.com/docs/en/claude-code-on-the-web\" target=\"_blank\" rel=\"noreferrer noopener\">Claude Code on the web</a>. That way I can run those refactoring jobs without interrupting my flow on my laptop."
+      },
+      {
+        "type": "paragraph",
+        "html": "Evaluate the result in a Pull Request. If it&#x27;s good, land it. If it&#x27;s almost there, prompt it and tell it what to do differently. If it&#x27;s bad, throw it away."
+      },
+      {
+        "type": "paragraph",
+        "html": "The cost of these code improvements has dropped so low that we can afford a zero tolerance attitude to minor code smells and inconveniences."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "AI tools let us consider more options"
+      },
+      {
+        "type": "paragraph",
+        "html": "Any software development task comes with a wealth of options for approaching the problem. Some of the most significant technical debt comes from making poor choices at the planning step - missing out on an obvious simple solution, or picking a technology that later turns out not to be exactly the right fit."
+      },
+      {
+        "type": "paragraph",
+        "html": "LLMs can help ensure we don&#x27;t miss any obvious solutions that may not have crossed our radar before. They&#x27;ll only suggest solutions that are common in their training data but those tend to be the <a href=\"https://boringtechnology.club\" target=\"_blank\" rel=\"noreferrer noopener\">Boring Technology</a> that&#x27;s most likely to work."
+      },
+      {
+        "type": "paragraph",
+        "html": "More importantly, coding agents can help with <strong>exploratory prototyping</strong>."
+      },
+      {
+        "type": "paragraph",
+        "html": "The best way to make confident technology choices is to prove that they are fit for purpose with a prototype."
+      },
+      {
+        "type": "paragraph",
+        "html": "Is Redis a good choice for the activity feed on a site which expects thousands of concurrent users?"
+      },
+      {
+        "type": "paragraph",
+        "html": "The best way to know for sure is to wire up a simulation of that system and run a load test against it to see what breaks."
+      },
+      {
+        "type": "paragraph",
+        "html": "Coding agents can build this kind of simulation from a single well crafted prompt, which drops the cost of this kind of experiment to almost nothing. And since they&#x27;re so cheap we can run multiple experiments at once, testing several solutions to pick the one that is the best fit for our problem."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Embrace the compound engineering loop"
+      },
+      {
+        "type": "paragraph",
+        "html": "Agents follow instructions. We can evolve these instructions over time to get better results from future runs, based on what we&#x27;ve learned previously."
+      },
+      {
+        "type": "paragraph",
+        "html": "Dan Shipper and Kieran Klaassen at Every describe their company&#x27;s approach to working with coding agents as <a href=\"https://every.to/chain-of-thought/compound-engineering-how-every-codes-with-agents\" target=\"_blank\" rel=\"noreferrer noopener\">Compound Engineering</a>. Every coding project they complete ends with a retrospective, which they call the <strong>compound step</strong> where they take what worked and document that for future agent runs."
+      },
+      {
+        "type": "paragraph",
+        "html": "If we want the best results from our agents, we should aim to continually increase the quality of our codebase over time. Small improvements compound. Quality enhancements that used to be time-consuming have now dropped in cost to the point that there&#x27;s no excuse not to invest in quality at the same time as shipping new features. Coding agents mean we can finally have both."
+      },
+      {
+        "type": "paragraph",
+        "html": "This is a chapter from the guide <strong><a href=\"https://simonwillison.net/guides/agentic-engineering-patterns/\" target=\"_blank\" rel=\"noreferrer noopener\">Agentic Engineering Patterns</a></strong>."
+      },
+      {
+        "type": "paragraph",
+        "html": "<strong>Chapters in this guide</strong>"
+      },
+      {
+        "type": "list",
+        "items": [
+          "<a href=\"https://simonwillison.net/guides/agentic-engineering-patterns/code-is-cheap/\" target=\"_blank\" rel=\"noreferrer noopener\">Writing code is cheap now</a>",
+          "<a href=\"https://simonwillison.net/guides/agentic-engineering-patterns/hoard-things-you-know-how-to-do/\" target=\"_blank\" rel=\"noreferrer noopener\">Hoard things you know how to do</a>",
+          "<a href=\"https://simonwillison.net/guides/agentic-engineering-patterns/anti-patterns/\" target=\"_blank\" rel=\"noreferrer noopener\">Anti-patterns: things to avoid</a>",
+          "<strong>AI should help us produce better code</strong>"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "<a href=\"https://simonwillison.net/guides/agentic-engineering-patterns/red-green-tdd/\" target=\"_blank\" rel=\"noreferrer noopener\">Red/green TDD</a>",
+          "<a href=\"https://simonwillison.net/guides/agentic-engineering-patterns/first-run-the-tests/\" target=\"_blank\" rel=\"noreferrer noopener\">First run the tests</a>",
+          "<a href=\"https://simonwillison.net/guides/agentic-engineering-patterns/agentic-manual-testing/\" target=\"_blank\" rel=\"noreferrer noopener\">Agentic manual testing</a>"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "<a href=\"https://simonwillison.net/guides/agentic-engineering-patterns/linear-walkthroughs/\" target=\"_blank\" rel=\"noreferrer noopener\">Linear walkthroughs</a>",
+          "<a href=\"https://simonwillison.net/guides/agentic-engineering-patterns/interactive-explanations/\" target=\"_blank\" rel=\"noreferrer noopener\">Interactive explanations</a>"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "<a href=\"https://simonwillison.net/guides/agentic-engineering-patterns/gif-optimization/\" target=\"_blank\" rel=\"noreferrer noopener\">GIF optimization tool using WebAssembly and Gifsicle</a>"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "<a href=\"https://simonwillison.net/guides/agentic-engineering-patterns/prompts/\" target=\"_blank\" rel=\"noreferrer noopener\">Prompts I use</a>"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "html": "Created: 10th March 2026<br> Last modified: 10th March 2026<br> <a href=\"https://simonwillison.net/guides/agentic-engineering-patterns/better-code/changes/\" target=\"_blank\" rel=\"noreferrer noopener\">2 changes</a>"
+      },
+      {
+        "type": "paragraph",
+        "html": "<strong>Previous:</strong> <a href=\"https://simonwillison.net/guides/agentic-engineering-patterns/anti-patterns/\" target=\"_blank\" rel=\"noreferrer noopener\">Anti-patterns: things to avoid</a>"
+      },
+      {
+        "type": "paragraph",
+        "html": "<strong>Next:</strong> <a href=\"https://simonwillison.net/guides/agentic-engineering-patterns/red-green-tdd/\" target=\"_blank\" rel=\"noreferrer noopener\">Red/green TDD</a>"
+      },
+      {
+        "type": "list",
+        "items": [
+          "<a href=\"https://simonwillison.net/about/#disclosures\" target=\"_blank\" rel=\"noreferrer noopener\">Disclosures</a>",
+          "<a href=\"https://simonwillison.net/about/#about-site\" target=\"_blank\" rel=\"noreferrer noopener\">Colophon</a>",
+          "©",
+          "<a href=\"https://simonwillison.net/2002/\" target=\"_blank\" rel=\"noreferrer noopener\">2002</a>",
+          "<a href=\"https://simonwillison.net/2003/\" target=\"_blank\" rel=\"noreferrer noopener\">2003</a>",
+          "<a href=\"https://simonwillison.net/2004/\" target=\"_blank\" rel=\"noreferrer noopener\">2004</a>",
+          "<a href=\"https://simonwillison.net/2005/\" target=\"_blank\" rel=\"noreferrer noopener\">2005</a>",
+          "<a href=\"https://simonwillison.net/2006/\" target=\"_blank\" rel=\"noreferrer noopener\">2006</a>",
+          "<a href=\"https://simonwillison.net/2007/\" target=\"_blank\" rel=\"noreferrer noopener\">2007</a>",
+          "<a href=\"https://simonwillison.net/2008/\" target=\"_blank\" rel=\"noreferrer noopener\">2008</a>",
+          "<a href=\"https://simonwillison.net/2009/\" target=\"_blank\" rel=\"noreferrer noopener\">2009</a>",
+          "<a href=\"https://simonwillison.net/2010/\" target=\"_blank\" rel=\"noreferrer noopener\">2010</a>",
+          "<a href=\"https://simonwillison.net/2011/\" target=\"_blank\" rel=\"noreferrer noopener\">2011</a>",
+          "<a href=\"https://simonwillison.net/2012/\" target=\"_blank\" rel=\"noreferrer noopener\">2012</a>",
+          "<a href=\"https://simonwillison.net/2013/\" target=\"_blank\" rel=\"noreferrer noopener\">2013</a>",
+          "<a href=\"https://simonwillison.net/2014/\" target=\"_blank\" rel=\"noreferrer noopener\">2014</a>",
+          "<a href=\"https://simonwillison.net/2015/\" target=\"_blank\" rel=\"noreferrer noopener\">2015</a>",
+          "<a href=\"https://simonwillison.net/2016/\" target=\"_blank\" rel=\"noreferrer noopener\">2016</a>",
+          "<a href=\"https://simonwillison.net/2017/\" target=\"_blank\" rel=\"noreferrer noopener\">2017</a>",
+          "<a href=\"https://simonwillison.net/2018/\" target=\"_blank\" rel=\"noreferrer noopener\">2018</a>",
+          "<a href=\"https://simonwillison.net/2019/\" target=\"_blank\" rel=\"noreferrer noopener\">2019</a>",
+          "<a href=\"https://simonwillison.net/2020/\" target=\"_blank\" rel=\"noreferrer noopener\">2020</a>",
+          "<a href=\"https://simonwillison.net/2021/\" target=\"_blank\" rel=\"noreferrer noopener\">2021</a>",
+          "<a href=\"https://simonwillison.net/2022/\" target=\"_blank\" rel=\"noreferrer noopener\">2022</a>",
+          "<a href=\"https://simonwillison.net/2023/\" target=\"_blank\" rel=\"noreferrer noopener\">2023</a>",
+          "<a href=\"https://simonwillison.net/2024/\" target=\"_blank\" rel=\"noreferrer noopener\">2024</a>",
+          "<a href=\"https://simonwillison.net/2025/\" target=\"_blank\" rel=\"noreferrer noopener\">2025</a>",
+          "<a href=\"https://simonwillison.net/2026/\" target=\"_blank\" rel=\"noreferrer noopener\">2026</a>"
+        ]
+      }
+    ],
+    "refineErrors": [
+      {
+        "index": 1,
+        "type": "paragraph",
+        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+      },
+      {
+        "index": 2,
+        "type": "heading",
+        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+      },
+      {
+        "index": 3,
+        "type": "paragraph",
+        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+      },
+      {
+        "index": 4,
+        "type": "paragraph",
+        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+      }
+    ]
+  },
+  "workflow": {
+    "articleId": 2696,
+    "rssTitle": "AI should help us produce better code"
+  }
+}
