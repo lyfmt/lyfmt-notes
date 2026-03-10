@@ -479,6 +479,8 @@ python3 tools/build_detail_from_cache.py \
 ```bash
 node --check script.js
 python3 -m json.tool articles.json >/dev/null
+python3 tools/validate_articles.py --articles articles.json --pretty
+python3 tests/run_tests.py
 python3 -m http.server 8766
 curl 'http://127.0.0.1:8766/post.html?slug=<slug>'
 curl 'http://127.0.0.1:8766/post.html?slug=<slug>&view=detail'
@@ -511,10 +513,9 @@ curl 'http://127.0.0.1:8766/post.html?slug=<slug>&view=detail'
 - 用中文表达，但不要擅自扩写
 
 ### 详情视图
-- 尽量按原文段落顺序
-- 尽量保留原作者论证节奏
-- 可以适度意译，但不要改写作者立场
-- 链接、代码名、产品名、项目名尽量保留原文
+- **必须一比一逐段翻译**，保持原文句序与信息密度
+- **禁止改写/意译/扩写/删改**，不得加入原文没有的信息
+- 链接、代码名、产品名、项目名保持原文（不要随意译名）
 
 ### 不确定时
 - 抓不到完整正文：`detail.available = false`
@@ -581,3 +582,43 @@ curl 'http://127.0.0.1:8766/post.html?slug=<slug>&view=detail'
 ```
 
 而不是凑假内容。
+
+---
+
+## 针对当前工作区的补充约定（RSS autopublish）
+
+当前这个工作区里，RSS autopublish 已经在往“单一稳态脚本入口”收敛，推荐优先调用：
+
+```bash
+cd /home/node/.openclaw/workspace/pi-blog-demo
+./run-rss-autopublish.sh
+```
+
+### 现在的本地稳态入口特性
+
+- 保持 **单批次、顺序处理**；不要引入每篇并发/subagent
+- 继续把 `scripts/rss_hourly_brief_bundle.py` 作为 scan/new/probe 的单一真相来源
+- 每轮 run 会把 ledger 写到：
+  - `/home/node/.openclaw/workspace/.openclaw/runtime/rss-autopublish/runs/`
+  - `/home/node/.openclaw/workspace/.openclaw/runtime/rss-autopublish/items/`
+- 只有当整批 item 都达到 terminal outcomes 且 `articles.json` 校验通过时，才推进 RSS checkpoint
+- 对 challenge / Cloudflare 页面会显式降级成 blocked draft，避免 `Just a moment...` 污染 slug/title
+- upsert 会优先保留更丰富的 detail，降低 rerun 把成品覆盖回半成品的风险
+
+### 推荐排查顺序
+
+1. 先看 `runs/<run_id>.json` 的 batch 结果
+2. 再看 `items/<article_id>.json` 的 stage history / attempts
+3. 如果要重放，用：
+
+```bash
+python3 tools/replay_bundle_to_specs.py --bundle /path/to/saved-bundle.json
+```
+
+4. 如果要做发布前短路，先跑：
+
+```bash
+python3 tools/validate_articles.py --articles articles.json --pretty
+```
+
+这样做的目标是：即使留下半成品，也要留下明确 journal，而不是静默吞 checkpoint。
