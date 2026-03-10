@@ -149,59 +149,22 @@ def extract_json_object(text: str) -> str:
 
 
 def run_pi_json(prompt: str, pi_bin: str, timeout_seconds: int) -> dict:
-    master_fd, slave_fd = pty.openpty()
-    process = subprocess.Popen(
-        [pi_bin, "-p", prompt],
-        stdin=slave_fd,
-        stdout=slave_fd,
-        stderr=slave_fd,
-        text=False,
-        close_fds=True,
-    )
-    os.close(slave_fd)
-
-    chunks: list[bytes] = []
-    deadline = time.time() + timeout_seconds
+    # Use subprocess.run to avoid PTY hangs seen with Pi in this environment.
     try:
-        while True:
-            if time.time() > deadline:
-                process.kill()
-                raise TimeoutError(f"Pi invocation timed out after {timeout_seconds}s")
+        result = subprocess.run(
+            [pi_bin, "-p", prompt],
+            capture_output=True,
+            text=True,
+            timeout=timeout_seconds,
+            check=False,
+        )
+    except subprocess.TimeoutExpired:
+        raise TimeoutError(f"Pi invocation timed out after {timeout_seconds}s")
 
-            if process.poll() is not None:
-                while True:
-                    ready, _, _ = select.select([master_fd], [], [], 0)
-                    if master_fd not in ready:
-                        break
-                    try:
-                        data = os.read(master_fd, 65536)
-                    except OSError:
-                        data = b""
-                    if not data:
-                        break
-                    chunks.append(data)
-                break
-
-            ready, _, _ = select.select([master_fd], [], [], 0.25)
-            if master_fd in ready:
-                try:
-                    data = os.read(master_fd, 65536)
-                except OSError:
-                    data = b""
-                if data:
-                    chunks.append(data)
-    finally:
-        try:
-            os.close(master_fd)
-        except OSError:
-            pass
-        if process.poll() is None:
-            process.kill()
-            process.wait(timeout=5)
-
-    output = b"".join(chunks).decode("utf-8", errors="ignore").strip()
-    if process.returncode != 0:
-        raise RuntimeError(f"Pi exited with code {process.returncode}: {output[:400]}")
+    output = (result.stdout or "") + "\n" + (result.stderr or "")
+    output = output.strip()
+    if result.returncode != 0:
+        raise RuntimeError(f"Pi exited with code {result.returncode}: {output[:400]}")
     payload = extract_json_object(output)
     data = json.loads(payload)
     if not isinstance(data, dict):
