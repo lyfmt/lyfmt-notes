@@ -1,0 +1,95 @@
+{
+  "current_max_article_id": 2645,
+  "errors": [],
+  "focus_items": [
+    {
+      "blog": "Hackaday",
+      "discovered": "2026-03-10T03:00:17.773557319Z",
+      "id": 2644,
+      "is_read": false,
+      "published": "2026-03-10T02:00:23Z",
+      "title": "The Sweetest Programming Language: MNM",
+      "url": "https://hackaday.com/2026/03/09/the-sweetest-programming-language-mnm/"
+    },
+    {
+      "blog": "Latent Space",
+      "discovered": "2026-03-10T03:00:18.219467731Z",
+      "id": 2645,
+      "is_read": false,
+      "published": "2026-03-10T02:21:57Z",
+      "title": "[AINews] Autoresearch: Sparks of Recursive Self Improvement",
+      "url": "https://www.latent.space/p/ainews-autoresearch-sparks-of-recursive"
+    }
+  ],
+  "generated_at": "2026-03-10T03:00:16Z",
+  "items": [
+    {
+      "blog": "Hackaday",
+      "discovered": "2026-03-10T03:00:17.773557319Z",
+      "id": 2644,
+      "is_read": false,
+      "published": "2026-03-10T02:00:23Z",
+      "title": "The Sweetest Programming Language: MNM",
+      "url": "https://hackaday.com/2026/03/09/the-sweetest-programming-language-mnm/"
+    },
+    {
+      "blog": "Latent Space",
+      "discovered": "2026-03-10T03:00:18.219467731Z",
+      "id": 2645,
+      "is_read": false,
+      "published": "2026-03-10T02:21:57Z",
+      "title": "[AINews] Autoresearch: Sparks of Recursive Self Improvement",
+      "url": "https://www.latent.space/p/ainews-autoresearch-sparks-of-recursive"
+    }
+  ],
+  "last_seen_article_id": 2643,
+  "max_new_id": 2645,
+  "new_count": 2,
+  "ok": true,
+  "other_items": [],
+  "probe_candidates": [
+    {
+      "blog": "Latent Space",
+      "discovered": "2026-03-10T03:00:18.219467731Z",
+      "id": 2645,
+      "is_read": false,
+      "published": "2026-03-10T02:21:57Z",
+      "title": "[AINews] Autoresearch: Sparks of Recursive Self Improvement",
+      "url": "https://www.latent.space/p/ainews-autoresearch-sparks-of-recursive"
+    },
+    {
+      "blog": "Hackaday",
+      "discovered": "2026-03-10T03:00:17.773557319Z",
+      "id": 2644,
+      "is_read": false,
+      "published": "2026-03-10T02:00:23Z",
+      "title": "The Sweetest Programming Language: MNM",
+      "url": "https://hackaday.com/2026/03/09/the-sweetest-programming-language-mnm/"
+    }
+  ],
+  "probes": [
+    {
+      "description": "AGI takes another small step forward.",
+      "error": null,
+      "fetched_bytes": 209357,
+      "ok": true,
+      "title": "[AINews] Autoresearch: Sparks of Recursive Self Improvement",
+      "url": "https://www.latent.space/p/ainews-autoresearch-sparks-of-recursive"
+    },
+    {
+      "description": "Admit it. If you haven’t created your own little programming language, you’ve probably at least thought about it. [Muffed] decided to create a unique — and sweet — programmi…",
+      "error": null,
+      "fetched_bytes": 86018,
+      "ok": true,
+      "title": "The Sweetest Programming Language: MNM",
+      "url": "https://hackaday.com/2026/03/09/the-sweetest-programming-language-mnm/"
+    }
+  ],
+  "scan": {
+    "code": 0,
+    "ok": true,
+    "stderr_tail": [],
+    "stdout_tail": [],
+    "warnings": []
+  }
+}

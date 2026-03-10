@@ -1,0 +1,20 @@
+{
+  "item": {
+    "id": 2644,
+    "title": "The Sweetest Programming Language: MNM",
+    "blog": "Hackaday",
+    "url": "https://hackaday.com/2026/03/09/the-sweetest-programming-language-mnm/",
+    "published": "2026-03-10T02:00:23Z",
+    "discovered": "2026-03-10T03:00:17.773557319Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://hackaday.com/2026/03/09/the-sweetest-programming-language-mnm/",
+    "ok": true,
+    "title": "The Sweetest Programming Language: MNM",
+    "description": "Admit it. If you haven’t created your own little programming language, you’ve probably at least thought about it. [Muffed] decided to create a unique — and sweet — programmi…",
+    "fetched_bytes": 90187,
+    "error": null
+  },
+  "classification": "normal"
+}

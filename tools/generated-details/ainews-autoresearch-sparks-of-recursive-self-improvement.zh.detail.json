@@ -1,0 +1,15 @@
+{
+  "available": false,
+  "layout": "detail-zh",
+  "translatedFrom": "https://www.latent.space/p/ainews-autoresearch-sparks-of-recursive",
+  "sourceName": "Latent Space",
+  "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "https://substackcdn.com/image/fetch/$s_!1PJi!,e_trim:10:white/e_trim:10:transparent/h_72,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa4fe1182-38af-4a5d-bacc-439c36225e87_5000x1200.png",
+      "alt": "Latent.Space",
+      "caption": "Latent.Space"
+    }
+  ]
+}

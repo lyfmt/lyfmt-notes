@@ -1,0 +1,21 @@
+{
+  "available": false,
+  "layout": "detail-zh",
+  "translatedFrom": "https://hackaday.com/2026/03/09/the-sweetest-programming-language-mnm/",
+  "sourceName": "Hackaday",
+  "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Hackaday"
+    }
+  ],
+  "refineErrors": [
+    {
+      "index": 0,
+      "type": "heading",
+      "message": "Pi invocation timed out after 180s"
+    }
+  ]
+}

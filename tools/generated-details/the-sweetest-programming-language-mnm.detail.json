@@ -1,0 +1,96 @@
+{
+  "available": false,
+  "layout": "draft",
+  "translatedFrom": "https://hackaday.com/2026/03/09/the-sweetest-programming-language-mnm/",
+  "sourceName": "Hackaday",
+  "sourceDescription": "以下为根据原文结构自动生成的详情草稿，已保留段落层次、图片与媒体；默认尚未完成中文翻译润色。",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Hackaday"
+    },
+    {
+      "type": "list",
+      "items": [
+        "by:"
+      ]
+    },
+    {
+      "type": "list",
+      "items": [
+        "<a href=\"https://www.facebook.com/sharer/sharer.php?u=https://hackaday.com/2026/03/09/the-sweetest-programming-language-mnm/\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>",
+        "<a href=\"https://twitter.com/intent/tweet?text=The%20Sweetest%20Programming%20Language:%20MNM%20via%20@hackaday&amp;url=https://hackaday.com/2026/03/09/the-sweetest-programming-language-mnm/\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>",
+        "<a href=\"https://news.ycombinator.com/submitlink?u=https://hackaday.com/2026/03/09/the-sweetest-programming-language-mnm/&amp;t=The%20Sweetest%20Programming%20Language:%20MNM\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>",
+        "<a href=\"https://www.reddit.com/submit?url=https://hackaday.com/2026/03/09/the-sweetest-programming-language-mnm/\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>"
+      ]
+    },
+    {
+      "type": "image",
+      "src": "https://hackaday.com/wp-content/uploads/2026/03/mmlang.png?w=800",
+      "alt": "",
+      "caption": ""
+    },
+    {
+      "type": "paragraph",
+      "html": "Admit it. If you haven’t created your own little programming language, you’ve probably at least thought about it. [Muffed] decided to create a unique — and sweet — programming language that uses <a href=\"https://mufeedvh.com/posts/i-made-a-programming-language-with-mnms/\" target=\"_blank\" rel=\"noreferrer noopener\">M&amp;M (or, at least, M&amp;M-like) candies as the building block of programs</a>."
+    },
+    {
+      "type": "paragraph",
+      "html": "If this sounds strange, it is because, honestly, it is. It all started when a packet of GEMS (the Cadbury’s version of M&amp;Ms) spilled and randomly fell in the shape of an arrow. There are only six symbols corresponding to the colors in a package. You create your program by arranging the candies and creating a digital image of the result. In practice, you’ll probably use ASCII text to represent your candy layout and let the compiler render the image for you."
+    },
+    {
+      "type": "paragraph",
+      "html": "The main way of encoding things is by the number of colored candy pixels in a row. So three blue morsels in an opcode, while four is a different opcode. Red candies encode integer literals with one candy being zero, two being one, and so on. Blue indicates control flow, green candy handles variables and stack operations, yellow is for math, and so on."
+    },
+    {
+      "type": "paragraph",
+      "html": "<span></span>"
+    },
+    {
+      "type": "paragraph",
+      "html": "Since building things like strings. So, sadly, the M&amp;M program isn’t complete without a run-time data file in JSON format. The title graphic shows a Hello World program that you can run in the web page, but it doesn’t show the JSON file. That’s here:"
+    },
+    {
+      "type": "paragraph",
+      "html": "We don’t know of any other language where you can literally eat your mistakes. There’s something to be said for that. If you want to try it, you can just write over one of the examples on the web page. Or download from <a href=\"https://github.com/mufeedvh/mnmlang\" target=\"_blank\" rel=\"noreferrer noopener\">GitHub</a>."
+    },
+    {
+      "type": "paragraph",
+      "html": "We have seen <a href=\"https://hackaday.com/2022/01/26/strange-computer-languages-a-hackers-field-guide/\" target=\"_blank\" rel=\"noreferrer noopener\">graphic input languages before</a>. Plus <a href=\"https://hackaday.com/2022/11/19/two-esoteric-programming-languages-one-interpreter/\" target=\"_blank\" rel=\"noreferrer noopener\">many other weird languages</a>."
+    },
+    {
+      "type": "image",
+      "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_face.png",
+      "alt": "",
+      "caption": ""
+    },
+    {
+      "type": "image",
+      "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_twitter.png",
+      "alt": "",
+      "caption": ""
+    },
+    {
+      "type": "image",
+      "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_in.png",
+      "alt": "",
+      "caption": ""
+    },
+    {
+      "type": "image",
+      "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_mail1.png",
+      "alt": "",
+      "caption": ""
+    },
+    {
+      "type": "list",
+      "items": [
+        "<a href=\"https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhackaday.com%2F2026%2F03%2F09%2Fthe-sweetest-programming-language-mnm%2F\" target=\"_blank\" rel=\"noreferrer noopener\"> <i> </i> </a>",
+        "<a href=\"https://twitter.com/intent/tweet?text=The%20Sweetest%20Programming%20Language:%20MNM%20via%20@hackaday&amp;url=https://hackaday.com/2026/03/09/the-sweetest-programming-language-mnm/\" target=\"_blank\" rel=\"noreferrer noopener\"> <i></i> </a>",
+        "<a href=\"https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fhackaday.com%2F2026%2F03%2F09%2Fthe-sweetest-programming-language-mnm%2F\" target=\"_blank\" rel=\"noreferrer noopener\"> <i></i> </a>",
+        "<a href=\"mailto:?subject=The+Sweetest+Programming+Language%3A+MNM | Hackaday&amp;body=https%3A%2F%2Fhackaday.com%2F2026%2F03%2F09%2Fthe-sweetest-programming-language-mnm%2F\" target=\"_blank\" rel=\"noreferrer noopener\"> <i></i> </a>"
+      ]
+    }
+  ]
+}
