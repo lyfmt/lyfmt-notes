@@ -6122,7 +6122,7 @@
         }
       ],
       "detail": {
-        "available": false,
+        "available": true,
         "layout": "draft",
         "translatedFrom": "https://huggingface.co/blog/ulysses-sp",
         "sourceName": "Hugging Face Blog",
@@ -6130,87 +6130,87 @@
         "blocks": [
           {
             "type": "paragraph",
-            "html": "Training large language models on long sequences has become essential for building capable AI systems. As models are increasingly used for tasks like document analysis, code understanding, complex reasoning, and RAG workloads, the need to process sequences of hundreds of thousands—or even millions—of tokens has grown dramatically. To put this in perspective, an average book is roughly 250k tokens, so training on multi-document contexts or book-length inputs requires handling sequences well beyond what fits on a single GPU. However, training with such long contexts presents significant memory challenges: the attention computation scales quadratically with sequence length, quickly exceeding GPU memory for contexts beyond tens of thousands of tokens."
+            "html": "在长序列上训练大型语言模型已成为构建强大 AI 系统的必需。随着模型越来越多地用于文档分析、代码理解、复杂推理和 RAG 工作负载，对处理几十万甚至上百万 token 序列的需求急剧增长。为说明这一点，一本普通书大约是 25 万 token，因此在多文档上下文或整本书长度的输入上训练，需要处理远超单卡 GPU 能容纳的序列。然而，这种长上下文训练带来显著的内存挑战：注意力计算随序列长度呈二次增长，对于超过几万 token 的上下文，会迅速超出 GPU 内存。"
           },
           {
             "type": "paragraph",
-            "html": "Ulysses Sequence Parallelism (part of the Arctic Long Sequence Training protocol from Snowflake AI Research) provides an elegant solution by distributing the attention computation across multiple GPUs through attention head parallelism. In this post, we&#x27;ll explore how Ulysses works and how it&#x27;s been integrated across the Hugging Face ecosystem—from Accelerate to the Transformers Trainer and TRL&#x27;s SFTTrainer."
+            "html": "Ulysses 序列并行（Snowflake AI Research 的 Arctic 长序列训练协议的一部分）提供了一种优雅解法：通过注意力头并行，将注意力计算分布到多张 GPU 上。在本文中，我们将介绍 Ulysses 的工作原理，以及它如何被整合进 Hugging Face 生态——从 Accelerate 到 Transformers Trainer，再到 TRL 的 SFTTrainer。"
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "The Challenge of Long Sequence Training"
+            "text": "长序列训练的挑战"
           },
           {
             "type": "paragraph",
-            "html": "The attention mechanism in transformers scales quadratically with sequence length. For very long sequences (32k+ tokens), even with FlashAttention, training still pushes the limits of single-GPU memory."
+            "html": "Transformer 的注意力机制随序列长度呈二次增长。对于非常长的序列（32k+ token），即便使用 FlashAttention，训练也仍会逼近单卡 GPU 的内存极限。"
           },
           {
             "type": "paragraph",
-            "html": "Long-context training matters for document understanding, large codebases, reasoning-heavy models, and retrieval-augmented generation. Traditional data parallelism doesn&#x27;t solve this because each GPU still needs the full sequence inside the attention block."
+            "html": "长上下文训练对于文档理解、大型代码库、重推理模型以及检索增强生成都很重要。传统的数据并行无法解决这一点，因为每张 GPU 在注意力模块里仍需要完整序列。"
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "How Ulysses Works"
+            "text": "Ulysses 的工作方式"
           },
           {
             "type": "paragraph",
-            "html": "Ulysses Sequence Parallelism takes a different approach: it splits the sequence across devices, then uses all-to-all communication so each GPU computes a subset of attention heads."
+            "html": "Ulysses 序列并行采取了不同路径：它将序列切分到多个设备上，然后通过 all‑to‑all 通信，让每张 GPU 计算一部分注意力头。"
           },
           {
             "type": "paragraph",
-            "html": "The core flow is:"
+            "html": "核心流程是："
           },
           {
             "type": "list",
             "items": [
-              "Sequence sharding across GPUs.",
-              "Local QKV projection.",
-              "All-to-all communication to redistribute per-head data.",
-              "Local attention computation with FlashAttention or SDPA.",
-              "A second all-to-all to restore sequence-sharded format.",
-              "Local output projection."
+              "在多 GPU 之间进行序列分片。",
+              "本地 QKV 投影。",
+              "通过 all‑to‑all 通信按注意力头重新分发数据。",
+              "使用 FlashAttention 或 SDPA 进行本地注意力计算。",
+              "再一次 all‑to‑all 恢复为序列分片格式。",
+              "本地输出投影。"
             ]
           },
           {
             "type": "paragraph",
-            "html": "The main advantage over Ring Attention is lower communication volume per GPU and better latency characteristics on supported hardware."
+            "html": "相较于 Ring Attention，它的主要优势是每张 GPU 的通信量更低，并且在支持的硬件上具备更好的延迟特性。"
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "Integration Across the Hugging Face Stack"
+            "text": "在 Hugging Face 技术栈中的集成"
           },
           {
             "type": "paragraph",
-            "html": "The article walks through how Ulysses is integrated into Accelerate via ParallelismConfig and DeepSpeedSequenceParallelConfig, then into Transformers Trainer and TRL&#x27;s SFTTrainer."
+            "html": "文章讲解了 Ulysses 如何通过 ParallelismConfig 和 DeepSpeedSequenceParallelConfig 集成到 Accelerate 中，并进一步进入 Transformers Trainer 和 TRL 的 SFTTrainer。"
           },
           {
             "type": "paragraph",
-            "html": "It also covers practical configuration details such as <code>sp_size</code>, <code>sp_backend</code>, <code>sp_attn_implementation</code>, sequence divisibility, padding, loss aggregation, and 2D SP × DP setups."
+            "html": "还覆盖了具体配置细节，例如 <code>sp_size</code>、<code>sp_backend</code>、<code>sp_attn_implementation</code>、序列可整除性、padding、loss 聚合，以及 2D SP×DP 组合。"
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "Best Practices and Benchmarks"
+            "text": "最佳实践与基准"
           },
           {
             "type": "paragraph",
-            "html": "The write-up recommends matching sequence length divisibility to <code>sp_size</code>, preferring Flash Attention, combining SP with DeepSpeed ZeRO, and using allocator settings that reduce memory fragmentation."
+            "html": "文中建议：让序列长度可被 <code>sp_size</code> 整除，优先使用 Flash Attention，结合 DeepSpeed ZeRO，并采用减少内存碎片的分配器设置。"
           },
           {
             "type": "paragraph",
-            "html": "Benchmark examples on H100 80GB GPUs show that SP can cut per-GPU memory enough to reach much longer context lengths, while also improving token throughput at larger sequence sizes."
+            "html": "在 H100 80GB GPU 上的基准示例显示，SP 能降低单卡内存占用，从而达到更长的上下文长度，同时在更长序列下提高 token 吞吐。"
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "Why It Matters"
+            "text": "为什么重要"
           },
           {
             "type": "paragraph",
-            "html": "This is not just an algorithm note: it turns long-context training from a niche systems trick into something accessible through mainstream Hugging Face tooling. That lowers the barrier for teams that want to train or fine-tune models on book-scale, repository-scale, or multi-document inputs."
+            "html": "这不仅是一个算法注记：它把长上下文训练从小众系统技巧变成了主流 Hugging Face 工具可用的能力，降低了团队在书级、代码库级或多文档输入上训练/微调模型的门槛。"
           }
         ]
       }
