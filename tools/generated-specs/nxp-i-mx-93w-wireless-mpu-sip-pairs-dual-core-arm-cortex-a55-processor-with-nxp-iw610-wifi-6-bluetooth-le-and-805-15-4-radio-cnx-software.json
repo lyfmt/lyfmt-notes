@@ -29,7 +29,7 @@
     }
   ],
   "detail": {
-    "available": false,
+    "available": true,
     "layout": "draft",
     "translatedFrom": "https://www.cnx-software.com/2026/03/10/nxp-i-mx-93w-wireless-mpu-sip-pairs-dual-core-arm-cortex-a55-processor-with-nxp-iw610-wifi-6-bluetooth-le-and-805-15-4-radio/",
     "sourceName": "CNX Software",
@@ -37,11 +37,11 @@
     "blocks": [
       {
         "type": "paragraph",
-        "html": "NXP i.MX 93W is the company’s first integrated wireless MPU System-in-Package (SiP) and combines a dual-core Cortex-A55 processor (<a href=\"https://www.cnx-software.com/2021/11/10/nxp-i-mx-93-processor-combines-cortex-a55-cores-with-ethos-u65-micronpu/\" target=\"_blank\" rel=\"noreferrer noopener\">NXP i.MX 93</a>) with an <a href=\"https://www.cnx-software.com/2024/12/05/u-blox-maya-w4-tri-radio-iot-module-features-nxp-iw610-chipset-with-wi-fi-6-bluetooth-5-4-and-802-15-4-radios/\" target=\"_blank\" rel=\"noreferrer noopener\">iW610 WiFi 6, Bluetooth LE, and 802.15.4 tri-radio</a> into a single chip."
+        "html": "NXP i.MX 93W 是该公司首款集成无线 MPU 的系统级封装（SiP），将双核 Cortex-A55 处理器（<a href=\"https://www.cnx-software.com/2021/11/10/nxp-i-mx-93-processor-combines-cortex-a55-cores-with-ethos-u65-micronpu/\" target=\"_blank\" rel=\"noreferrer noopener\">NXP i.MX 93</a>）与 <a href=\"https://www.cnx-software.com/2024/12/05/u-blox-maya-w4-tri-radio-iot-module-features-nxp-iw610-chipset-with-wi-fi-6-bluetooth-5-4-and-802-15-4-radios/\" target=\"_blank\" rel=\"noreferrer noopener\">iW610 WiFi 6、Bluetooth LE 和 802.15.4 三无线电</a> 集成在一颗芯片中。"
       },
       {
         "type": "paragraph",
-        "html": "The 14.2 x 12 mm package also includes all the external radio components needed for wireless connectivity, replacing up to 60 discrete components on the PCB. NXP says it reduces the PCB area, simplifies PCB design and regulatory approval, and speeds up time-to-market."
+        "html": "该 14.2 x 12 mm 的封装还包含无线连接所需的全部外置射频组件，最多可替代 PCB 上约 60 个分立器件。NXP 表示这能减少 PCB 面积、简化 PCB 设计和法规认证，并加快上市时间。"
       },
       {
         "type": "image",
@@ -55,68 +55,68 @@
       },
       {
         "type": "paragraph",
-        "html": "NXP i.MX 93W specifications:"
+        "html": "NXP i.MX 93W 规格："
       },
       {
         "type": "list",
         "items": [
-          "Dual-Core Arm Cortex-A55 at up to 1.7 GHz",
-          "Arm Cortex-M33 core at 250 MHz for real-time control"
+          "双核 Arm Cortex-A55，最高 1.7 GHz",
+          "Arm Cortex-M33 核心，250 MHz，用于实时控制"
         ]
       },
       {
         "type": "list",
         "items": [
-          "MIPI DSI up to 1080p60",
-          "LVDS up to 720p60",
-          "24-bit parallel RGB"
+          "MIPI DSI 最高 1080p60",
+          "LVDS 最高 720p60",
+          "24 位并行 RGB"
         ]
       },
       {
         "type": "list",
         "items": [
-          "7x I2S/TDM 32-bit @ 768KHz, SPDIF Tx/Rx",
-          "8-channel PDM microphone input",
-          "Medium Quality Sound output (sigma-delta modulator)"
+          "7 路 I2S/TDM 32-bit @ 768KHz，SPDIF Tx/Rx",
+          "8 通道 PDM 麦克风输入",
+          "中等质量声音输出（sigma-delta 调制器）"
         ]
       },
       {
         "type": "list",
         "items": [
-          "1×1 dual band 2.4 GHz/5 GHz 802.11 a/b/g/n/ax",
-          "256 quadrature amplitude modulation (QAM), 20 MHz bandwidth, peak throughput: 114.7 Mbps",
-          "Tx power up to +21 dBm",
-          "Wi-Fi 6 Extended Range (ER), Dual Carrier Modulation (DCM), Target Wait Time (TWT)",
-          "Low-power Wi-Fi idle, standby, and sleep modes",
-          "WPA2 / WPA3 Enterprise security",
-          "Support for Matter over Wi-Fi",
-          "Single, dual antenna with diversity"
+          "1×1 双频 2.4 GHz/5 GHz 802.11 a/b/g/n/ax",
+          "256 正交振幅调制（QAM），20 MHz 带宽，峰值吞吐：114.7 Mbps",
+          "发射功率最高 +21 dBm",
+          "Wi‑Fi 6 Extended Range（ER）、双载波调制（DCM）、Target Wait Time（TWT）",
+          "低功耗 Wi‑Fi 空闲、待机与睡眠模式",
+          "WPA2 / WPA3 企业级安全",
+          "支持 Matter over Wi‑Fi",
+          "单/双天线与分集"
         ]
       },
       {
         "type": "list",
         "items": [
-          "High-speed 2 Mbps, long range, advertising extensions",
-          "Integrated power amplifier (PA), low noise amplifier (LNA); Switch with up to +15 dBm TX output",
-          "Switchable Bluetooth LE/802.15.4 operation",
-          "UART or USB interface"
+          "高速 2 Mbps、长距离、广告扩展",
+          "集成功率放大器（PA）、低噪声放大器（LNA）；开关，TX 输出最高 +15 dBm",
+          "可切换 Bluetooth LE/802.15.4 运行",
+          "UART 或 USB 接口"
         ]
       },
       {
         "type": "list",
         "items": [
-          "IEEE 802.15.4-2015 compliant media access control (MAC)",
-          "Zigbee and Matter over Thread in the 2.4 GHz band",
-          "SPI Host Interface"
+          "符合 IEEE 802.15.4-2015 的媒体访问控制（MAC）",
+          "2.4 GHz 频段上的 Zigbee 与 Matter over Thread",
+          "SPI 主机接口"
         ]
       },
       {
         "type": "list",
         "items": [
-          "7x UART, 8x I2C, 7x SPI, 2x I3C",
-          "1x CAN FD",
-          "4-ch, 12-bit analog‑to‑digital converter (ADC)",
-          "2x 32-pin FlexIO interfaces (camera, bus, or serial I/O)"
+          "7× UART，8× I2C，7× SPI，2× I3C",
+          "1× CAN FD",
+          "4 通道 12 位模数转换器（ADC）",
+          "2× 32 针 FlexIO 接口（摄像头、总线或串行 I/O）"
         ]
       },
       {
@@ -131,11 +131,11 @@
       },
       {
         "type": "paragraph",
-        "html": "NXP mentions support for Linux OS and FreeRTOS. That should be Linux on the Cortex-A55 cores, and FreeRTOS on the Cortex-M33 core. Since the i.MX 93W wireless MCU SiP mainly combines an NXP i.MX 93 with an NXP iW610 and some passive components, software support should be exactly the same as for designs using two chips. Some target applications include smart home hubs, medical sensors, and energy grid devices."
+        "html": "NXP 提到支持 Linux OS 和 FreeRTOS。这应当是在 Cortex-A55 核心上运行 Linux，在 Cortex-M33 核心上运行 FreeRTOS。由于 i.MX 93W 无线 MCU SiP 主要是将 NXP i.MX 93 与 NXP iW610 及一些无源器件结合在一起，软件支持应与使用两颗芯片的设计完全相同。部分目标应用包括智能家居中枢、医疗传感器和能源电网设备。"
       },
       {
         "type": "paragraph",
-        "html": "We don’t often see application processors with built-in wireless connectivity, and the only other chip I can think of right now is the <a href=\"https://www.cnx-software.com/2025/04/17/avaota-f1-a-tiny-camera-board-based-on-allwinner-v821-risc-v-soc-with-built-in-wifi-and-64mb-ddr2/\" target=\"_blank\" rel=\"noreferrer noopener\">Allwinner V821 with a 32-bit RISC-V core, 64MB on-chip DDR2, and 2.4 GHz WiFi 4</a> designed for cameras. Looking further down in time, the <a href=\"https://www.cnx-software.com/2016/09/29/qualcomm-is-finally-open-for-business-with-snapdragon-410e-and-600e-processors-for-embedded-iot-applications/\" target=\"_blank\" rel=\"noreferrer noopener\">Snapdragon 410E (IPQ8016E)</a> quad-core Cortex-A53 SoC was introduced with built-in WiFi and Bluetooth in 2016."
+        "html": "我们不常见到内置无线连接的应用处理器，我现在能想到的另一颗芯片只有面向相机设计的 <a href=\"https://www.cnx-software.com/2025/04/17/avaota-f1-a-tiny-camera-board-based-on-allwinner-v821-risc-v-soc-with-built-in-wifi-and-64mb-ddr2/\" target=\"_blank\" rel=\"noreferrer noopener\">Allwinner V821（32 位 RISC-V 核心、64MB 片上 DDR2、2.4 GHz WiFi 4）</a>。再往前看，<a href=\"https://www.cnx-software.com/2016/09/29/qualcomm-is-finally-open-for-business-with-snapdragon-410e-and-600e-processors-for-embedded-iot-applications/\" target=\"_blank\" rel=\"noreferrer noopener\">Snapdragon 410E（IPQ8016E）</a> 四核 Cortex-A53 SoC 于 2016 年推出，内置 WiFi 和 Bluetooth。"
       },
       {
         "type": "image",
@@ -145,7 +145,7 @@
       },
       {
         "type": "paragraph",
-        "html": "NXP unveiled the i.MX 93W wireless SiP at Embedded World 2026, but most people won’t be able to integrate them into their designs right away, since we’re told the “next generation MPU” is “<a href=\"https://www.nxp.com/company/about-nxp/smarter-world-blog/BL-IMX93W-CONNECTED-APPS-PROCESSOR\" target=\"_blank\" rel=\"noreferrer noopener\">coming in early 2027</a>“. A few additional details may be found on <a href=\"https://www.nxp.com/products/IMX93W\" target=\"_blank\" rel=\"noreferrer noopener\">the product page</a>."
+        "html": "NXP 在 Embedded World 2026 上发布了 i.MX 93W 无线 SiP，但大多数人暂时还无法立刻将其集成到自己的设计中，因为我们被告知“下一代 MPU”将“<a href=\"https://www.nxp.com/company/about-nxp/smarter-world-blog/BL-IMX93W-CONNECTED-APPS-PROCESSOR\" target=\"_blank\" rel=\"noreferrer noopener\">于 2027 年初推出</a>”。更多细节可见 <a href=\"https://www.nxp.com/products/IMX93W\" target=\"_blank\" rel=\"noreferrer noopener\">产品页面</a>。"
       },
       {
         "type": "image",
@@ -155,11 +155,11 @@
       },
       {
         "type": "paragraph",
-        "html": "Jean-Luc started CNX Software in 2010 as a part-time endeavor, before quitting his job as a software engineering manager, and starting to write daily news, and reviews full time later in 2011."
+        "html": "Jean-Luc 于 2010 年兼职创办了 CNX Software，随后辞去软件工程经理的工作，并在 2011 年稍晚开始全职撰写每日新闻与评测。"
       },
       {
         "type": "paragraph",
-        "html": "<strong>Support CNX Software! Donate via <a href=\"https://www.cnx-software.com/donate-cryptocurrencies/\" target=\"_blank\" rel=\"noreferrer noopener\">cryptocurrencies</a>, <a href=\"https://www.patreon.com/cnxsoft\" target=\"_blank\" rel=\"noreferrer noopener\">become a Patron</a> on Patreon, or purchase goods on <a href=\"https://amzn.to/3SXubZ0\" target=\"_blank\" rel=\"noreferrer noopener\">Amazon</a> or <a href=\"https://s.click.aliexpress.com/e/_DmGIIRT\" target=\"_blank\" rel=\"noreferrer noopener\">Aliexpress</a></strong>. We also use affiliate links in articles to earn commissions if you make a purchase after clicking on those links."
+        "html": "<strong>支持 CNX Software！通过 <a href=\"https://www.cnx-software.com/donate-cryptocurrencies/\" target=\"_blank\" rel=\"noreferrer noopener\">加密货币</a> 捐赠，在 Patreon 上 <a href=\"https://www.patreon.com/cnxsoft\" target=\"_blank\" rel=\"noreferrer noopener\">成为赞助者</a>，或在 <a href=\"https://amzn.to/3SXubZ0\" target=\"_blank\" rel=\"noreferrer noopener\">Amazon</a> 或 <a href=\"https://s.click.aliexpress.com/e/_DmGIIRT\" target=\"_blank\" rel=\"noreferrer noopener\">Aliexpress</a> 购买商品</strong>。我们也在文章中使用联盟链接，如果你在点击这些链接后购买商品，我们会获得佣金。"
       }
     ]
   },
