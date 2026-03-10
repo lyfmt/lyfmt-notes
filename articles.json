@@ -415,7 +415,7 @@
         }
       ],
       "detail": {
-        "available": false,
+        "available": true,
         "layout": "draft",
         "translatedFrom": "https://www.cnx-software.com/2026/03/10/nxp-i-mx-93w-wireless-mpu-sip-pairs-dual-core-arm-cortex-a55-processor-with-nxp-iw610-wifi-6-bluetooth-le-and-805-15-4-radio/",
         "sourceName": "CNX Software",
