@@ -1,0 +1,121 @@
+{
+  "available": true,
+  "layout": "detail-zh",
+  "translatedFrom": "https://inside.java/2026/03/10/quality-heads-up/",
+  "sourceName": "Inside Java",
+  "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "https://inside.java/images/java-cup.png",
+      "alt": "",
+      "caption": ""
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Inside Java"
+    },
+    {
+      "type": "paragraph",
+      "html": "News and views from members of the Java team at Oracle"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Quality Outreach Heads-up - JDK 27: Removal of &#x27;java.locale.useOldISOCodes&#x27; System Property"
+    },
+    {
+      "type": "image",
+      "src": "https://inside.java/images/thumbnail/code.jpg",
+      "alt": "",
+      "caption": ""
+    },
+    {
+      "type": "paragraph",
+      "html": "<i>The <a href=\"https://wiki.openjdk.java.net/display/quality/Quality+Outreach\" target=\"_blank\" rel=\"noreferrer noopener\">OpenJDK Quality Group</a> is promoting the testing of FOSS projects with OpenJDK builds as a way to improve the overall quality of the release. This heads-up is part of a <a href=\"https://mail.openjdk.org/pipermail/quality-discuss/2025-February/001141.html\" target=\"_blank\" rel=\"noreferrer noopener\">regular communication</a> sent to the projects involved. To learn more about the program, and how-to join, please check <a href=\"https://wiki.openjdk.java.net/display/quality/Quality+Outreach\" target=\"_blank\" rel=\"noreferrer noopener\">here</a>.</i>"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "ISO 639 and BCP 47"
+    },
+    {
+      "type": "paragraph",
+      "html": "BCP 47, first introduced in 1995, defines tags to identify languages and its primary subtag (the first of potentially multiple subtags) is usually drawn from the much older ISO 639-1 standard. There are exceptions, though, among them these three languages:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "ISO 639: <em>iw</em>",
+        "BCP 47: <em>he</em>"
+      ]
+    },
+    {
+      "type": "list",
+      "items": [
+        "ISO 639: <em>in</em>",
+        "BCP 47: <em>id</em>"
+      ]
+    },
+    {
+      "type": "list",
+      "items": [
+        "ISO 639: <em>ji</em>",
+        "BCP 47: <em>yi</em>"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Past Preference"
+    },
+    {
+      "type": "paragraph",
+      "html": "Before JDK 17, Java treated the ISO-639 tags of these three languages as canonical and mapped the BCP 47 tags to them (see <a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html\" target=\"_blank\" rel=\"noreferrer noopener\"><code>Locale</code>’s documentation</a> under <em>Legacy language codes</em>):"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Transition"
+    },
+    {
+      "type": "paragraph",
+      "html": "This <a href=\"https://bugs.openjdk.org/browse/JDK-8263202\" target=\"_blank\" rel=\"noreferrer noopener\">changed in JDK 17</a> and since then the default behavior was to map to BCP 47 tags:"
+    },
+    {
+      "type": "paragraph",
+      "html": "To allow applications to update to Java 17 and later without requiring immediate code changes, the temporary system property <code>java.locale.useOldISOCodes</code> was introduced. Setting it to <code>true</code> reverted to the behavior before Java 17."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "New Preference"
+    },
+    {
+      "type": "paragraph",
+      "html": "<a href=\"https://bugs.openjdk.org/browse/JDK-8353118\" target=\"_blank\" rel=\"noreferrer noopener\">JDK 25 deprecated</a> <code>java.locale.useOldISOCodes</code> and <a href=\"https://bugs.openjdk.org/browse/JDK-8355522\" target=\"_blank\" rel=\"noreferrer noopener\">JDK 27 will remove it</a>. Setting it will result in a warning:"
+    },
+    {
+      "type": "paragraph",
+      "html": "Code that relies on <code>java.locale.useOldISOCodes</code> needs to be updated to consistently expect BCP 47 tags when <em>querying</em> <code>Locale</code> instances. It will remain possible to use the ISO 639 tags to <em>instantiate</em> <code>Locale</code> instances for Hebrew, Indonesian, and Yiddish."
+    }
+  ],
+  "refineErrors": [
+    {
+      "index": 2,
+      "type": "paragraph",
+      "message": "Empty Pi output."
+    },
+    {
+      "index": 3,
+      "type": "heading",
+      "message": "Empty Pi output."
+    },
+    {
+      "index": 5,
+      "type": "paragraph",
+      "message": "Empty Pi output."
+    }
+  ]
+}

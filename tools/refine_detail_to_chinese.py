@@ -78,15 +78,27 @@ def has_cjk(text: str | None) -> bool:
 def block_has_cjk(block: dict) -> bool:
     block_type = block.get("type")
     if block_type == "heading":
-        return has_cjk(block.get("text"))
+        text = str(block.get("text") or "")
+        return not text.strip() or has_cjk(text)
     if block_type in {"paragraph", "footnote"}:
-        return has_cjk(block.get("html"))
+        html = str(block.get("html") or "")
+        return not html.strip() or has_cjk(html)
     if block_type == "list":
-        return any(has_cjk(item) for item in (block.get("items") or []))
+        items = block.get("items") or []
+        if not items:
+            return True
+        return any(has_cjk(item) for item in items)
     if block_type == "image":
-        return has_cjk(block.get("alt")) or has_cjk(block.get("caption"))
+        alt = str(block.get("alt") or "")
+        caption = str(block.get("caption") or "")
+        if not alt.strip() and not caption.strip():
+            return True
+        return has_cjk(alt) or has_cjk(caption)
     if block_type == "embed":
-        return has_cjk(block.get("title"))
+        title = str(block.get("title") or "")
+        if not title.strip():
+            return True
+        return has_cjk(title)
     return False
 
 
@@ -355,10 +367,20 @@ def refine_detail_payload(
 
     start = max(0, int(args.start_index or 0))
     if args.resume_untranslated and not args.force:
+        # Prefer starting from the first *textual* block that is still non-CJK.
         for idx, block in enumerate(blocks):
+            block_type = block.get("type")
+            if block_type not in {"paragraph", "footnote", "list"}:
+                continue
             if not block_has_cjk(block):
                 start = idx
                 break
+        else:
+            # Fallback: if no textual non-CJK found, keep original start.
+            for idx, block in enumerate(blocks):
+                if not block_has_cjk(block):
+                    start = idx
+                    break
     limit = max(0, int(args.limit or 0))
     end = len(blocks) if limit == 0 else min(len(blocks), start + limit)
 

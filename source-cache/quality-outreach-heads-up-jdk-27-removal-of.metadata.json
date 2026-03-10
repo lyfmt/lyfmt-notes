@@ -1,0 +1,20 @@
+{
+  "item": {
+    "id": 2661,
+    "title": "Quality Outreach Heads-up - JDK 27: Removal of ‘java.locale.useOldISOCodes’ System Property",
+    "blog": "Inside Java",
+    "url": "https://inside.java/2026/03/10/quality-heads-up/",
+    "published": "2026-03-10T00:00:00Z",
+    "discovered": "2026-03-10T14:00:07.378233656Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://inside.java/2026/03/10/quality-heads-up/",
+    "ok": true,
+    "title": "Quality Outreach Heads-up - JDK 27: Removal of",
+    "description": "This Heads-Up is part of the regular communication sent to the projects involved; it covers the removal of the system property",
+    "fetched_bytes": 11790,
+    "error": null
+  },
+  "classification": "normal"
+}

@@ -11,6 +11,8 @@ from copy import deepcopy
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
+import select
+import time
 
 from rss_workflow_utils import (
     atomic_write_json,
@@ -69,43 +71,62 @@ def _to_text(value: Any) -> str:
     return str(value)
 
 
-def run_command(cmd: list[str], *, cwd: Path, timeout: int, env: dict[str, str] | None = None, input_text: str | None = None) -> dict[str, Any]:
+def run_command(
+    cmd: list[str],
+    *,
+    cwd: Path,
+    timeout: int,
+    env: dict[str, str] | None = None,
+    input_text: str | None = None,
+    heartbeat_seconds: int | None = None,
+) -> dict[str, Any]:
     merged_env = os.environ.copy()
     if env:
         merged_env.update(env)
     started = utc_now()
     try:
-        proc = subprocess.run(
+        proc = subprocess.Popen(
             cmd,
             cwd=str(cwd),
             env=merged_env,
-            input=input_text,
-            capture_output=True,
+            stdin=subprocess.PIPE if input_text is not None else None,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
             text=True,
-            timeout=timeout,
-            check=False,
         )
-        return {
-            "ok": proc.returncode == 0,
-            "code": proc.returncode,
-            "stdout": _to_text(proc.stdout),
-            "stderr": _to_text(proc.stderr),
-            "started_at": started,
-            "finished_at": utc_now(),
-            "cmd": cmd,
-        }
-    except subprocess.TimeoutExpired as exc:
-        return {
-            "ok": False,
-            "code": None,
-            "stdout": _to_text(exc.stdout),
-            "stderr": _to_text(exc.stderr) + f"\nTIMEOUT after {timeout}s",
-            "started_at": started,
-            "finished_at": utc_now(),
-            "cmd": cmd,
-            "timeout": timeout,
-            "timeout_expired": True,
-        }
+        try:
+            stdout_text, stderr_text = proc.communicate(input=input_text, timeout=timeout)
+            return {
+                "ok": proc.returncode == 0,
+                "code": proc.returncode,
+                "stdout": _to_text(stdout_text),
+                "stderr": _to_text(stderr_text),
+                "started_at": started,
+                "finished_at": utc_now(),
+                "cmd": cmd,
+            }
+        except subprocess.TimeoutExpired:
+            # Optional heartbeat window to keep outer wrappers alive while we wait a bit longer.
+            if heartbeat_seconds and heartbeat_seconds > 0:
+                deadline = time.time() + heartbeat_seconds
+                while time.time() < deadline:
+                    ready, _, _ = select.select([proc.stdout, proc.stderr], [], [], 0.25)
+                    if ready:
+                        break
+                    time.sleep(0.25)
+            proc.kill()
+            stdout_text, stderr_text = proc.communicate()
+            return {
+                "ok": False,
+                "code": None,
+                "stdout": _to_text(stdout_text),
+                "stderr": _to_text(stderr_text) + f"\nTIMEOUT after {timeout}s",
+                "started_at": started,
+                "finished_at": utc_now(),
+                "cmd": cmd,
+                "timeout": timeout,
+                "timeout_expired": True,
+            }
     except Exception as exc:
         return {
             "ok": False,
@@ -297,6 +318,7 @@ def build_bundle(args: argparse.Namespace) -> tuple[dict[str, Any], dict[str, An
         ["python3", args.bundle_script, "--state-limit", "0", "--pretty"],
         cwd=WORKSPACE,
         timeout=args.scan_timeout,
+        heartbeat_seconds=30,
     )
     payload, error = parse_json_stdout(result)
     if error or not isinstance(payload, dict):
@@ -318,19 +340,39 @@ def maybe_git_commit_and_push(args: argparse.Namespace, run_record: dict[str, An
         return outcome
     if args.git_commit:
         commit_message = f"Harden RSS autopublish run {run_record['run_id']}"
-        add_result = run_command(["git", "add", "articles.json", "assets", "source-cache", "tools/generated-specs", "tools/generated-details", "tools"], cwd=SITE_ROOT, timeout=120)
-        commit_result = run_command(["git", "commit", "-m", commit_message], cwd=SITE_ROOT, timeout=120)
+        add_result = run_command(
+            ["git", "add", "articles.json", "assets", "source-cache", "tools/generated-specs", "tools/generated-details", "tools"],
+            cwd=SITE_ROOT,
+            timeout=120,
+            heartbeat_seconds=30,
+        )
+        commit_result = run_command(
+            ["git", "commit", "-m", commit_message],
+            cwd=SITE_ROOT,
+            timeout=120,
+            heartbeat_seconds=30,
+        )
         outcome["commit"] = {"add": summarize_result(add_result), "commit": summarize_result(commit_result)}
         if not commit_result.get("ok"):
             return outcome
     if args.git_push:
-        push_result = run_command(["git", "push", "origin", "master"], cwd=SITE_ROOT, timeout=180)
+        push_result = run_command(
+            ["git", "push", "origin", "master"],
+            cwd=SITE_ROOT,
+            timeout=180,
+            heartbeat_seconds=30,
+        )
         outcome["push"] = summarize_result(push_result)
     return outcome
 
 
 def validate_publish(args: argparse.Namespace) -> dict[str, Any]:
-    result = run_command(["python3", args.validate_script, "--articles", args.articles, "--pretty"], cwd=SITE_ROOT, timeout=args.validate_timeout)
+    result = run_command(
+        ["python3", args.validate_script, "--articles", args.articles, "--pretty"],
+        cwd=SITE_ROOT,
+        timeout=args.validate_timeout,
+        heartbeat_seconds=30,
+    )
     payload, _ = parse_json_stdout(result)
     return {
         "command": summarize_result(result),
@@ -339,7 +381,12 @@ def validate_publish(args: argparse.Namespace) -> dict[str, Any]:
 
 
 def commit_checkpoint(args: argparse.Namespace, through_id: int) -> dict[str, Any]:
-    result = run_command(["python3", args.state_script, "commit", "--through-id", str(through_id)], cwd=WORKSPACE, timeout=60)
+    result = run_command(
+        ["python3", args.state_script, "commit", "--through-id", str(through_id)],
+        cwd=WORKSPACE,
+        timeout=60,
+        heartbeat_seconds=30,
+    )
     payload, _ = parse_json_stdout(result)
     return {
         "command": summarize_result(result),
@@ -421,6 +468,7 @@ def process_item(args: argparse.Namespace, run_record: dict[str, Any], bundle: d
         cwd=SITE_ROOT,
         timeout=args.html_timeout,
         input_text=json.dumps(bundle, ensure_ascii=False),
+        heartbeat_seconds=30,
     )
     stage_attempt(item_state, "build_spec", build_spec_result)
     if not build_spec_result.get("ok"):
@@ -474,6 +522,7 @@ def process_item(args: argparse.Namespace, run_record: dict[str, Any], bundle: d
         ],
         cwd=SITE_ROOT,
         timeout=args.detail_timeout,
+        heartbeat_seconds=30,
     )
     stage_attempt(item_state, "build_detail", build_detail_result)
     if build_detail_result.get("ok"):
@@ -508,7 +557,12 @@ def process_item(args: argparse.Namespace, run_record: dict[str, Any], bundle: d
             refine_cmd.extend(["--limit", str(args.pi_limit)])
         if args.allow_publish:
             refine_cmd.append("--enable-detail")
-        refine_result = run_command(refine_cmd, cwd=SITE_ROOT, timeout=max(args.pi_timeout + 30, args.pi_timeout * 2))
+        refine_result = run_command(
+            refine_cmd,
+            cwd=SITE_ROOT,
+            timeout=max(args.pi_timeout + 30, args.pi_timeout * 2),
+            heartbeat_seconds=30,
+        )
         stage_attempt(item_state, "refine_detail", refine_result)
         if refine_result.get("ok"):
             payload, _ = parse_json_stdout(refine_result)
@@ -547,6 +601,7 @@ def process_item(args: argparse.Namespace, run_record: dict[str, Any], bundle: d
         ],
         cwd=SITE_ROOT,
         timeout=args.upsert_timeout,
+        heartbeat_seconds=30,
     )
     stage_attempt(item_state, "upsert", upsert_result)
     if not upsert_result.get("ok"):
