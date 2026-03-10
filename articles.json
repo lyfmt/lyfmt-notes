@@ -5,6 +5,264 @@
   },
   "posts": [
     {
+      "slug": "amazon-connect-now-supports-conversational-analytics-for-email-aws",
+      "title": "Amazon Connect now supports conversational analytics for email - AWS",
+      "author": "AWS Architecture Blog",
+      "publishedAt": "2026-03-10",
+      "source": "AWS Architecture Blog",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-connect-conversational-analytics-email/",
+      "excerpt": "这篇文章围绕“Amazon Connect now supports conversational analytics for email - AWS”展开，RSS 摘要提到：Discover more about what",
+      "tags": [
+        "AI"
+      ],
+      "content": [
+        {
+          "heading": "文章核心",
+          "paragraphs": [
+            "基于 RSS 摘要与页面元数据，原文重点是：Discover more about what",
+            "来源信息：AWS Architecture Blog｜2026-03-10。"
+          ]
+        },
+        {
+          "heading": "值得继续补充的点",
+          "paragraphs": [
+            "如果后续补齐详情视图，可以继续沿着原文结构展开关键论点、案例、约束条件与结论。",
+            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+          ]
+        }
+      ],
+      "detail": {
+        "available": true,
+        "layout": "detail-zh",
+        "translatedFrom": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-connect-conversational-analytics-email/",
+        "sourceName": "AWS Architecture Blog",
+        "sourceDescription": "以下为原文逐段直译，保留原文段落推进与媒体顺序。",
+        "blocks": [
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Amazon Connect 现已支持面向电子邮件的对话式分析"
+          },
+          {
+            "type": "paragraph",
+            "html": "Amazon Connect 现已支持对电子邮件联系人进行对话式分析，使联络中心管理者能够自动对邮件分类、遮蔽个人身份信息（PII），并生成联系摘要。这让你可以快速识别新兴趋势，通过保护敏感信息更好地保持合规，并减少审核坐席绩效所花费的时间。例如，当客户就账户问题发送邮件时，Amazon Connect 会自动对该邮件分类、遮蔽敏感信息，并生成摘要供主管审阅。<br> <br> 要启用此功能，请在邮件联系人分配给坐席或发送给最终客户之前，将 <a href=\"https://docs.aws.amazon.com/connect/latest/adminguide/set-recording-analytics-processing-behavior.html\" target=\"_blank\" rel=\"noreferrer noopener\">Set recording, analytics and processing behavior</a> 模块添加到你的流程中。你可以自定义需要遮蔽的 PII 类型，选择遮蔽内容是否显示特定 PII 类型标记（如 [SSN]）或通用标记（[PII]），选择是否分别存储原始与遮蔽后的版本，并启用联系摘要。借助这些分析，你可以快速创建规则，自动触发诸如分配类别、创建任务或更新工单等操作。<br> <br> Amazon Connect 对话式分析在美国东部（弗吉尼亚北部）、美国西部（俄勒冈）、亚太（首尔）、亚太（新加坡）、亚太（悉尼）、亚太（东京）、加拿大（中部）、欧洲（法兰克福）和欧洲（伦敦）<a href=\"https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/\" target=\"_blank\" rel=\"noreferrer noopener\">区域</a>可用。要了解更多并开始使用，请参阅帮助<a href=\"https://docs.aws.amazon.com/connect/latest/adminguide/analyze-conversations.html\" target=\"_blank\" rel=\"noreferrer noopener\">文档</a>或访问 <a href=\"https://aws.amazon.com/connect/\" target=\"_blank\" rel=\"noreferrer noopener\">Amazon Connect</a> 网站。"
+          }
+        ],
+        "refineErrors": [
+          {
+            "index": 1,
+            "type": "paragraph",
+            "message": "Empty Pi output."
+          }
+        ]
+      },
+      "workflow": {
+        "articleId": 2672,
+        "rssTitle": "Amazon Connect now supports conversational analytics for email"
+      }
+    },
+    {
+      "slug": "amazon-connect-introduces-ai-powered-manager-assistance-preview-aws",
+      "title": "Amazon Connect introduces AI-powered manager assistance (Preview) - AWS",
+      "author": "AWS Architecture Blog",
+      "publishedAt": "2026-03-10",
+      "source": "AWS Architecture Blog",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-connect-ai-powered-manager-assistance/",
+      "excerpt": "这篇文章围绕“Amazon Connect introduces AI-powered manager assistance (Preview) - AWS”展开，RSS 摘要提到：Discover more about what",
+      "tags": [
+        "AI"
+      ],
+      "content": [
+        {
+          "heading": "文章核心",
+          "paragraphs": [
+            "基于 RSS 摘要与页面元数据，原文重点是：Discover more about what",
+            "来源信息：AWS Architecture Blog｜2026-03-10。"
+          ]
+        },
+        {
+          "heading": "值得继续补充的点",
+          "paragraphs": [
+            "如果后续补齐详情视图，可以继续沿着原文结构展开关键论点、案例、约束条件与结论。",
+            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+          ]
+        }
+      ],
+      "detail": {
+        "available": true,
+        "layout": "detail-zh",
+        "translatedFrom": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-connect-ai-powered-manager-assistance/",
+        "sourceName": "AWS Architecture Blog",
+        "sourceDescription": "以下为原文逐段直译，保留原文段落推进与媒体顺序。",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "html": "今天，Amazon Connect 宣布预览一款由 AI 驱动的助手，使联络中心管理者能够使用自然语言即时回答运营问题。你可以查询 150+ 个 Amazon Connect 指标，包括坐席排班、自助服务体验与绩效评估，并覆盖这些指标的历史数据，在数秒内获得结果——从而消除数小时的手动数据收集。该助手还可诊断底层问题，例如识别哪些队列面临无法达成服务级别目标的风险，并推荐具体的恢复行动。"
+          },
+          {
+            "type": "paragraph",
+            "html": "该功能目前处于预览阶段。如需申请访问，请联系你的 AWS 客户团队或 <a href=\"https://aws.amazon.com/contact-us/?nc2=h_l1\" target=\"_blank\" rel=\"noreferrer noopener\">AWS Representative</a>。要了解更多关于 Amazon Connect（AWS 的云端联络中心），请访问 <a href=\"https://aws.amazon.com/connect/\" target=\"_blank\" rel=\"noreferrer noopener\">Amazon Connect 网站</a>。"
+          }
+        ]
+      },
+      "workflow": {
+        "articleId": 2671,
+        "rssTitle": "Amazon Connect introduces AI-powered manager assistance (Preview)"
+      }
+    },
+    {
+      "slug": "gemini-embedding-2-our-first-natively-multimodal-embedding-model",
+      "title": "Gemini Embedding 2: Our first natively multimodal embedding model",
+      "author": "Google AI Blog",
+      "publishedAt": "2026-03-10",
+      "source": "Google AI Blog",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-embedding-2/",
+      "excerpt": "这篇文章围绕“Gemini Embedding 2: Our first natively multimodal embedding model”展开，当前已从 RSS 条目同步到静态博客工作流中。",
+      "tags": [
+        "AI"
+      ],
+      "content": [
+        {
+          "heading": "文章核心",
+          "paragraphs": [
+            "当前只拿到了标题、来源和链接，还没有更完整的页面摘要，因此这里只生成一个可继续加工的草稿入口。",
+            "来源信息：Google AI Blog｜2026-03-10。"
+          ]
+        },
+        {
+          "heading": "值得继续补充的点",
+          "paragraphs": [
+            "如果后续补齐详情视图，可以继续沿着原文结构展开关键论点、案例、约束条件与结论。",
+            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+          ]
+        }
+      ],
+      "detail": {
+        "available": true,
+        "layout": "detail-zh",
+        "translatedFrom": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-embedding-2/",
+        "sourceName": "Google AI Blog",
+        "sourceDescription": "以下为原文逐段直译，保留原文段落推进与媒体顺序。",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "html": "2026 年 3 月 10 日"
+          },
+          {
+            "type": "paragraph",
+            "html": "Gemini Embedding 2 是我们的首个原生多模态嵌入模型，可将文本、图像、视频、音频和文档映射到同一嵌入空间，从而实现跨不同媒体类型的多模态检索与分类——现已进入公开预览。"
+          },
+          {
+            "type": "image",
+            "src": "./assets/posts/gemini-embedding-2-our-first-natively-multimodal-embedding-model/figure-01.webp",
+            "alt": "Gemini Embedding 2",
+            "caption": "Gemini Embedding 2"
+          },
+          {
+            "type": "paragraph",
+            "html": "今天我们通过 <a href=\"https://ai.google.dev/gemini-api/docs/embeddings\" target=\"_blank\" rel=\"noreferrer noopener\">Gemini API</a> 和 <a href=\"https://docs.cloud.google.com/vertex-ai/generative-ai/docs/embeddings/get-multimodal-embeddings\" target=\"_blank\" rel=\"noreferrer noopener\">Vertex AI</a> 以公开预览形式发布 Gemini Embedding 2，这是首个基于 Gemini 架构的完全多模态嵌入模型。"
+          },
+          {
+            "type": "paragraph",
+            "html": "在此前仅文本基础之上，Gemini Embedding 2 将文本、图像、视频、音频和文档映射到单一统一的嵌入空间，并在超过 100 种语言中捕捉语义意图。这简化了复杂的管线，并增强了多种多模态下游任务——从检索增强生成（RAG）与语义搜索到情感分析与数据聚类。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "新模态与灵活的输出维度"
+          },
+          {
+            "type": "paragraph",
+            "html": "该模型基于 Gemini，并利用其一流的多模态理解能力来生成高质量嵌入，覆盖："
+          },
+          {
+            "type": "list",
+            "items": [
+              "<b>文本：</b>支持最多 8192 个输入 token 的超大上下文",
+              "<b>图像：</b>每次请求可处理最多 6 张图像，支持 PNG 与 JPEG 格式",
+              "<b>视频：</b>支持最长 120 秒的 MP4 与 MOV 格式视频输入",
+              "<b>音频：</b>无需中间文本转录即可直接摄取并嵌入音频数据",
+              "<b>文档：</b>可直接嵌入最长 6 页的 PDF"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "html": "该模型不仅能一次处理一种模态，还能原生理解交错输入，因此你可以在一次请求中传入多种模态输入（例如图像 + 文本）。这使模型能够捕捉不同媒体类型之间复杂、细微的关系，从而解锁对复杂现实世界数据更准确的理解。"
+          },
+          {
+            "type": "paragraph",
+            "html": "与我们此前的嵌入模型一样，Gemini Embedding 2 融合了 Matryoshka Representation Learning（MRL）——一种通过动态缩减维度来“嵌套”信息的技术。这使输出维度能够从默认的 3072 灵活缩减，让开发者在性能与存储成本之间取得平衡。我们建议使用 3072、1536、768 维以获得最佳质量。"
+          },
+          {
+            "type": "paragraph",
+            "html": "想查看这些嵌入的实际效果，可试用我们的轻量级多模态语义搜索 <a href=\"https://findmemedia.lmm.ai/\" target=\"_blank\" rel=\"noreferrer noopener\">demo</a>。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "业界领先的性能"
+          },
+          {
+            "type": "paragraph",
+            "html": "Gemini Embedding 2 不仅仅是在旧模型基础上的改进。它为多模态深度设立了新的性能标准，引入了强大的语音能力，并在文本、图像与视频任务上超越了领先模型。这一可衡量的提升与独特的多模态覆盖，正是开发者应对多样化嵌入需求所需要的。"
+          },
+          {
+            "type": "image",
+            "src": "./assets/posts/gemini-embedding-2-our-first-natively-multimodal-embedding-model/figure-02.webp",
+            "alt": "Gemini embedding 2 benchmarks",
+            "caption": "Gemini embedding 2 benchmarks"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "为数据解锁更深层含义"
+          },
+          {
+            "type": "paragraph",
+            "html": "嵌入技术为许多 Google 产品中的体验提供支撑。从嵌入在上下文工程中起关键作用的 RAG，到大规模数据管理以及传统搜索/分析，一些早期访问伙伴已经在使用 Gemini Embedding 2 来解锁高价值的多模态应用："
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "现在就开始构建"
+          },
+          {
+            "type": "paragraph",
+            "html": "通过 <a href=\"https://ai.google.dev/gemini-api/docs/embeddings\" target=\"_blank\" rel=\"noreferrer noopener\">Gemini API</a> 或 <a href=\"https://docs.cloud.google.com/vertex-ai/generative-ai/docs/embeddings/get-multimodal-embeddings\" target=\"_blank\" rel=\"noreferrer noopener\">Vertex AI</a> 开始使用 Gemini Embedding 2 模型。"
+          },
+          {
+            "type": "paragraph",
+            "html": "在我们的交互式 <a href=\"https://github.com/google-gemini/cookbook/blob/main/quickstarts/Embeddings.ipynb\" target=\"_blank\" rel=\"noreferrer noopener\">Gemini API</a> 和 <a href=\"https://github.com/GoogleCloudPlatform/generative-ai/tree/main/gemini/embedding/intro_gemini_embedding.ipynb\" target=\"_blank\" rel=\"noreferrer noopener\">Vertex AI</a> Colab 笔记本中学习如何使用该模型。你还可以通过 <a href=\"https://docs.langchain.com/oss/python/integrations/text_embedding/google_generative_ai\" target=\"_blank\" rel=\"noreferrer noopener\">LangChain</a>、<a href=\"https://developers.llamaindex.ai/python/framework/integrations/embeddings/google_genai/\" target=\"_blank\" rel=\"noreferrer noopener\">LlamaIndex</a>、<a href=\"https://haystack.deepset.ai/integrations/google-genai\" target=\"_blank\" rel=\"noreferrer noopener\">Haystack</a>、<a href=\"https://docs.weaviate.io/weaviate/model-providers/google\" target=\"_blank\" rel=\"noreferrer noopener\">Weaviate</a>、<a href=\"https://qdrant.tech/documentation/embeddings/gemini/\" target=\"_blank\" rel=\"noreferrer noopener\">QDrant</a>、<a href=\"https://docs.trychroma.com/integrations/embedding-models/google-gemini\" target=\"_blank\" rel=\"noreferrer noopener\">ChromaDB</a> 以及 <a href=\"https://docs.cloud.google.com/vertex-ai/docs/vector-search-2/overview\" target=\"_blank\" rel=\"noreferrer noopener\">Vector Search</a> 使用它。"
+          },
+          {
+            "type": "paragraph",
+            "html": "通过为我们周围多样化的数据赋予语义含义，Gemini Embedding 2 为下一代先进 AI 体验提供了关键的多模态基础。我们迫不及待想看到你的构建成果。"
+          }
+        ],
+        "refineErrors": [
+          {
+            "index": 0,
+            "type": "paragraph",
+            "message": "Empty Pi output."
+          },
+          {
+            "index": 1,
+            "type": "paragraph",
+            "message": "Empty Pi output."
+          },
+          {
+            "index": 3,
+            "type": "paragraph",
+            "message": "Empty Pi output."
+          }
+        ]
+      },
+      "workflow": {
+        "articleId": 2670,
+        "rssTitle": "Gemini Embedding 2: Our first natively multimodal embedding model"
+      }
+    },
+    {
       "slug": "arduino-s-new-ai-centric-board-is-the-ventuno-q",
       "title": "Arduino’s New AI-Centric Board Is The VENTUNO Q",
       "author": "Hackaday",

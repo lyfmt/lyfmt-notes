@@ -30,15 +30,15 @@
     "layout": "detail-zh",
     "translatedFrom": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-embedding-2/",
     "sourceName": "Google AI Blog",
-    "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+    "sourceDescription": "以下为原文逐段直译，保留原文段落推进与媒体顺序。",
     "blocks": [
       {
         "type": "paragraph",
-        "html": "Mar 10, 2026"
+        "html": "2026 年 3 月 10 日"
       },
       {
         "type": "paragraph",
-        "html": "Gemini Embedding 2 is our first natively multimodal embedding model that maps text, images, video, audio and documents into a single embedding space, enabling multimodal retrieval and classification across different types of media — and it’s available now in public preview."
+        "html": "Gemini Embedding 2 是我们的首个原生多模态嵌入模型，可将文本、图像、视频、音频和文档映射到同一嵌入空间，从而实现跨不同媒体类型的多模态检索与分类——现已进入公开预览。"
       },
       {
         "type": "image",
@@ -48,51 +48,51 @@
       },
       {
         "type": "paragraph",
-        "html": "Today we’re releasing Gemini Embedding 2, our first fully multimodal embedding model built on the Gemini architecture, in Public Preview via the <a href=\"https://ai.google.dev/gemini-api/docs/embeddings\" target=\"_blank\" rel=\"noreferrer noopener\">Gemini API</a> and <a href=\"https://docs.cloud.google.com/vertex-ai/generative-ai/docs/embeddings/get-multimodal-embeddings\" target=\"_blank\" rel=\"noreferrer noopener\">Vertex AI</a>."
+        "html": "今天我们通过 <a href=\"https://ai.google.dev/gemini-api/docs/embeddings\" target=\"_blank\" rel=\"noreferrer noopener\">Gemini API</a> 和 <a href=\"https://docs.cloud.google.com/vertex-ai/generative-ai/docs/embeddings/get-multimodal-embeddings\" target=\"_blank\" rel=\"noreferrer noopener\">Vertex AI</a> 以公开预览形式发布 Gemini Embedding 2，这是首个基于 Gemini 架构的完全多模态嵌入模型。"
       },
       {
         "type": "paragraph",
-        "html": "Expanding on our previous text-only foundation, Gemini Embedding 2 maps text, images, videos, audio and documents into a single, unified embedding space, and captures semantic intent across over 100 languages. This simplifies complex pipelines and enhances a wide variety of multimodal downstream tasks—from Retrieval-Augmented Generation (RAG) and semantic search to sentiment analysis and data clustering."
+        "html": "在此前仅文本基础之上，Gemini Embedding 2 将文本、图像、视频、音频和文档映射到单一统一的嵌入空间，并在超过 100 种语言中捕捉语义意图。这简化了复杂的管线，并增强了多种多模态下游任务——从检索增强生成（RAG）与语义搜索到情感分析与数据聚类。"
       },
       {
         "type": "heading",
         "level": 2,
-        "text": "New modalities and flexible output dimensions"
+        "text": "新模态与灵活的输出维度"
       },
       {
         "type": "paragraph",
-        "html": "The model is based on Gemini and leverages its best-in-class multimodal understanding capabilities to create high-quality embeddings across:"
+        "html": "该模型基于 Gemini，并利用其一流的多模态理解能力来生成高质量嵌入，覆盖："
       },
       {
         "type": "list",
         "items": [
-          "<b>Text:</b> supports an expansive context of up to 8192 input tokens",
-          "<b>Images:</b> capable of processing up to 6 images per request, supporting PNG and JPEG formats",
-          "<b>Videos:</b> supports up to 120 seconds of video input in MP4 and MOV formats",
-          "<b>Audio:</b> natively ingests and embeds audio data without needing intermediate text transcriptions",
-          "<b>Documents:</b> directly embed PDFs up to 6 pages long"
+          "<b>文本：</b>支持最多 8192 个输入 token 的超大上下文",
+          "<b>图像：</b>每次请求可处理最多 6 张图像，支持 PNG 与 JPEG 格式",
+          "<b>视频：</b>支持最长 120 秒的 MP4 与 MOV 格式视频输入",
+          "<b>音频：</b>无需中间文本转录即可直接摄取并嵌入音频数据",
+          "<b>文档：</b>可直接嵌入最长 6 页的 PDF"
         ]
       },
       {
         "type": "paragraph",
-        "html": "Beyond processing one modality at a time, this model natively understands interleaved input so you can pass multiple modalities of input (e.g., image + text) in a single request. This allows the model to capture the complex, nuanced relationships between different media types, unlocking more accurate understanding of complex, real-world data."
+        "html": "该模型不仅能一次处理一种模态，还能原生理解交错输入，因此你可以在一次请求中传入多种模态输入（例如图像 + 文本）。这使模型能够捕捉不同媒体类型之间复杂、细微的关系，从而解锁对复杂现实世界数据更准确的理解。"
       },
       {
         "type": "paragraph",
-        "html": "Like our previous embedding models, Gemini Embedding 2 incorporates Matryoshka Representation Learning (MRL), a technique that “nests” information by dynamically scaling down dimensions. This enables flexible output dimensions scaling down from the default 3072 so developers can balance performance and storage costs. We recommend using 3072, 1536, 768 dimensions for highest quality."
+        "html": "与我们此前的嵌入模型一样，Gemini Embedding 2 融合了 Matryoshka Representation Learning（MRL）——一种通过动态缩减维度来“嵌套”信息的技术。这使输出维度能够从默认的 3072 灵活缩减，让开发者在性能与存储成本之间取得平衡。我们建议使用 3072、1536、768 维以获得最佳质量。"
       },
       {
         "type": "paragraph",
-        "html": "To see these embeddings in action, try out our lightweight multimodal semantic search <a href=\"https://findmemedia.lmm.ai/\" target=\"_blank\" rel=\"noreferrer noopener\">demo</a>."
+        "html": "想查看这些嵌入的实际效果，可试用我们的轻量级多模态语义搜索 <a href=\"https://findmemedia.lmm.ai/\" target=\"_blank\" rel=\"noreferrer noopener\">demo</a>。"
       },
       {
         "type": "heading",
         "level": 2,
-        "text": "State-of-the-art performance"
+        "text": "业界领先的性能"
       },
       {
         "type": "paragraph",
-        "html": "Gemini Embedding 2 doesn&#x27;t just improve on legacy models. It establishes a new performance standard for multimodal depth, introducing strong speech capabilities and outperforming leading models in text, image, and video tasks. This measurable improvement and unique multimodal coverage give developers exactly what they need for their diverse embedding needs."
+        "html": "Gemini Embedding 2 不仅仅是在旧模型基础上的改进。它为多模态深度设立了新的性能标准，引入了强大的语音能力，并在文本、图像与视频任务上超越了领先模型。这一可衡量的提升与独特的多模态覆盖，正是开发者应对多样化嵌入需求所需要的。"
       },
       {
         "type": "image",
@@ -103,28 +103,28 @@
       {
         "type": "heading",
         "level": 2,
-        "text": "Unlocking deeper meaning for data"
+        "text": "为数据解锁更深层含义"
       },
       {
         "type": "paragraph",
-        "html": "Embeddings are the technology that power experiences in many Google products. From RAG where embeddings can play a crucial role in context engineering to large-scale data management and classic search/analysis, some of our early access partners are already using Gemini Embedding 2 to unlock high-value multimodal applications:"
+        "html": "嵌入技术为许多 Google 产品中的体验提供支撑。从嵌入在上下文工程中起关键作用的 RAG，到大规模数据管理以及传统搜索/分析，一些早期访问伙伴已经在使用 Gemini Embedding 2 来解锁高价值的多模态应用："
       },
       {
         "type": "heading",
         "level": 2,
-        "text": "Start building today"
+        "text": "现在就开始构建"
       },
       {
         "type": "paragraph",
-        "html": "Get started with the Gemini Embedding 2 model through <a href=\"https://ai.google.dev/gemini-api/docs/embeddings\" target=\"_blank\" rel=\"noreferrer noopener\">Gemini API</a> or <a href=\"https://docs.cloud.google.com/vertex-ai/generative-ai/docs/embeddings/get-multimodal-embeddings\" target=\"_blank\" rel=\"noreferrer noopener\">Vertex AI</a>."
+        "html": "通过 <a href=\"https://ai.google.dev/gemini-api/docs/embeddings\" target=\"_blank\" rel=\"noreferrer noopener\">Gemini API</a> 或 <a href=\"https://docs.cloud.google.com/vertex-ai/generative-ai/docs/embeddings/get-multimodal-embeddings\" target=\"_blank\" rel=\"noreferrer noopener\">Vertex AI</a> 开始使用 Gemini Embedding 2 模型。"
       },
       {
         "type": "paragraph",
-        "html": "Learn how to use the model in our interactive <a href=\"https://github.com/google-gemini/cookbook/blob/main/quickstarts/Embeddings.ipynb\" target=\"_blank\" rel=\"noreferrer noopener\">Gemini API</a> and <a href=\"https://github.com/GoogleCloudPlatform/generative-ai/tree/main/gemini/embedding/intro_gemini_embedding.ipynb\" target=\"_blank\" rel=\"noreferrer noopener\">Vertex AI</a> Colab notebooks. You can also use it through <a href=\"https://docs.langchain.com/oss/python/integrations/text_embedding/google_generative_ai\" target=\"_blank\" rel=\"noreferrer noopener\">LangChain</a>, <a href=\"https://developers.llamaindex.ai/python/framework/integrations/embeddings/google_genai/\" target=\"_blank\" rel=\"noreferrer noopener\">LlamaIndex</a>, <a href=\"https://haystack.deepset.ai/integrations/google-genai\" target=\"_blank\" rel=\"noreferrer noopener\">Haystack</a>, <a href=\"https://docs.weaviate.io/weaviate/model-providers/google\" target=\"_blank\" rel=\"noreferrer noopener\">Weaviate</a>, <a href=\"https://qdrant.tech/documentation/embeddings/gemini/\" target=\"_blank\" rel=\"noreferrer noopener\">QDrant</a>, <a href=\"https://docs.trychroma.com/integrations/embedding-models/google-gemini\" target=\"_blank\" rel=\"noreferrer noopener\">ChromaDB</a>, and <a href=\"https://docs.cloud.google.com/vertex-ai/docs/vector-search-2/overview\" target=\"_blank\" rel=\"noreferrer noopener\">Vector Search</a>."
+        "html": "在我们的交互式 <a href=\"https://github.com/google-gemini/cookbook/blob/main/quickstarts/Embeddings.ipynb\" target=\"_blank\" rel=\"noreferrer noopener\">Gemini API</a> 和 <a href=\"https://github.com/GoogleCloudPlatform/generative-ai/tree/main/gemini/embedding/intro_gemini_embedding.ipynb\" target=\"_blank\" rel=\"noreferrer noopener\">Vertex AI</a> Colab 笔记本中学习如何使用该模型。你还可以通过 <a href=\"https://docs.langchain.com/oss/python/integrations/text_embedding/google_generative_ai\" target=\"_blank\" rel=\"noreferrer noopener\">LangChain</a>、<a href=\"https://developers.llamaindex.ai/python/framework/integrations/embeddings/google_genai/\" target=\"_blank\" rel=\"noreferrer noopener\">LlamaIndex</a>、<a href=\"https://haystack.deepset.ai/integrations/google-genai\" target=\"_blank\" rel=\"noreferrer noopener\">Haystack</a>、<a href=\"https://docs.weaviate.io/weaviate/model-providers/google\" target=\"_blank\" rel=\"noreferrer noopener\">Weaviate</a>、<a href=\"https://qdrant.tech/documentation/embeddings/gemini/\" target=\"_blank\" rel=\"noreferrer noopener\">QDrant</a>、<a href=\"https://docs.trychroma.com/integrations/embedding-models/google-gemini\" target=\"_blank\" rel=\"noreferrer noopener\">ChromaDB</a> 以及 <a href=\"https://docs.cloud.google.com/vertex-ai/docs/vector-search-2/overview\" target=\"_blank\" rel=\"noreferrer noopener\">Vector Search</a> 使用它。"
       },
       {
         "type": "paragraph",
-        "html": "By bringing semantic meaning to the diverse data around us, Gemini Embedding 2 provides the essential multimodal foundation for the next era of advanced AI experiences. We can’t wait to see what you build."
+        "html": "通过为我们周围多样化的数据赋予语义含义，Gemini Embedding 2 为下一代先进 AI 体验提供了关键的多模态基础。我们迫不及待想看到你的构建成果。"
       }
     ],
     "refineErrors": [
