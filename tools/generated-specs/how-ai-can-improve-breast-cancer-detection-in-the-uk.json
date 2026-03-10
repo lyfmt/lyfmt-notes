@@ -30,15 +30,15 @@
     "layout": "detail-zh",
     "translatedFrom": "https://blog.google/innovation-and-ai/technology/health/google-ai-breast-cancer-detection/",
     "sourceName": "Google AI Blog",
-    "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+    "sourceDescription": "以下为原文结构对应的中文翻译版。",
     "blocks": [
       {
         "type": "paragraph",
-        "html": "Mar 10, 2026"
+        "html": "2026 年 3 月 10 日"
       },
       {
         "type": "paragraph",
-        "html": "Our collaborative research with Imperial College London and the UK’s NHS shows AI’s potential to detect 25% of the interval cancers previously missed by conventional methods. Additionally, the research found AI can reduce screening workloads."
+        "html": "我们与帝国理工学院以及英国 NHS 的合作研究显示，AI 有潜力检测出传统方法此前漏检的 25% 的间期癌症。此外，研究还发现 AI 可以降低筛查工作量。"
       },
       {
         "type": "image",
@@ -49,40 +49,40 @@
       {
         "type": "heading",
         "level": 2,
-        "text": "General summary"
+        "text": "总体概述"
       },
       {
         "type": "paragraph",
-        "html": "AI can improve breast cancer detection in the UK. Studies show AI accurately detects cancers and reduces radiologists&#x27; workloads. More research is needed to build trust between specialists and AI."
+        "html": "AI 可以改善英国的乳腺癌检测。研究显示 AI 能准确检测癌症并减少放射科医生的工作量。要在专科医生与 AI 之间建立信任仍需更多研究。"
       },
       {
         "type": "heading",
         "level": 2,
-        "text": "Bullet points"
+        "text": "要点"
       },
       {
         "type": "list",
         "items": [
-          "&quot;How AI can improve breast cancer detection in the UK&quot; explores AI&#x27;s role in early detection.",
-          "AI found 25% of missed &quot;interval cancers&quot; in a study with Google, Imperial College, and the NHS.",
-          "AI could cut radiologist workload by 40%, letting them focus on complex cases.",
-          "Specialists sometimes overruled AI, showing the need to build trust in AI diagnoses.",
-          "AI needs careful calibration to each hospital&#x27;s workflow, equipment, and patients."
+          "“How AI can improve breast cancer detection in the UK” 探讨了 AI 在早期检测中的作用。",
+          "在 Google、帝国理工学院和 NHS 的一项研究中，AI 发现了 25% 被漏检的“间期癌症”。",
+          "AI 可能将放射科医生的工作量减少 40%，让他们专注于复杂病例。",
+          "专科医生有时会推翻 AI 的判断，说明需要建立对 AI 诊断的信任。",
+          "AI 需要根据每家医院的流程、设备和患者进行谨慎校准。"
         ]
       },
       {
         "type": "heading",
         "level": 2,
-        "text": "Basic explainer"
+        "text": "基本解读"
       },
       {
         "type": "paragraph",
-        "html": "Google made an AI system to help find breast cancer in the UK. The AI found cancers that doctors missed and could cut down on the amount of work for the doctors. But, doctors need to trust the AI, so more research is needed to make sure they work well together. This could help more women get diagnosed and treated earlier."
+        "html": "Google 制作了一个 AI 系统来帮助在英国发现乳腺癌。该 AI 发现了医生漏掉的癌症，并可能减少医生的工作量。但是，医生需要信任 AI，因此仍需更多研究来确保二者能良好协作。这可能帮助更多女性更早被诊断并接受治疗。"
       },
       {
         "type": "heading",
         "level": 3,
-        "text": "Explore other styles:"
+        "text": "探索其他风格："
       },
       {
         "type": "image",
@@ -92,68 +92,68 @@
       },
       {
         "type": "paragraph",
-        "html": "Your browser does not support the audio element."
+        "html": "您的浏览器不支持音频元素。"
       },
       {
         "type": "paragraph",
-        "html": "Breast cancer affects one in every eight women in the UK. In this fight, early detection is crucial to giving people the best chance of overcoming the disease. New research from Google, Imperial College London and the UK’s National Health Service (NHS), published as a <a href=\"https://www.nature.com/articles/s43018-026-01128-z\" target=\"_blank\" rel=\"noreferrer noopener\">pair of studies</a> in <a href=\"https://www.nature.com/articles/s43018-026-01127-0\" target=\"_blank\" rel=\"noreferrer noopener\"><i>Nature Cancer</i> today</a>, marks a turning point in screening technology and reveals how AI can strengthen early detection efforts."
+        "html": "在英国，乳腺癌影响着每八名女性中的一人。在这场 борь中，早期检测对于让人们拥有战胜疾病的最佳机会至关重要。Google、帝国理工学院和英国国家医疗服务体系（NHS）的新研究，以 <a href=\"https://www.nature.com/articles/s43018-026-01128-z\" target=\"_blank\" rel=\"noreferrer noopener\">两篇研究</a> 的形式发表于今日的 <a href=\"https://www.nature.com/articles/s43018-026-01127-0\" target=\"_blank\" rel=\"noreferrer noopener\"><i>Nature Cancer</i></a>，标志着筛查技术的一个转折点，并揭示了 AI 如何强化早期检测工作。"
       },
       {
         "type": "paragraph",
-        "html": "Our <a href=\"https://www.nature.com/articles/s43018-026-01127-0\" target=\"_blank\" rel=\"noreferrer noopener\">experimental research AI system</a> identified 25% of the “interval cancers” that were previously missed — the cases that typically slip through traditional screenings and only surface after symptoms appear, when they become more challenging to treat. But this research goes beyond the accuracy of the scans. It offers a first-of-its kind, large-scale look at how radiologists react when AI challenges or confirms their diagnosis in a clinical setting."
+        "html": "我们的 <a href=\"https://www.nature.com/articles/s43018-026-01127-0\" target=\"_blank\" rel=\"noreferrer noopener\">实验性研究 AI 系统</a> 识别出了此前漏检的 25% 的“间期癌症”——这些病例通常会从传统筛查中溜走，只有在症状出现后才被发现，届时治疗更具挑战性。但这项研究不仅关乎扫描的准确性。它首次在大规模层面展示了在临床环境中当 AI 挑战或确认诊断时放射科医生如何反应。"
       },
       {
         "type": "heading",
         "level": 2,
-        "text": "Confronting a growing challenge"
+        "text": "直面日益增长的挑战"
       },
       {
         "type": "paragraph",
-        "html": "In the UK’s NHS, the frontline of breast cancer screening relies on a rigorous “double-reading” process: Two specialists must agree on every mammogram, with an arbitration panel deciding any disputes. It is a vital safety net, but one that’s stretched to its limit. Each specialist must review roughly 5,000 scans annually, with just four hours of dedicated time per week, all amidst a global shortage of radiologists. We set out to determine how AI could help to tackle this challenge."
+        "html": "在英国 NHS，乳腺癌筛查的一线依赖严格的“双读”流程：每张乳腺 X 光片必须由两名专科医生达成一致，如有争议则由仲裁小组裁决。这是重要的安全网，但已被拉至极限。每名专科医生每年必须审阅约 5,000 份扫描，且每周只有 4 小时的专门时间，同时还面临全球放射科医生短缺。我们着手确定 AI 可以如何帮助应对这一挑战。"
       },
       {
         "type": "heading",
         "level": 2,
-        "text": "Validating accuracy at scale"
+        "text": "在规模上验证准确性"
       },
       {
         "type": "paragraph",
-        "html": "<a href=\"https://www.nature.com/articles/s43018-026-01127-0\" target=\"_blank\" rel=\"noreferrer noopener\">The first step</a> was comparing the accuracy of AI-based mammography interpretation to that of expert radiologists. We tested this by using AI to review the mammograms of 125,000 women, and the results were definitive: The AI-based screening detected 25% of the total interval cancers (cancers detected between scans) previously missed. AI also identified more invasive cancers and more cancers overall than the expert radiologists, and identified fewer false positives for women having their first-time scan."
+        "html": "<a href=\"https://www.nature.com/articles/s43018-026-01127-0\" target=\"_blank\" rel=\"noreferrer noopener\">第一步</a> 是将 AI 乳腺摄影解读的准确性与专家放射科医生进行比较。我们通过让 AI 审阅 125,000 名女性的乳腺 X 光片进行测试，结果明确：基于 AI 的筛查检测到了此前漏检的全部间期癌症中的 25%（两次扫描之间发现的癌症）。AI 还识别出了比专家放射科医生更多的侵袭性癌症和总体癌症，并在首次筛查女性中识别出更少的假阳性。"
       },
       {
         "type": "heading",
         "level": 2,
-        "text": "Giving radiologists more time for patient care"
+        "text": "为放射科医生腾出更多患者护理时间"
       },
       {
         "type": "paragraph",
-        "html": "Having proven AI’s standalone accuracy, we turned to a practical question: Can this technology effectively give radiologists more time for patient care? <a href=\"https://www.nature.com/articles/s43018-026-01128-z\" target=\"_blank\" rel=\"noreferrer noopener\">Our second study</a> looked at the scans of over 50,000 women and showed that AI is capable of reducing screening workloads by an estimated 40% when used as the &quot;second reader&quot; in the workflow. This work revealed that AI-assisted workflows could enable healthcare professionals to address the nationwide screening backlog, giving them more time to focus on complex cases all while upholding the rigorous clinical benchmarks of the traditional double-reading standard."
+        "html": "在证明 AI 的独立准确性之后，我们转向一个实际问题：这项技术是否能有效为放射科医生腾出更多患者护理时间？<a href=\"https://www.nature.com/articles/s43018-026-01128-z\" target=\"_blank\" rel=\"noreferrer noopener\">我们的第二项研究</a> 观察了 50,000 多名女性的扫描，显示当 AI 作为流程中的“第二读片者”时，可将筛查工作量估计降低 40%。这项工作表明，AI 辅助流程可帮助医疗专业人员应对全国筛查积压，让他们有更多时间专注于复杂病例，同时仍能维持传统双读标准的严格临床基准。"
       },
       {
         "type": "heading",
         "level": 2,
-        "text": "Building trust through human-AI collaboration"
+        "text": "通过人机协作建立信任"
       },
       {
         "type": "paragraph",
-        "html": "While AI-assisted screening works in theory, the true test of its value lies in how medical professionals respond to AI-driven diagnoses in practice. To bridge this gap, we looked at the entire clinical pathway, paying careful attention to &quot;arbitration” by medical professionals — the final step where specialists resolve diagnostic disagreements. While arbitration successfully filters out false positives, we observed a critical tension during our simulated review: Arbitration panel specialists occasionally overruled AI-detected cancers that would have otherwise gone undetected."
+        "html": "虽然 AI 辅助筛查在理论上可行，但其价值的真正检验在于医疗专业人员在实践中如何回应 AI 驱动的诊断。为弥合这一差距，我们审视了整个临床路径，特别关注由医疗专业人员进行的“仲裁”——专家解决诊断分歧的最后一步。尽管仲裁能成功过滤掉假阳性，但在我们的模拟复核中观察到一个关键张力：仲裁小组专科医生偶尔会推翻 AI 检出的癌症，而这些癌症原本会被漏掉。"
       },
       {
         "type": "paragraph",
-        "html": "These findings highlight the need for continued research on human-AI interaction to build specialist trust in AI’s ability to catch subtle, early-stage cancers."
+        "html": "这些发现强调了继续研究人机交互的必要性，以建立专科医生对 AI 捕捉细微、早期癌症能力的信任。"
       },
       {
         "type": "paragraph",
-        "html": "We also evaluated the challenges of practical clinical AI integration into clinical workflow through an observational feasibility study across 12 NHS screening sites in London, processing over 9,000 cases in real-time without using AI results to impact patient care. A key lesson was that AI isn&#x27;t a &quot;plug-and-play” solution. It requires careful and continuous calibration to the unique heartbeat of each hospital and adaptation to shifting workflows, evolving equipment and diverse patient populations."
+        "html": "我们还通过在伦敦 12 个 NHS 筛查点进行的观察性可行性研究，评估了将临床 AI 实际整合进临床流程的挑战，实时处理了 9,000 多个病例，但未使用 AI 结果影响患者护理。一个关键教训是，AI 不是“即插即用”的解决方案。它需要针对每家医院独特的节奏进行谨慎而持续的校准，并适应不断变化的流程、不断演进的设备以及多样化的患者群体。"
       },
       {
         "type": "heading",
         "level": 2,
-        "text": "Bringing it all together"
+        "text": "综合起来"
       },
       {
         "type": "paragraph",
-        "html": "These findings build on <a href=\"https://www.nature.com/articles/s41586-019-1799-6\" target=\"_blank\" rel=\"noreferrer noopener\">our previous work</a> that found an earlier version of this <a href=\"https://link.springer.com/article/10.1007/s10549-025-07616-7\" target=\"_blank\" rel=\"noreferrer noopener\">AI-based screening system could detect cancers in a single reader setting</a> and <a href=\"https://link.springer.com/article/10.1007/s10549-025-07616-7\" target=\"_blank\" rel=\"noreferrer noopener\">lead to shorter diagnostic waiting periods for women</a>. Collectively, these studies show how AI can strengthen early detection efforts, paving the way for more women to be diagnosed and treated sooner, with the ultimate goal of saving lives."
+        "html": "这些发现建立在 <a href=\"https://www.nature.com/articles/s41586-019-1799-6\" target=\"_blank\" rel=\"noreferrer noopener\">我们之前的工作</a> 之上，该工作发现这个 <a href=\"https://link.springer.com/article/10.1007/s10549-025-07616-7\" target=\"_blank\" rel=\"noreferrer noopener\">基于 AI 的筛查系统的早期版本能够在单读者设置中检测癌症</a>，并 <a href=\"https://link.springer.com/article/10.1007/s10549-025-07616-7\" target=\"_blank\" rel=\"noreferrer noopener\">让女性的诊断等待期更短</a>。总体而言，这些研究展示了 AI 如何强化早期检测工作，为更多女性更早被诊断并接受治疗铺平道路，最终目标是挽救生命。"
       },
       {
         "type": "image",
@@ -181,32 +181,15 @@
       },
       {
         "type": "paragraph",
-        "html": "Done. Just one step more."
+        "html": "完成了。只差一步。"
       },
       {
         "type": "paragraph",
-        "html": "You are already subscribed to our newsletter."
+        "html": "您已订阅我们的新闻通讯。"
       },
       {
         "type": "paragraph",
-        "html": "You can also subscribe with a <span> . </span>"
-      }
-    ],
-    "refineErrors": [
-      {
-        "index": 0,
-        "type": "paragraph",
-        "message": "Empty Pi output."
-      },
-      {
-        "index": 1,
-        "type": "paragraph",
-        "message": "Empty Pi output."
-      },
-      {
-        "index": 3,
-        "type": "heading",
-        "message": "Empty Pi output."
+        "html": "您也可以使用 <span> . </span> 订阅。"
       }
     ]
   },
