@@ -1,0 +1,13 @@
+{
+  "available": false,
+  "layout": "draft",
+  "translatedFrom": "https://huggingface.co/blog/storage-buckets",
+  "sourceName": "Hugging Face Blog",
+  "sourceDescription": "当前缓存内容仍是站点反爬/挑战页，尚未获得可靠正文；因此只保留草稿入口，不生成可发布 detail。",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "html": "当前缓存内容仍是站点反爬/挑战页，尚未获得可靠正文；因此只保留草稿入口，不生成可发布 detail。"
+    }
+  ]
+}

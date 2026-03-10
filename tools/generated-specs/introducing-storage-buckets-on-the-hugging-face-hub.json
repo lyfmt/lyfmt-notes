@@ -1,0 +1,45 @@
+{
+  "slug": "introducing-storage-buckets-on-the-hugging-face-hub",
+  "title": "Introducing Storage Buckets on the Hugging Face Hub",
+  "author": "Hugging Face Blog",
+  "publishedAt": "2026-03-10",
+  "source": "Hugging Face Blog",
+  "url": "https://huggingface.co/blog/storage-buckets",
+  "tags": [
+    "Reading"
+  ],
+  "excerpt": "这篇文章围绕“Introducing Storage Buckets on the Hugging Face Hub”展开，RSS 摘要提到：We’re on a journey to advance and democratize artificial intelligence through open source and open science.",
+  "content": [
+    {
+      "heading": "文章核心",
+      "paragraphs": [
+        "基于 RSS 摘要与页面元数据，原文重点是：We’re on a journey to advance and democratize artificial intelligence through open source and open science.",
+        "来源信息：Hugging Face Blog｜2026-03-10。"
+      ]
+    },
+    {
+      "heading": "值得继续补充的点",
+      "paragraphs": [
+        "如果后续补齐详情视图，可以继续沿着原文结构展开关键论点、案例、约束条件与结论。",
+        "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+      ]
+    }
+  ],
+  "detail": {
+    "available": false,
+    "layout": "draft",
+    "translatedFrom": "https://huggingface.co/blog/storage-buckets",
+    "sourceName": "Hugging Face Blog",
+    "sourceDescription": "当前缓存内容仍是站点反爬/挑战页，尚未获得可靠正文；因此只保留草稿入口，不生成可发布 detail。",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "html": "当前缓存内容仍是站点反爬/挑战页，尚未获得可靠正文；因此只保留草稿入口，不生成可发布 detail。"
+      }
+    ]
+  },
+  "workflow": {
+    "articleId": 2674,
+    "rssTitle": "Introducing Storage Buckets on the Hugging Face Hub"
+  }
+}
