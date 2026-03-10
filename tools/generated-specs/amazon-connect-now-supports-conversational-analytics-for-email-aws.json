@@ -30,16 +30,16 @@
     "layout": "detail-zh",
     "translatedFrom": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-connect-conversational-analytics-email/",
     "sourceName": "AWS Architecture Blog",
-    "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+    "sourceDescription": "以下为原文逐段直译，保留原文段落推进与媒体顺序。",
     "blocks": [
       {
         "type": "heading",
         "level": 2,
-        "text": "Amazon Connect now supports conversational analytics for email"
+        "text": "Amazon Connect 现已支持面向电子邮件的对话式分析"
       },
       {
         "type": "paragraph",
-        "html": "Amazon Connect now supports conversational analytics for email contacts, enabling contact center managers to automatically categorize emails, redact personally identifiable information (PII), and generate contact summaries. This allows you to quickly identify emerging trends, better maintain compliance by protecting sensitive information, and reduce the time spent reviewing agent performance. For example, when customers email about account issues, Amazon Connect automatically categorizes the email, redacts sensitive information, and generates a summary for supervisor review. <br> <br> To enable this feature, add the <a href=\"https://docs.aws.amazon.com/connect/latest/adminguide/set-recording-analytics-processing-behavior.html\" target=\"_blank\" rel=\"noreferrer noopener\">Set recording, analytics and processing behavior</a> block to your flows before an email contact is assigned to your agent or sent to your end customer. You can customize which PII types to redact, choose whether redacted content shows specific PII type indicators e.g., [SSN] or generic markings ([PII]), opt to store both original and redacted versions in separate storage, as well as enable contact summaries. Using these analytics, you can quickly create rules to automatically trigger actions such as assigning categories, creating tasks, or updating cases. <br> <br> Amazon Connect conversational analytics is available in the US East (N. Virginia), US West (Oregon), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), Europe (Frankfurt), and Europe (London) <a href=\"https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/\" target=\"_blank\" rel=\"noreferrer noopener\">regions</a>. To learn more and get started, please refer to the help <a href=\"https://docs.aws.amazon.com/connect/latest/adminguide/analyze-conversations.html\" target=\"_blank\" rel=\"noreferrer noopener\">documentation</a> or visit the <a href=\"https://aws.amazon.com/connect/\" target=\"_blank\" rel=\"noreferrer noopener\">Amazon Connect</a> website."
+        "html": "Amazon Connect 现已支持对电子邮件联系人进行对话式分析，使联络中心管理者能够自动对邮件分类、遮蔽个人身份信息（PII），并生成联系摘要。这让你可以快速识别新兴趋势，通过保护敏感信息更好地保持合规，并减少审核坐席绩效所花费的时间。例如，当客户就账户问题发送邮件时，Amazon Connect 会自动对该邮件分类、遮蔽敏感信息，并生成摘要供主管审阅。<br> <br> 要启用此功能，请在邮件联系人分配给坐席或发送给最终客户之前，将 <a href=\"https://docs.aws.amazon.com/connect/latest/adminguide/set-recording-analytics-processing-behavior.html\" target=\"_blank\" rel=\"noreferrer noopener\">Set recording, analytics and processing behavior</a> 模块添加到你的流程中。你可以自定义需要遮蔽的 PII 类型，选择遮蔽内容是否显示特定 PII 类型标记（如 [SSN]）或通用标记（[PII]），选择是否分别存储原始与遮蔽后的版本，并启用联系摘要。借助这些分析，你可以快速创建规则，自动触发诸如分配类别、创建任务或更新工单等操作。<br> <br> Amazon Connect 对话式分析在美国东部（弗吉尼亚北部）、美国西部（俄勒冈）、亚太（首尔）、亚太（新加坡）、亚太（悉尼）、亚太（东京）、加拿大（中部）、欧洲（法兰克福）和欧洲（伦敦）<a href=\"https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/\" target=\"_blank\" rel=\"noreferrer noopener\">区域</a>可用。要了解更多并开始使用，请参阅帮助<a href=\"https://docs.aws.amazon.com/connect/latest/adminguide/analyze-conversations.html\" target=\"_blank\" rel=\"noreferrer noopener\">文档</a>或访问 <a href=\"https://aws.amazon.com/connect/\" target=\"_blank\" rel=\"noreferrer noopener\">Amazon Connect</a> 网站。"
       }
     ],
     "refineErrors": [
