@@ -1,0 +1,46 @@
+{
+  "slug": "the-ai-infrastructure-crisis-when-ambition-meets-ancient-systems",
+  "title": "The AI Infrastructure crisis: When ambition meets ancient systems",
+  "author": "The New Stack",
+  "publishedAt": "2026-03-10",
+  "source": "The New Stack",
+  "url": "https://thenewstack.io/ai-infrastructure-crisis-roadmap/",
+  "tags": [
+    "Infrastructure",
+    "AI"
+  ],
+  "excerpt": "这篇文章围绕“The AI Infrastructure crisis: When ambition meets ancient systems”展开，RSS 摘要提到：Is legacy IT holding back your AI ambition? Discover the four pillars of AI-ready infrastructure to modernize your technology stack.",
+  "content": [
+    {
+      "heading": "文章核心",
+      "paragraphs": [
+        "基于 RSS 摘要与页面元数据，原文重点是：Is legacy IT holding back your AI ambition? Discover the four pillars of AI-ready infrastructure to modernize your technology stack.",
+        "来源信息：The New Stack｜2026-03-10。"
+      ]
+    },
+    {
+      "heading": "值得继续补充的点",
+      "paragraphs": [
+        "如果后续补齐详情视图，重点可以继续展开架构取舍、生产约束、性能代价和工程实施方式。",
+        "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+      ]
+    }
+  ],
+  "detail": {
+    "available": false,
+    "layout": "draft",
+    "translatedFrom": "https://thenewstack.io/ai-infrastructure-crisis-roadmap/",
+    "sourceName": "The New Stack",
+    "sourceDescription": "当前缓存内容仍是站点反爬/挑战页，尚未获得可靠正文；因此只保留草稿入口，不生成可发布 detail。",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "html": "当前缓存内容仍是站点反爬/挑战页，尚未获得可靠正文；因此只保留草稿入口，不生成可发布 detail。"
+      }
+    ]
+  },
+  "workflow": {
+    "articleId": 2658,
+    "rssTitle": "The AI Infrastructure crisis: When ambition meets ancient systems"
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "available": true,
+  "layout": "detail-zh",
+  "translatedFrom": "https://www.cnx-software.com/2026/03/10/beaglebadge-a-linux-powered-4-2-inch-epaper-badge-based-on-ti-sitara-am62l32-soc/",
+  "sourceName": "CNX Software",
+  "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "html": "The BeagleBoard.org Foundation has just introduced the BeagleBadge featuring a 4.2-inch ePaper display and a Linux-capable Texas Instruments Sitata AML62L32 dual-core Cortex-A53 SoC."
+    },
+    {
+      "type": "paragraph",
+      "html": "It’s quite feature-rich for a badge, as it offers WiFi 6, Bluetooth 5.4 LE, and LoRa/LoRaWAN connectivity, various motion and environmental sensors, a USB 2.0 host port, a 4-way joystick, a buzzer, and a range of buttons and LEDs."
+    },
+    {
+      "type": "image",
+      "src": "https://www.cnx-software.com/wp-content/uploads/2026/03/BeagleBadge-720x515.jpg",
+      "alt": "BeagleBadge",
+      "caption": "BeagleBadge"
+    },
+    {
+      "type": "paragraph",
+      "html": "<a href=\"https://www.cnx-software.com/wp-content/uploads/2026/03/BeagleBadge.jpg\" target=\"_blank\" rel=\"noreferrer noopener\"></a>"
+    },
+    {
+      "type": "paragraph",
+      "html": "BeagleBadge specifications:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "4GB eMMC flash",
+        "256Mbit OSPI flash",
+        "32Kbit EEPROM",
+        "MicroSD card slot"
+      ]
+    },
+    {
+      "type": "list",
+      "items": [
+        "4.2-inch ePaper display via 24-pin FPC Connector",
+        "MIPI DSI connector for LCD"
+      ]
+    },
+    {
+      "type": "list",
+      "items": [
+        "2.4 GHz WiFi 6 + Bluetooth 5.3 via BeagleMod CC3301-1216 module with MHF4 Connector",
+        "LoRaWAN via Wio SX1262 module with u.FL Connector"
+      ]
+    },
+    {
+      "type": "list",
+      "items": [
+        "USB 2.0 Type-A host port",
+        "USB Type-C port for power and debugging"
+      ]
+    },
+    {
+      "type": "list",
+      "items": [
+        "IMU Sensor",
+        "Ambient light sensor",
+        "Temperature &amp; humidity sensor"
+      ]
+    },
+    {
+      "type": "list",
+      "items": [
+        "30-pin GPIO header (unpopulated)",
+        "mikroBus connector",
+        "2x QWIIC connectors",
+        "Grove connector"
+      ]
+    },
+    {
+      "type": "list",
+      "items": [
+        "Reset button",
+        "4-way Joystick button with press",
+        "2x tactile buttons (Back and Select)",
+        "Passive Buzzer",
+        "RGB status LED",
+        "2× 7-segment LED displays"
+      ]
+    },
+    {
+      "type": "list",
+      "items": [
+        "5V via USB-C port",
+        "BAT Connector for BL-5C Li-Ion battery",
+        "Battery management with fuel gauge monitoring"
+      ]
+    },
+    {
+      "type": "image",
+      "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtAAAAIdAQAAAAA8WndbAAAAAnRSTlMAAHaTzTgAAABGSURBVHja7cEBDQAAAMKg909tDwcUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADcGcBPAAHaB8hRAAAAAElFTkSuQmCC",
+      "alt": "BeagleBadge Board",
+      "caption": "BeagleBadge Board"
+    },
+    {
+      "type": "paragraph",
+      "html": "<a href=\"https://www.cnx-software.com/wp-content/uploads/2026/03/BeagleBadge-Board.webp\" target=\"_blank\" rel=\"noreferrer noopener\"> </a>"
+    },
+    {
+      "type": "paragraph",
+      "html": "On the software front, the badge supports Linux and Zephyr base ports with mainline roadmaps, leverages LVGL and MicroPython libraries for the interactive ePaper display, and includes an App store for programming examples. Off-grid messaging is implemented through <a href=\"https://www.cnx-software.com/news/meshtastic/\" target=\"_blank\" rel=\"noreferrer noopener\">Meshtastic</a> and <a href=\"https://activitypub.rocks/\" target=\"_blank\" rel=\"noreferrer noopener\">ActivityPub</a> integrations."
+    },
+    {
+      "type": "paragraph",
+      "html": "What’s missing right now is documentation, since it’s an early/rushed announcement for Embedded World 2026, and <a href=\"https://www.beagleboard.org/boards/beaglebadge\" target=\"_blank\" rel=\"noreferrer noopener\">the product page</a> has limited details beyond the specifications at this stage. We’ll still find an “Armbian BeagleBadge demo for EW2026” image based on Debian Trixie and Linux 6.12 there, and a link to the GitLab repository where the hardware design files should eventually be released. As I was about to click Publish, I noticed that software documentation for the BeagleBoard can be <a href=\"https://software-dl.ti.com/processor-sdk-linux/esd/AM62LX/latest/exports/docs/linux/How_to_Guides/Target/How_to_BeagleBadge_getting_started.html\" target=\"_blank\" rel=\"noreferrer noopener\">found on the TI website</a> instead of the BeagleBoard website."
+    },
+    {
+      "type": "image",
+      "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtAAAAGzAQAAAAAupB1YAAAAAnRSTlMAAHaTzTgAAAA9SURBVHja7cExAQAAAMKg9U9tCy+gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC4GpqhAAGCveT3AAAAAElFTkSuQmCC",
+      "alt": "Linux ePaper badge",
+      "caption": "Linux ePaper badge"
+    },
+    {
+      "type": "paragraph",
+      "html": "<a href=\"https://www.cnx-software.com/wp-content/uploads/2026/03/Linux-ePaper-badge.webp\" target=\"_blank\" rel=\"noreferrer noopener\"> </a>"
+    },
+    {
+      "type": "paragraph",
+      "html": "The BeagleBadge can be <a href=\"https://www.seeedstudio.com/BeagleBadge-p-6725.html?utm_source=cnx_software&amp;utm_medium=link&amp;utm_campaign=cnx_software\" target=\"_blank\" rel=\"noreferrer noopener\">pre-ordered for $99 on Seeed Studio</a> and other distributors. Shipments are scheduled to start on May 15, 2026."
+    },
+    {
+      "type": "paragraph",
+      "html": "Thanks to Kym for the tip."
+    },
+    {
+      "type": "image",
+      "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0AQAAAAAVtjufAAAAAnRSTlMAAHaTzTgAAAAbSURBVFjD7cEBDQAAAMKg909tDjegAAAAAL4NEOAAAf2XIG8AAAAASUVORK5CYII=",
+      "alt": "Jean Luc Aufranc",
+      "caption": "Jean Luc Aufranc"
+    },
+    {
+      "type": "paragraph",
+      "html": "Jean-Luc started CNX Software in 2010 as a part-time endeavor, before quitting his job as a software engineering manager, and starting to write daily news, and reviews full time later in 2011."
+    },
+    {
+      "type": "paragraph",
+      "html": "<strong>Support CNX Software! Donate via <a href=\"https://www.cnx-software.com/donate-cryptocurrencies/\" target=\"_blank\" rel=\"noreferrer noopener\">cryptocurrencies</a>, <a href=\"https://www.patreon.com/cnxsoft\" target=\"_blank\" rel=\"noreferrer noopener\">become a Patron</a> on Patreon, or purchase goods on <a href=\"https://amzn.to/3SXubZ0\" target=\"_blank\" rel=\"noreferrer noopener\">Amazon</a> or <a href=\"https://s.click.aliexpress.com/e/_DmGIIRT\" target=\"_blank\" rel=\"noreferrer noopener\">Aliexpress</a></strong>. We also use affiliate links in articles to earn commissions if you make a purchase after clicking on those links."
+    }
+  ],
+  "refineErrors": [
+    {
+      "index": 0,
+      "type": "paragraph",
+      "message": "Empty Pi output."
+    },
+    {
+      "index": 1,
+      "type": "paragraph",
+      "message": "Empty Pi output."
+    },
+    {
+      "index": 3,
+      "type": "paragraph",
+      "message": "Empty Pi output."
+    }
+  ]
+}

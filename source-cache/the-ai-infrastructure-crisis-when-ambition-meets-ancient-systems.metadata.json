@@ -1,0 +1,20 @@
+{
+  "item": {
+    "id": 2658,
+    "title": "The AI Infrastructure crisis: When ambition meets ancient systems",
+    "blog": "The New Stack",
+    "url": "https://thenewstack.io/ai-infrastructure-crisis-roadmap/",
+    "published": "2026-03-10T11:00:40Z",
+    "discovered": "2026-03-10T11:24:09.353698143Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://thenewstack.io/ai-infrastructure-crisis-roadmap/",
+    "ok": true,
+    "title": "The AI Infrastructure crisis: When ambition meets ancient systems",
+    "description": "Is legacy IT holding back your AI ambition? Discover the four pillars of AI-ready infrastructure to modernize your technology stack.",
+    "fetched_bytes": 1464036,
+    "error": null
+  },
+  "classification": "normal"
+}

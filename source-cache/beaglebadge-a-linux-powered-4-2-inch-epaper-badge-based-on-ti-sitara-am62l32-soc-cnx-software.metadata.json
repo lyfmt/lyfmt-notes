@@ -1,0 +1,20 @@
+{
+  "item": {
+    "id": 2657,
+    "title": "BeagleBadge – A Linux-powered 4.2-inch ePaper badge based on TI Sitara AM62L32 SoC",
+    "blog": "CNX Software",
+    "url": "https://www.cnx-software.com/2026/03/10/beaglebadge-a-linux-powered-4-2-inch-epaper-badge-based-on-ti-sitara-am62l32-soc/",
+    "published": "2026-03-10T11:05:06Z",
+    "discovered": "2026-03-10T11:24:08.406223207Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://www.cnx-software.com/2026/03/10/beaglebadge-a-linux-powered-4-2-inch-epaper-badge-based-on-ti-sitara-am62l32-soc/",
+    "ok": true,
+    "title": "BeagleBadge - A Linux-powered 4.2-inch ePaper badge based on TI Sitara AM62L32 SoC - CNX Software",
+    "description": "The BeagleBoard.org Foundation has just introduced the BeagleBadge featuring a 4.2-inch ePaper display and a Linux-capable Texas Instruments Sitata",
+    "fetched_bytes": 231063,
+    "error": null
+  },
+  "classification": "normal"
+}

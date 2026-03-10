@@ -27,11 +27,11 @@
     }
   ],
   "detail": {
-    "available": true,
-    "layout": "detail-zh",
+    "available": false,
+    "layout": "draft",
     "translatedFrom": "https://hackaday.com/2026/03/10/arduinos-new-ai-centric-board-is-the-ventuno-q/",
     "sourceName": "Hackaday",
-    "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+    "sourceDescription": "以下为根据原文结构自动生成的详情草稿，已保留段落层次、图片与媒体；默认尚未完成中文翻译润色。",
     "blocks": [
       {
         "type": "heading",
@@ -107,23 +107,6 @@
           "<a href=\"https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fhackaday.com%2F2026%2F03%2F10%2Farduinos-new-ai-centric-board-is-the-ventuno-q%2F\" target=\"_blank\" rel=\"noreferrer noopener\"> <i></i> </a>",
           "<a href=\"mailto:?subject=Arduino%E2%80%99s+New+AI-Centric+Board+Is+The+VENTUNO+Q | Hackaday&amp;body=https%3A%2F%2Fhackaday.com%2F2026%2F03%2F10%2Farduinos-new-ai-centric-board-is-the-ventuno-q%2F\" target=\"_blank\" rel=\"noreferrer noopener\"> <i></i> </a>"
         ]
-      }
-    ],
-    "refineErrors": [
-      {
-        "index": 0,
-        "type": "heading",
-        "message": "Empty Pi output."
-      },
-      {
-        "index": 1,
-        "type": "list",
-        "message": "Empty Pi output."
-      },
-      {
-        "index": 2,
-        "type": "list",
-        "message": "Empty Pi output."
       }
     ]
   },
