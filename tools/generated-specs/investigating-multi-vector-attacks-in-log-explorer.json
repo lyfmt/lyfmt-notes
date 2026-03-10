@@ -1,0 +1,46 @@
+{
+  "slug": "investigating-multi-vector-attacks-in-log-explorer",
+  "title": "Investigating multi-vector attacks in Log Explorer",
+  "author": "Cloudflare Blog",
+  "publishedAt": "2026-03-10",
+  "source": "Cloudflare Blog",
+  "url": "https://blog.cloudflare.com/investigating-multi-vector-attacks-in-log-explorer/",
+  "tags": [
+    "Infrastructure",
+    "Security"
+  ],
+  "excerpt": "这篇文章围绕“Investigating multi-vector attacks in Log Explorer”展开，当前已从 RSS 条目同步到静态博客工作流中。",
+  "content": [
+    {
+      "heading": "文章核心",
+      "paragraphs": [
+        "当前只拿到了标题、来源和链接，还没有更完整的页面摘要，因此这里只生成一个可继续加工的草稿入口。",
+        "来源信息：Cloudflare Blog｜2026-03-10。"
+      ]
+    },
+    {
+      "heading": "值得继续补充的点",
+      "paragraphs": [
+        "如果后续补齐详情视图，重点应继续展开风险边界、漏洞触发条件、检测方式以及修复路径。",
+        "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+      ]
+    }
+  ],
+  "detail": {
+    "available": false,
+    "layout": "draft",
+    "translatedFrom": "https://blog.cloudflare.com/investigating-multi-vector-attacks-in-log-explorer/",
+    "sourceName": "Cloudflare Blog",
+    "sourceDescription": "当前缓存内容仍是站点反爬/挑战页，尚未获得可靠正文；因此只保留草稿入口，不生成可发布 detail。",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "html": "当前缓存内容仍是站点反爬/挑战页，尚未获得可靠正文；因此只保留草稿入口，不生成可发布 detail。"
+      }
+    ]
+  },
+  "workflow": {
+    "articleId": 2666,
+    "rssTitle": "Investigating multi-vector attacks in Log Explorer"
+  }
+}

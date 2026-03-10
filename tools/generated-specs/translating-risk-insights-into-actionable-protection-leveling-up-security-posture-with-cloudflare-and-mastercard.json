@@ -1,0 +1,49 @@
+{
+  "slug": "translating-risk-insights-into-actionable-protection-leveling-up-security-posture-with-cloudflare-and-mastercard",
+  "title": "Translating risk insights into actionable protection: leveling up security posture with Cloudflare and Mastercard",
+  "author": "Cloudflare Blog",
+  "publishedAt": "2026-03-10",
+  "source": "Cloudflare Blog",
+  "url": "https://blog.cloudflare.com/attack-surface-intelligence/",
+  "tags": [
+    "Infrastructure",
+    "Security",
+    "Observability"
+  ],
+  "excerpt": "这篇文章围绕“Translating risk insights into actionable protection: leveling up security posture with Cloudflare and Mastercard”展开，但当前自动抓取命中了反爬/挑战页，本站先保留索引与草稿入口，等待后续重试补全正文。",
+  "content": [
+    {
+      "heading": "文章核心",
+      "paragraphs": [
+        "从 RSS 条目和站点标题可见，这是一篇值得跟踪的新文章，但当前自动抓取只拿到了反爬/挑战页，没有得到可靠正文。",
+        "因此这一轮只先保留标题、来源和链接，避免把挑战页内容误当成文章正文写入站点。"
+      ]
+    },
+    {
+      "heading": "当前处理状态",
+      "paragraphs": [
+        "此条目会保留为可重入草稿，后续可基于已记录的 URL/slug 重新抓取和补 detail。",
+        "在没有稳定正文前，不发布伪造的细节、不把 challenge 标题写进 slug，也不吞掉批次级 checkpoint。"
+      ]
+    }
+  ],
+  "detail": {
+    "available": false,
+    "layout": "draft",
+    "translatedFrom": "https://blog.cloudflare.com/attack-surface-intelligence/",
+    "sourceName": "Cloudflare Blog",
+    "sourceDescription": "当前缓存内容仍是站点反爬/挑战页，尚未获得可靠正文；因此只保留草稿入口，不生成可发布 detail。",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "html": "当前缓存内容仍是站点反爬/挑战页，尚未获得可靠正文；因此只保留草稿入口，不生成可发布 detail。"
+      }
+    ]
+  },
+  "workflow": {
+    "articleId": 2668,
+    "rssTitle": "Translating risk insights into actionable protection: leveling up security posture with Cloudflare and Mastercard",
+    "blockedBy": "challenge",
+    "probeTitle": "Translating risk insights into actionable protection: leveling up security posture with Cloudflare and Mastercard"
+  }
+}

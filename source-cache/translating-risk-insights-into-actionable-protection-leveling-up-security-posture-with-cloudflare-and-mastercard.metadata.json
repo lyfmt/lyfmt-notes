@@ -1,0 +1,20 @@
+{
+  "item": {
+    "id": 2668,
+    "title": "Translating risk insights into actionable protection: leveling up security posture with Cloudflare and Mastercard",
+    "blog": "Cloudflare Blog",
+    "url": "https://blog.cloudflare.com/attack-surface-intelligence/",
+    "published": "2026-03-10T05:00:00Z",
+    "discovered": "2026-03-10T16:00:11.469845578Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://blog.cloudflare.com/attack-surface-intelligence/",
+    "ok": true,
+    "title": "Translating risk insights into actionable protection: leveling up security posture with Cloudflare and Mastercard",
+    "description": "Cloudflare will be integrating Mastercard’s RiskRecon Attack Surface Intelligence capabilities to help you eliminate Internet-facing blind spots while continuously monitoring and closing security gaps.",
+    "fetched_bytes": 382922,
+    "error": null
+  },
+  "classification": "challenge"
+}

@@ -1,0 +1,20 @@
+{
+  "item": {
+    "id": 2667,
+    "title": "Building a security overview dashboard for actionable insights",
+    "blog": "Cloudflare Blog",
+    "url": "https://blog.cloudflare.com/security-overview-dashboard/",
+    "published": "2026-03-10T13:00:00Z",
+    "discovered": "2026-03-10T16:00:11.469845578Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://blog.cloudflare.com/security-overview-dashboard/",
+    "ok": true,
+    "title": "Building a security overview dashboard for actionable insights",
+    "description": "Cloudflare",
+    "fetched_bytes": 361295,
+    "error": null
+  },
+  "classification": "challenge"
+}
