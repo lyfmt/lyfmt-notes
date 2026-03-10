@@ -583,7 +583,7 @@ def process_item(args: argparse.Namespace, run_record: dict[str, Any], bundle: d
         detail_for_publish = spec_for_publish.get("detail") if isinstance(spec_for_publish.get("detail"), dict) else {}
         progress = detail_progress(detail_for_publish)
         if not detail_for_publish.get("available") or (progress["textual_total"] > 0 and progress["textual_cjk"] < progress["textual_total"]):
-            item_state["outcome"] = "skipped_existing"
+            item_state["outcome"] = "blocked" if challenge_blocked else "draft_only"
             item_state["terminal"] = True
             item_state["reasons"] = ["strict_publish_skipped"]
             stage_history(item_state, "strict_publish_skipped", detail_progress=progress)
@@ -757,15 +757,7 @@ def main() -> int:
             item_state.setdefault("run_ids", [])
             if run_record["run_id"] not in item_state["run_ids"]:
                 item_state["run_ids"].append(run_record["run_id"])
-            previous_terminal = item_state.get("outcome") in TERMINAL_OUTCOMES and bool(item_state.get("terminal"))
-            if previous_terminal and item_state.get("outcome") in {"published", "draft_only", "blocked", "skipped_existing"}:
-                stage_history(item_state, "skip_existing_terminal_state")
-                save_item_state(article_id, item_state)
-                update_run_record(run_record, item_state)
-                write_json(run_path, run_record)
-                write_json(CURRENT_RUN_PATH, run_record)
-                write_json(LATEST_RUN_PATH, run_record)
-                continue
+            # Always process items even if a prior terminal outcome exists (no "already processed" skipping).
 
             item_state = process_item(args, run_record, bundle, item)
             while item_state.get("outcome") == "failed" and int(item_state.get("retry_count") or 0) < max(0, int(args.max_item_retries or 0)):
