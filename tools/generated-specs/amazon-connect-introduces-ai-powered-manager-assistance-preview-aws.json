@@ -26,7 +26,21 @@
     }
   ],
   "detail": {
-    "available": false
+    "available": true,
+    "layout": "detail-zh",
+    "translatedFrom": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-connect-ai-powered-manager-assistance/",
+    "sourceName": "AWS Architecture Blog",
+    "sourceDescription": "以下为原文逐段直译，保留原文段落推进与媒体顺序。",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "html": "今天，Amazon Connect 宣布预览一款由 AI 驱动的助手，使联络中心管理者能够使用自然语言即时回答运营问题。你可以查询 150+ 个 Amazon Connect 指标，包括坐席排班、自助服务体验与绩效评估，并覆盖这些指标的历史数据，在数秒内获得结果——从而消除数小时的手动数据收集。该助手还可诊断底层问题，例如识别哪些队列面临无法达成服务级别目标的风险，并推荐具体的恢复行动。"
+      },
+      {
+        "type": "paragraph",
+        "html": "该功能目前处于预览阶段。如需申请访问，请联系你的 AWS 客户团队或 <a href=\"https://aws.amazon.com/contact-us/?nc2=h_l1\" target=\"_blank\" rel=\"noreferrer noopener\">AWS Representative</a>。要了解更多关于 Amazon Connect（AWS 的云端联络中心），请访问 <a href=\"https://aws.amazon.com/connect/\" target=\"_blank\" rel=\"noreferrer noopener\">Amazon Connect 网站</a>。"
+      }
+    ]
   },
   "workflow": {
     "articleId": 2671,
