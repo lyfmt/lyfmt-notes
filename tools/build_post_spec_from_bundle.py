@@ -9,6 +9,14 @@ import sys
 import urllib.request
 from pathlib import Path
 
+from rss_workflow_utils import (
+    build_blocked_detail,
+    choose_preferred_title,
+    classify_web_content,
+    is_suspicious_title,
+    normalize_space,
+    slugify,
+)
 
 WORKSPACE = Path("/home/node/.openclaw/workspace")
 SITE_ROOT = WORKSPACE / "pi-blog-demo"
@@ -27,6 +35,7 @@ SOURCE_TAG_HINTS = {
     "hackaday": ["Hardware"],
     "servethehome": ["Hardware", "Infrastructure"],
     "lucumr": ["AI", "Agents"],
+    "liliputing": ["Hardware", "Laptop"],
 }
 
 KEYWORD_TAG_HINTS = [
@@ -39,6 +48,7 @@ KEYWORD_TAG_HINTS = [
     (["postgres", "database", "vector database", "sql"], ["Postgres", "Data"]),
     (["bluetooth", "soc", "microcontroller", "nrf", "embedded", "iot"], ["Hardware", "Embedded", "IoT"]),
     (["observability", "monitoring", "telemetry", "tracing"], ["Observability"]),
+    (["laptop", "notebook", "ultrabook", "panther lake", "ryzen ai"], ["Laptop", "Mobile"]),
 ]
 
 
@@ -53,6 +63,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--limit", type=int, help="Limit how many selected items to emit.")
     parser.add_argument("--output", help="Output path for a single generated spec.")
     parser.add_argument("--out-dir", default=str(DEFAULT_OUT_DIR), help="Directory for generated spec files.")
+    parser.add_argument("--cache-dir", default=str(DEFAULT_CACHE_DIR), help="Directory for cached source html/metadata files.")
     parser.add_argument("--cache-html", action="store_true", help="Cache the raw HTML page under source-cache/<slug>.html.")
     parser.add_argument("--cache-metadata", action="store_true", help="Write source-cache/<slug>.metadata.json for future detail generation.")
     parser.add_argument("--upsert", action="store_true", help="After generating spec files, invoke upsert_post_from_spec.py for each one.")
@@ -74,19 +85,6 @@ def read_bundle(path_value: str):
             raise SystemExit("No JSON received on stdin.")
         return json.loads(raw)
     return load_json(Path(path_value).resolve())
-
-
-def slugify(text: str) -> str:
-    value = (text or "").strip().lower()
-    value = re.sub(r"[^a-z0-9]+", "-", value)
-    value = value.strip("-")
-    return value or "post"
-
-
-def normalize_space(text: str | None) -> str:
-    value = str(text or "")
-    value = re.sub(r"\s+", " ", value).strip()
-    return value
 
 
 def iso_date(value: str | None) -> str:
@@ -156,7 +154,9 @@ def infer_tags(source: str, title: str, description: str) -> list[str]:
     return tags[:4]
 
 
-def build_excerpt(title: str, description: str) -> str:
+def build_excerpt(title: str, description: str, challenge: bool = False) -> str:
+    if challenge:
+        return f"这篇文章围绕“{title}”展开，但当前自动抓取命中了反爬/挑战页，本站先保留索引与草稿入口，等待后续重试补全正文。"
     if description:
         shortened = description.strip()
         if len(shortened) > 140:
@@ -180,7 +180,25 @@ def build_importance_paragraph(tags: list[str]) -> str:
     return "如果后续补齐详情视图，可以继续沿着原文结构展开关键论点、案例、约束条件与结论。"
 
 
-def build_summary_content(source: str, description: str, published_at: str, tags: list[str]) -> list[dict]:
+def build_summary_content(source: str, description: str, published_at: str, tags: list[str], challenge: bool = False) -> list[dict]:
+    if challenge:
+        return [
+            {
+                "heading": "文章核心",
+                "paragraphs": [
+                    "从 RSS 条目和站点标题可见，这是一篇值得跟踪的新文章，但当前自动抓取只拿到了反爬/挑战页，没有得到可靠正文。",
+                    "因此这一轮只先保留标题、来源和链接，避免把挑战页内容误当成文章正文写入站点。",
+                ],
+            },
+            {
+                "heading": "当前处理状态",
+                "paragraphs": [
+                    "此条目会保留为可重入草稿，后续可基于已记录的 URL/slug 重新抓取和补 detail。",
+                    "在没有稳定正文前，不发布伪造的细节、不把 challenge 标题写进 slug，也不吞掉批次级 checkpoint。",
+                ],
+            },
+        ]
+
     paragraphs = []
     if description:
         paragraphs.append(f"基于 RSS 摘要与页面元数据，原文重点是：{description}")
@@ -210,27 +228,48 @@ def build_spec(item: dict, bundle: dict) -> dict:
     url = normalize_space(item.get("url"))
     probe = find_probe(bundle, url) or {}
 
-    title = normalize_space(probe.get("title") or item.get("title"))
+    item_title = normalize_space(item.get("title"))
+    probe_title = normalize_space(probe.get("title"))
+    title = choose_preferred_title(item_title, probe_title)
     source = normalize_space(item.get("blog"))
     description = normalize_space(probe.get("description"))
+    content_class = classify_web_content(title=probe_title or item_title, text=f"{probe_title}\n{description}")
+    challenge = content_class == "challenge"
     published_at = iso_date(item.get("published") or item.get("discovered"))
     slug = slugify(title)
     tags = infer_tags(source, title, description)
 
-    return {
+    spec = {
         "slug": slug,
         "title": title,
-        "author": "",
+        "author": source,
         "publishedAt": published_at,
         "source": source,
         "url": url,
         "tags": tags,
-        "excerpt": build_excerpt(title, description),
-        "content": build_summary_content(source, description, published_at, tags),
+        "excerpt": build_excerpt(title, description, challenge=challenge),
+        "content": build_summary_content(source, description, published_at, tags, challenge=challenge),
         "detail": {
             "available": False,
         },
+        "workflow": {
+            "articleId": item.get("id"),
+            "rssTitle": item_title,
+        },
     }
+
+    if challenge:
+        spec["detail"] = build_blocked_detail(
+            url=url,
+            source_name=source,
+            message="当前自动抓取命中了站点反爬/挑战页，尚未获得可靠正文；本轮只保留草稿入口，等待后续重试。",
+        )
+        spec.setdefault("workflow", {})["blockedBy"] = content_class
+        spec["workflow"]["probeTitle"] = probe_title
+    elif probe_title and is_suspicious_title(probe_title):
+        spec.setdefault("workflow", {})["probeTitleRejected"] = probe_title
+
+    return spec
 
 
 def select_items(bundle: dict, args: argparse.Namespace) -> list[dict]:
@@ -281,9 +320,14 @@ def write_json(path: Path, payload, dry_run: bool = False) -> None:
 
 
 def cache_metadata(path: Path, item: dict, probe: dict | None, dry_run: bool = False) -> None:
+    classification = classify_web_content(
+        title=(probe or {}).get("title") or item.get("title"),
+        text=f"{(probe or {}).get('title') or ''}\n{(probe or {}).get('description') or ''}",
+    )
     payload = {
         "item": item,
         "probe": probe or {},
+        "classification": classification,
     }
     write_json(path, payload, dry_run=dry_run)
 
@@ -328,7 +372,7 @@ def main() -> int:
 
     output_path = Path(args.output).resolve() if args.output else None
     out_dir = Path(args.out_dir).resolve()
-    cache_dir = DEFAULT_CACHE_DIR.resolve()
+    cache_dir = Path(args.cache_dir).resolve()
 
     if output_path and len(items) != 1:
         raise SystemExit("--output can only be used when exactly one article is selected.")
@@ -352,6 +396,7 @@ def main() -> int:
             "id": item.get("id"),
             "slug": slug,
             "spec": str(spec_path),
+            "challenge_blocked": bool(((spec.get("workflow") or {}).get("blockedBy") == "challenge")),
         })
 
         if args.cache_metadata:

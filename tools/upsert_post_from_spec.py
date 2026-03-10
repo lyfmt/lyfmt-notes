@@ -4,13 +4,12 @@ from __future__ import annotations
 import argparse
 import json
 import mimetypes
-import re
-import sys
 import urllib.parse
 import urllib.request
 from copy import deepcopy
 from pathlib import Path
 
+from rss_workflow_utils import atomic_write_json, normalize_space, pick_richer_detail, slugify
 
 DEFAULT_SUMMARY_HEADING = "文章核心"
 
@@ -42,17 +41,6 @@ def parse_args() -> argparse.Namespace:
 
 def load_json(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
-
-
-def write_json(path: Path, payload) -> None:
-    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-
-
-def slugify(text: str) -> str:
-    value = (text or "").strip().lower()
-    value = re.sub(r"[^a-z0-9]+", "-", value)
-    value = value.strip("-")
-    return value or "post"
 
 
 def normalize_tags(value) -> list[str]:
@@ -143,29 +131,20 @@ def guess_extension(url: str, content_type: str | None) -> str:
     return ".bin"
 
 
-def download_file(url: str, target: Path, dry_run: bool = False) -> None:
-    if dry_run:
-        return
-    target.parent.mkdir(parents=True, exist_ok=True)
-    request = urllib.request.Request(url, headers={"User-Agent": "OpenClaw RSS Summary Detail Importer/1.0"})
-    with urllib.request.urlopen(request, timeout=30) as response:
-        payload = response.read()
-        target.write_bytes(payload)
-
-
 def localize_detail_media(post: dict, site_root: Path, assets_dir: Path, dry_run: bool = False) -> list[str]:
     detail = post.get("detail") or {}
-    if not detail.get("available"):
+    blocks = detail.get("blocks") if isinstance(detail.get("blocks"), list) else []
+    if not blocks:
         return []
 
     slug = post["slug"]
     downloads = []
     image_index = 0
 
-    for block in detail.get("blocks", []):
+    for block in blocks:
         if block.get("type") != "image":
             continue
-        src = str(block.get("src") or "").strip()
+        src = normalize_space(block.get("src"))
         if not is_remote_url(src):
             continue
 
@@ -215,10 +194,14 @@ def merge_post(existing: dict | None, spec: dict) -> dict:
     elif "content" not in post:
         post["content"] = normalize_summary_content([], post.get("excerpt", ""))
 
-    if "detail" in spec:
-        post["detail"] = normalize_detail(spec.get("detail"))
-    else:
-        post["detail"] = normalize_detail(post.get("detail"))
+    incoming_detail = normalize_detail(spec.get("detail")) if "detail" in spec else normalize_detail(post.get("detail"))
+    existing_detail = normalize_detail(post.get("detail"))
+    post["detail"] = pick_richer_detail(existing_detail, incoming_detail)
+
+    if isinstance(spec.get("workflow"), dict):
+        post["workflow"] = deepcopy(spec["workflow"])
+    elif existing and isinstance(existing.get("workflow"), dict):
+        post["workflow"] = deepcopy(existing["workflow"])
 
     return post
 
@@ -271,7 +254,7 @@ def main() -> int:
     if args.dry_run:
         print(f"[dry-run] {action} post '{post['slug']}' at index {index}")
     else:
-        write_json(articles_path, articles_payload)
+        atomic_write_json(articles_path, articles_payload)
         print(f"{action} post '{post['slug']}' at index {index}")
 
     if downloads:
@@ -283,4 +266,4 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    main()

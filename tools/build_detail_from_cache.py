@@ -11,6 +11,8 @@ from html import escape, unescape
 from html.parser import HTMLParser
 from pathlib import Path
 
+from rss_workflow_utils import build_blocked_detail, classify_web_content, load_json as load_json_file, normalize_space
+
 
 WORKSPACE = Path("/home/node/.openclaw/workspace")
 SITE_ROOT = WORKSPACE / "pi-blog-demo"
@@ -44,7 +46,7 @@ def parse_args() -> argparse.Namespace:
 
 
 def load_json(path: Path):
-    return json.loads(path.read_text(encoding="utf-8"))
+    return load_json_file(path)
 
 
 def write_json(path: Path, payload, dry_run: bool = False) -> None:
@@ -59,12 +61,6 @@ def slugify(text: str) -> str:
     value = re.sub(r"[^a-z0-9]+", "-", value)
     value = value.strip("-")
     return value or "post"
-
-
-def normalize_space(value: str | None) -> str:
-    text = str(value or "")
-    text = re.sub(r"\s+", " ", text).strip()
-    return text
 
 
 def resolve_url(url: str, base_url: str | None) -> str:
@@ -742,6 +738,16 @@ def detect_source(spec: dict, source_override: str | None, source_cache_dir: Pat
 def build_detail_payload(spec: dict, blocks: list[dict], args: argparse.Namespace, source_path: Path) -> dict:
     translated_from = args.translated_from or spec.get("url") or source_path.as_uri()
     source_name = args.source_name or spec.get("source") or source_path.name
+    source_text = ""
+    if source_path.exists():
+        source_text = source_path.read_text(encoding="utf-8", errors="ignore")[:12000]
+    classification = classify_web_content(title=spec.get("title"), text=source_text)
+    if classification == "challenge":
+        return build_blocked_detail(
+            url=translated_from,
+            source_name=source_name,
+            message="当前缓存内容仍是站点反爬/挑战页，尚未获得可靠正文；因此只保留草稿入口，不生成可发布 detail。",
+        )
     return {
         "available": bool(args.enable_detail and blocks),
         "layout": args.layout,
