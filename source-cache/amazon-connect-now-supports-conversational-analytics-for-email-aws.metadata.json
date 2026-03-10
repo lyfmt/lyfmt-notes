@@ -1,0 +1,20 @@
+{
+  "item": {
+    "id": 2672,
+    "title": "Amazon Connect now supports conversational analytics for email",
+    "blog": "AWS Architecture Blog",
+    "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-connect-conversational-analytics-email/",
+    "published": "2026-03-10T15:45:00Z",
+    "discovered": "2026-03-10T16:33:24.808817661Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-connect-conversational-analytics-email/",
+    "ok": true,
+    "title": "Amazon Connect now supports conversational analytics for email - AWS",
+    "description": "Discover more about what",
+    "fetched_bytes": 181922,
+    "error": null
+  },
+  "classification": "thin"
+}

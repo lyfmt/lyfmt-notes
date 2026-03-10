@@ -1,0 +1,120 @@
+{
+  "available": true,
+  "layout": "detail-zh",
+  "translatedFrom": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-embedding-2/",
+  "sourceName": "Google AI Blog",
+  "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "html": "Mar 10, 2026"
+    },
+    {
+      "type": "paragraph",
+      "html": "Gemini Embedding 2 is our first natively multimodal embedding model that maps text, images, video, audio and documents into a single embedding space, enabling multimodal retrieval and classification across different types of media — and it’s available now in public preview."
+    },
+    {
+      "type": "image",
+      "src": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-2_embedding_keyword_blog_h.width-200.format-webp.webp",
+      "alt": "Gemini Embedding 2",
+      "caption": "Gemini Embedding 2"
+    },
+    {
+      "type": "paragraph",
+      "html": "Today we’re releasing Gemini Embedding 2, our first fully multimodal embedding model built on the Gemini architecture, in Public Preview via the <a href=\"https://ai.google.dev/gemini-api/docs/embeddings\" target=\"_blank\" rel=\"noreferrer noopener\">Gemini API</a> and <a href=\"https://docs.cloud.google.com/vertex-ai/generative-ai/docs/embeddings/get-multimodal-embeddings\" target=\"_blank\" rel=\"noreferrer noopener\">Vertex AI</a>."
+    },
+    {
+      "type": "paragraph",
+      "html": "Expanding on our previous text-only foundation, Gemini Embedding 2 maps text, images, videos, audio and documents into a single, unified embedding space, and captures semantic intent across over 100 languages. This simplifies complex pipelines and enhances a wide variety of multimodal downstream tasks—from Retrieval-Augmented Generation (RAG) and semantic search to sentiment analysis and data clustering."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "New modalities and flexible output dimensions"
+    },
+    {
+      "type": "paragraph",
+      "html": "The model is based on Gemini and leverages its best-in-class multimodal understanding capabilities to create high-quality embeddings across:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "<b>Text:</b> supports an expansive context of up to 8192 input tokens",
+        "<b>Images:</b> capable of processing up to 6 images per request, supporting PNG and JPEG formats",
+        "<b>Videos:</b> supports up to 120 seconds of video input in MP4 and MOV formats",
+        "<b>Audio:</b> natively ingests and embeds audio data without needing intermediate text transcriptions",
+        "<b>Documents:</b> directly embed PDFs up to 6 pages long"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "html": "Beyond processing one modality at a time, this model natively understands interleaved input so you can pass multiple modalities of input (e.g., image + text) in a single request. This allows the model to capture the complex, nuanced relationships between different media types, unlocking more accurate understanding of complex, real-world data."
+    },
+    {
+      "type": "paragraph",
+      "html": "Like our previous embedding models, Gemini Embedding 2 incorporates Matryoshka Representation Learning (MRL), a technique that “nests” information by dynamically scaling down dimensions. This enables flexible output dimensions scaling down from the default 3072 so developers can balance performance and storage costs. We recommend using 3072, 1536, 768 dimensions for highest quality."
+    },
+    {
+      "type": "paragraph",
+      "html": "To see these embeddings in action, try out our lightweight multimodal semantic search <a href=\"https://findmemedia.lmm.ai/\" target=\"_blank\" rel=\"noreferrer noopener\">demo</a>."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "State-of-the-art performance"
+    },
+    {
+      "type": "paragraph",
+      "html": "Gemini Embedding 2 doesn&#x27;t just improve on legacy models. It establishes a new performance standard for multimodal depth, introducing strong speech capabilities and outperforming leading models in text, image, and video tasks. This measurable improvement and unique multimodal coverage give developers exactly what they need for their diverse embedding needs."
+    },
+    {
+      "type": "image",
+      "src": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-embedding-2-benchmarks.width-100.format-webp.webp",
+      "alt": "Gemini embedding 2 benchmarks",
+      "caption": "Gemini embedding 2 benchmarks"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Unlocking deeper meaning for data"
+    },
+    {
+      "type": "paragraph",
+      "html": "Embeddings are the technology that power experiences in many Google products. From RAG where embeddings can play a crucial role in context engineering to large-scale data management and classic search/analysis, some of our early access partners are already using Gemini Embedding 2 to unlock high-value multimodal applications:"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Start building today"
+    },
+    {
+      "type": "paragraph",
+      "html": "Get started with the Gemini Embedding 2 model through <a href=\"https://ai.google.dev/gemini-api/docs/embeddings\" target=\"_blank\" rel=\"noreferrer noopener\">Gemini API</a> or <a href=\"https://docs.cloud.google.com/vertex-ai/generative-ai/docs/embeddings/get-multimodal-embeddings\" target=\"_blank\" rel=\"noreferrer noopener\">Vertex AI</a>."
+    },
+    {
+      "type": "paragraph",
+      "html": "Learn how to use the model in our interactive <a href=\"https://github.com/google-gemini/cookbook/blob/main/quickstarts/Embeddings.ipynb\" target=\"_blank\" rel=\"noreferrer noopener\">Gemini API</a> and <a href=\"https://github.com/GoogleCloudPlatform/generative-ai/tree/main/gemini/embedding/intro_gemini_embedding.ipynb\" target=\"_blank\" rel=\"noreferrer noopener\">Vertex AI</a> Colab notebooks. You can also use it through <a href=\"https://docs.langchain.com/oss/python/integrations/text_embedding/google_generative_ai\" target=\"_blank\" rel=\"noreferrer noopener\">LangChain</a>, <a href=\"https://developers.llamaindex.ai/python/framework/integrations/embeddings/google_genai/\" target=\"_blank\" rel=\"noreferrer noopener\">LlamaIndex</a>, <a href=\"https://haystack.deepset.ai/integrations/google-genai\" target=\"_blank\" rel=\"noreferrer noopener\">Haystack</a>, <a href=\"https://docs.weaviate.io/weaviate/model-providers/google\" target=\"_blank\" rel=\"noreferrer noopener\">Weaviate</a>, <a href=\"https://qdrant.tech/documentation/embeddings/gemini/\" target=\"_blank\" rel=\"noreferrer noopener\">QDrant</a>, <a href=\"https://docs.trychroma.com/integrations/embedding-models/google-gemini\" target=\"_blank\" rel=\"noreferrer noopener\">ChromaDB</a>, and <a href=\"https://docs.cloud.google.com/vertex-ai/docs/vector-search-2/overview\" target=\"_blank\" rel=\"noreferrer noopener\">Vector Search</a>."
+    },
+    {
+      "type": "paragraph",
+      "html": "By bringing semantic meaning to the diverse data around us, Gemini Embedding 2 provides the essential multimodal foundation for the next era of advanced AI experiences. We can’t wait to see what you build."
+    }
+  ],
+  "refineErrors": [
+    {
+      "index": 0,
+      "type": "paragraph",
+      "message": "Empty Pi output."
+    },
+    {
+      "index": 1,
+      "type": "paragraph",
+      "message": "Empty Pi output."
+    },
+    {
+      "index": 3,
+      "type": "paragraph",
+      "message": "Empty Pi output."
+    }
+  ]
+}

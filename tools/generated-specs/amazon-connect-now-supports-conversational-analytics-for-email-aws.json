@@ -1,0 +1,57 @@
+{
+  "slug": "amazon-connect-now-supports-conversational-analytics-for-email-aws",
+  "title": "Amazon Connect now supports conversational analytics for email - AWS",
+  "author": "AWS Architecture Blog",
+  "publishedAt": "2026-03-10",
+  "source": "AWS Architecture Blog",
+  "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-connect-conversational-analytics-email/",
+  "tags": [
+    "AI"
+  ],
+  "excerpt": "这篇文章围绕“Amazon Connect now supports conversational analytics for email - AWS”展开，RSS 摘要提到：Discover more about what",
+  "content": [
+    {
+      "heading": "文章核心",
+      "paragraphs": [
+        "基于 RSS 摘要与页面元数据，原文重点是：Discover more about what",
+        "来源信息：AWS Architecture Blog｜2026-03-10。"
+      ]
+    },
+    {
+      "heading": "值得继续补充的点",
+      "paragraphs": [
+        "如果后续补齐详情视图，可以继续沿着原文结构展开关键论点、案例、约束条件与结论。",
+        "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+      ]
+    }
+  ],
+  "detail": {
+    "available": true,
+    "layout": "detail-zh",
+    "translatedFrom": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-connect-conversational-analytics-email/",
+    "sourceName": "AWS Architecture Blog",
+    "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+    "blocks": [
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Amazon Connect now supports conversational analytics for email"
+      },
+      {
+        "type": "paragraph",
+        "html": "Amazon Connect now supports conversational analytics for email contacts, enabling contact center managers to automatically categorize emails, redact personally identifiable information (PII), and generate contact summaries. This allows you to quickly identify emerging trends, better maintain compliance by protecting sensitive information, and reduce the time spent reviewing agent performance. For example, when customers email about account issues, Amazon Connect automatically categorizes the email, redacts sensitive information, and generates a summary for supervisor review. <br> <br> To enable this feature, add the <a href=\"https://docs.aws.amazon.com/connect/latest/adminguide/set-recording-analytics-processing-behavior.html\" target=\"_blank\" rel=\"noreferrer noopener\">Set recording, analytics and processing behavior</a> block to your flows before an email contact is assigned to your agent or sent to your end customer. You can customize which PII types to redact, choose whether redacted content shows specific PII type indicators e.g., [SSN] or generic markings ([PII]), opt to store both original and redacted versions in separate storage, as well as enable contact summaries. Using these analytics, you can quickly create rules to automatically trigger actions such as assigning categories, creating tasks, or updating cases. <br> <br> Amazon Connect conversational analytics is available in the US East (N. Virginia), US West (Oregon), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Canada (Central), Europe (Frankfurt), and Europe (London) <a href=\"https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/\" target=\"_blank\" rel=\"noreferrer noopener\">regions</a>. To learn more and get started, please refer to the help <a href=\"https://docs.aws.amazon.com/connect/latest/adminguide/analyze-conversations.html\" target=\"_blank\" rel=\"noreferrer noopener\">documentation</a> or visit the <a href=\"https://aws.amazon.com/connect/\" target=\"_blank\" rel=\"noreferrer noopener\">Amazon Connect</a> website."
+      }
+    ],
+    "refineErrors": [
+      {
+        "index": 1,
+        "type": "paragraph",
+        "message": "Empty Pi output."
+      }
+    ]
+  },
+  "workflow": {
+    "articleId": 2672,
+    "rssTitle": "Amazon Connect now supports conversational analytics for email"
+  }
+}
