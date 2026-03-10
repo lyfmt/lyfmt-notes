@@ -6298,7 +6298,7 @@
         "blocks": [
           {
             "type": "paragraph",
-            "html": "With over 200 merged PRs and over 50 new contributors since v0.4.0, LeRobot v0.5.0 is our biggest release yet — expanding in every direction at once. More robots (including our first humanoid), more policies (including the comeback of autoregressive VLAs), faster datasets, simulation environments you can load straight from the Hub, and a modernized codebase running on Python 3.12 and Transformers v5. Whether you&#x27;re training policies in simulation or deploying them on real hardware, v0.5.0 has something for you."
+            "html": "自 v0.4.0 以来合并了 200+ 个 PR、新增 50+ 位贡献者，LeRobot v0.5.0 是迄今最大的一次发布——几乎在所有方向同时扩展。更多机器人（包括首个类人机器人）、更多策略（包括自回归 VLA 的回归）、更快的数据集、可直接从 Hub 加载的仿真环境，以及运行在 Python 3.12 和 Transformers v5 上的现代化代码库。无论你是在仿真里训练策略还是部署到真实硬件，v0.5.0 都有适合你的内容。"
           },
           {
             "type": "heading",
@@ -6307,117 +6307,117 @@
           },
           {
             "type": "paragraph",
-            "html": "LeRobot v0.5.0 adds full Unitree G1 humanoid support (whole-body control models), new policies –including Pi0-FAST autoregressive VLAs and Real-Time Chunking for responsive inference–, and streaming video encoding that eliminates wait times between recording episodes. The release also introduces EnvHub for loading simulation environments from the Hugging Face Hub, NVIDIA IsaacLab-Arena integration, and a major codebase modernization with Python 3.12+, Transformers v5, and third-party policy plugins."
+            "html": "LeRobot v0.5.0 新增完整的 Unitree G1 类人机器人支持（全身控制模型），新增策略——包括 Pi0‑FAST 自回归 VLA 和用于更敏捷推理的 Real‑Time Chunking——以及流式视频编码，消除录制 episode 的等待时间。此次发布还引入 EnvHub，可从 Hugging Face Hub 加载仿真环境，集成 NVIDIA IsaacLab‑Arena，并对代码库进行了大幅现代化升级：Python 3.12+、Transformers v5，以及第三方策略插件。"
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "Hardware: More Robots Than Ever"
+            "text": "硬件：前所未有的更多机器人"
           },
           {
             "type": "paragraph",
-            "html": "The biggest hardware addition in this release: full Unitree G1 humanoid support. This is LeRobot&#x27;s first humanoid integration, and it&#x27;s comprehensive:"
+            "html": "本次发布中最大的硬件新增：完整的 Unitree G1 类人机器人支持。这是 LeRobot 的首个类人机器人集成，而且非常全面："
           },
           {
             "type": "list",
             "items": [
-              "Locomotion: Walk, navigate, and move through environments.",
-              "Manipulation: Perform dexterous object manipulation tasks.",
-              "Teleoperation: Control the G1 remotely with an intuitive teleoperation interface.",
-              "Whole-Body Control (WBC): Coordinate locomotion and manipulation simultaneously for complex, real-world tasks."
+              "运动：行走、导航并在环境中移动。",
+              "操作：执行灵巧的物体操控任务。",
+              "遥操作：通过直观的遥操作界面远程控制 G1。",
+              "全身控制（WBC）：同时协调行走与操作，以完成复杂的真实任务。"
             ]
           },
           {
             "type": "image",
-            "src": "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/lerobot-blog/release-v0.5.0/unitree_bosswalk.JPG",
+            "src": "./assets/posts/lerobot-v0-5-0-scaling-every-dimension/figure-01.jpg",
             "alt": "",
             "caption": ""
           },
           {
             "type": "paragraph",
-            "html": "We&#x27;ve added support for the OpenArm robot and its companion OpenArm Mini teleoperator. Both support bi-manual configurations."
+            "html": "我们新增了对 OpenArm 机器人及其配套的 OpenArm Mini 遥操作器的支持。两者都支持双臂配置。"
           },
           {
             "type": "paragraph",
-            "html": "More hardware additions include Earth Rover, OMX Robot, SO-100/SO-101 consolidation, and CAN bus motor controller support via RobStride and Damiao."
+            "html": "更多硬件新增还包括 Earth Rover、OMX Robot、SO‑100/SO‑101 统一整合，以及通过 RobStride 与 Damiao 的 CAN 总线电机控制器支持。"
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "Policies: A Growing Model Zoo"
+            "text": "策略：不断增长的模型动物园"
           },
           {
             "type": "paragraph",
-            "html": "This release brings six new policies and techniques into LeRobot."
+            "html": "这次发布为 LeRobot 引入了六种新策略与技术。"
           },
           {
             "type": "heading",
             "level": 3,
-            "text": "Pi0-FAST: Autoregressive VLAs"
+            "text": "Pi0‑FAST：自回归 VLA"
           },
           {
             "type": "paragraph",
-            "html": "Pi0-FAST brings autoregressive Vision-Language-Action models to LeRobot with FAST (Frequency-space Action Sequence Tokenization), using a Gemma 300M-based action expert and configurable decoding."
+            "html": "Pi0‑FAST 将自回归视觉‑语言‑动作模型带入 LeRobot，采用 FAST（频域动作序列标记化），使用基于 Gemma 300M 的动作专家，并提供可配置的解码方式。"
           },
           {
             "type": "heading",
             "level": 3,
-            "text": "Real-Time Chunking (RTC)"
+            "text": "Real‑Time Chunking（RTC）"
           },
           {
             "type": "paragraph",
-            "html": "Real-Time Chunking is an inference-time technique from Physical Intelligence that makes flow-matching policies dramatically more responsive by continuously blending new predictions with in-progress actions."
+            "html": "Real‑Time Chunking 是 Physical Intelligence 的推理时技术，通过持续将新预测与执行中的动作融合，使 flow‑matching 策略显著更灵敏。"
           },
           {
             "type": "heading",
             "level": 3,
-            "text": "Wall-X / X-VLA / SARM / PEFT"
+            "text": "Wall‑X / X‑VLA / SARM / PEFT"
           },
           {
             "type": "paragraph",
-            "html": "Wall-X builds on Qwen2.5-VL with flow-matching action prediction. X-VLA brings a Florence2-based VLA. SARM targets long-horizon tasks with stage-aware reward modeling. PEFT support allows fine-tuning large VLAs using LoRA and related techniques."
+            "html": "Wall‑X 基于 Qwen2.5‑VL 做 flow‑matching 动作预测。X‑VLA 带来基于 Florence2 的 VLA。SARM 面向长时序任务，使用阶段感知的奖励建模。PEFT 支持允许使用 LoRA 等技术微调大型 VLA。"
           },
           {
             "type": "image",
-            "src": "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/lerobot-blog/release-v0.5.0/sarm_community.gif",
+            "src": "./assets/posts/lerobot-v0-5-0-scaling-every-dimension/figure-02.gif",
             "alt": "",
             "caption": ""
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "Datasets: Faster Recording, Faster Training"
+            "text": "数据集：更快录制、更快训练"
           },
           {
             "type": "paragraph",
-            "html": "Streaming video encoding removes wait time between recording episodes. Under the hood, the release also improves image training speed by up to 10x, encoding by up to 3x, and adds more dataset editing operations, subtask support, and image-to-video conversion."
+            "html": "流式视频编码消除了录制 episode 之间的等待时间。底层改进还包括：图像训练速度最高提升 10 倍、编码最高提升 3 倍，并新增更多数据集编辑操作、子任务支持以及图像到视频转换。"
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "EnvHub: Environments from the Hub"
+            "text": "EnvHub：从 Hub 加载环境"
           },
           {
             "type": "paragraph",
-            "html": "EnvHub lets LeRobot load simulation environments directly from the Hugging Face Hub instead of requiring local environment package setup. The release also integrates NVIDIA IsaacLab-Arena for GPU-accelerated simulation."
+            "html": "EnvHub 让 LeRobot 可直接从 Hugging Face Hub 加载仿真环境，而无需本地环境包配置。此次发布还集成了 NVIDIA IsaacLab‑Arena，用于 GPU 加速仿真。"
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "Codebase: A Modern Foundation"
+            "text": "代码库：现代化基础"
           },
           {
             "type": "paragraph",
-            "html": "The codebase now targets Python 3.12+, Transformers v5, third-party policy plugins, remote Rerun visualization, improved installation flow, and versioned docs."
+            "html": "代码库现在面向 Python 3.12+、Transformers v5、第三方策略插件、远程 Rerun 可视化、改进的安装流程以及版本化文档。"
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "Community & Ecosystem"
+            "text": "社区与生态"
           },
           {
             "type": "paragraph",
-            "html": "The release also mentions a refreshed Discord, better GitHub templates and automated labeling, ICLR 2026 paper acceptance, an updated Visualizer, and LeRobot Annotation Studio."
+            "html": "此次发布还提到 Discord 的更新、改进的 GitHub 模板和自动化标注、ICLR 2026 论文接收、更新后的 Visualizer，以及 LeRobot Annotation Studio。"
           }
         ]
       }
