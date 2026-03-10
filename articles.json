@@ -5,6 +5,344 @@
   },
   "posts": [
     {
+      "slug": "introducing-storage-buckets-on-the-hugging-face-hub",
+      "title": "Introducing Storage Buckets on the Hugging Face Hub",
+      "author": "Hugging Face Blog",
+      "publishedAt": "2026-03-10",
+      "source": "Hugging Face Blog",
+      "url": "https://huggingface.co/blog/storage-buckets",
+      "excerpt": "这篇文章围绕“Introducing Storage Buckets on the Hugging Face Hub”展开，RSS 摘要提到：We’re on a journey to advance and democratize artificial intelligence through open source and open science.",
+      "tags": [
+        "Reading"
+      ],
+      "content": [
+        {
+          "heading": "文章核心",
+          "paragraphs": [
+            "基于 RSS 摘要与页面元数据，原文重点是：We’re on a journey to advance and democratize artificial intelligence through open source and open science.",
+            "来源信息：Hugging Face Blog｜2026-03-10。"
+          ]
+        },
+        {
+          "heading": "值得继续补充的点",
+          "paragraphs": [
+            "如果后续补齐详情视图，可以继续沿着原文结构展开关键论点、案例、约束条件与结论。",
+            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+          ]
+        }
+      ],
+      "detail": {
+        "available": false,
+        "layout": "detail-zh",
+        "translatedFrom": "https://huggingface.co/blog/storage-buckets",
+        "sourceName": "Hugging Face Blog",
+        "sourceDescription": "以下为原文逐段直译，保留原文段落推进与媒体顺序。",
+        "blocks": [
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Why we built Buckets"
+          },
+          {
+            "type": "paragraph",
+            "html": "Hugging Face 的 Models 和 Datasets 仓库非常适合发布最终产物。但生产级机器学习会持续产生大量中间文件（checkpoint、优化器状态、处理后的分片、日志、追踪等），它们频繁变化、同时来自多项作业，且通常不需要版本控制。"
+          },
+          {
+            "type": "paragraph",
+            "html": "Storage Buckets 正是为此而生：可变的、类似 S3 的对象存储，你可以在 Hub 上浏览，用 Python 脚本化，或通过 hf CLI 管理。并且由于它们由 <a href=\"https://huggingface.co/docs/hub/en/xet\" target=\"_blank\" rel=\"noreferrer noopener\">Xet</a> 支撑，对于在文件之间共享内容的 ML 工件尤其高效。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Why Xet matters"
+          },
+          {
+            "type": "paragraph",
+            "html": "Buckets 构建在 <a href=\"https://huggingface.co/docs/hub/en/xet\" target=\"_blank\" rel=\"noreferrer noopener\">Xet</a> 之上，这是 Hugging Face 基于分块的存储后端，而这点比看上去更重要。"
+          },
+          {
+            "type": "paragraph",
+            "html": "Xet 不把文件当作整体的 blob 处理，而是把内容拆成块并在块之间去重。上传一个与原始数据大多相似的处理后数据集？许多块已经存在。保存连续的 checkpoint 且模型大部分被冻结？同样如此。Buckets 会跳过已经存在的字节，从而减少带宽、更快传输、并提高存储效率。"
+          },
+          {
+            "type": "paragraph",
+            "html": "这非常契合 ML 工作负载。训练管线会不断产生一系列相关工件——原始与处理后数据、连续的 checkpoint、Agent 追踪及其衍生摘要——Xet 正是为利用这些重叠而设计的。"
+          },
+          {
+            "type": "paragraph",
+            "html": "对企业客户而言，计费基于去重后的存储量，因此共享块会直接降低计费占用。去重同时提升速度与成本效率。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Pre-warming: bringing data close to compute"
+          },
+          {
+            "type": "paragraph",
+            "html": "Buckets 托管在 Hub 上，这意味着默认是全局存储。但并非每个工作负载都能承受从数据所在位置拉取数据；对于分布式训练和大规模管线，存储位置会直接影响吞吐。"
+          },
+          {
+            "type": "paragraph",
+            "html": "预热（pre-warming）让你把热点数据移近运行计算的云提供商与区域。与其每次读取都跨区域传输数据，不如声明你需要它的位置，Buckets 会确保在作业开始时数据已就位。对于需要快速访问大数据集或 checkpoint 的训练集群，以及管线不同部分在不同云上运行的多区域设置，这尤其有用。"
+          },
+          {
+            "type": "paragraph",
+            "html": "我们将先与 AWS 和 GCP 合作，未来会有更多云提供商加入。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Getting started"
+          },
+          {
+            "type": "paragraph",
+            "html": "你可以在 2 分钟内通过 hf CLI 启动一个 bucket。首先安装并登录："
+          },
+          {
+            "type": "paragraph",
+            "html": "curl -LsSf https://hf.co/cli/install.sh | bash"
+          },
+          {
+            "type": "paragraph",
+            "html": "hf auth login"
+          },
+          {
+            "type": "paragraph",
+            "html": "为你的项目创建一个 bucket："
+          },
+          {
+            "type": "paragraph",
+            "html": "hf buckets create my-training-bucket --private"
+          },
+          {
+            "type": "paragraph",
+            "html": "假设你的训练作业将 checkpoint 写到本地 ./checkpoints。把该目录同步到 Bucket："
+          },
+          {
+            "type": "paragraph",
+            "html": "hf buckets sync ./checkpoints hf://buckets/username/my-training-bucket/checkpoints"
+          },
+          {
+            "type": "paragraph",
+            "html": "对于大规模传输，你可能希望在实际移动前先查看将发生什么。--dry-run 会打印计划而不执行："
+          },
+          {
+            "type": "paragraph",
+            "html": "hf buckets sync ./checkpoints hf://buckets/username/my-training-bucket/checkpoints --dry-run"
+          },
+          {
+            "type": "paragraph",
+            "html": "你也可以把计划保存到文件中供审阅，并稍后应用："
+          },
+          {
+            "type": "paragraph",
+            "html": "hf buckets sync ./checkpoints hf://buckets/username/my-training-bucket/checkpoints --plan sync-plan.jsonl"
+          },
+          {
+            "type": "paragraph",
+            "html": "hf buckets sync --apply sync-plan.jsonl"
+          },
+          {
+            "type": "paragraph",
+            "html": "完成后，用 CLI 查看 Bucket："
+          },
+          {
+            "type": "paragraph",
+            "html": "hf buckets list username/my-training-bucket -h"
+          },
+          {
+            "type": "paragraph",
+            "html": "或直接在 Hub 上浏览：https://huggingface.co/buckets/username/my-training-bucket。"
+          },
+          {
+            "type": "paragraph",
+            "html": "这就是完整流程。创建 bucket，把工作数据同步进去，需要时查看，并把版本化仓库留给真正值得发布的内容。对于一次性操作，hf buckets cp 可复制单个文件，hf buckets remove 可清理过期对象。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Using Buckets from Python"
+          },
+          {
+            "type": "paragraph",
+            "html": "以上一切也可通过 Python（<a href=\"https://github.com/huggingface/huggingface_hub\" target=\"_blank\" rel=\"noreferrer noopener\">huggingface_hub</a>，自 <a href=\"https://github.com/huggingface/huggingface_hub/releases/tag/v1.5.0\" target=\"_blank\" rel=\"noreferrer noopener\">v1.5.0</a> 起可用）完成。API 遵循同样的模式：创建、同步、查看。"
+          },
+          {
+            "type": "paragraph",
+            "html": "from huggingface_hub import create_bucket, list_bucket_tree, sync_bucket"
+          },
+          {
+            "type": "paragraph",
+            "html": "create_bucket(\"my-training-bucket\", private=True, exist_ok=True)"
+          },
+          {
+            "type": "paragraph",
+            "html": "sync_bucket(\"./checkpoints\", \"hf://buckets/username/my-training-bucket/checkpoints\")"
+          },
+          {
+            "type": "paragraph",
+            "html": "for item in list_bucket_tree(\"username/my-training-bucket\", prefix=\"checkpoints\", recursive=True):"
+          },
+          {
+            "type": "paragraph",
+            "html": " print(item.path, item.size)"
+          },
+          {
+            "type": "paragraph",
+            "html": "这使得将 Buckets 集成到训练脚本、数据管线或任何以程序化方式管理工件的服务中都变得直观。Python 客户端还支持批量上传、选择性下载、删除以及 bucket 迁移，以便进行更细粒度的控制。"
+          },
+          {
+            "type": "paragraph",
+            "html": "Buckets 也可通过 JavaScript 的 <a href=\"https://www.npmjs.com/package/@huggingface/hub\" target=\"_blank\" rel=\"noreferrer noopener\">@huggingface/hub</a> 使用（自 v2.10.5 起），因此你可以将 Buckets 集成到 Node.js 服务与 Web 应用中。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Filesystem integration"
+          },
+          {
+            "type": "paragraph",
+            "html": "Buckets 也可通过 HfFileSystem 使用，它是 huggingface_hub 中兼容 <a href=\"https://filesystem-spec.readthedocs.io/\" target=\"_blank\" rel=\"noreferrer noopener\">fsspec</a> 的文件系统。这意味着你可以用标准文件系统操作来列出、读取、写入与通配 Buckets 内容——任何支持 fsspec 的库都可直接访问 Buckets。"
+          },
+          {
+            "type": "paragraph",
+            "html": "from huggingface_hub import hffs"
+          },
+          {
+            "type": "paragraph",
+            "html": "# List files in a bucket directory"
+          },
+          {
+            "type": "paragraph",
+            "html": "hffs.ls(\"buckets/username/my-training-bucket/checkpoints\", detail=False)"
+          },
+          {
+            "type": "paragraph",
+            "html": "# Glob for specific files"
+          },
+          {
+            "type": "paragraph",
+            "html": "hffs.glob(\"buckets/username/my-training-bucket/**/*.parquet\")"
+          },
+          {
+            "type": "paragraph",
+            "html": "# Read a file directly"
+          },
+          {
+            "type": "paragraph",
+            "html": "with hffs.open(\"buckets/username/my-training-bucket/config.yaml\", \"r\") as f:"
+          },
+          {
+            "type": "paragraph",
+            "html": " print(f.read())"
+          },
+          {
+            "type": "paragraph",
+            "html": "由于 fsspec 是远程文件系统的标准 Python 接口，像 pandas、Polars 与 Dask 这类库可以无需额外设置，直接通过 hf:// 路径从 Buckets 读取和写入："
+          },
+          {
+            "type": "paragraph",
+            "html": "import pandas as pd"
+          },
+          {
+            "type": "paragraph",
+            "html": "# Read a CSV directly from a Bucket"
+          },
+          {
+            "type": "paragraph",
+            "html": "df = pd.read_csv(\"hf://buckets/username/my-training-bucket/results.csv\")"
+          },
+          {
+            "type": "paragraph",
+            "html": "# Write results back"
+          },
+          {
+            "type": "paragraph",
+            "html": "df.to_csv(\"hf://buckets/username/my-training-bucket/summary.csv\")"
+          },
+          {
+            "type": "paragraph",
+            "html": "这让 Buckets 很容易融入现有数据工作流，而无需改变你读写文件的方式。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "From Buckets to versioned repos"
+          },
+          {
+            "type": "paragraph",
+            "html": "Buckets 是工件仍在流动时存放的快速、可变层。一旦某些内容成为稳定交付物，它通常应进入版本化的模型或数据集仓库。"
+          },
+          {
+            "type": "paragraph",
+            "html": "在路线图上，我们计划支持 Buckets 与仓库之间的双向直接传输：将最终 checkpoint 权重提升进模型仓库，或在管线完成后将处理后的分片提交到数据集仓库。工作层与发布层保持分离，但在一个连续的 Hub 原生工作流中衔接。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Trusted by launch partners"
+          },
+          {
+            "type": "paragraph",
+            "html": "在向所有人开放 Buckets 之前，我们与一小批启动合作伙伴进行了私测。"
+          },
+          {
+            "type": "paragraph",
+            "html": "非常感谢 Jasper、Arcee、IBM 和 PixAI 测试早期版本、发现问题并分享反馈，这些反馈直接塑造了这一功能。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Conclusion and resources"
+          },
+          {
+            "type": "paragraph",
+            "html": "Storage Buckets 为 Hub 补上了一层缺失的存储能力。它为机器学习中可变、高吞吐的一面提供了 Hub 原生的空间：checkpoint、处理后数据、Agent 追踪、日志，以及一切在成为最终产物之前有用的内容。"
+          },
+          {
+            "type": "paragraph",
+            "html": "由于它们构建在 Xet 之上，Buckets 不只是比强迫所有内容走 Git 更易用；对于 AI 系统不断产出的相关工件，它们也更高效。这意味着更快传输、更好的去重，并在企业计划中通过去重后的占用获得更优惠的计费。"
+          },
+          {
+            "type": "paragraph",
+            "html": "如果你已经在使用 Hub，Buckets 让你把更多工作流留在一个地方；如果你来自 S3 式存储，它提供了一个熟悉的模型，更贴合 AI 工件，并为最终发布到 Hub 提供清晰路径。"
+          },
+          {
+            "type": "paragraph",
+            "html": "Buckets 已包含在现有的 <a href=\"https://huggingface.co/docs/hub/en/storage-limits#storage-plans\" target=\"_blank\" rel=\"noreferrer noopener\">Hub 存储方案</a> 中。免费账户包含用于入门的存储额度，PRO 与 Enterprise 计划提供更高上限。详情请查看 <a href=\"https://huggingface.co/storage\" target=\"_blank\" rel=\"noreferrer noopener\">storage 页面</a>。"
+          },
+          {
+            "type": "paragraph",
+            "html": "了解更多并亲自试用："
+          },
+          {
+            "type": "paragraph",
+            "html": "- <a href=\"https://huggingface.co/docs/huggingface_hub/en/guides/buckets\" target=\"_blank\" rel=\"noreferrer noopener\">Buckets guide</a>"
+          },
+          {
+            "type": "paragraph",
+            "html": "- <a href=\"https://huggingface.co/docs/huggingface_hub/en/installation\" target=\"_blank\" rel=\"noreferrer noopener\">Installation guide</a>"
+          },
+          {
+            "type": "paragraph",
+            "html": "- CLI <a href=\"https://huggingface.co/docs/huggingface_hub/en/guides/cli\" target=\"_blank\" rel=\"noreferrer noopener\">guide</a> and <a href=\"https://huggingface.co/docs/huggingface_hub/en/package_reference/cli\" target=\"_blank\" rel=\"noreferrer noopener\">reference</a>"
+          },
+          {
+            "type": "paragraph",
+            "html": "- <a href=\"https://huggingface.co/buckets/julien-c/my-training-bucket\" target=\"_blank\" rel=\"noreferrer noopener\">Example Bucket on the Hub</a>"
+          },
+          {
+            "type": "paragraph",
+            "html": "- <a href=\"https://huggingface.co/pricing#storage\" target=\"_blank\" rel=\"noreferrer noopener\">Storage pricing</a>"
+          }
+        ]
+      },
+      "workflow": {
+        "articleId": 2674,
+        "rssTitle": "Introducing Storage Buckets on the Hugging Face Hub"
+      }
+    },
+    {
       "slug": "amazon-connect-now-supports-conversational-analytics-for-email-aws",
       "title": "Amazon Connect now supports conversational analytics for email - AWS",
       "author": "AWS Architecture Blog",
