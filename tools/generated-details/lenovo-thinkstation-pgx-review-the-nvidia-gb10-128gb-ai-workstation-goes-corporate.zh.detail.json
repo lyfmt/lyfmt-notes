@@ -1,0 +1,234 @@
+{
+  "available": true,
+  "layout": "detail-zh",
+  "translatedFrom": "https://www.servethehome.com/lenovo-thinkstation-pgx-review-the-nvidia-gb10-128gb-ai-workstation-goes-corporate/",
+  "sourceName": "ServeTheHome",
+  "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "https://www.servethehome.com/wp-content/uploads/2026/03/Lenovo-PGX-NVIDIA-GB10-Front-1-696x464.jpg",
+      "alt": "Lenovo PGX NVIDIA GB10 Front 1",
+      "caption": "Lenovo PGX NVIDIA GB10 Front 1"
+    },
+    {
+      "type": "paragraph",
+      "html": "With a long legacy of developing workstations and small form factor systems, Lenovo has established a reputation for giving virtually every processor vendor a chance. <a href=\"https://www.servethehome.com/lenovo-thinkstation-p3-tiny-gen2-review-nvidia-gpu-intel/\" target=\"_blank\" rel=\"noreferrer noopener\">Intel, NVIDIA, and AMD SFF workstations</a>? Absolutely. A <a href=\"https://www.servethehome.com/lenovo-thinkcentre-neo-50q-tiny-qc-review-a-qualcomm-snapdragon-x-based-1l-pc/\" target=\"_blank\" rel=\"noreferrer noopener\">Qualcomm Snapdragon 1L PC</a>? Why not! As a result, it did not come as any surprise that when NVIDIA started offering the GB10 SoC to its partners to build SFF workstations, Lenovo was among the first wave of companies to jump on board."
+    },
+    {
+      "type": "paragraph",
+      "html": "The end result of that partnership was the Lenovo ThinkStation PGX. This is Lenovo’s first ThinkStation system based on an NVIDIA SoC. Easily the most corporate-friendly GB10 system released to date, Lenovo’s first NVIDIA PC is a notable release not just because of whose silicon is under the hood, but the brand that was slapped on top of the hood: ThinkStation. The ThinkStation brand is one of Lenovo’s most respected brands. So the company’s willingness to put the brand on NVIDIA’s very first workstation SoC signals a significant vote of confidence in NVIDIA."
+    },
+    {
+      "type": "paragraph",
+      "html": "As with the other GB10 systems we have reviewed thus far, this is a small form factor system in the vein of NVIDIA’s DGX Spark that is aimed at the developer market. And for that development market, the theme coming from NVIDIA is standardization: with NVIDIA exercising tight control over all of these GB10 SFF workstations, the core hardware in each and every one thus far has been the same. That means a GB10 SoC paired with 128GB of LPDDR5X memory, an M.2 SSD for storage, a ConnectX-7 NIC for high-bandwidth networking, and all placed in a chassis just a bit over 1 liter in volume."
+    },
+    {
+      "type": "paragraph",
+      "html": "This makes all of the GB10 SFF systems remarkably consistent from one vendor to another, though the trade-off is that it leaves limited room for hardware innovation from the partners outside of cooling and selecting which SSD to install. Instead, innovation has come from the other areas, such as the support and services side of the equation. In Lenovo’s case, this is their significant corporate relationships. IT departments can get PGX and support from the same outfit they already order their most recent batch of 1000 corporate laptops from."
+    },
+    {
+      "type": "paragraph",
+      "html": "If you wanted to find the Lenovo ThinkStation PGX online, here is a <a href=\"https://fave.co/4bBV3Za\" target=\"_blank\" rel=\"noreferrer noopener\">Lenovo web store affiliate link</a>."
+    },
+    {
+      "type": "paragraph",
+      "html": "<span></span>"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Lenovo ThinkStation PGX External Hardware Overview"
+    },
+    {
+      "type": "paragraph",
+      "html": "Unlike the rather flashy golden DGX Spark, or even ASUS’s own silvered GB10 system, the THinkStation PGX starts things off with a far more muted presentation. Lenovo is one of the major faces of corporate PCs these days, and its little black box embodies that legacy right on down to the hexagonal ventilation holes."
+    },
+    {
+      "type": "image",
+      "src": "https://www.servethehome.com/wp-content/uploads/2026/03/Lenovo-PGX-NVIDIA-GB10-Front-2-800x533.jpg",
+      "alt": "Lenovo PGX NVIDIA GB10 Front 2",
+      "caption": "Lenovo PGX NVIDIA GB10 Front 2"
+    },
+    {
+      "type": "paragraph",
+      "html": "As with most other GB10 workstations on the market right now, the front of the PGX is quite plain, almost entirely devoted to ventilation. You will not find a single port or button on the front of the system, and even the power button is in the rear. So other than Lenovo’s branding, it is all business in the front."
+    },
+    {
+      "type": "image",
+      "src": "https://www.servethehome.com/wp-content/uploads/2026/03/Lenovo-PGX-NVIDIA-GB10-Front-Angled-2-800x534.jpg",
+      "alt": "Lenovo PGX NVIDIA GB10 Front Angled 2",
+      "caption": "Lenovo PGX NVIDIA GB10 Front Angled 2"
+    },
+    {
+      "type": "paragraph",
+      "html": "Otherwise, with dimensions of 150 x 150 x 50.5mm (5.91 x 5.91 x 1.98 inches), Lenovo’s take on the GB10 concept is every bit as tiny as NVIDIA’s DGX Spark, and uses a similar front-to-back cooling design."
+    },
+    {
+      "type": "paragraph",
+      "html": "Typically, the sides of these GB10 systems are unremarkable, but again showing those corporate roots, Lenovo has opted to put the product label on the left side of the chassis rather than the bottom. It is a small touch that has no real significance to the usability of the system, but it handily illustrates the kind of market that Lenovo is going after."
+    },
+    {
+      "type": "image",
+      "src": "https://www.servethehome.com/wp-content/uploads/2026/03/Lenovo-PGX-NVIDIA-GB10-Side-2-800x534.jpg",
+      "alt": "Lenovo PGX NVIDIA GB10 Side 2",
+      "caption": "Lenovo PGX NVIDIA GB10 Side 2"
+    },
+    {
+      "type": "paragraph",
+      "html": "Meanwhile, on the other side is another sticker, this time with a QR code for looking up support information for the PC. It is also at this point that we cannot help but think we have seen this <a href=\"https://www.servethehome.com/gigabyte-ai-top-atom-nvidia-gb10-review-a-neat-little-box/\" target=\"_blank\" rel=\"noreferrer noopener\">design before.</a>"
+    },
+    {
+      "type": "image",
+      "src": "https://www.servethehome.com/wp-content/uploads/2026/03/Lenovo-PGX-NVIDIA-GB10-Side-3-800x533.jpg",
+      "alt": "Lenovo PGX NVIDIA GB10 Side 3",
+      "caption": "Lenovo PGX NVIDIA GB10 Side 3"
+    },
+    {
+      "type": "paragraph",
+      "html": "Still, we will take a look at the rear of the system. Which, like so many other GB10 systems, is where all of the ports and buttons are located."
+    },
+    {
+      "type": "image",
+      "src": "https://www.servethehome.com/wp-content/uploads/2026/03/Lenovo-PGX-NVIDIA-GB10-Rear-1-800x534.jpg",
+      "alt": "Lenovo PGX NVIDIA GB10 Rear 1",
+      "caption": "Lenovo PGX NVIDIA GB10 Rear 1"
+    },
+    {
+      "type": "paragraph",
+      "html": "If you have seen any of our other GB10 reviews thus far, then you know what you will find here. Starting from the left is the system’s power button, followed by four USB Type-C ports. All of these are 20Gbps ports, running in USB 3.2 Gen 2×2 under the hood. The left-most port is also the power-input port for the system, taking full advantage of the 240 Watt EPR limit for USB-C. The remaining three USB ports are then for any peripherals that need to be hooked up to the system, including external displays, thanks to support for DisplayPort 2.1 via DP alt-mode for USB-C."
+    },
+    {
+      "type": "paragraph",
+      "html": "Compared to some of the other GB10 system designs, Lenovo’s labeling here is pretty good. The USB-C ports are not named, but they do feature the official (but somewhat dated) USB iconography identifying them as 20Gbps USB ports. And the DisplayPort logo is there as well, which is how DP alt mode-capable ports should be labeled. Even if you did not know what this box was for, you could easily determine what the USB-C ports are capable of."
+    },
+    {
+      "type": "image",
+      "src": "https://www.servethehome.com/wp-content/uploads/2026/03/Lenovo-PGX-NVIDIA-GB10-USB-C-20Gbps-Ports-2-800x533.jpg",
+      "alt": "Lenovo PGX NVIDIA GB10 USB C 20Gbps Ports 2",
+      "caption": "Lenovo PGX NVIDIA GB10 USB C 20Gbps Ports 2"
+    },
+    {
+      "type": "paragraph",
+      "html": "Speaking of USB ports, one of the few distinct aspects of the PGX, and a particularly laudable one at that, is that Lenovo has opted to include USB Type-C to Type-A adapters with the workstation. Though the adapters are trite compared to the GB10 hardware, they make it possible to plug a mouse and keyboard into the system right out of the box. It is a small gesture that further reinforces how Lenovo views this as a desktop workstation first and foremost. Now that we have set up nine GB10 systems from five different vendors, this is a little detail that stands out."
+    },
+    {
+      "type": "image",
+      "src": "https://www.servethehome.com/wp-content/uploads/2026/03/Lenovo-PGX-NVIDIA-GB10-USB-C-to-USB-A-Adapter-3-800x534.jpg",
+      "alt": "Lenovo PGX NVIDIA GB10 USB C To USB A Adapter 3",
+      "caption": "Lenovo PGX NVIDIA GB10 USB C To USB A Adapter 3"
+    },
+    {
+      "type": "paragraph",
+      "html": "Next to the USB-C ports is the system’s sole dedicated display output: an HDMI 2.1 port."
+    },
+    {
+      "type": "image",
+      "src": "https://www.servethehome.com/wp-content/uploads/2026/03/Lenovo-PGX-NVIDIA-GB10-HDMI-2.1-Ports-1-800x534.jpg",
+      "alt": "Lenovo PGX NVIDIA GB10 HDMI 2.1 Ports 1",
+      "caption": "Lenovo PGX NVIDIA GB10 HDMI 2.1 Ports 1"
+    },
+    {
+      "type": "paragraph",
+      "html": "Moving to the right again, we get to where things are arguably more interesting with these GB10 systems: the trio of network ports."
+    },
+    {
+      "type": "image",
+      "src": "https://www.servethehome.com/wp-content/uploads/2026/03/Lenovo-PGX-NVIDIA-GB10-Networking-Ports-800x356.jpg",
+      "alt": "Lenovo PGX NVIDIA GB10 Networking Ports",
+      "caption": "Lenovo PGX NVIDIA GB10 Networking Ports"
+    },
+    {
+      "type": "paragraph",
+      "html": "First off is a 10GbE port for local networking. In a typical mini-PC, this would be the fastest port you would find on a system, but of course, GB10 SFF workstations aim much higher."
+    },
+    {
+      "type": "paragraph",
+      "html": "Which is why it is rounded out by a pair of 200Gbps QSFP112 ports. Connected in turn to the mini-PC’s integrated NVIDIA ConnectX-7 NIC, the high-performance NIC is one of the marquee features of the current crop of GB10 boxes, with our own Patrick Kennedy often contextualizing GB10 boxes as a ConnectX-7 NIC with a really good SoC and RAM bolted on."
+    },
+    {
+      "type": "image",
+      "src": "https://www.servethehome.com/wp-content/uploads/2025/12/How-the-NVIDIA-GB10-ConnectX-7-is-Actually-Connected-800x465.jpeg",
+      "alt": "How The NVIDIA GB10 ConnectX 7 Is Actually Connected",
+      "caption": "How The NVIDIA GB10 ConnectX 7 Is Actually Connected"
+    },
+    {
+      "type": "paragraph",
+      "html": "The internal architecture of the GB10 design does make getting the most out of these QSFP ports a bit tricky, however. As we have <a href=\"https://www.servethehome.com/the-nvidia-gb10-connectx-7-200gbe-networking-is-really-different/\" target=\"_blank\" rel=\"noreferrer noopener\">outlined in previous articles</a>, 200Gbps of networking needs a PCIe 5.0 x8 connection to be fully fed, but GB10 can only provide PCIe 5.0 root ports with at most a x4 connection. As a result, the NIC is connected to a pair of x4 ports. This provides the same aggregate bandwidth as an x8 connection, but it imposes network topology restrictions due to the NIC appearing to the rest of the system as four network interfaces. In many ways, this is similar to what we saw with our <a href=\"https://www.servethehome.com/nvidia-connectx-8-dual-400gbe-400g-nic-review/\" target=\"_blank\" rel=\"noreferrer noopener\">NVIDIA ConnectX-8 C8240 800G Dual 400G NIC Review</a>, having two PCIe Gen5 x16 connections and two 400Gbps ports. The GB10 is like a small version of that."
+    },
+    {
+      "type": "image",
+      "src": "https://www.servethehome.com/wp-content/uploads/2026/03/Lenovo-PGX-NVIDIA-GB10-ConnectX-7-Ports-1-800x533.jpg",
+      "alt": "Lenovo PGX NVIDIA GB10 ConnectX 7 Ports 1",
+      "caption": "Lenovo PGX NVIDIA GB10 ConnectX 7 Ports 1"
+    },
+    {
+      "type": "paragraph",
+      "html": "Ultimately, the purpose of including a high-end ConnectX-7 NIC is to enable GB10 boxes to scale out, similar to their big-iron brethren. 200Gbps of networking bandwidth is not nearly as much as a full-fledged GB200/GB300-based server, but it gives developers access to more processing power and a way to see how their software and models will perform on a scale-out setup. The most common setup we expect to see is a two-way system using a single cable with 200Gbps of bandwidth between GB10 systems, as we did in our recent <a href=\"https://www.servethehome.com/using-the-dell-pro-max-with-gb10-to-profit-within-12-months-nvidia/\" target=\"_blank\" rel=\"noreferrer noopener\">Using the GB10 to Profit within 12 Months</a> article and video. At the same time, with a <a href=\"https://www.servethehome.com/mikrotik-crs804-ddq-announced-4-port-400gbe-switch/\" target=\"_blank\" rel=\"noreferrer noopener\">network switch</a>, it is possible to scale the whole cluster out to several machines."
+    },
+    {
+      "type": "paragraph",
+      "html": "Not pictured here, the ThinkStation PGX also offers one final networking option with an integrated Wi-Fi 7 (2×2) + Bluetooth 5.4 radio."
+    },
+    {
+      "type": "paragraph",
+      "html": "The rest of the back of the PGX, in turn, is dominated by the exhaust vents towards the top of the chassis."
+    },
+    {
+      "type": "image",
+      "src": "https://www.servethehome.com/wp-content/uploads/2026/03/Lenovo-PGX-NVIDIA-GB10-Rear-Angled-1-800x534.jpg",
+      "alt": "Lenovo PGX NVIDIA GB10 Rear Angled 1",
+      "caption": "Lenovo PGX NVIDIA GB10 Rear Angled 1"
+    },
+    {
+      "type": "paragraph",
+      "html": "Flipping the PGX on its back, we also get a quick look at the bottom of the machine. This is, for the most part, a sealed machine from the bottom; Lenovo has placed a single intake vent near the front of the system. The bottom itself serves as a stand to keep the rest of the system elevated, keeping said vent free from obstruction."
+    },
+    {
+      "type": "paragraph",
+      "html": "It is also at this point that it becomes clear that we have seen this chassis before: <a href=\"https://www.servethehome.com/gigabyte-ai-top-atom-nvidia-gb10-review-a-neat-little-box/\" target=\"_blank\" rel=\"noreferrer noopener\">Gigabyte’s AI TOP ATOM</a>. Other than the lack of stylization on the front and back vents, the ThinkStation PGX is a spitting image of the AI TOP ATOM. The pedestal design in particular gives it away. If Lenovo and Gigabyte are not using the same ODM here, they at the very least share the same tailor."
+    },
+    {
+      "type": "image",
+      "src": "https://www.servethehome.com/wp-content/uploads/2026/03/Lenovo-PGX-NVIDIA-GB10-Bottom-Angled-1-800x534.jpg",
+      "alt": "Lenovo PGX NVIDIA GB10 Bottom Angled 1",
+      "caption": "Lenovo PGX NVIDIA GB10 Bottom Angled 1"
+    },
+    {
+      "type": "paragraph",
+      "html": "Finally, here is a quick look at the external power supply included with PGX. As with every other GB10 system, this is a powerful 240 Watt USB-C adapter. But unlike virtually every other system, Lenovo is using its own adapter instead of an off-the-shelf Delta unit. The power output specifications are otherwise the same."
+    },
+    {
+      "type": "image",
+      "src": "https://www.servethehome.com/wp-content/uploads/2026/03/Lenovo-PGX-NVIDIA-GB10-Power-Supply-1-800x534.jpg",
+      "alt": "Lenovo PGX NVIDIA GB10 Power Supply 1",
+      "caption": "Lenovo PGX NVIDIA GB10 Power Supply 1"
+    },
+    {
+      "type": "paragraph",
+      "html": "Now, let us get inside the system, or at least, as much as we can."
+    }
+  ],
+  "refineErrors": [
+    {
+      "index": 1,
+      "type": "paragraph",
+      "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+    },
+    {
+      "index": 2,
+      "type": "paragraph",
+      "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+    },
+    {
+      "index": 3,
+      "type": "paragraph",
+      "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+    },
+    {
+      "index": 4,
+      "type": "paragraph",
+      "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+    }
+  ]
+}

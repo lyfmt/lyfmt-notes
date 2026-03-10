@@ -1,0 +1,20 @@
+{
+  "item": {
+    "id": 2695,
+    "title": "AWS Builder ID now supports Sign in with GitHub and Amazon",
+    "blog": "AWS Architecture Blog",
+    "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-builder-id-sign-in-github-amazon/",
+    "published": "2026-03-10T18:00:00Z",
+    "discovered": "2026-03-10T22:00:22.600064776Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-builder-id-sign-in-github-amazon/",
+    "ok": true,
+    "title": "AWS Builder ID now supports Sign in with GitHub and Amazon - AWS",
+    "description": "Discover more about what",
+    "fetched_bytes": 181139,
+    "error": null
+  },
+  "classification": "thin"
+}

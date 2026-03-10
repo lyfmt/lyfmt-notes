@@ -1,0 +1,26 @@
+{
+  "available": false,
+  "layout": "draft",
+  "translatedFrom": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-builder-id-sign-in-github-amazon/",
+  "sourceName": "AWS Architecture Blog",
+  "sourceDescription": "以下为根据原文结构自动生成的详情草稿，已保留段落层次、图片与媒体；默认尚未完成中文翻译润色。",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "AWS Builder ID now supports Sign in with GitHub and Amazon"
+    },
+    {
+      "type": "paragraph",
+      "html": "AWS Builder ID, your profile for accessing AWS applications including AWS Builder Center, AWS Training and Certification and Kiro, now supports two new social logins: GitHub and Amazon. This expansion of sign-in options builds on the existing Google Apple social sign-in capabilities, providing GitHub and Amazon users with a streamlined way to access AWS resources without managing separate credentials on AWS."
+    },
+    {
+      "type": "paragraph",
+      "html": "With Sign in with Github and Amazon integration, developers and builders can now enjoy access to their AWS Builder ID profile using their GitHub or Amazon Account credentials. This enhancement eliminates password management complexity, reduces forgotten password issues, and provides a frictionless experience for both new user registration and returning user sign-ins. Whether you&#x27;re accessing development resources in AWS Builder Center, enrolling in certification programs or using Kiro to code your next app, your GitHub and Amazon Accounts can now serve as a secure gateway to your builder AWS journey."
+    },
+    {
+      "type": "paragraph",
+      "html": "To learn more about AWS Builder ID and get started with Sign in with GitHub and Amazon, visit the <a href=\"https://docs.aws.amazon.com/signin/latest/userguide/sign-in-builder-id.html\" target=\"_blank\" rel=\"noreferrer noopener\">AWS Builder ID documentation</a>."
+    }
+  ]
+}

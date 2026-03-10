@@ -1,0 +1,20 @@
+{
+  "item": {
+    "id": 2694,
+    "title": "Lenovo ThinkStation PGX Review The NVIDIA GB10 128GB AI Workstation Goes Corporate",
+    "blog": "ServeTheHome",
+    "url": "https://www.servethehome.com/lenovo-thinkstation-pgx-review-the-nvidia-gb10-128gb-ai-workstation-goes-corporate/",
+    "published": "2026-03-10T20:55:35Z",
+    "discovered": "2026-03-10T21:00:44.149124275Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://www.servethehome.com/lenovo-thinkstation-pgx-review-the-nvidia-gb10-128gb-ai-workstation-goes-corporate/",
+    "ok": true,
+    "title": "Lenovo ThinkStation PGX Review The NVIDIA GB10 128GB AI Workstation Goes Corporate",
+    "description": "We test the Lenovo ThinkStation PGX, a NVIDIA GB10-based 128GB small AI workstation with a fast Arm CPU, Blackwell GPU, and 200G networking",
+    "fetched_bytes": 174177,
+    "error": null
+  },
+  "classification": "normal"
+}
