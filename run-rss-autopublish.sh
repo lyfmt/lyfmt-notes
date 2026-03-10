@@ -20,6 +20,7 @@ python3 tools/rss_autopublish_orchestrator.py \
   --max-items 3 \
   --git-commit \
   --git-push \
+  --strict-publish \
   "$@" 2>&1 | tee -a "$LOG_PATH"
 STATUS=${PIPESTATUS[0]}
 echo "[run-rss-autopublish] exit ${STATUS}" | tee -a "$LOG_PATH"

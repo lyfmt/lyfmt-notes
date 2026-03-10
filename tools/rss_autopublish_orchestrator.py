@@ -211,6 +211,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--allow-publish", action="store_true", help="Enable detail.available=true when Chinese detail is fully ready.")
     parser.add_argument("--git-commit", action="store_true", help="Create a local commit in pi-blog-demo when a batch succeeds.")
     parser.add_argument("--git-push", action="store_true", help="Push origin/master after a successful validated batch.")
+    parser.add_argument("--strict-publish", action="store_true", help="Skip items unless detail.available=true (no draft-only inserts).")
     parser.add_argument("--resume-run", help="Resume a previous run id. Defaults to latest unfinished run.")
     parser.add_argument("--dry-run", action="store_true")
     return parser
@@ -521,6 +522,19 @@ def process_item(args: argparse.Namespace, run_record: dict[str, Any], bundle: d
                 item_state["soft_fail"] = "refine_timeout"
     else:
         stage_history(item_state, "refine_skipped", challenge_blocked=challenge_blocked, detail_progress=existing_progress)
+
+    # Optional strict publish: only insert when detail is publishable
+    if args.strict_publish:
+        spec_for_publish = read_json(spec_path, default={})
+        detail_for_publish = spec_for_publish.get("detail") if isinstance(spec_for_publish.get("detail"), dict) else {}
+        progress = detail_progress(detail_for_publish)
+        if not detail_for_publish.get("available") or (progress["textual_total"] > 0 and progress["textual_cjk"] < progress["textual_total"]):
+            item_state["outcome"] = "skipped_existing"
+            item_state["terminal"] = True
+            item_state["reasons"] = ["strict_publish_skipped"]
+            stage_history(item_state, "strict_publish_skipped", detail_progress=progress)
+            save_item_state(article_id, item_state)
+            return item_state
 
     upsert_result = run_command(
         [
