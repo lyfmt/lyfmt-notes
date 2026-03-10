@@ -296,7 +296,7 @@
         }
       ],
       "detail": {
-        "available": false,
+        "available": true,
         "layout": "draft",
         "translatedFrom": "https://spring.io/blog/2026/03/10/this-week-in-spring-march-10th-2026",
         "sourceName": "Spring Blog",
@@ -305,44 +305,44 @@
           {
             "type": "heading",
             "level": 2,
-            "text": "Spring blog"
+            "text": "Spring 博客"
           },
           {
             "type": "paragraph",
-            "html": "Hi, Spring fans! Welcome to another installment of <em>This Week in Spring</em>. As I write this, I am preparing for a trip to Rust, Germany, for one of the best Java conferences in Europe: JavaLand, along with its new companion event, DevLand. It should be fun. Will you be around? If so, say hi."
+            "html": "嗨，Spring 的粉丝们！欢迎来到新一期的 <em>This Week in Spring</em>。写这段话时，我正准备前往德国鲁斯特，参加欧洲最好的 Java 会议之一：JavaLand，以及它的新姊妹活动 DevLand。应该会很有趣。你也会在吗？如果会，请打个招呼。"
           },
           {
             "type": "paragraph",
-            "html": "We have a lot to cover, so let&#x27;s dive in."
+            "html": "我们要讲的内容很多，所以让我们直接开始。"
           },
           {
             "type": "list",
             "items": [
-              "The Kotlin tutorial has been updated <a href=\"https://kotlinlang.org/lp/kotlin-spring-ai-tutorial/\" target=\"_blank\" rel=\"noreferrer noopener\">with information about Spring AI</a>",
-              "In last week&#x27;s installment of <em>A Bootiful Podcast</em>, I had the privilege of talking <a href=\"https://spring.io/blog/2026/03/05/a-bootiful-podcast-jennifer-reif\" target=\"_blank\" rel=\"noreferrer noopener\">to Neo4J developer advocate extraordinaire Jennifer Reif</a>",
-              "Want to secure your Spring Shell CLI-based applications? Check out this video I did <a href=\"https://youtu.be/rLIQTY9Gg04?si=qQMeLiUIz7OHWcin\" target=\"_blank\" rel=\"noreferrer noopener\">on using Spring Security and OAuth device code grants</a>",
-              "Want to learn more about security? Check out this video looking at <a href=\"https://youtu.be/RRY_d2kZsj0?si=2vzMaMsRHJ3MO6Nj\" target=\"_blank\" rel=\"noreferrer noopener\">the new Spring Security 7</a>",
-              "In particular, if you want to learn about securing your Spring AI MCP agents, <a href=\"https://youtu.be/Mpd1740f2Vs?si=Sc_-U_3WyZV8srrc\" target=\"_blank\" rel=\"noreferrer noopener\">check out this video</a>",
-              "AWS is hosting a webinar <a href=\"https://aws-experience.com/emea/smb/e/f2e47/building-java-ai-agents-with-spring-ai\" target=\"_blank\" rel=\"noreferrer noopener\">on building Java AI agents with Spring AI</a>",
-              "Baeldung has a nice post on <a href=\"https://www.baeldung.com/spring-ai-explainable-agents-capture-llm-tool-call-reasoning\" target=\"_blank\" rel=\"noreferrer noopener\">explainable LLM tool call reasoning with Spring AI</a>",
-              "Have you checked out the support for consuming Anthropic Skills from within a Spring AI application using the new Spring AI community Skills support? It becomes even more powerful when <a href=\"https://youtu.be/eTh1Ti32QDU?si=aNvKv76OdYYnjZo0\" target=\"_blank\" rel=\"noreferrer noopener\">paired with the new SkillsJars project</a>",
-              "I also published a full video looking at Spring gRPC 1.0, including setup, building clients and services, observability, security, and more. Watch it <a href=\"https://youtu.be/RRY_d2kZsj0?si=2vzMaMsRHJ3MO6Nj\" target=\"_blank\" rel=\"noreferrer noopener\">here</a>",
-              "Migrating to modular monoliths <a href=\"https://blog.jetbrains.com/idea/2026/02/migrating-to-modular-monolith-using-spring-modulith-and-intellij-idea/\" target=\"_blank\" rel=\"noreferrer noopener\">when using Spring Modulith</a>",
-              "A nice <a href=\"https://simonwillison.net/2026/Feb/23/agentic-engineering-patterns/\" target=\"_blank\" rel=\"noreferrer noopener\">roundup of agentic patterns</a>"
+              "Kotlin 教程已更新，<a href=\"https://kotlinlang.org/lp/kotlin-spring-ai-tutorial/\" target=\"_blank\" rel=\"noreferrer noopener\">新增了关于 Spring AI 的信息</a>",
+              "在上一期的 <em>A Bootiful Podcast</em> 中，我有幸 <a href=\"https://spring.io/blog/2026/03/05/a-bootiful-podcast-jennifer-reif\" target=\"_blank\" rel=\"noreferrer noopener\">与 Neo4J 开发者布道师杰出人物 Jennifer Reif 交流</a>",
+              "想要保护你的 Spring Shell CLI 应用？看看我做的这个视频，<a href=\"https://youtu.be/rLIQTY9Gg04?si=qQMeLiUIz7OHWcin\" target=\"_blank\" rel=\"noreferrer noopener\">讲的是使用 Spring Security 与 OAuth 设备码授权</a>",
+              "想了解更多安全相关内容？看看这个视频，讨论 <a href=\"https://youtu.be/RRY_d2kZsj0?si=2vzMaMsRHJ3MO6Nj\" target=\"_blank\" rel=\"noreferrer noopener\">新的 Spring Security 7</a>",
+              "尤其是如果你想了解如何保护你的 Spring AI MCP 代理，<a href=\"https://youtu.be/Mpd1740f2Vs?si=Sc_-U_3WyZV8srrc\" target=\"_blank\" rel=\"noreferrer noopener\">请看这个视频</a>",
+              "AWS 正在举办一个网络研讨会，<a href=\"https://aws-experience.com/emea/smb/e/f2e47/building-java-ai-agents-with-spring-ai\" target=\"_blank\" rel=\"noreferrer noopener\">主题是使用 Spring AI 构建 Java AI 代理</a>",
+              "Baeldung 有一篇不错的文章，<a href=\"https://www.baeldung.com/spring-ai-explainable-agents-capture-llm-tool-call-reasoning\" target=\"_blank\" rel=\"noreferrer noopener\">讲的是 Spring AI 中可解释的 LLM 工具调用推理</a>",
+              "你是否看过在 Spring AI 应用中使用新的 Spring AI 社区 Skills 支持来消费 Anthropic Skills 的支持？当它与新的 <a href=\"https://youtu.be/eTh1Ti32QDU?si=aNvKv76OdYYnjZo0\" target=\"_blank\" rel=\"noreferrer noopener\">SkillsJars 项目</a> 配合时会更强大",
+              "我还发布了一段完整视频，介绍 Spring gRPC 1.0，包括设置、构建客户端与服务、可观测性、安全等。<a href=\"https://youtu.be/RRY_d2kZsj0?si=2vzMaMsRHJ3MO6Nj\" target=\"_blank\" rel=\"noreferrer noopener\">点击这里观看</a>",
+              "在使用 Spring Modulith 时，迁移到模块化单体应用，<a href=\"https://blog.jetbrains.com/idea/2026/02/migrating-to-modular-monolith-using-spring-modulith-and-intellij-idea/\" target=\"_blank\" rel=\"noreferrer noopener\">可参考这篇文章</a>",
+              "一篇不错的 <a href=\"https://simonwillison.net/2026/Feb/23/agentic-engineering-patterns/\" target=\"_blank\" rel=\"noreferrer noopener\">关于代理式模式的汇总</a>"
             ]
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "Get the Spring newsletter"
+            "text": "订阅 Spring 新闻通讯"
           },
           {
             "type": "paragraph",
-            "html": "Stay connected with the Spring newsletter"
+            "html": "通过 Spring 新闻通讯保持联系"
           },
           {
             "type": "paragraph",
-            "html": "<a href=\"https://go-vmware.broadcom.com/tnz-spring-newsletter-subscribe\" target=\"_blank\" rel=\"noreferrer noopener\">Subscribe</a>"
+            "html": "<a href=\"https://go-vmware.broadcom.com/tnz-spring-newsletter-subscribe\" target=\"_blank\" rel=\"noreferrer noopener\">订阅</a>"
           },
           {
             "type": "image",
@@ -353,29 +353,29 @@
           {
             "type": "heading",
             "level": 2,
-            "text": "Get ahead"
+            "text": "提前准备"
           },
           {
             "type": "paragraph",
-            "html": "VMware offers training and certification to turbo-charge your progress."
+            "html": "VMware 提供培训与认证，以加速你的进步。"
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "Get support"
+            "text": "获得支持"
           },
           {
             "type": "paragraph",
-            "html": "Tanzu Spring offers support and binaries for OpenJDK™, Spring, and Apache Tomcat® in one simple subscription."
+            "html": "Tanzu Spring 提供对 OpenJDK™、Spring 和 Apache Tomcat® 的支持与二进制发行包，整合为一项简单的订阅。"
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "Upcoming events"
+            "text": "即将举行的活动"
           },
           {
             "type": "paragraph",
-            "html": "Check out all the upcoming events in the Spring community."
+            "html": "查看 Spring 社区即将举行的所有活动。"
           }
         ]
       },
