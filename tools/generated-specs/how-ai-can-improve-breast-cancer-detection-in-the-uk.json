@@ -1,0 +1,217 @@
+{
+  "slug": "how-ai-can-improve-breast-cancer-detection-in-the-uk",
+  "title": "How AI can improve breast cancer detection in the UK",
+  "author": "Google AI Blog",
+  "publishedAt": "2026-03-10",
+  "source": "Google AI Blog",
+  "url": "https://blog.google/innovation-and-ai/technology/health/google-ai-breast-cancer-detection/",
+  "tags": [
+    "AI"
+  ],
+  "excerpt": "这篇文章围绕“How AI can improve breast cancer detection in the UK”展开，RSS 摘要提到：New research shows how Google AI helps radiologists detect breast cancer earlier and more accurately, while giving radiologists more time...",
+  "content": [
+    {
+      "heading": "文章核心",
+      "paragraphs": [
+        "基于 RSS 摘要与页面元数据，原文重点是：New research shows how Google AI helps radiologists detect breast cancer earlier and more accurately, while giving radiologists more time for patient care.",
+        "来源信息：Google AI Blog｜2026-03-10。"
+      ]
+    },
+    {
+      "heading": "值得继续补充的点",
+      "paragraphs": [
+        "如果后续补齐详情视图，可以继续沿着原文结构展开关键论点、案例、约束条件与结论。",
+        "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+      ]
+    }
+  ],
+  "detail": {
+    "available": true,
+    "layout": "detail-zh",
+    "translatedFrom": "https://blog.google/innovation-and-ai/technology/health/google-ai-breast-cancer-detection/",
+    "sourceName": "Google AI Blog",
+    "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "html": "Mar 10, 2026"
+      },
+      {
+        "type": "paragraph",
+        "html": "Our collaborative research with Imperial College London and the UK’s NHS shows AI’s potential to detect 25% of the interval cancers previously missed by conventional methods. Additionally, the research found AI can reduce screening workloads."
+      },
+      {
+        "type": "image",
+        "src": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Yossi_Matias.max-244x184.format-webp.webp",
+        "alt": "Yossi Matias, VP Engineering & Research and Crisis Response Lead",
+        "caption": "Yossi Matias, VP Engineering & Research and Crisis Response Lead"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "General summary"
+      },
+      {
+        "type": "paragraph",
+        "html": "AI can improve breast cancer detection in the UK. Studies show AI accurately detects cancers and reduces radiologists&#x27; workloads. More research is needed to build trust between specialists and AI."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Bullet points"
+      },
+      {
+        "type": "list",
+        "items": [
+          "&quot;How AI can improve breast cancer detection in the UK&quot; explores AI&#x27;s role in early detection.",
+          "AI found 25% of missed &quot;interval cancers&quot; in a study with Google, Imperial College, and the NHS.",
+          "AI could cut radiologist workload by 40%, letting them focus on complex cases.",
+          "Specialists sometimes overruled AI, showing the need to build trust in AI diagnoses.",
+          "AI needs careful calibration to each hospital&#x27;s workflow, equipment, and patients."
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Basic explainer"
+      },
+      {
+        "type": "paragraph",
+        "html": "Google made an AI system to help find breast cancer in the UK. The AI found cancers that doctors missed and could cut down on the amount of work for the doctors. But, doctors need to trust the AI, so more research is needed to make sure they work well together. This could help more women get diagnosed and treated earlier."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "Explore other styles:"
+      },
+      {
+        "type": "image",
+        "src": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Mammo_.width-200.format-webp.webp",
+        "alt": "A person is shown looking intently at a computer monitor displaying a mammogram",
+        "caption": "A person is shown looking intently at a computer monitor displaying a mammogram"
+      },
+      {
+        "type": "paragraph",
+        "html": "Your browser does not support the audio element."
+      },
+      {
+        "type": "paragraph",
+        "html": "Breast cancer affects one in every eight women in the UK. In this fight, early detection is crucial to giving people the best chance of overcoming the disease. New research from Google, Imperial College London and the UK’s National Health Service (NHS), published as a <a href=\"https://www.nature.com/articles/s43018-026-01128-z\" target=\"_blank\" rel=\"noreferrer noopener\">pair of studies</a> in <a href=\"https://www.nature.com/articles/s43018-026-01127-0\" target=\"_blank\" rel=\"noreferrer noopener\"><i>Nature Cancer</i> today</a>, marks a turning point in screening technology and reveals how AI can strengthen early detection efforts."
+      },
+      {
+        "type": "paragraph",
+        "html": "Our <a href=\"https://www.nature.com/articles/s43018-026-01127-0\" target=\"_blank\" rel=\"noreferrer noopener\">experimental research AI system</a> identified 25% of the “interval cancers” that were previously missed — the cases that typically slip through traditional screenings and only surface after symptoms appear, when they become more challenging to treat. But this research goes beyond the accuracy of the scans. It offers a first-of-its kind, large-scale look at how radiologists react when AI challenges or confirms their diagnosis in a clinical setting."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Confronting a growing challenge"
+      },
+      {
+        "type": "paragraph",
+        "html": "In the UK’s NHS, the frontline of breast cancer screening relies on a rigorous “double-reading” process: Two specialists must agree on every mammogram, with an arbitration panel deciding any disputes. It is a vital safety net, but one that’s stretched to its limit. Each specialist must review roughly 5,000 scans annually, with just four hours of dedicated time per week, all amidst a global shortage of radiologists. We set out to determine how AI could help to tackle this challenge."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Validating accuracy at scale"
+      },
+      {
+        "type": "paragraph",
+        "html": "<a href=\"https://www.nature.com/articles/s43018-026-01127-0\" target=\"_blank\" rel=\"noreferrer noopener\">The first step</a> was comparing the accuracy of AI-based mammography interpretation to that of expert radiologists. We tested this by using AI to review the mammograms of 125,000 women, and the results were definitive: The AI-based screening detected 25% of the total interval cancers (cancers detected between scans) previously missed. AI also identified more invasive cancers and more cancers overall than the expert radiologists, and identified fewer false positives for women having their first-time scan."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Giving radiologists more time for patient care"
+      },
+      {
+        "type": "paragraph",
+        "html": "Having proven AI’s standalone accuracy, we turned to a practical question: Can this technology effectively give radiologists more time for patient care? <a href=\"https://www.nature.com/articles/s43018-026-01128-z\" target=\"_blank\" rel=\"noreferrer noopener\">Our second study</a> looked at the scans of over 50,000 women and showed that AI is capable of reducing screening workloads by an estimated 40% when used as the &quot;second reader&quot; in the workflow. This work revealed that AI-assisted workflows could enable healthcare professionals to address the nationwide screening backlog, giving them more time to focus on complex cases all while upholding the rigorous clinical benchmarks of the traditional double-reading standard."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Building trust through human-AI collaboration"
+      },
+      {
+        "type": "paragraph",
+        "html": "While AI-assisted screening works in theory, the true test of its value lies in how medical professionals respond to AI-driven diagnoses in practice. To bridge this gap, we looked at the entire clinical pathway, paying careful attention to &quot;arbitration” by medical professionals — the final step where specialists resolve diagnostic disagreements. While arbitration successfully filters out false positives, we observed a critical tension during our simulated review: Arbitration panel specialists occasionally overruled AI-detected cancers that would have otherwise gone undetected."
+      },
+      {
+        "type": "paragraph",
+        "html": "These findings highlight the need for continued research on human-AI interaction to build specialist trust in AI’s ability to catch subtle, early-stage cancers."
+      },
+      {
+        "type": "paragraph",
+        "html": "We also evaluated the challenges of practical clinical AI integration into clinical workflow through an observational feasibility study across 12 NHS screening sites in London, processing over 9,000 cases in real-time without using AI results to impact patient care. A key lesson was that AI isn&#x27;t a &quot;plug-and-play” solution. It requires careful and continuous calibration to the unique heartbeat of each hospital and adaptation to shifting workflows, evolving equipment and diverse patient populations."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Bringing it all together"
+      },
+      {
+        "type": "paragraph",
+        "html": "These findings build on <a href=\"https://www.nature.com/articles/s41586-019-1799-6\" target=\"_blank\" rel=\"noreferrer noopener\">our previous work</a> that found an earlier version of this <a href=\"https://link.springer.com/article/10.1007/s10549-025-07616-7\" target=\"_blank\" rel=\"noreferrer noopener\">AI-based screening system could detect cancers in a single reader setting</a> and <a href=\"https://link.springer.com/article/10.1007/s10549-025-07616-7\" target=\"_blank\" rel=\"noreferrer noopener\">lead to shorter diagnostic waiting periods for women</a>. Collectively, these studies show how AI can strengthen early detection efforts, paving the way for more women to be diagnosed and treated sooner, with the ultimate goal of saving lives."
+      },
+      {
+        "type": "image",
+        "src": "https://blog.google/static/blogv2/images/newsletter-envelope-back.svg?version=pr20260219-1731",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://blog.google/static/blogv2/images/newsletter-envelope-letter-approved.svg?version=pr20260219-1731",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://blog.google/static/blogv2/images/newsletter-envelope-letter-google.svg?version=pr20260219-1731",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://blog.google/static/blogv2/images/newsletter-envelope-front.svg?version=pr20260219-1731",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "type": "paragraph",
+        "html": "Done. Just one step more."
+      },
+      {
+        "type": "paragraph",
+        "html": "You are already subscribed to our newsletter."
+      },
+      {
+        "type": "paragraph",
+        "html": "You can also subscribe with a <span> . </span>"
+      }
+    ],
+    "refineErrors": [
+      {
+        "index": 0,
+        "type": "paragraph",
+        "message": "Empty Pi output."
+      },
+      {
+        "index": 1,
+        "type": "paragraph",
+        "message": "Empty Pi output."
+      },
+      {
+        "index": 3,
+        "type": "heading",
+        "message": "Empty Pi output."
+      }
+    ]
+  },
+  "workflow": {
+    "articleId": 2655,
+    "rssTitle": "How AI can improve breast cancer detection in the UK"
+  }
+}
