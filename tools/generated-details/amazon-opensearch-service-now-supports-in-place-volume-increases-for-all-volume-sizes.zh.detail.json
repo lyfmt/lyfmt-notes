@@ -1,0 +1,20 @@
+{
+  "available": true,
+  "layout": "detail-zh",
+  "translatedFrom": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-opensearch-service-in-place-volume/",
+  "sourceName": "AWS Architecture Blog",
+  "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "html": "<a href=\"https://aws.amazon.com/opensearch-service/\" target=\"_blank\" rel=\"noreferrer noopener\">Amazon OpenSearch Service</a> now extends in-place cluster volume size increases to volumes exceeding 3 TiB. With this enhancement, you can scale storage capacity across all volume sizes without requiring a blue/green deployment. <br> <br> Previously, you could perform volume increases up to 3 TiB on your clusters without a blue/green deployment. This release removes that limitation, making it easier for you to scale up quickly even beyond 3 TiB when required. Domains that already have a volume size above 3 TiB will require a blue/green deployment the first time a volume increase is made; subsequent volume increases will not require a blue/green deployment. <br> <br> Decreasing storage volume size, or making volume increases within short intervals, will still require a blue/green deployment. You can use the <a href=\"https://docs.aws.amazon.com/opensearch-service/latest/developerguide/managedomains-configuration-changes.html#dryrun\" target=\"_blank\" rel=\"noreferrer noopener\">dry-run</a> option to check whether your change requires a blue/green deployment. <br> <br> This feature is available in all AWS Commercial and AWS GovCloud (US) Regions where Amazon OpenSearch Service is available. See <a href=\"https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/\" target=\"_blank\" rel=\"noreferrer noopener\">here</a> for a full list of our Regions. To learn more about Amazon OpenSearch Service configurations, visit the <a href=\"https://docs.aws.amazon.com/opensearch-service/latest/developerguide/managedomains-configuration-changes.html\" target=\"_blank\" rel=\"noreferrer noopener\">documentation page</a>."
+    }
+  ],
+  "refineErrors": [
+    {
+      "index": 0,
+      "type": "paragraph",
+      "message": "Empty Pi output."
+    }
+  ]
+}

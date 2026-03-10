@@ -1,0 +1,52 @@
+{
+  "slug": "amazon-opensearch-service-now-supports-in-place-volume-increases-for-all-volume-sizes",
+  "title": "Amazon OpenSearch Service now supports in-place volume increases for all volume sizes",
+  "author": "AWS Architecture Blog",
+  "publishedAt": "2026-03-10",
+  "source": "AWS Architecture Blog",
+  "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-opensearch-service-in-place-volume/",
+  "tags": [
+    "Reading"
+  ],
+  "excerpt": "这篇文章围绕“Amazon OpenSearch Service now supports in-place volume increases for all volume sizes”展开，当前已从 RSS 条目同步到静态博客工作流中。",
+  "content": [
+    {
+      "heading": "文章核心",
+      "paragraphs": [
+        "当前只拿到了标题、来源和链接，还没有更完整的页面摘要，因此这里只生成一个可继续加工的草稿入口。",
+        "来源信息：AWS Architecture Blog｜2026-03-10。"
+      ]
+    },
+    {
+      "heading": "值得继续补充的点",
+      "paragraphs": [
+        "如果后续补齐详情视图，可以继续沿着原文结构展开关键论点、案例、约束条件与结论。",
+        "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+      ]
+    }
+  ],
+  "detail": {
+    "available": true,
+    "layout": "detail-zh",
+    "translatedFrom": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-opensearch-service-in-place-volume/",
+    "sourceName": "AWS Architecture Blog",
+    "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "html": "<a href=\"https://aws.amazon.com/opensearch-service/\" target=\"_blank\" rel=\"noreferrer noopener\">Amazon OpenSearch Service</a> now extends in-place cluster volume size increases to volumes exceeding 3 TiB. With this enhancement, you can scale storage capacity across all volume sizes without requiring a blue/green deployment. <br> <br> Previously, you could perform volume increases up to 3 TiB on your clusters without a blue/green deployment. This release removes that limitation, making it easier for you to scale up quickly even beyond 3 TiB when required. Domains that already have a volume size above 3 TiB will require a blue/green deployment the first time a volume increase is made; subsequent volume increases will not require a blue/green deployment. <br> <br> Decreasing storage volume size, or making volume increases within short intervals, will still require a blue/green deployment. You can use the <a href=\"https://docs.aws.amazon.com/opensearch-service/latest/developerguide/managedomains-configuration-changes.html#dryrun\" target=\"_blank\" rel=\"noreferrer noopener\">dry-run</a> option to check whether your change requires a blue/green deployment. <br> <br> This feature is available in all AWS Commercial and AWS GovCloud (US) Regions where Amazon OpenSearch Service is available. See <a href=\"https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/\" target=\"_blank\" rel=\"noreferrer noopener\">here</a> for a full list of our Regions. To learn more about Amazon OpenSearch Service configurations, visit the <a href=\"https://docs.aws.amazon.com/opensearch-service/latest/developerguide/managedomains-configuration-changes.html\" target=\"_blank\" rel=\"noreferrer noopener\">documentation page</a>."
+      }
+    ],
+    "refineErrors": [
+      {
+        "index": 0,
+        "type": "paragraph",
+        "message": "Empty Pi output."
+      }
+    ]
+  },
+  "workflow": {
+    "articleId": 2677,
+    "rssTitle": "Amazon OpenSearch Service now supports in-place volume increases for all volume sizes"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "item": {
+    "id": 2675,
+    "title": "Raspberry Pi CM0-based industrial AI camera features motorized auto-focus system, 12-pin Ethernet/RS-232/DO aviation connector",
+    "blog": "CNX Software",
+    "url": "https://www.cnx-software.com/2026/03/11/raspberry-pi-cm0-based-industrial-ai-camera-features-motorized-auto-focus-system-12-pin-ethernet-rs-232-do-aviation-connector/",
+    "published": "2026-03-10T17:01:47Z",
+    "discovered": "2026-03-10T18:00:17.054717921Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://www.cnx-software.com/2026/03/11/raspberry-pi-cm0-based-industrial-ai-camera-features-motorized-auto-focus-system-12-pin-ethernet-rs-232-do-aviation-connector/",
+    "ok": true,
+    "title": "Raspberry Pi CM0-based industrial AI camera features motorized auto-focus system, 12-pin Ethernet/RS-232/DO aviation connector - CNX Software",
+    "description": "At Embedded World 2026 in Germany, EDATEC launched the ED-AIC1000, a compact industrial AI camera built around the Raspberry Pi CM0 and designed for",
+    "fetched_bytes": 242031,
+    "error": null
+  },
+  "classification": "normal"
+}

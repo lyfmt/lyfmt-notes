@@ -1,0 +1,13 @@
+{
+  "item": {
+    "id": 2677,
+    "title": "Amazon OpenSearch Service now supports in-place volume increases for all volume sizes",
+    "blog": "AWS Architecture Blog",
+    "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-opensearch-service-in-place-volume/",
+    "published": "2026-03-10T15:44:00Z",
+    "discovered": "2026-03-10T18:00:17.563649501Z",
+    "is_read": false
+  },
+  "probe": {},
+  "classification": "normal"
+}

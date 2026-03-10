@@ -1,0 +1,172 @@
+{
+  "slug": "blood-tests-could-provide-early-warning-of-alzheimers-disease",
+  "title": "Blood Tests Could Provide Early Warning of Alzheimers Disease",
+  "author": "Hackaday",
+  "publishedAt": "2026-03-10",
+  "source": "Hackaday",
+  "url": "https://hackaday.com/2026/03/10/blood-tests-could-provide-early-warning-of-alzheimers-disease/",
+  "tags": [
+    "Hardware"
+  ],
+  "excerpt": "这篇文章围绕“Blood Tests Could Provide Early Warning of Alzheimers Disease”展开，当前已从 RSS 条目同步到静态博客工作流中。",
+  "content": [
+    {
+      "heading": "文章核心",
+      "paragraphs": [
+        "当前只拿到了标题、来源和链接，还没有更完整的页面摘要，因此这里只生成一个可继续加工的草稿入口。",
+        "来源信息：Hackaday｜2026-03-10。"
+      ]
+    },
+    {
+      "heading": "值得继续补充的点",
+      "paragraphs": [
+        "如果后续补齐详情视图，重点可以继续展开芯片规格、接口能力、功耗指标和适用场景。",
+        "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+      ]
+    }
+  ],
+  "detail": {
+    "available": true,
+    "layout": "detail-zh",
+    "translatedFrom": "https://hackaday.com/2026/03/10/blood-tests-could-provide-early-warning-of-alzheimers-disease/",
+    "sourceName": "Hackaday",
+    "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+    "blocks": [
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Hackaday"
+      },
+      {
+        "type": "list",
+        "items": [
+          "by:"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "<a href=\"https://www.facebook.com/sharer/sharer.php?u=https://hackaday.com/2026/03/10/blood-tests-could-provide-early-warning-of-alzheimers-disease/\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>",
+          "<a href=\"https://twitter.com/intent/tweet?text=Blood%20Tests%20Could%20Provide%20Early%20Warning%20Of%20Alzheimers%20Disease%20via%20@hackaday&amp;url=https://hackaday.com/2026/03/10/blood-tests-could-provide-early-warning-of-alzheimers-disease/\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>",
+          "<a href=\"https://news.ycombinator.com/submitlink?u=https://hackaday.com/2026/03/10/blood-tests-could-provide-early-warning-of-alzheimers-disease/&amp;t=Blood%20Tests%20Could%20Provide%20Early%20Warning%20Of%20Alzheimers%20Disease\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>",
+          "<a href=\"https://www.reddit.com/submit?url=https://hackaday.com/2026/03/10/blood-tests-could-provide-early-warning-of-alzheimers-disease/\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>"
+        ]
+      },
+      {
+        "type": "image",
+        "src": "https://hackaday.com/wp-content/uploads/2015/04/biomedical.jpg?w=800",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "type": "paragraph",
+        "html": "Alzheimer’s disease remains a frustratingly difficult condition to manage for the millions of patients affected worldwide and their families. The cause of the disease is still not properly understood, and by the time memory loss and cognitive decline become apparent, the underlying brain pathology has often been quietly building for decades."
+      },
+      {
+        "type": "paragraph",
+        "html": "Soon, though it may be possible to diagnose impending Alzheimer’s disease ahead of time, before symptoms have taken hold. New research suggests this <a href=\"https://www.sciencedaily.com/releases/2026/02/260222085203.htm\" target=\"_blank\" rel=\"noreferrer noopener\">could be achieved through a simple blood draw,</a> providing clinicians and patients precious time to manage the condition and plan ahead.<span></span>"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Early Warning"
+      },
+      {
+        "type": "image",
+        "src": "https://hackaday.com/wp-content/uploads/2026/02/Cerebral_amyloid_angiopathy_-2b-_amyloid_beta_-_intermed_mag_-_cropped.jpg?w=400",
+        "alt": "",
+        "caption": "Amyloid beta plaques in brain tissue (here, stained brown) are a telltale sign of Alzheimer’s disease. Amyloid and tau proteins are implicated in the progression of the condition, but research is ongoing as to the precise mechanisms behind Alzheimer’s. Credit: Nephron, CC BY-SA 3.0"
+      },
+      {
+        "type": "paragraph",
+        "html": "A hallmark of Alzheimer’s disease is the buildup of amyloid and tau protein in the brain. Despite decades of research, the protein’s precise role in the disease remains somewhat unclear. Typically, Alzheimer’s disease is diagnosed by symptoms like memory loss and cognitive decline, with later investigation revealing the presence of elevated levels of these proteins in the brain. This investigation often involves brain imaging or invasive and painful spinal fluid tests."
+      },
+      {
+        "type": "paragraph",
+        "html": "However, <a href=\"https://www.nature.com/articles/s41591-026-04206-y\" target=\"_blank\" rel=\"noreferrer noopener\">researchers have developed a new predictive model</a><span> that suggests it’s possible to estimate when a person will begin showing Alzheimer’s symptoms, based on a similar marker. The key ingredient is another protein called p-tau217, which circulates in the blood plasma and mirrors the slow, steady accumulation of amyloid and tau protein within the brain tissues.</span>"
+      },
+      {
+        "type": "image",
+        "src": "https://hackaday.com/wp-content/uploads/2026/02/Screenshot-2026-02-26-153856.png?w=400",
+        "alt": "",
+        "caption": "The rise in p-tau217 levels was strongly correlated with a later development of cognitive impairment. Credit: research paper"
+      },
+      {
+        "type": "paragraph",
+        "html": "Earlier research had previously established that p-tau217 levels tended to track alongside the rise of amyloid and tau buildup in the brain. This indicated that the level of p-tau217 in the blood could be a proxy for how far along the disease process has progressed. This allows the estimation of how many years remain before symptoms emerge for a given patient, with the research study suggesting this could be as specific as a margin of three or four years."
+      },
+      {
+        "type": "paragraph",
+        "html": "The research study drew on data from 603 older adults enrolled in two long-running studies — the Knight Alzheimer Disease Research Center at WashU Medicine and the multi-site Alzheimer’s Disease Neuroimaging Initiative. Plasma p-tau217 was measured using simple blood draws. One of the more interesting findings concerns age. The model revealed that the interval between elevated p-tau217 levels and symptom onset isn’t fixed. A person whose levels first ticked upwards at the age 60 might not develop noticeable cognitive problems for another two decades. But if that same elevation appeared at age 80, symptoms tended to follow within about eleven years. It suggests that younger brains appear to tolerate Alzheimer’s-related pathology for longer, while older brains are less able to withstand the protein buildup once the process gets underway."
+      },
+      {
+        "type": "image",
+        "src": "https://hackaday.com/wp-content/uploads/2026/02/41591_2026_4206_Fig3_HTML.png?w=400",
+        "alt": "",
+        "caption": "Age of onset of plasma p-tau217 positivity has a strong effect on the number of years until symptoms become evident. Credit: research paper"
+      },
+      {
+        "type": "paragraph",
+        "html": "Right now, p-tau217 testing is primarily used to help confirm an Alzheimer’s diagnosis in patients who are already experiencing cognitive trouble. It isn’t recommended for screening asymptomatic individuals outside of research settings. However, using p-tau217 as a predictive marker has obvious potential. If clinical trials for preventive Alzheimer’s drugs could enroll participants based on a predicted timeline for symptom onset, rather than waiting years for decline to actually happen, those trials could become dramatically shorter and cheaper to run, and more efficient in general. Perhaps more importantly, it has the potential to give patients a better understanding of what lies ahead, allowing them to plan ahead before cognitive symptoms become an unmanageable imposition on their life."
+      },
+      {
+        "type": "paragraph",
+        "html": "The research team has made their model development code publicly available <a href=\"https://github.com/WashUFluidBiomarkers/plasma_ptau217_time\" target=\"_blank\" rel=\"noreferrer noopener\">on Github</a> and created a <a href=\"https://amyloid.shinyapps.io/plasma_ptau217_time/\" target=\"_blank\" rel=\"noreferrer noopener\">web-based tool</a> that lets other researchers explore the clock models in detail. Looking ahead, they note that combining p-tau217 with other blood-based biomarkers linked to cognitive decline could sharpen predictions even further. It’s still early days, but a future where a routine blood test could serve as an early-warning system for Alzheimer’s is looking more plausible than it did a few years ago."
+      },
+      {
+        "type": "image",
+        "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_face.png",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_twitter.png",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_in.png",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_mail1.png",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "type": "list",
+        "items": [
+          "<a href=\"https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhackaday.com%2F2026%2F03%2F10%2Fblood-tests-could-provide-early-warning-of-alzheimers-disease%2F\" target=\"_blank\" rel=\"noreferrer noopener\"> <i> </i> </a>",
+          "<a href=\"https://twitter.com/intent/tweet?text=Blood%20Tests%20Could%20Provide%20Early%20Warning%20Of%20Alzheimers%20Disease%20via%20@hackaday&amp;url=https://hackaday.com/2026/03/10/blood-tests-could-provide-early-warning-of-alzheimers-disease/\" target=\"_blank\" rel=\"noreferrer noopener\"> <i></i> </a>",
+          "<a href=\"https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fhackaday.com%2F2026%2F03%2F10%2Fblood-tests-could-provide-early-warning-of-alzheimers-disease%2F\" target=\"_blank\" rel=\"noreferrer noopener\"> <i></i> </a>",
+          "<a href=\"mailto:?subject=Blood+Tests+Could+Provide+Early+Warning+Of+Alzheimers+Disease | Hackaday&amp;body=https%3A%2F%2Fhackaday.com%2F2026%2F03%2F10%2Fblood-tests-could-provide-early-warning-of-alzheimers-disease%2F\" target=\"_blank\" rel=\"noreferrer noopener\"> <i></i> </a>"
+        ]
+      }
+    ],
+    "refineErrors": [
+      {
+        "index": 1,
+        "type": "list",
+        "message": "Empty Pi output."
+      },
+      {
+        "index": 2,
+        "type": "list",
+        "message": "Empty Pi output."
+      },
+      {
+        "index": 4,
+        "type": "paragraph",
+        "message": "Empty Pi output."
+      }
+    ]
+  },
+  "workflow": {
+    "articleId": 2676,
+    "rssTitle": "Blood Tests Could Provide Early Warning of Alzheimers Disease"
+  }
+}
