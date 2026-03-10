@@ -1,0 +1,23 @@
+{
+  "available": true,
+  "layout": "detail-zh",
+  "translatedFrom": "https://foojay.io/today/introducing-lottie4j-a-javafx-library-to-parse-and-play-lottie-animation-files/",
+  "sourceName": "Foojay",
+  "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+  "blocks": [
+    {
+      "type": "list",
+      "items": [
+        "March 10, 2026",
+        "<span><span></span> <span> 4</span> <span>min read</span></span>"
+      ]
+    }
+  ],
+  "refineErrors": [
+    {
+      "index": 0,
+      "type": "list",
+      "message": "Empty Pi output."
+    }
+  ]
+}

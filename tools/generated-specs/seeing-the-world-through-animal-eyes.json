@@ -1,0 +1,116 @@
+{
+  "slug": "seeing-the-world-through-animal-eyes",
+  "title": "Seeing The World Through Animal Eyes",
+  "author": "Hackaday",
+  "publishedAt": "2026-03-10",
+  "source": "Hackaday",
+  "url": "https://hackaday.com/2026/03/10/seeing-the-world-through-animal-eyes/",
+  "tags": [
+    "Hardware"
+  ],
+  "excerpt": "这篇文章围绕“Seeing The World Through Animal Eyes”展开，RSS 摘要提到：If you think about it, you can’t be sure that what you see for the color red, for example, is what anyone else in the world actually sees...",
+  "content": [
+    {
+      "heading": "文章核心",
+      "paragraphs": [
+        "基于 RSS 摘要与页面元数据，原文重点是：If you think about it, you can’t be sure that what you see for the color red, for example, is what anyone else in the world actually sees. All you can be sure of is that we’ve all been …",
+        "来源信息：Hackaday｜2026-03-10。"
+      ]
+    },
+    {
+      "heading": "值得继续补充的点",
+      "paragraphs": [
+        "如果后续补齐详情视图，重点可以继续展开芯片规格、接口能力、功耗指标和适用场景。",
+        "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+      ]
+    }
+  ],
+  "detail": {
+    "available": false,
+    "layout": "draft",
+    "translatedFrom": "https://hackaday.com/2026/03/10/seeing-the-world-through-animal-eyes/",
+    "sourceName": "Hackaday",
+    "sourceDescription": "以下为根据原文结构自动生成的详情草稿，已保留段落层次、图片与媒体；默认尚未完成中文翻译润色。",
+    "blocks": [
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Hackaday"
+      },
+      {
+        "type": "list",
+        "items": [
+          "by:"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "<a href=\"https://www.facebook.com/sharer/sharer.php?u=https://hackaday.com/2026/03/10/seeing-the-world-through-animal-eyes/\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>",
+          "<a href=\"https://twitter.com/intent/tweet?text=Seeing%20The%20World%20Through%20Animal%20Eyes%20via%20@hackaday&amp;url=https://hackaday.com/2026/03/10/seeing-the-world-through-animal-eyes/\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>",
+          "<a href=\"https://news.ycombinator.com/submitlink?u=https://hackaday.com/2026/03/10/seeing-the-world-through-animal-eyes/&amp;t=Seeing%20The%20World%20Through%20Animal%20Eyes\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>",
+          "<a href=\"https://www.reddit.com/submit?url=https://hackaday.com/2026/03/10/seeing-the-world-through-animal-eyes/\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>"
+        ]
+      },
+      {
+        "type": "image",
+        "src": "https://hackaday.com/wp-content/uploads/2026/03/bee.png?w=800",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "type": "paragraph",
+        "html": "If you think about it, you can’t be sure that what you see for the color red, for example, is what anyone else in the world actually sees. All you can be sure of is that we’ve all been trained to identify whatever we do see as red just like everyone else. Now, think about animal vision. Most people know that dogs don’t see as many colors as we do. On the other hand, the birds and the bees can see into ultraviolet. What would the world look like with extra colors? That’s the question researchers want to answer with this system for <a href=\"https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3002444\" target=\"_blank\" rel=\"noreferrer noopener\">duplicating different animals’ views of the world</a>."
+      },
+      {
+        "type": "paragraph",
+        "html": "Of course, this would be easy if you were thinking about dogs or cats. They can’t see the difference between red and green, making them effectively colorblind by human standards. Researchers are using modified commercial cameras and sophisticated video processing to produce images that sense blue, green, red, and UV light. Then they modify the image based on knowledge of different animal photoreceptors."
+      },
+      {
+        "type": "paragraph",
+        "html": "We were somewhat surprised that the system didn’t pick up IR. As we know snakes, for example, can sense IR. You’d think more sophisticated animals would have better color vision, but that seems to be untrue. The mantis shrimp, for example, has 12-16 types of photoreceptors. Even male and female humans have different vision systems that make them <a href=\"https://www.genengnews.com/insights/why-men-and-women-see-things-differently/\" target=\"_blank\" rel=\"noreferrer noopener\">see colors differently</a>."
+      },
+      {
+        "type": "paragraph",
+        "html": "Maybe you need a <a href=\"https://hackaday.com/wp-admin/post.php?post=791769&amp;action=edit\" target=\"_blank\" rel=\"noreferrer noopener\">photospectometer</a>. You wonder if animals <a href=\"https://hackaday.com/2024/11/18/do-you-dream-in-color/\" target=\"_blank\" rel=\"noreferrer noopener\">dream in color, too</a>."
+      },
+      {
+        "type": "image",
+        "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_face.png",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_twitter.png",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_in.png",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_mail1.png",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "type": "list",
+        "items": [
+          "<a href=\"https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhackaday.com%2F2026%2F03%2F10%2Fseeing-the-world-through-animal-eyes%2F\" target=\"_blank\" rel=\"noreferrer noopener\"> <i> </i> </a>",
+          "<a href=\"https://twitter.com/intent/tweet?text=Seeing%20The%20World%20Through%20Animal%20Eyes%20via%20@hackaday&amp;url=https://hackaday.com/2026/03/10/seeing-the-world-through-animal-eyes/\" target=\"_blank\" rel=\"noreferrer noopener\"> <i></i> </a>",
+          "<a href=\"https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fhackaday.com%2F2026%2F03%2F10%2Fseeing-the-world-through-animal-eyes%2F\" target=\"_blank\" rel=\"noreferrer noopener\"> <i></i> </a>",
+          "<a href=\"mailto:?subject=Seeing+The+World+Through+Animal+Eyes | Hackaday&amp;body=https%3A%2F%2Fhackaday.com%2F2026%2F03%2F10%2Fseeing-the-world-through-animal-eyes%2F\" target=\"_blank\" rel=\"noreferrer noopener\"> <i></i> </a>"
+        ]
+      }
+    ]
+  },
+  "workflow": {
+    "articleId": 2652,
+    "rssTitle": "Seeing the World Through Animal Eyes"
+  }
+}

@@ -1,0 +1,592 @@
+{
+  "available": false,
+  "layout": "draft",
+  "translatedFrom": "https://foojay.io/today/introducing-lottie4j-a-javafx-library-to-parse-and-play-lottie-animation-files/",
+  "sourceName": "Foojay",
+  "sourceDescription": "以下为根据原文结构自动生成的详情草稿，已保留段落层次、图片与媒体；默认尚未完成中文翻译润色。",
+  "blocks": [
+    {
+      "type": "list",
+      "items": [
+        "March 10, 2026",
+        "<span><span></span> <span> 4</span> <span>min read</span></span>"
+      ]
+    },
+    {
+      "type": "list",
+      "items": [
+        "<a href=\"https://foojay.io/today/introducing-lottie4j-a-javafx-library-to-parse-and-play-lottie-animation-files/#h3-1--he-omplexity-of-ottie\" target=\"_blank\" rel=\"noreferrer noopener\">The Complexity of Lottie</a>"
+      ]
+    },
+    {
+      "type": "list",
+      "items": [
+        "<a href=\"https://foojay.io/today/introducing-lottie4j-a-javafx-library-to-parse-and-play-lottie-animation-files/#h3-3--roject-tructure\" target=\"_blank\" rel=\"noreferrer noopener\">Project Structure</a>"
+      ]
+    },
+    {
+      "type": "list",
+      "items": [
+        "<a href=\"https://foojay.io/today/introducing-lottie4j-a-javafx-library-to-parse-and-play-lottie-animation-files/#h3-5--xample-nimations\" target=\"_blank\" rel=\"noreferrer noopener\">Example Animations</a>"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "html": "I&#x27;m proud to present a new JavaFX library: <strong>Lottie4J</strong>, that brings Lottie animations to JavaFX applications. I first learned about Lottie many years ago when we were developing a mobile app. We used Lottie animations to explain to users how to operate a physical device. The animations made the instructions so much clearer than static images or text alone."
+    },
+    {
+      "type": "paragraph",
+      "html": "At the time, I wanted to create a similar experience in JavaFX, but I couldn&#x27;t find a JavaFX player for the Lottie format. So I decided to build one myself. What I didn&#x27;t realize then was just how complex this journey would be..."
+    },
+    {
+      "type": "embed",
+      "provider": "youtube",
+      "src": "https://www.youtube.com/embed/6t1O7APENIo?feature=oembed",
+      "title": "Lottie4J: A JavaFX Player for Lottie Animations in Java Applications"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "What is Lottie?"
+    },
+    {
+      "type": "paragraph",
+      "html": "<a href=\"https://lottiefiles.com/\" target=\"_blank\" rel=\"noreferrer noopener\">Lottie</a> is a JSON-based animation file format created by Airbnb that lets designers export animations from various tools and use them on any platform (mobile, web, desktop) as easily as using static images. It&#x27;s become the industry standard for vector animations because the files are small, scalable, and programmatically manipulable."
+    },
+    {
+      "type": "paragraph",
+      "html": "On the Lottie website, you&#x27;ll find instructions to use After Effects to create animations, but I hope you know there are way better, less expensive alternatives to Adobe applications... I stepped away from Adobe many years ago and advise you to do the same. Check <a href=\"https://www.blackmagicdesign.com/products/davinciresolve\" target=\"_blank\" rel=\"noreferrer noopener\">DaVinci Resolve</a> for video editing and <a href=\"https://www.affinity.studio/\" target=\"_blank\" rel=\"noreferrer noopener\">Affinity</a> for drawing applications."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "The Complexity of Lottie"
+    },
+    {
+      "type": "paragraph",
+      "html": "You see, the Lottie format, although JSON-based, is incredibly complex and hard to understand. The JSON uses cryptic, abbreviated property names like <code>nm</code> for name, <code>fr</code> for frames per second, <code>ddd</code> for &quot;has 3D layers&quot;."
+    },
+    {
+      "type": "paragraph",
+      "html": "The specification uses nested structures for layers, shapes, effects, and animations. Understanding what each property does and how they interact requires diving deep into the documentation and lots of trial-and-error experiments."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Lottie4J Project"
+    },
+    {
+      "type": "paragraph",
+      "html": "I created Lottie4J as a multi-module Maven project. I started working on this in 2022, but only now, thanks to the developments at Claude.ai, can I dive deep enough into the Lottie format to understand it and handle the data correctly, so it can be visualized and animated correctly. Turns out my data model parsing was already correct. Also, my first JavaFX rendering worked well, but with some changes in how the nested data structures are handled, I&#x27;m now convinced the library is ready to be released as version 1.0.0."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Project Structure"
+    },
+    {
+      "type": "paragraph",
+      "html": "Lottie4J is organized into three main modules:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "<strong>Core</strong>: The Java objects representing the Lottie data model and file loading",
+        "<strong>FXPlayer</strong>: A JavaFX component that actually plays the animations",
+        "<strong>FXFileViewer</strong>: A demo application that shows animations and visualizes their structure"
+      ]
+    },
+    {
+      "type": "image",
+      "src": "https://foojay.io/wp-content/uploads/2026/03/json-parsing.png",
+      "alt": "",
+      "caption": ""
+    },
+    {
+      "type": "image",
+      "src": "https://foojay.io/wp-content/uploads/2026/03/fxfileviewer-1024x457.png",
+      "alt": "",
+      "caption": ""
+    },
+    {
+      "type": "image",
+      "src": "https://foojay.io/wp-content/uploads/2026/03/github-repo-1024x793.png",
+      "alt": "",
+      "caption": ""
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Making Sense of the JSON"
+    },
+    {
+      "type": "paragraph",
+      "html": "One of my goals was to make the cryptic Lottie format easier to understand. In the Animation class in the core library, each cryptic JSON property is mapped to a clear, descriptive name. <code>@JsonProperty(&quot;fr&quot;)</code> becomes <code>framesPerSecond</code>, <code>@JsonProperty(&quot;ip&quot;)</code> becomes <code>inPoint</code>. Java objects use human-readable names, making the code self-documenting and much easier to work with."
+    },
+    {
+      "type": "paragraph",
+      "html": "But I went even further. The <strong>fxfileviewer</strong> application includes a tree visualizer that lets you explore the structure of any Lottie file in an easy view. You can see exactly what&#x27;s inside your animation - the layers, shapes, properties, and how they&#x27;re nested. This was invaluable for understanding the format and debugging animations."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Example Animations"
+    },
+    {
+      "type": "paragraph",
+      "html": "I&#x27;ve included several test animations in the project to showcase the capabilities:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "<strong>java_duke_flip.json</strong> - The Java Duke mascot doing a flip animation",
+        "<strong>loading.json</strong> - A loading spinner animation",
+        "<strong>sandy_loading.json</strong> - A particularly tricky one testing complex nested transformations",
+        "<strong>timeline_animation.json</strong> - A timeline animation showing how multiple elements can be choreographed together"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "html": "While an animation plays, you can see the complete structure in the tree view - every layer, every shape, every animated property."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "How to Use Lottie4J"
+    },
+    {
+      "type": "paragraph",
+      "html": "Using Lottie4J in your JavaFX application is straightforward. Import the fxplayer-dependency in your pom.xml:"
+    },
+    {
+      "type": "paragraph",
+      "html": "Then add the animation with this minimal code example:"
+    },
+    {
+      "type": "paragraph",
+      "html": "Load your Lottie JSON file, create a LottiePlayer component, add it to your scene or parent component. That&#x27;s it! The player handles all the complexity of parsing the animation and rendering it frame by frame."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Continuous Evolution"
+    },
+    {
+      "type": "paragraph",
+      "html": "The Lottie format is constantly evolving with new features and capabilities. There&#x27;s always more to implement, more edge cases to handle, more animations to test. But that&#x27;s what makes this project interesting - it&#x27;s a continuous learning experience."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Get Started"
+    },
+    {
+      "type": "paragraph",
+      "html": "If you&#x27;re working with JavaFX and want to add beautiful, lightweight animations to your applications, check out Lottie4J. All the code is open source and available on <a href=\"https://github.com/lottie4j/lottie4j\" target=\"_blank\" rel=\"noreferrer noopener\">GitHub</a>. You&#x27;ll find more documentation and examples on <a href=\"https://lottie4j.com\" target=\"_blank\" rel=\"noreferrer noopener\">lottie4j.com</a>."
+    },
+    {
+      "type": "paragraph",
+      "html": "Please let me know how you use the library and share your results. I&#x27;m sure not all animations will already render completely the same as with the more mature players, so if you find differences, it would be very nice if you could isolate the problem and share the JSON file with a clear description of the issue in a ticket in the GitHub repository."
+    },
+    {
+      "type": "paragraph",
+      "html": "Happy animating!"
+    },
+    {
+      "type": "list",
+      "items": [
+        "March 10, 2026",
+        "<span><span></span> <span> 4</span> <span>min read</span></span>"
+      ]
+    },
+    {
+      "type": "list",
+      "items": [
+        "<a href=\"https://foojay.io/today/category/uncategorized/\" target=\"_blank\" rel=\"noreferrer noopener\">Uncategorized</a>"
+      ]
+    },
+    {
+      "type": "image",
+      "src": "https://foojay.io/wp-content/uploads/2025/05/cropped-frank-delporte-scaled-1-80x80.jpg",
+      "alt": "Avatar photo",
+      "caption": "Avatar photo"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Frank Delporte"
+    },
+    {
+      "type": "list",
+      "items": [
+        "<a href=\"https://bsky.app/profile/frankdelporte.be\" target=\"_blank\" rel=\"noreferrer noopener\"> </a>",
+        "<a href=\"https://www.linkedin.com/in/frankdelporte/\" target=\"_blank\" rel=\"noreferrer noopener\"> </a>",
+        "<a href=\"https://foojay.social/@FrankDelporte\" target=\"_blank\" rel=\"noreferrer noopener\"> </a>"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "html": "Frank Delporte is a Java Champion, Java Developer, Technical Writer at Azul, Blogger, Author of &quot;Getting started with Java on Raspberry Pi&quot;, and Pi4J Contributor. Frank blogs about his experiments with Java and JavaFX, sometimes combined with electronic components, on the Raspberry Pi."
+    },
+    {
+      "type": "image",
+      "src": "https://foojay.io/wp-content/uploads/2025/05/cropped-frank-delporte-scaled-1-80x80.jpg",
+      "alt": "Avatar photo",
+      "caption": "Avatar photo"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Frank Delporte"
+    },
+    {
+      "type": "paragraph",
+      "html": "Frank Delporte is a Java Champion, Java Developer, Technical Writer at Azul, Blogger, Author of &quot;Getting started with Java on Raspberry Pi&quot;, and Pi4J Contributor. Frank blogs about his experiments with Java and JavaFX, sometimes combined with electronic components, on the Raspberry Pi."
+    },
+    {
+      "type": "list",
+      "items": [
+        "<a href=\"https://bsky.app/profile/frankdelporte.be\" target=\"_blank\" rel=\"noreferrer noopener\"> </a>",
+        "<a href=\"https://www.linkedin.com/in/frankdelporte/\" target=\"_blank\" rel=\"noreferrer noopener\"> </a>",
+        "<a href=\"https://foojay.social/@FrankDelporte\" target=\"_blank\" rel=\"noreferrer noopener\"> </a>"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Thanks to our Sponsors!"
+    },
+    {
+      "type": "image",
+      "src": "https://foojay.io/wp-content/uploads/2025/02/Frame-4.svg",
+      "alt": "Azul logo",
+      "caption": "Azul logo"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Azul"
+    },
+    {
+      "type": "image",
+      "src": "https://foojay.io/wp-content/uploads/2025/02/Frame-222222.svg",
+      "alt": "Redis logo",
+      "caption": "Redis logo"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Redis"
+    },
+    {
+      "type": "image",
+      "src": "https://foojay.io/wp-content/uploads/2025/06/Cr_icon_632e505ce3.png",
+      "alt": "CodeRabbit logo",
+      "caption": "CodeRabbit logo"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "CodeRabbit"
+    },
+    {
+      "type": "image",
+      "src": "https://foojay.io/wp-content/uploads/2025/03/reo.png",
+      "alt": "Reo logo",
+      "caption": "Reo logo"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Reo"
+    },
+    {
+      "type": "image",
+      "src": "https://foojay.io/wp-content/uploads/2025/07/zencoder.png",
+      "alt": "Zencoder logo",
+      "caption": "Zencoder logo"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Zencoder"
+    },
+    {
+      "type": "image",
+      "src": "https://foojay.io/wp-content/uploads/2025/02/Frame-111111.svg",
+      "alt": "Payara logo",
+      "caption": "Payara logo"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Payara"
+    },
+    {
+      "type": "image",
+      "src": "https://foojay.io/wp-content/uploads/2025/02/Frame-3.svg",
+      "alt": "Digma logo",
+      "caption": "Digma logo"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Digma"
+    },
+    {
+      "type": "image",
+      "src": "https://foojay.io/wp-content/uploads/2025/02/Frame-5.svg",
+      "alt": "adesso logo",
+      "caption": "adesso logo"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "adesso"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Trending"
+    },
+    {
+      "type": "paragraph",
+      "html": "DPoP: What It Is, How It Works, and Why Bearer Tokens Aren’t Enough"
+    },
+    {
+      "type": "paragraph",
+      "html": "Java 26: What’s New?"
+    },
+    {
+      "type": "paragraph",
+      "html": "Understanding MCP Through Raw STDIO Communication"
+    },
+    {
+      "type": "paragraph",
+      "html": "No Keys, No LLM: Building a Wikidata Definition API with Embabel"
+    },
+    {
+      "type": "paragraph",
+      "html": "Role-Based Access Control in Java Applications"
+    },
+    {
+      "type": "paragraph",
+      "html": "I Benchmarked Java on Single-Board Computers: Orange Pi 5 Ultra and Raspberry Pi 5 Lead the Pack"
+    },
+    {
+      "type": "paragraph",
+      "html": "Spring Boot 4 OpenTelemetry Guide: Metrics, Traces, and Logs Explained"
+    },
+    {
+      "type": "paragraph",
+      "html": "How to Customize JaCoCo Report Styling in Your Java Project"
+    },
+    {
+      "type": "paragraph",
+      "html": "Service Layer Pattern in Java With Spring Boot"
+    },
+    {
+      "type": "paragraph",
+      "html": "foojay: A Place for Friends of OpenJDK"
+    },
+    {
+      "type": "paragraph",
+      "html": "Dashboard for OpenJDK Update Release Details"
+    },
+    {
+      "type": "paragraph",
+      "html": "JDK14: New Features and Enhancements"
+    },
+    {
+      "type": "paragraph",
+      "html": "Fun with Flags: My Top 10 Resources for JVM Flags"
+    },
+    {
+      "type": "paragraph",
+      "html": "Performance of Modern Java on Data-Heavy Workloads: Real-Time Streaming"
+    },
+    {
+      "type": "paragraph",
+      "html": "Performance of Modern Java on Data-Heavy Workloads: Batch Processing"
+    },
+    {
+      "type": "paragraph",
+      "html": "How does Java handle different Images and ColorSpaces – Part 1"
+    },
+    {
+      "type": "paragraph",
+      "html": "How does Java handle different Images and ColorSpaces – Part 2"
+    },
+    {
+      "type": "paragraph",
+      "html": "How does Java handle different Images and ColorSpaces – Part 3"
+    },
+    {
+      "type": "paragraph",
+      "html": "How does Java handle different Images and ColorSpaces – Part 4"
+    },
+    {
+      "type": "paragraph",
+      "html": "Indexing all of Wikipedia, on a laptop"
+    },
+    {
+      "type": "paragraph",
+      "html": "Working with Multiple Carets in IntelliJ IDEA"
+    },
+    {
+      "type": "paragraph",
+      "html": "Clean Shutdown of Spring Boot Applications"
+    },
+    {
+      "type": "paragraph",
+      "html": "Project Panama for Newbies (Part 1)"
+    },
+    {
+      "type": "paragraph",
+      "html": "Java 17 on the Raspberry Pi"
+    },
+    {
+      "type": "paragraph",
+      "html": "How to Create Mobile Apps with JavaFX (Part 1)"
+    },
+    {
+      "type": "paragraph",
+      "html": "Beginning JavaFX Applications with IntelliJ IDE"
+    },
+    {
+      "type": "paragraph",
+      "html": "SpringBoot 3.2 + CRaC"
+    },
+    {
+      "type": "paragraph",
+      "html": "Foojay Slack: bit.ly/join-foojay-slack"
+    },
+    {
+      "type": "paragraph",
+      "html": "Preparing for Spring Framework 7 and Spring Boot 4"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Stable, Secure, and Affordable Java"
+    },
+    {
+      "type": "paragraph",
+      "html": "Azul Platform Core is the #1 Oracle Java alternative, offering OpenJDK support for more versions (including Java 6 &amp; 7) and more configurations for the greatest business value and lowest TCO."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Apache Kafka Performance on Azul Platform Prime vs Vanilla OpenJDK"
+    },
+    {
+      "type": "paragraph",
+      "html": "Learn about a number of experiments that have been conducted with Apache Kafka performance on Azul Platform Prime, compared to vanilla OpenJDK. Roughly 40% improvements in performance, both throughput and latency, are achieved."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "All 0 Likes"
+    },
+    {
+      "type": "image",
+      "src": "https://foojay.io/wp-content/uploads/2024/06/image-digma-udemy-700x350.png",
+      "alt": "",
+      "caption": ""
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Step up your coding with the Continuous Feedback Udemy Course: Additional coupons are available"
+    },
+    {
+      "type": "paragraph",
+      "html": "What do you know about the code changes that were just introduced into the codebase? When will you notice if something goes wrong?"
+    },
+    {
+      "type": "image",
+      "src": "https://foojay.io/wp-content/uploads/2024/02/payara-ad-700x314.png",
+      "alt": "",
+      "caption": ""
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Jakarta EE 11: Beyond the Era of Java EE"
+    },
+    {
+      "type": "paragraph",
+      "html": "This user guide provides a brief history of Java EE/Jakarta EE and a detailed overview of some of the specifications that will be updated in Jakarta EE 11."
+    },
+    {
+      "type": "image",
+      "src": "https://foojay.io/wp-content/uploads/2024/04/Core-Mark-510x510.png",
+      "alt": "",
+      "caption": ""
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Stable, Secure, and Affordable Java"
+    },
+    {
+      "type": "paragraph",
+      "html": "Azul Platform Core is the #1 Oracle Java alternative, offering OpenJDK support for more versions (including Java 6 &amp; 7) and more configurations for the greatest business value and lowest TCO."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Do you want your ad here?"
+    },
+    {
+      "type": "paragraph",
+      "html": "Contact us to get your ad seen by thousands of users every day!"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Comments (0)"
+    },
+    {
+      "type": "paragraph",
+      "html": "No comments yet. Be the first."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Set Event Reminder"
+    },
+    {
+      "type": "list",
+      "items": [
+        "<a href=\"https://foojay.io/today/introducing-lottie4j-a-javafx-library-to-parse-and-play-lottie-animation-files/\" target=\"_blank\" rel=\"noreferrer noopener\">Microsoft Outlook</a>",
+        "<a href=\"https://foojay.io/today/introducing-lottie4j-a-javafx-library-to-parse-and-play-lottie-animation-files/\" target=\"_blank\" rel=\"noreferrer noopener\">Google Calendar</a>",
+        "<a href=\"https://foojay.io/today/introducing-lottie4j-a-javafx-library-to-parse-and-play-lottie-animation-files/\" target=\"_blank\" rel=\"noreferrer noopener\">macOS Calendar</a>"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Share with"
+    },
+    {
+      "type": "list",
+      "items": [
+        "<a href=\"https://www.facebook.com/sharer/sharer.php?u=https://foojay.io/today/introducing-lottie4j-a-javafx-library-to-parse-and-play-lottie-animation-files/\" target=\"_blank\" rel=\"noreferrer noopener\"> </a> <span>Facebook</span>",
+        "<a href=\"http://twitter.com/share?text=Introducing Lottie4J, a Java(FX) Library to Parse and Play Lottie Animation Files&amp;url=https://foojay.io/today/introducing-lottie4j-a-javafx-library-to-parse-and-play-lottie-animation-files/\" target=\"_blank\" rel=\"noreferrer noopener\"> </a> <span>Twitter</span>",
+        "<a href=\"https://t.me/share/url?url=https://foojay.io/today/introducing-lottie4j-a-javafx-library-to-parse-and-play-lottie-animation-files/&amp;text=Introducing Lottie4J, a Java(FX) Library to Parse and Play Lottie Animation Files\" target=\"_blank\" rel=\"noreferrer noopener\"> </a> <span>Telegram</span>",
+        "<a href=\"https://mastodonshare.com/?url=https://foojay.io/today/introducing-lottie4j-a-javafx-library-to-parse-and-play-lottie-animation-files/&amp;text=Introducing Lottie4J, a Java(FX) Library to Parse and Play Lottie Animation Files\" target=\"_blank\" rel=\"noreferrer noopener\"> </a> <span>Mastodon</span>",
+        "<a href=\"https://www.linkedin.com/shareArticle?mini=true&amp;url=https://foojay.io/today/introducing-lottie4j-a-javafx-library-to-parse-and-play-lottie-animation-files/&amp;title=Introducing Lottie4J, a Java(FX) Library to Parse and Play Lottie Animation Files&amp;source=LinkedIn\" target=\"_blank\" rel=\"noreferrer noopener\"> </a> <span>Linkedin</span>",
+        "<a href=\"https://foojay.io/cdn-cgi/l/email-protection#1a25696f78707f796e2753746e68757e6f7973747d3a56756e6e737f2e50363a7b3a507b6c7b325c42333a567378687b68633a6e753a4a7b68697f3a7b747e3a4a767b633a56756e6e737f3a5b7473777b6e7375743a5c73767f693c78757e6327726e6e6a692035357c7575707b63347375356e757e7b633573746e68757e6f7973747d3776756e6e737f2e70377b37707b6c7b7c6237767378687b6863376e75376a7b68697f377b747e376a767b633776756e6e737f377b7473777b6e737574377c73767f6935\" target=\"_blank\" rel=\"noreferrer noopener\"> </a> <span>E-mail</span>"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "html": "Or share with link"
+    },
+    {
+      "type": "paragraph",
+      "html": "https://foojay.io/today/introducing-lottie4j-a-javafx-library-to-parse-and-play-lottie-animation-files/"
+    }
+  ]
+}

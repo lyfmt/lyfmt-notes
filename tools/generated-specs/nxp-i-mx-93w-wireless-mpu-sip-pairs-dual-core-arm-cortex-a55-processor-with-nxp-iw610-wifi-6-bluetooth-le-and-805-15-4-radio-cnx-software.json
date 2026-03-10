@@ -1,0 +1,170 @@
+{
+  "slug": "nxp-i-mx-93w-wireless-mpu-sip-pairs-dual-core-arm-cortex-a55-processor-with-nxp-iw610-wifi-6-bluetooth-le-and-805-15-4-radio-cnx-software",
+  "title": "NXP i.MX 93W wireless MPU SiP pairs dual-core Arm Cortex-A55 processor with NXP iW610 WiFi 6, Bluetooth LE, and 805.15.4 radio - CNX Software",
+  "author": "CNX Software",
+  "publishedAt": "2026-03-10",
+  "source": "CNX Software",
+  "url": "https://www.cnx-software.com/2026/03/10/nxp-i-mx-93w-wireless-mpu-sip-pairs-dual-core-arm-cortex-a55-processor-with-nxp-iw610-wifi-6-bluetooth-le-and-805-15-4-radio/",
+  "tags": [
+    "Hardware",
+    "AI",
+    "Embedded",
+    "IoT"
+  ],
+  "excerpt": "这篇文章围绕“NXP i.MX 93W wireless MPU SiP pairs dual-core Arm Cortex-A55 processor with NXP iW610 WiFi 6, Bluetooth LE, and 805.15.4 radio - CNX Software”展开，RSS 摘要提到：NXP i.MX 93W is the company's first integrated wireless MPU System-in-Package (SiP) and combines a dual-core Cortex-A55 processor (NXP i....",
+  "content": [
+    {
+      "heading": "文章核心",
+      "paragraphs": [
+        "基于 RSS 摘要与页面元数据，原文重点是：NXP i.MX 93W is the company's first integrated wireless MPU System-in-Package (SiP) and combines a dual-core Cortex-A55 processor (NXP i.MX 93) with an",
+        "来源信息：CNX Software｜2026-03-10。"
+      ]
+    },
+    {
+      "heading": "值得继续补充的点",
+      "paragraphs": [
+        "如果后续补齐详情视图，重点可以继续展开芯片规格、接口能力、功耗指标和适用场景。",
+        "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+      ]
+    }
+  ],
+  "detail": {
+    "available": false,
+    "layout": "draft",
+    "translatedFrom": "https://www.cnx-software.com/2026/03/10/nxp-i-mx-93w-wireless-mpu-sip-pairs-dual-core-arm-cortex-a55-processor-with-nxp-iw610-wifi-6-bluetooth-le-and-805-15-4-radio/",
+    "sourceName": "CNX Software",
+    "sourceDescription": "以下为根据原文结构自动生成的详情草稿，已保留段落层次、图片与媒体；默认尚未完成中文翻译润色。",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "html": "NXP i.MX 93W is the company’s first integrated wireless MPU System-in-Package (SiP) and combines a dual-core Cortex-A55 processor (<a href=\"https://www.cnx-software.com/2021/11/10/nxp-i-mx-93-processor-combines-cortex-a55-cores-with-ethos-u65-micronpu/\" target=\"_blank\" rel=\"noreferrer noopener\">NXP i.MX 93</a>) with an <a href=\"https://www.cnx-software.com/2024/12/05/u-blox-maya-w4-tri-radio-iot-module-features-nxp-iw610-chipset-with-wi-fi-6-bluetooth-5-4-and-802-15-4-radios/\" target=\"_blank\" rel=\"noreferrer noopener\">iW610 WiFi 6, Bluetooth LE, and 802.15.4 tri-radio</a> into a single chip."
+      },
+      {
+        "type": "paragraph",
+        "html": "The 14.2 x 12 mm package also includes all the external radio components needed for wireless connectivity, replacing up to 60 discrete components on the PCB. NXP says it reduces the PCB area, simplifies PCB design and regulatory approval, and speeds up time-to-market."
+      },
+      {
+        "type": "image",
+        "src": "https://www.cnx-software.com/wp-content/uploads/2026/03/NXP-i.MX-93W-720x474.jpg",
+        "alt": "NXP i.MX 93W",
+        "caption": "NXP i.MX 93W"
+      },
+      {
+        "type": "paragraph",
+        "html": "<a href=\"https://www.cnx-software.com/wp-content/uploads/2026/03/NXP-i.MX-93W.jpg\" target=\"_blank\" rel=\"noreferrer noopener\"></a>"
+      },
+      {
+        "type": "paragraph",
+        "html": "NXP i.MX 93W specifications:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Dual-Core Arm Cortex-A55 at up to 1.7 GHz",
+          "Arm Cortex-M33 core at 250 MHz for real-time control"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "MIPI DSI up to 1080p60",
+          "LVDS up to 720p60",
+          "24-bit parallel RGB"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "7x I2S/TDM 32-bit @ 768KHz, SPDIF Tx/Rx",
+          "8-channel PDM microphone input",
+          "Medium Quality Sound output (sigma-delta modulator)"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "1×1 dual band 2.4 GHz/5 GHz 802.11 a/b/g/n/ax",
+          "256 quadrature amplitude modulation (QAM), 20 MHz bandwidth, peak throughput: 114.7 Mbps",
+          "Tx power up to +21 dBm",
+          "Wi-Fi 6 Extended Range (ER), Dual Carrier Modulation (DCM), Target Wait Time (TWT)",
+          "Low-power Wi-Fi idle, standby, and sleep modes",
+          "WPA2 / WPA3 Enterprise security",
+          "Support for Matter over Wi-Fi",
+          "Single, dual antenna with diversity"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "High-speed 2 Mbps, long range, advertising extensions",
+          "Integrated power amplifier (PA), low noise amplifier (LNA); Switch with up to +15 dBm TX output",
+          "Switchable Bluetooth LE/802.15.4 operation",
+          "UART or USB interface"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "IEEE 802.15.4-2015 compliant media access control (MAC)",
+          "Zigbee and Matter over Thread in the 2.4 GHz band",
+          "SPI Host Interface"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "7x UART, 8x I2C, 7x SPI, 2x I3C",
+          "1x CAN FD",
+          "4-ch, 12-bit analog‑to‑digital converter (ADC)",
+          "2x 32-pin FlexIO interfaces (camera, bus, or serial I/O)"
+        ]
+      },
+      {
+        "type": "image",
+        "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtAAAAGVAQAAAAD/UftzAAAAAnRSTlMAAHaTzTgAAAA6SURBVHja7cEBDQAAAMKg909tDwcUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADcGo/3AAHiIfPyAAAAAElFTkSuQmCC",
+        "alt": "NXP i.MX 93W SoC block diagram",
+        "caption": "NXP i.MX 93W SoC block diagram"
+      },
+      {
+        "type": "paragraph",
+        "html": "<a href=\"https://www.cnx-software.com/wp-content/uploads/2026/03/NXP-i.MX-93W-SoC-block-diagram.webp\" target=\"_blank\" rel=\"noreferrer noopener\"> </a>"
+      },
+      {
+        "type": "paragraph",
+        "html": "NXP mentions support for Linux OS and FreeRTOS. That should be Linux on the Cortex-A55 cores, and FreeRTOS on the Cortex-M33 core. Since the i.MX 93W wireless MCU SiP mainly combines an NXP i.MX 93 with an NXP iW610 and some passive components, software support should be exactly the same as for designs using two chips. Some target applications include smart home hubs, medical sensors, and energy grid devices."
+      },
+      {
+        "type": "paragraph",
+        "html": "We don’t often see application processors with built-in wireless connectivity, and the only other chip I can think of right now is the <a href=\"https://www.cnx-software.com/2025/04/17/avaota-f1-a-tiny-camera-board-based-on-allwinner-v821-risc-v-soc-with-built-in-wifi-and-64mb-ddr2/\" target=\"_blank\" rel=\"noreferrer noopener\">Allwinner V821 with a 32-bit RISC-V core, 64MB on-chip DDR2, and 2.4 GHz WiFi 4</a> designed for cameras. Looking further down in time, the <a href=\"https://www.cnx-software.com/2016/09/29/qualcomm-is-finally-open-for-business-with-snapdragon-410e-and-600e-processors-for-embedded-iot-applications/\" target=\"_blank\" rel=\"noreferrer noopener\">Snapdragon 410E (IPQ8016E)</a> quad-core Cortex-A53 SoC was introduced with built-in WiFi and Bluetooth in 2016."
+      },
+      {
+        "type": "image",
+        "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtAAAAFnAQAAAACnC0NhAAAAAnRSTlMAAHaTzTgAAAA2SURBVHja7cExAQAAAMIg+6e2xg5gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFB3f50AASCuOP4AAAAASUVORK5CYII=",
+        "alt": "i.MX 93W integration dual antenna design",
+        "caption": "i.MX 93W integration with i.MX 93 + IW610 + passive components (left), example of dual antenna application diagram (right)"
+      },
+      {
+        "type": "paragraph",
+        "html": "NXP unveiled the i.MX 93W wireless SiP at Embedded World 2026, but most people won’t be able to integrate them into their designs right away, since we’re told the “next generation MPU” is “<a href=\"https://www.nxp.com/company/about-nxp/smarter-world-blog/BL-IMX93W-CONNECTED-APPS-PROCESSOR\" target=\"_blank\" rel=\"noreferrer noopener\">coming in early 2027</a>“. A few additional details may be found on <a href=\"https://www.nxp.com/products/IMX93W\" target=\"_blank\" rel=\"noreferrer noopener\">the product page</a>."
+      },
+      {
+        "type": "image",
+        "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0AQAAAAAVtjufAAAAAnRSTlMAAHaTzTgAAAAbSURBVFjD7cEBDQAAAMKg909tDjegAAAAAL4NEOAAAf2XIG8AAAAASUVORK5CYII=",
+        "alt": "Jean Luc Aufranc",
+        "caption": "Jean Luc Aufranc"
+      },
+      {
+        "type": "paragraph",
+        "html": "Jean-Luc started CNX Software in 2010 as a part-time endeavor, before quitting his job as a software engineering manager, and starting to write daily news, and reviews full time later in 2011."
+      },
+      {
+        "type": "paragraph",
+        "html": "<strong>Support CNX Software! Donate via <a href=\"https://www.cnx-software.com/donate-cryptocurrencies/\" target=\"_blank\" rel=\"noreferrer noopener\">cryptocurrencies</a>, <a href=\"https://www.patreon.com/cnxsoft\" target=\"_blank\" rel=\"noreferrer noopener\">become a Patron</a> on Patreon, or purchase goods on <a href=\"https://amzn.to/3SXubZ0\" target=\"_blank\" rel=\"noreferrer noopener\">Amazon</a> or <a href=\"https://s.click.aliexpress.com/e/_DmGIIRT\" target=\"_blank\" rel=\"noreferrer noopener\">Aliexpress</a></strong>. We also use affiliate links in articles to earn commissions if you make a purchase after clicking on those links."
+      }
+    ]
+  },
+  "workflow": {
+    "articleId": 2653,
+    "rssTitle": "NXP i.MX 93W wireless MPU SiP pairs dual-core Arm Cortex-A55 processor with NXP iW610 WiFi 6, Bluetooth LE, and 805.15.4 radio"
+  }
+}

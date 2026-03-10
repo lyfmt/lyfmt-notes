@@ -636,7 +636,7 @@ class DetailHTMLParser(HTMLParser):
         self.append_fragment(escape(data))
 
 
-def extract_json_ld_primary_image(text: str, base_url: str | None) -> dict | None:
+def extract_json_ld_primary_image(text: str, base_url: str | None, title: str | None = None) -> dict | None:
     for match in re.finditer(r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>', text, re.IGNORECASE | re.DOTALL):
         raw = match.group(1).strip()
         if not raw:
@@ -695,7 +695,7 @@ def parse_html_blocks(text: str, base_url: str | None, title: str | None = None)
     parser.flush_current_block()
     blocks = prune_boilerplate_blocks(parser.blocks, title=title)
 
-    primary_image = extract_json_ld_primary_image(text, base_url=base_url)
+    primary_image = extract_json_ld_primary_image(text, base_url=base_url, title=title)
     has_image = any(block.get("type") == "image" for block in blocks)
     if primary_image and not has_image:
         blocks.insert(0, primary_image)

@@ -1,0 +1,20 @@
+{
+  "item": {
+    "id": 2653,
+    "title": "NXP i.MX 93W wireless MPU SiP pairs dual-core Arm Cortex-A55 processor with NXP iW610 WiFi 6, Bluetooth LE, and 805.15.4 radio",
+    "blog": "CNX Software",
+    "url": "https://www.cnx-software.com/2026/03/10/nxp-i-mx-93w-wireless-mpu-sip-pairs-dual-core-arm-cortex-a55-processor-with-nxp-iw610-wifi-6-bluetooth-le-and-805-15-4-radio/",
+    "published": "2026-03-10T09:32:54Z",
+    "discovered": "2026-03-10T10:00:30.227647288Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://www.cnx-software.com/2026/03/10/nxp-i-mx-93w-wireless-mpu-sip-pairs-dual-core-arm-cortex-a55-processor-with-nxp-iw610-wifi-6-bluetooth-le-and-805-15-4-radio/",
+    "ok": true,
+    "title": "NXP i.MX 93W wireless MPU SiP pairs dual-core Arm Cortex-A55 processor with NXP iW610 WiFi 6, Bluetooth LE, and 805.15.4 radio - CNX Software",
+    "description": "NXP i.MX 93W is the company's first integrated wireless MPU System-in-Package (SiP) and combines a dual-core Cortex-A55 processor (NXP i.MX 93) with an",
+    "fetched_bytes": 237151,
+    "error": null
+  },
+  "classification": "normal"
+}

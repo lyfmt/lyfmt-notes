@@ -1,0 +1,13 @@
+{
+  "available": true,
+  "layout": "detail-zh",
+  "translatedFrom": "https://huggingface.co/blog/async-rl-training-landscape",
+  "sourceName": "Hugging Face Blog",
+  "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "html": "当前缓存内容仍是站点反爬/挑战页，尚未获得可靠正文；因此只保留草稿入口，不生成可发布 detail。"
+    }
+  ]
+}

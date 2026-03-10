@@ -1,0 +1,116 @@
+{
+  "slug": "this-week-in-spring-march-10th-2026",
+  "title": "This Week in Spring - March 10th, 2026",
+  "author": "Spring Blog",
+  "publishedAt": "2026-03-10",
+  "source": "Spring Blog",
+  "url": "https://spring.io/blog/2026/03/10/this-week-in-spring-march-10th-2026",
+  "tags": [
+    "DevTools"
+  ],
+  "excerpt": "这篇文章围绕“This Week in Spring - March 10th, 2026”展开，RSS 摘要提到：Level up your Java code and explore what Spring can do for you.",
+  "content": [
+    {
+      "heading": "文章核心",
+      "paragraphs": [
+        "基于 RSS 摘要与页面元数据，原文重点是：Level up your Java code and explore what Spring can do for you.",
+        "来源信息：Spring Blog｜2026-03-10。"
+      ]
+    },
+    {
+      "heading": "值得继续补充的点",
+      "paragraphs": [
+        "如果后续补齐详情视图，可以继续沿着原文结构展开关键论点、案例、约束条件与结论。",
+        "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+      ]
+    }
+  ],
+  "detail": {
+    "available": false,
+    "layout": "draft",
+    "translatedFrom": "https://spring.io/blog/2026/03/10/this-week-in-spring-march-10th-2026",
+    "sourceName": "Spring Blog",
+    "sourceDescription": "以下为根据原文结构自动生成的详情草稿，已保留段落层次、图片与媒体；默认尚未完成中文翻译润色。",
+    "blocks": [
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Spring blog"
+      },
+      {
+        "type": "paragraph",
+        "html": "Hi, Spring fans! Welcome to another installment of <em>This Week in Spring</em>. As I write this, I am preparing for a trip to Rust, Germany, for one of the best Java conferences in Europe: JavaLand, along with its new companion event, DevLand. It should be fun. Will you be around? If so, say hi."
+      },
+      {
+        "type": "paragraph",
+        "html": "We have a lot to cover, so let&#x27;s dive in."
+      },
+      {
+        "type": "list",
+        "items": [
+          "The Kotlin tutorial has been updated <a href=\"https://kotlinlang.org/lp/kotlin-spring-ai-tutorial/\" target=\"_blank\" rel=\"noreferrer noopener\">with information about Spring AI</a>",
+          "In last week&#x27;s installment of <em>A Bootiful Podcast</em>, I had the privilege of talking <a href=\"https://spring.io/blog/2026/03/05/a-bootiful-podcast-jennifer-reif\" target=\"_blank\" rel=\"noreferrer noopener\">to Neo4J developer advocate extraordinaire Jennifer Reif</a>",
+          "Want to secure your Spring Shell CLI-based applications? Check out this video I did <a href=\"https://youtu.be/rLIQTY9Gg04?si=qQMeLiUIz7OHWcin\" target=\"_blank\" rel=\"noreferrer noopener\">on using Spring Security and OAuth device code grants</a>",
+          "Want to learn more about security? Check out this video looking at <a href=\"https://youtu.be/RRY_d2kZsj0?si=2vzMaMsRHJ3MO6Nj\" target=\"_blank\" rel=\"noreferrer noopener\">the new Spring Security 7</a>",
+          "In particular, if you want to learn about securing your Spring AI MCP agents, <a href=\"https://youtu.be/Mpd1740f2Vs?si=Sc_-U_3WyZV8srrc\" target=\"_blank\" rel=\"noreferrer noopener\">check out this video</a>",
+          "AWS is hosting a webinar <a href=\"https://aws-experience.com/emea/smb/e/f2e47/building-java-ai-agents-with-spring-ai\" target=\"_blank\" rel=\"noreferrer noopener\">on building Java AI agents with Spring AI</a>",
+          "Baeldung has a nice post on <a href=\"https://www.baeldung.com/spring-ai-explainable-agents-capture-llm-tool-call-reasoning\" target=\"_blank\" rel=\"noreferrer noopener\">explainable LLM tool call reasoning with Spring AI</a>",
+          "Have you checked out the support for consuming Anthropic Skills from within a Spring AI application using the new Spring AI community Skills support? It becomes even more powerful when <a href=\"https://youtu.be/eTh1Ti32QDU?si=aNvKv76OdYYnjZo0\" target=\"_blank\" rel=\"noreferrer noopener\">paired with the new SkillsJars project</a>",
+          "I also published a full video looking at Spring gRPC 1.0, including setup, building clients and services, observability, security, and more. Watch it <a href=\"https://youtu.be/RRY_d2kZsj0?si=2vzMaMsRHJ3MO6Nj\" target=\"_blank\" rel=\"noreferrer noopener\">here</a>",
+          "Migrating to modular monoliths <a href=\"https://blog.jetbrains.com/idea/2026/02/migrating-to-modular-monolith-using-spring-modulith-and-intellij-idea/\" target=\"_blank\" rel=\"noreferrer noopener\">when using Spring Modulith</a>",
+          "A nice <a href=\"https://simonwillison.net/2026/Feb/23/agentic-engineering-patterns/\" target=\"_blank\" rel=\"noreferrer noopener\">roundup of agentic patterns</a>"
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Get the Spring newsletter"
+      },
+      {
+        "type": "paragraph",
+        "html": "Stay connected with the Spring newsletter"
+      },
+      {
+        "type": "paragraph",
+        "html": "<a href=\"https://go-vmware.broadcom.com/tnz-spring-newsletter-subscribe\" target=\"_blank\" rel=\"noreferrer noopener\">Subscribe</a>"
+      },
+      {
+        "type": "image",
+        "src": "https://spring.io/img/extra/footer.svg",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Get ahead"
+      },
+      {
+        "type": "paragraph",
+        "html": "VMware offers training and certification to turbo-charge your progress."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Get support"
+      },
+      {
+        "type": "paragraph",
+        "html": "Tanzu Spring offers support and binaries for OpenJDK™, Spring, and Apache Tomcat® in one simple subscription."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Upcoming events"
+      },
+      {
+        "type": "paragraph",
+        "html": "Check out all the upcoming events in the Spring community."
+      }
+    ]
+  },
+  "workflow": {
+    "articleId": 2654,
+    "rssTitle": "This Week in Spring - March 10th, 2026"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "item": {
+    "id": 2652,
+    "title": "Seeing the World Through Animal Eyes",
+    "blog": "Hackaday",
+    "url": "https://hackaday.com/2026/03/10/seeing-the-world-through-animal-eyes/",
+    "published": "2026-03-10T08:00:19Z",
+    "discovered": "2026-03-10T10:00:30.019008732Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://hackaday.com/2026/03/10/seeing-the-world-through-animal-eyes/",
+    "ok": true,
+    "title": "Seeing The World Through Animal Eyes",
+    "description": "If you think about it, you can’t be sure that what you see for the color red, for example, is what anyone else in the world actually sees. All you can be sure of is that we’ve all been …",
+    "fetched_bytes": 87618,
+    "error": null
+  },
+  "classification": "normal"
+}

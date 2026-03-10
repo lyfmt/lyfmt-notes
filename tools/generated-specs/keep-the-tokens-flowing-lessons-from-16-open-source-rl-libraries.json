@@ -1,0 +1,45 @@
+{
+  "slug": "keep-the-tokens-flowing-lessons-from-16-open-source-rl-libraries",
+  "title": "Keep the Tokens Flowing: Lessons from 16 Open-Source RL Libraries",
+  "author": "Hugging Face Blog",
+  "publishedAt": "2026-03-10",
+  "source": "Hugging Face Blog",
+  "url": "https://huggingface.co/blog/async-rl-training-landscape",
+  "tags": [
+    "Reading"
+  ],
+  "excerpt": "这篇文章围绕“Keep the Tokens Flowing: Lessons from 16 Open-Source RL Libraries”展开，当前已从 RSS 条目同步到静态博客工作流中。",
+  "content": [
+    {
+      "heading": "文章核心",
+      "paragraphs": [
+        "当前只拿到了标题、来源和链接，还没有更完整的页面摘要，因此这里只生成一个可继续加工的草稿入口。",
+        "来源信息：Hugging Face Blog｜2026-03-10。"
+      ]
+    },
+    {
+      "heading": "值得继续补充的点",
+      "paragraphs": [
+        "如果后续补齐详情视图，可以继续沿着原文结构展开关键论点、案例、约束条件与结论。",
+        "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+      ]
+    }
+  ],
+  "detail": {
+    "available": false,
+    "layout": "detail-zh",
+    "translatedFrom": "https://huggingface.co/blog/async-rl-training-landscape",
+    "sourceName": "Hugging Face Blog",
+    "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "html": "当前缓存内容仍是站点反爬/挑战页，尚未获得可靠正文；因此只保留草稿入口，不生成可发布 detail。"
+      }
+    ]
+  },
+  "workflow": {
+    "articleId": 2651,
+    "rssTitle": "Keep the Tokens Flowing: Lessons from 16 Open-Source RL Libraries"
+  }
+}
