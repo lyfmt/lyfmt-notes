@@ -1,0 +1,138 @@
+{
+  "slug": "makerfabs-cm0iq-an-ultra-compact-42x36mm-raspberry-pi-cm0-lite-board-cnx-software",
+  "title": "Makerfabs CM0IQ - An ultra-compact (42x36mm) Raspberry Pi CM0 Lite board - CNX Software",
+  "author": "CNX Software",
+  "publishedAt": "2026-03-10",
+  "source": "CNX Software",
+  "url": "https://www.cnx-software.com/2026/03/10/makerfabs-cm0iq-ultra-compact-42x36mm-raspberry-pi-cm0-lite-board/",
+  "tags": [
+    "Hardware"
+  ],
+  "excerpt": "这篇文章围绕“Makerfabs CM0IQ - An ultra-compact (42x36mm) Raspberry Pi CM0 Lite board - CNX Software”展开，RSS 摘要提到：The CM0IQ is an ultra-compact board based on the Raspberry Pi CM0 Lite Compute Module. It measures just 42 × 36 mm and squeezes multiple...",
+  "content": [
+    {
+      "heading": "文章核心",
+      "paragraphs": [
+        "基于 RSS 摘要与页面元数据，原文重点是：The CM0IQ is an ultra-compact board based on the Raspberry Pi CM0 Lite Compute Module. It measures just 42 × 36 mm and squeezes multiple interfaces into a",
+        "来源信息：CNX Software｜2026-03-10。"
+      ]
+    },
+    {
+      "heading": "值得继续补充的点",
+      "paragraphs": [
+        "如果后续补齐详情视图，重点可以继续展开芯片规格、接口能力、功耗指标和适用场景。",
+        "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+      ]
+    }
+  ],
+  "detail": {
+    "available": false,
+    "layout": "draft",
+    "translatedFrom": "https://www.cnx-software.com/2026/03/10/makerfabs-cm0iq-ultra-compact-42x36mm-raspberry-pi-cm0-lite-board/",
+    "sourceName": "CNX Software",
+    "sourceDescription": "以下为根据原文结构自动生成的详情草稿，已保留段落层次、图片与媒体；默认尚未完成中文翻译润色。",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "html": "The <strong>CM0IQ</strong> is an ultra-compact board based on the Raspberry Pi CM0 Lite Compute Module. It measures just 42 × 36 mm and squeezes multiple interfaces into a 15.1 cm² footprint, making it suitable for space-constrained applications such as robotics, IoT devices, and custom hardware integrations."
+      },
+      {
+        "type": "paragraph",
+        "html": "Despite being smaller than a <a href=\"https://www.cnx-software.com/2021/10/28/raspberry-pi-zero-2-w-and-zero-w-features-comparison/\" target=\"_blank\" rel=\"noreferrer noopener\">Raspberry Pi Zero 2 W</a> (19.5 cm²), the CM0IQ manages to include a full-sized USB-A port, a Micro HDMI port, and 4-lane MIPI CSI and DSI connectors. To fit everything into this small footprint, the designer also relied on a 1.27 mm 40-pin GPIO header rather than the standard 2.54 mm header. The board also features a USB Type-C for power, a microSD card slot for storage, 5V solder pads for power input, and four M2 mounting threads."
+      },
+      {
+        "type": "image",
+        "src": "https://www.cnx-software.com/wp-content/uploads/2026/03/Raspberry-Pi-CM0IQ-720x480.jpg",
+        "alt": "Raspberry Pi CM0IQ",
+        "caption": "Raspberry Pi CM0IQ"
+      },
+      {
+        "type": "paragraph",
+        "html": "<a href=\"https://www.cnx-software.com/wp-content/uploads/2026/03/Raspberry-Pi-CM0IQ.jpg\" target=\"_blank\" rel=\"noreferrer noopener\"></a>"
+      },
+      {
+        "type": "paragraph",
+        "html": "Raspberry Pi CM0IQ Specifications:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "CPU – Quad-core Cortex-A53 processor @ 1.0 GHz",
+          "GPU – VideoCore IV GPU supporting OpenGL ES 1.1, 2.0 graphics",
+          "VPU – H.264/MPEG-4 1080p30 video decoding, H.264 1080p30 video encoding"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "Micro HDMI video output",
+          "4-lane MIPI DSI connector"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "USB Type-C port (power and USB gadget mode)",
+          "USB-A host port"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "Switch 1 – Toggles normal operation vs. pulling nRPI_BOOT low",
+          "Switch 2 – Routes USB data to either the USB-C port or the USB-A port."
+        ]
+      },
+      {
+        "type": "image",
+        "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtAAAAGCAQAAAADhgslQAAAAAnRSTlMAAHaTzTgAAAA5SURBVHja7cGBAAAAAMOg+VNf4QBVAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwGiTYAAc11EdQAAAAASUVORK5CYII=",
+        "alt": "Raspberry Pi CM0IQ Side vierw",
+        "caption": "Raspberry Pi CM0IQ Side vierw"
+      },
+      {
+        "type": "paragraph",
+        "html": "<a href=\"https://www.cnx-software.com/wp-content/uploads/2026/03/Raspberry-Pi-CM0IQ-Side-vierw.jpg\" target=\"_blank\" rel=\"noreferrer noopener\"> </a>"
+      },
+      {
+        "type": "paragraph",
+        "html": "The developer provided a table comparing the CM0IQ with the official Raspberry Pi Zero 2 W, highlighting the trade-offs made to reduce the footprint by over 22%."
+      },
+      {
+        "type": "paragraph",
+        "html": "On the software side, the bpard runs Raspberry Pi OS, but Makerfabs mentions that MIPI DSI displays and CSI cameras are not automatically detected by the OS, so you need to manually add the appropriate overlays to the <em>/boot/config.txt</em> file<br>"
+      },
+      {
+        "type": "paragraph",
+        "html": "<br> There is also a mechanical warning from the developer saying that the M2 threaded standoffs have a maximum depth of 2mm. Screwing in mounting hardware deeper than 2mm can permanently damage the PCB. The official <a href=\"https://www.cnx-software.com/2025/11/06/giveaway-week-2025-5-inch-raspberry-pi-touch-display-2/\" target=\"_blank\" rel=\"noreferrer noopener\">5-inch Raspberry Pi Touch Display 2</a> requires a separate 5V power connection, which must be pulled from the GPIO or the corner solder pads."
+      },
+      {
+        "type": "image",
+        "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtAAAAGGAQAAAAB6E4tGAAAAAnRSTlMAAHaTzTgAAAA5SURBVHja7cExAQAAAMKg9U9tDQ+gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPgyiqIAAb0UHncAAAAASUVORK5CYII=",
+        "alt": "Raspberry Pi CM0IQ top and bottom",
+        "caption": "Raspberry Pi CM0IQ Top (Left) and Bottom (Right)"
+      },
+      {
+        "type": "paragraph",
+        "html": "The Raspberry Pi CM0IQ can be purchased on <a href=\"https://www.makerfabs.com/raspberry-pi-cm0iq.html\" target=\"_blank\" rel=\"noreferrer noopener\">Makerfabs for $49.00</a>. Additional documentation, including pinout diagrams and high-resolution images, can be found on the project’s <a href=\"https://github.com/magic-blue-smoke/Raspberry-Pi-CM0IQ\" target=\"_blank\" rel=\"noreferrer noopener\">GitHub repository</a>."
+      },
+      {
+        "type": "image",
+        "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkAQAAAABYmaj5AAAAAnRSTlMAAHaTzTgAAAATSURBVHjaYxgFo2AUjIJRQFcAAAV4AAFJqdOkAAAAAElFTkSuQmCC",
+        "alt": "Debashis Das",
+        "caption": "Debashis Das"
+      },
+      {
+        "type": "paragraph",
+        "html": "Debashis Das is a technical content writer and embedded engineer with over five years of experience in the industry. With expertise in Embedded C, PCB Design, and SEO optimization, he effectively blends difficult technical topics with clear communication"
+      },
+      {
+        "type": "paragraph",
+        "html": "<strong>Support CNX Software! Donate via <a href=\"https://www.cnx-software.com/donate-cryptocurrencies/\" target=\"_blank\" rel=\"noreferrer noopener\">cryptocurrencies</a>, <a href=\"https://www.patreon.com/cnxsoft\" target=\"_blank\" rel=\"noreferrer noopener\">become a Patron</a> on Patreon, or purchase goods on <a href=\"https://amzn.to/3SXubZ0\" target=\"_blank\" rel=\"noreferrer noopener\">Amazon</a> or <a href=\"https://s.click.aliexpress.com/e/_DmGIIRT\" target=\"_blank\" rel=\"noreferrer noopener\">Aliexpress</a></strong>. We also use affiliate links in articles to earn commissions if you make a purchase after clicking on those links."
+      }
+    ]
+  },
+  "workflow": {
+    "articleId": 2647,
+    "rssTitle": "Makerfabs CM0IQ – An ultra-compact (42x36mm) Raspberry Pi CM0 Lite board"
+  }
+}

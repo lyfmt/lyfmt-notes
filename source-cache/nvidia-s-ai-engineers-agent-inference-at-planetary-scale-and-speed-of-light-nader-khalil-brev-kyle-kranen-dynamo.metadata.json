@@ -1,0 +1,20 @@
+{
+  "item": {
+    "id": 2648,
+    "title": "NVIDIA's AI Engineers: Agent Inference at Planetary Scale and \"Speed of Light\" — Nader Khalil (Brev), Kyle Kranen (Dynamo)",
+    "blog": "Latent Space",
+    "url": "https://www.latent.space/p/nvidia-brev-dynamo",
+    "published": "2026-03-10T06:40:22Z",
+    "discovered": "2026-03-10T07:00:51.058092775Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://www.latent.space/p/nvidia-brev-dynamo",
+    "ok": true,
+    "title": "NVIDIA's AI Engineers: Agent Inference at Planetary Scale and \"Speed of Light\" — Nader Khalil (Brev), Kyle Kranen (Dynamo)",
+    "description": "NVIDIA welcomes AI Engineers with a special pre GTC episode!",
+    "fetched_bytes": 581998,
+    "error": null
+  },
+  "classification": "normal"
+}

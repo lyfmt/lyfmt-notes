@@ -1,0 +1,20 @@
+{
+  "item": {
+    "id": 2647,
+    "title": "Makerfabs CM0IQ – An ultra-compact (42x36mm) Raspberry Pi CM0 Lite board",
+    "blog": "CNX Software",
+    "url": "https://www.cnx-software.com/2026/03/10/makerfabs-cm0iq-ultra-compact-42x36mm-raspberry-pi-cm0-lite-board/",
+    "published": "2026-03-10T05:06:57Z",
+    "discovered": "2026-03-10T07:00:50.780590952Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://www.cnx-software.com/2026/03/10/makerfabs-cm0iq-ultra-compact-42x36mm-raspberry-pi-cm0-lite-board/",
+    "ok": true,
+    "title": "Makerfabs CM0IQ - An ultra-compact (42x36mm) Raspberry Pi CM0 Lite board - CNX Software",
+    "description": "The CM0IQ is an ultra-compact board based on the Raspberry Pi CM0 Lite Compute Module. It measures just 42 × 36 mm and squeezes multiple interfaces into a",
+    "fetched_bytes": 239167,
+    "error": null
+  },
+  "classification": "normal"
+}

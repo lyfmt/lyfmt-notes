@@ -1,0 +1,20 @@
+{
+  "item": {
+    "id": 2649,
+    "title": "This Week in Spring - March 9th, 2026",
+    "blog": "Spring Blog",
+    "url": "https://spring.io/blog/2026/03/09/this-week-in-spring-march-09th-2026",
+    "published": "2026-03-09T00:00:00Z",
+    "discovered": "2026-03-10T07:00:51.670225195Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://spring.io/blog/2026/03/09/this-week-in-spring-march-09th-2026",
+    "ok": true,
+    "title": "This Week in Spring - March 9th, 2026",
+    "description": "Level up your Java code and explore what Spring can do for you.",
+    "fetched_bytes": 383895,
+    "error": null
+  },
+  "classification": "thin"
+}

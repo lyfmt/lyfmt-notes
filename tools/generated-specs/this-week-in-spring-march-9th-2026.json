@@ -1,0 +1,117 @@
+{
+  "slug": "this-week-in-spring-march-9th-2026",
+  "title": "This Week in Spring - March 9th, 2026",
+  "author": "Spring Blog",
+  "publishedAt": "2026-03-09",
+  "source": "Spring Blog",
+  "url": "https://spring.io/blog/2026/03/09/this-week-in-spring-march-09th-2026",
+  "tags": [
+    "DevTools"
+  ],
+  "excerpt": "这篇文章围绕“This Week in Spring - March 9th, 2026”展开，RSS 摘要提到：Level up your Java code and explore what Spring can do for you.",
+  "content": [
+    {
+      "heading": "文章核心",
+      "paragraphs": [
+        "基于 RSS 摘要与页面元数据，原文重点是：Level up your Java code and explore what Spring can do for you.",
+        "来源信息：Spring Blog｜2026-03-09。"
+      ]
+    },
+    {
+      "heading": "值得继续补充的点",
+      "paragraphs": [
+        "如果后续补齐详情视图，可以继续沿着原文结构展开关键论点、案例、约束条件与结论。",
+        "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+      ]
+    }
+  ],
+  "detail": {
+    "available": false,
+    "layout": "draft",
+    "translatedFrom": "https://spring.io/blog/2026/03/09/this-week-in-spring-march-09th-2026",
+    "sourceName": "Spring Blog",
+    "sourceDescription": "以下为根据原文结构自动生成的详情草稿，已保留段落层次、图片与媒体；默认尚未完成中文翻译润色。",
+    "blocks": [
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Spring blog"
+      },
+      {
+        "type": "paragraph",
+        "html": "Hi Spring fans! Welcome to another rip-roaring installment of <em>This Week in Spring</em>! I&#x27;m writing this in an Uber en route to the airport to get to awsome Atlanta, GA, for Devnexus 2026! Who&#x27;s goin&#x27;? You goin&#x27;? We - the Spring team - will be there in force! Come say hi at the boothes or come see our many, many talks there!"
+      },
+      {
+        "type": "paragraph",
+        "html": "Anyway, I&#x27;ve got a flight to catch so let&#x27;s dive right into this wonderful week&#x27;s roundup!"
+      },
+      {
+        "type": "list",
+        "items": [
+          "this post is <em>really</em> cool: want to make your run-of-the-mill Spring Boot + Tomcat + JPA applications scale a lot higher? Upgrade to Spring Framework 7.0.6, and check out this wonderful blog looking at some low-touch <a href=\"https://spring.io/blog/2026/02/25/optimizing-spring-mvc\" target=\"_blank\" rel=\"noreferrer noopener\">and very useful advice</a>",
+          "in this post, I look at how to use Device code authorization in an <a href=\"https://youtu.be/rLIQTY9Gg04?si=bQz886KkjEzMdVmK\" target=\"_blank\" rel=\"noreferrer noopener\">OAuth context to secure Spring Shell (CLI-powered!) applications</a>",
+          "I did a video that looked the <a href=\"https://www.youtube.com/watch?v=RRY_d2kZsj0&amp;t=7s\" target=\"_blank\" rel=\"noreferrer noopener\">new Spring gRPC 1.0</a>",
+          "Baeldung has a nice post on the <a href=\"https://www.baeldung.com/spring-ai-mcp-annotations\" target=\"_blank\" rel=\"noreferrer noopener\">new MCP annotations</a> in Spring AI",
+          "want to learn how to use - to consume - Anthropic Skills from a Spring AI application? Want to make their deployment, packaging, and reuse even easier? Check out <a href=\"https://www.youtube.com/watch?v=eTh1Ti32QDU\" target=\"_blank\" rel=\"noreferrer noopener\">Spring AI and the new Skillsjars project</a>",
+          "the Spring Data team is making it easier to reference <a href=\"https://spring.io/blog/2026/02/27/moving-beyond-strings-in-spring-data\" target=\"_blank\" rel=\"noreferrer noopener\">properties through typed expressions</a> when building queries",
+          "in last week&#x27;s installment of <em>A Bootiful Podcast</em>, I talked to John Willis, author of <a href=\"https://spring.io/blog/2026/02/26/a-bootiful-podcast-john-willis\" target=\"_blank\" rel=\"noreferrer noopener\">&quot;Rebels of Reason&quot;</a>.",
+          "an interesting blog indeed: how to use <a href=\"https://dev.to/ayshriv/building-ai-applications-with-spring-ai-and-azure-openai-j6k\" target=\"_blank\" rel=\"noreferrer noopener\">Spring AI and Azure OpenAI</a>",
+          "if you&#x27;re using Embabel, the agentic framework built on top of Spring AI, <a href=\"https://medium.com/embabel/agent-memory-is-not-a-greenfield-problem-ground-it-in-your-existing-data-9272cabe1561\" target=\"_blank\" rel=\"noreferrer noopener\">then check out this awesome post talking about agent memory</a>",
+          "our friend Siva has a new Anthropic <em>skill</em> you can use to make <a href=\"https://x.com/sivalabs/status/2025877821353340946?s=12\" target=\"_blank\" rel=\"noreferrer noopener\">writing sensible, Spring Modulith-based applications a snap</a>",
+          "you&#x27;ve heard that we developed the official Java MCP SDK, yah? It <a href=\"https://modelcontextprotocol.io/docs/sdk#available-sdks\" target=\"_blank\" rel=\"noreferrer noopener\">was recently ranked as tier 2 across all the SDKs</a>.",
+          "not to do with Spring, per se, but interesting: a look at <a href=\"https://simonwillison.net/2026/Feb/23/agentic-engineering-patterns/\" target=\"_blank\" rel=\"noreferrer noopener\">agentic patterns</a>"
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Get the Spring newsletter"
+      },
+      {
+        "type": "paragraph",
+        "html": "Stay connected with the Spring newsletter"
+      },
+      {
+        "type": "paragraph",
+        "html": "<a href=\"https://go-vmware.broadcom.com/tnz-spring-newsletter-subscribe\" target=\"_blank\" rel=\"noreferrer noopener\">Subscribe</a>"
+      },
+      {
+        "type": "image",
+        "src": "https://spring.io/img/extra/footer.svg",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Get ahead"
+      },
+      {
+        "type": "paragraph",
+        "html": "VMware offers training and certification to turbo-charge your progress."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Get support"
+      },
+      {
+        "type": "paragraph",
+        "html": "Tanzu Spring offers support and binaries for OpenJDK™, Spring, and Apache Tomcat® in one simple subscription."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Upcoming events"
+      },
+      {
+        "type": "paragraph",
+        "html": "Check out all the upcoming events in the Spring community."
+      }
+    ]
+  },
+  "workflow": {
+    "articleId": 2649,
+    "rssTitle": "This Week in Spring - March 9th, 2026"
+  }
+}
