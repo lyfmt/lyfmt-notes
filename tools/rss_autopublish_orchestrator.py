@@ -61,6 +61,14 @@ def write_json(path: Path, payload: Any) -> None:
     atomic_write_json(path, payload)
 
 
+def _to_text(value: Any) -> str:
+    if value is None:
+        return ""
+    if isinstance(value, bytes):
+        return value.decode("utf-8", errors="replace")
+    return str(value)
+
+
 def run_command(cmd: list[str], *, cwd: Path, timeout: int, env: dict[str, str] | None = None, input_text: str | None = None) -> dict[str, Any]:
     merged_env = os.environ.copy()
     if env:
@@ -80,8 +88,8 @@ def run_command(cmd: list[str], *, cwd: Path, timeout: int, env: dict[str, str] 
         return {
             "ok": proc.returncode == 0,
             "code": proc.returncode,
-            "stdout": proc.stdout,
-            "stderr": proc.stderr,
+            "stdout": _to_text(proc.stdout),
+            "stderr": _to_text(proc.stderr),
             "started_at": started,
             "finished_at": utc_now(),
             "cmd": cmd,
@@ -90,8 +98,8 @@ def run_command(cmd: list[str], *, cwd: Path, timeout: int, env: dict[str, str] 
         return {
             "ok": False,
             "code": None,
-            "stdout": exc.stdout or "",
-            "stderr": (exc.stderr or "") + f"\nTIMEOUT after {timeout}s",
+            "stdout": _to_text(exc.stdout),
+            "stderr": _to_text(exc.stderr) + f"\nTIMEOUT after {timeout}s",
             "started_at": started,
             "finished_at": utc_now(),
             "cmd": cmd,
@@ -103,7 +111,7 @@ def run_command(cmd: list[str], *, cwd: Path, timeout: int, env: dict[str, str] 
             "ok": False,
             "code": None,
             "stdout": "",
-            "stderr": repr(exc),
+            "stderr": _to_text(exc),
             "started_at": started,
             "finished_at": utc_now(),
             "cmd": cmd,
@@ -192,8 +200,8 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--detail-dir", default=str(DEFAULT_DETAIL_DIR))
     parser.add_argument("--article-id", action="append", dest="article_ids", type=int, help="Only process selected RSS article id(s). Repeatable.")
     parser.add_argument("--max-items", type=int, default=0, help="Process at most N new items; 0 means all.")
-    parser.add_argument("--pi-timeout", type=int, default=180)
-    parser.add_argument("--pi-limit", type=int, default=3, help="Refine at most N blocks per invocation (0 means all).")
+    parser.add_argument("--pi-timeout", type=int, default=420)
+    parser.add_argument("--pi-limit", type=int, default=4, help="Refine at most N blocks per invocation (0 means all).")
     parser.add_argument("--scan-timeout", type=int, default=300)
     parser.add_argument("--html-timeout", type=int, default=120)
     parser.add_argument("--detail-timeout", type=int, default=120)
@@ -508,7 +516,9 @@ def process_item(args: argparse.Namespace, run_record: dict[str, Any], bundle: d
             stage_history(item_state, "refine_detail_finished")
             spec_payload = read_json(spec_path, default={})
         else:
-            stage_history(item_state, "refine_detail_failed")
+            stage_history(item_state, "refine_detail_failed", timeout=bool(refine_result.get("timeout")))
+            if refine_result.get("timeout"):
+                item_state["soft_fail"] = "refine_timeout"
     else:
         stage_history(item_state, "refine_skipped", challenge_blocked=challenge_blocked, detail_progress=existing_progress)
 

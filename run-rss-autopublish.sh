@@ -12,7 +12,10 @@ cd "$ROOT"
 echo "[run-rss-autopublish] start ${RUN_TS}" | tee "$LOG_PATH"
 python3 tools/rss_autopublish_orchestrator.py \
   --articles "$ROOT/articles.json" \
-  --allow-publish "$@" 2>&1 | tee -a "$LOG_PATH"
+  --allow-publish \
+  --pi-timeout 420 \
+  --pi-limit 4 \
+  "$@" 2>&1 | tee -a "$LOG_PATH"
 STATUS=${PIPESTATUS[0]}
 echo "[run-rss-autopublish] exit ${STATUS}" | tee -a "$LOG_PATH"
 exit "$STATUS"
