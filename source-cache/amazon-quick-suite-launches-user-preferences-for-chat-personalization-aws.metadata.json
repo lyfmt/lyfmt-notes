@@ -1,0 +1,20 @@
+{
+  "item": {
+    "id": 2643,
+    "title": "Amazon Quick Suite launches User Preferences for chat personalization",
+    "blog": "AWS Architecture Blog",
+    "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/user-preferences-in-quick/",
+    "published": "2026-03-09T20:03:00Z",
+    "discovered": "2026-03-10T01:00:58.562137849Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/user-preferences-in-quick/",
+    "ok": true,
+    "title": "Amazon Quick Suite launches User Preferences for chat personalization - AWS",
+    "description": "Discover more about what",
+    "fetched_bytes": 181215,
+    "error": null
+  },
+  "classification": "thin"
+}

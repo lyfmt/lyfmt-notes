@@ -1,0 +1,164 @@
+{
+  "slug": "intel-arrow-lake-s-atx-motherboard-supports-up-to-256gb-cu-dimm-ddr5-ram-features-w880-chipset-cnx-software",
+  "title": "Intel Arrow Lake-S ATX motherboard supports up to 256GB CU-DIMM DDR5 RAM, features W880 chipset",
+  "author": "CNX Software",
+  "publishedAt": "2026-03-10",
+  "source": "CNX Software",
+  "url": "https://www.cnx-software.com/2026/03/10/intel-arrow-lake-s-atx-motherboard-supports-up-to-256gb-cu-dimm-ddr5-ram-features-w880-chipset/",
+  "tags": [
+    "Hardware",
+    "Embedded",
+    "Intel",
+    "AI"
+  ],
+  "excerpt": "Jetway 新推面向智能工厂与关键设备场景的 ATX-ARS1-W880 主板，支持插槽式 Arrow Lake-S、最高 256GB ECC DDR5 CU-DIMM、7 个 PCIe 插槽和 3 个 2.5GbE。",
+  "content": [
+    {
+      "heading": "文章核心",
+      "paragraphs": [
+        "Jetway 发布 ATX-ARS1-W880，这是一块面向智能工厂、机器人、医疗设备和服务器场景的工业级 ATX 主板，采用 Intel W880 芯片组，可搭配插槽式 Intel Arrow Lake-S 处理器。",
+        "整板最大亮点是 4 个 CU-DIMM 插槽，可支持最高 256GB DDR5 ECC 内存，同时提供 7 个 PCIe 插槽、双 M.2 M-Key、M.2 E-Key/B-Key、3 个 2.5GbE、16 路 USB 以及多路串口。"
+      ]
+    },
+    {
+      "heading": "值得关注的点",
+      "paragraphs": [
+        "相比上一代基于 Q870 的版本，W880 版本把 ECC 内存和更偏关键任务的定位摆到了台前，更适合工业控制、机器人和需要更高可靠性的边缘计算部署。",
+        "对硬件与工控读者来说，这篇文章的价值在于把接口、扩展性和平台定位列得很细，便于快速判断它更像一块工业主板，还是一块可用于 AI／边缘推理的扩展底板。"
+      ]
+    }
+  ],
+  "detail": {
+    "available": true,
+    "layout": "detail-zh",
+    "translatedFrom": "https://www.cnx-software.com/2026/03/10/intel-arrow-lake-s-atx-motherboard-supports-up-to-256gb-cu-dimm-ddr5-ram-features-w880-chipset/",
+    "sourceName": "CNX Software",
+    "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "html": "Jetway ATX-ARS1-W880 是一款 ATX 主板，支持插槽式 Intel Arrow Lake-S SoC，最高可提供 24 核与 36 TOPS 的 AI 算力；同时配备四个 CU-DIMM（Clocked Unbuffered DIMM）插槽，最高支持 256GB DDR5 ECC 内存，并采用 W880 芯片组。"
+      },
+      {
+        "type": "paragraph",
+        "html": "这款工业级主板面向智能工厂应用，存储方面提供四个 SATA III 接口，以及两个 M.2 M-Key PCIe Gen5/4 插槽；同时还配备七个 PCIe 插槽、三个 2.5GbE 网口、用于 WiFi、Bluetooth 和蜂窝网络（4G/5G）连接的 M.2 E-Key 与 B-Key 插槽、十六个 USB 接口（Type-A 和排针），以及少量串口接口。ATX-ARS1-W880 还可通过 DP、HDMI 和 VGA 接口同时驱动最多四台独立显示器，并带有组合音频模块，提供 Line-in、Line-out 和 MIC-out 接口。"
+      },
+      {
+        "type": "image",
+        "src": "https://www.cnx-software.com/wp-content/uploads/2026/03/Jetway-ATX-ARS1-W880-ATX-motherboard-720x465.jpg",
+        "alt": "Jetway ATX-ARS1-W880 ATX motherboard",
+        "caption": "Jetway ATX-ARS1-W880 ATX motherboard"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Jetway ATX-ARS1-W880 规格参数"
+      },
+      {
+        "type": "list",
+        "items": [
+          "4 个 SATA III 接口",
+          "支持 M.2 NVMe SSD（参见扩展部分）",
+          "RAID：支持 Intel VMD RAID 0、1，以及 SATA RAID 0、1、5、10"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "1 个 DP 1.4a 接口，最高支持 4096 × 2160 @ 60Hz",
+          "2 个 HDMI 2.1 TMDS 接口，最高支持 3840 × 2160 @ 60Hz",
+          "VGA 接口，最高支持 1920 × 1080 @ 60Hz",
+          "最多可支持 4 路独立显示输出"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "3.5mm Line-in 音频接口",
+          "3.5mm Line-out 音频接口",
+          "3.5mm MIC-in 麦克风接口",
+          "Realtek 音频编解码器",
+          "3W 功放"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "通过 Intel I226-LM 控制器提供 1 个 2.5GbE RJ45 网口",
+          "通过 Intel I226-V 控制器提供 2 个 2.5GbE RJ45 网口",
+          "通过 M.2 Key-E 插槽可选扩展 Wi‑Fi 和蓝牙",
+          "通过 M.2 Key-B 插槽与 NanoSIM 卡槽可选支持 4G LTE/5G"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "提供 6 个 USB 3.2 Gen2 端口",
+          "通过内部排针可扩展 2 个 USB 3.2 Gen 1 接口",
+          "通过内部排针可扩展 6 个 USB 2.0 接口",
+          "配备 1 个内部竖置 USB 3.2 Gen 1×1 Type-A 接口",
+          "配备 1 个内部竖置 USB 2.0 Type-A 接口"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "DB-9 接口，支持 <a href=\"https://www.cnx-software.com/2018/07/04/rs232-vs-rs422-vs-rs485-differences/\" target=\"_blank\" rel=\"noreferrer noopener\">RS-232/422/485</a>",
+          "通过内部排针提供 5 路 RS-232"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "1 个 M.2 M-Key 2242/2260/2280/22110 插槽（PCIe Gen 5 x4），支持 NVMe",
+          "1 个 M.2 M-Key 2280 插槽（PCIe Gen 4 x4），支持 NVMe",
+          "1 个 M.2 E-Key 2230 插槽（USB 2.0 / PCIe Gen 3 x1），支持 CNVio",
+          "1 个 M.2 B-Key 3042/3052 插槽（USB 3.1 / USB 2.0 / PCIe Gen 3 x1），可用于 4G/5G 模组",
+          "2 个 PCIe Gen 5 x16 插槽（可配置为 1 个 PCIe Gen 5 x16，或 2 个 PCIe Gen 5 x8）",
+          "2 个 PCIe Gen 4 x4 插槽",
+          "3 个 PCIe Gen 4 x1 插槽",
+          "提供 8-bit GPIO、SMBUS 和 I2C"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "Intel PTT（集成式 fTPM）",
+          "可选 TPM 2.0（dTPM）芯片"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "RTC 电池",
+          "BIOS/UEFI，支持 Wake-on-LAN（网络唤醒）和看门狗定时器",
+          "CPU 风扇接针（PWM）",
+          "2 组系统风扇接针",
+          "前面板接针，提供硬盘活动指示灯、电源指示灯、电源开关和重置接口",
+          "PS/2 接口",
+          "机箱入侵检测"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "html": "Jetway 表示，这块主板支持 Windows 11 64-bit 和 Linux。官方同时提供用户手册、面向 PTT 与 dTPM 的 BIOS 固件文件，以及适用于 Windows 10/11 和 Linux 的驱动程序，覆盖 NPU、GPIO、音频、以太网、芯片组等项目。上述资料都可以在本文末尾附上的产品页面中找到。"
+      },
+      {
+        "type": "paragraph",
+        "html": "这是 ATX-ARS1 主板的第二个修订版本，首个型号采用的是 Q870 芯片组。ATX-ARS1-Q870 更适合标准工业自动化场景；而 ATX-ARS1-W880 则凭借对带 ECC 的 DDR5 内存的支持，面向“任务关键型设备”，例如机器人控制、医疗设备和服务器。"
+      },
+      {
+        "type": "paragraph",
+        "html": "虽然这是 CNX Software 首次介绍的 Arrow Lake-S ATX 主板，但 MSI 此前已经推出过 <a href=\"https://ipc.msi.com/product_detail/MS-CF20-V2.0\" target=\"_blank\" rel=\"noreferrer noopener\">MS-CF20 V2.0</a>（同样采用 W880 芯片组），而 <a href=\"https://www.dfi.com/pressroom/content/494\" target=\"_blank\" rel=\"noreferrer noopener\">DFI 也在 2025 年 8 月发布了</a> 搭载 Q870/W880 的 ARS630 ATX 主板。另一款 Arrow Lake-S 硬件平台则是尺寸更小的 <a href=\"https://www.cnx-software.com/2025/07/02/avalue-epi-arls-4-inch-epic-sbc-features-lga1851-socket-for-intel-core-ultra-arrow-lake-s-processors/\" target=\"_blank\" rel=\"noreferrer noopener\">Avalue EPI-ARLS 4 英寸“EPIC” SBC</a>，但仅支持 35W 级别的处理器。"
+      },
+      {
+        "type": "paragraph",
+        "html": "Jetway 尚未公布其 ATX-ARS1-W880 Arrow Lake-S ATX 主板的上市时间和价格。更多资料，包括用户手册、BIOS 与驱动程序，都可以在 <a href=\"https://jetwayipc.com/products/atx-ars1-w880/\" target=\"_blank\" rel=\"noreferrer noopener\">产品页面</a> 中找到。"
+      }
+    ]
+  },
+  "workflow": {
+    "articleId": 2642,
+    "rssTitle": "Intel Arrow Lake-S ATX motherboard supports up to 256GB CU-DIMM DDR5 RAM, features W880 chipset"
+  }
+}

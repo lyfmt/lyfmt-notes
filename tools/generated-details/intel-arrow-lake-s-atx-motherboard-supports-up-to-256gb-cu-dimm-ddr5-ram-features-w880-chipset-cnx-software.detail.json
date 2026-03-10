@@ -1,0 +1,133 @@
+{
+  "available": false,
+  "layout": "draft",
+  "translatedFrom": "https://www.cnx-software.com/2026/03/10/intel-arrow-lake-s-atx-motherboard-supports-up-to-256gb-cu-dimm-ddr5-ram-features-w880-chipset/",
+  "sourceName": "CNX Software",
+  "sourceDescription": "以下为根据原文结构自动生成的详情草稿，已保留段落层次、图片与媒体；默认尚未完成中文翻译润色。",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "html": "Jetway ATX-ARS1-W880 is an ATX motherboard taking socketed Intel Arrow Lake-S SoCs with up to 24 cores, 36 TOPS of AI performance, and featuring four CU-DIMM (Clocked Unbuffered DIMM) sockets for up to 256GB DDR5 ECC memory, and a W880 chipset."
+    },
+    {
+      "type": "paragraph",
+      "html": "Targeting Smart Factory applications, the industrial-grade motherboard also features four SATA III ports and two M.2 M-Key PCIe Gen5/4 sockets for storage, seven PCIe slots, three 2.5GbE ports, M.2 E-Key and B-Key sockets for WiFi, Bluetooth, and cellular (4G/5G) connectivity, sixteen USB interfaces (Type-A and headers), and a few serial interfaces. The ATX-ARS1-W880 also supports up to four independent displays through DP, HDMI, and VGA ports, and features a combo audio block with Line-in, Line-out, and MIC-out jacks."
+    },
+    {
+      "type": "image",
+      "src": "https://www.cnx-software.com/wp-content/uploads/2026/03/Jetway-ATX-ARS1-W880-ATX-motherboard-720x465.jpg",
+      "alt": "Jetway ATX-ARS1-W880 ATX motherboard",
+      "caption": "Jetway ATX-ARS1-W880 ATX motherboard"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Jetway ATX-ARS1-W880 specifications"
+    },
+    {
+      "type": "list",
+      "items": [
+        "4x SATA III",
+        "Support for M.2 NVMe SSDs (See Expansion section)",
+        "RAID – Intel VMD RAID 0, 1 &amp; SATA RAID 0, 1, 5, 10"
+      ]
+    },
+    {
+      "type": "list",
+      "items": [
+        "1x DP1.4a up to 4096 x 2160 @ 60Hz",
+        "2x HDMI 2.1 TMDS up to 3840 x 2160 @ 60Hz",
+        "VGA up to 1920 x 1080 @ 60Hz",
+        "Support for up to 4x independent displays"
+      ]
+    },
+    {
+      "type": "list",
+      "items": [
+        "3.5mm Line-in audio jack",
+        "3.5mm Line-out audio jack",
+        "3.5mm MIC-in audio jack",
+        "Realtek codec",
+        "3W amplifier"
+      ]
+    },
+    {
+      "type": "list",
+      "items": [
+        "2.5GbE RJ45 port via Intel I226-LM controller",
+        "2x 2.5GbE RJ45 ports via Intel I226-V controllers",
+        "Optional WiFi and Bluetooth via M.2 Key-E socket",
+        "Optional 4G LTE/5G via M.2 Key-B socket and NanoSIM card slot"
+      ]
+    },
+    {
+      "type": "list",
+      "items": [
+        "6x USB 3.2 Gen2 ports",
+        "2x USB 3.2 Gen 1 interfaces via internal header",
+        "6x USB 2.0 interfaces via internal header",
+        "Internal vertical USB 3.2 Gen 1×1 Type A port",
+        "Internal vertical USB 2.0 Type A port"
+      ]
+    },
+    {
+      "type": "list",
+      "items": [
+        "DB-9 for <a href=\"https://www.cnx-software.com/2018/07/04/rs232-vs-rs422-vs-rs485-differences/\" target=\"_blank\" rel=\"noreferrer noopener\">RS-232/422/485</a>",
+        "5x RS-232 via internal header"
+      ]
+    },
+    {
+      "type": "list",
+      "items": [
+        "M.2 M-Key 2242/2260/2280/22110 (PCIe Gen 5×4) socket with NVMe support",
+        "M.2 M-key 2280 (PCIe Gen 4 x4) socket with NVMe support",
+        "M.2 E-Key 2230 (USB 2.0/PCIe Gen 3 x1) socket with CNVio support",
+        "M.2 B-Key 3042/3052 (USB3.1/USB2.0/PCIe Gen 3 x1) socket for 4G/5G module",
+        "2x PCIe Gen 5 x16 slots (1x PCIe Gen 5×16 or 2 x PCIe Gen 5 x8)",
+        "2x PCIe Gen 4 x4 slots",
+        "3x PCIe Gen 4 x1 slots",
+        "8-bit GPIO, SMBUS, I2C"
+      ]
+    },
+    {
+      "type": "list",
+      "items": [
+        "Intel PTT (Integrated fTPM)",
+        "Optional TPM 2.0 (dTPM) chip"
+      ]
+    },
+    {
+      "type": "list",
+      "items": [
+        "RTC battery",
+        "BIOS/UEFI with Wake-onLAN, Watchdog timer",
+        "CPU fan header (PWM)",
+        "2x system fan headers",
+        "Front panel header with HDD active LED, Power LED, Power On/Off, and Reset",
+        "PS/2 connector",
+        "Chassis intrusion"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "html": "Jeyway provides support for Windows 11 64-bit and Linux for the motherboard. The company provides a user manual, BIOS firmware files for PTT and dTPM, plus Windows 10/11 and Linux drivers for the NPU, GPIOs, audio, Ethernet, the chipset, and more. You’ll find all those in the product page linked at the end of this article."
+    },
+    {
+      "type": "paragraph",
+      "html": "It’s the second revision of the ATX-ARS1 motherboard, as the first model relied on a Q870 chipset. The ATX-ARS1-Q870 is suitable for standard industrial automation, but the ATX-ARS1-W880 targets “mission-critical equipment” for robotics control, medical equipment, and servers thanks to DDR5 memory with ECC support."
+    },
+    {
+      "type": "paragraph",
+      "html": "While it’s the first Arrow Lake-S ATX motherboard we’ve covered here on CNX Software, MSI previously introduced the <a href=\"https://ipc.msi.com/product_detail/MS-CF20-V2.0\" target=\"_blank\" rel=\"noreferrer noopener\">MS-CF20 V2.0</a> (also with W880 chipset), and <a href=\"https://www.dfi.com/pressroom/content/494\" target=\"_blank\" rel=\"noreferrer noopener\">DFI unveiled</a> the ARS630 ATX motherboard with Q870/W880 in August 2025. Another Arrow Lake-S hardware platform is the smaller <a href=\"https://www.cnx-software.com/2025/07/02/avalue-epi-arls-4-inch-epic-sbc-features-lga1851-socket-for-intel-core-ultra-arrow-lake-s-processors/\" target=\"_blank\" rel=\"noreferrer noopener\">Avalue EPI-ARLS 4-inch “EPIC” SBC</a> limited to 35W parts."
+    },
+    {
+      "type": "paragraph",
+      "html": "Jetway has not provided availability and pricing information for its ATX-ARS1-W880 Arrow Lake-S ATX motherboard. More details, including a user manual, the BIOS, and drivers, can be found on <a href=\"https://jetwayipc.com/products/atx-ars1-w880/\" target=\"_blank\" rel=\"noreferrer noopener\">the product page</a>."
+    },
+    {
+      "type": "paragraph",
+      "html": "<strong>Support CNX Software! Donate via <a href=\"https://www.cnx-software.com/donate-cryptocurrencies/\" target=\"_blank\" rel=\"noreferrer noopener\">cryptocurrencies</a>, <a href=\"https://www.patreon.com/cnxsoft\" target=\"_blank\" rel=\"noreferrer noopener\">become a Patron</a> on Patreon, or purchase goods on <a href=\"https://amzn.to/3SXubZ0\" target=\"_blank\" rel=\"noreferrer noopener\">Amazon</a> or <a href=\"https://s.click.aliexpress.com/e/_DmGIIRT\" target=\"_blank\" rel=\"noreferrer noopener\">Aliexpress</a></strong>. We also use affiliate links in articles to earn commissions if you make a purchase after clicking on those links."
+    }
+  ]
+}

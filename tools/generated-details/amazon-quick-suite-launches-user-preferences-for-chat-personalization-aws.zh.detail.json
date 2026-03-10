@@ -1,0 +1,18 @@
+{
+  "available": true,
+  "layout": "detail-zh",
+  "translatedFrom": "https://aws.amazon.com/about-aws/whats-new/2026/03/user-preferences-in-quick/",
+  "sourceName": "AWS Architecture Blog",
+  "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Amazon Quick Suite 推出 User Preferences，支持聊天个性化设置"
+    },
+    {
+      "type": "paragraph",
+      "html": "我们推出了 Amazon Quick Suite 中的 User Preferences。这项新功能让用户可以更自主地决定 Quick 对自己而言该如何呈现、如何使用，以及如何配合自己的工作方式。有了 User Preferences，用户现在可以自定义 Chat 面板的默认展开状态，选择进入时默认展开或默认收起；同时，Quick 还会自动记住他们上一次使用时的设置，并从上次离开的地方继续。用户还可以选择默认聊天代理，并为 My Assistant 预先设定默认知识范围，这样每次回到 Quick 时，偏好的 agent 都已就绪。除此之外，用户还能进一步个性化体验，例如告诉 Quick 希望被如何称呼，以及自己在工作中的关注重点；Quick 会利用这些上下文来个性化回答，让每次互动都更贴合实际需求。最后，用户也可以直接在 User Preferences 中查看并管理自己的 memories。 <br> <br> 在此之前，用户无法在不同会话之间持续保留自己偏好的 Chat 设置、agent 选择或个人上下文信息。User Preferences 通过提供一个统一入口来解决这一问题，用户可以在这里集中配置 Quick 的工作方式，从而节省时间，并让每次打开 Quick 时都能从一开始就获得更个性化的体验。 <br> <br> 只要 Amazon Quick Suite 在某个 AWS 区域可用，User Preferences 也会在该区域提供。如需了解更多信息，请访问 <a href=\"https://docs.aws.amazon.com/quick/latest/userguide/what-is.html\" target=\"_blank\" rel=\"noreferrer noopener\">Amazon Quick Suite User Guide.</a>"
+    }
+  ]
+}

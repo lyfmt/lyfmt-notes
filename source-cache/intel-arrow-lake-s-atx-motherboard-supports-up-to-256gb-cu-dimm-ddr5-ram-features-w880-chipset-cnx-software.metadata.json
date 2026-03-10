@@ -1,0 +1,20 @@
+{
+  "item": {
+    "id": 2642,
+    "title": "Intel Arrow Lake-S ATX motherboard supports up to 256GB CU-DIMM DDR5 RAM, features W880 chipset",
+    "blog": "CNX Software",
+    "url": "https://www.cnx-software.com/2026/03/10/intel-arrow-lake-s-atx-motherboard-supports-up-to-256gb-cu-dimm-ddr5-ram-features-w880-chipset/",
+    "published": "2026-03-10T00:00:17Z",
+    "discovered": "2026-03-10T01:00:57.208619844Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://www.cnx-software.com/2026/03/10/intel-arrow-lake-s-atx-motherboard-supports-up-to-256gb-cu-dimm-ddr5-ram-features-w880-chipset/",
+    "ok": true,
+    "title": "Intel Arrow Lake-S ATX motherboard supports up to 256GB CU-DIMM DDR5 RAM, features W880 chipset - CNX Software",
+    "description": "Jetway ATX-ARS1-W880 is an ATX motherboard taking socketed Intel Arrow Lake-S SoCs with up to 24 cores, 36 TOPS of AI performance, and featuring four",
+    "fetched_bytes": 241628,
+    "error": null
+  },
+  "classification": "normal"
+}
