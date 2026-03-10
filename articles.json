@@ -33,103 +33,33 @@
         }
       ],
       "detail": {
-        "available": false,
+        "available": true,
         "layout": "detail-zh",
         "translatedFrom": "https://hackaday.com/2026/03/10/arduinos-new-ai-centric-board-is-the-ventuno-q/",
         "sourceName": "Hackaday",
-        "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+        "sourceDescription": "以下为原文结构对应的中文翻译版。",
         "blocks": [
           {
-            "type": "heading",
-            "level": 2,
-            "text": "Hackaday"
-          },
-          {
-            "type": "list",
-            "items": [
-              "by:"
-            ]
-          },
-          {
-            "type": "list",
-            "items": [
-              "<a href=\"https://www.facebook.com/sharer/sharer.php?u=https://hackaday.com/2026/03/10/arduinos-new-ai-centric-board-is-the-ventuno-q/\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>",
-              "<a href=\"https://twitter.com/intent/tweet?text=Arduino’s%20New%20AI-Centric%20Board%20Is%20The%20VENTUNO%20Q%20via%20@hackaday&amp;url=https://hackaday.com/2026/03/10/arduinos-new-ai-centric-board-is-the-ventuno-q/\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>",
-              "<a href=\"https://news.ycombinator.com/submitlink?u=https://hackaday.com/2026/03/10/arduinos-new-ai-centric-board-is-the-ventuno-q/&amp;t=Arduino’s%20New%20AI-Centric%20Board%20Is%20The%20VENTUNO%20Q\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>",
-              "<a href=\"https://www.reddit.com/submit?url=https://hackaday.com/2026/03/10/arduinos-new-ai-centric-board-is-the-ventuno-q/\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>"
-            ]
-          },
-          {
             "type": "image",
-            "src": "https://hackaday.com/wp-content/uploads/2026/03/arduino_ventuno_q_header.jpg?w=800",
+            "src": "./assets/posts/arduino-s-new-ai-centric-board-is-the-ventuno-q/figure-01.jpg",
             "alt": "",
             "caption": ""
           },
           {
             "type": "paragraph",
-            "html": "There have been many questions about what direction Arduino would take after being bought by Qualcomm. Now it would seem that we’re getting a clearer picture. Perhaps unsurprisingly the answer appears to be ‘AI’, with the new Arduino VENTUNO Q SBC being advertised as ‘democratizing AI’ in the <a href=\"https://www.qualcomm.com/news/releases/2026/03/arduino-announces-arduino-ventuno-q----powered-by-qualcomm-drago\" target=\"_blank\" rel=\"noreferrer noopener\">Qualcomm press release</a>, although it also references robotics."
+            "html": "在 Arduino 被高通收购之后，人们对它将走向何方提出了许多问题。现在看来我们似乎正在获得更清晰的图景。也许并不令人意外，答案似乎是“AI”，在 <a href=\"https://www.qualcomm.com/news/releases/2026/03/arduino-announces-arduino-ventuno-q----powered-by-qualcomm-drago\" target=\"_blank\" rel=\"noreferrer noopener\">Qualcomm press release</a> 中新的 Arduino VENTUNO Q SBC 被宣传为“democratizing AI”，尽管其中也提到机器人。"
           },
           {
             "type": "paragraph",
-            "html": "This new board is based around the Dragonwing IQ-8275 SoC along with an STM32H5F5 MCU, making it somewhat of a beefier brother of the previously covered <a href=\"https://hackaday.com/2025/10/07/qualcomm-introduces-the-arduino-uno-q-linux-capable-sbc/\" target=\"_blank\" rel=\"noreferrer noopener\">Arduino Uno Q</a>, which also offers an SoC/MCU hybrid solution. On the <a href=\"https://www.arduino.cc/product-ventuno-q\" target=\"_blank\" rel=\"noreferrer noopener\">product page</a> we can see the overall specifications for this new board, where the release date is specified as ‘soon’."
+            "html": "这块新板围绕 Dragonwing IQ-8275 SoC 并配有 STM32H5F5 MCU，使它有点像之前报道的 <a href=\"https://hackaday.com/2025/10/07/qualcomm-introduces-the-arduino-uno-q-linux-capable-sbc/\" target=\"_blank\" rel=\"noreferrer noopener\">Arduino Uno Q</a> 的更强壮兄弟，后者同样提供 SoC/MCU 混合方案。在 <a href=\"https://www.arduino.cc/product-ventuno-q\" target=\"_blank\" rel=\"noreferrer noopener\">product page</a> 上我们可以看到这块新板的总体规格，其中发布日期被标注为“soon”。"
           },
           {
             "type": "paragraph",
-            "html": "Its <a href=\"https://www.qualcomm.com/internet-of-things/products/iq8-series/iq-8275\" target=\"_blank\" rel=\"noreferrer noopener\">IQ-8275</a> SoC is part of Qualcomm’s IQ8 series, with eight 2.35 GHz ARM cores and an Adreno 623 GPU, paired with 16 GB of LPDDR5. The Cortex M33-based <a href=\"https://www.st.com/en/microcontrollers-microprocessors/stm32h5e5-5f5.html\" target=\"_blank\" rel=\"noreferrer noopener\">STM32H5F5</a> MCU comes with its own 4 MB of Flash and 1.5 MB of RAM, all on a board that’s significantly larger than the Uno Q and isn’t crippled by a single USB-C port as SoC I/O."
+            "html": "它的 <a href=\"https://www.qualcomm.com/internet-of-things/products/iq8-series/iq-8275\" target=\"_blank\" rel=\"noreferrer noopener\">IQ-8275</a> SoC 属于高通的 IQ8 系列，具有八个 2.35 GHz 的 ARM 核心和一颗 Adreno 623 GPU，并配有 16 GB 的 LPDDR5。基于 Cortex M33 的 <a href=\"https://www.st.com/en/microcontrollers-microprocessors/stm32h5e5-5f5.html\" target=\"_blank\" rel=\"noreferrer noopener\">STM32H5F5</a> MCU 自带 4 MB 的 Flash 和 1.5 MB 的 RAM，所有这些都在一块明显比 Uno Q 更大的板子上，而且这块板没有因为仅有一个 USB‑C 端口作为 SoC I/O 而受限。"
           },
           {
             "type": "paragraph",
-            "html": "Although clearly more aimed at industrial and automation applications than the solution-in-search-of-a-problem Uno Q board, it remains to be seen whether this board will catch on with Arduino fans, or whether Qualcomm’s goal is more to break into whole new markets under the Arduino brand."
-          },
-          {
-            "type": "image",
-            "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_face.png",
-            "alt": "",
-            "caption": ""
-          },
-          {
-            "type": "image",
-            "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_twitter.png",
-            "alt": "",
-            "caption": ""
-          },
-          {
-            "type": "image",
-            "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_in.png",
-            "alt": "",
-            "caption": ""
-          },
-          {
-            "type": "image",
-            "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_mail1.png",
-            "alt": "",
-            "caption": ""
-          },
-          {
-            "type": "list",
-            "items": [
-              "<a href=\"https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhackaday.com%2F2026%2F03%2F10%2Farduinos-new-ai-centric-board-is-the-ventuno-q%2F\" target=\"_blank\" rel=\"noreferrer noopener\"> <i> </i> </a>",
-              "<a href=\"https://twitter.com/intent/tweet?text=Arduino’s%20New%20AI-Centric%20Board%20Is%20The%20VENTUNO%20Q%20via%20@hackaday&amp;url=https://hackaday.com/2026/03/10/arduinos-new-ai-centric-board-is-the-ventuno-q/\" target=\"_blank\" rel=\"noreferrer noopener\"> <i></i> </a>",
-              "<a href=\"https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fhackaday.com%2F2026%2F03%2F10%2Farduinos-new-ai-centric-board-is-the-ventuno-q%2F\" target=\"_blank\" rel=\"noreferrer noopener\"> <i></i> </a>",
-              "<a href=\"mailto:?subject=Arduino%E2%80%99s+New+AI-Centric+Board+Is+The+VENTUNO+Q | Hackaday&amp;body=https%3A%2F%2Fhackaday.com%2F2026%2F03%2F10%2Farduinos-new-ai-centric-board-is-the-ventuno-q%2F\" target=\"_blank\" rel=\"noreferrer noopener\"> <i></i> </a>"
-            ]
-          }
-        ],
-        "refineErrors": [
-          {
-            "index": 0,
-            "type": "heading",
-            "message": "Empty Pi output."
-          },
-          {
-            "index": 1,
-            "type": "list",
-            "message": "Empty Pi output."
-          },
-          {
-            "index": 2,
-            "type": "list",
-            "message": "Empty Pi output."
+            "html": "虽然它显然比那块“solution-in-search-of-a-problem”的 Uno Q 板更面向工业和自动化应用，但这块板能否在 Arduino 迷中流行仍有待观察，或者高通的目标是否更多是在 Arduino 品牌下进入全新的市场。"
           }
         ]
       },
