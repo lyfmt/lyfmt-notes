@@ -1,0 +1,20 @@
+{
+  "item": {
+    "id": 2660,
+    "title": "New ways to create faster with Gemini in Docs, Sheets, Slides and Drive",
+    "blog": "Google AI Blog",
+    "url": "https://blog.google/products-and-platforms/products/workspace/gemini-workspace-updates-march-2026/",
+    "published": "2026-03-10T13:00:00Z",
+    "discovered": "2026-03-10T13:00:15.221992926Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://blog.google/products-and-platforms/products/workspace/gemini-workspace-updates-march-2026/",
+    "ok": true,
+    "title": "New ways to create faster with Gemini in Docs, Sheets, Slides and Drive",
+    "description": "These new Gemini features are coming to Google Docs, Sheets, Slides and Drive to help you get more done.",
+    "fetched_bytes": 367841,
+    "error": null
+  },
+  "classification": "normal"
+}

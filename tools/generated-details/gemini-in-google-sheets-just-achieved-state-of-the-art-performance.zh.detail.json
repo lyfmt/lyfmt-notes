@@ -1,0 +1,59 @@
+{
+  "available": true,
+  "layout": "detail-zh",
+  "translatedFrom": "https://blog.google/products-and-platforms/products/workspace/gemini-google-sheets-state-of-the-art/",
+  "sourceName": "Google AI Blog",
+  "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "html": "Today we <a href=\"https://blog.google/products-and-platforms/products/workspace/gemini-workspace-updates-march-2026\" target=\"_blank\" rel=\"noreferrer noopener\">announced</a> new beta features for Gemini in Sheets to help you create, organize and edit entire sheets, from basic tasks to complex data analysis — just describe what you need."
+    },
+    {
+      "type": "paragraph",
+      "html": "Gemini in Sheets has reached state-of-the-art proficiency in autonomously manipulating complex, real-world spreadsheets on the full <a href=\"https://spreadsheetbench.github.io/\" target=\"_blank\" rel=\"noreferrer noopener\">SpreadsheetBench</a> dataset, a public benchmark which evaluates models on their ability to edit spreadsheets in real-world scenarios. Achieving a 70.48% success rate, Gemini in Sheets not only exceeds competitors but nears human expert ability."
+    },
+    {
+      "type": "paragraph",
+      "html": "We look forward to seeing how you use these new capabilities. You can learn more about the full set of Gemini updates in Google Sheets, Drive, Docs and Slides in our full <a href=\"https://blog.google/products-and-platforms/products/workspace/gemini-workspace-updates-march-2026\" target=\"_blank\" rel=\"noreferrer noopener\">Keyword post</a> and <a href=\"https://workspace.google.com/blog/product-announcements/reimagining-content-creation\" target=\"_blank\" rel=\"noreferrer noopener\">Google Workspace post</a>."
+    },
+    {
+      "type": "image",
+      "src": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_in_Google_Sheets_Spreadshe.width-100.format-webp.webp",
+      "alt": "A bar graph showing the spreadsheet accuracy of Gemini in Sheets nearing human expert ability, with a 70.48% accuracy rate",
+      "caption": "A bar graph showing the spreadsheet accuracy of Gemini in Sheets nearing human expert ability, with a 70.48% accuracy rate"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Related stories"
+    },
+    {
+      "type": "image",
+      "src": "https://blog.google/static/blogv2/images/newsletter_toast.svg?version=pr20260219-1731",
+      "alt": "",
+      "caption": ""
+    },
+    {
+      "type": "paragraph",
+      "html": "Let’s stay in touch. Get the latest news from Google in your inbox."
+    }
+  ],
+  "refineErrors": [
+    {
+      "index": 0,
+      "type": "paragraph",
+      "message": "Empty Pi output."
+    },
+    {
+      "index": 1,
+      "type": "paragraph",
+      "message": "Empty Pi output."
+    },
+    {
+      "index": 2,
+      "type": "paragraph",
+      "message": "Empty Pi output."
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "slug": "gemini-in-google-sheets-just-achieved-state-of-the-art-performance",
+  "title": "Gemini in Google Sheets just achieved state-of-the-art performance.",
+  "author": "Google AI Blog",
+  "publishedAt": "2026-03-10",
+  "source": "Google AI Blog",
+  "url": "https://blog.google/products-and-platforms/products/workspace/gemini-google-sheets-state-of-the-art/",
+  "tags": [
+    "AI"
+  ],
+  "excerpt": "这篇文章围绕“Gemini in Google Sheets just achieved state-of-the-art performance.”展开，RSS 摘要提到：Today we announced new beta features for Gemini in Sheets to help you create, organize and edit entire sheets, from basic tasks to comple...",
+  "content": [
+    {
+      "heading": "文章核心",
+      "paragraphs": [
+        "基于 RSS 摘要与页面元数据，原文重点是：Today we announced new beta features for Gemini in Sheets to help you create, organize and edit entire sheets, from basic tasks to complex data analysis — just describe …",
+        "来源信息：Google AI Blog｜2026-03-10。"
+      ]
+    },
+    {
+      "heading": "值得继续补充的点",
+      "paragraphs": [
+        "如果后续补齐详情视图，可以继续沿着原文结构展开关键论点、案例、约束条件与结论。",
+        "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+      ]
+    }
+  ],
+  "detail": {
+    "available": true,
+    "layout": "detail-zh",
+    "translatedFrom": "https://blog.google/products-and-platforms/products/workspace/gemini-google-sheets-state-of-the-art/",
+    "sourceName": "Google AI Blog",
+    "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "html": "Today we <a href=\"https://blog.google/products-and-platforms/products/workspace/gemini-workspace-updates-march-2026\" target=\"_blank\" rel=\"noreferrer noopener\">announced</a> new beta features for Gemini in Sheets to help you create, organize and edit entire sheets, from basic tasks to complex data analysis — just describe what you need."
+      },
+      {
+        "type": "paragraph",
+        "html": "Gemini in Sheets has reached state-of-the-art proficiency in autonomously manipulating complex, real-world spreadsheets on the full <a href=\"https://spreadsheetbench.github.io/\" target=\"_blank\" rel=\"noreferrer noopener\">SpreadsheetBench</a> dataset, a public benchmark which evaluates models on their ability to edit spreadsheets in real-world scenarios. Achieving a 70.48% success rate, Gemini in Sheets not only exceeds competitors but nears human expert ability."
+      },
+      {
+        "type": "paragraph",
+        "html": "We look forward to seeing how you use these new capabilities. You can learn more about the full set of Gemini updates in Google Sheets, Drive, Docs and Slides in our full <a href=\"https://blog.google/products-and-platforms/products/workspace/gemini-workspace-updates-march-2026\" target=\"_blank\" rel=\"noreferrer noopener\">Keyword post</a> and <a href=\"https://workspace.google.com/blog/product-announcements/reimagining-content-creation\" target=\"_blank\" rel=\"noreferrer noopener\">Google Workspace post</a>."
+      },
+      {
+        "type": "image",
+        "src": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_in_Google_Sheets_Spreadshe.width-100.format-webp.webp",
+        "alt": "A bar graph showing the spreadsheet accuracy of Gemini in Sheets nearing human expert ability, with a 70.48% accuracy rate",
+        "caption": "A bar graph showing the spreadsheet accuracy of Gemini in Sheets nearing human expert ability, with a 70.48% accuracy rate"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Related stories"
+      },
+      {
+        "type": "image",
+        "src": "https://blog.google/static/blogv2/images/newsletter_toast.svg?version=pr20260219-1731",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "type": "paragraph",
+        "html": "Let’s stay in touch. Get the latest news from Google in your inbox."
+      }
+    ],
+    "refineErrors": [
+      {
+        "index": 0,
+        "type": "paragraph",
+        "message": "Empty Pi output."
+      },
+      {
+        "index": 1,
+        "type": "paragraph",
+        "message": "Empty Pi output."
+      },
+      {
+        "index": 2,
+        "type": "paragraph",
+        "message": "Empty Pi output."
+      }
+    ]
+  },
+  "workflow": {
+    "articleId": 2659,
+    "rssTitle": "Gemini in Google Sheets just achieved state-of-the-art performance."
+  }
+}

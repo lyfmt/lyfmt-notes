@@ -1,0 +1,188 @@
+{
+  "available": true,
+  "layout": "detail-zh",
+  "translatedFrom": "https://blog.google/products-and-platforms/products/workspace/gemini-workspace-updates-march-2026/",
+  "sourceName": "Google AI Blog",
+  "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Social_Share_-_keyword.width-1300.png",
+      "alt": "New ways to create faster with Gemini in Docs, Sheets, Slides and Drive",
+      "caption": ""
+    },
+    {
+      "type": "paragraph",
+      "html": "Mar 10, 2026"
+    },
+    {
+      "type": "paragraph",
+      "html": "These new Gemini features are coming to Google Workspace for Google AI Ultra and Pro subscribers."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Basic explainer"
+    },
+    {
+      "type": "paragraph",
+      "html": "Google is making its AI, Gemini, work better with Docs, Sheets, Slides and Drive. Gemini can now help you write documents, create spreadsheets, and design presentations faster. It can also find info in your files and emails to give you quick answers. These new features will be available for people who pay for Google AI Ultra and Pro."
+    },
+    {
+      "type": "paragraph",
+      "html": "We’ve all been there: the blinking cursor, the empty spreadsheet or the first blank slide. Whether you’re planning a trip, organizing an event or launching a side project, getting started is often the hardest part."
+    },
+    {
+      "type": "paragraph",
+      "html": "Today, we’re making Gemini in Docs, Sheets, Slides and Drive more personal, capable and collaborative to help you get things done, faster. When you select your sources, Gemini can now pull relevant information from your files, emails and the web to securely connect dots and uncover useful insights, while keeping your information safeguarded."
+    },
+    {
+      "type": "paragraph",
+      "html": "Keep reading to learn more about the new beta features rolling out starting today to <a href=\"https://one.google.com/intl/en/about/google-ai-plans/\" target=\"_blank\" rel=\"noreferrer noopener\">Google AI Ultra and Pro subscribers</a> — and how you can try them."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Go from a blank doc to a final draft"
+    },
+    {
+      "type": "paragraph",
+      "html": "Gemini in Docs is your go-to writing partner. Using contextual information and new editing features, Gemini can now help you create personalized documents in your preferred style."
+    },
+    {
+      "type": "list",
+      "items": [
+        "<b>Get to a first draft instantly</b>: Simply describe what you want Gemini to create in the side panel or new bottom bar — like &quot;draft a newsletter for our neighborhood association using the meeting minutes from my my January HOA meeting and the list of upcoming events&quot; — to get a customized first draft that draws from your relevant files.",
+        "<b>Polish and perfect</b>: Ask Gemini to refine sections, strengthen your message and build on your ideas. Highlight specific sections or edit your entire doc at once with a prompt like &quot;make this doc more professional while keeping the tone energetic.&quot;",
+        "<b>Match voice and format effortlessly</b>: Use &quot;Match writing style&quot; to unify the voice and style across a document so it sounds like you. Or use &quot;Match doc format&quot; to automatically align to the style of a reference document. For example, if you find a travel itinerary template you love, Gemini in Docs can instantly populate it with your own travel details drawing from your emails such as your flight information, hotel details and rental car reservations."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "html": "Use Gemini in Docs to create new docs from scratch based on relevant information from your files and emails, like turning last season’s notes into a ready-to-use coaching plan."
+    },
+    {
+      "type": "paragraph",
+      "html": "Refine your writing to unify the voice and style across any document. For example, you can change the tone in your coaching plan introduction to feel more warm and welcoming."
+    },
+    {
+      "type": "paragraph",
+      "html": "Use &quot;Match doc format&quot; to automatically align to the style of a reference document. For example, you can pull all the details for your upcoming trip to Nashville and have it match your favorite itinerary template."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Get started quickly with spreadsheets that build themselves"
+    },
+    {
+      "type": "paragraph",
+      "html": "Gemini in Sheets, which <a href=\"https://blog.google/products-and-platforms/products/workspace/gemini-google-sheets-state-of-the-art\" target=\"_blank\" rel=\"noreferrer noopener\">delivers state-of-the-art performance</a>, now acts as your collaborative partner that creates, organizes and edits entire sheets, from basic tasks to complex data analysis — just describe what you need."
+    },
+    {
+      "type": "list",
+      "items": [
+        "<b>Make spreadsheets more easily than ever</b>: Just tell Gemini what you’re working on — like<i> &quot;</i>organize my upcoming move to Chicago. Create a checklist for packing by room, a contact list for utilities and a spreadsheet to track moving company quotes from my inbox&quot; and it will set up the entire project for you, drawing on relevant details from your own emails and files. Have an existing spreadsheet that needs a little love? Gemini can also help build it out, adding tables, dashboards and more.",
+        "<b>Fill in missing data</b>: For more complex tasks, you can now populate tables even faster <a href=\"https://blog.google/products-and-platforms/products/workspace/gemini-workspace-updates-march-2026/#footnote-1\" target=\"_blank\" rel=\"noreferrer noopener\"> <sup>1</sup> </a> by using &quot;Fill with Gemini&quot; to instantly generate custom text, categorize data and summarize data or access real-time information from Google Search. For example, if you’re applying for college, you may have a tracker for all of your application details. Instead of needing to manually research the due date, tuition and more information for each school, you can populate column headers for the information you want, then drag down to let Gemini fill in the table for you based on relevant information from the web."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "html": "Gemini in Sheets helps you build custom, visual spreadsheets from a single prompt — effortlessly creating tools like a personal finance tracker that organizes your data around your specific goals."
+    },
+    {
+      "type": "paragraph",
+      "html": "&quot;Fill with Gemini&quot; helps you auto-populate tables even faster with summarized, categorized or brand-new data from your existing sheet or the web. For example, you can label your financial data to more easily track your income and expenses."
+    },
+    {
+      "type": "paragraph",
+      "html": "Gemini in Sheets helps you transform a simple prompt into a visual spreadsheet. For example, you can build a personalized health tracker that aligns your workouts and nutrition with your overall health goals."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Go from concept to presentation-ready in Slides"
+    },
+    {
+      "type": "paragraph",
+      "html": "Whether you’re starting with a simple sketch or a detailed prompt, Gemini in Slides acts as your design collaborator. It generates professional layouts, fully editable diagrams and entire presentations from scratch — handling the design and formatting so you can stay focused on your story."
+    },
+    {
+      "type": "list",
+      "items": [
+        "<b>Create a fully editable slide</b>: With updates to slide generation, you can now ask Gemini to create a new slide in your deck that aligns to your overall theme and pulls context from your files, emails and the web.",
+        "<b>Edit collaboratively</b>: If a slide isn&#x27;t quite right, you can simply ask Gemini to help edit like &quot;make this match the colors of the rest of my deck&quot; or &quot;make this more minimal.&quot;",
+        "<b>Generate entire decks (coming soon)</b>: We’re working on a new way to create an entire, polished presentation from a single prompt that pulls in relevant context when needed — like &quot;create a 5-slide deck for my upcoming Tokyo trip.&quot;"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "html": "Ask Gemini to draft a new slide based on the information you provide — like a &quot;life update&quot; slide, perfect for your next girls&#x27; night in. You can also edit the slide to better match your vision, like dialing up the playful tone."
+    },
+    {
+      "type": "paragraph",
+      "html": "Ask Gemini to draft a new slide with a single prompt — like a persuasive pitch for your next family getaway. You can even reference a document to better ground the information."
+    },
+    {
+      "type": "paragraph",
+      "html": "Go from rough notes to ready-to-present slides using Gemini in Slides. For example, you can ask Gemini to take your brainstormed side hustle ideas and design the layout while you focus on the vision."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Get instant answers and understanding across all your files"
+    },
+    {
+      "type": "paragraph",
+      "html": "Google Drive is no longer just a place to store your files — it’s an active collaborator that helps you get insights from them. With “Ask Gemini,” you can find exactly what you’re looking for and make sense of your information instantly."
+    },
+    {
+      "type": "list",
+      "items": [
+        "<b>Get instant answers</b>: When you search in Drive using natural, everyday language, Gemini now provides an “AI Overview” at the top of your results. It summarizes the most relevant information from your files — complete with citations — so you can get the answer you need without even opening a document.",
+        "<b>Gain deeper understanding</b>: Use the all-new &quot;Ask Gemini in Drive&quot; feature to ask complex questions across your documents, emails, calendar and the web. For example, you can select all your tax-related files and ask, “What should I ask my tax advisor before I file this year’s tax returns?” to get a detailed response based on your actual data."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "html": "Find exactly what you need with Gemini in Drive. Whether you’re prepping for a research paper or organizing a group project, Gemini can help you locate your files and answer complex questions, like synthesizing your research on sleep benefits — all within Google Drive — so you can spend less time digging and more time doing."
+    },
+    {
+      "type": "paragraph",
+      "html": "Effortlessly track down exactly what you need with AI Overviews in Drive. For example, simplify your tax prep by letting Gemini surface recent document downloads and last year’s return — getting you tax-ready without the hunt."
+    },
+    {
+      "type": "paragraph",
+      "html": "Gain a deeper understanding of your information without ever leaving Drive. For example, you can use “Ask Gemini” to compare catering proposals for your upcoming wedding, highlighting cost differences and key contract clauses."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "How to get these features"
+    },
+    {
+      "type": "paragraph",
+      "html": "These new features are starting to roll out today in beta and will be first available to <a href=\"https://one.google.com/intl/en/about/google-ai-plans/\" target=\"_blank\" rel=\"noreferrer noopener\">Google AI Ultra and Pro subscribers</a> — available in English globally for Google Docs, Sheets and Slides, and in the U.S. for Google Drive. If you’re a business, you can learn more about these updates on our <a href=\"https://workspace.google.com/blog/product-announcements/reimagining-content-creation\" target=\"_blank\" rel=\"noreferrer noopener\">Google Workspace blog</a>. As an early look, we’ll be continuing to refine the experience over time and look forward to bringing these experiences to more languages soon."
+    },
+    {
+      "type": "paragraph",
+      "html": "Data based on a 95-participant study comparing manual entry against Fill with Gemini on a 100-cell task."
+    }
+  ],
+  "refineErrors": [
+    {
+      "index": 1,
+      "type": "paragraph",
+      "message": "Empty Pi output."
+    },
+    {
+      "index": 2,
+      "type": "paragraph",
+      "message": "Empty Pi output."
+    },
+    {
+      "index": 3,
+      "type": "heading",
+      "message": "Empty Pi output."
+    }
+  ]
+}
