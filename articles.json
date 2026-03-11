@@ -5,6 +5,63 @@
   },
   "posts": [
     {
+      "slug": "turning-a-gdb-coredump-debug-session-into-a-murder-mystery",
+      "title": "Turning a GDB Coredump Debug Session Into a Murder Mystery",
+      "author": "Hackaday",
+      "publishedAt": "2026-03-10",
+      "source": "Hackaday",
+      "url": "https://hackaday.com/2026/03/10/turning-a-gdb-coredump-debug-session-into-a-murder-mystery/",
+      "excerpt": "这篇文章围绕“Turning a GDB Coredump Debug Session Into a Murder Mystery”展开，当前已从 RSS 条目同步到静态博客工作流中。",
+      "tags": [
+        "Hardware"
+      ],
+      "content": [
+        {
+          "heading": "文章核心",
+          "paragraphs": [
+            "当前只拿到了标题、来源和链接，还没有更完整的页面摘要，因此这里只生成一个可继续加工的草稿入口。",
+            "来源信息：Hackaday｜2026-03-10。"
+          ]
+        },
+        {
+          "heading": "值得继续补充的点",
+          "paragraphs": [
+            "如果后续补齐详情视图，重点可以继续展开芯片规格、接口能力、功耗指标和适用场景。",
+            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+          ]
+        }
+      ],
+      "detail": {
+        "available": true,
+        "layout": "detail-zh",
+        "translatedFrom": "https://hackaday.com/2026/03/10/turning-a-gdb-coredump-debug-session-into-a-murder-mystery/",
+        "sourceName": "Hackaday",
+        "sourceDescription": "以下为原文逐段直译，保留原文段落推进与媒体顺序。",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "html": "调试应用崩溃时，常常会让人感觉自己像一位冷酷黑色侦探故事里的无畏侦探，必须查清一场丑陋犯罪背后的肮脏细节。在稀少线索与空洞暗示中跋涉，你会情绪低落，开始思考生命的深层意义与人性的本质，直到突然灵光一现、破案为止。有人会说这很适合做成游戏创意，[Jonathan] 也赞同这一点，于是创作了 <a href=\"https://www.robopenguins.com/fatal_core_dump/\" target=\"_blank\" rel=\"noreferrer noopener\">Fatal Core Dump 游戏</a>。"
+          },
+          {
+            "type": "paragraph",
+            "html": "该游戏的构思与实现细节可在一篇（剧透充足的）<a href=\"https://www.robopenguins.com/core-dump-game/\" target=\"_blank\" rel=\"noreferrer noopener\">博文</a>中找到。游戏的设定是某小行星采矿站发生气闸故障，而你作为工程师必须查明这只是“故障”还是有人蓄意为之。虽然也考虑过 RPG 风格的游戏，但最终发现用 RPG Maker 实现过于困难，于是做成了这种更简约的游戏，因此在某种意义上反而更真实。"
+          },
+          {
+            "type": "paragraph",
+            "html": "可以这么说，这款游戏并非廉价模仿真实调试，而是货真价实。你需要非常熟悉 C、GDB、core dump 分析、x86_64 汇编、Linux 二进制运行时细节等。在游戏结束时，你应该能够判断这只是多年前某个缺咖啡的开发者犯下的愚蠢错误，还是一次利用或引入代码弱点的恶意攻击。"
+          },
+          {
+            "type": "paragraph",
+            "html": "如果你想看看该游戏背后的代码，或许受到启发做出你自己的版本，可以查看这个 <a href=\"https://github.com/axlan/fatal_core_dump\" target=\"_blank\" rel=\"noreferrer noopener\">GitHub 项目</a>。"
+          }
+        ]
+      },
+      "workflow": {
+        "articleId": 2683,
+        "rssTitle": "Turning a GDB Coredump Debug Session Into a Murder Mystery"
+      }
+    },
+    {
       "slug": "amazon-bedrock-agentcore-runtime-now-supports-stateful-mcp-server-features-aws",
       "title": "Amazon Bedrock AgentCore Runtime now supports stateful MCP server features - AWS",
       "author": "AWS Architecture Blog",
