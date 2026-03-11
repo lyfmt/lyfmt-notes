@@ -1,0 +1,20 @@
+{
+  "item": {
+    "id": 2713,
+    "title": "Intel Intros Core Ultra 250K & 270K Plus Chips, Refreshing Desktop Arrow Lake for Enthusiasts",
+    "blog": "ServeTheHome News",
+    "url": "https://www.servethehome.com/intel-intros-core-ultra-250k-270k-plus-chips-refreshing-desktop-arrow-lake-for-enthusiasts/",
+    "published": "2026-03-11T13:01:56Z",
+    "discovered": "2026-03-11T13:28:33.654359948Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://www.servethehome.com/intel-intros-core-ultra-250k-270k-plus-chips-refreshing-desktop-arrow-lake-for-enthusiasts/",
+    "ok": true,
+    "title": "Intel Intros Core Ultra 250K & 270K Plus Chips, Refreshing Desktop Arrow Lake for Enthusiasts",
+    "description": "With Intel’s latest-generation Panther Lake silicon (Core Ultra 3 series) being a mobile-only product generation, the task of carrying the torch for Intel’s desktop product lineup falls to the company’s existing Arrow Lake processors (Core Ultra 2 series) for a second year. A technologically solid but overall unexceptional processor lineup, Arrow Lake’s desktop existence has […]",
+    "fetched_bytes": 162687,
+    "error": null
+  },
+  "classification": "normal"
+}

@@ -1,0 +1,71 @@
+{
+  "available": false,
+  "layout": "draft",
+  "translatedFrom": "https://www.servethehome.com/broadcom-launches-taurus-bcm83640-a-3nm-400g-per-lane-optical-dsp/",
+  "sourceName": "ServeTheHome News",
+  "sourceDescription": "以下为根据原文结构自动生成的详情草稿，已保留段落层次、图片与媒体；默认尚未完成中文翻译润色。",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "https://www.servethehome.com/wp-content/uploads/2026/03/Broadcom-Taurus-BCM83640-696x464.jpeg",
+      "alt": "Broadcom Taurus BCM83640",
+      "caption": "Broadcom Taurus BCM83640"
+    },
+    {
+      "type": "paragraph",
+      "html": "AI is placing unprecedented demands on data center infrastructure. As AI clusters scale to 100,000-plus GPUs and XPUs, requiring gigawatt-scale power facilities, the optical networks connecting them have become the critical bottleneck. Enter Broadcom Taurus BCM83640, a 3nm 400G per lane optical PAM4 DSP, designed specifically to enable 1.6T transceivers and lay the groundwork for even faster 3.2T modules capable of supporting 204.8T switching fabrics.<span></span>"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "What Is Taurus?"
+    },
+    {
+      "type": "paragraph",
+      "html": "The Broadcom Taurus, or the Broadcom BCM83640, represents a significant leap in optical networking technology. Built on a 3nm process node, this monolithic PAM-4 DSP functions as an 8 to 4 gearbox PHY with integrated laser drivers. Broadcom says that this design choice delivers best-in-class performance in both bit error rate and power consumption. Taurus doubles the throughput per lane to enable the next generation of 3.2T optical modules."
+    },
+    {
+      "type": "paragraph",
+      "html": "Broadcom says the device complies with current IEEE standards and interoperates with Broadcom 400G electro-absorption modulated laser and photodiode components."
+    },
+    {
+      "type": "image",
+      "src": "https://www.servethehome.com/wp-content/uploads/2026/03/Broadcom-Taurus-400G-per-Lane-Optical-Platform-v3-800x419.jpeg",
+      "alt": "Broadcom Taurus 400G Per Lane Optical Platform V3",
+      "caption": "Broadcom Taurus 400G Per Lane Optical Platform V3"
+    },
+    {
+      "type": "paragraph",
+      "html": "Currently, most high-end high-speed optical transceivers operate at 200G per lane. By doubling that to 400G per lane, Taurus increases bandwidth density. A single 1RU switch using 1.6T pluggable modules based on Taurus can deliver 102.4T of switching capacity. This effectively doubles what was possible with the previous generation 200G per lane technology. If you saw our recent Substack piece, NVIDIA is already working on achieving higher density in this year’s generation, as physical density matters."
+    },
+    {
+      "type": "paragraph",
+      "html": "NVIDIA’s Co-Packaged Optics Switch is Hinting at Something BIG by Patrick Kennedy"
+    },
+    {
+      "type": "paragraph",
+      "html": "A fun note from a recent showcase of an engineering sample"
+    },
+    {
+      "type": "paragraph",
+      "html": "<a href=\"https://axautikgroupllc.substack.com/p/nvidias-co-packaged-optics-switch\" target=\"_blank\" rel=\"noreferrer noopener\">Read on Substack</a>"
+    },
+    {
+      "type": "paragraph",
+      "html": "<br> The implications go further. Next-generation 204.8T switches will adopt 400G per lane electrical interfaces, matched by 3.2T optical transceivers, using the same signaling rate. This one-to-one mapping between electrical and optical I/O speeds dramatically simplifies the 3.2T optical module design compared to earlier approaches that required retimers and complex gearboxing."
+    },
+    {
+      "type": "paragraph",
+      "html": "For more on the broader 1.6TbE ecosystem, see our coverage of <a href=\"https://www.servethehome.com/broadcom-tomahawk-6-launched-for-1-6tbe-generation/\" target=\"_blank\" rel=\"noreferrer noopener\">Broadcom Tomahawk 6 launched for the 1.6TbE generation</a>."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Final Words"
+    },
+    {
+      "type": "paragraph",
+      "html": "The introduction of the Broadcom Taurus platform is neat for those who are building large-scale AI clusters. This is still a bit of a forward-looking technology for now. Broadcom says it has already begun sampling the BCM83640 to early access customers and partners, with the official launch at OFC 2026 next week. Mass production and deployment in next-generation switch systems are expected by late 2026."
+    }
+  ]
+}
