@@ -5,6 +5,70 @@
   },
   "posts": [
     {
+      "slug": "running-ocarina-of-time-on-the-apple-watch",
+      "title": "Running Ocarina Of Time On The Apple Watch",
+      "author": "Hackaday",
+      "publishedAt": "2026-03-11",
+      "source": "Hackaday",
+      "url": "https://hackaday.com/2026/03/10/running-ocarina-of-time-on-the-apple-watch/",
+      "excerpt": "这篇文章围绕“Running Ocarina Of Time On The Apple Watch”展开，RSS 摘要提到：At this point in time it can be safely stated that the question ‘Does it run Doom?’ defaults to a resounding ‘Yes’. This raises the quest...",
+      "tags": [
+        "Hardware",
+        "AI"
+      ],
+      "content": [
+        {
+          "heading": "文章核心",
+          "paragraphs": [
+            "基于 RSS 摘要与页面元数据，原文重点是：At this point in time it can be safely stated that the question ‘Does it run Doom?’ defaults to a resounding ‘Yes’. This raises the question of what next games should be see…",
+            "来源信息：Hackaday｜2026-03-11。"
+          ]
+        },
+        {
+          "heading": "值得继续补充的点",
+          "paragraphs": [
+            "如果后续补齐详情视图，重点可以继续展开芯片规格、接口能力、功耗指标和适用场景。",
+            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+          ]
+        }
+      ],
+      "detail": {
+        "available": true,
+        "layout": "detail-zh",
+        "translatedFrom": "https://hackaday.com/2026/03/10/running-ocarina-of-time-on-the-apple-watch/",
+        "sourceName": "Hackaday",
+        "sourceDescription": "以下为原文逐段直译，保留原文段落推进与媒体顺序。",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "html": "到目前为止，可以很肯定地说，“能不能跑 <em>Doom</em>？”这个问题的默认答案已经是响亮的“能”。这就引出了下一个问题：还有哪些游戏可以被视为某种令人印象深刻的基准，而 <a href=\"https://hackaday.com/author/gameoftobi/\" target=\"_blank\" rel=\"noreferrer noopener\">Game of Tobi</a> 正在大力瞄准任天堂 64 的作品。最近他把《塞尔达传说：时之笛》<a href=\"https://www.youtube.com/watch?v=1DR0ESBEC8s\" target=\"_blank\" rel=\"noreferrer noopener\">移植到了 Apple Watch</a>，移植版本几乎已经可以发布；再修好几个问题后，就会与《超级马里奥 64》一起放出。"
+          },
+          {
+            "type": "paragraph",
+            "html": "把任天堂 64 游戏移植到其他系统有几种思路；如果目标系统本质上是一台带齐渲染 API 等“配套设施”的小型 PC，那么以 <a href=\"https://github.com/HarbourMasters/Shipwright\" target=\"_blank\" rel=\"noreferrer noopener\">Ship of Harkinian</a> 项目为基础是个不错的起点。这正是 <a href=\"https://hackaday.com/author/gameoftobi/\" target=\"_blank\" rel=\"noreferrer noopener\">Toby</a> 在 Apple Watch 上所做的；经过一些工作后，它可以以稳定的速度运行《时之笛》，主要缺陷是文字渲染坏掉了。"
+          },
+          {
+            "type": "paragraph",
+            "html": "当然，任何小型游戏系统和仅触控屏系统的最大缺陷在于：我们肉乎乎的爪子并不会缩小，而用心灵感应来控制游戏系统也仍不是功能。因此，Apple Watch 版移植最大的妥协，是把控制按键叠加在屏幕上。用蓝牙手柄之类的方式或许可以补偿，但在双手操作方面又会带来它自己的问题。"
+          },
+          {
+            "type": "paragraph",
+            "html": "抛开这些实际问题不谈，我们随身携带的几乎任何“智能”设备都能成为功能完整的复古游戏系统，这本身就很惊人。我们也感谢 <a href=\"https://hackaday.com/author/gameoftobi/\" target=\"_blank\" rel=\"noreferrer noopener\">Toby</a> 为让这一切成真所做的努力。"
+          },
+          {
+            "type": "embed",
+            "provider": "youtube",
+            "src": "https://www.youtube.com/embed/1DR0ESBEC8s?feature=oembed",
+            "title": "I Made OCARINA OF TIME Run on the Apple Watch!"
+          }
+        ]
+      },
+      "workflow": {
+        "articleId": 2704,
+        "rssTitle": "Running Ocarina of Time on the Apple Watch"
+      }
+    },
+    {
       "slug": "event-driven-architecture-in-java-and-kafka",
       "title": "Event-Driven Architecture in Java and Kafka",
       "author": "Foojay",
