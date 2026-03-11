@@ -297,7 +297,7 @@
       "publishedAt": "2026-03-11",
       "source": "CNX Software",
       "url": "https://www.cnx-software.com/2026/03/11/amd-ryzen-ai-embedded-p100-series-expands-with-up-to-12-zen-5-cores-80-tops-of-ai-performance/",
-      "excerpt": "这篇文章围绕“AMD Ryzen AI Embedded P100 series expands with up to 12 Zen 5 cores, 80 TOPS of AI performance - CNX Software”展开，RSS 摘要提到：AMD expands the Ryzen AI Embedded P100 series with additional 8-/12-core SKUs (P164, P174, P185) delivering up to 80 TOPS of AI performance.",
+      "excerpt": "1 标题：文章介绍 AMD Ryzen AI Embedded P100 系列扩展，最高 12 核 Zen 5 与 80 TOPS AI 性能。\n2 内容分类：嵌入式硬件 / AI 计算\n3 内容总结：内容概述该系列新增型号、性能指标与面向边缘与工业场景的定位，并说明其与现有平台的关系。",
       "tags": [
         "Hardware",
         "AI",
@@ -306,17 +306,11 @@
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "基于 RSS 摘要与页面元数据，原文重点是：AMD expands the Ryzen AI Embedded P100 series with additional 8-/12-core SKUs (P164, P174, P185) delivering up to 80 TOPS of AI performance.",
-            "来源信息：CNX Software｜2026-03-11。"
-          ]
-        },
-        {
-          "heading": "值得继续补充的点",
-          "paragraphs": [
-            "如果后续补齐详情视图，重点可以继续展开芯片规格、接口能力、功耗指标和适用场景。",
-            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+            "1 标题：文章介绍 AMD Ryzen AI Embedded P100 系列扩展，最高 12 核 Zen 5 与 80 TOPS AI 性能。",
+            "2 内容分类：嵌入式硬件 / AI 计算",
+            "3 内容总结：内容概述该系列新增型号、性能指标与面向边缘与工业场景的定位，并说明其与现有平台的关系。"
           ]
         }
       ],
