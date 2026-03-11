@@ -1,0 +1,20 @@
+{
+  "item": {
+    "id": 2697,
+    "title": "Clear Resin Casting Replicates Old Acrylic for Selectric Repair",
+    "blog": "Hackaday",
+    "url": "https://hackaday.com/2026/03/10/clear-resin-casting-replicates-old-acrylic-for-selectric-repair/",
+    "published": "2026-03-10T23:00:29Z",
+    "discovered": "2026-03-11T00:00:19.82926499Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://hackaday.com/2026/03/10/clear-resin-casting-replicates-old-acrylic-for-selectric-repair/",
+    "ok": true,
+    "title": "Clear Resin Casting Replicates Old Acrylic For Selectric Repair",
+    "description": "IBM Selectric typewriters have a lot of unique parts that can be tricky to source, but one we didn’t think of was the clear acrylic(?) dust covers, that are apparently very hard to find in go…",
+    "fetched_bytes": 85964,
+    "error": null
+  },
+  "classification": "normal"
+}
