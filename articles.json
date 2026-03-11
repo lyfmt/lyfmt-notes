@@ -5,6 +5,96 @@
   },
   "posts": [
     {
+      "slug": "amd-ryzen-ai-embedded-p100-series-expands-with-up-to-12-zen-5-cores-80-tops-of-ai-performance-cnx-software",
+      "title": "AMD Ryzen AI Embedded P100 series expands with up to 12 Zen 5 cores, 80 TOPS of AI performance - CNX Software",
+      "author": "CNX Software",
+      "publishedAt": "2026-03-11",
+      "source": "CNX Software",
+      "url": "https://www.cnx-software.com/2026/03/11/amd-ryzen-ai-embedded-p100-series-expands-with-up-to-12-zen-5-cores-80-tops-of-ai-performance/",
+      "excerpt": "这篇文章围绕“AMD Ryzen AI Embedded P100 series expands with up to 12 Zen 5 cores, 80 TOPS of AI performance - CNX Software”展开，RSS 摘要提到：AMD expands the Ryzen AI Embedded P100 series with additional 8-/12-core SKUs (P164, P174, P185) delivering up to 80 TOPS of AI performance.",
+      "tags": [
+        "Hardware",
+        "AI",
+        "Embedded",
+        "IoT"
+      ],
+      "content": [
+        {
+          "heading": "文章核心",
+          "paragraphs": [
+            "基于 RSS 摘要与页面元数据，原文重点是：AMD expands the Ryzen AI Embedded P100 series with additional 8-/12-core SKUs (P164, P174, P185) delivering up to 80 TOPS of AI performance.",
+            "来源信息：CNX Software｜2026-03-11。"
+          ]
+        },
+        {
+          "heading": "值得继续补充的点",
+          "paragraphs": [
+            "如果后续补齐详情视图，重点可以继续展开芯片规格、接口能力、功耗指标和适用场景。",
+            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+          ]
+        }
+      ],
+      "detail": {
+        "available": true,
+        "layout": "detail-zh",
+        "translatedFrom": "https://www.cnx-software.com/2026/03/11/amd-ryzen-ai-embedded-p100-series-expands-with-up-to-12-zen-5-cores-80-tops-of-ai-performance/",
+        "sourceName": "CNX Software",
+        "sourceDescription": "以下为原文逐段直译，保留原文段落推进与媒体顺序。",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "html": "在 2026 年 CES 上，我们看到 AMD 发布了新的 <a href=\"https://www.cnx-software.com/2026/01/07/amd-launches-ryzen-ai-embedded-p100-and-x100-processors-with-up-to-50-tops-of-ai-performance/\" target=\"_blank\" rel=\"noreferrer noopener\">Ryzen AI Embedded P100 系列 SoC</a>，包含面向边缘 AI 的 4 核与 6 核型号。撰写本文时，该系列共有 6 个 SKU，更多高核心数型号将稍后公布。"
+          },
+          {
+            "type": "paragraph",
+            "html": "现在在 Embedded World 2026 上，AMD 将 Ryzen AI Embedded P100 系列扩展到 6 个新增 SKU，提供商用与工业级温度档位，而车规级 SoC 保持不变。"
+          },
+          {
+            "type": "image",
+            "src": "./assets/posts/amd-ryzen-ai-embedded-p100-series-expands-with-up-to-12-zen-5-cores-80-tops-of-ai-performance-cnx-software/figure-01.jpg",
+            "alt": "",
+            "caption": ""
+          },
+          {
+            "type": "paragraph",
+            "html": "<a href=\"https://www.cnx-software.com/wp-content/uploads/2026/03/AMD-Ryzen-AI-Embedded-P100-series-Embedded-World-2026.jpg\" target=\"_blank\" rel=\"noreferrer noopener\">点击查看原图</a>"
+          },
+          {
+            "type": "paragraph",
+            "html": "新 SoC 在单颗芯片上集成 8-12 个 Zen 5 CPU 核心（由 4-6 核升级）、RDNA 3.5 图形以及 XDNA 2 NPU，可提供最高 80 TOPS（由 50 TOPS 升级）的综合/系统级 AI 性能。"
+          },
+          {
+            "type": "paragraph",
+            "html": "AMD 声称，与 <a href=\"https://www.cnx-software.com/2024/04/04/amd-ryzen-embedded-8000-processors-industrial-ai-16-tops-npu/\" target=\"_blank\" rel=\"noreferrer noopener\">Ryzen Embedded 8000 系列</a>相比，多线程 CPU 性能最高提升 39%，系统总 TOPS 提升 2.1×。它们支持 CPU-GPU 统一内存，使多摄像头机器视觉、视觉 SLAM 与机器人感知等任务的低延迟处理成为可能，同时 NPU 负责低功耗 AI 推理工作负载，如目标检测与场景理解。"
+          },
+          {
+            "type": "paragraph",
+            "html": "Ryzen AI Embedded P100 家族新增 6 款 SoC：AMD Ryzen AI P164、P174、P185、P164i、P174i、P185i，面向商用与工业级（i）应用。AMD Ryzen AI Embedded P100 系列现已包含 12 个不同 SKU。"
+          },
+          {
+            "type": "paragraph",
+            "html": "该系列中最强的处理器为 Ryzen AI Embedded P185 和 P185i，最高提供 12 个 Zen 5 CPU 核心、24 MB L3 缓存、最高 2.9 GHz 的 GPU 频率，并可提供高达 50 TOPS 的 AI 性能。规格上的一项小差异是内存支持：商用型号使用稍快的 LPDDR5X 内存（最高 8533 MT/s），而工业型号限制为 8000 MT/s。"
+          },
+          {
+            "type": "paragraph",
+            "html": "在软件方面，AMD 指出 SoC 现在支持 <a href=\"https://www.amd.com/en/products/software/rocm.html\" target=\"_blank\" rel=\"noreferrer noopener\">AMD ROCm 开放软件栈</a>，可运行标准 AI 框架（如 PyTorch 或 TensorFlow），避免厂商锁定。AMD 还引入了基于 Xen 虚拟机监控器的虚拟化参考栈，可在单颗芯片上整合混合关键性工作负载（在 Windows/Linux 旁运行实时操作系统）。AMD 也提到这些芯片已针对 Llama 3.2-Vision、YOLOv12 与 MobileSAM 优化。"
+          },
+          {
+            "type": "paragraph",
+            "html": "此前我们看到 Congatec 与 Sapphire 发布了 <a href=\"https://www.cnx-software.com/2026/01/28/congatec-conga-tcrp1-com-express-type-6-module-features-amd-ryzen-ai-embedded-p100-soc-with-50-tops-npu/\" target=\"_blank\" rel=\"noreferrer noopener\">conga-TCRP1</a>（COM Express 3.1 Type 6 Compact 模块）以及 <a href=\"https://www.cnx-software.com/2026/01/28/congatec-conga-tcrp1-com-express-type-6-module-features-amd-ryzen-ai-embedded-p100-soc-with-50-tops-npu/\" target=\"_blank\" rel=\"noreferrer noopener\">EDGE+ VPR-7P132 Mini-ITX 主板</a>，均基于 AMD 的 Ryzen AI Embedded P100 系列。随着新 SoC 的发布，预计会有更多此类嵌入式板卡与模块跟进。"
+          },
+          {
+            "type": "paragraph",
+            "html": "新的 8-12 核 SoC（P164、P174、P185）已向早期客户提供样片，量产预计在 2026 年 7 月。4-6 核型号（P121、P132）预计更早进入量产，时间为 2026 年第二季度。更多信息见 <a href=\"https://www.amd.com/en/blogs/2026/amd-expands-ryzen-ai-embedded-p100-for-edge-ai.html\" target=\"_blank\" rel=\"noreferrer noopener\">新闻稿</a> 与 <a href=\"https://www.amd.com/en/products/embedded/ryzen-ai/p100-series.html\" target=\"_blank\" rel=\"noreferrer noopener\">P100 系列产品页</a>。"
+          }
+        ]
+      },
+      "workflow": {
+        "articleId": 2706,
+        "rssTitle": "AMD Ryzen AI Embedded P100 series expands with up to 12 Zen 5 cores, 80 TOPS of AI performance"
+      }
+    },
+    {
       "slug": "ainews-yann-lecun-s-ami-labs-launches-with-a-1-03b-seed-to-build-world-models-around-jepa",
       "title": "[AINews] Yann LeCun’s AMI Labs launches with a $1.03B seed to build world models around JEPA",
       "author": "Latent Space",
