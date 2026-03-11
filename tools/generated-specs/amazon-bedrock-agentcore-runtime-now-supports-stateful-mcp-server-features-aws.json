@@ -30,41 +30,23 @@
     "layout": "detail-zh",
     "translatedFrom": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-bedrock-agentcore-runtime-stateful-mcp/",
     "sourceName": "AWS Architecture Blog",
-    "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+    "sourceDescription": "以下为原文逐段直译，保留原文段落推进与媒体顺序。",
     "blocks": [
       {
-        "type": "heading",
-        "level": 2,
-        "text": "Amazon Bedrock AgentCore Runtime now supports stateful MCP server features"
+        "type": "paragraph",
+        "html": "Amazon Bedrock AgentCore Runtime 现已支持有状态的 Model Context Protocol（MCP）服务器功能，使开发者能够构建支持引导式提问（elicitation）、采样（sampling）和进度通知（progress notifications）的 MCP 服务器，同时保留对资源、提示与工具的既有支持。这些能力使部署到 AgentCore Runtime 的 MCP 服务器能够在工具执行期间与用户交互式收集输入，向客户端请求由 LLM 生成的内容，并为长时间运行的操作提供实时进度更新。"
       },
       {
         "type": "paragraph",
-        "html": "Amazon Bedrock AgentCore Runtime now supports stateful Model Context Protocol (MCP) server features, enabling developers to build MCP servers that leverage elicitation, sampling, and progress notifications alongside existing support for resources, prompts, and tools. These capabilities allow MCP servers deployed to AgentCore Runtime to collect user input interactively during tool execution, request LLM-generated content from clients, and provide real-time progress updates for long-running operations. <br> <br> With stateful MCP sessions, each user session runs in a dedicated microVM with isolated resources, and the server maintains session context across multiple interactions using an Mcp-Session-Id header. Elicitation enables server-initiated, multi-turn conversations to gather information such as user preferences. Sampling allows servers to request AI-powered text generation from the client for tasks like personalized recommendations. Progress notifications keep clients informed during operations such as searching for flights or processing bookings. These features work together to support complex, interactive agent workflows that go beyond simple request-response patterns."
+        "html": "通过有状态 MCP 会话，每个用户会话都在专用 microVM 中运行并隔离资源，服务器通过 Mcp-Session-Id 头在多次交互中保持会话上下文。Elicitation 使服务器能够发起多轮对话来收集用户偏好等信息。Sampling 允许服务器向客户端请求 AI 生成内容，用于个性化推荐等任务。进度通知可在搜索航班或处理预订等操作期间让客户端及时获知进展。这些功能协同工作，支持超越简单请求-响应模式的复杂交互式代理工作流。"
       },
       {
         "type": "paragraph",
-        "html": "Stateful MCP server features are supported in AgentCore Runtime across <a href=\"https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agentcore-regions.html\" target=\"_blank\" rel=\"noreferrer noopener\">fourteen AWS Regions</a>: US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Mumbai), Canada (Central), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Paris), and Europe (Stockholm)."
+        "html": "有状态 MCP 服务器功能在 AgentCore Runtime 的 <a href=\"https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agentcore-regions.html\" target=\"_blank\" rel=\"noreferrer noopener\">14 个 AWS 区域</a>受支持：美国东部（弗吉尼亚北部）、美国东部（俄亥俄）、美国西部（俄勒冈）、亚太（孟买）、加拿大（中部）、亚太（首尔）、亚太（新加坡）、亚太（悉尼）、亚太（东京）、欧洲（法兰克福）、欧洲（爱尔兰）、欧洲（伦敦）、欧洲（巴黎）和欧洲（斯德哥尔摩）。"
       },
       {
         "type": "paragraph",
-        "html": "To learn more, see <a href=\"https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/mcp-stateful-features.html\" target=\"_blank\" rel=\"noreferrer noopener\">Stateful MCP server features</a> in the Amazon Bedrock AgentCore documentation."
-      }
-    ],
-    "refineErrors": [
-      {
-        "index": 1,
-        "type": "paragraph",
-        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
-      },
-      {
-        "index": 2,
-        "type": "paragraph",
-        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
-      },
-      {
-        "index": 3,
-        "type": "paragraph",
-        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+        "html": "要了解更多，请参阅 Amazon Bedrock AgentCore 文档中的 <a href=\"https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/mcp-stateful-features.html\" target=\"_blank\" rel=\"noreferrer noopener\">Stateful MCP server features</a>。"
       }
     ]
   },
