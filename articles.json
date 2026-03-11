@@ -5,6 +5,345 @@
   },
   "posts": [
     {
+      "slug": "code-concepts-a-large-scale-synthetic-dataset-generated-from-programming-concept-seeds",
+      "title": "Code Concepts: A Large-Scale Synthetic Dataset Generated from Programming Concept Seeds",
+      "author": "Hugging Face Blog",
+      "publishedAt": "2026-03-11",
+      "source": "Hugging Face Blog",
+      "url": "https://huggingface.co/blog/nvidia/synthetic-code-concepts",
+      "excerpt": "# Code Concepts: A Large-Scale Synthetic Dataset Generated from Programming Concept Seeds\n\n### 内容分类\n【AI】\n\n### 内容总结\n详情内容显示当前缓存仍为站点反爬或挑战页，尚未获取到可靠正文，因此仅保留草稿入口，无法生成可发布的详情内容。该条信息没有提供文章主体、方法、结论或数据细节，现有信息仅说明内容抓取失败与处理结果，无法据此展开更多描述。",
+      "tags": [
+        "DevTools"
+      ],
+      "content": [
+        {
+          "heading": "总结",
+          "paragraphs": [
+            "# Code Concepts: A Large-Scale Synthetic Dataset Generated from Programming Concept Seeds",
+            "### 内容分类\n【AI】",
+            "### 内容总结\n详情内容显示当前缓存仍为站点反爬或挑战页，尚未获取到可靠正文，因此仅保留草稿入口，无法生成可发布的详情内容。该条信息没有提供文章主体、方法、结论或数据细节，现有信息仅说明内容抓取失败与处理结果，无法据此展开更多描述。"
+          ]
+        }
+      ],
+      "detail": {
+        "available": true,
+        "layout": "detail-zh",
+        "translatedFrom": "https://huggingface.co/blog/nvidia/synthetic-code-concepts",
+        "sourceName": "Hugging Face Blog",
+        "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "html": "在大规模 LLM 开发中，提升模型质量不仅取决于数据数量，还取决于数据质量和特异性。虽然预训练数据集通常包含广泛的信息，但它们可能缺乏强化特定技能（如推理或编程熟练度）所需的概念性针对。为应对这一挑战，我们设计了一种可扩展、以概念驱动的合成数据生成方法——一种使研究人员能够生成与期望模型能力对齐的数据的工作流程。作为初步应用，我们构建了一个由 1500 万个 Python 编程问题组成的预训练规模合成数据集，作为 Nemotron-Pretraining-Specialized-v1.1 数据集的 Nemotron-Pretraining-Code-Concepts 子集发布。我们显示，在 Nemotron-Nano-v3 预训练的最后 1000 亿个 token 中包含这些数据，在 HumanEval 基准上带来 6 分的提升。"
+          },
+          {
+            "type": "paragraph",
+            "html": "我们的工作流程以一个经过整理的编程知识分类体系为中心，该体系来自对 Nemotron‑Pretraining‑Code‑{v1,v2} 数据集的大规模标注。该分类体系以层级结构编码了数千个编程概念，从基础构造（例如，字符串、递归）到高级的算法和数据结构模式。使用该分类体系，开发者可以通过选定概念的组合与提炼来进行有针对性的数据生成，使实验者能够控制生成数据的难度、多样性和概念平衡。"
+          },
+          {
+            "type": "paragraph",
+            "html": "为了在实践中评估这一工作流程，我们将其应用于创建一个大规模合成数据集，旨在增强 LLM 预训练中的基础 Python 编程技能。我们首先通过在我们的分类体系内对其代码补全提示进行分类，确定了与 HumanEval 基准最相关的 91 个核心概念（尽管仍能广泛代表真实的编程知识）。在这些概念的组合引导下，我们生成了约 1500 万个合成 Python 编程问题，并验证每个问题都由可运行的 Python 代码组成（使用 Python 的 ast.parse 函数）。图 1 提供了我们将工作流程应用于合成 Code Concepts 数据集的可视化总结，图 2 提供了问题生成过程的可视化以及一个概念种子与合成问题配对的示例。"
+          },
+          {
+            "type": "paragraph",
+            "html": "图 1：用于生成 Code Concepts 数据集的概念驱动数据生成。使用从 Nemotron-Pretraining-Code-{v1,v2} 数据集中构建的分类体系，我们从 HumanEval 提示中提取编程概念，并将其用于开放式生成。我们的工作流程产生了约 1500 万个源自 91 种不同编程概念的 Python 编程问题。"
+          },
+          {
+            "type": "paragraph",
+            "html": "图2：作为我们概念驱动的数据生成工作流程一部分的 Python 编程问题生成的可视化表示。提示由概念组合（包含在蓝色框中并使用点记法表示）、一条指令和一些约束构建。使用 GPT-OSS 120B 生成一个问题，然后解析并过滤以保证质量。对于这个特定示例，概念 data-structures.sets.operation、algorithms.arrays.processing 和 algorithms.geometry.computational 的组合有所贡献"
+          }
+        ]
+      },
+      "workflow": {
+        "articleId": 2717,
+        "Title": "Code Concepts: A Large-Scale Synthetic Dataset Generated from Programming Concept Seeds"
+      }
+    },
+    {
+      "slug": "german-fireball-s-15-minutes-of-fame",
+      "title": "German Fireball’s 15 Minutes of Fame",
+      "author": "Hackaday",
+      "publishedAt": "2026-03-11",
+      "source": "Hackaday",
+      "url": "https://hackaday.com/2026/03/11/german-fireballs-15-minutes-of-fame/",
+      "excerpt": "# German Fireball’s 15 Minutes of Fame\n\n### 内容分类\n【Reading】\n\n### 内容总结\n文章讲述德国西部周日晚出现明亮火流星并在科布伦茨附近爆炸，碎块甚至打穿屋顶但无人受伤，引发陨石猎人关注。大量业余观测报告被收集用于估算轨迹，但精度参差不齐；现代行车记录仪与手机让发现更容易。文中提到公民科学网络与专用摄像系统对日常陨石追踪的价值。卡尔斯鲁厄理工学院地质学家利用地震仪记录冲击波，给出轨迹估计并与业余观测结果接近但不完全一致。最后讨论德国法律下陨石归属、陨石价格区间，以及微陨石收集方法与地球每天接收陨石物质的规模。",
+      "tags": [
+        "Hardware"
+      ],
+      "content": [
+        {
+          "heading": "总结",
+          "paragraphs": [
+            "# German Fireball’s 15 Minutes of Fame",
+            "### 内容分类\n【Reading】",
+            "### 内容总结\n文章讲述德国西部周日晚出现明亮火流星并在科布伦茨附近爆炸，碎块甚至打穿屋顶但无人受伤，引发陨石猎人关注。大量业余观测报告被收集用于估算轨迹，但精度参差不齐；现代行车记录仪与手机让发现更容易。文中提到公民科学网络与专用摄像系统对日常陨石追踪的价值。卡尔斯鲁厄理工学院地质学家利用地震仪记录冲击波，给出轨迹估计并与业余观测结果接近但不完全一致。最后讨论德国法律下陨石归属、陨石价格区间，以及微陨石收集方法与地球每天接收陨石物质的规模。"
+          ]
+        }
+      ],
+      "detail": {
+        "available": true,
+        "layout": "detail-zh",
+        "translatedFrom": "https://hackaday.com/2026/03/11/german-fireballs-15-minutes-of-fame/",
+        "sourceName": "Hackaday",
+        "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+        "blocks": [
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Hackaday"
+          },
+          {
+            "type": "list",
+            "items": [
+              "作者："
+            ]
+          },
+          {
+            "type": "list",
+            "items": [
+              "<a href=\"https://www.facebook.com/sharer/sharer.php?u=https://hackaday.com/2026/03/11/german-fireballs-15-minutes-of-fame/\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>",
+              "<a href=\"https://twitter.com/intent/tweet?text=German%20Fireball’s%2015%20Minutes%20Of%20Fame%20via%20@hackaday&amp;url=https://hackaday.com/2026/03/11/german-fireballs-15-minutes-of-fame/\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>",
+              "<a href=\"https://news.ycombinator.com/submitlink?u=https://hackaday.com/2026/03/11/german-fireballs-15-minutes-of-fame/&amp;t=German%20Fireball’s%2015%20Minutes%20Of%20Fame\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>",
+              "<a href=\"https://www.reddit.com/submit?url=https://hackaday.com/2026/03/11/german-fireballs-15-minutes-of-fame/\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>"
+            ]
+          },
+          {
+            "type": "image",
+            "src": "https://hackaday.com/wp-content/uploads/2019/08/Micrometeorites.jpg?w=800",
+            "alt": "",
+            "caption": ""
+          },
+          {
+            "type": "paragraph",
+            "html": "周日晚上，当地时间约 7:00，一颗明亮的火流星划过德国西部的天空，爆炸，并在科布伦茨周边地区落下太空岩石碎块。<a href=\"https://www.zdfheute.de/panorama/meteoriten-lichter-himmel-schaeden-100.html\" target=\"_blank\" rel=\"noreferrer noopener\">已知最大的碎块之一在某人屋顶上打出了一个足球大小的洞</a>，落在了他们的卧室里。幸运的是，没有人受伤。但鉴于爆炸的明显规模，外面一定还有更多碎片等待被找到，一波充满希望的陨石猎人已经涌向该地区。"
+          },
+          {
+            "type": "paragraph",
+            "html": "但如果你想分一杯羹，你究竟该从哪里开始找？科学家们到底是如何找到陨石的？如果你碰巧在夜空中看到类似的火球，你应该做什么？"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "公民科学"
+          },
+          {
+            "type": "image",
+            "src": "https://hackaday.com/wp-content/uploads/2026/03/ams-event-1467-2026-caught-from-heerlen-nl-gkyfxvshuu-webm-shot0003_thumbnail.png?w=400",
+            "alt": "",
+            "caption": "Meteorite video-bombs a boring parking lot in Heerlen, NL."
+          },
+          {
+            "type": "paragraph",
+            "html": "在始终开启的行车记录仪、无处不在的智能手机和其他视频记录设备的时代，害羞的陨石很难找到一个远离公众视线的安静地点。这让它们比过去更容易被找到。确实，汇总业余陨石观测的 International Meteor Organization，<a href=\"https://fireballs.imo.net/members/imo_view/event/2026/1467?org=imo\" target=\"_blank\" rel=\"noreferrer noopener\">收到了超过 3,200 份关于这次事件的报告</a>，其中包括几份带有视频记录的。<a href=\"https://fireballs.imo.net/members/imo_video/view_video?video_id=21143\" target=\"_blank\" rel=\"noreferrer noopener\">有些令人惊叹，</a>而另一些可能根本不是这次事件的。"
+          },
+          {
+            "type": "paragraph",
+            "html": "通过收集来自许多地点的报告，他们可以希望拼凑出陨石的轨迹。然而，如果你看各个报告，很明显这是一项困难的任务。没有人会期待一颗明亮的火球划过夜空，所以许多报告在细节上相当含糊，而在惊叹上分量很重。"
+          },
+          {
+            "type": "paragraph",
+            "html": "<a href=\"https://fireballs.imo.net/members/imo_view/report/409398\" target=\"_blank\" rel=\"noreferrer noopener\">来自 [Sophie Z]</a> 的这份报告，例如，就是典型的。她记录了她所在的位置以及夜空中陨石经过的大致位置，并附上评论“我一生中从未见过如此令人惊叹而且如此巨大的东西。”其他业余观察者更为精确。[David C]（“我有物理学博士学位”）设法把陨石的起始和终止方位角记录到两位小数。他一定有一台相机。"
+          },
+          {
+            "type": "paragraph",
+            "html": "我们很想知道用于合并这些报告的确切算法。值得注意的是，报告者会得到一个经验分数，系统在生成平均轨迹时可能会把这一点考虑在内。不过，这个系统确实有效，凭借一生仅一次的陨石拥有 3,200 份报告，它一定能得出相当不错的估计。但对于更小的陨石，<a href=\"https://fireballs.imo.net/members/imo_view/event/2026/1608\" target=\"_blank\" rel=\"noreferrer noopener\">像这次在周一晚上飞过的这颗</a>，观察者更少，推断实际轨迹要困难得多。"
+          },
+          {
+            "type": "paragraph",
+            "html": "日常陨石通过采用更系统的方法能被更好地追踪。我们之前报道过这些网络中的几个，因为要做出有意义的贡献所需的设备并不比一台带网络连接的单板计算机、一个摄像头模块以及一个用于让它全年运作的防风雨外壳复杂多少。我们之前<a href=\"https://hackaday.com/2016/12/04/fripon-is-french-for-meteorite-hunting/\" target=\"_blank\" rel=\"noreferrer noopener\">报道过法国的陨石猎寻网络 Fripon</a>，并且还<a href=\"https://hackaday.io/project/175041-cheap-all-sky-camera-project-with-raspberry-pi\" target=\"_blank\" rel=\"noreferrer noopener\">介绍过其他业余天空摄像头的构建</a>。但我们不是业余天文学家，所以我们不了解当前技术的现状。如果你知道协调的公民科学陨石追踪努力，请在评论中告诉我们。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "地质学家进入天文学游戏"
+          },
+          {
+            "type": "paragraph",
+            "html": "这块陨石在爆炸时的规模足够大、声响足够大，因此参与追踪的不仅限于那些抬头看的人。卡尔斯鲁厄理工学院（KIT）的地质学家<a href=\"https://idw-online.de/en/news867223\" target=\"_blank\" rel=\"noreferrer noopener\">发现这次爆炸在他们的地震仪上被记录</a>。（通过<a href=\"https://www.heise.de/news/Feuerball-ueber-Westdeutschland-Mit-Seismometern-die-genaue-Flugbahn-ermittelt-11205142.html\" target=\"_blank\" rel=\"noreferrer noopener\">Heise Online</a>。）这些有一个优点，即它们位于非常明确的位置，并且时间戳极其精确。毕竟，这正是它们每天要用的，尽管压力波传播的介质通常是地球而不是空气。"
+          },
+          {
+            "type": "paragraph",
+            "html": "这对 KIT 团队来说也是一个特别幸运的事件，因为它发生在埃费尔山区一个特别密集的地震监测站网络上，从而允许更高的分辨率。正如他们指出的那样，使用爆炸的声音还有一个额外的优势，即不会受到白天光照条件或夜间云层的影响。这让我们想到，搭建一个分布式麦克风系统来做类似的事情会有多么容易。"
+          },
+          {
+            "type": "image",
+            "src": "https://hackaday.com/wp-content/uploads/2026/03/meteorit-trajektorien-konturlinien-sektion.png",
+            "alt": "",
+            "caption": ""
+          },
+          {
+            "type": "paragraph",
+            "html": "<a href=\"https://hackaday.com/wp-content/uploads/2026/03/meteorit-trajektorien-konturlinien-sektion.png\" target=\"_blank\" rel=\"noreferrer noopener\"></a>"
+          },
+          {
+            "type": "paragraph",
+            "html": "KIT 轨迹估计与业余观测者的汇总估计相当吻合，但并不完全相同。谁是对的？我们将在接下来的几周里看到更多陨石在地面上被发现，想必如此。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "陨石狩猎"
+          },
+          {
+            "type": "paragraph",
+            "html": "如果陨石落穿了我们的屋顶并且<a href=\"https://merkurist.de/koblenz/meteoriten-einschlag-nach-einschlag-in-koblenz-so-sieht-der-meteorit-aus_GgLU/CuQc\" target=\"_blank\" rel=\"noreferrer noopener\">碎块散落在我们卧室各处</a>，我们会认为自己很幸运。但我们能保留它吗？当然，这取决于当地法律，而在德国，在大多数情况下你可以保留陨石，除非国家决定出于任何原因它具有特殊价值，那么他们就有优先权。"
+          },
+          {
+            "type": "paragraph",
+            "html": "显然，<a href=\"https://www.tagesschau.de/inland/regional/rheinlandpfalz/swr-teile-von-meteoriten-wer-darf-sie-behalten-und-wie-viel-sind-sie-wert-100.html\" target=\"_blank\" rel=\"noreferrer noopener\">陨石的行情价格在每克 1€ 到 5,000€ 之间</a>，所以我们不完全确定这是否能覆盖损失。也许我们的房主保险可以？我们得去翻出保单才能确定，但不管结果如何，我们都会很兴奋能有这些陨石碎块和一个好故事。"
+          },
+          {
+            "type": "paragraph",
+            "html": "虽然像这样的非常大的火球很罕见，NASA 估计每天大约有 44,000 kg 的陨石物质落到地球上。（哇！）其中大部分在大气中烧掉，但有些落到地面。大多数 <em>那</em> 一部分以微陨石的形式存在，它们是沙粒大小的碎片，很可能每天都在落到我们身上。的确，如果你有兴趣，你可以试着收集它们，<a href=\"https://hackaday.com/2019/08/21/fantastic-micrometeorites-and-where-to-find-them/\" target=\"_blank\" rel=\"noreferrer noopener\">而你所需要的只是屋顶上的一块防水布或落水管里的一个磁铁、一台好的显微镜，以及一点知识</a>。所以如果你只想要一些外星岩石，并且不太担心大小，也许微陨石狩猎是通往成功的道路。"
+          },
+          {
+            "type": "paragraph",
+            "html": "你去找过陨石吗？知道任何最新的业余火球狩猎网络吗？在评论里说说！"
+          },
+          {
+            "type": "image",
+            "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_face.png",
+            "alt": "",
+            "caption": ""
+          },
+          {
+            "type": "image",
+            "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_twitter.png",
+            "alt": "",
+            "caption": ""
+          },
+          {
+            "type": "image",
+            "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_in.png",
+            "alt": "",
+            "caption": ""
+          },
+          {
+            "type": "image",
+            "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_mail1.png",
+            "alt": "",
+            "caption": ""
+          },
+          {
+            "type": "list",
+            "items": [
+              "<a href=\"https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhackaday.com%2F2026%2F03%2F11%2Fgerman-fireballs-15-minutes-of-fame%2F\" target=\"_blank\" rel=\"noreferrer noopener\">   </a>",
+              "<a href=\"https://twitter.com/intent/tweet?text=German%20Fireball’s%2015%20Minutes%20Of%20Fame%20via%20@hackaday&amp;url=https://hackaday.com/2026/03/11/german-fireballs-15-minutes-of-fame/\" target=\"_blank\" rel=\"noreferrer noopener\">  </a>",
+              "<a href=\"https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fhackaday.com%2F2026%2F03%2F11%2Fgerman-fireballs-15-minutes-of-fame%2F\" target=\"_blank\" rel=\"noreferrer noopener\">  </a>",
+              "<a href=\"mailto:?subject=German+Fireball%E2%80%99s+15+Minutes+Of+Fame | Hackaday&amp;body=https%3A%2F%2Fhackaday.com%2F2026%2F03%2F11%2Fgerman-fireballs-15-minutes-of-fame%2F\" target=\"_blank\" rel=\"noreferrer noopener\">  </a>"
+            ]
+          }
+        ]
+      },
+      "workflow": {
+        "articleId": 2716,
+        "Title": "German Fireball’s 15 Minutes of Fame"
+      }
+    },
+    {
+      "slug": "quoting-john-carmack",
+      "title": "Quoting John Carmack",
+      "author": "Simon Willison",
+      "publishedAt": "2026-03-11",
+      "source": "Simon Willison",
+      "url": "https://simonwillison.net/2026/Mar/11/john-carmack/#atom-everything",
+      "excerpt": "# Quoting John Carmack\n\n### 内容分类\n【Reading】\n\n### 内容总结\n这篇内容来自 Simon Willison 的博客，日期为 2026 年 3 月 11 日。文章核心是一段 John Carmack 在 2021 年 6 月推文中的观点：经验较少的开发者往往难以体会，为未来需求或应用进行架构设计最终产生净正效益是非常罕见的。页面还列出了近期文章列表与站点年份归档信息，并标明这是一条被收集的引述。",
+      "tags": [
+        "AI",
+        "Tools"
+      ],
+      "content": [
+        {
+          "heading": "总结",
+          "paragraphs": [
+            "# Quoting John Carmack",
+            "### 内容分类\n【Reading】",
+            "### 内容总结\n这篇内容来自 Simon Willison 的博客，日期为 2026 年 3 月 11 日。文章核心是一段 John Carmack 在 2021 年 6 月推文中的观点：经验较少的开发者往往难以体会，为未来需求或应用进行架构设计最终产生净正效益是非常罕见的。页面还列出了近期文章列表与站点年份归档信息，并标明这是一条被收集的引述。"
+          ]
+        }
+      ],
+      "detail": {
+        "available": true,
+        "layout": "detail-zh",
+        "translatedFrom": "https://simonwillison.net/2026/Mar/11/john-carmack/#atom-everything",
+        "sourceName": "Simon Willison",
+        "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+        "blocks": [
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Simon Willison’s Weblog"
+          },
+          {
+            "type": "paragraph",
+            "html": "2026年3月11日"
+          },
+          {
+            "type": "paragraph",
+            "html": "经验较少的开发者很难体会到，为未来需求/应用做架构设计最终产生净正效益是多么罕见。"
+          },
+          {
+            "type": "paragraph",
+            "html": "— <a href=\"https://twitter.com/ID_AA_Carmack/status/1405932642005041153\" target=\"_blank\" rel=\"noreferrer noopener\">John Carmack</a>，<span>2021年6月的一条推文</span>"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "近期文章"
+          },
+          {
+            "type": "list",
+            "items": [
+              "<a href=\"https://simonwillison.net/2026/Mar/9/not-so-boring/\" target=\"_blank\" rel=\"noreferrer noopener\">也许终究不是无聊技术</a> - 9th March 2026",
+              "<a href=\"https://simonwillison.net/2026/Mar/5/chardet/\" target=\"_blank\" rel=\"noreferrer noopener\">编码代理能否通过代码的“洁净室”实现对开源重新许可？</a> - 5th March 2026",
+              "<a href=\"https://simonwillison.net/2026/Mar/4/qwen/\" target=\"_blank\" rel=\"noreferrer noopener\">Qwen 领域里有些动静</a> - 4th March 2026"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "html": "这是 Simon Willison 收集的一段 <strong>quotation</strong>，发表于 <a href=\"https://simonwillison.net/2026/Mar/11/\" target=\"_blank\" rel=\"noreferrer noopener\">2026 年 3 月 11 日</a>。"
+          },
+          {
+            "type": "list",
+            "items": [
+              "<a href=\"https://simonwillison.net/about/#disclosures\" target=\"_blank\" rel=\"noreferrer noopener\">披露</a>",
+              "<a href=\"https://simonwillison.net/about/#about-site\" target=\"_blank\" rel=\"noreferrer noopener\">版本说明</a>",
+              "©",
+              "<a href=\"https://simonwillison.net/2002/\" target=\"_blank\" rel=\"noreferrer noopener\">2002</a>",
+              "<a href=\"https://simonwillison.net/2003/\" target=\"_blank\" rel=\"noreferrer noopener\">2003</a>",
+              "<a href=\"https://simonwillison.net/2004/\" target=\"_blank\" rel=\"noreferrer noopener\">2004</a>",
+              "<a href=\"https://simonwillison.net/2005/\" target=\"_blank\" rel=\"noreferrer noopener\">2005</a>",
+              "<a href=\"https://simonwillison.net/2006/\" target=\"_blank\" rel=\"noreferrer noopener\">2006</a>",
+              "<a href=\"https://simonwillison.net/2007/\" target=\"_blank\" rel=\"noreferrer noopener\">2007</a>",
+              "<a href=\"https://simonwillison.net/2008/\" target=\"_blank\" rel=\"noreferrer noopener\">2008</a>",
+              "<a href=\"https://simonwillison.net/2009/\" target=\"_blank\" rel=\"noreferrer noopener\">2009</a>",
+              "<a href=\"https://simonwillison.net/2010/\" target=\"_blank\" rel=\"noreferrer noopener\">2010</a>",
+              "<a href=\"https://simonwillison.net/2011/\" target=\"_blank\" rel=\"noreferrer noopener\">2011</a>",
+              "<a href=\"https://simonwillison.net/2012/\" target=\"_blank\" rel=\"noreferrer noopener\">2012</a>",
+              "<a href=\"https://simonwillison.net/2013/\" target=\"_blank\" rel=\"noreferrer noopener\">2013</a>",
+              "<a href=\"https://simonwillison.net/2014/\" target=\"_blank\" rel=\"noreferrer noopener\">2014</a>",
+              "<a href=\"https://simonwillison.net/2015/\" target=\"_blank\" rel=\"noreferrer noopener\">2015</a>",
+              "<a href=\"https://simonwillison.net/2016/\" target=\"_blank\" rel=\"noreferrer noopener\">2016</a>",
+              "<a href=\"https://simonwillison.net/2017/\" target=\"_blank\" rel=\"noreferrer noopener\">2017</a>",
+              "<a href=\"https://simonwillison.net/2018/\" target=\"_blank\" rel=\"noreferrer noopener\">2018</a>",
+              "<a href=\"https://simonwillison.net/2019/\" target=\"_blank\" rel=\"noreferrer noopener\">2019</a>",
+              "<a href=\"https://simonwillison.net/2020/\" target=\"_blank\" rel=\"noreferrer noopener\">2020</a>",
+              "<a href=\"https://simonwillison.net/2021/\" target=\"_blank\" rel=\"noreferrer noopener\">2021</a>",
+              "<a href=\"https://simonwillison.net/2022/\" target=\"_blank\" rel=\"noreferrer noopener\">2022</a>",
+              "<a href=\"https://simonwillison.net/2023/\" target=\"_blank\" rel=\"noreferrer noopener\">2023</a>",
+              "<a href=\"https://simonwillison.net/2024/\" target=\"_blank\" rel=\"noreferrer noopener\">2024</a>",
+              "<a href=\"https://simonwillison.net/2025/\" target=\"_blank\" rel=\"noreferrer noopener\">2025</a>",
+              "<a href=\"https://simonwillison.net/2026/\" target=\"_blank\" rel=\"noreferrer noopener\">2026</a>"
+            ]
+          }
+        ]
+      },
+      "workflow": {
+        "articleId": 2715,
+        "Title": "Quoting John Carmack"
+      }
+    },
+    {
       "slug": "the-inside-java-newsletter-new-sponsors-for-javaone-registration-discount-continues",
       "title": "The Inside Java Newsletter: New Sponsors for JavaOne! Registration Discount Continues!",
       "author": "Inside Java",

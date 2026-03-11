@@ -1,0 +1,55 @@
+{
+  "slug": "code-concepts-a-large-scale-synthetic-dataset-generated-from-programming-concept-seeds",
+  "title": "Code Concepts: A Large-Scale Synthetic Dataset Generated from Programming Concept Seeds",
+  "author": "Hugging Face Blog",
+  "publishedAt": "2026-03-11",
+  "source": "Hugging Face Blog",
+  "url": "https://huggingface.co/blog/nvidia/synthetic-code-concepts",
+  "tags": [
+    "DevTools"
+  ],
+  "excerpt": "# Code Concepts: A Large-Scale Synthetic Dataset Generated from Programming Concept Seeds\n\n### 内容分类\n【AI】\n\n### 内容总结\n详情内容显示当前缓存仍为站点反爬或挑战页，尚未获取到可靠正文，因此仅保留草稿入口，无法生成可发布的详情内容。该条信息没有提供文章主体、方法、结论或数据细节，现有信息仅说明内容抓取失败与处理结果，无法据此展开更多描述。",
+  "content": [
+    {
+      "heading": "总结",
+      "paragraphs": [
+        "# Code Concepts: A Large-Scale Synthetic Dataset Generated from Programming Concept Seeds",
+        "### 内容分类\n【AI】",
+        "### 内容总结\n详情内容显示当前缓存仍为站点反爬或挑战页，尚未获取到可靠正文，因此仅保留草稿入口，无法生成可发布的详情内容。该条信息没有提供文章主体、方法、结论或数据细节，现有信息仅说明内容抓取失败与处理结果，无法据此展开更多描述。"
+      ]
+    }
+  ],
+  "detail": {
+    "available": true,
+    "layout": "detail-zh",
+    "translatedFrom": "https://huggingface.co/blog/nvidia/synthetic-code-concepts",
+    "sourceName": "Hugging Face Blog",
+    "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "html": "在大规模 LLM 开发中，提升模型质量不仅取决于数据数量，还取决于数据质量和特异性。虽然预训练数据集通常包含广泛的信息，但它们可能缺乏强化特定技能（如推理或编程熟练度）所需的概念性针对。为应对这一挑战，我们设计了一种可扩展、以概念驱动的合成数据生成方法——一种使研究人员能够生成与期望模型能力对齐的数据的工作流程。作为初步应用，我们构建了一个由 1500 万个 Python 编程问题组成的预训练规模合成数据集，作为 Nemotron-Pretraining-Specialized-v1.1 数据集的 Nemotron-Pretraining-Code-Concepts 子集发布。我们显示，在 Nemotron-Nano-v3 预训练的最后 1000 亿个 token 中包含这些数据，在 HumanEval 基准上带来 6 分的提升。"
+      },
+      {
+        "type": "paragraph",
+        "html": "我们的工作流程以一个经过整理的编程知识分类体系为中心，该体系来自对 Nemotron‑Pretraining‑Code‑{v1,v2} 数据集的大规模标注。该分类体系以层级结构编码了数千个编程概念，从基础构造（例如，字符串、递归）到高级的算法和数据结构模式。使用该分类体系，开发者可以通过选定概念的组合与提炼来进行有针对性的数据生成，使实验者能够控制生成数据的难度、多样性和概念平衡。"
+      },
+      {
+        "type": "paragraph",
+        "html": "为了在实践中评估这一工作流程，我们将其应用于创建一个大规模合成数据集，旨在增强 LLM 预训练中的基础 Python 编程技能。我们首先通过在我们的分类体系内对其代码补全提示进行分类，确定了与 HumanEval 基准最相关的 91 个核心概念（尽管仍能广泛代表真实的编程知识）。在这些概念的组合引导下，我们生成了约 1500 万个合成 Python 编程问题，并验证每个问题都由可运行的 Python 代码组成（使用 Python 的 ast.parse 函数）。图 1 提供了我们将工作流程应用于合成 Code Concepts 数据集的可视化总结，图 2 提供了问题生成过程的可视化以及一个概念种子与合成问题配对的示例。"
+      },
+      {
+        "type": "paragraph",
+        "html": "图 1：用于生成 Code Concepts 数据集的概念驱动数据生成。使用从 Nemotron-Pretraining-Code-{v1,v2} 数据集中构建的分类体系，我们从 HumanEval 提示中提取编程概念，并将其用于开放式生成。我们的工作流程产生了约 1500 万个源自 91 种不同编程概念的 Python 编程问题。"
+      },
+      {
+        "type": "paragraph",
+        "html": "图2：作为我们概念驱动的数据生成工作流程一部分的 Python 编程问题生成的可视化表示。提示由概念组合（包含在蓝色框中并使用点记法表示）、一条指令和一些约束构建。使用 GPT-OSS 120B 生成一个问题，然后解析并过滤以保证质量。对于这个特定示例，概念 data-structures.sets.operation、algorithms.arrays.processing 和 algorithms.geometry.computational 的组合有所贡献"
+      }
+    ]
+  },
+  "workflow": {
+    "articleId": 2717,
+    "Title": "Code Concepts: A Large-Scale Synthetic Dataset Generated from Programming Concept Seeds"
+  }
+}

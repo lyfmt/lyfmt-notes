@@ -1,0 +1,29 @@
+{
+  "available": false,
+  "layout": "draft",
+  "translatedFrom": "https://huggingface.co/blog/nvidia/synthetic-code-concepts",
+  "sourceName": "Hugging Face Blog",
+  "sourceDescription": "以下为根据原文结构自动生成的详情草稿，已保留段落层次、图片与媒体；默认尚未完成中文翻译润色。",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "html": "In large-scale LLM development, improving model quality depends not only on data quantity but also on data quality and specificity. While pretraining datasets often contain a vast range of information, they can lack the conceptual targeting needed to strengthen particular skills, such as reasoning or programming proficiency. To address this challenge, we designed an approach for scalable, concept-driven synthetic data generation — a workflow that enables researchers to generate data aligned with desired model capabilities. As an initial application, we construct a pretraining-scale synthetic dataset consisting of 15 million Python programming problems, released as the Nemotron-Pretraining-Code-Concepts subset of the Nemotron-Pretraining-Specialized-v1.1 dataset. We show that including these data in the final 100 billion tokens of Nemotron-Nano-v3 pretraining yields a six-point gain on the HumanEval benchmark."
+    },
+    {
+      "type": "paragraph",
+      "html": "Our workflow centers on a curated taxonomy of programming knowledge derived from large-scale annotation of the Nemotron‑Pretraining‑Code‑{v1,v2} datasets. This taxonomy encodes thousands of programming concepts organized hierarchically, from fundamental constructs (e.g., strings, recursion) to advanced algorithmic and data-structure patterns. Using this taxonomy, developers can perform targeted data generation through the combination and distillation of selected concepts, enabling experimenters to control difficulty, diversity, and conceptual balance across generated data."
+    },
+    {
+      "type": "paragraph",
+      "html": "To evaluate this workflow in practice, we applied it to create a large-scale synthetic dataset aimed at enhancing foundational Python programming skills in LLM pretraining. We first identified 91 core concepts most relevant to the HumanEval benchmark (though still broadly representative of real programming knowledge) by classifying its code-completion prompts within our taxonomy. Guided by combinations of these concepts, we generated approximately 15 million synthetic Python programming problems, each of which was validated to consist of working Python code (using Python’s ast.parse function). Figure 1 provides a visual summary of the application of our workflow to synthetize the Code Concepts dataset and Figure 2 provides a visualization of the problem generation process and an example of a concept seed and synthetic problem pair."
+    },
+    {
+      "type": "paragraph",
+      "html": "Figure 1: Concept-driven data generation used to generate the Code Concepts dataset. Using a taxonomy constructed from the Nemotron-Pretraining-Code-{v1,v2} datasets, we extract programming concepts from HumanEval prompts and use those for open-ended generation. Our workflow resulted in ~15M Python programming problems derived from 91 different programming concepts."
+    },
+    {
+      "type": "paragraph",
+      "html": "Figure 2: A visual representation of Python programming problem generation as part of our concept-driven data-generation workflow. A prompt is constructed from a combination of concepts (included in the blue box and represented using dot-notation), an instruction and some constraints. Using GPT-OSS 120B a problem is generated, then parsed and filtered for quality. For this particular example, the combination of the concepts data-structures.sets.operation, algorithms.arrays.processing and algorithms.geometry.computational contribute"
+    }
+  ]
+}
