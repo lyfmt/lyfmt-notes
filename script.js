@@ -139,6 +139,74 @@ function setText(id, text) {
   }
 }
 
+function renderMarkdownNodes(markdown) {
+  const nodes = [];
+  if (typeof markdown !== "string" || !markdown.trim()) {
+    return nodes;
+  }
+
+  const lines = markdown.split(/\r?\n/);
+  let buffer = [];
+
+  function flushParagraph() {
+    if (!buffer.length) {
+      return;
+    }
+    const text = buffer.join(" ").trim();
+    if (text) {
+      nodes.push(createElement("p", "", text));
+    }
+    buffer = [];
+  }
+
+  lines.forEach((raw) => {
+    const line = raw.trim();
+    if (!line) {
+      flushParagraph();
+      return;
+    }
+    if (line.startsWith("### ")) {
+      flushParagraph();
+      nodes.push(createElement("h3", "", line.slice(4).trim()));
+      return;
+    }
+    if (line.startsWith("## ")) {
+      flushParagraph();
+      nodes.push(createElement("h2", "", line.slice(3).trim()));
+      return;
+    }
+    if (line.startsWith("# ")) {
+      flushParagraph();
+      nodes.push(createElement("h1", "", line.slice(2).trim()));
+      return;
+    }
+    buffer.push(line);
+  });
+
+  flushParagraph();
+  return nodes;
+}
+
+function renderMarkdownInto(target, markdown) {
+  if (!target) {
+    return;
+  }
+  const nodes = renderMarkdownNodes(markdown);
+  if (!nodes.length) {
+    return;
+  }
+  nodes.forEach((node) => target.appendChild(node));
+}
+
+function setMarkdown(id, markdown) {
+  const node = qs(id);
+  if (!node) {
+    return;
+  }
+  clear(node);
+  renderMarkdownInto(node, markdown);
+}
+
 function setHref(id, href) {
   const node = qs(id);
   if (node && typeof href === "string") {
@@ -469,7 +537,7 @@ function renderFeatured(site, posts, activeTag) {
   }
 
   setText("featured-title", featured.title);
-  setText("featured-excerpt", featured.excerpt || "这篇文章暂无摘要。");
+  setMarkdown("featured-excerpt", featured.excerpt || "这篇文章暂无摘要。");
   setText("featured-meta", createMetaLine(featured));
   setHref("hero-primary-link", buildPostHref(featured.slug));
   renderTags("featured-tags", featured.tags);
@@ -734,7 +802,8 @@ function renderHome(site, posts) {
     titleLink.href = buildPostHref(post.slug);
     title.appendChild(titleLink);
 
-    const excerpt = createElement("p", "post-card__excerpt", post.excerpt || "");
+    const excerpt = createElement("div", "post-card__excerpt");
+    renderMarkdownInto(excerpt, post.excerpt || "");
     const footer = createElement("div", "post-card__footer");
     const more = createElement("a", "post-card__more", "阅读详情 →");
     more.href = buildPostHref(post.slug);
@@ -765,7 +834,8 @@ function renderArchivePostCards(container, posts) {
     titleLink.href = buildPostHref(post.slug);
     title.appendChild(titleLink);
 
-    const excerpt = createElement("p", "post-card__excerpt", post.excerpt || "");
+    const excerpt = createElement("div", "post-card__excerpt");
+    renderMarkdownInto(excerpt, post.excerpt || "");
     const footer = createElement("div", "post-card__footer");
     const more = createElement("a", "post-card__more", "阅读详情 →");
     more.href = buildPostHref(post.slug);
@@ -1027,7 +1097,7 @@ function renderSummaryContent(post) {
     const sectionNode = createElement("section", "article-section");
 
     if (typeof section === "string") {
-      sectionNode.appendChild(createElement("p", "", section));
+      renderMarkdownInto(sectionNode, section);
       contentWrap.appendChild(sectionNode);
       return;
     }
@@ -1040,7 +1110,7 @@ function renderSummaryContent(post) {
       section.paragraphs
         .filter((paragraph) => typeof paragraph === "string" && paragraph.trim())
         .forEach((paragraph) => {
-          sectionNode.appendChild(createElement("p", "", paragraph.trim()));
+          renderMarkdownInto(sectionNode, paragraph.trim());
         });
     }
 
@@ -1190,7 +1260,8 @@ function renderPost(post, relatedPosts) {
   const source = createElement("p", "eyebrow", effectiveView === "detail" ? `${post.source || "Post"} · 原文译文` : post.source || "Post");
   const title = createElement("h1", "article-title", post.title);
   const meta = createElement("p", "article-meta", createMetaLine(post));
-  const excerpt = createElement("p", "article-excerpt", post.excerpt || "");
+  const excerpt = createElement("div", "article-excerpt");
+  renderMarkdownInto(excerpt, post.excerpt || "");
 
   header.append(source, title);
   if (meta.textContent) {
