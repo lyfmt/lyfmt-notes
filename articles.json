@@ -5,6 +5,298 @@
   },
   "posts": [
     {
+      "slug": "the-inside-java-newsletter-new-sponsors-for-javaone-registration-discount-continues",
+      "title": "The Inside Java Newsletter: New Sponsors for JavaOne! Registration Discount Continues!",
+      "author": "Inside Java",
+      "publishedAt": "2026-03-11",
+      "source": "Inside Java",
+      "url": "https://inside.java/2026/03/11/inside-java-newsletter/",
+      "excerpt": "这篇文章围绕“The Inside Java Newsletter: New Sponsors for JavaOne! Registration Discount Continues!”展开，RSS 摘要提到：The Inside Java Newsletter for February 2026 includes a special discount code for JavaOne. Register now and save $150! This issue also hi...",
+      "tags": [
+        "DevTools"
+      ],
+      "content": [
+        {
+          "heading": "文章核心",
+          "paragraphs": [
+            "基于 RSS 摘要与页面元数据，原文重点是：The Inside Java Newsletter for February 2026 includes a special discount code for JavaOne. Register now and save $150! This issue also highlights new sponsors that will be at JavaOne, technical content from videos and podcasts, learning and communit…",
+            "来源信息：Inside Java｜2026-03-11。"
+          ]
+        },
+        {
+          "heading": "值得继续补充的点",
+          "paragraphs": [
+            "如果后续补齐详情视图，可以继续沿着原文结构展开关键论点、案例、约束条件与结论。",
+            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+          ]
+        }
+      ],
+      "detail": {
+        "available": false,
+        "layout": "detail-zh",
+        "translatedFrom": "https://inside.java/2026/03/11/inside-java-newsletter/",
+        "sourceName": "Inside Java",
+        "sourceDescription": "以下为原文逐段直译，保留原文段落推进与媒体顺序。",
+        "blocks": [
+          {
+            "type": "image",
+            "src": "./assets/posts/the-inside-java-newsletter-new-sponsors-for-javaone-registration-discount-continues/figure-01.png",
+            "alt": "",
+            "caption": ""
+          },
+          {
+            "type": "heading",
+            "text": "Inside Java 简报：JavaOne 新赞助商！注册折扣继续！"
+          },
+          {
+            "type": "paragraph",
+            "html": "发布于 2026 年 3 月 11 日"
+          },
+          {
+            "type": "paragraph",
+            "html": "2026 年 2 月的 Inside Java 简报包含 JavaOne 的专属折扣码。现在注册可立减 150 美元！本期还重点介绍了将出现在 JavaOne 的新赞助商、来自视频和播客的技术内容、学习与社区更新，以及 Java Platform Group 的更多动态。访问 learn.java、dev.java 和 inside.java，可获取面向开发者、学习者、教育者与客户的视频、文章和其他资源。你可以查看简报归档、订阅，并分享给朋友！"
+          },
+          {
+            "type": "paragraph",
+            "html": "更多内容：<a href=\"https://www.oracle.com/webfolder/dms/prod/d3/nsl400441205-ww-ww-nl-rwnl1-nsl1-ev.html\" target=\"_blank\" rel=\"noreferrer noopener\">https://www.oracle.com/webfolder/dms/prod/d3/nsl400441205-ww-ww-nl-rwnl1-nsl1-ev.html</a>"
+          },
+          {
+            "type": "paragraph",
+            "html": "<a href=\"https://www.oracle.com/javaone/register/\" target=\"_blank\" rel=\"noreferrer noopener\">https://www.oracle.com/javaone/register/</a>"
+          },
+          {
+            "type": "heading",
+            "text": "JavaOne：现在立减 150 美元！"
+          },
+          {
+            "type": "paragraph",
+            "html": "3 月 17-19 日，加州 Redwood Shores"
+          },
+          {
+            "type": "paragraph",
+            "html": "立即注册！立减 150 美元！<a href=\"https://www.oracle.com/javaone/register/\" target=\"_blank\" rel=\"noreferrer noopener\">https://www.oracle.com/javaone/register/</a>"
+          },
+          {
+            "type": "paragraph",
+            "html": "此优惠限时提供，仅适用于新的个人注册，且不可与其他优惠或促销叠加。团体票或公共部门参会者不适用。结账时使用此代码：<strong>J1NEWS150</strong><a href=\"https://www.oracle.com/javaone/register/\" target=\"_blank\" rel=\"noreferrer noopener\">https://www.oracle.com/javaone/register/</a>"
+          },
+          {
+            "type": "paragraph",
+            "html": "查看 JavaOne 的<a href=\"https://dev.java/community/javaone-2026/sessions/\" target=\"_blank\" rel=\"noreferrer noopener\">主题演讲与议程</a>。我们还将提供动手实验室、深入解析 JVM 最新进展、Java in AI、企业级 Java、机器学习、工具链、应用开发与社区等内容。如果你从未参加过 JavaOne，可查看 JavaOne 2025（<a href=\"https://www.youtube.com/playlist?list=PLX8CzqL3ArzVV1xRJkRbcM2tOgVwytJAi\" target=\"_blank\" rel=\"noreferrer noopener\">视频</a>、<a href=\"https://flic.kr/s/aHBqjC79Rp\" target=\"_blank\" rel=\"noreferrer noopener\">照片</a>）以及 JavaOne 2022（<a href=\"https://www.youtube.com/playlist?list=PLX8CzqL3ArzU2i-ogxRAHYIZ8du6GwZyu\" target=\"_blank\" rel=\"noreferrer noopener\">视频</a>、<a href=\"https://flic.kr/s/aHBqjAdP6P\" target=\"_blank\" rel=\"noreferrer noopener\">照片</a>）。"
+          },
+          {
+            "type": "paragraph",
+            "html": "JavaOne 是全球唯一一个 Java 开发者大会，参会者中来自 Java Platform Group（Oracle 构建 Java 的团队）的工程师比例最高。"
+          },
+          {
+            "type": "paragraph",
+            "html": "如果你参会、演讲或赞助，请在此<a href=\"https://go.oracle.com/LP=149517\" target=\"_blank\" rel=\"noreferrer noopener\">订阅</a>以获取 JavaOne 2026 最新消息。并且我们将在加州<a href=\"https://inside.java/2025/08/04/javaone-returns-2026/\" target=\"_blank\" rel=\"noreferrer noopener\">见到你</a>！"
+          },
+          {
+            "type": "paragraph",
+            "html": "<a href=\"https://www.nvidia.com/en-us/\" target=\"_blank\" rel=\"noreferrer noopener\">https://www.nvidia.com/en-us/</a>"
+          },
+          {
+            "type": "heading",
+            "text": "NVIDIA 赞助 JavaOne"
+          },
+          {
+            "type": "paragraph",
+            "html": "Oracle 很高兴欢迎 NVIDIA 作为 JavaOne 的钻石赞助商！NVIDIA（NASDAQ: NVDA）成立于 1993 年，是加速计算的先驱。公司在 1999 年发明 GPU，引发了 PC 游戏市场的增长，重塑了计算机图形学，点燃了现代 AI 时代，并正在推动元宇宙的创建。如今 NVIDIA 是一家全栈计算公司，拥有数据中心级别的产品，正在重塑行业。"
+          },
+          {
+            "type": "paragraph",
+            "html": "<a href=\"https://www.herodevs.com/\" target=\"_blank\" rel=\"noreferrer noopener\">https://www.herodevs.com/</a>"
+          },
+          {
+            "type": "heading",
+            "text": "HeroDevs 赞助 JavaOne"
+          },
+          {
+            "type": "paragraph",
+            "html": "Oracle 团队很高兴欢迎 HeroDevs 成为 JavaOne 的新赞助商！<a href=\"https://www.herodevs.com/\" target=\"_blank\" rel=\"noreferrer noopener\">HeroDevs</a> 为已到生命周期终点的开源软件提供“永不停止的支持”，在不强制从旧版 Spring Framework、Spring Boot、Java EE、Apache Struts 等迁移的情况下，让应用保持安全与合规。包含对技术栈的免费 EOL 依赖检测。"
+          },
+          {
+            "type": "paragraph",
+            "html": "<a href=\"https://learn.java\" target=\"_blank\" rel=\"noreferrer noopener\">https://learn.java</a>"
+          },
+          {
+            "type": "heading",
+            "text": "Learning Java"
+          },
+          {
+            "type": "paragraph",
+            "html": "照片：Piper Fleming 在 JavaOne 2025"
+          },
+          {
+            "type": "paragraph",
+            "html": "Java Developer Relations 的 Crystal Sheldon 参加了 <a href=\"https://www.sigcse.org/\" target=\"_blank\" rel=\"noreferrer noopener\">SIGCSE</a> 会议，以汲取 CS 教育领域的想法与研究。今年会议在圣路易斯举行，汇集了高中与高等教育的计算机科学教育者和研究人员。许多议题涉及 AI 以及如何有效地在课堂中教授与整合 AI。她们也探讨了学生如何为在职场中使用 AI 做好准备。你可以想象，要在有效使用 AI 与学习创新所需概念之间取得平衡并不容易。请查看我们 Oracle 实习生的这段<a href=\"https://www.youtube.com/watch?v=7ItFr4bUJSc&list=PLX8CzqL3ArzWISV3tHLGwTymjE4sOGL81\" target=\"_blank\" rel=\"noreferrer noopener\">视频</a>，了解他们如何在学习和工作中管理对 AI 的使用。[查看 Learn.java](https://learn.java/)。"
+          },
+          {
+            "type": "paragraph",
+            "html": "<a href=\"https://inside.java/\" target=\"_blank\" rel=\"noreferrer noopener\">https://inside.java/</a>"
+          },
+          {
+            "type": "heading",
+            "text": "技术视频与更多内容"
+          },
+          {
+            "type": "paragraph",
+            "html": "<a href=\"https://inside.java/\" target=\"_blank\" rel=\"noreferrer noopener\">Inside.java</a> 网站聚合了 Java Platform Group 工程师与 Java Developer Relations 开发者布道者的技术内容。我们发布文章、视频、播客等。以下是一些最新内容示例。"
+          },
+          {
+            "type": "paragraph",
+            "html": "<a href=\"https://marketplace.visualstudio.com/items?itemName=Oracle.oracle-java\" target=\"_blank\" rel=\"noreferrer noopener\">https://marketplace.visualstudio.com/items?itemName=Oracle.oracle-java</a>"
+          },
+          {
+            "type": "paragraph",
+            "html": "已超过 500 万次下载！"
+          },
+          {
+            "type": "heading",
+            "text": "Visual Studio Code 的 Java Platform 扩展"
+          },
+          {
+            "type": "paragraph",
+            "html": "Oracle 的 <a href=\"https://marketplace.visualstudio.com/items?itemName=Oracle.oracle-java\" target=\"_blank\" rel=\"noreferrer noopener\">Java Platform Extension for Visual Studio Code</a> 提供完整的开发支持（编辑-编译-调试-测试循环），并支持 Maven 与 Gradle 项目。支持使用 JDK 8 及以上版本的应用。"
+          },
+          {
+            "type": "paragraph",
+            "html": "<a href=\"https://inside.java/podcast/\" target=\"_blank\" rel=\"noreferrer noopener\">https://inside.java/podcast/</a>"
+          },
+          {
+            "type": "heading",
+            "text": "Inside Java 播客"
+          },
+          {
+            "type": "paragraph",
+            "html": "Inside Java Podcast 是一档面向 Java 开发者、由 Oracle Java 团队成员带来的节目，由 Java Developer Relations 团队的工程师主持。我们讨论语言、JVM、OpenJDK、平台安全、Loom 与 Panama 等创新项目，以及更多话题！"
+          },
+          {
+            "type": "paragraph",
+            "html": "<a href=\"https://inside.java/2026/01/29/podcast-044/\" target=\"_blank\" rel=\"noreferrer noopener\">第 44 集《Java、集合与泛型、BeJUG》</a>Nicolai Parlog 采访 Adam Bien（关于 Java 脚本化）、Maurice Naftalin（关于集合框架的历史与权衡）以及 Tom Cools（关于比利时 Java 用户组创新组织方式）。"
+          },
+          {
+            "type": "paragraph",
+            "html": "<a href=\"https://inside.java/2026/02/13/podcast-045/\" target=\"_blank\" rel=\"noreferrer noopener\">第 45 集《公告——新的 Inside Java Podcast》</a>Nicolai Parlog 向你介绍播客的新结构：原有的长篇对话将成为 Ask the Architects，且将由 Inside Java Newscast 作为播客伴随推出。"
+          },
+          {
+            "type": "paragraph",
+            "html": "<a href=\"https://inside.java/2026/02/20/podcast-046/\" target=\"_blank\" rel=\"noreferrer noopener\">第 46 集《Java 在 2026 年的计划》[IJN]</a><a href=\"https://inside.java/podcast/46/\" target=\"_blank\" rel=\"noreferrer noopener\">https://inside.java/podcast/46/</a> 2026 年，Java 仍在演进：Project Valhalla 正争取在今年下半年合并其 value types 预览；Babylon 希望孵化代码反射；Loom 可能完成结构化并发 API；Leyden 计划推出 AOT 代码编译；Amber 希望提交关于常量模式与模式赋值的 JEPs。而这只是进展最快的功能，还有更多内容在 Inside Java Newscast 的这一集中讨论。"
+          },
+          {
+            "type": "paragraph",
+            "html": "<a href=\"https://dukescorner.libsyn.com/site\" target=\"_blank\" rel=\"noreferrer noopener\">https://dukescorner.libsyn.com/site</a>"
+          },
+          {
+            "type": "heading",
+            "text": "Duke’s Corner Java 播客"
+          },
+          {
+            "type": "paragraph",
+            "html": "Duke’s Corner 每月通过有趣的开发者画像探索 Java 社区与技术。Java Developer Relations 的 Jim Grisanzio 主持该节目，以下是一些近期剧集："
+          },
+          {
+            "type": "paragraph",
+            "html": "<a href=\"https://dukescorner.libsyn.com/site/marit-van-dijk-and-anton-arhipov-25-years-of-intellij-idea\" target=\"_blank\" rel=\"noreferrer noopener\">Marit van Dijk 与 Anton Arhipov：IntelliJ IDEA 25 周年</a>Jim Grisanzio 采访 JetBrains 的开发者布道者 Marit van Dijk 与 Anton Arhipov，讨论 IDE 25 周年、最新功能、Anton 在 3 月 JavaOne 的演讲，以及他们对 JavaOne 作为 Java 开发者顶级大会的看法。“Java 的名人堂都会来 JavaOne 2025。”—— Marit van Dijk"
+          },
+          {
+            "type": "paragraph",
+            "html": "<a href=\"https://dukescorner.libsyn.com/site/paul-bakker-go-build-a-lot-of-stuff\" target=\"_blank\" rel=\"noreferrer noopener\">Paul Bakker：去构建很多东西！</a>Jim Grisanzio 采访加州的工程师与 Java 架构师 Paul Bakker。他是 Netflix Java Platform 团队的资深软件工程师，负责改进 Netflix 所有微服务使用的 Java 技术栈与工具链，也是 DGS（GraphQL）框架的最初作者之一。他还是 Java Champion，出版过两本关于 Java 模块化的书，并在会议与 Java 用户组上演讲。“Java 在 Netflix 无处不在。”—— Paul Bakker"
+          },
+          {
+            "type": "heading",
+            "text": "大会与 Java 用户组"
+          },
+          {
+            "type": "paragraph",
+            "html": "除了将于 2026 年 3 月在加州举行的 <a href=\"https://javaone.com/\" target=\"_blank\" rel=\"noreferrer noopener\">JavaOne</a> 外，Java Developer Relations 团队还将在年初出席以下主要 Java 大会并进行演讲。"
+          },
+          {
+            "type": "paragraph",
+            "html": "3 月"
+          },
+          {
+            "type": "list",
+            "items": [
+              "<a href=\"https://devnexus.com/\" target=\"_blank\" rel=\"noreferrer noopener\">Devnexus：亚特兰大，3 月 4-6 日</a> Billy Korando 将演讲 Java 26。",
+              "<a href=\"https://www.jchateau.org/\" target=\"_blank\" rel=\"noreferrer noopener\">JChateau：巴黎，3 月 4-8 日</a> José Paumard 将联合组织该活动，并介绍 Java 最新进展。",
+              "<a href=\"https://lp.jetbrains.com/intellij-idea-conf-2026/\" target=\"_blank\" rel=\"noreferrer noopener\">IntelliJ IDEA Conf：线上，3 月 24-26 日</a> Ana-Maria Mihalceanu 将演讲《Now and Next Java for AI》。"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "html": "4 月"
+          },
+          {
+            "type": "list",
+            "items": [
+              "<a href=\"https://amsterdam.voxxeddays.com/\" target=\"_blank\" rel=\"noreferrer noopener\">Voxxed Days Amsterdam：荷兰，4 月 1 日</a> Ana-Maria Mihalceanu 与 Lize Raes 将演讲《Secure Java Applications against Quantum Threats》和《LangChain4j Apps》。",
+              "<a href=\"https://2026.europe.jcon.one/\" target=\"_blank\" rel=\"noreferrer noopener\">JCON Europe：德国，4 月 20-23 日</a> Sharat Chander 将演讲《Java: To Infinity and Beyond》。",
+              "<a href=\"https://developersummit.com/\" target=\"_blank\" rel=\"noreferrer noopener\">GIDS：班加罗尔，4 月 21-24 日</a> Jim Grisanzio 将演讲如何构建 Java 社区。",
+              "<a href=\"https://www.devoxx.fr/\" target=\"_blank\" rel=\"noreferrer noopener\">Devoxx France：巴黎，4 月 22-24 日</a> José Paumard 将演讲《Développer une Application Asynchrone avec l'API Structured Concurrency》。"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "html": "5 月"
+          },
+          {
+            "type": "list",
+            "items": [
+              "<a href=\"https://jalba.scot/\" target=\"_blank\" rel=\"noreferrer noopener\">JAlba：爱丁堡，5 月 14-16 日</a> JAlba 第 7 届开幕！从 5 月 13 日晚开始，30 位活力十足、知识渊博的 Java 爱好者将齐聚爱丁堡。参与者将发现 27 场涵盖 Java、生态系统、更广泛技术问题以及一切社区关心话题的议程。大家也将享受英国最值得游览之地的体验：一流建筑、绝佳风景与苏格兰历史，都集中在几百米范围内。当然，还有世界上最棒的威士忌！"
+            ]
+          },
+          {
+            "type": "heading",
+            "text": "回到 2 月"
+          },
+          {
+            "type": "paragraph",
+            "html": "2 月，Oracle 赞助并派出工程师与高管在斯德哥尔摩的 <a href=\"https://www.jfokus.se/index.html\" target=\"_blank\" rel=\"noreferrer noopener\">Jfokus</a> 上进行 Java 主题演讲：Sharat Chander、Brian Goetz、Ana-Maria Mihalceanu、Per Minborg、Fabio Niephaus、Joakim Nordstrom、Lize Raes、Claes Redestad、Georges Saab、Heather VanCura 与 José Paumard。"
+          },
+          {
+            "type": "paragraph",
+            "html": "同样在 2 月，Billy Korando 与芝加哥 Java 用户组交流了一场题为 <a href=\"https://www.youtube.com/watch?v=PU1XiW-n208&t=2531s\" target=\"_blank\" rel=\"noreferrer noopener\">To Java [n] and Beyond!</a> 的分享。"
+          },
+          {
+            "type": "heading",
+            "text": "更多活动"
+          },
+          {
+            "type": "paragraph",
+            "html": "要关注所有大会，请查看 Dev.java 上的 <a href=\"https://dev.java/community/events/\" target=\"_blank\" rel=\"noreferrer noopener\">Events</a> 页面。"
+          },
+          {
+            "type": "heading",
+            "text": "Java DevRel 团队"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Ana-Maria Mihalceanu",
+              "Billy Korando",
+              "Chad Arimura",
+              "Crystal Sheldon",
+              "David Delabassée",
+              "Denis Makogon",
+              "Heather Stephens",
+              "Jim Grisanzio",
+              "José Paumard",
+              "Lize Raes",
+              "Melissa Jacobus",
+              "Nicolai Parlog",
+              "Sharat Chander"
+            ]
+          }
+        ]
+      },
+      "workflow": {
+        "articleId": 2707,
+        "rssTitle": "The Inside Java Newsletter: New Sponsors for JavaOne! Registration Discount Continues!"
+      }
+    },
+    {
       "slug": "amd-ryzen-ai-embedded-p100-series-expands-with-up-to-12-zen-5-cores-80-tops-of-ai-performance-cnx-software",
       "title": "AMD Ryzen AI Embedded P100 series expands with up to 12 Zen 5 cores, 80 TOPS of AI performance - CNX Software",
       "author": "CNX Software",
