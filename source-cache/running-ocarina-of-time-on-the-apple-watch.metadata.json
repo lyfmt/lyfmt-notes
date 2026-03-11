@@ -1,0 +1,20 @@
+{
+  "item": {
+    "id": 2704,
+    "title": "Running Ocarina of Time on the Apple Watch",
+    "blog": "Hackaday",
+    "url": "https://hackaday.com/2026/03/10/running-ocarina-of-time-on-the-apple-watch/",
+    "published": "2026-03-11T05:00:01Z",
+    "discovered": "2026-03-11T06:00:08.016405795Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://hackaday.com/2026/03/10/running-ocarina-of-time-on-the-apple-watch/",
+    "ok": true,
+    "title": "Running Ocarina Of Time On The Apple Watch",
+    "description": "At this point in time it can be safely stated that the question ‘Does it run Doom?’ defaults to a resounding ‘Yes’. This raises the question of what next games should be see…",
+    "fetched_bytes": 82617,
+    "error": null
+  },
+  "classification": "normal"
+}

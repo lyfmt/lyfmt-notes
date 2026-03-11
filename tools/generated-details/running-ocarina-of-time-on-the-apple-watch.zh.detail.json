@@ -1,0 +1,57 @@
+{
+  "available": true,
+  "layout": "detail-zh",
+  "translatedFrom": "https://hackaday.com/2026/03/10/running-ocarina-of-time-on-the-apple-watch/",
+  "sourceName": "Hackaday",
+  "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "html": "At this point in time it can be safely stated that the question ‘Does it run <em>Doom</em>?’ defaults to a resounding ‘Yes’. This raises the question of what next games should be seen as some kind impressive benchmark, with [Game of Tobi] gunning heavily for Nintendo 64 titles. Most recently he ported <em>Legend of Zelda: </em><em>Ocarina of Time</em> <a href=\"https://www.youtube.com/watch?v=1DR0ESBEC8s\" target=\"_blank\" rel=\"noreferrer noopener\">to the Apple Watch</a>, with the port almost ready for release along with <em>Super </em><em>Mario 64</em> after a few more issues are fixed."
+    },
+    {
+      "type": "paragraph",
+      "html": "Although there are a few approaches when it comes to porting Nintendo 64 games to other systems, if the target system is effectively a small PC with all of the amenities such as rendering APIs, then using the <a href=\"https://github.com/HarbourMasters/Shipwright\" target=\"_blank\" rel=\"noreferrer noopener\">Ship of Harkinian</a> project as the basis is a good start. This is what [Toby] did with the Apple Watch, and after some work it runs <em>Ocarina of Time</em> at a solid pace, with as the main flaw being busted text rendering."
+    },
+    {
+      "type": "paragraph",
+      "html": "Of course, the overwhelming flaw with any small gaming system and touchscreen-only systems is that our meaty paws do not shrink that well, and using telepathy to control game systems still isn’t a feature. Thus the biggest compromise with the Apple Watch port is that you have the controls overlaid on the screen. This could probably be compensated for with a Bluetooth controller or similar, but that poses its own problems when it comes to two-handed playing."
+    },
+    {
+      "type": "paragraph",
+      "html": "Practical issues aside, it’s pretty amazing that just about any ‘smart’ device that we carry around with us can also be a full-featured retro gaming system, and we appreciate [Toby]’s efforts in making this a reality."
+    },
+    {
+      "type": "paragraph",
+      "html": "<span></span>"
+    },
+    {
+      "type": "embed",
+      "provider": "youtube",
+      "src": "https://www.youtube.com/embed/1DR0ESBEC8s?feature=oembed",
+      "title": "I Made OCARINA OF TIME Run on the Apple Watch!"
+    }
+  ],
+  "refineErrors": [
+    {
+      "index": 0,
+      "type": "paragraph",
+      "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+    },
+    {
+      "index": 1,
+      "type": "paragraph",
+      "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+    },
+    {
+      "index": 2,
+      "type": "paragraph",
+      "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+    },
+    {
+      "index": 3,
+      "type": "paragraph",
+      "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+    }
+  ]
+}
