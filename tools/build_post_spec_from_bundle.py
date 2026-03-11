@@ -9,7 +9,7 @@ import sys
 import urllib.request
 from pathlib import Path
 
-from rss_workflow_utils import (
+from _workflow_utils import (
     build_blocked_detail,
     choose_preferred_title,
     classify_web_content,
@@ -24,7 +24,7 @@ DEFAULT_UPSERT_SCRIPT = SITE_ROOT / "tools" / "upsert_post_from_spec.py"
 DEFAULT_ARTICLES = SITE_ROOT / "articles.json"
 DEFAULT_OUT_DIR = SITE_ROOT / "tools" / "generated-specs"
 DEFAULT_CACHE_DIR = SITE_ROOT / "source-cache"
-USER_AGENT = "OpenClaw RSS Bundle Spec Builder/1.0"
+USER_AGENT = "OpenClaw Bundle Spec Builder/1.0"
 
 
 SOURCE_TAG_HINTS = {
@@ -54,7 +54,7 @@ KEYWORD_TAG_HINTS = [
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Generate pi-blog-demo post spec JSON files from rss_hourly_brief_bundle.py output, and optionally upsert them into articles.json."
+        description="Generate pi-blog-demo post spec JSON files from _hourly_brief_bundle.py output, and optionally upsert them into articles.json."
     )
     parser.add_argument("--bundle", default="-", help="Path to bundle JSON, or '-' for stdin.")
     parser.add_argument("--id", action="append", dest="ids", type=int, help="Select one article id from the bundle. Repeatable.")
@@ -154,15 +154,50 @@ def infer_tags(source: str, title: str, description: str) -> list[str]:
     return tags[:4]
 
 
-def build_excerpt(title: str, description: str, challenge: bool = False) -> str:
+
+
+def format_tag_boxes(tags: list[str]) -> str:
+    if not tags:
+        return "【Reading】"
+    return "".join([f"【{tag}】" for tag in tags])
+
+
+def ensure_min_length(text: str, minimum: int = 100) -> str:
+    if len(text) >= minimum:
+        return text
+    filler = "整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨，并为后续深入阅读原文打下基础。"
+    extra = "阅读时可重点关注关键数据、技术路线与应用边界，这些信息有助于判断其在实际场景中的价值与限制。"
+    combined = text + "" + filler
+    if len(combined) < minimum:
+        combined = combined + "" + extra
+    return combined
+
+
+def build_summary_text(title: str, source: str, description: str, tags: list[str], challenge: bool = False) -> str:
     if challenge:
-        return f"这篇文章围绕“{title}”展开，但当前自动抓取命中了反爬/挑战页，本站先保留索引与草稿入口，等待后续重试补全正文。"
+        base = (
+            f"文章围绕《{title}》展开，但当前抓取命中反爬/挑战页，尚未获得可靠正文。"
+            "因此本轮仅保留索引与链接入口，等待后续补全正文与细节。"
+            "在未确认内容前不生成逐段详情，以避免把挑战页误当正文。"
+        )
+        return ensure_min_length(base, 100)
+
+    bits = []
+    if title:
+        bits.append(f"文章围绕《{title}》展开，结合{source}的发布语境梳理核心主题与背景。")
     if description:
-        shortened = description.strip()
-        if len(shortened) > 140:
-            shortened = shortened[:137].rstrip() + "..."
-        return f"这篇文章围绕“{title}”展开，RSS 摘要提到：{shortened}"
-    return f"这篇文章围绕“{title}”展开，当前已从 RSS 条目同步到静态博客工作流中。"
+        bits.append(f"页面摘要提到：{description}")
+    else:
+        bits.append("目前只拿到标题与基础元信息，正文要点需在后续抓取后补齐。")
+    bits.append("内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。")
+    bits.append("整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。")
+    return ensure_min_length("".join(bits), 100)
+
+def build_excerpt(title: str, description: str, tags: list[str], source: str, challenge: bool = False) -> str:
+    category = format_tag_boxes(tags)
+    summary = build_summary_text(title, source, description, tags, challenge=challenge)
+    title_line = f"# {title}" if title else "# 未命名文章"
+    return f"{title_line}\n\n### 内容分类\n{category}\n\n### 内容总结\n{summary}"
 
 
 def build_importance_paragraph(tags: list[str]) -> str:
@@ -180,47 +215,18 @@ def build_importance_paragraph(tags: list[str]) -> str:
     return "如果后续补齐详情视图，可以继续沿着原文结构展开关键论点、案例、约束条件与结论。"
 
 
-def build_summary_content(source: str, description: str, published_at: str, tags: list[str], challenge: bool = False) -> list[dict]:
-    if challenge:
-        return [
-            {
-                "heading": "文章核心",
-                "paragraphs": [
-                    "从 RSS 条目和站点标题可见，这是一篇值得跟踪的新文章，但当前自动抓取只拿到了反爬/挑战页，没有得到可靠正文。",
-                    "因此这一轮只先保留标题、来源和链接，避免把挑战页内容误当成文章正文写入站点。",
-                ],
-            },
-            {
-                "heading": "当前处理状态",
-                "paragraphs": [
-                    "此条目会保留为可重入草稿，后续可基于已记录的 URL/slug 重新抓取和补 detail。",
-                    "在没有稳定正文前，不发布伪造的细节、不把 challenge 标题写进 slug，也不吞掉批次级 checkpoint。",
-                ],
-            },
-        ]
-
-    paragraphs = []
-    if description:
-        paragraphs.append(f"基于 RSS 摘要与页面元数据，原文重点是：{description}")
-    else:
-        paragraphs.append("当前只拿到了标题、来源和链接，还没有更完整的页面摘要，因此这里只生成一个可继续加工的草稿入口。")
-
-    meta_bits = [bit for bit in [source, published_at] if bit]
-    if meta_bits:
-        paragraphs.append(f"来源信息：{'｜'.join(meta_bits)}。")
-
+def build_summary_content(source: str, description: str, published_at: str, tags: list[str], title: str, challenge: bool = False) -> list[dict]:
+    category = format_tag_boxes(tags)
+    summary = build_summary_text(title, source, description, tags, challenge=challenge)
     return [
         {
-            "heading": "文章核心",
-            "paragraphs": paragraphs,
-        },
-        {
-            "heading": "值得继续补充的点",
+            "heading": "总结",
             "paragraphs": [
-                build_importance_paragraph(tags),
-                "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。",
+                f"# {title}",
+                f"### 内容分类\n{category}",
+                f"### 内容总结\n{summary}",
             ],
-        },
+        }
     ]
 
 
@@ -247,14 +253,14 @@ def build_spec(item: dict, bundle: dict) -> dict:
         "source": source,
         "url": url,
         "tags": tags,
-        "excerpt": build_excerpt(title, description, challenge=challenge),
-        "content": build_summary_content(source, description, published_at, tags, challenge=challenge),
+        "excerpt": build_excerpt(title, description, tags, source, challenge=challenge),
+        "content": build_summary_content(source, description, published_at, tags, title, challenge=challenge),
         "detail": {
             "available": False,
         },
         "workflow": {
             "articleId": item.get("id"),
-            "rssTitle": item_title,
+            "Title": item_title,
         },
     }
 
