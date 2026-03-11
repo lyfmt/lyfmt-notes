@@ -5,6 +5,366 @@
   },
   "posts": [
     {
+      "slug": "event-driven-architecture-in-java-and-kafka",
+      "title": "Event-Driven Architecture in Java and Kafka",
+      "author": "Foojay",
+      "publishedAt": "2026-03-10",
+      "source": "Foojay",
+      "url": "https://foojay.io/today/event-driven-architecture-in-java-and-kafka/",
+      "excerpt": "这篇文章围绕“Event-Driven Architecture in Java and Kafka”展开，当前已从 RSS 条目同步到静态博客工作流中。",
+      "tags": [
+        "Reading"
+      ],
+      "content": [
+        {
+          "heading": "文章核心",
+          "paragraphs": [
+            "当前只拿到了标题、来源和链接，还没有更完整的页面摘要，因此这里只生成一个可继续加工的草稿入口。",
+            "来源信息：Foojay｜2026-03-10。"
+          ]
+        },
+        {
+          "heading": "值得继续补充的点",
+          "paragraphs": [
+            "如果后续补齐详情视图，可以继续沿着原文结构展开关键论点、案例、约束条件与结论。",
+            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+          ]
+        }
+      ],
+      "detail": {
+        "available": false,
+        "layout": "detail-zh",
+        "translatedFrom": "https://foojay.io/today/event-driven-architecture-in-java-and-kafka/",
+        "sourceName": "Foojay",
+        "sourceDescription": "以下为原文逐段直译，保留原文段落推进与媒体顺序。",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "html": "2026 年 3 月 10 日"
+          },
+          {
+            "type": "paragraph",
+            "html": "阅读时长：14 分钟"
+          },
+          {
+            "type": "paragraph",
+            "html": "Reactive Java 非常适合现代的流式、事件驱动应用。在本文中，我们将通过一个使用 Reactive Java 与 MongoDB 的应用示例进行讲解。具体将涵盖："
+          },
+          {
+            "type": "list",
+            "items": [
+              "为什么引入 Reactive Java，以及它与更传统的 Java 编程有何不同。",
+              "Reactive Java 的关键元素细节——Mono、Flux 与 flatMap。",
+              "通过一个示例应用的讲解：比较使用 Reactive Streams MongoDB 驱动的 Reactive 版本代码，与使用同步 MongoDB 驱动的传统版本代码。"
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "流式数据——空中交通管制示例。"
+          },
+          {
+            "type": "paragraph",
+            "html": "作为全球推进国家空域系统现代化的重要部分，许多国家的航空管理部门出台了规定，要求大多数非军用飞机通过一种称为自动相关监视广播（Automatic Dependent Surveillance Broadcast，简称“ADS‑B”）的系统发送基于 GPS 的位置数据。"
+          },
+          {
+            "type": "paragraph",
+            "html": "这些数据既用于地面空管人员，也用于飞行员在移动地图显示上查看附近飞机的位置、方向、速度和高度，从而获得旧式地面雷达系统无法提供的态势感知。"
+          },
+          {
+            "type": "paragraph",
+            "html": "对于我这个驾驶小型私人螺旋桨飞机的飞行员来说，ADS‑B 推出后最酷的事情之一是：我仅使用 iPad 应用和一个便宜的数据接收器（用 Raspberry Pi、从亚马逊订购的 USB 无线电接收器以及优秀的 <a href=\"https://github.com/stratux/stratux\" target=\"_blank\" rel=\"noreferrer noopener\">Stratux</a> 开源软件构建）就能获得附近飞机的位置信息，这比十年前大多数商业客机飞行员拥有的数据还多。这对安全有很大帮助，能避免空中与机场地面碰撞。"
+          },
+          {
+            "type": "image",
+            "src": "./assets/posts/event-driven-architecture-in-java-and-kafka/figure-01.png",
+            "alt": "",
+            "caption": "iPad 上运行的 ForeFlight 航空应用，显示来自基于 Raspberry Pi 的 ADS‑B 接收器的附近飞机数据。"
+          },
+          {
+            "type": "paragraph",
+            "html": "从数据处理角度看，ADS‑B 数据是典型的现代流式、事件驱动系统。消息结构相对简单，通常会被接收系统转换为 JSON，因此 MongoDB 非常适合处理它们。以下是一个示例消息："
+          },
+          {
+            "type": "paragraph",
+            "html": "尽管 ADS‑B 消息结构并不复杂，但其传输与接收速度在某些情况下会带来挑战。每架飞机每 500 毫秒广播一次位置更新。在大型机场附近，这可能导致每秒数百条消息——在现代标准下通常不算问题——但作为 MongoDB 的开发者倡导者，我最近曾帮助一个国家级 ADS‑B 数据汇聚方优化其在全国接收网络上处理 ADS‑B 流数据时的 MongoDB 聚合操作。在高峰期，他们每秒处理大约 2 万条消息。"
+          },
+          {
+            "type": "paragraph",
+            "html": "在那次讨论中，我意识到 MongoDB 的 Java Reactive Streams 驱动可能非常适合处理这类流式数据。我决定调查一下它与标准同步驱动相比究竟能带来多大的差异。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Reactive Java 简史"
+          },
+          {
+            "type": "paragraph",
+            "html": "Reactive Java 旨在解决传统同步、阻塞式 I/O 模式在 Java 中的限制，尤其是在高度并发、事件驱动和流式应用中。传统的“每请求一线程”模型经常导致资源消耗过大，因为线程在等待 I/O 操作（例如数据库查询或 API 调用）完成时会被阻塞。"
+          },
+          {
+            "type": "paragraph",
+            "html": "该框架是为了解决这种“阻塞问题”、提升系统响应性与可扩展性而创建的。它通过实现 Reactive Streams 规范来实现非阻塞的异步编程。该范式将数据视为事件流，并引入“<a href=\"https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Publisher.html?is-external=true\" target=\"_blank\" rel=\"noreferrer noopener\"><strong>发布者</strong></a>”与“<a href=\"https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Publisher.html?is-external=true\" target=\"_blank\" rel=\"noreferrer noopener\"><strong>订阅者</strong></a>”的概念，实现了 30 多年前《<a href=\"https://a.co/d/0bAqVBje\" target=\"_blank\" rel=\"noreferrer noopener\">Gang of Four</a>》中描述的“观察者”设计模式的一个版本。<br><br>该框架的一个关键要点是线程可以异步处理活动，从而在等待长时间运行的操作完成时能够立即转向其他任务而不是阻塞。这在某些场景中能减少资源消耗，并提高内存与 CPU 的使用效率。"
+          },
+          {
+            "type": "paragraph",
+            "html": "在本文的代码示例中，我们将使用 reactive streams 规范的 <a href=\"https://projectreactor.io/\" target=\"_blank\" rel=\"noreferrer noopener\">Project Reactor</a> 实现。Project Reactor 有两种主要的发布者类型，它们实现了 Reactive Streams 的 <strong>Publisher&lt;T&gt;</strong> 接口：<br><br><a href=\"https://projectreactor.io/docs/core/milestone/reference/coreFeatures/mono.html\" target=\"_blank\" rel=\"noreferrer noopener\"><strong>Mono</strong></a> 是一种数据流（发布者），最多只发出一个条目，然后终止（要么成功返回一个值，要么以错误结束）。它适用于返回零或一个结果的操作，例如按 ID 查找单条记录或把实体保存到数据库，它是 Future 或 Optional 的响应式等价物。"
+          },
+          {
+            "type": "paragraph",
+            "html": "<a href=\"https://projectreactor.io/docs/core/milestone/reference/coreFeatures/flux.html\" target=\"_blank\" rel=\"noreferrer noopener\"><strong>Flux</strong></a> 是一种数据流（发布者），可以发出零个或多个条目，然后可选地以成功完成或错误结束。它适用于会返回多个结果的操作，例如数据库查询返回一组记录，或一条实时事件流（例如接收到的 ADS‑B 消息），它是标准集合或无限流的响应式等价物。"
+          },
+          {
+            "type": "paragraph",
+            "html": "为了展示 Reactive Java 如何提升应用性能，先看下面的传统同步代码示例："
+          },
+          {
+            "type": "paragraph",
+            "html": "这个函数做了两件事："
+          },
+          {
+            "type": "list",
+            "items": [
+              "调用一个 Web 服务，该服务只是“睡眠”指定秒数后返回一个“success”消息。",
+              "调用一个函数来生成指定小数位数的圆周率。"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "html": "该函数的输出包含完成这两项操作所需的时间。<br><br>需要注意的是，这种实现必须等 Web 服务调用返回之后才能开始计算圆周率。Web 服务调用是阻塞式的，执行线程在调用完成前无法做任何其他工作。<br><br>现在看看使用 Project Reactor 编写的等价代码："
+          },
+          {
+            "type": "paragraph",
+            "html": "这段代码使用了非阻塞版本的 WebClient，并将对睡眠 Web 服务的调用包裹在一个响应式管道中："
+          },
+          {
+            "type": "paragraph",
+            "html": "该响应式管道在概念上类似于 MongoDB 的聚合操作：每个阶段的输出成为后续阶段的输入。最终阶段会发出定义好的（<strong>Mono&lt;String&gt;</strong>）mono 类型。<br><br>需要注意两点：管道的执行是惰性的，因此直到后面订阅它之前不会发生任何事情；而订阅者在等待管道完成时不会被阻塞——它们可以继续执行其他任务，只有当结果 Mono 发出成功完成事件或错误事件时才会“响应”。"
+          },
+          {
+            "type": "paragraph",
+            "html": "第二个 Mono 定义使用 <strong>fromCallable</strong> 包裹对圆周率计算器的调用，同样采用惰性执行，将计算推迟到 Mono 被订阅时才执行："
+          },
+          {
+            "type": "list",
+            "items": [
+              "<strong>tuple.getT1()</strong> —— 获取睡眠 Web 服务返回的状态。",
+              "<strong>tuple.getT2()</strong> —— 获取圆周率计算到的小数位数。",
+              "<strong>Duration.between(start, Instant.now())</strong> —— 计算总耗时。",
+              "最后会输出 Web 服务调用状态、圆周率小数位数以及总执行时间。"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "html": "这个版本的关键点在于：对睡眠 Web 服务的调用与圆周率计算是并行执行的。"
+          },
+          {
+            "type": "paragraph",
+            "html": "观察两种版本在“睡眠”设为 5 秒、计算圆周率到 10,000 位小数时的输出："
+          },
+          {
+            "type": "list",
+            "items": [
+              "阻塞版本运行了 <strong>11.805 秒</strong>。",
+              "响应式版本运行了 <strong>6.85 秒</strong>。"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "html": "执行时间差几乎正好是 5 秒，这与两种版本的串行与并行执行方式完全一致，也体现了 Reactive Java 旨在解决的那类慢速 I/O 操作（此处为对睡眠 Web 服务的调用）。"
+          },
+          {
+            "type": "paragraph",
+            "html": "通过不等待 Web 服务调用完成就启动不依赖它的圆周率计算，我们减少了总体完成时间，并避免了可能空闲的 CPU 核与必然空闲的线程。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Reactive Java 与 MongoDB、Kafka"
+          },
+          {
+            "type": "paragraph",
+            "html": "为了测试在处理 ADS‑B 数据流时使用 Reactive Java 的影响，我创建了一个应用用于："
+          },
+          {
+            "type": "list",
+            "items": [
+              "顺序读取 MongoDB 集合中先前捕获的 ADS‑B 消息集。",
+              "将这些消息放入 Kafka 主题，供下游应用消费。"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "html": "我选择这种方法而非直接读取接收器的实时消息，是因为我希望能够："
+          },
+          {
+            "type": "list",
+            "items": [
+              "控制消息被放入 Kafka 主题的速率。",
+              "让测试可重复。",
+              "把数据和应用公开在 GitHub，供任何人使用，而无需拥有 ADS‑B 接收器。"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "html": "我选择 Kafka 来让场景更贴近现实，因为它是现代流式/事件驱动应用中最常见的消息分发方式之一，提供高可用、投递保障和灵活分发。为了简化，应用使用了 Confluent 提供的 Kafka Docker 镜像。<br><br>为处理从 Kafka 主题接收与处理消息流，我创建了两个等价的 Java 应用——一个使用传统阻塞代码，另一个使用 Project Reactor 与 Kafka、MongoDB 的响应式流驱动。<br><br>加入 Java 应用后，整体流程如下："
+          },
+          {
+            "type": "list",
+            "items": [
+              "流式应用从 MongoDB 读取 ADS‑B 消息。",
+              "流式应用以设定的每秒消息数把每条消息推入 Kafka 主题。每条消息的原始时间戳会更新为当前日期/时间；当 MongoDB 中所有消息读完后，应用会从集合中的第一条 ADS‑B 消息重新开始。",
+              "Java 应用逐条从 Kafka 主题读取消息。",
+              "对每条消息，Java 应用根据 FAA 注册数据（下载后存于第二个 MongoDB 集合）查询飞机注册号（尾号）。如果找到匹配注册记录，应用会把 FAA 数据中的制造商与型号补充到原始 ADS‑B 消息中。",
+              "最后，Java 应用把更新/丰富后的 ADS‑B 消息保存到新的 MongoDB 集合。"
+            ]
+          },
+          {
+            "type": "image",
+            "src": "./assets/posts/event-driven-architecture-in-java-and-kafka/figure-02.png",
+            "alt": "",
+            "caption": ""
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "阻塞代码版本"
+          },
+          {
+            "type": "paragraph",
+            "html": "在阻塞式应用中，使用简单的轮询机制从 Kafka 获取 ADS‑B 消息。该代码的主要部分如下："
+          },
+          {
+            "type": "paragraph",
+            "html": "这段代码创建了一个 KafkaConsumer 实例，每 500ms 轮询一次 Kafka 主题，然后处理每条收到的消息，再进行下一次轮询。该过程持续到应用被中断，并维护写入 MongoDB 的消息数量计数。<br><br>AircraftEnricher 和 MongoMessageWriter 类负责与 MongoDB 的交互，使用标准同步 MongoDB 驱动。AircraftEnricher 类的 enrich 方法如下："
+          },
+          {
+            "type": "paragraph",
+            "html": "<br>MongoMessageWriter 类的 write 方法执行简单的 MongoDB “insertOne” 操作，将丰富后的 ADS‑B 消息写入目标输出集合："
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "响应式代码版本"
+          },
+          {
+            "type": "paragraph",
+            "html": "响应式代码版本使用 Project Reactor，包括其响应式 KafkaReceiver 类，以及 <a href=\"https://www.mongodb.com/docs/languages/java/reactive-streams-driver/current/?utm_campaign=devrel&amp;utm_source=third-party-content&amp;utm_medium=cta&amp;utm_content=reactive-foojay&amp;utm_term=hugh.murray\" target=\"_blank\" rel=\"noreferrer noopener\">MongoDB 的 Reactive Streams</a> Java 驱动。该版本的 main 函数如下："
+          },
+          {
+            "type": "paragraph",
+            "html": "这种响应式管道有趣之处在于：每个阶段的输出都会成为下一个阶段的输入。在我们的管道中，每个阶段都会产出一个 flux，从而允许对流中每条消息进行异步、非阻塞处理："
+          },
+          {
+            "type": "paragraph",
+            "html": "在对消息进行“丰富”（添加制造商与型号）以及写入 MongoDB 时使用 <strong>.flatMap()</strong> 操作符，值得解释。<br><br>响应式管道通常包含实现 map/reduce 语义的操作符，其中 map 类型会产出 Flux，reduce 类型会产出 Mono。<br><br>在我们的管道中，<strong>.flatMap()</strong> 用于执行 MongoDB 数据库操作。与同步版本的 <strong>AircraftEnricher.enrich()</strong> 和 <strong>MongoMessageWriter.write()</strong> 方法相比，响应式版本执行同样操作，但返回类型不同："
+          },
+          {
+            "type": "paragraph",
+            "html": "<strong>enrich()</strong> 返回 <strong>Mono&lt;AdsbMessage&gt;</strong>，而 <strong>write()</strong> 返回 <strong>Mono&lt;Void&gt;</strong>。在调用 <strong>write()</strong> 时，我们通过 <strong>.thenReturn(msg)</strong> 把它映射为 <strong>Mono&lt;AdsbMessage&gt;</strong>。<br><br>Map 类型操作总是返回一个 flux，但如果我们用 <strong>map</strong> 而不是 <strong>flatMap</strong> 调用这些方法，输出会变成："
+          },
+          {
+            "type": "paragraph",
+            "html": "<strong>Flux&lt;Mono&lt;AdsbMessage&gt;&gt;</strong>"
+          },
+          {
+            "type": "paragraph",
+            "html": "这会导致两个问题："
+          },
+          {
+            "type": "list",
+            "items": [
+              "由于 map 操作不会订阅这些 Mono，MongoDB 操作实际上不会执行——大多数响应式生产者使用惰性执行，只有被订阅时才会开始执行。",
+              "下游操作期望的是 <strong>Flux&lt;AdsbMessage&gt;</strong>，而不是 <strong>Flux&lt;Mono&lt;AdsbMessage&gt;&gt;</strong>。"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "html": "与 <strong>.map()</strong> 相比，<strong>.flatMap()</strong> 的行为如下："
+          },
+          {
+            "type": "list",
+            "items": [
+              "它获取输入 Flux 发出的每个 AdsbMessage。",
+              "执行 MongoDB 操作——<strong>enricher.enrich(msg)</strong>，或 <strong>writer.write(msg).thenReturn(msg)</strong>，得到一个 <strong>Mono&lt;AdsbMessage&gt;</strong>。",
+              "订阅该 Mono。",
+              "当 Mono 发出结果时，该 AdsbMessage 会进一步在输出 Flux 中发出，并传递给下游操作。"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "html": "正如你所预期，这些操作全部以异步方式处理，使得从 Kafka 到来的消息流可以在不阻塞的情况下被处理。"
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "阻塞与响应式应用性能对比。"
+          },
+          {
+            "type": "paragraph",
+            "html": "完成两个版本应用后，我们以以下参数进行测试："
+          },
+          {
+            "type": "list",
+            "items": [
+              "测试平台为配备 48GB 内存的 MacBook Pro M4 Pro。",
+              "消息流应用被设置为每秒向 Kafka 主题推送 1000 条消息。",
+              "每个应用运行 2 分钟，并测量写入 MongoDB 的文档数量。",
+              "Kafka 部署在本地 Docker Desktop 运行的容器中。",
+              "MongoDB 在本地以单节点副本集方式部署，运行 Community Edition 8.2.3。",
+              "应用使用 openjdk 21.0.7 2025-04-15 LTS 运行。"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "html": "两个版本各运行两分钟后，我们观察到："
+          },
+          {
+            "type": "list",
+            "items": [
+              "阻塞式应用处理了 <strong>17,172</strong> 条消息。",
+              "响应式应用处理了 <strong>119,211</strong> 条消息。"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "html": "<br>这表明响应式应用几乎能以消息写入 Kafka 的速度来处理消息，而阻塞式版本无法跟上消息流。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "最终想法"
+          },
+          {
+            "type": "paragraph",
+            "html": "虽然两种应用的测试指标表明 Reactive Java 在处理流式数据时较传统 Java 技术有显著性能优势，但你可能也注意到阻塞式版本是单线程的，因此处于不利地位。实际上，当我测试一个显式使用多线程的阻塞版本时，由于两个数据库操作本身具有顺序性——ADS‑B 消息必须在 enrich 操作完成后才能写入 MongoDB——两者性能差异几乎可以忽略。这强调了在考虑采用 Reactive 方法时的一个关键点："
+          },
+          {
+            "type": "list",
+            "items": [
+              "<strong><em>当存在可以在 I/O 阻塞期间异步执行的任务时，异步响应式程序能提供最大的收益。</em></strong>"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "html": "正如我们在最初的圆周率计算示例中看到的那样，当任务可以异步执行时，Reactive 方法带来的优势可能非常显著。"
+          },
+          {
+            "type": "paragraph",
+            "html": "除了性能考量，Reactive 方法在流式应用中的另一项优势是它允许优雅的声明式编码风格。相比之下，在阻塞代码中加入线程处理会带来复杂性，并需要更啰嗦的命令式写法。"
+          },
+          {
+            "type": "paragraph",
+            "html": "如果你在 Java 中处理流式数据，特别是来自 Kafka 或类似消息系统的数据，MongoDB 的 Reactive Streams 驱动是一个很有吸引力的数据库选择。也请务必查看 <a href=\"https://www.mongodb.com/products/platform/atlas-stream-processing/?utm_campaign=devrel&amp;utm_source=third-party-content&amp;utm_medium=cta&amp;utm_content=reactive-foojay&amp;utm_term=hugh.murray\" target=\"_blank\" rel=\"noreferrer noopener\">Atlas Stream Processing</a>，它在 MongoDB Atlas DBAAS 服务中提供直接的消息流处理，并使用熟悉的 MongoDB 聚合语义。<br>本文使用的全部代码都在 <a href=\"https://github.com/mongodb-developer/streaming_with_java/\" target=\"_blank\" rel=\"noreferrer noopener\">GitHub</a> 上。"
+          }
+        ]
+      },
+      "workflow": {
+        "articleId": 2684,
+        "rssTitle": "Event-Driven Architecture in Java and Kafka"
+      }
+    },
+    {
       "slug": "lenovo-thinkstation-pgx-review-the-nvidia-gb10-128gb-ai-workstation-goes-corporate",
       "title": "Lenovo ThinkStation PGX Review The NVIDIA GB10 128GB AI Workstation Goes Corporate",
       "author": "ServeTheHome",

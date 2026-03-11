@@ -30,194 +30,187 @@
     "layout": "detail-zh",
     "translatedFrom": "https://foojay.io/today/event-driven-architecture-in-java-and-kafka/",
     "sourceName": "Foojay",
-    "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+    "sourceDescription": "以下为原文逐段直译，保留原文段落推进与媒体顺序。",
     "blocks": [
       {
-        "type": "list",
-        "items": [
-          "March 10, 2026",
-          "<span><span></span> <span> 14</span> <span>min read</span></span>"
-        ]
-      },
-      {
-        "type": "list",
-        "items": [
-          "<a href=\"https://foojay.io/today/event-driven-architecture-in-java-and-kafka/#h3-3--locking-ode-ersion\" target=\"_blank\" rel=\"noreferrer noopener\">Blocking Code Version</a>",
-          "<a href=\"https://foojay.io/today/event-driven-architecture-in-java-and-kafka/#h3-4--eactive-ode-ersion\" target=\"_blank\" rel=\"noreferrer noopener\">Reactive Code Version</a>",
-          "<a href=\"https://foojay.io/today/event-driven-architecture-in-java-and-kafka/#h3-5--locking-ersus-eactive-pplication-erformance-\" target=\"_blank\" rel=\"noreferrer noopener\">Blocking Versus Reactive Application Performance.</a>"
-        ]
+        "type": "paragraph",
+        "html": "2026 年 3 月 10 日"
       },
       {
         "type": "paragraph",
-        "html": "Reactive Java is well suited to modern streaming, event driven applications. In this article, we&#x27;ll walk through an example of such an application using Reactive Java with MongoDB. Specifically, we&#x27;re going to cover:"
+        "html": "阅读时长：14 分钟"
+      },
+      {
+        "type": "paragraph",
+        "html": "Reactive Java 非常适合现代的流式、事件驱动应用。在本文中，我们将通过一个使用 Reactive Java 与 MongoDB 的应用示例进行讲解。具体将涵盖："
       },
       {
         "type": "list",
         "items": [
-          "Why Reactive Java was introduced and how it differs from more traditional Java programming.",
-          "Details of some of the key elements of Reactive Java - <strong>Mono</strong>, <strong>Flux</strong> and <strong>flatMap</strong>.",
-          "A walk through of a sample application, comparing a Reactive version of the code using the Reactive Streams MongoDB driver, with a more traditional version of the code using the synchronous MongoDB driver."
+          "为什么引入 Reactive Java，以及它与更传统的 Java 编程有何不同。",
+          "Reactive Java 的关键元素细节——Mono、Flux 与 flatMap。",
+          "通过一个示例应用的讲解：比较使用 Reactive Streams MongoDB 驱动的 Reactive 版本代码，与使用同步 MongoDB 驱动的传统版本代码。"
         ]
       },
       {
         "type": "heading",
         "level": 2,
-        "text": "Streaming Data - The Air Traffic Control Example."
+        "text": "流式数据——空中交通管制示例。"
       },
       {
         "type": "paragraph",
-        "html": "As a key part of global initiatives to modernize national airspace systems, many national aviation authorities have introduced mandates requiring most non-military aircraft transmit GPS based location data using a system known as Automatic Dependent Surveillance Broadcast, or &quot;ADS-B&quot;."
+        "html": "作为全球推进国家空域系统现代化的重要部分，许多国家的航空管理部门出台了规定，要求大多数非军用飞机通过一种称为自动相关监视广播（Automatic Dependent Surveillance Broadcast，简称“ADS‑B”）的系统发送基于 GPS 的位置数据。"
       },
       {
         "type": "paragraph",
-        "html": "The data is used both by ground based air-traffic controllers, and by pilots to display the location, direction, speed and altitude of nearby aircraft on moving map displays, providing a level of situational awareness that wasn&#x27;t available with older, ground radar based systems."
+        "html": "这些数据既用于地面空管人员，也用于飞行员在移动地图显示上查看附近飞机的位置、方向、速度和高度，从而获得旧式地面雷达系统无法提供的态势感知。"
       },
       {
         "type": "paragraph",
-        "html": "One of the coolest things for me, the pilot of a small private propeller aircraft, about the rollout of ADS-B has been that I have more location data of nearby aircraft than most commercial jet pilots had just 10 years ago, and I am only using an iPad app and a cheap data receiver (built using a Raspberry Pi, a USB radio receivers ordered from Amazon, and software from the excellent <a href=\"https://github.com/stratux/stratux\" target=\"_blank\" rel=\"noreferrer noopener\">Stratux</a> open-source project). This has been a huge boost for safety, helping to avoid aircraft collisions both in the air and on the ground at airports.<br>"
+        "html": "对于我这个驾驶小型私人螺旋桨飞机的飞行员来说，ADS‑B 推出后最酷的事情之一是：我仅使用 iPad 应用和一个便宜的数据接收器（用 Raspberry Pi、从亚马逊订购的 USB 无线电接收器以及优秀的 <a href=\"https://github.com/stratux/stratux\" target=\"_blank\" rel=\"noreferrer noopener\">Stratux</a> 开源软件构建）就能获得附近飞机的位置信息，这比十年前大多数商业客机飞行员拥有的数据还多。这对安全有很大帮助，能避免空中与机场地面碰撞。"
       },
       {
         "type": "image",
         "src": "https://foojay.io/wp-content/uploads/2026/03/Screenshot-2026-03-06-at-12.27.45-PM.png",
-        "alt": "iPad running the ForeFlight aviation application displaying nearby aircraft data received from a Raspberry Pi based ADS-B receiver.",
-        "caption": "iPad running the ForeFlight aviation application displaying nearby aircraft data received from a Raspberry Pi based ADS-B receiver."
+        "alt": "",
+        "caption": "iPad 上运行的 ForeFlight 航空应用，显示来自基于 Raspberry Pi 的 ADS‑B 接收器的附近飞机数据。"
       },
       {
         "type": "paragraph",
-        "html": "From a data processing standpoint, ADS-B data is typical of modern streaming, event-driven systems. The messages themselves are relatively small and simple in structure, and are typically translated to JSON by most receiver systems, making MongoDB ideally suited to working with them. The following is an example message:"
+        "html": "从数据处理角度看，ADS‑B 数据是典型的现代流式、事件驱动系统。消息结构相对简单，通常会被接收系统转换为 JSON，因此 MongoDB 非常适合处理它们。以下是一个示例消息："
       },
       {
         "type": "paragraph",
-        "html": "While the structure of the ADS-B messages are unremarkable, the velocity with which they are transmitted and received can, in some cases, provide challenges. Each aircraft broadcasts a position update every 500ms. In the vicinity of a large airport, that could result in low hundreds of messages per second - typically not a problem by modern standards - but in my role as a developer advocate at MongoDB, I was recently asked to assist a national aggregator of ADS-B data in optimizing some MongoDB aggregation operations they were performing on ADS-B data streamed to them by a national network of receivers. At peak times, they were handling around 20,000 messages per second."
+        "html": "尽管 ADS‑B 消息结构并不复杂，但其传输与接收速度在某些情况下会带来挑战。每架飞机每 500 毫秒广播一次位置更新。在大型机场附近，这可能导致每秒数百条消息——在现代标准下通常不算问题——但作为 MongoDB 的开发者倡导者，我最近曾帮助一个国家级 ADS‑B 数据汇聚方优化其在全国接收网络上处理 ADS‑B 流数据时的 MongoDB 聚合操作。在高峰期，他们每秒处理大约 2 万条消息。"
       },
       {
         "type": "paragraph",
-        "html": "During that discussion, it occurred to me that MongoDB&#x27;s Reactive Streams driver for Java might be ideally suited for handling streaming data of this nature. I decided to investigate just how much of a difference using it might make over using the standard synchronous driver."
+        "html": "在那次讨论中，我意识到 MongoDB 的 Java Reactive Streams 驱动可能非常适合处理这类流式数据。我决定调查一下它与标准同步驱动相比究竟能带来多大的差异。"
       },
       {
         "type": "heading",
         "level": 2,
-        "text": "Reactive Java - a brief history"
+        "text": "Reactive Java 简史"
       },
       {
         "type": "paragraph",
-        "html": "Reactive Java emerged as a solution to the limitations of traditional, synchronous, and blocking I/O models in Java, particularly in highly concurrent, event-driven, and streaming applications. The conventional thread-per-request model often leads to excessive resource consumption due to threads being blocked while waiting for I/O operations (such as database queries or API calls) to complete."
+        "html": "Reactive Java 旨在解决传统同步、阻塞式 I/O 模式在 Java 中的限制，尤其是在高度并发、事件驱动和流式应用中。传统的“每请求一线程”模型经常导致资源消耗过大，因为线程在等待 I/O 操作（例如数据库查询或 API 调用）完成时会被阻塞。"
       },
       {
         "type": "paragraph",
-        "html": "The framework was created to address this &quot;blocking problem&quot; and improve system responsiveness and scalability. It does this by implementing the Reactive Streams specification, which enables non-blocking asynchronous programming. This paradigm manages data as a stream of events, with the concept of data &quot;<a href=\"https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Publisher.html?is-external=true\" target=\"_blank\" rel=\"noreferrer noopener\"><strong>publishers</strong></a>&quot; and data &quot;<a href=\"https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Publisher.html?is-external=true\" target=\"_blank\" rel=\"noreferrer noopener\"><strong>subscribers</strong></a>&quot; that implement a version of the &quot;observer&quot; design pattern described in the seminal &quot;<a href=\"https://a.co/d/0bAqVBje\" target=\"_blank\" rel=\"noreferrer noopener\">Gang of Four</a>&quot; book over 30 years ago.<br><br>A key element of the framework is that threads can handle activities asynchronously, allowing them to move on to other tasks immediately rather than blocking when waiting for long-running activities to complete. This can, in some use cases, help reduce overall resource usage and inefficient use of both memory and CPU."
+        "html": "该框架是为了解决这种“阻塞问题”、提升系统响应性与可扩展性而创建的。它通过实现 Reactive Streams 规范来实现非阻塞的异步编程。该范式将数据视为事件流，并引入“<a href=\"https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Publisher.html?is-external=true\" target=\"_blank\" rel=\"noreferrer noopener\"><strong>发布者</strong></a>”与“<a href=\"https://www.reactive-streams.org/reactive-streams-1.0.3-javadoc/org/reactivestreams/Publisher.html?is-external=true\" target=\"_blank\" rel=\"noreferrer noopener\"><strong>订阅者</strong></a>”的概念，实现了 30 多年前《<a href=\"https://a.co/d/0bAqVBje\" target=\"_blank\" rel=\"noreferrer noopener\">Gang of Four</a>》中描述的“观察者”设计模式的一个版本。<br><br>该框架的一个关键要点是线程可以异步处理活动，从而在等待长时间运行的操作完成时能够立即转向其他任务而不是阻塞。这在某些场景中能减少资源消耗，并提高内存与 CPU 的使用效率。"
       },
       {
         "type": "paragraph",
-        "html": "In the code examples in this article, we&#x27;ll be working with the <a href=\"https://projectreactor.io/\" target=\"_blank\" rel=\"noreferrer noopener\">Project Reactor</a> implementation of the reactive streams specifications. Project Reactor has two primary publisher types, implementing the Reactive Streams <strong>Publisher&lt;T&gt;</strong> interface:<br><br>A <a href=\"https://projectreactor.io/docs/core/milestone/reference/coreFeatures/mono.html\" target=\"_blank\" rel=\"noreferrer noopener\"><strong>Mono</strong></a> is a data stream (publisher) that is designed to emit at most one item, and then terminate (either successfully with a value or with an error). It is used for operations that return zero or one result, such as finding a single user record by ID or saving an entity to a database, and is the reactive equivalent of Future or Optional."
+        "html": "在本文的代码示例中，我们将使用 reactive streams 规范的 <a href=\"https://projectreactor.io/\" target=\"_blank\" rel=\"noreferrer noopener\">Project Reactor</a> 实现。Project Reactor 有两种主要的发布者类型，它们实现了 Reactive Streams 的 <strong>Publisher&lt;T&gt;</strong> 接口：<br><br><a href=\"https://projectreactor.io/docs/core/milestone/reference/coreFeatures/mono.html\" target=\"_blank\" rel=\"noreferrer noopener\"><strong>Mono</strong></a> 是一种数据流（发布者），最多只发出一个条目，然后终止（要么成功返回一个值，要么以错误结束）。它适用于返回零或一个结果的操作，例如按 ID 查找单条记录或把实体保存到数据库，它是 Future 或 Optional 的响应式等价物。"
       },
       {
         "type": "paragraph",
-        "html": "A <a href=\"https://projectreactor.io/docs/core/milestone/reference/coreFeatures/flux.html\" target=\"_blank\" rel=\"noreferrer noopener\"><strong>Flux</strong></a> is a data stream (publisher) that is designed to emit zero or more items, and then optionally complete with a successful completion or an error. It is used for operations that can return multiple results over time, such as a database query returning a collection of records or a stream of real-time events (such as received ADS-B messages), and is the reactive equivalent of a standard collection or an infinite stream."
+        "html": "<a href=\"https://projectreactor.io/docs/core/milestone/reference/coreFeatures/flux.html\" target=\"_blank\" rel=\"noreferrer noopener\"><strong>Flux</strong></a> 是一种数据流（发布者），可以发出零个或多个条目，然后可选地以成功完成或错误结束。它适用于会返回多个结果的操作，例如数据库查询返回一组记录，或一条实时事件流（例如接收到的 ADS‑B 消息），它是标准集合或无限流的响应式等价物。"
       },
       {
         "type": "paragraph",
-        "html": "To demonstrate how Reactive Java can benefit application performance, take a look at the following traditional, synchronous code example:"
+        "html": "为了展示 Reactive Java 如何提升应用性能，先看下面的传统同步代码示例："
       },
       {
         "type": "paragraph",
-        "html": "This function does two things:"
+        "html": "这个函数做了两件事："
       },
       {
         "type": "list",
         "items": [
-          "It calls a web service that simply sleeps for a specified number of seconds before returning a &quot;success&quot; message.",
-          "It calls a function to generate pi to a specified number of decimal places."
+          "调用一个 Web 服务，该服务只是“睡眠”指定秒数后返回一个“success”消息。",
+          "调用一个函数来生成指定小数位数的圆周率。"
         ]
       },
       {
         "type": "paragraph",
-        "html": "The output of the function includes the time required to complete both operations.<br><br>The important thing to note with this implementation is that it must wait for the web service call to return before it can start the calculation of pi. The web service call is blocking, and the executing thread is unable to do any other work until the call completes.<br><br>Now take a look at equivalent code written using Project Reactor:"
+        "html": "该函数的输出包含完成这两项操作所需的时间。<br><br>需要注意的是，这种实现必须等 Web 服务调用返回之后才能开始计算圆周率。Web 服务调用是阻塞式的，执行线程在调用完成前无法做任何其他工作。<br><br>现在看看使用 Project Reactor 编写的等价代码："
       },
       {
         "type": "paragraph",
-        "html": "This code uses a non-blocking version of the WebClient class and wraps its call to the sleep web service in a reactive pipeline:"
+        "html": "这段代码使用了非阻塞版本的 WebClient，并将对睡眠 Web 服务的调用包裹在一个响应式管道中："
       },
       {
         "type": "paragraph",
-        "html": "The reactive pipeline is similar in concept to MongoDB aggregation operations, in that the output of each stage becomes the input to the subsequent stage. The final stage emits the defined (<strong>Mono&lt;String&gt;</strong>) mono type.<br><br>Two important things to note are that execution of the pipeline is lazy and so nothing happens until it is later subscribed to, and that subscribers to the pipeline are not blocked waiting for the pipeline to complete - they are free to carry out other tasks and only &#x27;react&#x27; when the resulting Mono either emits a successful completion event, or emits an error event."
+        "html": "该响应式管道在概念上类似于 MongoDB 的聚合操作：每个阶段的输出成为后续阶段的输入。最终阶段会发出定义好的（<strong>Mono&lt;String&gt;</strong>）mono 类型。<br><br>需要注意两点：管道的执行是惰性的，因此直到后面订阅它之前不会发生任何事情；而订阅者在等待管道完成时不会被阻塞——它们可以继续执行其他任务，只有当结果 Mono 发出成功完成事件或错误事件时才会“响应”。"
       },
       {
         "type": "paragraph",
-        "html": "The second Mono definition wraps the call to the pi calculator, using <strong>fromCallable</strong> to again use lazy execution, deferring execution of the pi calculation until the Mono is subscribed to:"
+        "html": "第二个 Mono 定义使用 <strong>fromCallable</strong> 包裹对圆周率计算器的调用，同样采用惰性执行，将计算推迟到 Mono 被订阅时才执行："
       },
       {
         "type": "list",
         "items": [
-          "<strong>tuple.getT1() </strong>– gets the status returned by the sleep web service.",
-          "<strong>tuple.getT2()</strong> – gets the number of decimal places to which pi was computed.",
-          "<strong>Duration.between(start, Instant.now())</strong> – calculates the total elapsed time.",
-          "Finally, the web service call status, the number of decimal places to which pi was computed, and total execution time are output."
+          "<strong>tuple.getT1()</strong> —— 获取睡眠 Web 服务返回的状态。",
+          "<strong>tuple.getT2()</strong> —— 获取圆周率计算到的小数位数。",
+          "<strong>Duration.between(start, Instant.now())</strong> —— 计算总耗时。",
+          "最后会输出 Web 服务调用状态、圆周率小数位数以及总执行时间。"
         ]
       },
       {
         "type": "paragraph",
-        "html": "The key thing with this version of the code is that both the call to the sleep web service and the calculation of pi are executed concurrently."
+        "html": "这个版本的关键点在于：对睡眠 Web 服务的调用与圆周率计算是并行执行的。"
       },
       {
         "type": "paragraph",
-        "html": "Looking at the output of the two versions of the application, with a specified &#x27;sleep&#x27; of 5 seconds and calculating pi to 10,000 decimal places:"
+        "html": "观察两种版本在“睡眠”设为 5 秒、计算圆周率到 10,000 位小数时的输出："
       },
       {
         "type": "list",
         "items": [
-          "The blocking version ran for <strong>11.805 seconds</strong>.",
-          "The reactive version ran for <strong>6.85 seconds</strong>."
+          "阻塞版本运行了 <strong>11.805 秒</strong>。",
+          "响应式版本运行了 <strong>6.85 秒</strong>。"
         ]
       },
       {
         "type": "paragraph",
-        "html": "The difference in execution time, being almost exactly 5 seconds, is what we would expect given the sequential versus concurrent execution of the two versions of the code, and demonstrates exactly the type of slow IO operation (in this case, the call to the sleep web service) that Reactive Java was designed to address."
+        "html": "执行时间差几乎正好是 5 秒，这与两种版本的串行与并行执行方式完全一致，也体现了 Reactive Java 旨在解决的那类慢速 I/O 操作（此处为对睡眠 Web 服务的调用）。"
       },
       {
         "type": "paragraph",
-        "html": "By not waiting for the web service call to complete before starting the non-dependent pi calculation, we reduced overall completion time and avoided a possibly idle CPU core and definitely an idle thread."
+        "html": "通过不等待 Web 服务调用完成就启动不依赖它的圆周率计算，我们减少了总体完成时间，并避免了可能空闲的 CPU 核与必然空闲的线程。"
       },
       {
         "type": "heading",
         "level": 2,
-        "text": "Reactive Java with MongoDB and Kafka"
+        "text": "Reactive Java 与 MongoDB、Kafka"
       },
       {
         "type": "paragraph",
-        "html": "To test the impact of using Reactive Java when working with streams of ADS-B data, I created an application to:"
+        "html": "为了测试在处理 ADS‑B 数据流时使用 Reactive Java 的影响，我创建了一个应用用于："
       },
       {
         "type": "list",
         "items": [
-          "Sequentially read a previously captured set of ADS-B messages from a MongoDB collection.",
-          "Place the messages onto a Kafka topic for consumption by downstream applications."
+          "顺序读取 MongoDB 集合中先前捕获的 ADS‑B 消息集。",
+          "将这些消息放入 Kafka 主题，供下游应用消费。"
         ]
       },
       {
         "type": "paragraph",
-        "html": "I chose this approach over reading live messages from the receiver as I wanted to be able to;"
+        "html": "我选择这种方法而非直接读取接收器的实时消息，是因为我希望能够："
       },
       {
         "type": "list",
         "items": [
-          "Control the rate at which messages are placed on the Kafka topic.",
-          "Allow tests to be repeatable.",
-          "Make the data and application available in GitHub for use by anyone to use, without the need to have an ADS-B receiver."
+          "控制消息被放入 Kafka 主题的速率。",
+          "让测试可重复。",
+          "把数据和应用公开在 GitHub，供任何人使用，而无需拥有 ADS‑B 接收器。"
         ]
       },
       {
         "type": "paragraph",
-        "html": "I chose to use Kafka to make the scenario more realistic as it is one of the most common ways to distribute messages in modern streaming / event-driven applications, adding high availability, delivery guarantees, and flexible distribution. To keep things simple, the app uses a Kafka Docker image provided by Confluent.<br><br>To handle receiving and processing the stream of messages from the Kafka topic, I created two equivalent Java applications - one using traditional blocking code, and the other using Project Reactor and reactive streams drivers for Kafka and MongoDB.<br><br>With the Java applications added, the overall application flow is:"
+        "html": "我选择 Kafka 来让场景更贴近现实，因为它是现代流式/事件驱动应用中最常见的消息分发方式之一，提供高可用、投递保障和灵活分发。为了简化，应用使用了 Confluent 提供的 Kafka Docker 镜像。<br><br>为处理从 Kafka 主题接收与处理消息流，我创建了两个等价的 Java 应用——一个使用传统阻塞代码，另一个使用 Project Reactor 与 Kafka、MongoDB 的响应式流驱动。<br><br>加入 Java 应用后，整体流程如下："
       },
       {
         "type": "list",
         "items": [
-          "The streaming application reads ADS-B messages from MongoDB.",
-          "The streaming application pushes each message to Kafka at a specified rate defined in messages per second. Each message has its original timestamp updated to the current data/time. When all messages have been read from MongoDB, the application restarts from the first ADS-B message in the collection.",
-          "The Java applications read each message in turn from the Kafka topic.",
-          "For each received message, the Java applications do a lookup of the aircraft&#x27;s registration (tail) number against registration data downloaded from the Federal Aviation Authority and saved in a second MongoDB collection. Where a matching registration is found, the Java applications enrich the original ADS-B message by adding the aircraft manufacturer and model from the FAA data.",
-          "Finally, the Java applications save the updated/enriched ADS-B message into a new MongoDB collection."
+          "流式应用从 MongoDB 读取 ADS‑B 消息。",
+          "流式应用以设定的每秒消息数把每条消息推入 Kafka 主题。每条消息的原始时间戳会更新为当前日期/时间；当 MongoDB 中所有消息读完后，应用会从集合中的第一条 ADS‑B 消息重新开始。",
+          "Java 应用逐条从 Kafka 主题读取消息。",
+          "对每条消息，Java 应用根据 FAA 注册数据（下载后存于第二个 MongoDB 集合）查询飞机注册号（尾号）。如果找到匹配注册记录，应用会把 FAA 数据中的制造商与型号补充到原始 ADS‑B 消息中。",
+          "最后，Java 应用把更新/丰富后的 ADS‑B 消息保存到新的 MongoDB 集合。"
         ]
       },
       {
@@ -229,40 +222,40 @@
       {
         "type": "heading",
         "level": 3,
-        "text": "Blocking Code Version"
+        "text": "阻塞代码版本"
       },
       {
         "type": "paragraph",
-        "html": "In the blocking application, a simple polling mechanism is used to retrieve ADS-B messages from Kafka. The main section of this code looks like this:"
+        "html": "在阻塞式应用中，使用简单的轮询机制从 Kafka 获取 ADS‑B 消息。该代码的主要部分如下："
       },
       {
         "type": "paragraph",
-        "html": "This code creates a KafkaConsumer instance that polls the Kafka topic for 500ms, then processes each received message before polling again. This continues until the application is interrupted, with a count of the number of messages written to MongoDB maintained.<br><br>The AircraftEnricher and MongoMessageWritter classes handle the interactions with MongoDB, using the standard synchronous MongoDB driver. The AircraftEnricher class&#x27; enrich method looks like this:"
+        "html": "这段代码创建了一个 KafkaConsumer 实例，每 500ms 轮询一次 Kafka 主题，然后处理每条收到的消息，再进行下一次轮询。该过程持续到应用被中断，并维护写入 MongoDB 的消息数量计数。<br><br>AircraftEnricher 和 MongoMessageWriter 类负责与 MongoDB 的交互，使用标准同步 MongoDB 驱动。AircraftEnricher 类的 enrich 方法如下："
       },
       {
         "type": "paragraph",
-        "html": "<br>The MongoMessageWriter class&#x27; write method does a simple MongoDB &#x27;insertOne&#x27; operation, writing the enriched ADS-B message to the target output collection:"
+        "html": "<br>MongoMessageWriter 类的 write 方法执行简单的 MongoDB “insertOne” 操作，将丰富后的 ADS‑B 消息写入目标输出集合："
       },
       {
         "type": "heading",
         "level": 3,
-        "text": "Reactive Code Version"
+        "text": "响应式代码版本"
       },
       {
         "type": "paragraph",
-        "html": "The Reactive code version uses Project Reactor, including its reactive KafkaReceiver class, along with <a href=\"https://www.mongodb.com/docs/languages/java/reactive-streams-driver/current/?utm_campaign=devrel&amp;utm_source=third-party-content&amp;utm_medium=cta&amp;utm_content=reactive-foojay&amp;utm_term=hugh.murray\" target=\"_blank\" rel=\"noreferrer noopener\">MongoDB&#x27;s Reactive Streams</a> Java driver. The main function of this version looks like this:"
+        "html": "响应式代码版本使用 Project Reactor，包括其响应式 KafkaReceiver 类，以及 <a href=\"https://www.mongodb.com/docs/languages/java/reactive-streams-driver/current/?utm_campaign=devrel&amp;utm_source=third-party-content&amp;utm_medium=cta&amp;utm_content=reactive-foojay&amp;utm_term=hugh.murray\" target=\"_blank\" rel=\"noreferrer noopener\">MongoDB 的 Reactive Streams</a> Java 驱动。该版本的 main 函数如下："
       },
       {
         "type": "paragraph",
-        "html": "The interesting thing with Reactive pipelines like this is that the output of each stage becomes the input to the following stage. In the case of our pipeline, each stage produces a flux allowing asynchronous, non-blocking processing of each message in the stream:"
+        "html": "这种响应式管道有趣之处在于：每个阶段的输出都会成为下一个阶段的输入。在我们的管道中，每个阶段都会产出一个 flux，从而允许对流中每条消息进行异步、非阻塞处理："
       },
       {
         "type": "paragraph",
-        "html": "The use of the <strong>.flatMap()</strong> operator when enriching messages with the aircraft manufacturer and model, and then writing the enriched message to MongoDB, is worth explaining.<br><br>Reactive pipelines often include operators implementing map / reduce type semantics, with map-style operators producing Flux outputs, and reduce-style operators producing Monos.<br><br>In our pipeline, the <strong>.flatMap()</strong> operator is used when carrying out MongoDB database operations. Compared with the synchronous versions of the <strong>AircraftEnricher.enrich() </strong>and <strong>MongoMessageWriter.write()</strong> methods, the reactive versions perform the same operations, but have different return types:"
+        "html": "在对消息进行“丰富”（添加制造商与型号）以及写入 MongoDB 时使用 <strong>.flatMap()</strong> 操作符，值得解释。<br><br>响应式管道通常包含实现 map/reduce 语义的操作符，其中 map 类型会产出 Flux，reduce 类型会产出 Mono。<br><br>在我们的管道中，<strong>.flatMap()</strong> 用于执行 MongoDB 数据库操作。与同步版本的 <strong>AircraftEnricher.enrich()</strong> 和 <strong>MongoMessageWriter.write()</strong> 方法相比，响应式版本执行同样操作，但返回类型不同："
       },
       {
         "type": "paragraph",
-        "html": "The <strong>enrich()</strong> method returns <strong>Mono&lt;AdsbMessage&gt;</strong> whilst <strong>write()</strong> returns <strong>Mono&lt;Void&gt;. </strong>In our call to <strong>write()</strong>, we map that to <strong>Mono&lt;AdsbMessage&gt;</strong> by chaining it with <strong>.thenReturn(msg)</strong>.<br><br>Map type operations always return a flux, but had we called these methods using <strong>map</strong>, rather than <strong>flatMap</strong>, the output would have been:"
+        "html": "<strong>enrich()</strong> 返回 <strong>Mono&lt;AdsbMessage&gt;</strong>，而 <strong>write()</strong> 返回 <strong>Mono&lt;Void&gt;</strong>。在调用 <strong>write()</strong> 时，我们通过 <strong>.thenReturn(msg)</strong> 把它映射为 <strong>Mono&lt;AdsbMessage&gt;</strong>。<br><br>Map 类型操作总是返回一个 flux，但如果我们用 <strong>map</strong> 而不是 <strong>flatMap</strong> 调用这些方法，输出会变成："
       },
       {
         "type": "paragraph",
@@ -270,513 +263,93 @@
       },
       {
         "type": "paragraph",
-        "html": "This would cause two issues:"
+        "html": "这会导致两个问题："
       },
       {
         "type": "list",
         "items": [
-          "As the map operation never subscribes to those Monos, the MongoDB operations would never actually be executed - most Reactive producers use lazy execution, meaning execution only starts when they are subscribed to.",
-          "The downstream operations expect <strong>Flux&lt;AdsbMessage&gt;, </strong>not<strong> Flux&lt;Mono&lt;AdsbMessage&gt;</strong>&gt;<br>"
+          "由于 map 操作不会订阅这些 Mono，MongoDB 操作实际上不会执行——大多数响应式生产者使用惰性执行，只有被订阅时才会开始执行。",
+          "下游操作期望的是 <strong>Flux&lt;AdsbMessage&gt;</strong>，而不是 <strong>Flux&lt;Mono&lt;AdsbMessage&gt;&gt;</strong>。"
         ]
       },
       {
         "type": "paragraph",
-        "html": "In contrast to .<strong>map()</strong>, <strong>.flatMap()</strong> does the following:"
+        "html": "与 <strong>.map()</strong> 相比，<strong>.flatMap()</strong> 的行为如下："
       },
       {
         "type": "list",
         "items": [
-          "It takes each AdsbMessage emitted by the input Flux",
-          "It executes the MongoDB operations - <strong>enricher.enrich(msg)</strong>, or <strong>writer.write(msg).thenReturn(msg)</strong> to get a <strong>Mono&lt;AdsbMessage&gt;</strong>",
-          "It subscribes to that Mono",
-          "When the Mono emits, that AdsbMessage is further emitted on the output Flux, passing it on to the downstream operations."
+          "它获取输入 Flux 发出的每个 AdsbMessage。",
+          "执行 MongoDB 操作——<strong>enricher.enrich(msg)</strong>，或 <strong>writer.write(msg).thenReturn(msg)</strong>，得到一个 <strong>Mono&lt;AdsbMessage&gt;</strong>。",
+          "订阅该 Mono。",
+          "当 Mono 发出结果时，该 AdsbMessage 会进一步在输出 Flux 中发出，并传递给下游操作。"
         ]
       },
       {
         "type": "paragraph",
-        "html": "As you would no doubt now expect, all of these operations are handled asynchronously, allowing the stream of messages arriving from Kafka to be processed without any blocking operations."
+        "html": "正如你所预期，这些操作全部以异步方式处理，使得从 Kafka 到来的消息流可以在不阻塞的情况下被处理。"
       },
       {
         "type": "heading",
         "level": 3,
-        "text": "Blocking Versus Reactive Application Performance."
+        "text": "阻塞与响应式应用性能对比。"
       },
       {
         "type": "paragraph",
-        "html": "With both versions of the application completed, test runs of each were carried out with the following parameters:"
+        "html": "完成两个版本应用后，我们以以下参数进行测试："
       },
       {
         "type": "list",
         "items": [
-          "Testing was carried out on my MacBook Pro M4 Pro with 48GB of memory.",
-          "The message streaming application was set to push 1000 messages per second onto the Kafka topic.",
-          "Each application was run for 2 minutes, and the number of documents written to MongoDB was measured.",
-          "Kafka was deployed in a Docker container running locally using Docker Desktop.",
-          "MongoDB was deployed locally as a single-node replica set, running Community Edition version 8.2.3",
-          "The applications were run using openjdk 21.0.7 2025-04-15 LTS"
+          "测试平台为配备 48GB 内存的 MacBook Pro M4 Pro。",
+          "消息流应用被设置为每秒向 Kafka 主题推送 1000 条消息。",
+          "每个应用运行 2 分钟，并测量写入 MongoDB 的文档数量。",
+          "Kafka 部署在本地 Docker Desktop 运行的容器中。",
+          "MongoDB 在本地以单节点副本集方式部署，运行 Community Edition 8.2.3。",
+          "应用使用 openjdk 21.0.7 2025-04-15 LTS 运行。"
         ]
       },
       {
         "type": "paragraph",
-        "html": "After each version of the application had run for two minutes, we observed:"
+        "html": "两个版本各运行两分钟后，我们观察到："
       },
       {
         "type": "list",
         "items": [
-          "The blocking application processed <strong>17,172 messages</strong>",
-          "The reactive application processed <strong>119,211 messages</strong>"
+          "阻塞式应用处理了 <strong>17,172</strong> 条消息。",
+          "响应式应用处理了 <strong>119,211</strong> 条消息。"
         ]
       },
       {
         "type": "paragraph",
-        "html": "<br>This indicated the Reactive application was able to process messages essentially as fast as they were being pushed into Kafka, while the blocking version was unable to keep up with the stream of messages."
+        "html": "<br>这表明响应式应用几乎能以消息写入 Kafka 的速度来处理消息，而阻塞式版本无法跟上消息流。"
       },
       {
         "type": "heading",
         "level": 2,
-        "text": "Final Thoughts"
+        "text": "最终想法"
       },
       {
         "type": "paragraph",
-        "html": "Although the metrics from testing both versions of the application would suggest Reactive Java has a significant performance advantage over traditional Java techniques when working with streaming data, no doubt many of you will have observed that the blocking version of the code was single-threaded and thus at a disadvantage. Indeed, when I tested a version of the blocking code that explicitly used multiple threads, the performance difference between the two versions of the code was negligible due to the inherently sequential nature of the two databases operations - the ADS-B message could not be written to MongoDB before the enrich operation had completed. This highlights a key consideration when considering a Reactive approach:"
+        "html": "虽然两种应用的测试指标表明 Reactive Java 在处理流式数据时较传统 Java 技术有显著性能优势，但你可能也注意到阻塞式版本是单线程的，因此处于不利地位。实际上，当我测试一个显式使用多线程的阻塞版本时，由于两个数据库操作本身具有顺序性——ADS‑B 消息必须在 enrich 操作完成后才能写入 MongoDB——两者性能差异几乎可以忽略。这强调了在考虑采用 Reactive 方法时的一个关键点："
       },
       {
         "type": "list",
         "items": [
-          "<strong><em>Asynchronous Reactive programs provide the most benefit when there are tasks that can be performed asynchronously while IO bound tasks are blocked. </em></strong>"
+          "<strong><em>当存在可以在 I/O 阻塞期间异步执行的任务时，异步响应式程序能提供最大的收益。</em></strong>"
         ]
       },
       {
         "type": "paragraph",
-        "html": "As we saw with the pi calculation in our initial example, the advantage of the Reactive approach, where tasks can be executed asynchronously, can be substantial."
+        "html": "正如我们在最初的圆周率计算示例中看到的那样，当任务可以异步执行时，Reactive 方法带来的优势可能非常显著。"
       },
       {
         "type": "paragraph",
-        "html": "In addition to performance considerations, the other advantage of the Reactive approach for streaming applications is that it allows for an elegant, declarative coding style. By contrast, adding thread handling to the blocking code added complexity and required a more verbose, imperative code style."
+        "html": "除了性能考量，Reactive 方法在流式应用中的另一项优势是它允许优雅的声明式编码风格。相比之下，在阻塞代码中加入线程处理会带来复杂性，并需要更啰嗦的命令式写法。"
       },
       {
         "type": "paragraph",
-        "html": "If you are working with streaming data in Java, especially data from Kafka or similar messaging systems, MongoDB with its Reactive Streams driver is a compelling database option. Be sure also to check out <a href=\"https://www.mongodb.com/products/platform/atlas-stream-processing/?utm_campaign=devrel&amp;utm_source=third-party-content&amp;utm_medium=cta&amp;utm_content=reactive-foojay&amp;utm_term=hugh.murray\" target=\"_blank\" rel=\"noreferrer noopener\">Atlas Stream Processing</a>, which offers message stream processing directly within the MongoDB Atlas DBAAS service using familiar MongoDB aggregation semantics. <br>All of the code used in this article is available on <a href=\"https://github.com/mongodb-developer/streaming_with_java/\" target=\"_blank\" rel=\"noreferrer noopener\">GitHub</a>."
-      },
-      {
-        "type": "list",
-        "items": [
-          "March 10, 2026",
-          "<span><span></span> <span> 14</span> <span>min read</span></span>"
-        ]
-      },
-      {
-        "type": "list",
-        "items": [
-          "<a href=\"https://foojay.io/today/category/java/\" target=\"_blank\" rel=\"noreferrer noopener\">Java</a>",
-          "<a href=\"https://foojay.io/today/category/kafka/\" target=\"_blank\" rel=\"noreferrer noopener\">Kafka</a>",
-          "<a href=\"https://foojay.io/today/category/mongo/\" target=\"_blank\" rel=\"noreferrer noopener\">Mongo</a>"
-        ]
-      },
-      {
-        "type": "image",
-        "src": "https://foojay.io/wp-content/uploads/2026/03/1699894634220-80x80.jpeg",
-        "alt": "Avatar photo",
-        "caption": "Avatar photo"
-      },
-      {
-        "type": "heading",
-        "level": 3,
-        "text": "Graeme Robinson"
-      },
-      {
-        "type": "list",
-        "items": [
-          "<a href=\"https://www.linkedin.com/in/graemecrobinson/\" target=\"_blank\" rel=\"noreferrer noopener\"> </a>"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "html": "Senior Staff Developer Advocate at MongoDB"
-      },
-      {
-        "type": "image",
-        "src": "https://foojay.io/wp-content/uploads/2026/03/1699894634220-80x80.jpeg",
-        "alt": "Avatar photo",
-        "caption": "Avatar photo"
-      },
-      {
-        "type": "heading",
-        "level": 3,
-        "text": "Graeme Robinson"
-      },
-      {
-        "type": "paragraph",
-        "html": "Senior Staff Developer Advocate at MongoDB"
-      },
-      {
-        "type": "list",
-        "items": [
-          "<a href=\"https://www.linkedin.com/in/graemecrobinson/\" target=\"_blank\" rel=\"noreferrer noopener\"> </a>"
-        ]
-      },
-      {
-        "type": "heading",
-        "level": 3,
-        "text": "Thanks to our Sponsors!"
-      },
-      {
-        "type": "image",
-        "src": "https://foojay.io/wp-content/uploads/2025/02/Frame-4.svg",
-        "alt": "Azul logo",
-        "caption": "Azul logo"
-      },
-      {
-        "type": "heading",
-        "level": 3,
-        "text": "Azul"
-      },
-      {
-        "type": "image",
-        "src": "https://foojay.io/wp-content/uploads/2025/02/Frame-222222.svg",
-        "alt": "Redis logo",
-        "caption": "Redis logo"
-      },
-      {
-        "type": "heading",
-        "level": 3,
-        "text": "Redis"
-      },
-      {
-        "type": "image",
-        "src": "https://foojay.io/wp-content/uploads/2025/06/Cr_icon_632e505ce3.png",
-        "alt": "CodeRabbit logo",
-        "caption": "CodeRabbit logo"
-      },
-      {
-        "type": "heading",
-        "level": 3,
-        "text": "CodeRabbit"
-      },
-      {
-        "type": "image",
-        "src": "https://foojay.io/wp-content/uploads/2025/03/reo.png",
-        "alt": "Reo logo",
-        "caption": "Reo logo"
-      },
-      {
-        "type": "heading",
-        "level": 3,
-        "text": "Reo"
-      },
-      {
-        "type": "image",
-        "src": "https://foojay.io/wp-content/uploads/2025/07/zencoder.png",
-        "alt": "Zencoder logo",
-        "caption": "Zencoder logo"
-      },
-      {
-        "type": "heading",
-        "level": 3,
-        "text": "Zencoder"
-      },
-      {
-        "type": "image",
-        "src": "https://foojay.io/wp-content/uploads/2025/02/Frame-111111.svg",
-        "alt": "Payara logo",
-        "caption": "Payara logo"
-      },
-      {
-        "type": "heading",
-        "level": 3,
-        "text": "Payara"
-      },
-      {
-        "type": "image",
-        "src": "https://foojay.io/wp-content/uploads/2025/02/Frame-3.svg",
-        "alt": "Digma logo",
-        "caption": "Digma logo"
-      },
-      {
-        "type": "heading",
-        "level": 3,
-        "text": "Digma"
-      },
-      {
-        "type": "image",
-        "src": "https://foojay.io/wp-content/uploads/2025/02/Frame-5.svg",
-        "alt": "adesso logo",
-        "caption": "adesso logo"
-      },
-      {
-        "type": "heading",
-        "level": 3,
-        "text": "adesso"
-      },
-      {
-        "type": "heading",
-        "level": 3,
-        "text": "Trending"
-      },
-      {
-        "type": "paragraph",
-        "html": "DPoP: What It Is, How It Works, and Why Bearer Tokens Aren’t Enough"
-      },
-      {
-        "type": "paragraph",
-        "html": "Introducing Lottie4J, a Java(FX) Library to Parse and Play Lottie Animation Files"
-      },
-      {
-        "type": "paragraph",
-        "html": "Introducing the BoxLang IDE Plugin for IntelliJ"
-      },
-      {
-        "type": "paragraph",
-        "html": "Java 26: What’s New?"
-      },
-      {
-        "type": "paragraph",
-        "html": "Understanding MCP Through Raw STDIO Communication"
-      },
-      {
-        "type": "paragraph",
-        "html": "Spring Boot 4 OpenTelemetry Guide: Metrics, Traces, and Logs Explained"
-      },
-      {
-        "type": "paragraph",
-        "html": "No Keys, No LLM: Building a Wikidata Definition API with Embabel"
-      },
-      {
-        "type": "paragraph",
-        "html": "I Benchmarked Java on Single-Board Computers: Orange Pi 5 Ultra and Raspberry Pi 5 Lead the Pack"
-      },
-      {
-        "type": "paragraph",
-        "html": "Building Java Microservices with the Repository Pattern"
-      },
-      {
-        "type": "paragraph",
-        "html": "foojay: A Place for Friends of OpenJDK"
-      },
-      {
-        "type": "paragraph",
-        "html": "Dashboard for OpenJDK Update Release Details"
-      },
-      {
-        "type": "paragraph",
-        "html": "JDK14: New Features and Enhancements"
-      },
-      {
-        "type": "paragraph",
-        "html": "Fun with Flags: My Top 10 Resources for JVM Flags"
-      },
-      {
-        "type": "paragraph",
-        "html": "Performance of Modern Java on Data-Heavy Workloads: Real-Time Streaming"
-      },
-      {
-        "type": "paragraph",
-        "html": "Performance of Modern Java on Data-Heavy Workloads: Batch Processing"
-      },
-      {
-        "type": "paragraph",
-        "html": "How does Java handle different Images and ColorSpaces – Part 1"
-      },
-      {
-        "type": "paragraph",
-        "html": "How does Java handle different Images and ColorSpaces – Part 2"
-      },
-      {
-        "type": "paragraph",
-        "html": "How does Java handle different Images and ColorSpaces – Part 3"
-      },
-      {
-        "type": "paragraph",
-        "html": "How does Java handle different Images and ColorSpaces – Part 4"
-      },
-      {
-        "type": "paragraph",
-        "html": "Indexing all of Wikipedia, on a laptop"
-      },
-      {
-        "type": "paragraph",
-        "html": "Working with Multiple Carets in IntelliJ IDEA"
-      },
-      {
-        "type": "paragraph",
-        "html": "Clean Shutdown of Spring Boot Applications"
-      },
-      {
-        "type": "paragraph",
-        "html": "Project Panama for Newbies (Part 1)"
-      },
-      {
-        "type": "paragraph",
-        "html": "Java 17 on the Raspberry Pi"
-      },
-      {
-        "type": "paragraph",
-        "html": "How to Create Mobile Apps with JavaFX (Part 1)"
-      },
-      {
-        "type": "paragraph",
-        "html": "Beginning JavaFX Applications with IntelliJ IDE"
-      },
-      {
-        "type": "paragraph",
-        "html": "SpringBoot 3.2 + CRaC"
-      },
-      {
-        "type": "paragraph",
-        "html": "Foojay Slack: bit.ly/join-foojay-slack"
-      },
-      {
-        "type": "paragraph",
-        "html": "Preparing for Spring Framework 7 and Spring Boot 4"
-      },
-      {
-        "type": "heading",
-        "level": 2,
-        "text": "Apache Kafka Performance on Azul Platform Prime vs Vanilla OpenJDK"
-      },
-      {
-        "type": "paragraph",
-        "html": "Learn about a number of experiments that have been conducted with Apache Kafka performance on Azul Platform Prime, compared to vanilla OpenJDK. Roughly 40% improvements in performance, both throughput and latency, are achieved."
-      },
-      {
-        "type": "heading",
-        "level": 2,
-        "text": "Stable, Secure, and Affordable Java"
-      },
-      {
-        "type": "paragraph",
-        "html": "Azul Platform Core is the #1 Oracle Java alternative, offering OpenJDK support for more versions (including Java 6 &amp; 7) and more configurations for the greatest business value and lowest TCO."
-      },
-      {
-        "type": "image",
-        "src": "https://foojay.io/wp-content/uploads/2025/05/mongologo-240x260.png",
-        "alt": "",
-        "caption": ""
-      },
-      {
-        "type": "paragraph",
-        "html": "Table of Contents Network Configuration IssuesServer LoadResource Exhaustion App-Side Chaos: Java Threads or Memory Maxed Out, Leaving No Room for New MongoDB Connections Server-Side Crunch: MongoDB Running Out of File Descriptors or Ram on a Shared Host Connection Pool MisconfigurationIncorrect …"
-      },
-      {
-        "type": "image",
-        "src": "https://foojay.io/wp-content/uploads/2025/12/1_rM-JIRWo49QIKv-vZ4taEQ-300x260.webp",
-        "alt": "",
-        "caption": ""
-      },
-      {
-        "type": "paragraph",
-        "html": "Table of Contents Stage 1: Network Arrival &amp; Task Dispatch Stage 2: OperationContext &amp; ACL/Parsing Stage 3: PlanCache Lookup &amp; Query Planning Stage 4: SBE Execution &amp; Cooperative Yielding Stage 5: WiredTiger MVCC, Cache &amp; Journaling Stage 6: Index Mastery …"
-      },
-      {
-        "type": "image",
-        "src": "https://foojay.io/wp-content/uploads/2025/10/546a7b8392ade39f6930ae5605b54327b1d73306_2_690x362-300x260.png",
-        "alt": "",
-        "caption": ""
-      },
-      {
-        "type": "paragraph",
-        "html": "Table of Contents PrerequisitesStep 1: Create the project structureStep 2: Create the test infrastructureStep 3: Generate our first scenario testConclusion When we face software development, the biggest mistake is about delivering what the client wants. It sounds like a cliché, …"
-      },
-      {
-        "type": "image",
-        "src": "https://foojay.io/wp-content/uploads/2025/09/java.jpeg",
-        "alt": "java-mongodb",
-        "caption": "java-mongodb"
-      },
-      {
-        "type": "paragraph",
-        "html": "Table of Contents PrerequisitesStep 1: Create the entitiesExplanation of annotations:Step 2: Create a database containerStep 3: Generate our first DDTConclusion As applications expand, the complexity of the rules they enforce also increases. In many systems, these rules are embedded within …"
-      },
-      {
-        "type": "image",
-        "src": "https://foojay.io/wp-content/uploads/2025/05/mongologo-240x260.png",
-        "alt": "",
-        "caption": ""
-      },
-      {
-        "type": "paragraph",
-        "html": "Table of Contents Why MongoDB and Java are such good friendsThe missing schema of loosely typed systems Bringing schema back Example: Spring Boot sea temperature service Sea temperatures Weather reports Schemas Data access Creating our API Why not Spring Data? Java benefits …"
-      },
-      {
-        "type": "heading",
-        "level": 3,
-        "text": "All 0 Likes"
-      },
-      {
-        "type": "image",
-        "src": "https://foojay.io/wp-content/uploads/2024/04/Core-Mark-510x510.png",
-        "alt": "",
-        "caption": ""
-      },
-      {
-        "type": "heading",
-        "level": 2,
-        "text": "Stable, Secure, and Affordable Java"
-      },
-      {
-        "type": "paragraph",
-        "html": "Azul Platform Core is the #1 Oracle Java alternative, offering OpenJDK support for more versions (including Java 6 &amp; 7) and more configurations for the greatest business value and lowest TCO."
-      },
-      {
-        "type": "image",
-        "src": "https://foojay.io/wp-content/uploads/2024/06/image-digma-udemy-700x350.png",
-        "alt": "",
-        "caption": ""
-      },
-      {
-        "type": "heading",
-        "level": 2,
-        "text": "Step up your coding with the Continuous Feedback Udemy Course: Additional coupons are available"
-      },
-      {
-        "type": "paragraph",
-        "html": "What do you know about the code changes that were just introduced into the codebase? When will you notice if something goes wrong?"
-      },
-      {
-        "type": "image",
-        "src": "https://foojay.io/wp-content/uploads/2024/02/payara-ad-700x314.png",
-        "alt": "",
-        "caption": ""
-      },
-      {
-        "type": "heading",
-        "level": 2,
-        "text": "Jakarta EE 11: Beyond the Era of Java EE"
-      },
-      {
-        "type": "paragraph",
-        "html": "This user guide provides a brief history of Java EE/Jakarta EE and a detailed overview of some of the specifications that will be updated in Jakarta EE 11."
-      },
-      {
-        "type": "heading",
-        "level": 3,
-        "text": "Do you want your ad here?"
-      },
-      {
-        "type": "paragraph",
-        "html": "Contact us to get your ad seen by thousands of users every day!"
-      }
-    ],
-    "refineErrors": [
-      {
-        "index": 0,
-        "type": "list",
-        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
-      },
-      {
-        "index": 1,
-        "type": "list",
-        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
-      },
-      {
-        "index": 2,
-        "type": "paragraph",
-        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
-      },
-      {
-        "index": 3,
-        "type": "list",
-        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+        "html": "如果你在 Java 中处理流式数据，特别是来自 Kafka 或类似消息系统的数据，MongoDB 的 Reactive Streams 驱动是一个很有吸引力的数据库选择。也请务必查看 <a href=\"https://www.mongodb.com/products/platform/atlas-stream-processing/?utm_campaign=devrel&amp;utm_source=third-party-content&amp;utm_medium=cta&amp;utm_content=reactive-foojay&amp;utm_term=hugh.murray\" target=\"_blank\" rel=\"noreferrer noopener\">Atlas Stream Processing</a>，它在 MongoDB Atlas DBAAS 服务中提供直接的消息流处理，并使用熟悉的 MongoDB 聚合语义。<br>本文使用的全部代码都在 <a href=\"https://github.com/mongodb-developer/streaming_with_java/\" target=\"_blank\" rel=\"noreferrer noopener\">GitHub</a> 上。"
       }
     ]
   },
