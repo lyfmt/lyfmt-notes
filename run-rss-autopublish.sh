@@ -19,7 +19,7 @@ export PYTHONUNBUFFERED=1
     --articles "$ROOT/articles.json" \
     --allow-publish \
     --pi-timeout 420 \
-    --pi-limit 4 \
+    --pi-limit 0 \
     --max-items 3 \
     --git-commit \
     --git-push \

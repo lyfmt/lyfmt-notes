@@ -42,7 +42,7 @@ GENERIC_BAD_TITLES = {
     "503 service unavailable",
 }
 
-TEXTUAL_BLOCK_TYPES = {"heading", "paragraph", "footnote", "list"}
+TEXTUAL_BLOCK_TYPES = {"paragraph", "footnote", "list"}
 
 
 def normalize_space(value: str | None) -> str:
@@ -139,12 +139,10 @@ def has_cjk(text: str | None) -> bool:
 
 def block_has_cjk(block: dict) -> bool:
     block_type = block.get("type")
-    if block_type == "heading":
-        return has_cjk(block.get("text"))
     if block_type in {"paragraph", "footnote"}:
-        return has_cjk(block.get("html"))
+        return has_cjk(visible_text(block.get("html")))
     if block_type == "list":
-        return any(has_cjk(item) for item in (block.get("items") or []))
+        return any(has_cjk(visible_text(item)) for item in (block.get("items") or []))
     if block_type == "image":
         return has_cjk(block.get("alt")) or has_cjk(block.get("caption"))
     if block_type == "embed":
@@ -152,14 +150,21 @@ def block_has_cjk(block: dict) -> bool:
     return False
 
 
+TAG_STRIP_RE = re.compile(r"<[^>]+>")
+
+
+def visible_text(value: str | None) -> str:
+    text = str(value or "")
+    text = TAG_STRIP_RE.sub(" ", text)
+    return normalize_space(text)
+
+
 def block_text_nonempty(block: dict) -> bool:
     block_type = block.get("type")
-    if block_type == "heading":
-        return bool(normalize_space(block.get("text")))
     if block_type in {"paragraph", "footnote"}:
-        return bool(normalize_space(block.get("html")))
+        return bool(visible_text(block.get("html")))
     if block_type == "list":
-        return any(normalize_space(item) for item in (block.get("items") or []))
+        return any(visible_text(item) for item in (block.get("items") or []))
     return False
 
 
