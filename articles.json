@@ -1345,7 +1345,7 @@
         }
       ],
       "detail": {
-        "available": false,
+        "available": true,
         "layout": "detail-zh",
         "translatedFrom": "https://www.servethehome.com/lenovo-thinkstation-pgx-review-the-nvidia-gb10-128gb-ai-workstation-goes-corporate/",
         "sourceName": "ServeTheHome",
@@ -2155,7 +2155,7 @@
         }
       ],
       "detail": {
-        "available": false,
+        "available": true,
         "layout": "detail-zh",
         "translatedFrom": "https://simonwillison.net/guides/agentic-engineering-patterns/better-code/#atom-everything",
         "sourceName": "Simon Willison",
@@ -2925,7 +2925,7 @@
         }
       ],
       "detail": {
-        "available": false,
+        "available": true,
         "layout": "detail-zh",
         "translatedFrom": "https://huggingface.co/blog/storage-buckets",
         "sourceName": "Hugging Face Blog",
@@ -4071,7 +4071,7 @@
         }
       ],
       "detail": {
-        "available": false,
+        "available": true,
         "layout": "draft",
         "translatedFrom": "https://hackaday.com/2026/03/10/seeing-the-world-through-animal-eyes/",
         "sourceName": "Hackaday",
@@ -4208,7 +4208,7 @@
         }
       ],
       "detail": {
-        "available": false,
+        "available": true,
         "layout": "draft",
         "translatedFrom": "https://foojay.io/today/introducing-lottie4j-a-javafx-library-to-parse-and-play-lottie-animation-files/",
         "sourceName": "Foojay",
@@ -4799,7 +4799,7 @@
         }
       ],
       "detail": {
-        "available": false,
+        "available": true,
         "layout": "draft",
         "translatedFrom": "https://spring.io/blog/2026/03/09/this-week-in-spring-march-09th-2026",
         "sourceName": "Spring Blog",
@@ -8346,7 +8346,7 @@
         }
       ],
       "detail": {
-        "available": false,
+        "available": true,
         "layout": "draft",
         "translatedFrom": "https://www.cnx-software.com/2026/03/10/makerfabs-cm0iq-ultra-compact-42x36mm-raspberry-pi-cm0-lite-board/",
         "sourceName": "CNX Software",
@@ -8484,7 +8484,7 @@
         }
       ],
       "detail": {
-        "available": false,
+        "available": true,
         "layout": "draft",
         "translatedFrom": "https://hackaday.com/2026/03/09/diagnosing-a-mysterious-fault-with-a-commodore-1541-disk-drive/",
         "sourceName": "Hackaday",
@@ -9711,7 +9711,7 @@
         }
       ],
       "detail": {
-        "available": false,
+        "available": true,
         "layout": "draft",
         "translatedFrom": "https://liliputing.com/lenovo-slim-7i-aura-edition-is-an-lightweight-laptop-with-intel-panther-lake/",
         "sourceName": "Liliputing",
@@ -9755,7 +9755,7 @@
         }
       ],
       "detail": {
-        "available": false,
+        "available": true,
         "layout": "draft",
         "translatedFrom": "https://huggingface.co/blog/lerobot-release-v050",
         "sourceName": "Hugging Face Blog",
