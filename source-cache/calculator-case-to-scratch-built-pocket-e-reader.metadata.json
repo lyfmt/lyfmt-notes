@@ -1,0 +1,20 @@
+{
+  "item": {
+    "id": 2708,
+    "title": "Calculator Case to Scratch-Built Pocket E-Reader",
+    "blog": "Hackaday",
+    "url": "https://hackaday.com/2026/03/11/calculator-case-to-scratch-built-pocket-e-reader/",
+    "published": "2026-03-11T08:00:38Z",
+    "discovered": "2026-03-11T09:00:18.627941162Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://hackaday.com/2026/03/11/calculator-case-to-scratch-built-pocket-e-reader/",
+    "ok": true,
+    "title": "Calculator Case To Scratch-Built Pocket E-Reader",
+    "description": "E-readers are an awesome creation allowing you to display digital information in a way that requires little battery life. While there’s plenty of very impressive models to chose from on the c…",
+    "fetched_bytes": 84376,
+    "error": null
+  },
+  "classification": "normal"
+}

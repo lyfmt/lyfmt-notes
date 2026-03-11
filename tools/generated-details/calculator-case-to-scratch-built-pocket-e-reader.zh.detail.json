@@ -1,0 +1,101 @@
+{
+  "available": true,
+  "layout": "detail-zh",
+  "translatedFrom": "https://hackaday.com/2026/03/11/calculator-case-to-scratch-built-pocket-e-reader/",
+  "sourceName": "Hackaday",
+  "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Hackaday"
+    },
+    {
+      "type": "list",
+      "items": [
+        "by:"
+      ]
+    },
+    {
+      "type": "list",
+      "items": [
+        "<a href=\"https://www.facebook.com/sharer/sharer.php?u=https://hackaday.com/2026/03/11/calculator-case-to-scratch-built-pocket-e-reader/\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>",
+        "<a href=\"https://twitter.com/intent/tweet?text=Calculator%20Case%20To%20Scratch-Built%20Pocket%20E-Reader%20via%20@hackaday&amp;url=https://hackaday.com/2026/03/11/calculator-case-to-scratch-built-pocket-e-reader/\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>",
+        "<a href=\"https://news.ycombinator.com/submitlink?u=https://hackaday.com/2026/03/11/calculator-case-to-scratch-built-pocket-e-reader/&amp;t=Calculator%20Case%20To%20Scratch-Built%20Pocket%20E-Reader\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>",
+        "<a href=\"https://www.reddit.com/submit?url=https://hackaday.com/2026/03/11/calculator-case-to-scratch-built-pocket-e-reader/\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>"
+      ]
+    },
+    {
+      "type": "image",
+      "src": "https://hackaday.com/wp-content/uploads/2026/03/base-bottom-16-9.png?w=786",
+      "alt": "Mimisbrunnur",
+      "caption": "Mimisbrunnur"
+    },
+    {
+      "type": "paragraph",
+      "html": "E-readers are an awesome creation allowing you to display digital information in a way that requires little battery life. While there’s plenty of very impressive models to chose from on the commercial market, it’s also possible to build one yourself — which is exactly what [kaos-69] did in his <a href=\"https://github.com/kaos-69/Mimisbrunnur\" target=\"_blank\" rel=\"noreferrer noopener\">Mimisbrunnur project</a>, creating a truly unique e-reader from scratch."
+    },
+    {
+      "type": "paragraph",
+      "html": "While looking through old junk at home, [kaos-69] came across a case that held a calculator and pen at one point in the distant past. The pen was gone and the calculator no longer functioned but the case held promise. He removed the calculator and got some parts on order. For the e-paper display he went with a 5.83-inch unit that <em>just</em> fit inside the spring-loaded case. The Mimisbrunnur is powered by a 2000 mAh LiPo battery, with a micro SD card reader for storing what will be displayed. The brains come from an RP2040 microcontroller on an Adafruit Feather breakout board, which worked out great as it already takes care of battery management and the 24-pin interface for the e-paper display."
+    },
+    {
+      "type": "paragraph",
+      "html": "There are also eight buttons that live below the display for user interface, and even some LEDs to aid in reading in the dark. The depth of the case allowed all this to be connected with the use of a perfboard and some risers to set the screen forward, allowing the battery to live behind it. Using the Mimisbrunnur is pretty straightforward with the eight buttons sitting below icons on the screen giving you clear guidance on how to turn the page, add a bookmark, or browse the SD card for another file to open."
+    },
+    {
+      "type": "paragraph",
+      "html": "We’ve seen some impressive DIY e-readers over the years, such as the <a href=\"https://hackaday.com/2025/12/24/diy-e-reader-folds-open-like-a-book/\" target=\"_blank\" rel=\"noreferrer noopener\">dual-screen Diptyx</a> and the <a href=\"https://hackaday.com/2022/09/29/open-book-abridged-oshw-e-reader-now-simplified-pico-driven/\" target=\"_blank\" rel=\"noreferrer noopener\">Open Book</a>. But this project is an excellent reminder that a device doesn’t have to be complex to get the job done."
+    },
+    {
+      "type": "image",
+      "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_face.png",
+      "alt": "",
+      "caption": ""
+    },
+    {
+      "type": "image",
+      "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_twitter.png",
+      "alt": "",
+      "caption": ""
+    },
+    {
+      "type": "image",
+      "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_in.png",
+      "alt": "",
+      "caption": ""
+    },
+    {
+      "type": "image",
+      "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_mail1.png",
+      "alt": "",
+      "caption": ""
+    },
+    {
+      "type": "list",
+      "items": [
+        "<a href=\"https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhackaday.com%2F2026%2F03%2F11%2Fcalculator-case-to-scratch-built-pocket-e-reader%2F\" target=\"_blank\" rel=\"noreferrer noopener\"> <i> </i> </a>",
+        "<a href=\"https://twitter.com/intent/tweet?text=Calculator%20Case%20To%20Scratch-Built%20Pocket%20E-Reader%20via%20@hackaday&amp;url=https://hackaday.com/2026/03/11/calculator-case-to-scratch-built-pocket-e-reader/\" target=\"_blank\" rel=\"noreferrer noopener\"> <i></i> </a>",
+        "<a href=\"https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fhackaday.com%2F2026%2F03%2F11%2Fcalculator-case-to-scratch-built-pocket-e-reader%2F\" target=\"_blank\" rel=\"noreferrer noopener\"> <i></i> </a>",
+        "<a href=\"mailto:?subject=Calculator+Case+To+Scratch-Built+Pocket+E-Reader | Hackaday&amp;body=https%3A%2F%2Fhackaday.com%2F2026%2F03%2F11%2Fcalculator-case-to-scratch-built-pocket-e-reader%2F\" target=\"_blank\" rel=\"noreferrer noopener\"> <i></i> </a>"
+      ]
+    }
+  ],
+  "refineErrors": [
+    {
+      "index": 1,
+      "type": "list",
+      "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+    },
+    {
+      "index": 2,
+      "type": "list",
+      "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+    },
+    {
+      "index": 4,
+      "type": "paragraph",
+      "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+    }
+  ]
+}
