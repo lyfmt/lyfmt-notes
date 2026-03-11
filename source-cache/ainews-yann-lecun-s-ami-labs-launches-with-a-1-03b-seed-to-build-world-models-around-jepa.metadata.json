@@ -1,0 +1,20 @@
+{
+  "item": {
+    "id": 2705,
+    "title": "[AINews] Yann LeCun’s AMI Labs launches with a $1.03B seed to build world models around JEPA",
+    "blog": "Latent Space",
+    "url": "https://www.latent.space/p/ainews-yann-lecuns-ami-labs-launches",
+    "published": "2026-03-11T06:46:30Z",
+    "discovered": "2026-03-11T07:00:22.964656474Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://www.latent.space/p/ainews-yann-lecuns-ami-labs-launches",
+    "ok": true,
+    "title": "[AINews] Yann LeCun’s AMI Labs launches with a $1.03B seed to build world models around JEPA",
+    "description": "World Models are what next generation AI needs.",
+    "fetched_bytes": 254359,
+    "error": null
+  },
+  "classification": "normal"
+}

@@ -1,0 +1,549 @@
+{
+  "slug": "ainews-yann-lecun-s-ami-labs-launches-with-a-1-03b-seed-to-build-world-models-around-jepa",
+  "title": "[AINews] Yann LeCun’s AMI Labs launches with a $1.03B seed to build world models around JEPA",
+  "author": "Latent Space",
+  "publishedAt": "2026-03-11",
+  "source": "Latent Space",
+  "url": "https://www.latent.space/p/ainews-yann-lecuns-ami-labs-launches",
+  "tags": [
+    "AI"
+  ],
+  "excerpt": "这篇文章围绕“[AINews] Yann LeCun’s AMI Labs launches with a $1.03B seed to build world models around JEPA”展开，RSS 摘要提到：World Models are what next generation AI needs.",
+  "content": [
+    {
+      "heading": "文章核心",
+      "paragraphs": [
+        "基于 RSS 摘要与页面元数据，原文重点是：World Models are what next generation AI needs.",
+        "来源信息：Latent Space｜2026-03-11。"
+      ]
+    },
+    {
+      "heading": "值得继续补充的点",
+      "paragraphs": [
+        "如果后续补齐详情视图，可以继续沿着原文结构展开关键论点、案例、约束条件与结论。",
+        "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+      ]
+    }
+  ],
+  "detail": {
+    "available": true,
+    "layout": "detail-zh",
+    "translatedFrom": "https://www.latent.space/p/ainews-yann-lecuns-ami-labs-launches",
+    "sourceName": "Latent Space",
+    "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+    "blocks": [
+      {
+        "type": "image",
+        "src": "https://substackcdn.com/image/fetch/$s_!1PJi!,e_trim:10:white/e_trim:10:transparent/h_72,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa4fe1182-38af-4a5d-bacc-439c36225e87_5000x1200.png",
+        "alt": "Latent.Space",
+        "caption": "Latent.Space"
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "World Models are what next generation AI needs."
+      },
+      {
+        "type": "paragraph",
+        "html": "<span>AI News for 3/9/2026-3/10/2026. We checked 12 subreddits, </span><a href=\"https://twitter.com/i/lists/1585430245762441216\" target=\"_blank\" rel=\"noreferrer noopener\">544 Twitters</a><span> — no more Discord (see below). Estimated reading time saved (at 200wpm): </span><strong>2649</strong><span> minutes. </span><a href=\"https://news.smol.ai/\" target=\"_blank\" rel=\"noreferrer noopener\">AINews&#x27; website</a><span> lets you search all past issues. As a reminder, </span><a href=\"https://www.latent.space/p/2026\" target=\"_blank\" rel=\"noreferrer noopener\">AINews is now a section of Latent Space</a><span>. You can </span><a href=\"https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack\" target=\"_blank\" rel=\"noreferrer noopener\">opt in/out</a><span> of email frequencies!</span>"
+      },
+      {
+        "type": "paragraph",
+        "html": "<span>Most days, AINews’ op-ed is human written, while the sections below are human curated selections from multiple LLM generations. However, some days there’s one clear big story, and in those cases, we’ve been developing a new methodology that reports the big story in more detail. Today is one of those days — GPT 5.4 won today’s battle in describing AI Twitter coverage of AMI. So, read on, feedback welcome. </span><em>— Ed.</em>"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "AI Twitter Recap"
+      },
+      {
+        "type": "paragraph",
+        "html": "<strong>Top Story: Yann LeCun’s AMI Labs launches with a $1.03B seed to build world models around JEPA</strong>"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "What happened"
+      },
+      {
+        "type": "paragraph",
+        "html": "<strong>Yann LeCun formally unveiled Advanced Machine Intelligence (AMI Labs), a new startup focused on “building real intelligence into the real world,” with an unusually large $1.03B seed round (also cited as €890M) at a reported $3.5B pre-money valuation, described as one of the largest seed rounds ever and likely the largest for a European company</strong><span>. The announcement came directly from LeCun, who said the company had completed “one of the largest seeds ever” and was hiring </span><a href=\"https://x.com/ylecun/status/2031268686984527936\" target=\"_blank\" rel=\"noreferrer noopener\">@ylecun</a><span>, and from CEO Alex Lebrun, who framed the mission as a “long-term scientific endeavor” to build systems that “truly understand the real world” </span><a href=\"https://x.com/lxbrun/status/2031237426975268886\" target=\"_blank\" rel=\"noreferrer noopener\">@lxbrun</a><span>. Multiple press reports converged on the same core facts: AMI aims to build AI models that understand the physical world and reflects LeCun’s long-running view that human-level AI will come from world modeling rather than scaling language prediction alone </span><a href=\"https://x.com/TechCrunch/status/2031234186003288523\" target=\"_blank\" rel=\"noreferrer noopener\">@TechCrunch</a><span> </span><a href=\"https://x.com/WIRED/status/2031234619085853009\" target=\"_blank\" rel=\"noreferrer noopener\">@WIRED</a><span> </span><a href=\"https://x.com/business/status/2031234715240251889\" target=\"_blank\" rel=\"noreferrer noopener\">@business</a><span> </span><a href=\"https://x.com/Reuters/status/2031317927778034139\" target=\"_blank\" rel=\"noreferrer noopener\">@Reuters</a><span> </span><a href=\"https://x.com/ZeffMax/status/2031237938529566877\" target=\"_blank\" rel=\"noreferrer noopener\">@ZeffMax</a><span>. The founding and senior team includes LeCun; Alex Lebrun as CEO </span><a href=\"https://x.com/lxbrun/status/2031237426975268886\" target=\"_blank\" rel=\"noreferrer noopener\">@lxbrun</a><span>; Saining Xie as cofounder/CSO </span><a href=\"https://x.com/sainingxie/status/2031236308383748267\" target=\"_blank\" rel=\"noreferrer noopener\">@sainingxie</a><span>; Laurent Solly as COO </span><a href=\"https://x.com/laurentsolly/status/2031254099543371940\" target=\"_blank\" rel=\"noreferrer noopener\">@laurentsolly</a><span>; Pascale Fung as Co-Founder and Chief Research &amp; Innovation Officer </span><a href=\"https://x.com/pascalefung/status/2031287240375054420\" target=\"_blank\" rel=\"noreferrer noopener\">@pascalefung</a><span>; plus a wave of prominent founding researchers joining to work specifically on world models, representation learning, pretraining, scaling, and video </span><a href=\"https://x.com/sanghyunwoo1219/status/2031252576205778981\" target=\"_blank\" rel=\"noreferrer noopener\">@sanghyunwoo1219</a><span> </span><a href=\"https://x.com/jihanyang13/status/2031269891504808444\" target=\"_blank\" rel=\"noreferrer noopener\">@jihanyang13</a><span> </span><a href=\"https://x.com/duchao0726/status/2031364139210440717\" target=\"_blank\" rel=\"noreferrer noopener\">@duchao0726</a><span> </span><a href=\"https://x.com/zhouxy2017/status/2031378974345982212\" target=\"_blank\" rel=\"noreferrer noopener\">@zhouxy2017</a><span> </span><a href=\"https://x.com/jingli9111/status/2031401039518208373\" target=\"_blank\" rel=\"noreferrer noopener\">@jingli9111</a><span>.**</span>"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Facts vs. opinions"
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "Facts reported across tweets and coverage"
+      },
+      {
+        "type": "list",
+        "items": [
+          "<strong>Funding size:</strong><span> </span><strong>$1.03B</strong><span> seed / </span><strong>€890M</strong><span> </span><a href=\"https://x.com/ylecun/status/2031268686984527936\" target=\"_blank\" rel=\"noreferrer noopener\">@ylecun</a><span> </span><a href=\"https://x.com/lxbrun/status/2031237426975268886\" target=\"_blank\" rel=\"noreferrer noopener\">@lxbrun</a><span> </span><a href=\"https://x.com/laurentsolly/status/2031254099543371940\" target=\"_blank\" rel=\"noreferrer noopener\">@laurentsolly</a><span>.</span>",
+          "<strong>Valuation:</strong><span> </span><strong>$3.5B pre-money</strong><span> was reported by commentators and news summaries </span><a href=\"https://x.com/iScienceLuvr/status/2031235141524402278\" target=\"_blank\" rel=\"noreferrer noopener\">@iScienceLuvr</a><span> </span><a href=\"https://x.com/ZeffMax/status/2031237938529566877\" target=\"_blank\" rel=\"noreferrer noopener\">@ZeffMax</a><span>.</span>",
+          "<strong>Company thesis:</strong><span> build AI models that can </span><strong>understand the physical/real world</strong><span>, not just language </span><a href=\"https://x.com/TechCrunch/status/2031234186003288523\" target=\"_blank\" rel=\"noreferrer noopener\">@TechCrunch</a><span> </span><a href=\"https://x.com/WIRED/status/2031234619085853009\" target=\"_blank\" rel=\"noreferrer noopener\">@WIRED</a><span> </span><a href=\"https://x.com/Reuters/status/2031379588668944835\" target=\"_blank\" rel=\"noreferrer noopener\">@Reuters</a><span>.</span>",
+          "<strong>LeCun’s positioning:</strong><span> world models have been his public thesis for years; AMI is the vehicle to test it at startup scale </span><a href=\"https://x.com/ZeffMax/status/2031237938529566877\" target=\"_blank\" rel=\"noreferrer noopener\">@ZeffMax</a><span> </span><a href=\"https://x.com/WIRED/status/2031234619085853009\" target=\"_blank\" rel=\"noreferrer noopener\">@WIRED</a><span>.</span>",
+          "<strong>Official language from AMI leaders:</strong><span> “real intelligence into the real world,” “human-centered,” “perceives, learns, reasons and acts” </span><a href=\"https://x.com/Brian_Bo_Li/status/2031249945660108977\" target=\"_blank\" rel=\"noreferrer noopener\">@Brian_Bo_Li</a><span> </span><a href=\"https://x.com/pascalefung/status/2031287240375054420\" target=\"_blank\" rel=\"noreferrer noopener\">@pascalefung</a><span>.</span>",
+          "<strong>Hiring/opening locations:</strong><span> Paris explicitly mentioned by Pascale Fung </span><a href=\"https://x.com/pascalefung/status/2031292462539403661\" target=\"_blank\" rel=\"noreferrer noopener\">@pascalefung</a><span>; observers also noted Zürich among locations </span><a href=\"https://x.com/giffmana/status/2031407851202109969\" target=\"_blank\" rel=\"noreferrer noopener\">@giffmana</a><span>.</span>",
+          "<strong>Europe/France angle:</strong><span> French media and political figures framed it as a major European/French AI milestone </span><a href=\"https://x.com/BFMTV/status/2031234198904746355\" target=\"_blank\" rel=\"noreferrer noopener\">@BFMTV</a><span> </span><a href=\"https://x.com/France24_fr/status/2031275368833777943\" target=\"_blank\" rel=\"noreferrer noopener\">@France24_fr</a><span> </span><a href=\"https://x.com/EmmanuelMacron/status/2031288199503388717\" target=\"_blank\" rel=\"noreferrer noopener\">@EmmanuelMacron</a><span> </span><a href=\"https://x.com/NicolasDufourcq/status/2031344671507484896\" target=\"_blank\" rel=\"noreferrer noopener\">@NicolasDufourcq</a><span>.</span>"
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "Opinions and interpretation"
+      },
+      {
+        "type": "list",
+        "items": [
+          "<strong>Supportive view:</strong><span> this is LeCun finally getting the capital and team to prove his long-argued alternative to LLM-centric AI </span><a href=\"https://x.com/teortaxesTex/status/2031242136125866422\" target=\"_blank\" rel=\"noreferrer noopener\">@teortaxesTex</a><span>.</span>",
+          "<strong>Bullish technical view:</strong><span> world models will be a “huge leap forward,” especially for embodiment/robotics, and AMI’s open-research posture is attractive </span><a href=\"https://x.com/mervenoyann/status/2031291463800168870\" target=\"_blank\" rel=\"noreferrer noopener\">@mervenoyann</a><span> </span><a href=\"https://x.com/ziv_ravid/status/2031346466023706706\" target=\"_blank\" rel=\"noreferrer noopener\">@ziv_ravid</a><span>.</span>",
+          "<strong>Architecture-war framing:</strong><span> some commentators explicitly cast AMI as a bet that the industry is building on the wrong foundation by over-indexing on autoregressive language models </span><a href=\"https://x.com/LiorOnAI/status/2031479959685067006\" target=\"_blank\" rel=\"noreferrer noopener\">@LiorOnAI</a><span>.</span>",
+          "<strong>Skeptical/neutral view:</strong><span> the key question is not whether world models sound compelling, but whether JEPA-style methods can scale into economically useful systems faster than LLM-centric agents are already commercializing. This skepticism is more implicit than explicit in the tweet set, but appears through “gets a chance to prove his vision” style comments </span><a href=\"https://x.com/teortaxesTex/status/2031242136125866422\" target=\"_blank\" rel=\"noreferrer noopener\">@teortaxesTex</a><span>.</span>",
+          "<strong>Meta-commentary:</strong><span> AMI is not being framed internally as a “conventional lab” </span><a href=\"https://x.com/sainingxie/status/2031236308383748267\" target=\"_blank\" rel=\"noreferrer noopener\">@sainingxie</a><span>, which suggests an attempt to differentiate from the standard frontier-lab pattern of API-first model scaling.</span>"
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Technical details: JEPA, world models, and why this is different from next-token LMs"
+      },
+      {
+        "type": "paragraph",
+        "html": "<span>AMI’s public narrative is aligned with </span><strong>LeCun’s JEPA/world-model agenda</strong><span>. The explicit technical details in the tweets are sparse, but the discussion strongly points to the following stack of ideas:</span>"
+      },
+      {
+        "type": "list",
+        "items": [
+          "<span>Real-world sensor streams contain lots of </span><strong>unpredictable or irrelevant entropy</strong><span>.</span>",
+          "Raw-pixel/video prediction is inefficient because it spends modeling capacity on noise.",
+          "<span>Predicting </span><strong>latent abstractions</strong><span> may better support planning, controllability, and invariance.</span>"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "<strong>Robotics / embodied AI</strong><span> </span><a href=\"https://x.com/mervenoyann/status/2031291463800168870\" target=\"_blank\" rel=\"noreferrer noopener\">@mervenoyann</a>",
+          "<strong>Healthcare</strong><span> and lower-hallucination systems </span><a href=\"https://x.com/kimmonismus/status/2031291863341162717\" target=\"_blank\" rel=\"noreferrer noopener\">@kimmonismus</a>",
+          "<strong>Industrial process control / safety-critical environments</strong><span> </span><a href=\"https://x.com/LiorOnAI/status/2031479959685067006\" target=\"_blank\" rel=\"noreferrer noopener\">@LiorOnAI</a>",
+          "More generally, systems that must track persistent state, causality, and action outcomes in the physical world."
+        ]
+      },
+      {
+        "type": "paragraph",
+        "html": "This is broadly consistent with LeCun’s longstanding critique of pure autoregressive LLMs:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "text prediction alone is not sufficient for grounded understanding,",
+          "the world is only partially predictable,",
+          "intelligent agents need hierarchical representations and planning in latent space,",
+          "data from vision/video/embodiment should dominate long-run AI progress."
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "Team composition as a technical signal"
+      },
+      {
+        "type": "paragraph",
+        "html": "The founding roster is itself a technical clue. Several hires emphasize:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "<strong>world models</strong><span> </span><a href=\"https://x.com/sanghyunwoo1219/status/2031252576205778981\" target=\"_blank\" rel=\"noreferrer noopener\">@sanghyunwoo1219</a><span> </span><a href=\"https://x.com/zhouxy2017/status/2031378974345982212\" target=\"_blank\" rel=\"noreferrer noopener\">@zhouxy2017</a>",
+          "<strong>pretraining, scaling, video, representation</strong><span> </span><a href=\"https://x.com/jingli9111/status/2031401039518208373\" target=\"_blank\" rel=\"noreferrer noopener\">@jingli9111</a>",
+          "<span>a cluster of </span><strong>vision-heavy researchers</strong><span>, noted by supporters as “a team of vision 🐐s” </span><a href=\"https://x.com/mervenoyann/status/2031291952990212519\" target=\"_blank\" rel=\"noreferrer noopener\">@mervenoyann</a>"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "html": "<span>That suggests AMI is likely to emphasize </span><strong>vision/video/self-supervised representation learning</strong><span>, not just append world-model language to an otherwise standard LLM stack.</span>"
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "Open research posture"
+      },
+      {
+        "type": "paragraph",
+        "html": "<span>Several supportive reactions specifically mentioned hope for </span><strong>open releases/open research</strong><span> </span><a href=\"https://x.com/mervenoyann/status/2031291463800168870\" target=\"_blank\" rel=\"noreferrer noopener\">@mervenoyann</a><span> </span><a href=\"https://x.com/mervenoyann/status/2031293535995973894\" target=\"_blank\" rel=\"noreferrer noopener\">@mervenoyann</a><span>. That matters because JEPA/world-model work has historically had stronger academic than product traction; openness would help AMI recruit and shape a research ecosystem. But at launch this is still aspiration rather than demonstrated practice.</span>"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Different opinions in the reaction set"
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "1) Strongly supportive: “LeCun finally gets to run the experiment”"
+      },
+      {
+        "type": "paragraph",
+        "html": "A sizable share of reactions are essentially relief that LeCun now has a dedicated startup and capital base to validate his worldview."
+      },
+      {
+        "type": "list",
+        "items": [
+          "<span>“Yann gets a chance to prove his vision” </span><a href=\"https://x.com/teortaxesTex/status/2031242136125866422\" target=\"_blank\" rel=\"noreferrer noopener\">@teortaxesTex</a>",
+          "<span>“very bullish… world models will be a huge leap forward” </span><a href=\"https://x.com/mervenoyann/status/2031291463800168870\" target=\"_blank\" rel=\"noreferrer noopener\">@mervenoyann</a>",
+          "<span>“super bullish on AMI labs” because of team quality and open research ambition </span><a href=\"https://x.com/ziv_ravid/status/2031346466023706706\" target=\"_blank\" rel=\"noreferrer noopener\">@ziv_ravid</a>",
+          "<span>“understanding the real world is key to building advanced AI systems” </span><a href=\"https://x.com/duchao0726/status/2031364139210440717\" target=\"_blank\" rel=\"noreferrer noopener\">@duchao0726</a>"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "html": "This camp sees AMI as an overdue counterweight to the current industry equilibrium around autoregressive LMs + RLHF + tool use."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "2) Architecture-war framing: “LLMs predict words; AMI wants models of reality”"
+      },
+      {
+        "type": "paragraph",
+        "html": "<span>This view was most explicitly articulated by </span><a href=\"https://x.com/LiorOnAI/status/2031479959685067006\" target=\"_blank\" rel=\"noreferrer noopener\">@LiorOnAI</a><span>:</span>"
+      },
+      {
+        "type": "list",
+        "items": [
+          "language models operate over words/tokens,",
+          "reality is continuous, sensorimotor, and partly unpredictable,",
+          "generative models overfit to reconstruction,",
+          "JEPA predicts meaningful abstractions instead."
+        ]
+      },
+      {
+        "type": "paragraph",
+        "html": "This is the clearest pro-AMI technical argument in the tweet set. It treats hallucination, brittleness, and lack of grounded planning as symptoms of the wrong training objective, not just insufficient scale."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "3) Pragmatic neutral: “Compelling thesis, but now it has to ship”"
+      },
+      {
+        "type": "paragraph",
+        "html": "Some reactions are celebratory but not credulous:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "<span>“gets a chance to prove his vision” </span><a href=\"https://x.com/teortaxesTex/status/2031242136125866422\" target=\"_blank\" rel=\"noreferrer noopener\">@teortaxesTex</a>",
+          "<span>“burning question… PyTorch or JAX shop” </span><a href=\"https://x.com/giffmana/status/2031272110656491923\" target=\"_blank\" rel=\"noreferrer noopener\">@giffmana</a>"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "html": "The latter is not just joke infrastructure chatter; it reflects a real question for how AMI will operationalize research. A startup attempting novel world-model training at scale must choose an ecosystem optimized either for:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "<span>fast research iteration and broad hiring familiarity (</span><strong>PyTorch</strong><span>), or</span>",
+          "<span>aggressive large-scale functional-programming style and SPMD compiler stacks (</span><strong>JAX</strong><span>).</span>"
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "4) Broader simulation/world-model enthusiasm outside AMI"
+      },
+      {
+        "type": "paragraph",
+        "html": "<span>The AMI launch also landed into a broader discourse where “simulation is the next frontier” was already in the air. Percy Liang argued that the next big opportunity is to “put society into a docker container” via simulation models that can predict what happens in hypothetical real-world scenarios </span><a href=\"https://x.com/percyliang/status/2031392872310911430\" target=\"_blank\" rel=\"noreferrer noopener\">@percyliang</a><span>. That isn’t about AMI directly, but it reinforces why LeCun’s thesis currently resonates: many researchers increasingly think progress requires moving from token imitation to model-based prediction of environments and interactions.</span>"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Context: why this matters now"
+      },
+      {
+        "type": "paragraph",
+        "html": "<span>AMI matters because it is a high-profile, well-capitalized attempt to reopen a question many in industry had tacitly declared settled: </span><strong>is next-token prediction the central path to advanced intelligence, or just a useful but ultimately narrow substrate?</strong>"
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "Why the timing is notable"
+      },
+      {
+        "type": "paragraph",
+        "html": "The launch comes when:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "LLMs and coding agents are commercially successful,",
+          "multimodal systems are improving fast,",
+          "robotics/autonomy/world-model language is resurging,",
+          "and there is growing awareness that benchmark gains in text/code may not directly translate to physical-world competence."
+        ]
+      },
+      {
+        "type": "paragraph",
+        "html": "This matters especially because frontier AI discourse lately has been dominated by:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "<strong>agents/harnesses/tool use</strong><span>,</span>",
+          "<strong>reasoning RL</strong><span>,</span>",
+          "<strong>coding automation</strong><span>,</span>",
+          "<span>and </span><strong>inference infrastructure</strong><span>.</span>"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "html": "<span>AMI is an explicit bet that the next frontier is </span><strong>grounded representation learning and predictive modeling of the real world</strong><span>, not just better wrappers around text models.</span>"
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "Why LeCun is uniquely positioned"
+      },
+      {
+        "type": "paragraph",
+        "html": "LeCun has spent years publicly arguing:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "human and animal intelligence is learned from observation and action in the world,",
+          "language is too low-bandwidth and derivative to be the main training signal,",
+          "systems need latent-variable world models and planning."
+        ]
+      },
+      {
+        "type": "paragraph",
+        "html": "His influence made him one of the most visible skeptics of “LLMs alone get us to AGI.” AMI is therefore not just another startup; it is the most direct institutionalization so far of the anti-token-maximalist view from one of the field’s most prominent figures."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "Europe/France implications"
+      },
+      {
+        "type": "paragraph",
+        "html": "Political and institutional reactions in France/Europe were unusually strong:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "<span>Macron celebrated it as a new page for AI and “la France des chercheurs, des bâtisseurs” </span><a href=\"https://x.com/EmmanuelMacron/status/2031288199503388717\" target=\"_blank\" rel=\"noreferrer noopener\">@EmmanuelMacron</a>",
+          "<span>Bpifrance’s Nicolas Dufourcq highlighted French pride in backing a company that could “revolutionize global AI” </span><a href=\"https://x.com/NicolasDufourcq/status/2031344671507484896\" target=\"_blank\" rel=\"noreferrer noopener\">@NicolasDufourcq</a>"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "html": "<span>So AMI is also being positioned as a </span><strong>European strategic AI champion</strong><span>, not merely a research startup.</span>"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "All relevant AMI/world-model tweets and what each adds"
+      },
+      {
+        "type": "list",
+        "items": [
+          "<a href=\"https://x.com/TechCrunch/status/2031234186003288523\" target=\"_blank\" rel=\"noreferrer noopener\">@TechCrunch</a><span>: headline confirmation of the </span><strong>$1.03B</strong><span> raise and world-model framing.</span>",
+          "<a href=\"https://x.com/BFMTV/status/2031234198904746355\" target=\"_blank\" rel=\"noreferrer noopener\">@BFMTV</a><span>: French-language mainstream framing of the raise as historic.</span>",
+          "<a href=\"https://x.com/WIRED/status/2031234619085853009\" target=\"_blank\" rel=\"noreferrer noopener\">@WIRED</a><span>: contextualizes LeCun’s long-running thesis that physical-world mastery, not language alone, is the route to human-level AI.</span>",
+          "<a href=\"https://x.com/business/status/2031234715240251889\" target=\"_blank\" rel=\"noreferrer noopener\">@business</a><span>: Bloomberg confirmation of the funding magnitude.</span>",
+          "<a href=\"https://x.com/iScienceLuvr/status/2031235141524402278\" target=\"_blank\" rel=\"noreferrer noopener\">@iScienceLuvr</a><span>: adds the </span><strong>$3.5B pre-money valuation</strong><span> figure.</span>",
+          "<a href=\"https://x.com/sainingxie/status/2031236308383748267\" target=\"_blank\" rel=\"noreferrer noopener\">@sainingxie</a><span>: AMI is “not a conventional lab,” and Xie joins as cofounder/CSO.</span>",
+          "<a href=\"https://x.com/lxbrun/status/2031237426975268886\" target=\"_blank\" rel=\"noreferrer noopener\">@lxbrun</a><span>: CEO announcement; mission is long-term scientific effort toward real-world understanding.</span>",
+          "<a href=\"https://x.com/ZeffMax/status/2031237938529566877\" target=\"_blank\" rel=\"noreferrer noopener\">@ZeffMax</a><span>: concise summary that AMI is LeCun betting big on world models after years of advocacy.</span>",
+          "<a href=\"https://x.com/teortaxesTex/status/2031242136125866422\" target=\"_blank\" rel=\"noreferrer noopener\">@teortaxesTex</a><span>: “gets a chance to prove his vision.”</span>",
+          "<a href=\"https://x.com/Brian_Bo_Li/status/2031249945660108977\" target=\"_blank\" rel=\"noreferrer noopener\">@Brian_Bo_Li</a><span>: “real intelligence into the real world” slogan.</span>",
+          "<a href=\"https://x.com/sanghyunwoo1219/status/2031252576205778981\" target=\"_blank\" rel=\"noreferrer noopener\">@sanghyunwoo1219</a><span>: joined from day one specifically to work on world models.</span>",
+          "<a href=\"https://x.com/laurentsolly/status/2031254099543371940\" target=\"_blank\" rel=\"noreferrer noopener\">@laurentsolly</a><span>: COO announcement; repeats funding and “next AI frontier models.”</span>",
+          "<a href=\"https://x.com/mavenlin/status/2031254675144716769\" target=\"_blank\" rel=\"noreferrer noopener\">@mavenlin</a><span>: enthusiasm from another team member, signaling depth of founding bench.</span>",
+          "<a href=\"https://x.com/crystalsssup/status/2031266865117540557\" target=\"_blank\" rel=\"noreferrer noopener\">@crystalsssup</a><span>: notes Saining Xie’s presence as a signal of AMI’s seriousness.</span>",
+          "<a href=\"https://x.com/ylecun/status/2031268686984527936\" target=\"_blank\" rel=\"noreferrer noopener\">@ylecun</a><span>: official unveiling; “one of the largest seeds ever,” likely largest for a European company.</span>",
+          "<a href=\"https://x.com/jihanyang13/status/2031269891504808444\" target=\"_blank\" rel=\"noreferrer noopener\">@jihanyang13</a><span>: founding-team join announcement.</span>",
+          "<a href=\"https://x.com/giffmana/status/2031272110656491923\" target=\"_blank\" rel=\"noreferrer noopener\">@giffmana</a><span>: asks whether AMI becomes a </span><strong>PyTorch or JAX</strong><span> shop.</span>",
+          "<a href=\"https://x.com/France24_fr/status/2031275368833777943\" target=\"_blank\" rel=\"noreferrer noopener\">@France24_fr</a><span>: French media framing as a “paradigm shift.”</span>",
+          "<a href=\"https://x.com/TheRundownAI/status/2031275798154330599\" target=\"_blank\" rel=\"noreferrer noopener\">@TheRundownAI</a><span>: short summary of “beyond language models to build world models.”</span>",
+          "<a href=\"https://x.com/pascalefung/status/2031287240375054420\" target=\"_blank\" rel=\"noreferrer noopener\">@pascalefung</a><span>: Fung joins as CRIO; emphasizes “human-centered” AI that perceives, learns, reasons, acts.</span>",
+          "<a href=\"https://x.com/EmmanuelMacron/status/2031288199503388717\" target=\"_blank\" rel=\"noreferrer noopener\">@EmmanuelMacron</a><span>: political endorsement and national strategic framing.</span>",
+          "<a href=\"https://x.com/franceinter/status/2031290441941778472\" target=\"_blank\" rel=\"noreferrer noopener\">@franceinter</a><span>: media amplification around LeCun’s broader claims about jobs and AI transformation.</span>",
+          "<a href=\"https://x.com/mervenoyann/status/2031291463800168870\" target=\"_blank\" rel=\"noreferrer noopener\">@mervenoyann</a><span>: bullish on world models as a leap forward for embodied research and likes the open stance.</span>",
+          "<a href=\"https://x.com/kimmonismus/status/2031291863341162717\" target=\"_blank\" rel=\"noreferrer noopener\">@kimmonismus</a><span>: adds healthcare/Nabla commercialization angle and hallucination-risk framing.</span>",
+          "<a href=\"https://x.com/pascalefung/status/2031292462539403661\" target=\"_blank\" rel=\"noreferrer noopener\">@pascalefung</a><span>: hiring for </span><strong>Paris</strong><span> team.</span>",
+          "<a href=\"https://x.com/zhouxy2017/status/2031378974345982212\" target=\"_blank\" rel=\"noreferrer noopener\">@zhouxy2017</a><span>: founding member working on world models.</span>",
+          "<a href=\"https://x.com/Reuters/status/2031379588668944835\" target=\"_blank\" rel=\"noreferrer noopener\">@Reuters</a><span>: calls AMI an “alternative AI approach.”</span>",
+          "<a href=\"https://x.com/NVIDIAAI/status/2031381911852175868\" target=\"_blank\" rel=\"noreferrer noopener\">@NVIDIAAI</a><span> and related Thinking Machines/NVIDIA posts are not about AMI; omitted from focus.</span>",
+          "<a href=\"https://x.com/chris_j_paxton/status/2031406861782573082\" target=\"_blank\" rel=\"noreferrer noopener\">@chris_j_paxton</a><span>: notes absence of Bay Area in listed locations; suggests geographic differentiation.</span>",
+          "<a href=\"https://x.com/giffmana/status/2031407851202109969\" target=\"_blank\" rel=\"noreferrer noopener\">@giffmana</a><span>: clarifies </span><strong>Zürich</strong><span> is one of the locations.</span>",
+          "<a href=\"https://x.com/lilianweng/status/2031416978385281431\" target=\"_blank\" rel=\"noreferrer noopener\">@lilianweng</a><span>: “building technologies for better human-AI collaboration on next gen hardware at scale.” Indirect but clearly tied to joining/working with the AMI orbit.</span>",
+          "<a href=\"https://x.com/Yuchenj_UW/status/2031375476313436481\" target=\"_blank\" rel=\"noreferrer noopener\">@Yuchenj_UW</a><span>: juxtaposes LeCun’s world-model startup and Meta’s Moltbook acquisition, highlighting the contrast between long-horizon foundational bets and near-term agent/social-product bets.</span>",
+          "<a href=\"https://x.com/LiorOnAI/status/2031479959685067006\" target=\"_blank\" rel=\"noreferrer noopener\">@LiorOnAI</a><span>: the most explicit technical gloss on JEPA and why latent-space predictive modeling may matter.</span>",
+          "<a href=\"https://x.com/sainingxie/status/2031510648383750206\" target=\"_blank\" rel=\"noreferrer noopener\">@sainingxie</a><span>: appreciation reply; minor but confirms continued engagement.</span>",
+          "<a href=\"https://x.com/NandoDF/status/2031494260411764839\" target=\"_blank\" rel=\"noreferrer noopener\">@NandoDF</a><span> </span><a href=\"https://x.com/DrJimFan/status/2031383007047856430\" target=\"_blank\" rel=\"noreferrer noopener\">@DrJimFan</a><span> </span><a href=\"https://x.com/denisyarats/status/2031278762663490002\" target=\"_blank\" rel=\"noreferrer noopener\">@denisyarats</a><span>: peer congratulations; low-information but signal broad respect.</span>"
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Bottom line"
+      },
+      {
+        "type": "paragraph",
+        "html": "<span>AMI Labs is the strongest institutional challenge yet to the idea that scaling autoregressive language models is the sole or dominant route to AGI. The hard facts are unusually concrete — </span><strong>$1.03B seed, $3.5B pre-money, elite vision/world-model-heavy team, France/Europe strategic backing</strong><span> — while the technical promise remains largely thesis-level for now: </span><strong>JEPA-style latent predictive world models that learn from real-world sensor data and support planning/action without reconstructing every bit of noise</strong><span>. Supporters view it as the overdue next paradigm; neutrals see a high-stakes test of whether LeCun’s critique of LLMs can finally cash out in products and benchmarks; skeptics, even when not stated bluntly, will judge it on whether world models can outcompete rapidly improving LLM agents before the market closes around the current stack.</span>"
+      },
+      {
+        "type": "paragraph",
+        "html": "<strong>Other Topics</strong>"
+      },
+      {
+        "type": "paragraph",
+        "html": "<strong>Agents, coding workflows, and the “builder vs reviewer” shift</strong>"
+      },
+      {
+        "type": "list",
+        "items": [
+          "<strong>VS Code Agent Hooks</strong><span> for policy enforcement and workflow guidance </span><a href=\"https://x.com/code/status/2031219225906282803\" target=\"_blank\" rel=\"noreferrer noopener\">@code</a>",
+          "<strong>GitHub/Figma MCP</strong><span> closes design↔code loops </span><a href=\"https://x.com/github/status/2031418718501089468\" target=\"_blank\" rel=\"noreferrer noopener\">@github</a>",
+          "<strong>LangGraph deploy</strong><span> and </span><strong>LangGraph 1.1</strong><span> simplify productionization </span><a href=\"https://x.com/LangChain/status/2031427878878065080\" target=\"_blank\" rel=\"noreferrer noopener\">@LangChain</a><span> </span><a href=\"https://x.com/sydneyrunkle/status/2031428770700103777\" target=\"_blank\" rel=\"noreferrer noopener\">@sydneyrunkle</a>",
+          "<strong>Together MCP server</strong><span> and </span><strong>Together GPU Clusters</strong><span> add infra for agent-driven app building and scale </span><a href=\"https://x.com/togethercompute/status/2031419426688610561\" target=\"_blank\" rel=\"noreferrer noopener\">@togethercompute</a><span> </span><a href=\"https://x.com/togethercompute/status/2031471454311821750\" target=\"_blank\" rel=\"noreferrer noopener\">@togethercompute</a>",
+          "<strong>Ollama scheduled prompts in Claude Code</strong><span> adds simple automation loops </span><a href=\"https://x.com/ollama/status/2031482512019759545\" target=\"_blank\" rel=\"noreferrer noopener\">@ollama</a>"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "<span>Perplexity Computer replacing routine knowledge work and marketing tasks was cited as a strong founder use case </span><a href=\"https://x.com/GabbbarSingh/status/2031222631417131120\" target=\"_blank\" rel=\"noreferrer noopener\">@GabbbarSingh</a><span> </span><a href=\"https://x.com/AravSrinivas/status/2031246766834856376\" target=\"_blank\" rel=\"noreferrer noopener\">@AravSrinivas</a><span> </span><a href=\"https://x.com/AravSrinivas/status/2031414450046259433\" target=\"_blank\" rel=\"noreferrer noopener\">@AravSrinivas</a>",
+          "<span>But several posts warned against optimizing for “% AI-written code” or abandoning code comprehension entirely </span><a href=\"https://x.com/karrisaarinen/status/2031443070710067344\" target=\"_blank\" rel=\"noreferrer noopener\">@karrisaarinen</a><span> </span><a href=\"https://x.com/dexhorthy/status/2031394747869192431\" target=\"_blank\" rel=\"noreferrer noopener\">@dexhorthy</a><span>.</span>"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "html": "<strong>Benchmarks, evals, and reliability research</strong>"
+      },
+      {
+        "type": "list",
+        "items": [
+          "<strong>Opposite-Narrator Contradictions</strong><span> for sycophancy </span><a href=\"https://x.com/LechMazur/status/2031199671411208568\" target=\"_blank\" rel=\"noreferrer noopener\">@LechMazur</a>",
+          "<strong>OfficeQA Pro</strong><span>: enterprise grounded reasoning remains hard, with frontier agents still </span><strong>&lt;50%</strong><span> </span><a href=\"https://x.com/kristahopsalong/status/2031391216361755069\" target=\"_blank\" rel=\"noreferrer noopener\">@kristahopsalong</a><span> </span><a href=\"https://x.com/DbrxMosaicAI/status/2031399397125390678\" target=\"_blank\" rel=\"noreferrer noopener\">@DbrxMosaicAI</a>",
+          "<strong>SWE-bench Verified</strong><span> appears overstated relative to maintainer reality: maintainers would merge only about </span><strong>half</strong><span> of agent PRs that pass the grader </span><a href=\"https://x.com/whitfill_parker/status/2031408266660503743\" target=\"_blank\" rel=\"noreferrer noopener\">@whitfill_parker</a><span> </span><a href=\"https://x.com/joel_bkr/status/2031423528608952541\" target=\"_blank\" rel=\"noreferrer noopener\">@joel_bkr</a>",
+          "<strong>AuditBench</strong><span> introduces 56 LLMs with implanted hidden behaviors for alignment-auditing evaluation </span><a href=\"https://x.com/abhayesian/status/2031450153966776587\" target=\"_blank\" rel=\"noreferrer noopener\">@abhayesian</a>",
+          "<strong>CodeClash</strong><span> probes long-horizon coding/planning; top models still fare poorly in sustained agentic adversarial settings </span><a href=\"https://x.com/OfirPress/status/2031448805221007686\" target=\"_blank\" rel=\"noreferrer noopener\">@OfirPress</a><span> </span><a href=\"https://x.com/OfirPress/status/2031450305745785261\" target=\"_blank\" rel=\"noreferrer noopener\">@OfirPress</a>"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "html": "<strong>Models, infrastructure, and training systems</strong>"
+      },
+      {
+        "type": "list",
+        "items": [
+          "<span>single embedding space for </span><strong>text, images, video, audio, docs</strong>",
+          "<strong>8,192-token</strong><span> text inputs</span>",
+          "<strong>100+ languages</strong>",
+          "<span>output dims </span><strong>3072 / 1536 / 768</strong><span> via MRL</span>",
+          "<span>up to </span><strong>6 images</strong><span>, </span><strong>120s video</strong><span>, </span><strong>6-page PDFs</strong><span> per request </span><a href=\"https://x.com/OfficialLoganK/status/2031411916489298156\" target=\"_blank\" rel=\"noreferrer noopener\">@OfficialLoganK</a><span> </span><a href=\"https://x.com/_philschmid/status/2031412260162138428\" target=\"_blank\" rel=\"noreferrer noopener\">@_philschmid</a><span> </span><a href=\"https://x.com/googleaidevs/status/2031421430718415051\" target=\"_blank\" rel=\"noreferrer noopener\">@googleaidevs</a><span>.</span>"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "<strong>RWKV-7 G1e</strong><span> in </span><strong>13B/7B/3B/1B</strong><span> sizes </span><a href=\"https://x.com/BlinkDL_AI/status/2031226189654966418\" target=\"_blank\" rel=\"noreferrer noopener\">@BlinkDL_AI</a>",
+          "<strong>Hume TADA</strong><span> open-source TTS model: zero content hallucinations across </span><strong>1,000+</strong><span> test samples, </span><strong>5x faster</strong><span> than comparable LLM-TTS, and </span><strong>2,048 tokens ≈ 700s</strong><span> of audio </span><a href=\"https://x.com/hume_ai/status/2031401003078062578\" target=\"_blank\" rel=\"noreferrer noopener\">@hume_ai</a>",
+          "<strong>Phi-4-reasoning-vision-15B</strong><span> highlighted as a compact open multimodal model </span><a href=\"https://x.com/dl_weekly/status/2031415180383437304\" target=\"_blank\" rel=\"noreferrer noopener\">@dl_weekly</a>",
+          "<span>Baseten/Harvard prefix-caching collaboration for inference efficiency </span><a href=\"https://x.com/chutes_ai/status/2031446918316917131\" target=\"_blank\" rel=\"noreferrer noopener\">@chutes_ai</a>"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "html": "<strong>Autonomous research, AlphaGo lineage, and recursive improvement</strong>"
+      },
+      {
+        "type": "list",
+        "items": [
+          "<span>Karpathy’s </span><strong>autoresearch</strong><span> concept — overnight experiment loops with code edits, short training runs, and metric-based keep/discard logic — was widely discussed </span><a href=\"https://x.com/NerdyRodent/status/2031350068473684263\" target=\"_blank\" rel=\"noreferrer noopener\">@NerdyRodent</a><span> </span><a href=\"https://x.com/_philschmid/status/2031356521553043824\" target=\"_blank\" rel=\"noreferrer noopener\">@_philschmid</a>",
+          "<span>Yuchen Jin ran a Claude-driven “chief scientist” loop for </span><strong>11+ hours</strong><span>, </span><strong>568 experiments</strong><span>, on </span><strong>8 GPUs</strong><span>, observing a progression from broad exploration to focused refinement to heavy validation </span><a href=\"https://x.com/Yuchenj_UW/status/2031423349071687878\" target=\"_blank\" rel=\"noreferrer noopener\">@Yuchenj_UW</a>",
+          "<span>Karpathy hinted at </span><strong>AgentHub</strong><span>, “GitHub for agents,” as the next layer for multi-agent research collaboration </span><a href=\"https://x.com/karpathy/status/2031435625854021730\" target=\"_blank\" rel=\"noreferrer noopener\">@karpathy</a><span> </span><a href=\"https://x.com/Yuchenj_UW/status/2031438602383798514\" target=\"_blank\" rel=\"noreferrer noopener\">@Yuchenj_UW</a>"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "<span>Demis Hassabis argued AlphaGo’s search-and-planning ideas remain central to AGI and science </span><a href=\"https://x.com/demishassabis/status/2031387915348062567\" target=\"_blank\" rel=\"noreferrer noopener\">@demishassabis</a>",
+          "<span>Google/DeepMind linked AlphaGo to AlphaEvolve and broader compute/science optimization </span><a href=\"https://x.com/Google/status/2031450539150774714\" target=\"_blank\" rel=\"noreferrer noopener\">@Google</a><span> </span><a href=\"https://x.com/GoogleDeepMind/status/2031399096267718847\" target=\"_blank\" rel=\"noreferrer noopener\">@GoogleDeepMind</a>",
+          "<span>Noam Brown-style framing that current reasoning models follow the AlphaGo recipe: imitation, inference-time search, then RL </span><a href=\"https://x.com/polynoamial/status/2031404079583473953\" target=\"_blank\" rel=\"noreferrer noopener\">@polynoamial</a>"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "<span>Schmidhuber resurfaced his long-running meta-learning/RSI work </span><a href=\"https://x.com/SchmidhuberAI/status/2031397968511717584\" target=\"_blank\" rel=\"noreferrer noopener\">@SchmidhuberAI</a>",
+          "<span>Commentary on unsupervised RLVR suggested naive recursive improvement currently hits ceilings </span><a href=\"https://x.com/teortaxesTex/status/2031359466516492731\" target=\"_blank\" rel=\"noreferrer noopener\">@teortaxesTex</a>"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "html": "<strong>Capability milestones, applications, and deployment</strong>"
+      },
+      {
+        "type": "list",
+        "items": [
+          "<span>One of the most striking capability claims: a possible AI-assisted resolution of a </span><strong>FrontierMath open problem</strong><span>, first from users claiming GPT-5.4 Pro solved it and later from observers noting this could be the first FrontierMath open problem solved by AI if validated </span><a href=\"https://x.com/spicey_lemonade/status/2031315804537434305\" target=\"_blank\" rel=\"noreferrer noopener\">@spicey_lemonade</a><span> </span><a href=\"https://x.com/kevinweil/status/2031378978527641822\" target=\"_blank\" rel=\"noreferrer noopener\">@kevinweil</a><span> </span><a href=\"https://x.com/GregHBurnham/status/2031451554151022838\" target=\"_blank\" rel=\"noreferrer noopener\">@GregHBurnham</a><span> </span><a href=\"https://x.com/AcerFur/status/2031458080458739757\" target=\"_blank\" rel=\"noreferrer noopener\">@AcerFur</a><span>.</span>",
+          "<span>Google reported a </span><strong>prospective clinical study</strong><span> of </span><strong>AMIE</strong><span> in urgent care workflows: blinded evaluation found similar differential-diagnosis and management-plan quality overall versus PCPs, but PCPs outperformed on practicality and cost effectiveness (</span><strong>p=0.003</strong><span>, </span><strong>p=0.004</strong><span>) </span><a href=\"https://x.com/iScienceLuvr/status/2031296370053923302\" target=\"_blank\" rel=\"noreferrer noopener\">@iScienceLuvr</a><span>.</span>",
+          "<span>Google Sheets with Gemini reached </span><strong>70.48%</strong><span> on </span><strong>SpreadsheetBench</strong><span>, described as near human-expert ability </span><a href=\"https://x.com/GoogleAI/status/2031356545552847091\" target=\"_blank\" rel=\"noreferrer noopener\">@GoogleAI</a><span>.</span>",
+          "<span>Google Workspace/Gemini rollout expanded across Docs, Sheets, Slides, and Drive, with claims of Sheets tasks </span><strong>9x faster</strong><span>, AI-generated slide layouts, and Drive-level cross-document answers </span><a href=\"https://x.com/Google/status/2031359339236143301\" target=\"_blank\" rel=\"noreferrer noopener\">@Google</a><span> </span><a href=\"https://x.com/sundarpichai/status/2031380361696129261\" target=\"_blank\" rel=\"noreferrer noopener\">@sundarpichai</a><span>.</span>",
+          "<span>Microsoft reported health as the </span><strong>#1 topic</strong><span> for Copilot mobile users in 2025, based on analysis of </span><strong>500k+</strong><span> conversations </span><a href=\"https://x.com/mustafasuleyman/status/2031362017211355581\" target=\"_blank\" rel=\"noreferrer noopener\">@mustafasuleyman</a><span>.</span>",
+          "<span>Sharon Zhou claimed </span><strong>superhuman performance on AI kernel optimization</strong><span> in production settings, suggesting automatic GPU-porting/optimization may soon be practical </span><a href=\"https://x.com/realSharonZhou/status/2031399933266309291\" target=\"_blank\" rel=\"noreferrer noopener\">@realSharonZhou</a><span>.</span>"
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "AI Reddit Recap"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "/r/LocalLlama + /r/localLLM Recap"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Keep reading with a 7-day free trial"
+      }
+    ],
+    "refineErrors": [
+      {
+        "index": 2,
+        "type": "paragraph",
+        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+      },
+      {
+        "index": 3,
+        "type": "paragraph",
+        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+      },
+      {
+        "index": 4,
+        "type": "heading",
+        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+      },
+      {
+        "index": 5,
+        "type": "paragraph",
+        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+      }
+    ]
+  },
+  "workflow": {
+    "articleId": 2705,
+    "rssTitle": "[AINews] Yann LeCun’s AMI Labs launches with a $1.03B seed to build world models around JEPA"
+  }
+}
