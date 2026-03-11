@@ -30,52 +30,179 @@
     "layout": "detail-zh",
     "translatedFrom": "https://www.latent.space/p/ainews-autoresearch-sparks-of-recursive",
     "sourceName": "Latent Space",
-    "sourceDescription": "以下为原文结构对应的中文整理版，保留核心段落与关键链接。",
+    "sourceDescription": "以下为原文逐段直译，保留原文段落推进与媒体顺序。",
     "blocks": [
       {
+        "type": "paragraph",
+        "html": "在关于 <a href=\"https://www.latent.space/p/wtf2025\" target=\"_blank\" rel=\"noreferrer noopener\">《WTF Happened in 2025》</a> 的持续余波中，我们现在看到 LLM 已开始能够完全自主训练（更小的）LLM。"
+      },
+      {
+        "type": "paragraph",
+        "html": "每个 AI 夏天都有它的“AutoML 时刻”：模型自动改进模型训练的梦想，从而引发无限递归的智能提升，走向极乐或毁灭。我们可能正处于“最后一个夏天”，而我们刚刚迎来了自己的这一刻："
+      },
+      {
+        "type": "paragraph",
+        "html": "在<a href=\"https://www.latent.space/p/captaining-imo-gold-deep-think-on?utm_source=publication-search\" target=\"_blank\" rel=\"noreferrer noopener\">我们 2025 年 12 月与 Yi Tay 的对话</a>中，他谈到了“vibe training”："
+      },
+      {
+        "type": "paragraph",
+        "html": "“我觉得 AI 编程已经发展到一个程度：我跑一个任务、遇到 bug 时，我几乎不会去看 bug。我把它粘贴到类似 Antigravity 的东西里，让它帮我修 bug，然后我重新启动任务。"
+      },
+      {
+        "type": "paragraph",
+        "html": "它不只是 vibe coding，更像是 vibe training、vibe ML 之类的。我会说大多数时候它做得相当不错。而且确实有一些问题类型，它总体上就是……我知道它非常擅长，甚至可能比我更擅长；如果是我，我可能要花 20 分钟去找问题。"
+      },
+      {
+        "type": "paragraph",
+        "html": "我会说第一层的 vibe coding 是：你其实知道要做什么，只是懒。就是“啊，帮我做一下吧”。我已经做过一千次了。"
+      },
+      {
+        "type": "paragraph",
+        "html": "下一层是你甚至不知道该做什么。它会帮你排查 bug。只要答案看起来对，你就会直接发布。"
+      },
+      {
+        "type": "paragraph",
+        "html": "一开始，我会检查并看所有东西。然后到了某个点，我会想：也许模型写代码比我好。所以我就让它去做，然后我基于模型给的修复重新启动任务。”"
+      },
+      {
+        "type": "paragraph",
+        "html": "所以我们知道这在大实验室里已经发生，但现在任何有 GPU 的人都可以在家里玩，看到模型在改进模型。"
+      },
+      {
+        "type": "paragraph",
+        "html": "鉴于我们现在是 2026 年 3 月，我们似乎正很好地朝着 <a href=\"https://www.latent.space/p/science?utm_source=publication-search\" target=\"_blank\" rel=\"noreferrer noopener\">Jakub Pachocki 所说的“Automated AI Research Intern”</a> 迈进，目标是在今年 9 月实现（“一个能实质性加速人类研究者的系统，而不只是聊天或写代码。”）。"
+      },
+      {
+        "type": "paragraph",
+        "html": "2026/3/5-2026/3/9 的 AI News。我们检查了 12 个 subreddit、<a href=\"https://twitter.com/i/lists/1585430245762441216\" target=\"_blank\" rel=\"noreferrer noopener\">544 个 Twitter 账号</a> 和 24 个 Discord（264 个频道、27779 条消息）。按 200 wpm 估算节省阅读时间：2649 分钟。<a href=\"https://news.smol.ai/\" target=\"_blank\" rel=\"noreferrer noopener\">AINews 网站</a>可搜索所有往期内容。提醒一下，<a href=\"https://www.latent.space/p/2026\" target=\"_blank\" rel=\"noreferrer noopener\">AINews 现在是 Latent Space 的一个版块</a>。你可以<a href=\"https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack\" target=\"_blank\" rel=\"noreferrer noopener\">选择订阅/取消订阅</a>邮件频率！"
+      },
+      {
         "type": "heading",
-        "level": 2,
-        "text": "Autoresearch：递归式自改进的火花"
-      },
-      {
-        "type": "paragraph",
-        "html": "本文是 Latent Space 的 AINews 条目，主题是“Autoresearch / 递归式自改进”。核心观点是：LLM 正在开始具备“训练更小模型”的能力，这意味着自动化研究与自我改进正在出现早期迹象。"
-      },
-      {
-        "type": "paragraph",
-        "html": "作者将其类比为每个 AI “夏天”都会出现的 AutoML 时刻——模型开始改进模型训练，理论上可能引发递归式的智能提升（也可能带来风险）。"
-      },
-      {
-        "type": "paragraph",
-        "html": "文中引用了 2025 年 12 月与 Yi Tay 的对话，提出“vibe training”的概念：开发者将调试、定位问题甚至修复工作交给模型，自己更多做结果验收。这从“vibe coding”进一步走向“vibe ML”。"
-      },
-      {
-        "type": "paragraph",
-        "html": "在 2026 年 3 月的时间点，作者认为我们可能接近 Jakub Pachocki 所描述的“Automated AI Research Intern”目标：一个能实质性加速研究者的系统，而不只是聊天或写代码。"
-      },
-      {
-        "type": "heading",
-        "level": 2,
-        "text": "AI Twitter Recap（节选）"
-      },
-      {
-        "type": "paragraph",
-        "html": "原文后半部分是 AI Twitter 的汇总，涵盖多个方向。以下为重点主题概览："
+        "text": "Coding Agents：产品化、harness 设计与“agents all the way down”"
       },
       {
         "type": "list",
         "items": [
-          "Coding Agents 产品化：多 agent PR 审查、代码评审定价策略、自动修复与 diff 能力等。",
-          "Autoresearch / 自改进回路：模型去护栏、GEPA 等“自演化 agent”思路、训练与 agent 代码优化并行出现。",
-          "模型生态动态：关于 GPT-5.4、Anthropic 文档分析表现、Gemma/Qwen 传闻与使用反馈等。",
-          "基础设施与评测：本地推理、语义路由、vLLM/DeepGemm 兼容性问题、KV cache 性能陷阱等。",
-          "Agent 记忆与检索：AgentIR、Memex(RL)、KARL 等用于提升长期任务与检索的研究。",
-          "机器人与具身智能：Figure Helix 02 家庭任务演示、LeRobot v0.5.0 更新、机器人记忆基准。"
+          "编码代理正在把瓶颈从实现转向评审/验证：多条讨论汇聚在同一点——生成变得便宜，但判断、治理与验证成了新约束。见“执行便宜，判断稀缺”的说法 <a href=\"https://x.com/AstasiaMyers/status/2031080761747742829\" target=\"_blank\" rel=\"noreferrer noopener\">@AstasiaMyers</a>，以及更偏安全/治理的观点：创建与验证是不同工程问题 <a href=\"https://x.com/omarsar0/status/2031113280119361981\" target=\"_blank\" rel=\"noreferrer noopener\">@omarsar0</a> 与后续 <a href=\"https://x.com/omarsar0/status/2031118487276359887\" target=\"_blank\" rel=\"noreferrer noopener\">@omarsar0</a>。这也被真实的 PR 评审产品与替代方案强化：Claude Code “Code Review”——Anthropic 推出多代理 PR 评审，代理并行找问题、验证、排序严重程度；声称内部提升从 16% → 54% PR 具有有意义评论且……",
+          "harness 工程正在成为系统工程：一种实用模式是将代理存储与代理计算解耦，使代理团队通过共享仓库/文件系统协作，同时运行在隔离沙箱中。该观点在 <a href=\"https://x.com/Vtrivedy10/status/2031038082321936449\" target=\"_blank\" rel=\"noreferrer noopener\">@Vtrivedy10</a> 中被明确提出。相关基础设施细节包括 Hermes-agent 添加 docker 卷挂载以便更容易访问沙箱文件（<a href=\"https://x.com/Teknium/status/2031163164856037792\" target=\"_blank\" rel=\"noreferrer noopener\">Teknium</a>）。",
+          "Perplexity “Computer” 正在变成带真实工具链的代理编排器：Perplexity 在 “Perplexity Computer” 中加入 Claude Code + GitHub CLI，并展示端到端流程：fork 仓库 → 实现修复 → 提交 PR（<a href=\"https://x.com/AskPerplexity/status/2031038321678528667\" target=\"_blank\" rel=\"noreferrer noopener\">AskPerplexity</a>，<a href=\"https://x.com/AravSrinivas/status/2031039066352033884\" target=\"_blank\" rel=\"noreferrer noopener\">@AravSrinivas</a>）。它还声称通过 Google/Meta Ads API 连接器实现自主广告投放（<a href=\"https://x.com/AravSrinivas/status/2031105215429226843\" target=\"_blank\" rel=\"noreferrer noopener\">Arav</a>），将代理从“编码协助”推向“运行商业基础设施”。",
+          "终端 UX 与“代理人体工学”仍然重要：开发者抱怨 CLI 工具基本多行输入体验（shift+enter）（<a href=\"https://x.com/theo/status/2030832068972937575\" target=\"_blank\" rel=\"noreferrer noopener\">theo</a>，<a href=\"https://x.com/QuixiAI/status/2030955728383435250\" target=\"_blank\" rel=\"noreferrer noopener\">@QuixiAI</a>），更广泛的 CLI 审美/UX 偏好也被提及（<a href=\"https://x.com/jerryjliu0/status/2030861154260750339\" target=\"_blank\" rel=\"noreferrer noopener\">@jerryjliu0</a>）。这提醒我们“代理能力”很大程度上受交互设计影响。"
         ]
       },
       {
-        "type": "paragraph",
-        "html": "如需细节原文与引用，请查看原始链接。"
+        "type": "heading",
+        "text": "Autoresearch 与自改进回路：代理优化 ML 训练与代理代码"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Karpathy 的 “autoresearch” 从梗图走向可测增益：Andrej 报告在 nanochat 上运行代理驱动的研究循环，找到约 20 个可叠加的改动，可从 depth=12 迁移到 depth=24，并将“Time to GPT-2”从 2.02h 降到 1.80h（约 11%），在约 700 次自主改动后实现（<a href=\"https://x.com/karpathy/status/2031135152349524125\" target=\"_blank\" rel=\"noreferrer noopener\">Karpathy</a>）。对工程师的要点：即便不是“新研究”，该循环也能系统性发现可叠加、可迁移的训练配方改进（norm scalers、正则化缺口、注意力调参、AdamW betas、初始化等）。他明确称这是前沿实验室的“最终 boss 战”：群体代理、优化代理指标、再迁移到更大规模。",
+          "代理循环在不同 harness/模型下仍然脆弱：长期循环依赖 harness 能力多于模型质量。Yuchen 指出 GPT-5.4 xhigh 无法执行 “LOOP FOREVER”，而 Opus 4.6 可跑 12+ 小时、118 次实验（<a href=\"https://x.com/Yuchenj_UW/status/2031044694441148709\" target=\"_blank\" rel=\"noreferrer noopener\">Yuchen</a>）。Karpathy 补充 Codex 在当前设置下不能正确运行 autoresearch，并主张代理不该需要 /loop 这类特殊命令——“我说一直循环，就应该一直循环”（<a href=\"https://x.com/karpathy/status/2031083551387701698\" target=\"_blank\" rel=\"noreferrer noopener\">Karpathy</a>，呼应 <a href=\"https://x.com/Yuchenj_UW/status/2031087769993490777\" target=\"_blank\" rel=\"noreferrer noopener\">Yuchen</a>）。结论：若你在构建代理基础设施，要投入稳健的循环原语、中断/回滚与透明交互会话。",
+          "Hermes-agent 正朝“自改进 + 有争议技能”方向推进：Nous Research 的 Hermes agent 作为趋势被提及（<a href=\"https://x.com/OpenRouter/status/2031030395526111246\" target=\"_blank\" rel=\"noreferrer noopener\">OpenRouter</a>）。Teknium 声称：对 Qwen-3B 模型进行快速 “abliteration”（移除护栏）（<a href=\"https://x.com/Teknium/status/2030945714373861529\" target=\"_blank\" rel=\"noreferrer noopener\">Teknium</a>），并后续提到自改进代理代码库/GEPA 灵感工作（<a href=\"https://x.com/Teknium/status/2030998334597661156\" target=\"_blank\" rel=\"noreferrer noopener\">Teknium</a>）。",
+          "这与更正式的“自演化代理”方法并行，例如 GEPA；见实践者说明 <a href=\"https://x.com/myanvoos/status/2031113918899433553\" target=\"_blank\" rel=\"noreferrer noopener\">@myanvoos</a> 与增益报道（<a href=\"https://x.com/LakshyAAAgrawal/status/2031130357362471058\" target=\"_blank\" rel=\"noreferrer noopener\">@LakshyAAAgrawal</a>）。"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "模型生态更新：GPT‑5.4 讨论、Anthropic 文档优势与 Gemma/Qwen 更迭"
+      },
+      {
+        "type": "list",
+        "items": [
+          "<strong>GPT‑5.4：</strong> 用户口碑强、基准讨论不一、工具约束并存。正面使用体验：<a href=\"https://x.com/Hangsiin/status/2030880541185286370\" target=\"_blank\" rel=\"noreferrer noopener\">@Hangsiin</a> 认为 5.4 相比 5.2 有明显提升；<a href=\"https://x.com/Yampeleg/status/2030949057653264437\" target=\"_blank\" rel=\"noreferrer noopener\">@Yampeleg</a> 称其“非常棒”；<a href=\"https://x.com/gneubig/status/2030971826042527860\" target=\"_blank\" rel=\"noreferrer noopener\">@gneubig</a> 更偏好 5.4 的指令遵循（而 Opus 4.6 更快/前端更好）。",
+          "视觉/OCR 轶事显示其在困难韩文表格 OCR 上大幅提升，可能依赖“代理式视觉 + 代码执行”，但运行时间可达 40 分钟（<a href=\"https://x.com/Hangsiin/status/2030882409819086923\" target=\"_blank\" rel=\"noreferrer noopener\">@Hangsiin</a>）。",
+          "有基准/元评论称在特定排行榜上 “high/xhigh” 变体排名变化或回退（<a href=\"https://x.com/scaling01/status/2031079698826993690\" target=\"_blank\" rel=\"noreferrer noopener\">scaling01</a>，<a href=\"https://x.com/scaling01/status/2031081654035300834\" target=\"_blank\" rel=\"noreferrer noopener\">scaling01</a>），也有人发布新 SOTA（如 ZeroBench 增量 <a href=\"https://x.com/JRobertsAI/status/2031026691682808148\" target=\"_blank\" rel=\"noreferrer noopener\">JRobertsAI</a>）。",
+          "实用层面：Codex 使用限制与分层通过截图/摘要被整理（<a href=\"https://x.com/Presidentlin/status/2030881332411125845\" target=\"_blank\" rel=\"noreferrer noopener\">Presidentlin</a>），显示实际工作流中人们按角色混用模型（planner/doer/editor），而不是选一个“最强”。",
+          "<strong>Anthropic：</strong> 文档分析领先 + “五角大楼黑名单”诉讼新闻。Document Arena 报告前 3 都是 Anthropic 模型：Opus 4.6 #1、Sonnet 4.6 #2、Opus 4.5 #3（<a href=\"https://x.com/arena/status/2031012090681663717\" target=\"_blank\" rel=\"noreferrer noopener\">arena</a>）。同时，政治/法律新闻流传：多方称 Anthropic 因被五角大楼列为“供应链风险”而提起诉讼，被框定为因拒绝移除大规模监控/自主武器安全措施而遭报复（<a href=\"https://x.com/kimmonismus/status/2031035653207556507\" target=\"_blank\" rel=\"noreferrer noopener\">@kimmonismus</a>，<a href=\"https://x.com/TheRundownAI/status/2031037610605289476\" target=\"_blank\" rel=\"noreferrer noopener\">@TheRundownAI</a>）。工程上需将政策讨论与技术评估分开，但对采购与企业采纳有影响。",
+          "<strong>Gemma 4 与 Qwen3.5：</strong> Gemma 4 谣言/泄露称“即将发布”及参数猜测（120B 总/15B 激活等）（<a href=\"https://x.com/scaling01/status/2030986695181836466\" target=\"_blank\" rel=\"noreferrer noopener\">scaling01</a>，<a href=\"https://x.com/kimmonismus/status/2031001097993642009\" target=\"_blank\" rel=\"noreferrer noopener\">@kimmonismus</a>，以及 <a href=\"https://x.com/kimmonismus/status/2031116062272688467\" target=\"_blank\" rel=\"noreferrer noopener\">@kimmonismus</a> 的泄露提及），在官方发布前应视为未确认。",
+          "Qwen3.5 本地运行指南与微调代理工作流由 Unsloth 发布，声称可在 ≤24GB RAM 上运行，并展示代理通过 Unsloth 微调模型（<a href=\"https://x.com/UnslothAI/status/2031008078850924840\" target=\"_blank\" rel=\"noreferrer noopener\">@UnslothAI</a>）。",
+          "Qwen 组织动向与报道质疑：有记者批评匿名来源“DeepSeek 发布日期”爆料与更广泛的中文科技报道实践（<a href=\"https://x.com/vince_chow1/status/2031002233060634953\" target=\"_blank\" rel=\"noreferrer noopener\">@vince_chow1</a>）。另有简报提到 Qwen 技术负责人离任（来源为摘要而非一手）（<a href=\"https://x.com/ZhihuFrontier/status/2030879093634535524\" target=\"_blank\" rel=\"noreferrer noopener\">@ZhihuFrontier</a>）。"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "基础设施、性能与评测工具"
+      },
+      {
+        "type": "list",
+        "items": [
+          "边缘侧 vLLM + 路由器 + 调试经验：vLLM 被强调可在 NVIDIA Jetson 上本地运行 MoE（Nemotron 3 Nano 30B）并“零云 API”（<a href=\"https://x.com/vllm_project/status/2030839132512002217\" target=\"_blank\" rel=\"noreferrer noopener\">@vllm_project</a>）。",
+          "微软高管提到 “vLLM Semantic Router” 并被热议（<a href=\"https://x.com/XunzhuoLiu/status/2030977675603636337\" target=\"_blank\" rel=\"noreferrer noopener\">@XunzhuoLiu</a>）——语义路由日益成为生产栈一部分。",
+          "调试提示：DeepGemm 不兼容导致 vLLM 失效；可通过 VLLM_USE_DEEP_GEMM=0 规避（<a href=\"https://x.com/TheZachMueller/status/2030938318473408841\" target=\"_blank\" rel=\"noreferrer noopener\">@TheZachMueller</a>）。",
+          "Claude Code + 本地模型变慢：归因头部使 KV cache 失效 → 实际 O(N²) 行为，这是将“云端代理 UX”代理到本地推理的具体性能陷阱（<a href=\"https://x.com/danielhanchen/status/2031124589557002457\" target=\"_blank\" rel=\"noreferrer noopener\">@danielhanchen</a>）。"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "训练理论与吞吐"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Warmup/decay 理论：“当梯度范数早期下降时需要 warmup”并附论文引用（<a href=\"https://x.com/aaron_defazio/status/2030897848020349106\" target=\"_blank\" rel=\"noreferrer noopener\">@aaron_defazio</a>）；rosinality 提议每个残差分支的标量 warmup 模式（<a href=\"https://x.com/rosinality/status/2030952971303858181\" target=\"_blank\" rel=\"noreferrer noopener\">@rosinality</a>）。",
+          "Hugging Face 将 Ulysses 序列并行整合进 Trainer/Accelerate/TRL（<a href=\"https://x.com/StasBekman/status/2031081858763792574\" target=\"_blank\" rel=\"noreferrer noopener\">@StasBekman</a>）。",
+          "CosNet 观点：给线性层加低秩非线性残差函数据称可带来 20%+ 预训练墙钟提速（<a href=\"https://x.com/torchcompiled/status/2031064475210514494\" target=\"_blank\" rel=\"noreferrer noopener\">@torchcompiled</a>）。"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "评测与安全测试前移到开发流程"
+      },
+      {
+        "type": "list",
+        "items": [
+          "OpenAI 收购 Promptfoo；保持开源；将强化“OpenAI Frontier”的代理安全测试/评测（<a href=\"https://x.com/OpenAI/status/2031052793835106753\" target=\"_blank\" rel=\"noreferrer noopener\">@OpenAI</a>，以及 <a href=\"https://x.com/snsf/status/2031055866024120825\" target=\"_blank\" rel=\"noreferrer noopener\">@snsf</a> 的补充）。",
+          "LangSmith 增加多模态评测器与 Agent Builder inbox，用于管理并行代理任务（<a href=\"https://x.com/LangChain/status/2031044950628991453\" target=\"_blank\" rel=\"noreferrer noopener\">@LangChain</a>，<a href=\"https://x.com/LangChain/status/2031049373178904702\" target=\"_blank\" rel=\"noreferrer noopener\">@LangChain</a>）。",
+          "Harbor 集成端到端计算机使用评测（Windows/Linux），可规模化生成轨迹用于 SFT/RL（<a href=\"https://x.com/Mascobot/status/2031045774419832961\" target=\"_blank\" rel=\"noreferrer noopener\">@Mascobot</a>）。",
+          "Teleport 提出“代理身份”作为控制平面：加密身份、最小权限、审计轨迹贯穿 MCP/工具（<a href=\"https://x.com/TheTuringPost/status/2030992157985898900\" target=\"_blank\" rel=\"noreferrer noopener\">@TheTuringPost</a>）。"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "代理需要更好的上下文：文档、检索、记忆与“环境化”"
+      },
+      {
+        "type": "list",
+        "items": [
+          "“文档作为工具”（而非提示粘贴）成为标准原语：Andrew Ng 发布 Context Hub CLI，用于抓取最新 API 文档以减少过时 API 幻觉；支持持久标注与后续社区共享（<a href=\"https://x.com/AndrewYNg/status/2031051809499054099\" target=\"_blank\" rel=\"noreferrer noopener\">@AndrewYNg</a>）。这类“小胶水”工具对快速变化 API 中的代理可靠性有实质影响。",
+          "检索与记忆研究/基准：AgentIR 使用代理“推理 tokens”作为信号（“读取代理的思想”），在 BrowseComp-Plus 上从 35% → 50% → 67%（相对基线）提升（<a href=\"https://x.com/zijian42chen/status/2031044580242530403\" target=\"_blank\" rel=\"noreferrer noopener\">@zijian42chen</a>）。",
+          "Memex(RL) 提出索引化经验记忆以扩展长程任务而不膨胀上下文窗口（<a href=\"https://x.com/omarsar0/status/2031006858971058537\" target=\"_blank\" rel=\"noreferrer noopener\">@omarsar0</a>）。",
+          "Databricks/DAIR 的 KARL：企业搜索代理的多任务 RL 训练，声称在成本/延迟/质量权衡上 Pareto 最优，并提升了超越单基准优化的泛化（<a href=\"https://x.com/dair_ai/status/2030996795770433749\" target=\"_blank\" rel=\"noreferrer noopener\">@dair_ai</a>）。"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "“把一切变成环境”：黑客松反思认为环境使 AI 民主化，因为无需算力即可“有份”；编码代理正在主导环境构建，但需要更好的技能/命令（<a href=\"https://x.com/ben_burtenshaw/status/2031038183161602164\" target=\"_blank\" rel=\"noreferrer noopener\">@ben_burtenshaw</a>）。Prime Intellect 被多次定位为运行 RL 环境/训练的基础设施层（<a href=\"https://x.com/willccbb/status/2031123740327817726\" target=\"_blank\" rel=\"noreferrer noopener\">@willccbb</a>）。",
+          "文档上下文正成为“深基础设施”而非通用框架：LlamaIndex 展示幻灯片解析与检索（“Surreal Slides”）用 LlamaParse → SurrealDB → MCP 代理接口（<a href=\"https://x.com/llama_index/status/2031038377831932056\" target=\"_blank\" rel=\"noreferrer noopener\">@llama_index</a>，<a href=\"https://x.com/jerryjliu0/status/2031077511661342799\" target=\"_blank\" rel=\"noreferrer noopener\">@jerryjliu0</a>）。Jerry Liu 明确将战略从广义 RAG 框架转向文档 OCR 基础设施，认为这是代理的长期瓶颈（<a href=\"https://x.com/jerryjliu0/status/2031171466574889344\" target=\"_blank\" rel=\"noreferrer noopener\">@jerryjliu0</a>）。"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "机器人与具身 AI：从家庭 demo 到开源机器人学习"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Figure Helix 02 自主家庭清理：Brett Adcock 发布完全自主客厅清理的演示并将其描述为重大里程碑（<a href=\"https://x.com/adcock_brett/status/2031039203262501252\" target=\"_blank\" rel=\"noreferrer noopener\">@adcock_brett</a>，后续 <a href=\"https://x.com/adcock_brett/status/2031039305716814041\" target=\"_blank\" rel=\"noreferrer noopener\">@adcock_brett</a>）。Kimmonismus 外推“2027 年家用机器人”时间表（<a href=\"https://x.com/kimmonismus/status/2031043868553027811\" target=\"_blank\" rel=\"noreferrer noopener\">@kimmonismus</a>）——时间表是推测，但演示门槛明显：全身、端到端家庭任务。",
+          "LeRobot v0.5.0：Hugging Face 机器人栈重大更新：支持 Unitree G1 类人、更新策略、实时分块、更快数据集、EnvHub/Isaac 集成、Python 3.12 + Transformers v5、插件系统（<a href=\"https://x.com/LeRobotHF/status/2031072207690961059\" target=\"_blank\" rel=\"noreferrer noopener\">@LeRobotHF</a>）。",
+          "机器人记忆基准：RoboMME 被提出作为机器人通用策略的记忆基准（<a href=\"https://x.com/_akhaliq/status/2031055119320506544\" target=\"_blank\" rel=\"noreferrer noopener\">@_akhaliq</a>）。"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "高互动推文（按互动量，过滤为技术/AI）"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Claude Code 发布多代理 PR “Code Review”：<a href=\"https://x.com/claudeai/status/2031088171262554195\" target=\"_blank\" rel=\"noreferrer noopener\">@claudeai</a>",
+          "OSINT pipeline 帖子（AI 辅助综述）互动极高（方法论相关，尽管为地缘政治）：<a href=\"https://x.com/DataRepublican/status/2030833480863785427\" target=\"_blank\" rel=\"noreferrer noopener\">@DataRepublican</a>",
+          "Karpathy：autoresearch 改进 nanochat 训练约 11%：<a href=\"https://x.com/karpathy/status/2031135152349524125\" target=\"_blank\" rel=\"noreferrer noopener\">@karpathy</a>",
+          "Google Earth：卫星嵌入数据集更新（AlphaEarth Foundations），每 10m 像素 64 维嵌入：<a href=\"https://x.com/googleearth/status/2031024842498023718\" target=\"_blank\" rel=\"noreferrer noopener\">@googleearth</a>",
+          "Andrew Ng 发布 Context Hub（为编码代理提供最新 API 文档）：<a href=\"https://x.com/AndrewYNg/status/2031051809499054099\" target=\"_blank\" rel=\"noreferrer noopener\">@AndrewYNg</a>",
+          "OpenAI 收购 Promptfoo（代理安全评测；保持开源）：<a href=\"https://x.com/OpenAI/status/2031052793835106753\" target=\"_blank\" rel=\"noreferrer noopener\">@OpenAI</a>"
+        ]
       }
     ]
   },

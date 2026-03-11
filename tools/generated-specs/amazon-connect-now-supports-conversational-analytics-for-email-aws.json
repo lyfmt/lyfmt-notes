@@ -33,20 +33,20 @@
     "sourceDescription": "以下为原文逐段直译，保留原文段落推进与媒体顺序。",
     "blocks": [
       {
-        "type": "heading",
-        "level": 2,
-        "text": "Amazon Connect 现已支持面向电子邮件的对话式分析"
+        "type": "paragraph",
+        "html": "发布于：2026 年 3 月 10 日"
       },
       {
         "type": "paragraph",
-        "html": "Amazon Connect 现已支持对电子邮件联系人进行对话式分析，使联络中心管理者能够自动对邮件分类、遮蔽个人身份信息（PII），并生成联系摘要。这让你可以快速识别新兴趋势，通过保护敏感信息更好地保持合规，并减少审核坐席绩效所花费的时间。例如，当客户就账户问题发送邮件时，Amazon Connect 会自动对该邮件分类、遮蔽敏感信息，并生成摘要供主管审阅。<br> <br> 要启用此功能，请在邮件联系人分配给坐席或发送给最终客户之前，将 <a href=\"https://docs.aws.amazon.com/connect/latest/adminguide/set-recording-analytics-processing-behavior.html\" target=\"_blank\" rel=\"noreferrer noopener\">Set recording, analytics and processing behavior</a> 模块添加到你的流程中。你可以自定义需要遮蔽的 PII 类型，选择遮蔽内容是否显示特定 PII 类型标记（如 [SSN]）或通用标记（[PII]），选择是否分别存储原始与遮蔽后的版本，并启用联系摘要。借助这些分析，你可以快速创建规则，自动触发诸如分配类别、创建任务或更新工单等操作。<br> <br> Amazon Connect 对话式分析在美国东部（弗吉尼亚北部）、美国西部（俄勒冈）、亚太（首尔）、亚太（新加坡）、亚太（悉尼）、亚太（东京）、加拿大（中部）、欧洲（法兰克福）和欧洲（伦敦）<a href=\"https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/\" target=\"_blank\" rel=\"noreferrer noopener\">区域</a>可用。要了解更多并开始使用，请参阅帮助<a href=\"https://docs.aws.amazon.com/connect/latest/adminguide/analyze-conversations.html\" target=\"_blank\" rel=\"noreferrer noopener\">文档</a>或访问 <a href=\"https://aws.amazon.com/connect/\" target=\"_blank\" rel=\"noreferrer noopener\">Amazon Connect</a> 网站。"
-      }
-    ],
-    "refineErrors": [
+        "html": "Amazon Connect 现已支持对电子邮件联系人进行对话式分析，使联络中心管理者能够自动对邮件分类、遮蔽个人身份信息（PII），并生成联系摘要。这让你可以快速识别新兴趋势，通过保护敏感信息更好地保持合规，并减少审核坐席绩效所花费的时间。例如，当客户就账户问题发送邮件时，Amazon Connect 会自动对该邮件分类、遮蔽敏感信息，并生成摘要供主管审阅。"
+      },
       {
-        "index": 1,
         "type": "paragraph",
-        "message": "Empty Pi output."
+        "html": "要启用此功能，请在邮件联系人分配给坐席或发送给最终客户之前，将 <a href=\"https://docs.aws.amazon.com/connect/latest/adminguide/set-recording-analytics-processing-behavior.html\" target=\"_blank\" rel=\"noreferrer noopener\">Set recording, analytics and processing behavior</a> 模块添加到你的流程中。你可以自定义需要遮蔽的 PII 类型，选择遮蔽内容是否显示特定 PII 类型标记（如 [SSN]）或通用标记（[PII]），选择是否分别存储原始与遮蔽后的版本，并启用联系摘要。借助这些分析，你可以快速创建规则，自动触发诸如分配类别、创建任务或更新工单等操作。"
+      },
+      {
+        "type": "paragraph",
+        "html": "Amazon Connect 对话式分析在美国东部（弗吉尼亚北部）、美国西部（俄勒冈）、亚太（首尔）、亚太（新加坡）、亚太（悉尼）、亚太（东京）、加拿大（中部）、欧洲（法兰克福）和欧洲（伦敦）<a href=\"https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/\" target=\"_blank\" rel=\"noreferrer noopener\">区域</a>可用。要了解更多并开始使用，请参阅帮助<a href=\"https://docs.aws.amazon.com/connect/latest/adminguide/analyze-conversations.html\" target=\"_blank\" rel=\"noreferrer noopener\">文档</a>或访问 <a href=\"https://aws.amazon.com/connect/\" target=\"_blank\" rel=\"noreferrer noopener\">Amazon Connect</a> 网站。"
       }
     ]
   },
