@@ -5,6 +5,63 @@
   },
   "posts": [
     {
+      "slug": "amazon-bedrock-now-supports-observability-of-first-token-latency-and-quota-consumption-aws",
+      "title": "Amazon Bedrock now supports observability of First Token Latency and Quota Consumption - AWS",
+      "author": "AWS Architecture Blog",
+      "publishedAt": "2026-03-10",
+      "source": "AWS Architecture Blog",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-bedrock-observability-ttft-quota/",
+      "excerpt": "这篇文章围绕“Amazon Bedrock now supports observability of First Token Latency and Quota Consumption - AWS”展开，RSS 摘要提到：Discover more about what",
+      "tags": [
+        "Observability"
+      ],
+      "content": [
+        {
+          "heading": "文章核心",
+          "paragraphs": [
+            "基于 RSS 摘要与页面元数据，原文重点是：Discover more about what",
+            "来源信息：AWS Architecture Blog｜2026-03-10。"
+          ]
+        },
+        {
+          "heading": "值得继续补充的点",
+          "paragraphs": [
+            "如果后续补齐详情视图，可以继续沿着原文结构展开关键论点、案例、约束条件与结论。",
+            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+          ]
+        }
+      ],
+      "detail": {
+        "available": true,
+        "layout": "detail-zh",
+        "translatedFrom": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-bedrock-observability-ttft-quota/",
+        "sourceName": "AWS Architecture Blog",
+        "sourceDescription": "以下为原文逐段直译，保留原文段落推进与媒体顺序。",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "html": "Amazon Bedrock 是一项完全托管的服务，可使用领先 AI 提供商的高性能基础模型来构建生成式 AI 应用。它现在支持两个新的 CloudWatch 指标：TimeToFirstToken 和 EstimatedTPMQuotaUsage，从而让你更深入地了解推理性能与配额消耗情况。"
+          },
+          {
+            "type": "paragraph",
+            "html": "TimeToFirstToken 衡量从发送请求到收到首个 token 的延迟，适用于流式 API（ConverseStream 与 InvokeModelWithResponseStream）。你可以用该指标设置 CloudWatch 告警，监控延迟劣化并建立 SLA 基线，而无需任何客户端侧埋点。EstimatedTPMQuotaUsage 跟踪你估算的每分钟 token（TPM）配额消耗量，包括缓存写入 token 和 <a href=\"https://docs.aws.amazon.com/bedrock/latest/userguide/quotas-token-burndown.html\" target=\"_blank\" rel=\"noreferrer noopener\">输出燃尽倍数</a>，覆盖所有推理 API（Converse、InvokeModel、ConverseStream、InvokeModelWithResponseStream）。你可以用该指标在触达配额上限前设置前置告警，跨模型跟踪配额消耗，并在被限流前申请提升配额。"
+          },
+          {
+            "type": "paragraph",
+            "html": "这两个指标在所有商业化 Bedrock 区域中均受支持，适用于通过跨区域推理配置文件与区域内推理可用的 <a href=\"https://docs.aws.amazon.com/bedrock/latest/userguide/models-region-compatibility.html\" target=\"_blank\" rel=\"noreferrer noopener\">模型</a>，并对成功完成的请求以每分钟频率更新。它们在 CloudWatch 中开箱即用；你仅为实际消耗的底层模型推理付费，无需 API 变更或额外启用。"
+          },
+          {
+            "type": "paragraph",
+            "html": "要了解更多关于 TimeToFirstToken 和 EstimatedTPMQuotaUsage，请参阅 <a href=\"https://docs.aws.amazon.com/bedrock/latest/userguide/monitoring.html\" target=\"_blank\" rel=\"noreferrer noopener\">Monitoring Amazon Bedrock 文档页面</a>。"
+          }
+        ]
+      },
+      "workflow": {
+        "articleId": 2699,
+        "rssTitle": "Amazon Bedrock now supports observability of First Token Latency and Quota Consumption"
+      }
+    },
+    {
       "slug": "amazon-connect-enhances-ai-powered-predictive-insights-aws",
       "title": "Amazon Connect enhances AI-powered predictive insights - AWS",
       "author": "AWS Architecture Blog",
