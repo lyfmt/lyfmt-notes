@@ -582,7 +582,12 @@ def process_item(args: argparse.Namespace, run_record: dict[str, Any], bundle: d
         spec_for_publish = read_json(spec_path, default={})
         detail_for_publish = spec_for_publish.get("detail") if isinstance(spec_for_publish.get("detail"), dict) else {}
         progress = detail_progress(detail_for_publish)
-        if not detail_for_publish.get("available") or (progress["textual_total"] > 0 and progress["textual_cjk"] < progress["textual_total"]):
+        should_skip = (
+            (not detail_for_publish.get("available"))
+            or (progress["block_count"] == 0)
+            or (progress["textual_total"] > 0 and progress["textual_cjk"] < progress["textual_total"])
+        )
+        if should_skip:
             item_state["outcome"] = "blocked" if challenge_blocked else "draft_only"
             item_state["terminal"] = True
             item_state["reasons"] = ["strict_publish_skipped"]
