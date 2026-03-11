@@ -5,6 +5,124 @@
   },
   "posts": [
     {
+      "slug": "raspberry-pi-cm0-based-industrial-ai-camera-features-motorized-auto-focus-system-12-pin-ethernet-rs-232-do-aviation-connector-cnx-software",
+      "title": "Raspberry Pi CM0-based industrial AI camera features motorized auto-focus system, 12-pin Ethernet/RS-232/DO aviation connector - CNX Software",
+      "author": "CNX Software",
+      "publishedAt": "2026-03-10",
+      "source": "CNX Software",
+      "url": "https://www.cnx-software.com/2026/03/11/raspberry-pi-cm0-based-industrial-ai-camera-features-motorized-auto-focus-system-12-pin-ethernet-rs-232-do-aviation-connector/",
+      "excerpt": "这篇文章围绕“Raspberry Pi CM0-based industrial AI camera features motorized auto-focus system, 12-pin Ethernet/RS-232/DO aviation connector - CNX Software”展开，RSS 摘要提到：At Embedded World 2026 in Germany, EDATEC launched the ED-AIC1000, a compact industrial AI camera built around the Raspberry Pi CM0 and d...",
+      "tags": [
+        "Hardware",
+        "AI",
+        "Embedded",
+        "IoT"
+      ],
+      "content": [
+        {
+          "heading": "文章核心",
+          "paragraphs": [
+            "基于 RSS 摘要与页面元数据，原文重点是：At Embedded World 2026 in Germany, EDATEC launched the ED-AIC1000, a compact industrial AI camera built around the Raspberry Pi CM0 and designed for",
+            "来源信息：CNX Software｜2026-03-10。"
+          ]
+        },
+        {
+          "heading": "值得继续补充的点",
+          "paragraphs": [
+            "如果后续补齐详情视图，重点可以继续展开芯片规格、接口能力、功耗指标和适用场景。",
+            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+          ]
+        }
+      ],
+      "detail": {
+        "available": true,
+        "layout": "detail-zh",
+        "translatedFrom": "https://www.cnx-software.com/2026/03/11/raspberry-pi-cm0-based-industrial-ai-camera-features-motorized-auto-focus-system-12-pin-ethernet-rs-232-do-aviation-connector/",
+        "sourceName": "CNX Software",
+        "sourceDescription": "以下为原文逐段直译，保留原文段落推进与媒体顺序。",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "html": "在德国举行的 Embedded World 2026 上，EDATEC 发布了 ED-AIC1000，这是一款围绕 Raspberry Pi CM0 打造的紧凑型工业 AI 摄像头，面向机器视觉与工业自动化应用，例如质量检测、目标识别与生产线监控。"
+          },
+          {
+            "type": "paragraph",
+            "html": "它集成了一颗 1.3 MP 全局快门相机，采样率最高可达 120 FPS，并配有电动自动对焦的 M12 镜头，以及三个可独立配置的照明区域以实现可靠成像。该相机还集成了一个 12 针 M12 工业连接器，提供 24 V 供电输入、100 Mbps 以太网、RS‑232、触发输入以及隔离式数字输出。系统支持最高 1080p 的 H.264 编码/解码，功耗最高 24 W，采用 67 × 46 × 46 mm 的坚固铝合金外壳，设计用于 0 °C 到 60 °C 的环境。"
+          },
+          {
+            "type": "image",
+            "src": "./assets/posts/raspberry-pi-cm0-based-industrial-ai-camera-features-motorized-auto-focus-system-12-pin-ethernet-rs-232-do-aviation-connector-cnx-software/figure-01.jpg",
+            "alt": "",
+            "caption": ""
+          },
+          {
+            "type": "paragraph",
+            "html": "EDATEC ED-AIC1000 规格："
+          },
+          {
+            "type": "list",
+            "items": [
+              "SoM – <a href=\"https://www.cnx-software.com/2025/09/23/raspberry-pi-cm0-castellated-module-features-raspberry-pi-rp3a0-system-in-package/\" target=\"_blank\" rel=\"noreferrer noopener\">Raspberry Pi CM0</a>",
+              "SoC – Broadcom BCM2710A1",
+              "CPU – 四核 Cortex‑A53 处理器 @ 1.0 GHz",
+              "GPU – VideoCore IV GPU，支持 OpenGL ES 1.1、2.0 图形",
+              "VPU – H.264/MPEG‑4 1080p30 视频解码，H.264 1080p30 视频编码",
+              "系统内存 – 512MB LPDDR2 RAM",
+              "存储 – 8GB 或 16GB eMMC 闪存",
+              "相机 – 1.3MP 全局快门图像传感器；最高 120 FPS 帧率；电动自动对焦模块；兼容可选 6mm、8mm 或 12mm M12 定焦镜头",
+              "面板 I/O（通过 12 针航空连接器） – 100Mbps 以太网（4 针）；RS232（2 针）；1× 隔离数字输出（DO）（2 针）；1× 外部触发信号（2 针）",
+              "其他 – 电源、故障、状态与网络活动 LED 指示灯；集成模块化照明（默认红光），含三个独立可配置区域；红色 LED 指示点；支持支架安装",
+              "外壳 – 橙色工业铝合金，支持支架安装",
+              "电源 – 通过 12 针航空连接器提供 DC 24V（±10%）输入",
+              "功耗 – 24 W",
+              "尺寸 – 67 × 46 × 46 mm",
+              "重量 – 约 120 g",
+              "温度范围 – 工作 0°C 至 60°C；存储 -40°C 至 70°C",
+              "湿度 – 5% 至 90%（非冷凝）"
+            ]
+          },
+          {
+            "type": "image",
+            "src": "./assets/posts/raspberry-pi-cm0-based-industrial-ai-camera-features-motorized-auto-focus-system-12-pin-ethernet-rs-232-do-aviation-connector-cnx-software/figure-02.png",
+            "alt": "",
+            "caption": "ED-AIC1000 Camera Block Diagram"
+          },
+          {
+            "type": "paragraph",
+            "html": "Raspberry Pi CM0 模块负责主要处理任务，另有一颗微控制器（MCU）协助，负责管理触发信号并控制与相机模块的通信。"
+          },
+          {
+            "type": "paragraph",
+            "html": "在软件方面，ED-AIC1000 运行 Raspberry Pi OS（Lite）32 位。为与工业控制系统集成，它支持 Modbus TCP、TCP/IP 与 UDP 等通信协议。"
+          },
+          {
+            "type": "image",
+            "src": "./assets/posts/raspberry-pi-cm0-based-industrial-ai-camera-features-motorized-auto-focus-system-12-pin-ethernet-rs-232-do-aviation-connector-cnx-software/figure-03.jpg",
+            "alt": "",
+            "caption": "ED-AIC1000 Bottom (Left), Top (Center), Back (Right)"
+          },
+          {
+            "type": "paragraph",
+            "html": "EDATEC 先前推出了 <a href=\"https://www.cnx-software.com/2023/04/10/ip67-rated-cm4-ai-camera-uses-raspberry-pi-compute-module-4-for-computer-vision-applications/\" target=\"_blank\" rel=\"noreferrer noopener\">ED-AIC2020（IP67 级工业 AI 摄像头）</a>，使用 Raspberry Pi Compute Module 4 用于计算机视觉应用。新的 ED-AIC1000 作为更紧凑的替代方案，使用 Raspberry Pi CM0 以可负担的价格提供机器视觉能力。"
+          },
+          {
+            "type": "paragraph",
+            "html": "公司未提供定价信息，因为计划在 2026 年第二季度推出该产品。其还提到将提供多种配件，包括定制的 M12 转 RJ45/裸线电源与 I/O 电缆，以及用于将相机固定在标准铝型材上的安装支架。更多信息可参见 <a href=\"https://edatec.cn/aic1000\" target=\"_blank\" rel=\"noreferrer noopener\">产品页面</a>。"
+          },
+          {
+            "type": "image",
+            "src": "./assets/posts/raspberry-pi-cm0-based-industrial-ai-camera-features-motorized-auto-focus-system-12-pin-ethernet-rs-232-do-aviation-connector-cnx-software/figure-04.png",
+            "alt": "",
+            "caption": ""
+          }
+        ]
+      },
+      "workflow": {
+        "articleId": 2675,
+        "rssTitle": "Raspberry Pi CM0-based industrial AI camera features motorized auto-focus system, 12-pin Ethernet/RS-232/DO aviation connector"
+      }
+    },
+    {
       "slug": "introducing-storage-buckets-on-the-hugging-face-hub",
       "title": "Introducing Storage Buckets on the Hugging Face Hub",
       "author": "Hugging Face Blog",
