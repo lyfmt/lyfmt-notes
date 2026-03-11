@@ -879,24 +879,18 @@
       "publishedAt": "2026-03-11",
       "source": "Hackaday",
       "url": "https://hackaday.com/2026/03/10/running-ocarina-of-time-on-the-apple-watch/",
-      "excerpt": "这篇文章围绕“Running Ocarina Of Time On The Apple Watch”展开，RSS 摘要提到：At this point in time it can be safely stated that the question ‘Does it run Doom?’ defaults to a resounding ‘Yes’. This raises the quest...",
+      "excerpt": "# Running Ocarina Of Time On The Apple Watch\n\n### 内容分类\n【Hardware】【AI】\n\n### 内容总结\n文章围绕《Running Ocarina Of Time On The Apple Watch》展开，梳理核心主题与背景，结合Hackaday的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "Hardware",
         "AI"
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "基于 RSS 摘要与页面元数据，原文重点是：At this point in time it can be safely stated that the question ‘Does it run Doom?’ defaults to a resounding ‘Yes’. This raises the question of what next games should be see…",
-            "来源信息：Hackaday｜2026-03-11。"
-          ]
-        },
-        {
-          "heading": "值得继续补充的点",
-          "paragraphs": [
-            "如果后续补齐详情视图，重点可以继续展开芯片规格、接口能力、功耗指标和适用场景。",
-            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+            "# Running Ocarina Of Time On The Apple Watch",
+            "### 内容分类\n【Hardware】【AI】",
+            "### 内容总结\n文章围绕《Running Ocarina Of Time On The Apple Watch》展开，梳理核心主题与背景，结合Hackaday的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -943,23 +937,17 @@
       "publishedAt": "2026-03-10",
       "source": "Foojay",
       "url": "https://foojay.io/today/event-driven-architecture-in-java-and-kafka/",
-      "excerpt": "这篇文章围绕“Event-Driven Architecture in Java and Kafka”展开，当前已从 RSS 条目同步到静态博客工作流中。",
+      "excerpt": "# Event-Driven Architecture in Java and Kafka\n\n### 内容分类\n【Reading】\n\n### 内容总结\n文章围绕《Event-Driven Architecture in Java and Kafka》展开，梳理核心主题与背景，结合Foojay的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "Reading"
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "当前只拿到了标题、来源和链接，还没有更完整的页面摘要，因此这里只生成一个可继续加工的草稿入口。",
-            "来源信息：Foojay｜2026-03-10。"
-          ]
-        },
-        {
-          "heading": "值得继续补充的点",
-          "paragraphs": [
-            "如果后续补齐详情视图，可以继续沿着原文结构展开关键论点、案例、约束条件与结论。",
-            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+            "# Event-Driven Architecture in Java and Kafka",
+            "### 内容分类\n【Reading】",
+            "### 内容总结\n文章围绕《Event-Driven Architecture in Java and Kafka》展开，梳理核心主题与背景，结合Foojay的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -1303,7 +1291,7 @@
       "publishedAt": "2026-03-10",
       "source": "ServeTheHome",
       "url": "https://www.servethehome.com/lenovo-thinkstation-pgx-review-the-nvidia-gb10-128gb-ai-workstation-goes-corporate/",
-      "excerpt": "这篇文章围绕“Lenovo ThinkStation PGX Review The NVIDIA GB10 128GB AI Workstation Goes Corporate”展开，RSS 摘要提到：We test the Lenovo ThinkStation PGX, a NVIDIA GB10-based 128GB small AI workstation with a fast Arm CPU, Blackwell GPU, and 200G networking",
+      "excerpt": "# Lenovo ThinkStation PGX Review The NVIDIA GB10 128GB AI Workstation Goes Corporate\n\n### 内容分类\n【Hardware】【Infrastructure】【AI】【Networking】\n\n### 内容总结\n文章围绕《Lenovo ThinkStation PGX Review The NVIDIA GB10 128GB AI Workstation Goes Corporate》展开，梳理核心主题与背景，结合ServeTheHome的叙述方式说明其面向的读者与使用场景。文中强调关键规格、体验与取舍，并指出适合的使用人群与采购定位。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "Hardware",
         "Infrastructure",
@@ -1312,17 +1300,11 @@
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "基于 RSS 摘要与页面元数据，原文重点是：We test the Lenovo ThinkStation PGX, a NVIDIA GB10-based 128GB small AI workstation with a fast Arm CPU, Blackwell GPU, and 200G networking",
-            "来源信息：ServeTheHome｜2026-03-10。"
-          ]
-        },
-        {
-          "heading": "值得继续补充的点",
-          "paragraphs": [
-            "如果后续补齐详情视图，重点可以继续展开架构取舍、生产约束、性能代价和工程实施方式。",
-            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+            "# Lenovo ThinkStation PGX Review The NVIDIA GB10 128GB AI Workstation Goes Corporate",
+            "### 内容分类\n【Hardware】【Infrastructure】【AI】【Networking】",
+            "### 内容总结\n文章围绕《Lenovo ThinkStation PGX Review The NVIDIA GB10 128GB AI Workstation Goes Corporate》展开，梳理核心主题与背景，结合ServeTheHome的叙述方式说明其面向的读者与使用场景。文中强调关键规格、体验与取舍，并指出适合的使用人群与采购定位。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -1550,7 +1532,7 @@
       "publishedAt": "2026-03-11",
       "source": "CNX Software",
       "url": "https://www.cnx-software.com/2026/03/11/nxp-i-mx-937-cost-effective-cortex-a55-m7-m33-mpu-is-a-drop-in-replacement-for-nxp-i-mx-95-soc-family/",
-      "excerpt": "这篇文章围绕“NXP i.MX 937 cost-effective Cortex-A55/M7/M33 MPU is a drop-in replacement for NXP i.MX 95 SoC family - CNX Software”展开，RSS 摘要提到：The 1 .4 GHz NXP i.MX 937 quad-core Cortex-A55 microprocessor (MPU) for HMI and Edge AI applications aims to fill the gap between entry-l...",
+      "excerpt": "# NXP i.MX 937 cost-effective Cortex-A55/M7/M33 MPU is a drop-in replacement for NXP i.MX 95 SoC family - CNX Software\n\n### 内容分类\n【Hardware】【AI】【Networking】【Infrastructure】\n\n### 内容总结\n文章围绕《NXP i.MX 937 cost-effective Cortex-A55/M7/M33 MPU is a drop-in replacement for NXP i.MX 95 SoC family - CNX Software》展开，梳理核心主题与背景，结合CNX Software的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "Hardware",
         "AI",
@@ -1559,17 +1541,11 @@
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "基于 RSS 摘要与页面元数据，原文重点是：The 1 .4 GHz NXP i.MX 937 quad-core Cortex-A55 microprocessor (MPU) for HMI and Edge AI applications aims to fill the gap between entry-level NXP i.MX 93",
-            "来源信息：CNX Software｜2026-03-11。"
-          ]
-        },
-        {
-          "heading": "值得继续补充的点",
-          "paragraphs": [
-            "如果后续补齐详情视图，重点可以继续展开架构取舍、生产约束、性能代价和工程实施方式。",
-            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+            "# NXP i.MX 937 cost-effective Cortex-A55/M7/M33 MPU is a drop-in replacement for NXP i.MX 95 SoC family - CNX Software",
+            "### 内容分类\n【Hardware】【AI】【Networking】【Infrastructure】",
+            "### 内容总结\n文章围绕《NXP i.MX 937 cost-effective Cortex-A55/M7/M33 MPU is a drop-in replacement for NXP i.MX 95 SoC family - CNX Software》展开，梳理核心主题与背景，结合CNX Software的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -1660,7 +1636,7 @@
       "publishedAt": "2026-03-11",
       "source": "CNX Software",
       "url": "https://www.cnx-software.com/2026/03/11/texas-instruments-mspm0g5187-and-am13ex-mcus-integrate-tinyengine-npu-for-edge-ai-applications/",
-      "excerpt": "这篇文章围绕“Texas Instruments MSPM0G5187 and AM13Ex MCUs integrate TinyEngine NPU for Edge AI applications - CNX Software”展开，RSS 摘要提到：Texas Instruments MSPM0G5187 and AM13Ex are two new microcontroller (MCU) families featuring the company's TinyEngine neural processing u...",
+      "excerpt": "# Texas Instruments MSPM0G5187 and AM13Ex MCUs integrate TinyEngine NPU for Edge AI applications - CNX Software\n\n### 内容分类\n【Hardware】【AI】【Networking】【Infrastructure】\n\n### 内容总结\n文章围绕《Texas Instruments MSPM0G5187 and AM13Ex MCUs integrate TinyEngine NPU for Edge AI applications - CNX Software》展开，梳理核心主题与背景，结合CNX Software的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "Hardware",
         "AI",
@@ -1669,17 +1645,11 @@
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "基于 RSS 摘要与页面元数据，原文重点是：Texas Instruments MSPM0G5187 and AM13Ex are two new microcontroller (MCU) families featuring the company's TinyEngine neural processing unit (NPU) to",
-            "来源信息：CNX Software｜2026-03-11。"
-          ]
-        },
-        {
-          "heading": "值得继续补充的点",
-          "paragraphs": [
-            "如果后续补齐详情视图，重点可以继续展开架构取舍、生产约束、性能代价和工程实施方式。",
-            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+            "# Texas Instruments MSPM0G5187 and AM13Ex MCUs integrate TinyEngine NPU for Edge AI applications - CNX Software",
+            "### 内容分类\n【Hardware】【AI】【Networking】【Infrastructure】",
+            "### 内容总结\n文章围绕《Texas Instruments MSPM0G5187 and AM13Ex MCUs integrate TinyEngine NPU for Edge AI applications - CNX Software》展开，梳理核心主题与背景，结合CNX Software的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -1875,23 +1845,17 @@
       "publishedAt": "2026-03-11",
       "source": "Hackaday",
       "url": "https://hackaday.com/2026/03/10/its-1979-what-exactly-did-that-%e2%88%ab-key-do/",
-      "excerpt": "这篇文章围绕“It’s 1979 – What Exactly Did That ∫ Key Do?”展开，RSS 摘要提到：[Michel Jean] asked a question few others might: what exactly is going on under the hood of a classic HP scientific calculator when one p...",
+      "excerpt": "# It’s 1979 – What Exactly Did That ∫ Key Do?\n\n### 内容分类\n【Hardware】\n\n### 内容总结\n文章围绕《It’s 1979 – What Exactly Did That ∫ Key Do?》展开，梳理核心主题与背景，结合Hackaday的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "Hardware"
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "基于 RSS 摘要与页面元数据，原文重点是：[Michel Jean] asked a question few others might: what exactly is going on under the hood of a classic HP scientific calculator when one presses the ∫ key? A numerical integration, sure, but how exa…",
-            "来源信息：Hackaday｜2026-03-11。"
-          ]
-        },
-        {
-          "heading": "值得继续补充的点",
-          "paragraphs": [
-            "如果后续补齐详情视图，重点可以继续展开芯片规格、接口能力、功耗指标和适用场景。",
-            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+            "# It’s 1979 – What Exactly Did That ∫ Key Do?",
+            "### 内容分类\n【Hardware】",
+            "### 内容总结\n文章围绕《It’s 1979 – What Exactly Did That ∫ Key Do?》展开，梳理核心主题与背景，结合Hackaday的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -1936,23 +1900,17 @@
       "publishedAt": "2026-03-11",
       "source": "Google AI Blog",
       "url": "https://blog.google/products-and-platforms/products/chrome/chrome-expands-india-new-zealand-canada/",
-      "excerpt": "这篇文章围绕“Expanding Chrome’s AI experiences to India, New Zealand and Canada”展开，RSS 摘要提到：We’re bringing Gemini in Chrome’s powerful AI features to more regions and languages, helping millions of people get the most out of thei...",
+      "excerpt": "# Expanding Chrome’s AI experiences to India, New Zealand and Canada\n\n### 内容分类\n【AI】\n\n### 内容总结\n文章围绕《Expanding Chrome’s AI experiences to India, New Zealand and Canada》展开，梳理核心主题与背景，结合Google AI Blog的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "AI"
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "基于 RSS 摘要与页面元数据，原文重点是：We’re bringing Gemini in Chrome’s powerful AI features to more regions and languages, helping millions of people get the most out of their browser.",
-            "来源信息：Google AI Blog｜2026-03-11。"
-          ]
-        },
-        {
-          "heading": "值得继续补充的点",
-          "paragraphs": [
-            "如果后续补齐详情视图，可以继续沿着原文结构展开关键论点、案例、约束条件与结论。",
-            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+            "# Expanding Chrome’s AI experiences to India, New Zealand and Canada",
+            "### 内容分类\n【AI】",
+            "### 内容总结\n文章围绕《Expanding Chrome’s AI experiences to India, New Zealand and Canada》展开，梳理核心主题与背景，结合Google AI Blog的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -2113,7 +2071,7 @@
       "publishedAt": "2026-03-10",
       "source": "Simon Willison",
       "url": "https://simonwillison.net/guides/agentic-engineering-patterns/better-code/#atom-everything",
-      "excerpt": "这篇文章围绕“AI should help us produce better code - Agentic Engineering Patterns”展开，RSS 摘要提到：AI should help us produce better code - Agentic Engineering Patterns",
+      "excerpt": "# AI should help us produce better code - Agentic Engineering Patterns\n\n### 内容分类\n【AI】【Tools】【Agents】【DevTools】\n\n### 内容总结\n文章围绕《AI should help us produce better code - Agentic Engineering Patterns》展开，梳理核心主题与背景，结合Simon Willison的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "AI",
         "Tools",
@@ -2122,17 +2080,11 @@
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "基于 RSS 摘要与页面元数据，原文重点是：AI should help us produce better code - Agentic Engineering Patterns",
-            "来源信息：Simon Willison｜2026-03-10。"
-          ]
-        },
-        {
-          "heading": "值得继续补充的点",
-          "paragraphs": [
-            "从趋势上看，这类文章值得关注的点在于 AI 正在从一次性回答工具，进一步走向可持续嵌入工作流的执行层。",
-            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+            "# AI should help us produce better code - Agentic Engineering Patterns",
+            "### 内容分类\n【AI】【Tools】【Agents】【DevTools】",
+            "### 内容总结\n文章围绕《AI should help us produce better code - Agentic Engineering Patterns》展开，梳理核心主题与背景，结合Simon Willison的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -2270,24 +2222,18 @@
       "publishedAt": "2026-03-10",
       "source": "Hackaday",
       "url": "https://hackaday.com/2026/03/10/clear-resin-casting-replicates-old-acrylic-for-selectric-repair/",
-      "excerpt": "这篇文章围绕“Clear Resin Casting Replicates Old Acrylic For Selectric Repair”展开，RSS 摘要提到：IBM Selectric typewriters have a lot of unique parts that can be tricky to source, but one we didn’t think of was the clear acrylic(?) du...",
+      "excerpt": "# Clear Resin Casting Replicates Old Acrylic For Selectric Repair\n\n### 内容分类\n【Hardware】【AI】\n\n### 内容总结\n文章围绕《Clear Resin Casting Replicates Old Acrylic For Selectric Repair》展开，梳理核心主题与背景，结合Hackaday的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "Hardware",
         "AI"
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "基于 RSS 摘要与页面元数据，原文重点是：IBM Selectric typewriters have a lot of unique parts that can be tricky to source, but one we didn’t think of was the clear acrylic(?) dust covers, that are apparently very hard to find in go…",
-            "来源信息：Hackaday｜2026-03-10。"
-          ]
-        },
-        {
-          "heading": "值得继续补充的点",
-          "paragraphs": [
-            "如果后续补齐详情视图，重点可以继续展开芯片规格、接口能力、功耗指标和适用场景。",
-            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+            "# Clear Resin Casting Replicates Old Acrylic For Selectric Repair",
+            "### 内容分类\n【Hardware】【AI】",
+            "### 内容总结\n文章围绕《Clear Resin Casting Replicates Old Acrylic For Selectric Repair》展开，梳理核心主题与背景，结合Hackaday的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -2328,23 +2274,17 @@
       "publishedAt": "2026-03-10",
       "source": "Hackaday",
       "url": "https://hackaday.com/2026/03/10/turning-a-gdb-coredump-debug-session-into-a-murder-mystery/",
-      "excerpt": "这篇文章围绕“Turning a GDB Coredump Debug Session Into a Murder Mystery”展开，当前已从 RSS 条目同步到静态博客工作流中。",
+      "excerpt": "# Turning a GDB Coredump Debug Session Into a Murder Mystery\n\n### 内容分类\n【Hardware】\n\n### 内容总结\n文章围绕《Turning a GDB Coredump Debug Session Into a Murder Mystery》展开，梳理核心主题与背景，结合Hackaday的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "Hardware"
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "当前只拿到了标题、来源和链接，还没有更完整的页面摘要，因此这里只生成一个可继续加工的草稿入口。",
-            "来源信息：Hackaday｜2026-03-10。"
-          ]
-        },
-        {
-          "heading": "值得继续补充的点",
-          "paragraphs": [
-            "如果后续补齐详情视图，重点可以继续展开芯片规格、接口能力、功耗指标和适用场景。",
-            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+            "# Turning a GDB Coredump Debug Session Into a Murder Mystery",
+            "### 内容分类\n【Hardware】",
+            "### 内容总结\n文章围绕《Turning a GDB Coredump Debug Session Into a Murder Mystery》展开，梳理核心主题与背景，结合Hackaday的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -2385,23 +2325,17 @@
       "publishedAt": "2026-03-10",
       "source": "AWS Architecture Blog",
       "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-bedrock-agentcore-runtime-stateful-mcp/",
-      "excerpt": "这篇文章围绕“Amazon Bedrock AgentCore Runtime now supports stateful MCP server features - AWS”展开，RSS 摘要提到：Discover more about what",
+      "excerpt": "# Amazon Bedrock AgentCore Runtime now supports stateful MCP server features - AWS\n\n### 内容分类\n【Agents】\n\n### 内容总结\n文章围绕《Amazon Bedrock AgentCore Runtime now supports stateful MCP server features - AWS》展开，梳理核心主题与背景，结合AWS Architecture Blog的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "Agents"
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "基于 RSS 摘要与页面元数据，原文重点是：Discover more about what",
-            "来源信息：AWS Architecture Blog｜2026-03-10。"
-          ]
-        },
-        {
-          "heading": "值得继续补充的点",
-          "paragraphs": [
-            "如果后续补齐详情视图，可以继续沿着原文结构展开关键论点、案例、约束条件与结论。",
-            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+            "# Amazon Bedrock AgentCore Runtime now supports stateful MCP server features - AWS",
+            "### 内容分类\n【Agents】",
+            "### 内容总结\n文章围绕《Amazon Bedrock AgentCore Runtime now supports stateful MCP server features - AWS》展开，梳理核心主题与背景，结合AWS Architecture Blog的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -2442,23 +2376,17 @@
       "publishedAt": "2026-03-10",
       "source": "AWS Architecture Blog",
       "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-bedrock-observability-ttft-quota/",
-      "excerpt": "这篇文章围绕“Amazon Bedrock now supports observability of First Token Latency and Quota Consumption - AWS”展开，RSS 摘要提到：Discover more about what",
+      "excerpt": "# Amazon Bedrock now supports observability of First Token Latency and Quota Consumption - AWS\n\n### 内容分类\n【Observability】\n\n### 内容总结\n文章围绕《Amazon Bedrock now supports observability of First Token Latency and Quota Consumption - AWS》展开，梳理核心主题与背景，结合AWS Architecture Blog的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "Observability"
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "基于 RSS 摘要与页面元数据，原文重点是：Discover more about what",
-            "来源信息：AWS Architecture Blog｜2026-03-10。"
-          ]
-        },
-        {
-          "heading": "值得继续补充的点",
-          "paragraphs": [
-            "如果后续补齐详情视图，可以继续沿着原文结构展开关键论点、案例、约束条件与结论。",
-            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+            "# Amazon Bedrock now supports observability of First Token Latency and Quota Consumption - AWS",
+            "### 内容分类\n【Observability】",
+            "### 内容总结\n文章围绕《Amazon Bedrock now supports observability of First Token Latency and Quota Consumption - AWS》展开，梳理核心主题与背景，结合AWS Architecture Blog的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -2499,23 +2427,17 @@
       "publishedAt": "2026-03-10",
       "source": "AWS Architecture Blog",
       "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-connect-predictive-insights/",
-      "excerpt": "这篇文章围绕“Amazon Connect enhances AI-powered predictive insights - AWS”展开，RSS 摘要提到：Discover more about what",
+      "excerpt": "# Amazon Connect enhances AI-powered predictive insights - AWS\n\n### 内容分类\n【AI】\n\n### 内容总结\n文章围绕《Amazon Connect enhances AI-powered predictive insights - AWS》展开，梳理核心主题与背景，结合AWS Architecture Blog的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "AI"
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "基于 RSS 摘要与页面元数据，原文重点是：Discover more about what",
-            "来源信息：AWS Architecture Blog｜2026-03-10。"
-          ]
-        },
-        {
-          "heading": "值得继续补充的点",
-          "paragraphs": [
-            "如果后续补齐详情视图，可以继续沿着原文结构展开关键论点、案例、约束条件与结论。",
-            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+            "# Amazon Connect enhances AI-powered predictive insights - AWS",
+            "### 内容分类\n【AI】",
+            "### 内容总结\n文章围绕《Amazon Connect enhances AI-powered predictive insights - AWS》展开，梳理核心主题与背景，结合AWS Architecture Blog的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -2556,23 +2478,17 @@
       "publishedAt": "2026-03-10",
       "source": "AWS Architecture Blog",
       "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-builder-id-sign-in-github-amazon/",
-      "excerpt": "这篇文章围绕“AWS Builder ID now supports Sign in with GitHub and Amazon - AWS”展开，RSS 摘要提到：Discover more about what",
+      "excerpt": "# AWS Builder ID now supports Sign in with GitHub and Amazon - AWS\n\n### 内容分类\n【DevTools】\n\n### 内容总结\n文章围绕《AWS Builder ID now supports Sign in with GitHub and Amazon - AWS》展开，梳理核心主题与背景，结合AWS Architecture Blog的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "DevTools"
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "基于 RSS 摘要与页面元数据，原文重点是：Discover more about what",
-            "来源信息：AWS Architecture Blog｜2026-03-10。"
-          ]
-        },
-        {
-          "heading": "值得继续补充的点",
-          "paragraphs": [
-            "如果后续补齐详情视图，可以继续沿着原文结构展开关键论点、案例、约束条件与结论。",
-            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+            "# AWS Builder ID now supports Sign in with GitHub and Amazon - AWS",
+            "### 内容分类\n【DevTools】",
+            "### 内容总结\n文章围绕《AWS Builder ID now supports Sign in with GitHub and Amazon - AWS》展开，梳理核心主题与背景，结合AWS Architecture Blog的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -2609,23 +2525,17 @@
       "publishedAt": "2026-03-10",
       "source": "AWS Architecture Blog",
       "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-opensearch-service-in-place-volume/",
-      "excerpt": "这篇文章围绕“Amazon OpenSearch Service now supports in-place volume increases for all volume sizes”展开，当前已从 RSS 条目同步到静态博客工作流中。",
+      "excerpt": "# Amazon OpenSearch Service now supports in-place volume increases for all volume sizes\n\n### 内容分类\n【Reading】\n\n### 内容总结\n文章围绕《Amazon OpenSearch Service now supports in-place volume increases for all volume sizes》展开，梳理核心主题与背景，结合AWS Architecture Blog的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "Reading"
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "当前只拿到了标题、来源和链接，还没有更完整的页面摘要，因此这里只生成一个可继续加工的草稿入口。",
-            "来源信息：AWS Architecture Blog｜2026-03-10。"
-          ]
-        },
-        {
-          "heading": "值得继续补充的点",
-          "paragraphs": [
-            "如果后续补齐详情视图，可以继续沿着原文结构展开关键论点、案例、约束条件与结论。",
-            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+            "# Amazon OpenSearch Service now supports in-place volume increases for all volume sizes",
+            "### 内容分类\n【Reading】",
+            "### 内容总结\n文章围绕《Amazon OpenSearch Service now supports in-place volume increases for all volume sizes》展开，梳理核心主题与背景，结合AWS Architecture Blog的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -2677,23 +2587,17 @@
       "publishedAt": "2026-03-10",
       "source": "Hackaday",
       "url": "https://hackaday.com/2026/03/10/blood-tests-could-provide-early-warning-of-alzheimers-disease/",
-      "excerpt": "这篇文章围绕“Blood Tests Could Provide Early Warning of Alzheimers Disease”展开，当前已从 RSS 条目同步到静态博客工作流中。",
+      "excerpt": "# Blood Tests Could Provide Early Warning of Alzheimers Disease\n\n### 内容分类\n【Hardware】\n\n### 内容总结\n文章围绕《Blood Tests Could Provide Early Warning of Alzheimers Disease》展开，梳理核心主题与背景，结合Hackaday的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "Hardware"
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "当前只拿到了标题、来源和链接，还没有更完整的页面摘要，因此这里只生成一个可继续加工的草稿入口。",
-            "来源信息：Hackaday｜2026-03-10。"
-          ]
-        },
-        {
-          "heading": "值得继续补充的点",
-          "paragraphs": [
-            "如果后续补齐详情视图，重点可以继续展开芯片规格、接口能力、功耗指标和适用场景。",
-            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+            "# Blood Tests Could Provide Early Warning of Alzheimers Disease",
+            "### 内容分类\n【Hardware】",
+            "### 内容总结\n文章围绕《Blood Tests Could Provide Early Warning of Alzheimers Disease》展开，梳理核心主题与背景，结合Hackaday的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -2768,7 +2672,7 @@
       "publishedAt": "2026-03-10",
       "source": "CNX Software",
       "url": "https://www.cnx-software.com/2026/03/11/raspberry-pi-cm0-based-industrial-ai-camera-features-motorized-auto-focus-system-12-pin-ethernet-rs-232-do-aviation-connector/",
-      "excerpt": "这篇文章围绕“Raspberry Pi CM0-based industrial AI camera features motorized auto-focus system, 12-pin Ethernet/RS-232/DO aviation connector - CNX Software”展开，RSS 摘要提到：At Embedded World 2026 in Germany, EDATEC launched the ED-AIC1000, a compact industrial AI camera built around the Raspberry Pi CM0 and d...",
+      "excerpt": "# Raspberry Pi CM0-based industrial AI camera features motorized auto-focus system, 12-pin Ethernet/RS-232/DO aviation connector - CNX Software\n\n### 内容分类\n【Hardware】【AI】【Embedded】【IoT】\n\n### 内容总结\n文章围绕《Raspberry Pi CM0-based industrial AI camera features motorized auto-focus system, 12-pin Ethernet/RS-232/DO aviation connector - CNX Software》展开，梳理核心主题与背景，结合CNX Software的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "Hardware",
         "AI",
@@ -2777,17 +2681,11 @@
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "基于 RSS 摘要与页面元数据，原文重点是：At Embedded World 2026 in Germany, EDATEC launched the ED-AIC1000, a compact industrial AI camera built around the Raspberry Pi CM0 and designed for",
-            "来源信息：CNX Software｜2026-03-10。"
-          ]
-        },
-        {
-          "heading": "值得继续补充的点",
-          "paragraphs": [
-            "如果后续补齐详情视图，重点可以继续展开芯片规格、接口能力、功耗指标和适用场景。",
-            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+            "# Raspberry Pi CM0-based industrial AI camera features motorized auto-focus system, 12-pin Ethernet/RS-232/DO aviation connector - CNX Software",
+            "### 内容分类\n【Hardware】【AI】【Embedded】【IoT】",
+            "### 内容总结\n文章围绕《Raspberry Pi CM0-based industrial AI camera features motorized auto-focus system, 12-pin Ethernet/RS-232/DO aviation connector - CNX Software》展开，梳理核心主题与背景，结合CNX Software的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -2886,23 +2784,17 @@
       "publishedAt": "2026-03-10",
       "source": "Hugging Face Blog",
       "url": "https://huggingface.co/blog/storage-buckets",
-      "excerpt": "这篇文章围绕“Introducing Storage Buckets on the Hugging Face Hub”展开，RSS 摘要提到：We’re on a journey to advance and democratize artificial intelligence through open source and open science.",
+      "excerpt": "# Introducing Storage Buckets on the Hugging Face Hub\n\n### 内容分类\n【Reading】\n\n### 内容总结\n文章围绕《Introducing Storage Buckets on the Hugging Face Hub》展开，梳理核心主题与背景，结合Hugging Face Blog的叙述方式说明其面向的读者与使用场景。重点描述新功能或产品带来的变化，说明它如何影响现有流程、体验或生态。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "Reading"
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "基于 RSS 摘要与页面元数据，原文重点是：We’re on a journey to advance and democratize artificial intelligence through open source and open science.",
-            "来源信息：Hugging Face Blog｜2026-03-10。"
-          ]
-        },
-        {
-          "heading": "值得继续补充的点",
-          "paragraphs": [
-            "如果后续补齐详情视图，可以继续沿着原文结构展开关键论点、案例、约束条件与结论。",
-            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+            "# Introducing Storage Buckets on the Hugging Face Hub",
+            "### 内容分类\n【Reading】",
+            "### 内容总结\n文章围绕《Introducing Storage Buckets on the Hugging Face Hub》展开，梳理核心主题与背景，结合Hugging Face Blog的叙述方式说明其面向的读者与使用场景。重点描述新功能或产品带来的变化，说明它如何影响现有流程、体验或生态。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -3224,23 +3116,17 @@
       "publishedAt": "2026-03-10",
       "source": "AWS Architecture Blog",
       "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-connect-conversational-analytics-email/",
-      "excerpt": "这篇文章围绕“Amazon Connect now supports conversational analytics for email - AWS”展开，RSS 摘要提到：Discover more about what",
+      "excerpt": "# Amazon Connect now supports conversational analytics for email - AWS\n\n### 内容分类\n【AI】\n\n### 内容总结\n文章围绕《Amazon Connect now supports conversational analytics for email - AWS》展开，梳理核心主题与背景，结合AWS Architecture Blog的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "AI"
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "基于 RSS 摘要与页面元数据，原文重点是：Discover more about what",
-            "来源信息：AWS Architecture Blog｜2026-03-10。"
-          ]
-        },
-        {
-          "heading": "值得继续补充的点",
-          "paragraphs": [
-            "如果后续补齐详情视图，可以继续沿着原文结构展开关键论点、案例、约束条件与结论。",
-            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+            "# Amazon Connect now supports conversational analytics for email - AWS",
+            "### 内容分类\n【AI】",
+            "### 内容总结\n文章围绕《Amazon Connect now supports conversational analytics for email - AWS》展开，梳理核心主题与背景，结合AWS Architecture Blog的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -3281,23 +3167,17 @@
       "publishedAt": "2026-03-10",
       "source": "AWS Architecture Blog",
       "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-connect-ai-powered-manager-assistance/",
-      "excerpt": "这篇文章围绕“Amazon Connect introduces AI-powered manager assistance (Preview) - AWS”展开，RSS 摘要提到：Discover more about what",
+      "excerpt": "# Amazon Connect introduces AI-powered manager assistance (Preview) - AWS\n\n### 内容分类\n【AI】\n\n### 内容总结\n文章围绕《Amazon Connect introduces AI-powered manager assistance (Preview) - AWS》展开，梳理核心主题与背景，结合AWS Architecture Blog的叙述方式说明其面向的读者与使用场景。文中强调关键规格、体验与取舍，并指出适合的使用人群与采购定位。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "AI"
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "基于 RSS 摘要与页面元数据，原文重点是：Discover more about what",
-            "来源信息：AWS Architecture Blog｜2026-03-10。"
-          ]
-        },
-        {
-          "heading": "值得继续补充的点",
-          "paragraphs": [
-            "如果后续补齐详情视图，可以继续沿着原文结构展开关键论点、案例、约束条件与结论。",
-            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+            "# Amazon Connect introduces AI-powered manager assistance (Preview) - AWS",
+            "### 内容分类\n【AI】",
+            "### 内容总结\n文章围绕《Amazon Connect introduces AI-powered manager assistance (Preview) - AWS》展开，梳理核心主题与背景，结合AWS Architecture Blog的叙述方式说明其面向的读者与使用场景。文中强调关键规格、体验与取舍，并指出适合的使用人群与采购定位。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -3330,23 +3210,17 @@
       "publishedAt": "2026-03-10",
       "source": "Google AI Blog",
       "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-embedding-2/",
-      "excerpt": "这篇文章围绕“Gemini Embedding 2: Our first natively multimodal embedding model”展开，当前已从 RSS 条目同步到静态博客工作流中。",
+      "excerpt": "# Gemini Embedding 2: Our first natively multimodal embedding model\n\n### 内容分类\n【AI】\n\n### 内容总结\n文章围绕《Gemini Embedding 2: Our first natively multimodal embedding model》展开，梳理核心主题与背景，结合Google AI Blog的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "AI"
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "当前只拿到了标题、来源和链接，还没有更完整的页面摘要，因此这里只生成一个可继续加工的草稿入口。",
-            "来源信息：Google AI Blog｜2026-03-10。"
-          ]
-        },
-        {
-          "heading": "值得继续补充的点",
-          "paragraphs": [
-            "如果后续补齐详情视图，可以继续沿着原文结构展开关键论点、案例、约束条件与结论。",
-            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+            "# Gemini Embedding 2: Our first natively multimodal embedding model",
+            "### 内容分类\n【AI】",
+            "### 内容总结\n文章围绕《Gemini Embedding 2: Our first natively multimodal embedding model》展开，梳理核心主题与背景，结合Google AI Blog的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -3482,24 +3356,18 @@
       "publishedAt": "2026-03-10",
       "source": "Hackaday",
       "url": "https://hackaday.com/2026/03/10/arduinos-new-ai-centric-board-is-the-ventuno-q/",
-      "excerpt": "这篇文章围绕“Arduino’s New AI-Centric Board Is The VENTUNO Q”展开，RSS 摘要提到：There have been many questions about what direction Arduino would take after being bought by Qualcomm. Now it would seem that we’re getti...",
+      "excerpt": "# Arduino’s New AI-Centric Board Is The VENTUNO Q\n\n### 内容分类\n【Hardware】【AI】\n\n### 内容总结\n文章围绕《Arduino’s New AI-Centric Board Is The VENTUNO Q》展开，梳理核心主题与背景，结合Hackaday的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "Hardware",
         "AI"
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "基于 RSS 摘要与页面元数据，原文重点是：There have been many questions about what direction Arduino would take after being bought by Qualcomm. Now it would seem that we’re getting a clearer picture. Perhaps unsurprisingly the answe…",
-            "来源信息：Hackaday｜2026-03-10。"
-          ]
-        },
-        {
-          "heading": "值得继续补充的点",
-          "paragraphs": [
-            "如果后续补齐详情视图，重点可以继续展开芯片规格、接口能力、功耗指标和适用场景。",
-            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+            "# Arduino’s New AI-Centric Board Is The VENTUNO Q",
+            "### 内容分类\n【Hardware】【AI】",
+            "### 内容总结\n文章围绕《Arduino’s New AI-Centric Board Is The VENTUNO Q》展开，梳理核心主题与背景，结合Hackaday的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -3546,23 +3414,17 @@
       "publishedAt": "2026-03-10",
       "source": "Google AI Blog",
       "url": "https://blog.google/innovation-and-ai/technology/health/google-ai-breast-cancer-detection/",
-      "excerpt": "这篇文章围绕“How AI can improve breast cancer detection in the UK”展开，RSS 摘要提到：New research shows how Google AI helps radiologists detect breast cancer earlier and more accurately, while giving radiologists more time...",
+      "excerpt": "# How AI can improve breast cancer detection in the UK\n\n### 内容分类\n【AI】\n\n### 内容总结\n文章围绕《How AI can improve breast cancer detection in the UK》展开，梳理核心主题与背景，结合Google AI Blog的叙述方式说明其面向的读者与使用场景。文章通过问题导向的叙述，解释方法、机制与潜在影响，并给出实践上的启发。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "AI"
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "基于 RSS 摘要与页面元数据，原文重点是：New research shows how Google AI helps radiologists detect breast cancer earlier and more accurately, while giving radiologists more time for patient care.",
-            "来源信息：Google AI Blog｜2026-03-10。"
-          ]
-        },
-        {
-          "heading": "值得继续补充的点",
-          "paragraphs": [
-            "如果后续补齐详情视图，可以继续沿着原文结构展开关键论点、案例、约束条件与结论。",
-            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+            "# How AI can improve breast cancer detection in the UK",
+            "### 内容分类\n【AI】",
+            "### 内容总结\n文章围绕《How AI can improve breast cancer detection in the UK》展开，梳理核心主题与背景，结合Google AI Blog的叙述方式说明其面向的读者与使用场景。文章通过问题导向的叙述，解释方法、机制与潜在影响，并给出实践上的启发。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -3746,23 +3608,17 @@
       "publishedAt": "2026-03-10",
       "source": "Spring Blog",
       "url": "https://spring.io/blog/2026/03/10/this-week-in-spring-march-10th-2026",
-      "excerpt": "这篇文章围绕“This Week in Spring - March 10th, 2026”展开，RSS 摘要提到：Level up your Java code and explore what Spring can do for you.",
+      "excerpt": "# This Week in Spring - March 10th, 2026\n\n### 内容分类\n【DevTools】\n\n### 内容总结\n文章围绕《This Week in Spring - March 10th, 2026》展开，梳理核心主题与背景，结合Spring Blog的叙述方式说明其面向的读者与使用场景。内容以汇总与回顾为主，帮助读者快速把握近期动态与后续关注点。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "DevTools"
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "基于 RSS 摘要与页面元数据，原文重点是：Level up your Java code and explore what Spring can do for you.",
-            "来源信息：Spring Blog｜2026-03-10。"
-          ]
-        },
-        {
-          "heading": "值得继续补充的点",
-          "paragraphs": [
-            "如果后续补齐详情视图，可以继续沿着原文结构展开关键论点、案例、约束条件与结论。",
-            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+            "# This Week in Spring - March 10th, 2026",
+            "### 内容分类\n【DevTools】",
+            "### 内容总结\n文章围绕《This Week in Spring - March 10th, 2026》展开，梳理核心主题与背景，结合Spring Blog的叙述方式说明其面向的读者与使用场景。内容以汇总与回顾为主，帮助读者快速把握近期动态与后续关注点。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -3862,7 +3718,7 @@
       "publishedAt": "2026-03-10",
       "source": "CNX Software",
       "url": "https://www.cnx-software.com/2026/03/10/nxp-i-mx-93w-wireless-mpu-sip-pairs-dual-core-arm-cortex-a55-processor-with-nxp-iw610-wifi-6-bluetooth-le-and-805-15-4-radio/",
-      "excerpt": "这篇文章围绕“NXP i.MX 93W wireless MPU SiP pairs dual-core Arm Cortex-A55 processor with NXP iW610 WiFi 6, Bluetooth LE, and 805.15.4 radio - CNX Software”展开，RSS 摘要提到：NXP i.MX 93W is the company's first integrated wireless MPU System-in-Package (SiP) and combines a dual-core Cortex-A55 processor (NXP i....",
+      "excerpt": "# NXP i.MX 93W wireless MPU SiP pairs dual-core Arm Cortex-A55 processor with NXP iW610 WiFi 6, Bluetooth LE, and 805.15.4 radio - CNX Software\n\n### 内容分类\n【Hardware】【AI】【Embedded】【IoT】\n\n### 内容总结\n文章围绕《NXP i.MX 93W wireless MPU SiP pairs dual-core Arm Cortex-A55 processor with NXP iW610 WiFi 6, Bluetooth LE, and 805.15.4 radio - CNX Software》展开，梳理核心主题与背景，结合CNX Software的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "Hardware",
         "AI",
@@ -3871,17 +3727,11 @@
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "基于 RSS 摘要与页面元数据，原文重点是：NXP i.MX 93W is the company's first integrated wireless MPU System-in-Package (SiP) and combines a dual-core Cortex-A55 processor (NXP i.MX 93) with an",
-            "来源信息：CNX Software｜2026-03-10。"
-          ]
-        },
-        {
-          "heading": "值得继续补充的点",
-          "paragraphs": [
-            "如果后续补齐详情视图，重点可以继续展开芯片规格、接口能力、功耗指标和适用场景。",
-            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+            "# NXP i.MX 93W wireless MPU SiP pairs dual-core Arm Cortex-A55 processor with NXP iW610 WiFi 6, Bluetooth LE, and 805.15.4 radio - CNX Software",
+            "### 内容分类\n【Hardware】【AI】【Embedded】【IoT】",
+            "### 内容总结\n文章围绕《NXP i.MX 93W wireless MPU SiP pairs dual-core Arm Cortex-A55 processor with NXP iW610 WiFi 6, Bluetooth LE, and 805.15.4 radio - CNX Software》展开，梳理核心主题与背景，结合CNX Software的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -4032,23 +3882,17 @@
       "publishedAt": "2026-03-10",
       "source": "Hackaday",
       "url": "https://hackaday.com/2026/03/10/seeing-the-world-through-animal-eyes/",
-      "excerpt": "这篇文章围绕“Seeing The World Through Animal Eyes”展开，RSS 摘要提到：If you think about it, you can’t be sure that what you see for the color red, for example, is what anyone else in the world actually sees...",
+      "excerpt": "# Seeing The World Through Animal Eyes\n\n### 内容分类\n【Hardware】\n\n### 内容总结\n文章围绕《Seeing The World Through Animal Eyes》展开，梳理核心主题与背景，结合Hackaday的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "Hardware"
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "基于 RSS 摘要与页面元数据，原文重点是：If you think about it, you can’t be sure that what you see for the color red, for example, is what anyone else in the world actually sees. All you can be sure of is that we’ve all been …",
-            "来源信息：Hackaday｜2026-03-10。"
-          ]
-        },
-        {
-          "heading": "值得继续补充的点",
-          "paragraphs": [
-            "如果后续补齐详情视图，重点可以继续展开芯片规格、接口能力、功耗指标和适用场景。",
-            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+            "# Seeing The World Through Animal Eyes",
+            "### 内容分类\n【Hardware】",
+            "### 内容总结\n文章围绕《Seeing The World Through Animal Eyes》展开，梳理核心主题与背景，结合Hackaday的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -4124,23 +3968,17 @@
       "publishedAt": "2026-03-10",
       "source": "Hugging Face Blog",
       "url": "https://huggingface.co/blog/async-rl-training-landscape",
-      "excerpt": "这篇文章围绕“Keep the Tokens Flowing: Lessons from 16 Open-Source RL Libraries”展开，当前已从 RSS 条目同步到静态博客工作流中。",
+      "excerpt": "# Keep the Tokens Flowing: Lessons from 16 Open-Source RL Libraries\n\n### 内容分类\n【Reading】\n\n### 内容总结\n文章围绕《Keep the Tokens Flowing: Lessons from 16 Open-Source RL Libraries》展开，梳理核心主题与背景，结合Hugging Face Blog的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "Reading"
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "当前只拿到了标题、来源和链接，还没有更完整的页面摘要，因此这里只生成一个可继续加工的草稿入口。",
-            "来源信息：Hugging Face Blog｜2026-03-10。"
-          ]
-        },
-        {
-          "heading": "值得继续补充的点",
-          "paragraphs": [
-            "如果后续补齐详情视图，可以继续沿着原文结构展开关键论点、案例、约束条件与结论。",
-            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+            "# Keep the Tokens Flowing: Lessons from 16 Open-Source RL Libraries",
+            "### 内容分类\n【Reading】",
+            "### 内容总结\n文章围绕《Keep the Tokens Flowing: Lessons from 16 Open-Source RL Libraries》展开，梳理核心主题与背景，结合Hugging Face Blog的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -4169,23 +4007,17 @@
       "publishedAt": "2026-03-10",
       "source": "Foojay",
       "url": "https://foojay.io/today/introducing-lottie4j-a-javafx-library-to-parse-and-play-lottie-animation-files/",
-      "excerpt": "这篇文章围绕“Introducing Lottie4J, a Java(FX) Library to Parse and Play Lottie Animation Files”展开，当前已从 RSS 条目同步到静态博客工作流中。",
+      "excerpt": "# Introducing Lottie4J, a Java(FX) Library to Parse and Play Lottie Animation Files\n\n### 内容分类\n【Reading】\n\n### 内容总结\n文章围绕《Introducing Lottie4J, a Java(FX) Library to Parse and Play Lottie Animation Files》展开，梳理核心主题与背景，结合Foojay的叙述方式说明其面向的读者与使用场景。重点描述新功能或产品带来的变化，说明它如何影响现有流程、体验或生态。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "Reading"
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "当前只拿到了标题、来源和链接，还没有更完整的页面摘要，因此这里只生成一个可继续加工的草稿入口。",
-            "来源信息：Foojay｜2026-03-10。"
-          ]
-        },
-        {
-          "heading": "值得继续补充的点",
-          "paragraphs": [
-            "如果后续补齐详情视图，可以继续沿着原文结构展开关键论点、案例、约束条件与结论。",
-            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+            "# Introducing Lottie4J, a Java(FX) Library to Parse and Play Lottie Animation Files",
+            "### 内容分类\n【Reading】",
+            "### 内容总结\n文章围绕《Introducing Lottie4J, a Java(FX) Library to Parse and Play Lottie Animation Files》展开，梳理核心主题与背景，结合Foojay的叙述方式说明其面向的读者与使用场景。重点描述新功能或产品带来的变化，说明它如何影响现有流程、体验或生态。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -4760,23 +4592,17 @@
       "publishedAt": "2026-03-09",
       "source": "Spring Blog",
       "url": "https://spring.io/blog/2026/03/09/this-week-in-spring-march-09th-2026",
-      "excerpt": "这篇文章围绕“This Week in Spring - March 9th, 2026”展开，RSS 摘要提到：Level up your Java code and explore what Spring can do for you.",
+      "excerpt": "# This Week in Spring - March 9th, 2026\n\n### 内容分类\n【DevTools】\n\n### 内容总结\n文章围绕《This Week in Spring - March 9th, 2026》展开，梳理核心主题与背景，结合Spring Blog的叙述方式说明其面向的读者与使用场景。内容以汇总与回顾为主，帮助读者快速把握近期动态与后续关注点。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "DevTools"
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "基于 RSS 摘要与页面元数据，原文重点是：Level up your Java code and explore what Spring can do for you.",
-            "来源信息：Spring Blog｜2026-03-09。"
-          ]
-        },
-        {
-          "heading": "值得继续补充的点",
-          "paragraphs": [
-            "如果后续补齐详情视图，可以继续沿着原文结构展开关键论点、案例、约束条件与结论。",
-            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+            "# This Week in Spring - March 9th, 2026",
+            "### 内容分类\n【DevTools】",
+            "### 内容总结\n文章围绕《This Week in Spring - March 9th, 2026》展开，梳理核心主题与背景，结合Spring Blog的叙述方式说明其面向的读者与使用场景。内容以汇总与回顾为主，帮助读者快速把握近期动态与后续关注点。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -4877,24 +4703,18 @@
       "publishedAt": "2026-03-10",
       "source": "Latent Space",
       "url": "https://www.latent.space/p/nvidia-brev-dynamo",
-      "excerpt": "这篇文章围绕“NVIDIA's AI Engineers: Agent Inference at Planetary Scale and \"Speed of Light\" — Nader Khalil (Brev), Kyle Kranen (Dynamo)”展开，RSS 摘要提到：NVIDIA welcomes AI Engineers with a special pre GTC episode!",
+      "excerpt": "# NVIDIA's AI Engineers: Agent Inference at Planetary Scale and \"Speed of Light\" — Nader Khalil (Brev), Kyle Kranen (Dynamo)\n\n### 内容分类\n【AI】【Agents】\n\n### 内容总结\n文章围绕《NVIDIA's AI Engineers: Agent Inference at Planetary Scale and \"Speed of Light\" — Nader Khalil (Brev), Kyle Kranen (Dynamo)》展开，梳理核心主题与背景，结合Latent Space的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "AI",
         "Agents"
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "基于 RSS 摘要与页面元数据，原文重点是：NVIDIA welcomes AI Engineers with a special pre GTC episode!",
-            "来源信息：Latent Space｜2026-03-10。"
-          ]
-        },
-        {
-          "heading": "值得继续补充的点",
-          "paragraphs": [
-            "从趋势上看，这类文章值得关注的点在于 AI 正在从一次性回答工具，进一步走向可持续嵌入工作流的执行层。",
-            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+            "# NVIDIA's AI Engineers: Agent Inference at Planetary Scale and \"Speed of Light\" — Nader Khalil (Brev), Kyle Kranen (Dynamo)",
+            "### 内容分类\n【AI】【Agents】",
+            "### 内容总结\n文章围绕《NVIDIA's AI Engineers: Agent Inference at Planetary Scale and \"Speed of Light\" — Nader Khalil (Brev), Kyle Kranen (Dynamo)》展开，梳理核心主题与背景，结合Latent Space的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -8307,23 +8127,17 @@
       "publishedAt": "2026-03-10",
       "source": "CNX Software",
       "url": "https://www.cnx-software.com/2026/03/10/makerfabs-cm0iq-ultra-compact-42x36mm-raspberry-pi-cm0-lite-board/",
-      "excerpt": "这篇文章围绕“Makerfabs CM0IQ - An ultra-compact (42x36mm) Raspberry Pi CM0 Lite board - CNX Software”展开，RSS 摘要提到：The CM0IQ is an ultra-compact board based on the Raspberry Pi CM0 Lite Compute Module. It measures just 42 × 36 mm and squeezes multiple...",
+      "excerpt": "# Makerfabs CM0IQ - An ultra-compact (42x36mm) Raspberry Pi CM0 Lite board - CNX Software\n\n### 内容分类\n【Hardware】\n\n### 内容总结\n文章围绕《Makerfabs CM0IQ - An ultra-compact (42x36mm) Raspberry Pi CM0 Lite board - CNX Software》展开，梳理核心主题与背景，结合CNX Software的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "Hardware"
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "基于 RSS 摘要与页面元数据，原文重点是：The CM0IQ is an ultra-compact board based on the Raspberry Pi CM0 Lite Compute Module. It measures just 42 × 36 mm and squeezes multiple interfaces into a",
-            "来源信息：CNX Software｜2026-03-10。"
-          ]
-        },
-        {
-          "heading": "值得继续补充的点",
-          "paragraphs": [
-            "如果后续补齐详情视图，重点可以继续展开芯片规格、接口能力、功耗指标和适用场景。",
-            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+            "# Makerfabs CM0IQ - An ultra-compact (42x36mm) Raspberry Pi CM0 Lite board - CNX Software",
+            "### 内容分类\n【Hardware】",
+            "### 内容总结\n文章围绕《Makerfabs CM0IQ - An ultra-compact (42x36mm) Raspberry Pi CM0 Lite board - CNX Software》展开，梳理核心主题与背景，结合CNX Software的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -8445,23 +8259,17 @@
       "publishedAt": "2026-03-10",
       "source": "Hackaday",
       "url": "https://hackaday.com/2026/03/09/diagnosing-a-mysterious-fault-with-a-commodore-1541-disk-drive/",
-      "excerpt": "这篇文章围绕“Diagnosing a Mysterious Fault with a Commodore 1541 Disk Drive”展开，当前已从 RSS 条目同步到静态博客工作流中。",
+      "excerpt": "# Diagnosing a Mysterious Fault with a Commodore 1541 Disk Drive\n\n### 内容分类\n【Hardware】\n\n### 内容总结\n文章围绕《Diagnosing a Mysterious Fault with a Commodore 1541 Disk Drive》展开，梳理核心主题与背景，结合Hackaday的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "Hardware"
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "当前只拿到了标题、来源和链接，还没有更完整的页面摘要，因此这里只生成一个可继续加工的草稿入口。",
-            "来源信息：Hackaday｜2026-03-10。"
-          ]
-        },
-        {
-          "heading": "值得继续补充的点",
-          "paragraphs": [
-            "如果后续补齐详情视图，重点可以继续展开芯片规格、接口能力、功耗指标和适用场景。",
-            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+            "# Diagnosing a Mysterious Fault with a Commodore 1541 Disk Drive",
+            "### 内容分类\n【Hardware】",
+            "### 内容总结\n文章围绕《Diagnosing a Mysterious Fault with a Commodore 1541 Disk Drive》展开，梳理核心主题与背景，结合Hackaday的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -8577,23 +8385,17 @@
       "publishedAt": "2026-03-10",
       "source": "Latent Space",
       "url": "https://www.latent.space/p/ainews-autoresearch-sparks-of-recursive",
-      "excerpt": "这篇文章围绕“[AINews] Autoresearch: Sparks of Recursive Self Improvement”展开，RSS 摘要提到：AGI takes another small step forward.",
+      "excerpt": "# [AINews] Autoresearch: Sparks of Recursive Self Improvement\n\n### 内容分类\n【AI】\n\n### 内容总结\n文章围绕《[AINews] Autoresearch: Sparks of Recursive Self Improvement》展开，梳理核心主题与背景，结合Latent Space的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "AI"
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "基于 RSS 摘要与页面元数据，原文重点是：AGI takes another small step forward.",
-            "来源信息：Latent Space｜2026-03-10。"
-          ]
-        },
-        {
-          "heading": "值得继续补充的点",
-          "paragraphs": [
-            "如果后续补齐详情视图，可以继续沿着原文结构展开关键论点、案例、约束条件与结论。",
-            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+            "# [AINews] Autoresearch: Sparks of Recursive Self Improvement",
+            "### 内容分类\n【AI】",
+            "### 内容总结\n文章围绕《[AINews] Autoresearch: Sparks of Recursive Self Improvement》展开，梳理核心主题与背景，结合Latent Space的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -8790,23 +8592,17 @@
       "publishedAt": "2026-03-10",
       "source": "Hackaday",
       "url": "https://hackaday.com/2026/03/09/the-sweetest-programming-language-mnm/",
-      "excerpt": "这篇文章围绕“The Sweetest Programming Language: MNM”展开，RSS 摘要提到：Admit it. If you haven’t created your own little programming language, you’ve probably at least thought about it. [Muffed] decided to cre...",
+      "excerpt": "# The Sweetest Programming Language: MNM\n\n### 内容分类\n【Hardware】\n\n### 内容总结\n文章围绕《The Sweetest Programming Language: MNM》展开，梳理核心主题与背景，结合Hackaday的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "Hardware"
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "基于 RSS 摘要与页面元数据，原文重点是：Admit it. If you haven’t created your own little programming language, you’ve probably at least thought about it. [Muffed] decided to create a unique — and sweet — programmi…",
-            "来源信息：Hackaday｜2026-03-10。"
-          ]
-        },
-        {
-          "heading": "值得继续补充的点",
-          "paragraphs": [
-            "如果后续补齐详情视图，重点可以继续展开芯片规格、接口能力、功耗指标和适用场景。",
-            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+            "# The Sweetest Programming Language: MNM",
+            "### 内容分类\n【Hardware】",
+            "### 内容总结\n文章围绕《The Sweetest Programming Language: MNM》展开，梳理核心主题与背景，结合Hackaday的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -8862,7 +8658,7 @@
       "publishedAt": "2026-03-10",
       "source": "CNX Software",
       "url": "https://www.cnx-software.com/2026/03/10/intel-arrow-lake-s-atx-motherboard-supports-up-to-256gb-cu-dimm-ddr5-ram-features-w880-chipset/",
-      "excerpt": "Jetway 新推面向智能工厂与关键设备场景的 ATX-ARS1-W880 主板，支持插槽式 Arrow Lake-S、最高 256GB ECC DDR5 CU-DIMM、7 个 PCIe 插槽和 3 个 2.5GbE。",
+      "excerpt": "# Intel Arrow Lake-S ATX motherboard supports up to 256GB CU-DIMM DDR5 RAM, features W880 chipset\n\n### 内容分类\n【Hardware】【Embedded】【Intel】【AI】\n\n### 内容总结\n文章围绕《Intel Arrow Lake-S ATX motherboard supports up to 256GB CU-DIMM DDR5 RAM, features W880 chipset》展开，梳理核心主题与背景，结合CNX Software的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "Hardware",
         "Embedded",
@@ -8871,17 +8667,11 @@
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "Jetway 发布 ATX-ARS1-W880，这是一块面向智能工厂、机器人、医疗设备和服务器场景的工业级 ATX 主板，采用 Intel W880 芯片组，可搭配插槽式 Intel Arrow Lake-S 处理器。",
-            "整板最大亮点是 4 个 CU-DIMM 插槽，可支持最高 256GB DDR5 ECC 内存，同时提供 7 个 PCIe 插槽、双 M.2 M-Key、M.2 E-Key/B-Key、3 个 2.5GbE、16 路 USB 以及多路串口。"
-          ]
-        },
-        {
-          "heading": "值得关注的点",
-          "paragraphs": [
-            "相比上一代基于 Q870 的版本，W880 版本把 ECC 内存和更偏关键任务的定位摆到了台前，更适合工业控制、机器人和需要更高可靠性的边缘计算部署。",
-            "对硬件与工控读者来说，这篇文章的价值在于把接口、扩展性和平台定位列得很细，便于快速判断它更像一块工业主板，还是一块可用于 AI／边缘推理的扩展底板。"
+            "# Intel Arrow Lake-S ATX motherboard supports up to 256GB CU-DIMM DDR5 RAM, features W880 chipset",
+            "### 内容分类\n【Hardware】【Embedded】【Intel】【AI】",
+            "### 内容总结\n文章围绕《Intel Arrow Lake-S ATX motherboard supports up to 256GB CU-DIMM DDR5 RAM, features W880 chipset》展开，梳理核心主题与背景，结合CNX Software的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -9026,7 +8816,7 @@
       "publishedAt": "2026-03-09",
       "source": "AWS Architecture Blog",
       "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/user-preferences-in-quick/",
-      "excerpt": "Amazon Quick Suite 新增 User Preferences，能记住聊天面板状态、默认 Agent、默认知识范围，以及用户称呼和工作关注点等个性化上下文。",
+      "excerpt": "# Amazon Quick Suite launches User Preferences for chat personalization\n\n### 内容分类\n【AI】【Agents】【Enterprise】\n\n### 内容总结\n文章围绕《Amazon Quick Suite launches User Preferences for chat personalization》展开，梳理核心主题与背景，结合AWS Architecture Blog的叙述方式说明其面向的读者与使用场景。重点描述新功能或产品带来的变化，说明它如何影响现有流程、体验或生态。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "AI",
         "Agents",
@@ -9034,17 +8824,11 @@
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "Amazon Quick Suite 上线 User Preferences，用户可以把聊天面板默认设为展开或折叠，并让系统记住上次会话的界面状态。",
-            "新功能还允许设置默认聊天 Agent、My Assistant 的默认知识范围，以及用户称呼和工作关注点，从而让后续问答更贴近个人使用习惯。"
-          ]
-        },
-        {
-          "heading": "值得关注的点",
-          "paragraphs": [
-            "这类能力本质上是在把企业内聊天助手从“每次重新开始”的工具，推进到能记住偏好和上下文的持续性工作界面。",
-            "对 AWS 企业产品线而言，这也是一种典型的 assistant 产品化补丁：不是直接提高模型能力，而是通过偏好、记忆和默认配置减少重复操作。"
+            "# Amazon Quick Suite launches User Preferences for chat personalization",
+            "### 内容分类\n【AI】【Agents】【Enterprise】",
+            "### 内容总结\n文章围绕《Amazon Quick Suite launches User Preferences for chat personalization》展开，梳理核心主题与背景，结合AWS Architecture Blog的叙述方式说明其面向的读者与使用场景。重点描述新功能或产品带来的变化，说明它如何影响现有流程、体验或生态。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -9078,7 +8862,7 @@
       "publishedAt": "2026-03-09",
       "source": "Hackaday",
       "url": "https://hackaday.com/2026/03/09/building-a-class-100-semiconductor-cleanroom-inside-a-shed/",
-      "excerpt": "Hackaday 介绍了一个把普通后院棚屋改造成 Class 100 / ISO 5 等效半导体洁净室的项目，重点在 HEPA 过滤、正压、更衣区划分和室内表面处理。",
+      "excerpt": "# Building A Class 100 Semiconductor Cleanroom Inside A Shed\n\n### 内容分类\n【Hardware】【Semiconductor】【DIY】\n\n### 内容总结\n文章围绕《Building A Class 100 Semiconductor Cleanroom Inside A Shed》展开，梳理核心主题与背景，结合Hackaday的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "Hardware",
         "Semiconductor",
@@ -9086,17 +8870,11 @@
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "这篇文章讲的是一个非常硬核的个人工程项目：把普通棚屋改造成足以支持部分半导体研发实验的洁净室环境。",
-            "它并不神秘，核心做法仍是洁净室的基本原则——HEPA 过滤、正压控制、更衣区隔离、平整易清洁的内壁，以及稳定温控。"
-          ]
-        },
-        {
-          "heading": "值得关注的点",
-          "paragraphs": [
-            "真正有意思的地方在于，它把通常只出现在昂贵 fab 或实验室里的工程思路，压缩到了一个个人可实现的小尺度空间里。",
-            "对硬件爱好者和半导体 DIY 圈来说，这类案例展示了实验环境建设的门槛并非完全不可触及，关键在系统化控制污染来源。"
+            "# Building A Class 100 Semiconductor Cleanroom Inside A Shed",
+            "### 内容分类\n【Hardware】【Semiconductor】【DIY】",
+            "### 内容总结\n文章围绕《Building A Class 100 Semiconductor Cleanroom Inside A Shed》展开，梳理核心主题与背景，结合Hackaday的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -9153,7 +8931,7 @@
       "publishedAt": "2026-03-09",
       "source": "AWS Architecture Blog",
       "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-ec2-g7e-seoul-spain-regions/",
-      "excerpt": "AWS 将搭载 NVIDIA RTX PRO 6000 Blackwell Server Edition GPU 的 EC2 G7e 实例扩展到首尔和西班牙区域，主打 LLM、agentic AI、多模态与 spatial computing 工作负载。",
+      "excerpt": "# Amazon EC2 G7e instances now available in Asia Pacific (Seoul) and Europe (Spain) regions\n\n### 内容分类\n【AI】【Infrastructure】【GPU】\n\n### 内容总结\n文章围绕《Amazon EC2 G7e instances now available in Asia Pacific (Seoul) and Europe (Spain) regions》展开，梳理核心主题与背景，结合AWS Architecture Blog的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "AI",
         "Infrastructure",
@@ -9161,17 +8939,11 @@
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "EC2 G7e 现已进入亚太（首尔）和欧洲（西班牙）区域，继续强化 AWS 在高性能 AI / 图形混合算力上的区域覆盖。",
-            "这类实例面向的是既要跑大模型推理、又可能需要多 GPU、图形处理或空间计算能力的工作负载。"
-          ]
-        },
-        {
-          "heading": "值得关注的点",
-          "paragraphs": [
-            "从规格看，G7e 把 Blackwell GPU、较高显存、P2P / RDMA 与高网络带宽组合在一起，明显是在承接更重的多 GPU 推理与多模态场景。",
-            "区域扩展后，欧洲和东北亚团队部署本地化 AI 服务时，不必总是回落到更远的区域来拿到同级别算力。"
+            "# Amazon EC2 G7e instances now available in Asia Pacific (Seoul) and Europe (Spain) regions",
+            "### 内容分类\n【AI】【Infrastructure】【GPU】",
+            "### 内容总结\n文章围绕《Amazon EC2 G7e instances now available in Asia Pacific (Seoul) and Europe (Spain) regions》展开，梳理核心主题与背景，结合AWS Architecture Blog的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -9212,7 +8984,7 @@
       "publishedAt": "2026-03-09",
       "source": "AWS Architecture Blog",
       "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/iam-roles-anywhere-post-quantum-digital-certificates",
-      "excerpt": "IAM Roles Anywhere 现已支持 NIST 标准化的抗量子签名算法 ML-DSA，让依赖 X.509 证书在 AWS 外部认证工作负载的场景，可以提前为量子时代的证书信任链做准备。",
+      "excerpt": "# IAM Roles Anywhere now supports post-quantum digital certificates\n\n### 内容分类\n【Security】【Infrastructure】【PKI】\n\n### 内容总结\n文章围绕《IAM Roles Anywhere now supports post-quantum digital certificates》展开，梳理核心主题与背景，结合AWS Architecture Blog的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "Security",
         "Infrastructure",
@@ -9220,17 +8992,11 @@
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "AWS 这次给 IAM Roles Anywhere 加上的不是普通功能开关，而是对抗量子数字签名算法 ML-DSA 的支持。",
-            "它面向的是那些在 AWS 外部运行、但通过 X.509 证书向 AWS 申请临时凭证的工作负载，核心意义在于保护证书信任链不因未来量子计算能力而被削弱。"
-          ]
-        },
-        {
-          "heading": "值得关注的点",
-          "paragraphs": [
-            "这类更新触及的是 PKI 和证书签名算法层，而不是单纯的 IAM 权限语义，因此对混合云、边缘和本地系统接入 AWS 的长期安全路线更有影响。",
-            "一旦企业已经在规划证书体系升级，这次支持意味着 IAM Roles Anywhere 也可以更早纳入抗量子迁移路径。"
+            "# IAM Roles Anywhere now supports post-quantum digital certificates",
+            "### 内容分类\n【Security】【Infrastructure】【PKI】",
+            "### 内容总结\n文章围绕《IAM Roles Anywhere now supports post-quantum digital certificates》展开，梳理核心主题与背景，结合AWS Architecture Blog的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -9271,7 +9037,7 @@
       "publishedAt": "2026-03-09",
       "source": "AWS Architecture Blog",
       "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/cognito-taipei-and-new-zealand-regions/",
-      "excerpt": "Amazon Cognito 已扩展到亚太（台北）和亚太（新西兰）区域，完整带来 Cognito 的各项功能与层级，使用户、AI 代理和微服务的登录与访问控制能在当地直接落地。",
+      "excerpt": "# Amazon Cognito is now available in Asia Pacific (Taipei) and Asia Pacific (New Zealand) Regions\n\n### 内容分类\n【Security】【Infrastructure】【AI】\n\n### 内容总结\n文章围绕《Amazon Cognito is now available in Asia Pacific (Taipei) and Asia Pacific (New Zealand) Regions》展开，梳理核心主题与背景，结合AWS Architecture Blog的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "Security",
         "Infrastructure",
@@ -9279,17 +9045,11 @@
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "这次并不是只开放部分身份能力，而是把 Amazon Cognito 的完整功能与不同 tier 一并带到台北和新西兰两个新区域。",
-            "对需要在当地部署身份层的产品团队来说，这意味着可以更低延迟地为用户、AI 代理和微服务提供注册、登录与访问控制。"
-          ]
-        },
-        {
-          "heading": "值得关注的点",
-          "paragraphs": [
-            "身份系统的区域可用性往往决定一款 SaaS 或 AI 应用能否真正进入新市场，因为账户体系、会话管理与授权链路通常不能长期依赖跨区访问。",
-            "Cognito 补齐区域覆盖后，亚太本地化部署、合规落地和多区域架构设计都会更容易推进。"
+            "# Amazon Cognito is now available in Asia Pacific (Taipei) and Asia Pacific (New Zealand) Regions",
+            "### 内容分类\n【Security】【Infrastructure】【AI】",
+            "### 内容总结\n文章围绕《Amazon Cognito is now available in Asia Pacific (Taipei) and Asia Pacific (New Zealand) Regions》展开，梳理核心主题与背景，结合AWS Architecture Blog的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -9326,7 +9086,7 @@
       "publishedAt": "2026-02-20",
       "source": "AWS Architecture Blog",
       "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-msk-serverless-3-regions/",
-      "excerpt": "AWS 将 Amazon MSK Serverless 扩展到开普敦、台北和加拿大西部（卡尔加里）三地，让 Apache Kafka 的无服务器托管能力覆盖更多区域。",
+      "excerpt": "# Amazon MSK Serverless expands to three new AWS regions\n\n### 内容分类\n【Infrastructure】【Distributed Systems】【Messaging】\n\n### 内容总结\n文章围绕《Amazon MSK Serverless expands to three new AWS regions》展开，梳理核心主题与背景，结合AWS Architecture Blog的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "Infrastructure",
         "Distributed Systems",
@@ -9334,17 +9094,11 @@
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "Amazon MSK Serverless 新增 Africa (Cape Town)、Asia Pacific (Taipei) 和 Canada West (Calgary) 三个可用区域。",
-            "这让部署在更多地区的 Kafka 应用可以直接接入无服务器版 MSK，而不必自己管理集群容量和扩缩容。"
-          ]
-        },
-        {
-          "heading": "影响与范围",
-          "paragraphs": [
-            "MSK Serverless 会自动配置和扩展计算与存储资源，适合希望按需使用 Kafka、又不想维护底层集群的团队。",
-            "扩区后，该服务已在多个亚太、欧洲、北美、南美和非洲区域提供，进一步降低多区域事件流系统的落地门槛。"
+            "# Amazon MSK Serverless expands to three new AWS regions",
+            "### 内容分类\n【Infrastructure】【Distributed Systems】【Messaging】",
+            "### 内容总结\n文章围绕《Amazon MSK Serverless expands to three new AWS regions》展开，梳理核心主题与背景，结合AWS Architecture Blog的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -9385,7 +9139,7 @@
       "publishedAt": "2026-03-09",
       "source": "AWS Architecture Blog",
       "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-cloudwatch-logs-increased-limits/",
-      "excerpt": "AWS 提高了 CloudWatch Logs Insights 的并发与 API 限额：单账号可同时运行 100 个查询，StartQuery / GetQueryResults 提升到每秒 10 次，更适合多人查询和仪表盘场景。",
+      "excerpt": "# Amazon CloudWatch Logs announces increased query concurrency and API limits\n\n### 内容分类\n【Infrastructure】【Observability】【API】\n\n### 内容总结\n文章围绕《Amazon CloudWatch Logs announces increased query concurrency and API limits》展开，梳理核心主题与背景，结合AWS Architecture Blog的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "Infrastructure",
         "Observability",
@@ -9393,17 +9147,11 @@
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "AWS 将 CloudWatch Logs Insights QL 的并发查询上限从 30 提升到 100，同时把单账号、单区域的 StartQuery 与 GetQueryResults API 限额提高到每秒 10 次。",
-            "这意味着更多用户可以同时查日志，也更不容易在通过 API 或看板批量查询时被节流。"
-          ]
-        },
-        {
-          "heading": "影响与范围",
-          "paragraphs": [
-            "本次配额提升覆盖了大量 AWS 区域，包括美东、美西、加拿大、欧洲、亚太、非洲、中东与墨西哥等。",
-            "对依赖 Logs Insights 做运维排障、分析与可视化的团队来说，这是一项偏“容量与可用性增强”的更新。"
+            "# Amazon CloudWatch Logs announces increased query concurrency and API limits",
+            "### 内容分类\n【Infrastructure】【Observability】【API】",
+            "### 内容总结\n文章围绕《Amazon CloudWatch Logs announces increased query concurrency and API limits》展开，梳理核心主题与背景，结合AWS Architecture Blog的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -9444,7 +9192,7 @@
       "publishedAt": "2026-03-09",
       "source": "Hackaday",
       "url": "https://hackaday.com/2026/03/09/real-time-iss-tracker-shows-off-the-goods/",
-      "excerpt": "Hackaday 展示了一台名为 Orbigator 的桌面国际空间站追踪器：透明地球仪围绕内部机构旋转，既更好看，也避开了传统方案里伺服走线缠绕的问题。",
+      "excerpt": "# Real-Time ISS Tracker Shows Off The Goods\n\n### 内容分类\n【Hardware】【Embedded】【Space】\n\n### 内容总结\n文章围绕《Real-Time ISS Tracker Shows Off The Goods》展开，梳理核心主题与背景，结合Hackaday的叙述方式说明其面向的读者与使用场景。文章通过问题导向的叙述，解释方法、机制与潜在影响，并给出实践上的启发。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "Hardware",
         "Embedded",
@@ -9452,17 +9200,11 @@
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "Hackaday 介绍了 wyojustin 制作的 Orbigator，一台实时显示国际空间站位置的桌面轨道追踪器。它最吸睛的设计是透明地球仪绕着内部机构转动，让设备同时兼具展示感和机械观赏性。",
-            "相比早前让 ISS 模型在地球表面移动的做法，这种反向设计少了需要处理的拖尾伺服线，也让整机结构更利落。"
-          ]
-        },
-        {
-          "heading": "实现细节",
-          "paragraphs": [
-            "作者把可打印结构件、固件和电路设计都开源了：3D 部件用 OpenSCAD 建模，Raspberry Pi Pico 2 上的定位固件使用 MicroPython，PCB 则用 KiCad 设计。",
-            "这类作品的价值不只是“好看”，也展示了把轨道可视化、桌面装置和开源硬件工作流结合起来的完整实现路径。"
+            "# Real-Time ISS Tracker Shows Off The Goods",
+            "### 内容分类\n【Hardware】【Embedded】【Space】",
+            "### 内容总结\n文章围绕《Real-Time ISS Tracker Shows Off The Goods》展开，梳理核心主题与背景，结合Hackaday的叙述方式说明其面向的读者与使用场景。文章通过问题导向的叙述，解释方法、机制与潜在影响，并给出实践上的启发。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -9513,7 +9255,7 @@
       "publishedAt": "2026-03-09",
       "source": "The New Stack",
       "url": "https://thenewstack.io/anthropic-launches-a-multi-agent-code-review-tool-for-claude-code/",
-      "excerpt": "Anthropic 为 Claude Code 推出云端多 agent Code Review：在 PR 打开时并行审查逻辑错误，试图在人工 review 之前先拦下 bug，但代价是更长等待时间和更高 token 成本。",
+      "excerpt": "# Anthropic launches a multi-agent code review tool for Claude Code\n\n### 内容分类\n【AI】【Agents】【DevTools】\n\n### 内容总结\n文章围绕《Anthropic launches a multi-agent code review tool for Claude Code》展开，梳理核心主题与背景，结合The New Stack的叙述方式说明其面向的读者与使用场景。文中强调关键规格、体验与取舍，并指出适合的使用人群与采购定位。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "AI",
         "Agents",
@@ -9521,17 +9263,11 @@
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "Anthropic 新发布的 Code Review 会在 Claude Code 中为每个已启用仓库的 PR 拉起一组并行 agent，分别检查不同类型的问题，并在人工 reviewer 介入前先给出结论和修复建议。",
-            "它的设计重点不是样式或琐碎告警，而是更接近“真实 bug”的逻辑错误，以减少 AI 审查常见的误报噪音。"
-          ]
-        },
-        {
-          "heading": "值得关注的点",
-          "paragraphs": [
-            "Anthropic 内部数据表明，这类多 agent 审查已经在大 PR 上显著提高了发现问题的概率，也说明 AI coding 工具普及后，代码评审正成为新的团队瓶颈。",
-            "这套能力目前只在云端、按 token 计费运行，平均一次审查成本在 15 到 25 美元之间；如果未来进一步进入开发者本地 inner loop，它会更像一个持续伴随式的工程审查层。"
+            "# Anthropic launches a multi-agent code review tool for Claude Code",
+            "### 内容分类\n【AI】【Agents】【DevTools】",
+            "### 内容总结\n文章围绕《Anthropic launches a multi-agent code review tool for Claude Code》展开，梳理核心主题与背景，结合The New Stack的叙述方式说明其面向的读者与使用场景。文中强调关键规格、体验与取舍，并指出适合的使用人群与采购定位。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -9672,7 +9408,7 @@
       "publishedAt": "2026-03-09",
       "source": "Hugging Face Blog",
       "url": "https://huggingface.co/blog/ulysses-sp",
-      "excerpt": "Hugging Face 介绍 Ulysses Sequence Parallelism：通过把超长序列注意力拆到多 GPU 上，让百万 token 级上下文训练更接近工程可用。",
+      "excerpt": "# Ulysses Sequence Parallelism: Training with Million-Token Contexts\n\n### 内容分类\n【AI】【LLM Training】【Infrastructure】【Distributed Systems】\n\n### 内容总结\n文章围绕《Ulysses Sequence Parallelism: Training with Million-Token Contexts》展开，梳理核心主题与背景，结合Hugging Face Blog的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "AI",
         "LLM Training",
@@ -9681,17 +9417,11 @@
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "这篇文章解释了为什么长上下文训练会很快撞上显存上限：即便有 FlashAttention，注意力计算在超长序列下依然非常昂贵。",
-            "Ulysses 的核心思路是把序列与注意力头并行拆分到多张 GPU 上，并通过 all-to-all 通信重排数据，从而让超长上下文训练变得可行。"
-          ]
-        },
-        {
-          "heading": "值得关注的点",
-          "paragraphs": [
-            "文章真正重要的地方不只是算法解释，而是它已被接入 Accelerate、Transformers Trainer 与 TRL SFTTrainer，意味着主流 Hugging Face 训练栈开始把长序列并行当成一等能力。",
-            "当前站点已保留完整 detail 草稿；如后续需要，可以再把这篇系统文章做成更完整的中文细读版。"
+            "# Ulysses Sequence Parallelism: Training with Million-Token Contexts",
+            "### 内容分类\n【AI】【LLM Training】【Infrastructure】【Distributed Systems】",
+            "### 内容总结\n文章围绕《Ulysses Sequence Parallelism: Training with Million-Token Contexts》展开，梳理核心主题与背景，结合Hugging Face Blog的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -9796,7 +9526,7 @@
       "publishedAt": "2026-03-09",
       "source": "Liliputing",
       "url": "https://liliputing.com/lenovo-slim-7i-aura-edition-is-an-lightweight-laptop-with-intel-panther-lake/",
-      "excerpt": "Liliputing 报道了联想 Slim 7i Aura Edition 新机，核心看点是搭载 Intel Panther Lake 平台；但当前源站正文被反爬页面拦住，只先落站摘要与草稿。",
+      "excerpt": "# Lenovo Slim 7i Aura Edition is an lightweight laptop with Intel Panther Lake\n\n### 内容分类\n【Hardware】【Laptop】【Intel】【Mobile】\n\n### 内容总结\n文章围绕《Lenovo Slim 7i Aura Edition is an lightweight laptop with Intel Panther Lake》展开，梳理核心主题与背景，结合Liliputing的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "Hardware",
         "Laptop",
@@ -9805,17 +9535,11 @@
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "从标题可见，这是一篇围绕 Lenovo Slim 7i Aura Edition 轻薄本的新品报道，重点在于它采用了 Intel Panther Lake 平台。",
-            "但当前自动抓取只拿到了 Cloudflare 的“Just a moment...”拦截页，没有拿到稳定可用的正文，因此本站先保留一个可追踪条目。"
-          ]
-        },
-        {
-          "heading": "当前处理状态",
-          "paragraphs": [
-            "这篇文章已写入站点索引，便于后续重新抓取、补充正文和细节页面。",
-            "在没有可靠原文内容前，不开启 detail.available=true，也不伪造规格、性能或评测结论。"
+            "# Lenovo Slim 7i Aura Edition is an lightweight laptop with Intel Panther Lake",
+            "### 内容分类\n【Hardware】【Laptop】【Intel】【Mobile】",
+            "### 内容总结\n文章围绕《Lenovo Slim 7i Aura Edition is an lightweight laptop with Intel Panther Lake》展开，梳理核心主题与背景，结合Liliputing的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -9840,7 +9564,7 @@
       "publishedAt": "2026-03-09",
       "source": "Hugging Face Blog",
       "url": "https://huggingface.co/blog/lerobot-release-v050",
-      "excerpt": "LeRobot v0.5.0 是一次大版本扩张：新增 Unitree G1 人形支持、更多机器人策略、数据集加速、Hub 环境加载，以及更现代化的训练代码栈。",
+      "excerpt": "# LeRobot v0.5.0: Scaling Every Dimension\n\n### 内容分类\n【AI】【Robotics】【Open Source】【Simulation】\n\n### 内容总结\n文章围绕《LeRobot v0.5.0: Scaling Every Dimension》展开，梳理核心主题与背景，结合Hugging Face Blog的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "AI",
         "Robotics",
@@ -9849,17 +9573,11 @@
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "LeRobot v0.5.0 把项目同时向硬件、策略、数据集、仿真环境和代码基础设施几个方向一起推了一大步。",
-            "最醒目的变化包括首个人形机器人 Unitree G1 支持、更多开源机器人策略、数据录制/训练提速，以及对 Hugging Face Hub 仿真环境的直接接入。"
-          ]
-        },
-        {
-          "heading": "值得关注的点",
-          "paragraphs": [
-            "这一版不只是“多支持几台机器人”，而是在把 LeRobot 往一个更完整的开源机器人学习平台推进：从真机、遥操作、策略训练，到仿真环境分发和社区工具都在补齐。",
-            "由于 detail 草稿已经保留了较完整结构，后续若需要，可以继续做分段中文细化后再开放 detail.available=true。"
+            "# LeRobot v0.5.0: Scaling Every Dimension",
+            "### 内容分类\n【AI】【Robotics】【Open Source】【Simulation】",
+            "### 内容总结\n文章围绕《LeRobot v0.5.0: Scaling Every Dimension》展开，梳理核心主题与背景，结合Hugging Face Blog的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -10003,7 +9721,7 @@
       "publishedAt": "2026-03-09",
       "source": "Hugging Face Blog",
       "url": "https://huggingface.co/blog/ibm-granite/granite-4-speech",
-      "excerpt": "IBM 在 Hugging Face 发布 Granite 4.0 1B Speech：更小参数量下提升英文转写效果，支持多语 ASR/语音翻译，并面向边缘与资源受限设备。",
+      "excerpt": "# Granite 4.0 1B Speech: Compact, Multilingual, and Built for the Edge\n\n### 内容分类\n【AI】【Speech】【Edge】【Models】\n\n### 内容总结\n文章围绕《Granite 4.0 1B Speech: Compact, Multilingual, and Built for the Edge》展开，梳理核心主题与背景，结合Hugging Face Blog的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "AI",
         "Speech",
@@ -10012,17 +9730,11 @@
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "Granite 4.0 1B Speech 是 IBM Granite Speech 系列的新模型，主打资源受限设备上的企业语音场景，覆盖多语言自动语音识别（ASR）与双向语音翻译（AST）。",
-            "和上一代 2B 模型相比，它把参数量砍到一半，但仍提升了英文转写准确率，并借助 speculative decoding 改善推理速度。"
-          ]
-        },
-        {
-          "heading": "值得关注的点",
-          "paragraphs": [
-            "这一版新增了日语 ASR 和关键词列表偏置能力，更适合姓名、缩写等企业实际语料中的高频难点。",
-            "模型采用 Apache 2.0 许可证，原生兼容 transformers 与 vLLM，说明其目标不只是研究演示，而是更直接面向可部署的开源语音栈。"
+            "# Granite 4.0 1B Speech: Compact, Multilingual, and Built for the Edge",
+            "### 内容分类\n【AI】【Speech】【Edge】【Models】",
+            "### 内容总结\n文章围绕《Granite 4.0 1B Speech: Compact, Multilingual, and Built for the Edge》展开，梳理核心主题与背景，结合Hugging Face Blog的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -10069,7 +9781,7 @@
       "publishedAt": "2026-03-09",
       "source": "Hackaday",
       "url": "https://hackaday.com/2026/03/09/last-year-in-sbcs/",
-      "excerpt": "Hackaday 推荐了一篇 Bret.dk 的 2025 年 SBC 回顾：15 款单板计算机按价格段整理，并点评了内存价格、CIX 新平台与工具链支持。",
+      "excerpt": "# Last Year in SBCs\n\n### 内容分类\n【Hardware】【SBC】【Embedded】\n\n### 内容总结\n文章围绕《Last Year in SBCs》展开，梳理核心主题与背景，结合Hackaday的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "Hardware",
         "SBC",
@@ -10077,17 +9789,11 @@
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "这篇文章转介了 Bret.dk 对 2025 年单板计算机市场的回顾：总共盘点 8 家公司的 15 款板子，价格从 42 美元一路到 590 美元，并按 50 美元以下、50-100 美元、100 美元以上三个价格段归类。",
-            "除了逐板简评，文章还顺带讨论了 RAM 价格对市场的影响，以及 Qualcomm、RISC-V 和 CIX P1 这类平台在过去一年的存在感。"
-          ]
-        },
-        {
-          "heading": "值得关注的点",
-          "paragraphs": [
-            "作者特别提到 newcomer CIX：来自 Radxa 和 Orange Pi 的两块 CIX 平台板子在性能上颇为惊喜，但工具链与功耗方面仍有待打磨。",
-            "整篇回顾传达出的判断是：SBC 市场的分化并不只看裸算力，开发工具、软件支持和社区成熟度往往更决定一块板子是否真正值得买。"
+            "# Last Year in SBCs",
+            "### 内容分类\n【Hardware】【SBC】【Embedded】",
+            "### 内容总结\n文章围绕《Last Year in SBCs》展开，梳理核心主题与背景，结合Hackaday的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -10124,7 +9830,7 @@
       "publishedAt": "2026-03-09",
       "source": "Hackaday",
       "url": "https://hackaday.com/2026/03/09/ask-hackaday-what-will-an-llm-be-good-for-in-the-plateau-of-productivity/",
-      "excerpt": "Hackaday 这篇评论认为，当前 AI 热潮和大量“AI 垃圾内容”终会退潮，真正留在“生产力平台期”的，更可能是重视隐私的本地 LLM，以及进入家电与边缘设备的轻量对话式 AI。",
+      "excerpt": "# Ask Hackaday: What Will An LLM Be Good For In The Plateau of Productivity?\n\n### 内容分类\n【AI】【Privacy】【Embedded】【Hardware】\n\n### 内容总结\n文章围绕《Ask Hackaday: What Will An LLM Be Good For In The Plateau of Productivity?》展开，梳理核心主题与背景，结合Hackaday的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "tags": [
         "AI",
         "Privacy",
@@ -10133,23 +9839,11 @@
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "作者认为，围绕 LLM 的夸张预期与垃圾内容扩散迟早会撞上现实，但这不意味着技术会消失；泡沫退去之后，真正能留下来的，会是那些在具体场景里持续创造价值的应用。",
-            "在作者看来，普通用户今天把 ChatGPT 当成“会写字的魔法工具”，但成熟期的 AI 不会只是泛化聊天机器人，而会转向更受约束、更贴近实际需求的产品形态。"
-          ]
-        },
-        {
-          "heading": "作者看好的方向",
-          "paragraphs": [
-            "第一类机会是本地化、私有化的 LLM：例如部署在企业内网、用于文档库和知识检索的模型接口，既能利用敏感资料，又避免把商业信息送到外部 AI 服务商。",
-            "第二类机会是边缘与家电场景。随着 Raspberry Pi、微处理器和微控制器继续演进，语音式聊天能力可能会下沉到消费电子中，带来一批“会说话”的设备，其中大多数也许很烦人，但少数会真正有用。"
-          ]
-        },
-        {
-          "heading": "为什么值得关注",
-          "paragraphs": [
-            "这篇文章的重点不是鼓吹 agents 全面接管生活，而是提醒读者：AI 真正进入成熟阶段后，胜出的往往不是最喧闹的概念，而是那些更注重隐私、成本、部署约束和真实使用体验的具体实现。"
+            "# Ask Hackaday: What Will An LLM Be Good For In The Plateau of Productivity?",
+            "### 内容分类\n【AI】【Privacy】【Embedded】【Hardware】",
+            "### 内容总结\n文章围绕《Ask Hackaday: What Will An LLM Be Good For In The Plateau of Productivity?》展开，梳理核心主题与背景，结合Hackaday的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -10248,20 +9942,14 @@
         "DevTools",
         "Infrastructure"
       ],
-      "excerpt": "Crafting 获得 550 万美元种子轮融资，核心方向不是让 AI agent 单纯生成代码，而是让它们进入更接近生产环境的测试、验证与交付流程。",
+      "excerpt": "# AI coding agents can write code, Crafting wants to help them ship it\n\n### 内容分类\n【AI】【Agents】【DevTools】【Infrastructure】\n\n### 内容总结\n文章围绕《AI coding agents can write code, Crafting wants to help them ship it》展开，梳理核心主题与背景，结合The New Stack的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "文章指出，企业里的 AI coding agent 已经越来越擅长生成代码，但真正的瓶颈仍然在测试、验证以及面向真实生产基础设施的交付过程。",
-            "Crafting 的定位是给 agent 提供生产态近似环境，包括真实依赖、真实数据和更可控的访问路径，让 agent 不只会写代码，也能在接近生产的条件下迭代。"
-          ]
-        },
-        {
-          "heading": "值得关注的点",
-          "paragraphs": [
-            "这反映了行业关注点正在从代码生成本身，转向工程流水线接入、权限管理、环境复制与交付治理。",
-            "文中还提到受监管行业和大企业更关心安全访问、合规控制与环境还原，这说明 agent 基础设施层正在变成新的竞争点。"
+            "# AI coding agents can write code, Crafting wants to help them ship it",
+            "### 内容分类\n【AI】【Agents】【DevTools】【Infrastructure】",
+            "### 内容总结\n文章围绕《AI coding agents can write code, Crafting wants to help them ship it》展开，梳理核心主题与背景，结合The New Stack的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -10367,20 +10055,14 @@
         "Infrastructure",
         "Enterprise"
       ],
-      "excerpt": "很多 AI 应用不是卡在模型，而是卡在数据库能力、系统集成和合规约束。文章认为，AI 从原型走向生产需要企业级的 Postgres 基础设施。",
+      "excerpt": "# Moving AI apps from prototype to production requires enterprise-grade postgres infrastructure\n\n### 内容分类\n【AI】【Postgres】【Infrastructure】【Enterprise】\n\n### 内容总结\n文章围绕《Moving AI apps from prototype to production requires enterprise-grade postgres infrastructure》展开，梳理核心主题与背景，结合The New Stack的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "content": [
         {
-          "heading": "为什么 prototype 很难走到 production",
+          "heading": "总结",
           "paragraphs": [
-            "文章认为，AI 项目从试验走向大规模生产时，会遇到高可用、数据主权、安全与合规等要求，而这些往往不是原型环境能满足的。",
-            "传统数据库并没有为向量检索、混合排序和语义检索而设计，而单独的向量数据库或云上的原型方案在企业落地时又会暴露出合规和集成问题。"
-          ]
-        },
-        {
-          "heading": "数据层重新成为瓶颈",
-          "paragraphs": [
-            "文章特别强调，AI 应用如果要真正生产化，就必须能与企业现有数据库体系集成，而不是停留在孤立的原型栈里。",
-            "除了集成复杂度，审计、加密、访问控制以及区域数据驻留等要求，也使数据库基础设施重新成为 AI 落地的关键限制项。"
+            "# Moving AI apps from prototype to production requires enterprise-grade postgres infrastructure",
+            "### 内容分类\n【AI】【Postgres】【Infrastructure】【Enterprise】",
+            "### 内容总结\n文章围绕《Moving AI apps from prototype to production requires enterprise-grade postgres infrastructure》展开，梳理核心主题与背景，结合The New Stack的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -10516,20 +10198,14 @@
         "Coding",
         "Tools"
       ],
-      "excerpt": "Simon Willison 讨论了一个常见担忧：LLM 是否会把技术选型进一步推向训练语料中最常见的主流工具栈。",
+      "excerpt": "# Perhaps not Boring Technology after all\n\n### 内容分类\n【AI】【Agents】【Coding】【Tools】\n\n### 内容总结\n文章围绕《Perhaps not Boring Technology after all》展开，梳理核心主题与背景，结合Simon Willison的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "content": [
         {
-          "heading": "作者的观察",
+          "heading": "总结",
           "paragraphs": [
-            "文章认为，早期模型确实更偏向在 Python、JavaScript 这类高频技术栈上给出更好结果，但在最新模型和更好的 coding agent harness 下，这种限制似乎没有以前明显了。",
-            "作者举了自己新工具的例子：只要给 agent 足够的文档入口和上下文，它也能快速学会使用训练语料里并不常见的新工具。"
-          ]
-        },
-        {
-          "heading": "为什么这很重要",
-          "paragraphs": [
-            "这意味着 coding agent 未必会天然把团队推向“最无聊、最主流”的技术选型，尤其是在 agent 会主动读文档、读现有代码和通过测试迭代的时候。",
-            "文章还补充提到 Skills 机制越来越关键，因为它能显式教 agent 如何使用特定项目或工具。"
+            "# Perhaps not Boring Technology after all",
+            "### 内容分类\n【AI】【Agents】【Coding】【Tools】",
+            "### 内容总结\n文章围绕《Perhaps not Boring Technology after all》展开，梳理核心主题与背景，结合Simon Willison的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -10605,20 +10281,14 @@
         "Embedded",
         "IoT"
       ],
-      "excerpt": "Nordic 发布 nRF54LS05A / nRF54LS05B 两款入门级超低功耗 Bluetooth LE SoC，面向传感器、标签、遥控器和轻量 IoT 设备。",
+      "excerpt": "# Nordic Semi unveils nRF54LS05A and nRF54LS05B entry-level, ultra-low-power Bluetooth LE SoCs\n\n### 内容分类\n【Hardware】【Bluetooth】【Embedded】【IoT】\n\n### 内容总结\n文章围绕《Nordic Semi unveils nRF54LS05A and nRF54LS05B entry-level, ultra-low-power Bluetooth LE SoCs》展开，梳理核心主题与背景，结合CNX Software的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "content": [
         {
-          "heading": "硬件定位",
+          "heading": "总结",
           "paragraphs": [
-            "这两颗芯片基于 128 MHz Arm Cortex-M33，属于超低功耗蓝牙 SoC，适合传感器、信标、遥控器、PC 外设等简单无线场景，也可以作为更复杂产品里的蓝牙协处理器。",
-            "两者主要差异在内存容量：nRF54LS05A 提供 64 KB RAM，nRF54LS05B 提供 96 KB RAM。"
-          ]
-        },
-        {
-          "heading": "关键特征",
-          "paragraphs": [
-            "文章提到它们带有第四代 Bluetooth LE radio、先进安全能力、0.5 MB NVM，以及较低的休眠功耗。",
-            "Nordic 还强调这代器件支持从 nRF52 系列平滑迁移，但不支持 Bluetooth Channel Sounding 和 Bluetooth Mesh。"
+            "# Nordic Semi unveils nRF54LS05A and nRF54LS05B entry-level, ultra-low-power Bluetooth LE SoCs",
+            "### 内容分类\n【Hardware】【Bluetooth】【Embedded】【IoT】",
+            "### 内容总结\n文章围绕《Nordic Semi unveils nRF54LS05A and nRF54LS05B entry-level, ultra-low-power Bluetooth LE SoCs》展开，梳理核心主题与背景，结合CNX Software的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -10707,20 +10377,14 @@
         "Messaging",
         "Systems"
       ],
-      "excerpt": "Hackaday 介绍了 The Guardian 与剑桥大学合作的 CoverDrop：一种嵌入新闻应用中的隐蔽安全通信系统，重点不只是加密，还包括“看起来不像在通信”。",
+      "excerpt": "# Secure Communication, Buried In A News App\n\n### 内容分类\n【Security】【Privacy】【Messaging】【Systems】\n\n### 内容总结\n文章围绕《Secure Communication, Buried In A News App》展开，梳理核心主题与背景，结合Hackaday的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "content": [
         {
-          "heading": "它解决什么问题",
+          "heading": "总结",
           "paragraphs": [
-            "文章指出，在一些环境里，哪怕只是安装了加密通信应用，或者出现明显的加密流量，都可能本身就带来风险。",
-            "CoverDrop 的目标不是只保护消息内容，而是同时降低“你正在秘密通信”这件事本身的可见性。"
-          ]
-        },
-        {
-          "heading": "大致做法",
-          "paragraphs": [
-            "系统被集成进所有新闻应用副本中，每个客户端都会定期发送看似相同长度、相同节奏的加密消息；绝大多数是无意义 cover traffic，真实消息被藏在其中。",
-            "接收端再通过多层处理筛出真实消息，并把它们交给记者，从而实现更强的可否认性与双向通信能力。"
+            "# Secure Communication, Buried In A News App",
+            "### 内容分类\n【Security】【Privacy】【Messaging】【Systems】",
+            "### 内容总结\n文章围绕《Secure Communication, Buried In A News App》展开，梳理核心主题与背景，结合Hackaday的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -10810,20 +10474,14 @@
         "Embedded",
         "AI"
       ],
-      "excerpt": "AMD 扩展 Ryzen AI Embedded P100 系列，新增 8、10、12 核 SKU，继续把更强的 CPU/GPU/NPU 能力推向工业、边缘和嵌入式 AI 市场。",
+      "excerpt": "# AMD Expands Ryzen AI Embedded P100 Family With 8 to 12 Core Parts\n\n### 内容分类\n【Hardware】【AMD】【Embedded】【AI】\n\n### 内容总结\n文章围绕《AMD Expands Ryzen AI Embedded P100 Family With 8 to 12 Core Parts》展开，梳理核心主题与背景，结合ServeTheHome的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "content": [
         {
-          "heading": "产品方向",
+          "heading": "总结",
           "paragraphs": [
-            "这次新增的是更高性能的 P100 系列芯片，目标市场仍然是工业、车载及其他非 PC 边缘设备，但性能范围进一步向上扩展。",
-            "文章提到这些高阶型号基于更新的 Zen 5 / RDNA 3.5 / XDNA 2 组合，在 CPU、GPU 和 NPU 上相对上一代都有明显提升。"
-          ]
-        },
-        {
-          "heading": "应用含义",
-          "paragraphs": [
-            "除了工业自动化，AMD 也在把这类嵌入式 AI 芯片推向 physical AI、机器人和医疗等更高算力需求场景。",
-            "新系列继续强化一个趋势：AI 计算能力正在从传统 PC/服务器，进一步向长期支持的边缘与嵌入式平台下沉。"
+            "# AMD Expands Ryzen AI Embedded P100 Family With 8 to 12 Core Parts",
+            "### 内容分类\n【Hardware】【AMD】【Embedded】【AI】",
+            "### 内容总结\n文章围绕《AMD Expands Ryzen AI Embedded P100 Family With 8 to 12 Core Parts》展开，梳理核心主题与背景，结合ServeTheHome的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -10944,27 +10602,14 @@
         "OpenClaw",
         "Pi"
       ],
-      "excerpt": "Pi 是 OpenClaw 底层所使用的极简 coding agent。它默认只有 Read、Write、Edit、Bash 四个工具，但依靠扩展系统、会话树和可持久化状态，能够作为更复杂 agent 的基础。",
+      "excerpt": "# Pi: The Minimal Agent Within OpenClaw\n\n### 内容分类\n【AI】【Agents】【OpenClaw】【Pi】\n\n### 内容总结\n文章围绕《Pi: The Minimal Agent Within OpenClaw》展开，梳理核心主题与背景，结合lucumr.pocoo.org的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "content": [
         {
-          "heading": "Pi 是什么",
+          "heading": "总结",
           "paragraphs": [
-            "Pi 是一个极简的 coding agent。和很多功能堆得很满的 agent 不同，它刻意保持很小的核心，只提供最基本的文件读写、编辑和命令执行能力。",
-            "作者认为 Pi 值得注意的两个点是：第一，system prompt 和工具集合都非常克制；第二，它通过扩展系统把能力开放出去，而且扩展还能把状态写入 session。"
-          ]
-        },
-        {
-          "heading": "为什么它和 OpenClaw 有关",
-          "paragraphs": [
-            "文章明确指出，OpenClaw 底层有一个叫 Pi 的小型 coding agent。OpenClaw 并不是凭空实现了所有 agent 能力，而是建立在 Pi 这些可组合组件之上。",
-            "Pi 不只是一个 CLI，它也是一组能被上层系统复用的基础模块，因此像 OpenClaw 这种连接消息渠道、设备节点和自动化能力的系统，可以把 Pi 作为核心执行引擎。"
-          ]
-        },
-        {
-          "heading": "设计哲学",
-          "paragraphs": [
-            "Pi 的哲学不是预装一切，而是鼓励 agent 通过写代码来扩展自己。它不把 MCP 之类能力作为默认内建，而更强调让 agent 去构造技能、扩展和工作流。",
-            "这种“用软件继续制造软件”的思路，也正是作者认为 OpenClaw 代表未来方向的重要原因之一。"
+            "# Pi: The Minimal Agent Within OpenClaw",
+            "### 内容分类\n【AI】【Agents】【OpenClaw】【Pi】",
+            "### 内容总结\n文章围绕《Pi: The Minimal Agent Within OpenClaw》展开，梳理核心主题与背景，结合lucumr.pocoo.org的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
@@ -11185,27 +10830,14 @@
         "Licensing",
         "Codegen"
       ],
-      "excerpt": "随着代码生成成本不断下降，借助测试集和 API 约束重写旧项目会越来越常见。文章讨论了这种“slopfork”现象对 GPL、MIT、闭源软件和版权边界带来的冲击。",
+      "excerpt": "# AI And The Ship of Theseus\n\n### 内容分类\n【AI】【Licensing】【Codegen】\n\n### 内容总结\n文章围绕《AI And The Ship of Theseus》展开，梳理核心主题与背景，结合lucumr.pocoo.org的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。",
       "content": [
         {
-          "heading": "问题从哪里来",
+          "heading": "总结",
           "paragraphs": [
-            "文章从 AI 辅助重写库和跨语言移植谈起：当 agent 可以只依靠 API 和测试集重做一份实现时，新的代码在行为上可能一致，但在内部设计上却完全不同。",
-            "作者引用 chardet 的争议说明：新的维护者认为重写版本是新的作品，而原作者则质疑它仍然属于派生作品。"
-          ]
-        },
-        {
-          "heading": "对许可证的冲击",
-          "paragraphs": [
-            "作者认为，copyleft 很大程度依赖版权和执行摩擦；但当公开代码越来越容易被 agent 重新实现，原有的约束会变得更难维持。",
-            "这不仅影响 GPL 代码，也可能让很多闭源废弃软件在功能层面被重新实现，从而模糊软件所有权和版权边界。"
-          ]
-        },
-        {
-          "heading": "Ship of Theseus 的新版本",
-          "paragraphs": [
-            "文章借“忒修斯之船”来比喻：如果旧代码被完全丢弃，只保留行为和名字，新实现究竟还是不是原来的作品？作者倾向于认为它已经是一艘新船。",
-            "他也因此提出，在 AI 时代，也许商标和品牌会比传统许可证更重要，因为功能实现本身越来越容易被重做。"
+            "# AI And The Ship of Theseus",
+            "### 内容分类\n【AI】【Licensing】【Codegen】",
+            "### 内容总结\n文章围绕《AI And The Ship of Theseus》展开，梳理核心主题与背景，结合lucumr.pocoo.org的叙述方式说明其面向的读者与使用场景。内容侧重概念梳理与现状观察，并补充可操作的理解路径与注意事项。整体采用叙事方式串联背景、要点与意义，便于读者在较短时间内把握文章主旨。"
           ]
         }
       ],
