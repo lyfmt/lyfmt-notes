@@ -1,0 +1,20 @@
+{
+  "item": {
+    "id": 2700,
+    "title": "Amazon Bedrock AgentCore Runtime now supports stateful MCP server features",
+    "blog": "AWS Architecture Blog",
+    "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-bedrock-agentcore-runtime-stateful-mcp/",
+    "published": "2026-03-10T23:53:00Z",
+    "discovered": "2026-03-11T02:00:28.615236094Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-bedrock-agentcore-runtime-stateful-mcp/",
+    "ok": true,
+    "title": "Amazon Bedrock AgentCore Runtime now supports stateful MCP server features - AWS",
+    "description": "Discover more about what",
+    "fetched_bytes": 181544,
+    "error": null
+  },
+  "classification": "thin"
+}

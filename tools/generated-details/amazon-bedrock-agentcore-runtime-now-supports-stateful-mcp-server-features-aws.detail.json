@@ -1,0 +1,26 @@
+{
+  "available": false,
+  "layout": "draft",
+  "translatedFrom": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-bedrock-agentcore-runtime-stateful-mcp/",
+  "sourceName": "AWS Architecture Blog",
+  "sourceDescription": "以下为根据原文结构自动生成的详情草稿，已保留段落层次、图片与媒体；默认尚未完成中文翻译润色。",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Amazon Bedrock AgentCore Runtime now supports stateful MCP server features"
+    },
+    {
+      "type": "paragraph",
+      "html": "Amazon Bedrock AgentCore Runtime now supports stateful Model Context Protocol (MCP) server features, enabling developers to build MCP servers that leverage elicitation, sampling, and progress notifications alongside existing support for resources, prompts, and tools. These capabilities allow MCP servers deployed to AgentCore Runtime to collect user input interactively during tool execution, request LLM-generated content from clients, and provide real-time progress updates for long-running operations. <br> <br> With stateful MCP sessions, each user session runs in a dedicated microVM with isolated resources, and the server maintains session context across multiple interactions using an Mcp-Session-Id header. Elicitation enables server-initiated, multi-turn conversations to gather information such as user preferences. Sampling allows servers to request AI-powered text generation from the client for tasks like personalized recommendations. Progress notifications keep clients informed during operations such as searching for flights or processing bookings. These features work together to support complex, interactive agent workflows that go beyond simple request-response patterns."
+    },
+    {
+      "type": "paragraph",
+      "html": "Stateful MCP server features are supported in AgentCore Runtime across <a href=\"https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agentcore-regions.html\" target=\"_blank\" rel=\"noreferrer noopener\">fourteen AWS Regions</a>: US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Mumbai), Canada (Central), Asia Pacific (Seoul), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), Europe (Frankfurt), Europe (Ireland), Europe (London), Europe (Paris), and Europe (Stockholm)."
+    },
+    {
+      "type": "paragraph",
+      "html": "To learn more, see <a href=\"https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/mcp-stateful-features.html\" target=\"_blank\" rel=\"noreferrer noopener\">Stateful MCP server features</a> in the Amazon Bedrock AgentCore documentation."
+    }
+  ]
+}
