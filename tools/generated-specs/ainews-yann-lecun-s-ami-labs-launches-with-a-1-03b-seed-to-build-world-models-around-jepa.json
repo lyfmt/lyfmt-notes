@@ -30,515 +30,470 @@
     "layout": "detail-zh",
     "translatedFrom": "https://www.latent.space/p/ainews-yann-lecuns-ami-labs-launches",
     "sourceName": "Latent Space",
-    "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+    "sourceDescription": "以下为原文逐段直译，保留原文段落推进与媒体顺序。",
     "blocks": [
       {
         "type": "image",
         "src": "https://substackcdn.com/image/fetch/$s_!1PJi!,e_trim:10:white/e_trim:10:transparent/h_72,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa4fe1182-38af-4a5d-bacc-439c36225e87_5000x1200.png",
-        "alt": "Latent.Space",
-        "caption": "Latent.Space"
+        "alt": "",
+        "caption": ""
       },
       {
         "type": "heading",
-        "level": 3,
-        "text": "World Models are what next generation AI needs."
+        "text": "世界模型是下一代 AI 所需要的。"
       },
       {
         "type": "paragraph",
-        "html": "<span>AI News for 3/9/2026-3/10/2026. We checked 12 subreddits, </span><a href=\"https://twitter.com/i/lists/1585430245762441216\" target=\"_blank\" rel=\"noreferrer noopener\">544 Twitters</a><span> — no more Discord (see below). Estimated reading time saved (at 200wpm): </span><strong>2649</strong><span> minutes. </span><a href=\"https://news.smol.ai/\" target=\"_blank\" rel=\"noreferrer noopener\">AINews&#x27; website</a><span> lets you search all past issues. As a reminder, </span><a href=\"https://www.latent.space/p/2026\" target=\"_blank\" rel=\"noreferrer noopener\">AINews is now a section of Latent Space</a><span>. You can </span><a href=\"https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack\" target=\"_blank\" rel=\"noreferrer noopener\">opt in/out</a><span> of email frequencies!</span>"
+        "html": "<span>2026/3/9-2026/3/10 的 AI News。我们检查了 12 个 subreddit、</span><a href=\"https://twitter.com/i/lists/1585430245762441216\" target=\"_blank\" rel=\"noreferrer noopener\">544 个 Twitter 账号</a><span>——不再包含 Discord（见下）。按 200 wpm 估算节省阅读时间：</span><strong>2649</strong><span> 分钟。</span><a href=\"https://news.smol.ai/\" target=\"_blank\" rel=\"noreferrer noopener\">AINews 网站</a><span>可搜索所有往期内容。提醒一下，</span><a href=\"https://www.latent.space/p/2026\" target=\"_blank\" rel=\"noreferrer noopener\">AINews 现在是 Latent Space 的一个版块</a><span>。你可以</span><a href=\"https://support.substack.com/hc/en-us/articles/8914938285204-How-do-I-subscribe-to-or-unsubscribe-from-a-section-on-Substack\" target=\"_blank\" rel=\"noreferrer noopener\">选择订阅/取消订阅</a><span>邮件频率！</span>"
       },
       {
         "type": "paragraph",
-        "html": "<span>Most days, AINews’ op-ed is human written, while the sections below are human curated selections from multiple LLM generations. However, some days there’s one clear big story, and in those cases, we’ve been developing a new methodology that reports the big story in more detail. Today is one of those days — GPT 5.4 won today’s battle in describing AI Twitter coverage of AMI. So, read on, feedback welcome. </span><em>— Ed.</em>"
+        "html": "<span>多数日子的 AINews 社论由人类撰写，而下面各小节则是从多次 LLM 生成中由人工挑选的内容。不过有些日子只有一个明确的大故事，在这些情况下，我们正在开发一种新方法，更详细地报道该大故事。今天就是这样一天——GPT 5.4 在描述 AMI 的 AI Twitter 覆盖时赢下了这场“战斗”。继续阅读，欢迎反馈。</span><em>— 编者</em>"
       },
       {
         "type": "heading",
-        "level": 2,
-        "text": "AI Twitter Recap"
+        "text": "AI Twitter 回顾"
       },
       {
         "type": "paragraph",
-        "html": "<strong>Top Story: Yann LeCun’s AMI Labs launches with a $1.03B seed to build world models around JEPA</strong>"
+        "html": "<strong>头条：Yann LeCun 的 AMI Labs 以 10.3 亿美元种子轮启动，围绕 JEPA 构建世界模型</strong>"
       },
       {
         "type": "heading",
-        "level": 2,
-        "text": "What happened"
+        "text": "发生了什么"
       },
       {
         "type": "paragraph",
-        "html": "<strong>Yann LeCun formally unveiled Advanced Machine Intelligence (AMI Labs), a new startup focused on “building real intelligence into the real world,” with an unusually large $1.03B seed round (also cited as €890M) at a reported $3.5B pre-money valuation, described as one of the largest seed rounds ever and likely the largest for a European company</strong><span>. The announcement came directly from LeCun, who said the company had completed “one of the largest seeds ever” and was hiring </span><a href=\"https://x.com/ylecun/status/2031268686984527936\" target=\"_blank\" rel=\"noreferrer noopener\">@ylecun</a><span>, and from CEO Alex Lebrun, who framed the mission as a “long-term scientific endeavor” to build systems that “truly understand the real world” </span><a href=\"https://x.com/lxbrun/status/2031237426975268886\" target=\"_blank\" rel=\"noreferrer noopener\">@lxbrun</a><span>. Multiple press reports converged on the same core facts: AMI aims to build AI models that understand the physical world and reflects LeCun’s long-running view that human-level AI will come from world modeling rather than scaling language prediction alone </span><a href=\"https://x.com/TechCrunch/status/2031234186003288523\" target=\"_blank\" rel=\"noreferrer noopener\">@TechCrunch</a><span> </span><a href=\"https://x.com/WIRED/status/2031234619085853009\" target=\"_blank\" rel=\"noreferrer noopener\">@WIRED</a><span> </span><a href=\"https://x.com/business/status/2031234715240251889\" target=\"_blank\" rel=\"noreferrer noopener\">@business</a><span> </span><a href=\"https://x.com/Reuters/status/2031317927778034139\" target=\"_blank\" rel=\"noreferrer noopener\">@Reuters</a><span> </span><a href=\"https://x.com/ZeffMax/status/2031237938529566877\" target=\"_blank\" rel=\"noreferrer noopener\">@ZeffMax</a><span>. The founding and senior team includes LeCun; Alex Lebrun as CEO </span><a href=\"https://x.com/lxbrun/status/2031237426975268886\" target=\"_blank\" rel=\"noreferrer noopener\">@lxbrun</a><span>; Saining Xie as cofounder/CSO </span><a href=\"https://x.com/sainingxie/status/2031236308383748267\" target=\"_blank\" rel=\"noreferrer noopener\">@sainingxie</a><span>; Laurent Solly as COO </span><a href=\"https://x.com/laurentsolly/status/2031254099543371940\" target=\"_blank\" rel=\"noreferrer noopener\">@laurentsolly</a><span>; Pascale Fung as Co-Founder and Chief Research &amp; Innovation Officer </span><a href=\"https://x.com/pascalefung/status/2031287240375054420\" target=\"_blank\" rel=\"noreferrer noopener\">@pascalefung</a><span>; plus a wave of prominent founding researchers joining to work specifically on world models, representation learning, pretraining, scaling, and video </span><a href=\"https://x.com/sanghyunwoo1219/status/2031252576205778981\" target=\"_blank\" rel=\"noreferrer noopener\">@sanghyunwoo1219</a><span> </span><a href=\"https://x.com/jihanyang13/status/2031269891504808444\" target=\"_blank\" rel=\"noreferrer noopener\">@jihanyang13</a><span> </span><a href=\"https://x.com/duchao0726/status/2031364139210440717\" target=\"_blank\" rel=\"noreferrer noopener\">@duchao0726</a><span> </span><a href=\"https://x.com/zhouxy2017/status/2031378974345982212\" target=\"_blank\" rel=\"noreferrer noopener\">@zhouxy2017</a><span> </span><a href=\"https://x.com/jingli9111/status/2031401039518208373\" target=\"_blank\" rel=\"noreferrer noopener\">@jingli9111</a><span>.**</span>"
+        "html": "<strong>Yann LeCun 正式发布 Advanced Machine Intelligence（AMI Labs），这是一家聚焦“把真实智能带入真实世界”的新创业公司，拿到了异常巨大的 10.3 亿美元种子轮融资（也被引用为 8.9 亿欧元），据称投前估值 35 亿美元，被描述为史上最大的种子轮之一，并很可能是欧洲公司里最大的种子轮</strong><span>。该宣布直接来自 LeCun，他称公司完成了“史上最大种子轮之一”，并在招聘 </span><a href=\"https://x.com/ylecun/status/2031268686984527936\" target=\"_blank\" rel=\"noreferrer noopener\">@ylecun</a><span>；同时来自 CEO Alex Lebrun，他将使命框定为一项“长期的科学事业”，目标是打造“真正理解真实世界”的系统 </span><a href=\"https://x.com/lxbrun/status/2031237426975268886\" target=\"_blank\" rel=\"noreferrer noopener\">@lxbrun</a><span>。多家媒体报道在核心事实上趋于一致：AMI 旨在构建能理解物理世界的 AI 模型，并体现了 LeCun 长期以来的观点——人类级智能将来自世界建模，而非仅仅扩大语言预测规模 </span><a href=\"https://x.com/TechCrunch/status/2031234186003288523\" target=\"_blank\" rel=\"noreferrer noopener\">@TechCrunch</a><span> </span><a href=\"https://x.com/WIRED/status/2031234619085853009\" target=\"_blank\" rel=\"noreferrer noopener\">@WIRED</a><span> </span><a href=\"https://x.com/business/status/2031234715240251889\" target=\"_blank\" rel=\"noreferrer noopener\">@business</a><span> </span><a href=\"https://x.com/Reuters/status/2031317927778034139\" target=\"_blank\" rel=\"noreferrer noopener\">@Reuters</a><span> </span><a href=\"https://x.com/ZeffMax/status/2031237938529566877\" target=\"_blank\" rel=\"noreferrer noopener\">@ZeffMax</a><span>。创始与高管团队包括 LeCun；Alex Lebrun 任 CEO </span><a href=\"https://x.com/lxbrun/status/2031237426975268886\" target=\"_blank\" rel=\"noreferrer noopener\">@lxbrun</a><span>；Saining Xie 任联合创始人/CSO </span><a href=\"https://x.com/sainingxie/status/2031236308383748267\" target=\"_blank\" rel=\"noreferrer noopener\">@sainingxie</a><span>；Laurent Solly 任 COO </span><a href=\"https://x.com/laurentsolly/status/2031254099543371940\" target=\"_blank\" rel=\"noreferrer noopener\">@laurentsolly</a><span>；Pascale Fung 任联合创始人兼首席研究与创新官 </span><a href=\"https://x.com/pascalefung/status/2031287240375054420\" target=\"_blank\" rel=\"noreferrer noopener\">@pascalefung</a><span>；以及一批知名创始研究员加入，专注于世界模型、表示学习、预训练、规模化与视频 </span><a href=\"https://x.com/sanghyunwoo1219/status/2031252576205778981\" target=\"_blank\" rel=\"noreferrer noopener\">@sanghyunwoo1219</a><span> </span><a href=\"https://x.com/jihanyang13/status/2031269891504808444\" target=\"_blank\" rel=\"noreferrer noopener\">@jihanyang13</a><span> </span><a href=\"https://x.com/duchao0726/status/2031364139210440717\" target=\"_blank\" rel=\"noreferrer noopener\">@duchao0726</a><span> </span><a href=\"https://x.com/zhouxy2017/status/2031378974345982212\" target=\"_blank\" rel=\"noreferrer noopener\">@zhouxy2017</a><span> </span><a href=\"https://x.com/jingli9111/status/2031401039518208373\" target=\"_blank\" rel=\"noreferrer noopener\">@jingli9111</a><span>。**</span>"
       },
       {
         "type": "heading",
-        "level": 2,
-        "text": "Facts vs. opinions"
+        "text": "事实与观点"
       },
       {
         "type": "heading",
-        "level": 3,
-        "text": "Facts reported across tweets and coverage"
+        "text": "推文与报道中报道的事实"
       },
       {
         "type": "list",
         "items": [
-          "<strong>Funding size:</strong><span> </span><strong>$1.03B</strong><span> seed / </span><strong>€890M</strong><span> </span><a href=\"https://x.com/ylecun/status/2031268686984527936\" target=\"_blank\" rel=\"noreferrer noopener\">@ylecun</a><span> </span><a href=\"https://x.com/lxbrun/status/2031237426975268886\" target=\"_blank\" rel=\"noreferrer noopener\">@lxbrun</a><span> </span><a href=\"https://x.com/laurentsolly/status/2031254099543371940\" target=\"_blank\" rel=\"noreferrer noopener\">@laurentsolly</a><span>.</span>",
-          "<strong>Valuation:</strong><span> </span><strong>$3.5B pre-money</strong><span> was reported by commentators and news summaries </span><a href=\"https://x.com/iScienceLuvr/status/2031235141524402278\" target=\"_blank\" rel=\"noreferrer noopener\">@iScienceLuvr</a><span> </span><a href=\"https://x.com/ZeffMax/status/2031237938529566877\" target=\"_blank\" rel=\"noreferrer noopener\">@ZeffMax</a><span>.</span>",
-          "<strong>Company thesis:</strong><span> build AI models that can </span><strong>understand the physical/real world</strong><span>, not just language </span><a href=\"https://x.com/TechCrunch/status/2031234186003288523\" target=\"_blank\" rel=\"noreferrer noopener\">@TechCrunch</a><span> </span><a href=\"https://x.com/WIRED/status/2031234619085853009\" target=\"_blank\" rel=\"noreferrer noopener\">@WIRED</a><span> </span><a href=\"https://x.com/Reuters/status/2031379588668944835\" target=\"_blank\" rel=\"noreferrer noopener\">@Reuters</a><span>.</span>",
-          "<strong>LeCun’s positioning:</strong><span> world models have been his public thesis for years; AMI is the vehicle to test it at startup scale </span><a href=\"https://x.com/ZeffMax/status/2031237938529566877\" target=\"_blank\" rel=\"noreferrer noopener\">@ZeffMax</a><span> </span><a href=\"https://x.com/WIRED/status/2031234619085853009\" target=\"_blank\" rel=\"noreferrer noopener\">@WIRED</a><span>.</span>",
-          "<strong>Official language from AMI leaders:</strong><span> “real intelligence into the real world,” “human-centered,” “perceives, learns, reasons and acts” </span><a href=\"https://x.com/Brian_Bo_Li/status/2031249945660108977\" target=\"_blank\" rel=\"noreferrer noopener\">@Brian_Bo_Li</a><span> </span><a href=\"https://x.com/pascalefung/status/2031287240375054420\" target=\"_blank\" rel=\"noreferrer noopener\">@pascalefung</a><span>.</span>",
-          "<strong>Hiring/opening locations:</strong><span> Paris explicitly mentioned by Pascale Fung </span><a href=\"https://x.com/pascalefung/status/2031292462539403661\" target=\"_blank\" rel=\"noreferrer noopener\">@pascalefung</a><span>; observers also noted Zürich among locations </span><a href=\"https://x.com/giffmana/status/2031407851202109969\" target=\"_blank\" rel=\"noreferrer noopener\">@giffmana</a><span>.</span>",
-          "<strong>Europe/France angle:</strong><span> French media and political figures framed it as a major European/French AI milestone </span><a href=\"https://x.com/BFMTV/status/2031234198904746355\" target=\"_blank\" rel=\"noreferrer noopener\">@BFMTV</a><span> </span><a href=\"https://x.com/France24_fr/status/2031275368833777943\" target=\"_blank\" rel=\"noreferrer noopener\">@France24_fr</a><span> </span><a href=\"https://x.com/EmmanuelMacron/status/2031288199503388717\" target=\"_blank\" rel=\"noreferrer noopener\">@EmmanuelMacron</a><span> </span><a href=\"https://x.com/NicolasDufourcq/status/2031344671507484896\" target=\"_blank\" rel=\"noreferrer noopener\">@NicolasDufourcq</a><span>.</span>"
+          "<strong>融资规模：</strong><span> </span><strong>10.3 亿美元</strong><span> 种子轮 / </span><strong>8.9 亿欧元</strong><span> </span><a href=\"https://x.com/ylecun/status/2031268686984527936\" target=\"_blank\" rel=\"noreferrer noopener\">@ylecun</a><span> </span><a href=\"https://x.com/lxbrun/status/2031237426975268886\" target=\"_blank\" rel=\"noreferrer noopener\">@lxbrun</a><span> </span><a href=\"https://x.com/laurentsolly/status/2031254099543371940\" target=\"_blank\" rel=\"noreferrer noopener\">@laurentsolly</a><span>。</span>",
+          "<strong>估值：</strong><span> 据评论员与新闻摘要报道为 </span><strong>35 亿美元投前</strong><span> </span><a href=\"https://x.com/iScienceLuvr/status/2031235141524402278\" target=\"_blank\" rel=\"noreferrer noopener\">@iScienceLuvr</a><span> </span><a href=\"https://x.com/ZeffMax/status/2031237938529566877\" target=\"_blank\" rel=\"noreferrer noopener\">@ZeffMax</a><span>。</span>",
+          "<strong>公司主张：</strong><span> 构建能够</span><strong>理解物理/真实世界</strong><span>的 AI 模型，而不仅是语言 </span><a href=\"https://x.com/TechCrunch/status/2031234186003288523\" target=\"_blank\" rel=\"noreferrer noopener\">@TechCrunch</a><span> </span><a href=\"https://x.com/WIRED/status/2031234619085853009\" target=\"_blank\" rel=\"noreferrer noopener\">@WIRED</a><span> </span><a href=\"https://x.com/Reuters/status/2031379588668944835\" target=\"_blank\" rel=\"noreferrer noopener\">@Reuters</a><span>。</span>",
+          "<strong>LeCun 的定位：</strong><span> 世界模型是他多年来公开的主张；AMI 是在创业公司规模上检验这一主张的载体 </span><a href=\"https://x.com/ZeffMax/status/2031237938529566877\" target=\"_blank\" rel=\"noreferrer noopener\">@ZeffMax</a><span> </span><a href=\"https://x.com/WIRED/status/2031234619085853009\" target=\"_blank\" rel=\"noreferrer noopener\">@WIRED</a><span>。</span>",
+          "<strong>AMI 领导层的官方表述：</strong><span> “把真实智能带入真实世界”“以人为中心”“感知、学习、推理并行动” </span><a href=\"https://x.com/Brian_Bo_Li/status/2031249945660108977\" target=\"_blank\" rel=\"noreferrer noopener\">@Brian_Bo_Li</a><span> </span><a href=\"https://x.com/pascalefung/status/2031287240375054420\" target=\"_blank\" rel=\"noreferrer noopener\">@pascalefung</a><span>。</span>",
+          "<strong>招聘/办公地点：</strong><span> Pascale Fung 明确提到巴黎 </span><a href=\"https://x.com/pascalefung/status/2031292462539403661\" target=\"_blank\" rel=\"noreferrer noopener\">@pascalefung</a><span>；观察者也提到苏黎世 </span><a href=\"https://x.com/giffmana/status/2031407851202109969\" target=\"_blank\" rel=\"noreferrer noopener\">@giffmana</a><span>。</span>",
+          "<strong>欧洲/法国视角：</strong><span> 法国媒体与政治人物将其视为重要的欧洲/法国 AI 里程碑 </span><a href=\"https://x.com/BFMTV/status/2031234198904746355\" target=\"_blank\" rel=\"noreferrer noopener\">@BFMTV</a><span> </span><a href=\"https://x.com/France24_fr/status/2031275368833777943\" target=\"_blank\" rel=\"noreferrer noopener\">@France24_fr</a><span> </span><a href=\"https://x.com/EmmanuelMacron/status/2031288199503388717\" target=\"_blank\" rel=\"noreferrer noopener\">@EmmanuelMacron</a><span> </span><a href=\"https://x.com/NicolasDufourcq/status/2031344671507484896\" target=\"_blank\" rel=\"noreferrer noopener\">@NicolasDufourcq</a><span>。</span>"
         ]
       },
       {
         "type": "heading",
-        "level": 3,
-        "text": "Opinions and interpretation"
+        "text": "观点与解读"
       },
       {
         "type": "list",
         "items": [
-          "<strong>Supportive view:</strong><span> this is LeCun finally getting the capital and team to prove his long-argued alternative to LLM-centric AI </span><a href=\"https://x.com/teortaxesTex/status/2031242136125866422\" target=\"_blank\" rel=\"noreferrer noopener\">@teortaxesTex</a><span>.</span>",
-          "<strong>Bullish technical view:</strong><span> world models will be a “huge leap forward,” especially for embodiment/robotics, and AMI’s open-research posture is attractive </span><a href=\"https://x.com/mervenoyann/status/2031291463800168870\" target=\"_blank\" rel=\"noreferrer noopener\">@mervenoyann</a><span> </span><a href=\"https://x.com/ziv_ravid/status/2031346466023706706\" target=\"_blank\" rel=\"noreferrer noopener\">@ziv_ravid</a><span>.</span>",
-          "<strong>Architecture-war framing:</strong><span> some commentators explicitly cast AMI as a bet that the industry is building on the wrong foundation by over-indexing on autoregressive language models </span><a href=\"https://x.com/LiorOnAI/status/2031479959685067006\" target=\"_blank\" rel=\"noreferrer noopener\">@LiorOnAI</a><span>.</span>",
-          "<strong>Skeptical/neutral view:</strong><span> the key question is not whether world models sound compelling, but whether JEPA-style methods can scale into economically useful systems faster than LLM-centric agents are already commercializing. This skepticism is more implicit than explicit in the tweet set, but appears through “gets a chance to prove his vision” style comments </span><a href=\"https://x.com/teortaxesTex/status/2031242136125866422\" target=\"_blank\" rel=\"noreferrer noopener\">@teortaxesTex</a><span>.</span>",
-          "<strong>Meta-commentary:</strong><span> AMI is not being framed internally as a “conventional lab” </span><a href=\"https://x.com/sainingxie/status/2031236308383748267\" target=\"_blank\" rel=\"noreferrer noopener\">@sainingxie</a><span>, which suggests an attempt to differentiate from the standard frontier-lab pattern of API-first model scaling.</span>"
+          "<strong>支持性观点：</strong><span> 这是 LeCun 终于获得资本与团队，以验证其长期主张的 LLM 之外路线 </span><a href=\"https://x.com/teortaxesTex/status/2031242136125866422\" target=\"_blank\" rel=\"noreferrer noopener\">@teortaxesTex</a><span>。</span>",
+          "<strong>技术上的看多：</strong><span> 世界模型将是“巨大飞跃”，尤其对具身/机器人领域，且 AMI 的开放研究姿态有吸引力 </span><a href=\"https://x.com/mervenoyann/status/2031291463800168870\" target=\"_blank\" rel=\"noreferrer noopener\">@mervenoyann</a><span> </span><a href=\"https://x.com/ziv_ravid/status/2031346466023706706\" target=\"_blank\" rel=\"noreferrer noopener\">@ziv_ravid</a><span>。</span>",
+          "<strong>架构之争视角：</strong><span> 一些评论者明确将 AMI 视为押注“业界建立在错误基础上”，因为过度依赖自回归语言模型 </span><a href=\"https://x.com/LiorOnAI/status/2031479959685067006\" target=\"_blank\" rel=\"noreferrer noopener\">@LiorOnAI</a><span>。</span>",
+          "<strong>怀疑/中立观点：</strong><span> 关键问题不是世界模型听起来是否诱人，而是 JEPA 式方法能否比 LLM 中心化代理更快扩展为经济可用系统。这种怀疑并非直接表述，而是通过“终于有机会证明其愿景”类表述隐含出现 </span><a href=\"https://x.com/teortaxesTex/status/2031242136125866422\" target=\"_blank\" rel=\"noreferrer noopener\">@teortaxesTex</a><span>。</span>",
+          "<strong>元评论：</strong><span> AMI 在内部并未被框定为“常规实验室” </span><a href=\"https://x.com/sainingxie/status/2031236308383748267\" target=\"_blank\" rel=\"noreferrer noopener\">@sainingxie</a><span>，这表明它试图与标准的前沿实验室“API 优先”模式区分开来。</span>"
         ]
       },
       {
         "type": "heading",
-        "level": 2,
-        "text": "Technical details: JEPA, world models, and why this is different from next-token LMs"
+        "text": "技术细节：JEPA、世界模型，以及为何不同于下一词 LMs"
       },
       {
         "type": "paragraph",
-        "html": "<span>AMI’s public narrative is aligned with </span><strong>LeCun’s JEPA/world-model agenda</strong><span>. The explicit technical details in the tweets are sparse, but the discussion strongly points to the following stack of ideas:</span>"
+        "html": "<span>AMI 的公开叙事与 </span><strong>LeCun 的 JEPA/世界模型议程</strong><span>一致。推文中的明确技术细节并不多，但讨论强烈指向以下一组观点：</span>"
       },
       {
         "type": "list",
         "items": [
-          "<span>Real-world sensor streams contain lots of </span><strong>unpredictable or irrelevant entropy</strong><span>.</span>",
-          "Raw-pixel/video prediction is inefficient because it spends modeling capacity on noise.",
-          "<span>Predicting </span><strong>latent abstractions</strong><span> may better support planning, controllability, and invariance.</span>"
+          "<span>真实世界的传感器流包含大量</span><strong>不可预测或无关的熵</strong><span>。</span>",
+          "原始像素/视频预测效率低，因为它把建模能力浪费在噪声上。",
+          "<span>预测</span><strong>潜在抽象</strong><span>可能更好地支持规划、可控性与不变性。</span>"
         ]
       },
       {
         "type": "list",
         "items": [
-          "<strong>Robotics / embodied AI</strong><span> </span><a href=\"https://x.com/mervenoyann/status/2031291463800168870\" target=\"_blank\" rel=\"noreferrer noopener\">@mervenoyann</a>",
-          "<strong>Healthcare</strong><span> and lower-hallucination systems </span><a href=\"https://x.com/kimmonismus/status/2031291863341162717\" target=\"_blank\" rel=\"noreferrer noopener\">@kimmonismus</a>",
-          "<strong>Industrial process control / safety-critical environments</strong><span> </span><a href=\"https://x.com/LiorOnAI/status/2031479959685067006\" target=\"_blank\" rel=\"noreferrer noopener\">@LiorOnAI</a>",
-          "More generally, systems that must track persistent state, causality, and action outcomes in the physical world."
+          "<strong>机器人 / 具身 AI</strong><span> </span><a href=\"https://x.com/mervenoyann/status/2031291463800168870\" target=\"_blank\" rel=\"noreferrer noopener\">@mervenoyann</a>",
+          "<strong>医疗健康</strong><span>与更低幻觉系统 </span><a href=\"https://x.com/kimmonismus/status/2031291863341162717\" target=\"_blank\" rel=\"noreferrer noopener\">@kimmonismus</a>",
+          "<strong>工业流程控制 / 安全关键环境</strong><span> </span><a href=\"https://x.com/LiorOnAI/status/2031479959685067006\" target=\"_blank\" rel=\"noreferrer noopener\">@LiorOnAI</a>",
+          "更广义地说，需要跟踪持久状态、因果关系与行动后果的系统。"
         ]
       },
       {
         "type": "paragraph",
-        "html": "This is broadly consistent with LeCun’s longstanding critique of pure autoregressive LLMs:"
+        "html": "这与 LeCun 长期以来对纯自回归 LLM 的批评大体一致："
       },
       {
         "type": "list",
         "items": [
-          "text prediction alone is not sufficient for grounded understanding,",
-          "the world is only partially predictable,",
-          "intelligent agents need hierarchical representations and planning in latent space,",
-          "data from vision/video/embodiment should dominate long-run AI progress."
+          "仅靠文本预测不足以实现有根基的理解，",
+          "世界只有部分可预测，",
+          "智能体需要分层表示与在潜在空间中的规划，",
+          "来自视觉/视频/具身的数据应在长期 AI 进展中占主导。"
         ]
       },
       {
         "type": "heading",
-        "level": 3,
-        "text": "Team composition as a technical signal"
+        "text": "团队构成作为技术信号"
       },
       {
         "type": "paragraph",
-        "html": "The founding roster is itself a technical clue. Several hires emphasize:"
+        "html": "创始阵容本身就是一个技术线索。多名招聘强调："
       },
       {
         "type": "list",
         "items": [
-          "<strong>world models</strong><span> </span><a href=\"https://x.com/sanghyunwoo1219/status/2031252576205778981\" target=\"_blank\" rel=\"noreferrer noopener\">@sanghyunwoo1219</a><span> </span><a href=\"https://x.com/zhouxy2017/status/2031378974345982212\" target=\"_blank\" rel=\"noreferrer noopener\">@zhouxy2017</a>",
-          "<strong>pretraining, scaling, video, representation</strong><span> </span><a href=\"https://x.com/jingli9111/status/2031401039518208373\" target=\"_blank\" rel=\"noreferrer noopener\">@jingli9111</a>",
-          "<span>a cluster of </span><strong>vision-heavy researchers</strong><span>, noted by supporters as “a team of vision 🐐s” </span><a href=\"https://x.com/mervenoyann/status/2031291952990212519\" target=\"_blank\" rel=\"noreferrer noopener\">@mervenoyann</a>"
+          "<strong>世界模型</strong><span> </span><a href=\"https://x.com/sanghyunwoo1219/status/2031252576205778981\" target=\"_blank\" rel=\"noreferrer noopener\">@sanghyunwoo1219</a><span> </span><a href=\"https://x.com/zhouxy2017/status/2031378974345982212\" target=\"_blank\" rel=\"noreferrer noopener\">@zhouxy2017</a>",
+          "<strong>预训练、规模化、视频、表示</strong><span> </span><a href=\"https://x.com/jingli9111/status/2031401039518208373\" target=\"_blank\" rel=\"noreferrer noopener\">@jingli9111</a>",
+          "<span>一批</span><strong>视觉方向研究者</strong><span>，支持者称之为“视觉 🐐 团队” </span><a href=\"https://x.com/mervenoyann/status/2031291952990212519\" target=\"_blank\" rel=\"noreferrer noopener\">@mervenoyann</a>"
         ]
       },
       {
         "type": "paragraph",
-        "html": "<span>That suggests AMI is likely to emphasize </span><strong>vision/video/self-supervised representation learning</strong><span>, not just append world-model language to an otherwise standard LLM stack.</span>"
+        "html": "<span>这表明 AMI 可能会强调 </span><strong>视觉/视频/自监督表示学习</strong><span>，而不仅仅是在标准 LLM 堆栈上“贴”一层世界模型话语。</span>"
       },
       {
         "type": "heading",
-        "level": 3,
-        "text": "Open research posture"
+        "text": "开放研究姿态"
       },
       {
         "type": "paragraph",
-        "html": "<span>Several supportive reactions specifically mentioned hope for </span><strong>open releases/open research</strong><span> </span><a href=\"https://x.com/mervenoyann/status/2031291463800168870\" target=\"_blank\" rel=\"noreferrer noopener\">@mervenoyann</a><span> </span><a href=\"https://x.com/mervenoyann/status/2031293535995973894\" target=\"_blank\" rel=\"noreferrer noopener\">@mervenoyann</a><span>. That matters because JEPA/world-model work has historically had stronger academic than product traction; openness would help AMI recruit and shape a research ecosystem. But at launch this is still aspiration rather than demonstrated practice.</span>"
+        "html": "<span>多条支持性反应特别提到对</span><strong>开放发布/开放研究</strong><span>的期待 </span><a href=\"https://x.com/mervenoyann/status/2031291463800168870\" target=\"_blank\" rel=\"noreferrer noopener\">@mervenoyann</a><span> </span><a href=\"https://x.com/mervenoyann/status/2031293535995973894\" target=\"_blank\" rel=\"noreferrer noopener\">@mervenoyann</a><span>。这很重要，因为 JEPA/世界模型的研究历来更偏学术而非产品；开放将有助于 AMI 招募并塑造研究生态。但在发布时这仍是愿景而非已验证实践。</span>"
       },
       {
         "type": "heading",
-        "level": 2,
-        "text": "Different opinions in the reaction set"
+        "text": "反应中的不同观点"
       },
       {
         "type": "heading",
-        "level": 3,
-        "text": "1) Strongly supportive: “LeCun finally gets to run the experiment”"
+        "text": "1）强力支持：“LeCun 终于可以做实验了”"
       },
       {
         "type": "paragraph",
-        "html": "A sizable share of reactions are essentially relief that LeCun now has a dedicated startup and capital base to validate his worldview."
+        "html": "相当多的反应本质上是在松一口气：LeCun 终于有了专门的创业公司与资金基础去验证他的世界观。"
       },
       {
         "type": "list",
         "items": [
-          "<span>“Yann gets a chance to prove his vision” </span><a href=\"https://x.com/teortaxesTex/status/2031242136125866422\" target=\"_blank\" rel=\"noreferrer noopener\">@teortaxesTex</a>",
-          "<span>“very bullish… world models will be a huge leap forward” </span><a href=\"https://x.com/mervenoyann/status/2031291463800168870\" target=\"_blank\" rel=\"noreferrer noopener\">@mervenoyann</a>",
-          "<span>“super bullish on AMI labs” because of team quality and open research ambition </span><a href=\"https://x.com/ziv_ravid/status/2031346466023706706\" target=\"_blank\" rel=\"noreferrer noopener\">@ziv_ravid</a>",
-          "<span>“understanding the real world is key to building advanced AI systems” </span><a href=\"https://x.com/duchao0726/status/2031364139210440717\" target=\"_blank\" rel=\"noreferrer noopener\">@duchao0726</a>"
+          "<span>“Yann 终于有机会证明他的愿景” </span><a href=\"https://x.com/teortaxesTex/status/2031242136125866422\" target=\"_blank\" rel=\"noreferrer noopener\">@teortaxesTex</a>",
+          "<span>“非常看多……世界模型将是巨大飞跃” </span><a href=\"https://x.com/mervenoyann/status/2031291463800168870\" target=\"_blank\" rel=\"noreferrer noopener\">@mervenoyann</a>",
+          "<span>“超级看多 AMI labs”，因为团队质量与开放研究雄心 </span><a href=\"https://x.com/ziv_ravid/status/2031346466023706706\" target=\"_blank\" rel=\"noreferrer noopener\">@ziv_ravid</a>",
+          "<span>“理解真实世界是构建高级 AI 系统的关键” </span><a href=\"https://x.com/duchao0726/status/2031364139210440717\" target=\"_blank\" rel=\"noreferrer noopener\">@duchao0726</a>"
         ]
       },
       {
         "type": "paragraph",
-        "html": "This camp sees AMI as an overdue counterweight to the current industry equilibrium around autoregressive LMs + RLHF + tool use."
+        "html": "该阵营将 AMI 视为对当前以自回归 LMs + RLHF + 工具使用为中心产业格局的“迟到的对冲”。"
       },
       {
         "type": "heading",
-        "level": 3,
-        "text": "2) Architecture-war framing: “LLMs predict words; AMI wants models of reality”"
+        "text": "2）架构之争视角：“LLM 预测词；AMI 想建现实模型”"
       },
       {
         "type": "paragraph",
-        "html": "<span>This view was most explicitly articulated by </span><a href=\"https://x.com/LiorOnAI/status/2031479959685067006\" target=\"_blank\" rel=\"noreferrer noopener\">@LiorOnAI</a><span>:</span>"
+        "html": "<span>这一观点最明确地由 </span><a href=\"https://x.com/LiorOnAI/status/2031479959685067006\" target=\"_blank\" rel=\"noreferrer noopener\">@LiorOnAI</a><span> 表述：</span>"
       },
       {
         "type": "list",
         "items": [
-          "language models operate over words/tokens,",
-          "reality is continuous, sensorimotor, and partly unpredictable,",
-          "generative models overfit to reconstruction,",
-          "JEPA predicts meaningful abstractions instead."
+          "语言模型在词/Token 上运作，",
+          "现实是连续的、感知-动作式的，并且部分不可预测，",
+          "生成式模型过度拟合于重建，",
+          "JEPA 则预测有意义的抽象。"
         ]
       },
       {
         "type": "paragraph",
-        "html": "This is the clearest pro-AMI technical argument in the tweet set. It treats hallucination, brittleness, and lack of grounded planning as symptoms of the wrong training objective, not just insufficient scale."
+        "html": "这是这组推文中最清晰的支持 AMI 的技术论证。它把幻觉、脆弱性与缺乏有根基规划视为错误训练目标的症状，而非仅仅规模不足。"
       },
       {
         "type": "heading",
-        "level": 3,
-        "text": "3) Pragmatic neutral: “Compelling thesis, but now it has to ship”"
+        "text": "3）务实中立：“论题诱人，但现在必须交付”"
       },
       {
         "type": "paragraph",
-        "html": "Some reactions are celebratory but not credulous:"
+        "html": "有些反应带着庆祝但不盲信："
       },
       {
         "type": "list",
         "items": [
-          "<span>“gets a chance to prove his vision” </span><a href=\"https://x.com/teortaxesTex/status/2031242136125866422\" target=\"_blank\" rel=\"noreferrer noopener\">@teortaxesTex</a>",
-          "<span>“burning question… PyTorch or JAX shop” </span><a href=\"https://x.com/giffmana/status/2031272110656491923\" target=\"_blank\" rel=\"noreferrer noopener\">@giffmana</a>"
+          "<span>“终于有机会证明他的愿景” </span><a href=\"https://x.com/teortaxesTex/status/2031242136125866422\" target=\"_blank\" rel=\"noreferrer noopener\">@teortaxesTex</a>",
+          "<span>“关键问题……PyTorch 还是 JAX？” </span><a href=\"https://x.com/giffmana/status/2031272110656491923\" target=\"_blank\" rel=\"noreferrer noopener\">@giffmana</a>"
         ]
       },
       {
         "type": "paragraph",
-        "html": "The latter is not just joke infrastructure chatter; it reflects a real question for how AMI will operationalize research. A startup attempting novel world-model training at scale must choose an ecosystem optimized either for:"
+        "html": "后者不仅是玩笑式的基础设施讨论，它反映了 AMI 将如何运营研究的真实问题。一个试图在大规模上训练新型世界模型的创业公司，必须选择一个生态系统，优化方向要么是："
       },
       {
         "type": "list",
         "items": [
-          "<span>fast research iteration and broad hiring familiarity (</span><strong>PyTorch</strong><span>), or</span>",
-          "<span>aggressive large-scale functional-programming style and SPMD compiler stacks (</span><strong>JAX</strong><span>).</span>"
+          "<span>快速研究迭代与广泛招聘熟悉度（</span><strong>PyTorch</strong><span>），或</span>",
+          "<span>激进的大规模函数式编程风格与 SPMD 编译器栈（</span><strong>JAX</strong><span>）。</span>"
         ]
       },
       {
         "type": "heading",
-        "level": 3,
-        "text": "4) Broader simulation/world-model enthusiasm outside AMI"
+        "text": "4）更广泛的模拟/世界模型热潮（不止 AMI）"
       },
       {
         "type": "paragraph",
-        "html": "<span>The AMI launch also landed into a broader discourse where “simulation is the next frontier” was already in the air. Percy Liang argued that the next big opportunity is to “put society into a docker container” via simulation models that can predict what happens in hypothetical real-world scenarios </span><a href=\"https://x.com/percyliang/status/2031392872310911430\" target=\"_blank\" rel=\"noreferrer noopener\">@percyliang</a><span>. That isn’t about AMI directly, but it reinforces why LeCun’s thesis currently resonates: many researchers increasingly think progress requires moving from token imitation to model-based prediction of environments and interactions.</span>"
+        "html": "<span>AMI 的发布落在一个更广泛的讨论中： “模拟是下一前沿” 这一说法早已在空气中。Percy Liang 认为，下一个巨大机会是通过模拟模型把“社会装进一个 docker 容器”，以预测假设性真实世界情景中的结果 </span><a href=\"https://x.com/percyliang/status/2031392872310911430\" target=\"_blank\" rel=\"noreferrer noopener\">@percyliang</a><span>。这与 AMI 并非直接相关，但它强化了 LeCun 论题为何在当前产生共鸣：越来越多研究者认为进步需要从 token 模仿转向对环境与交互的模型化预测。</span>"
       },
       {
         "type": "heading",
-        "level": 2,
-        "text": "Context: why this matters now"
+        "text": "背景：为何这很重要"
       },
       {
         "type": "paragraph",
-        "html": "<span>AMI matters because it is a high-profile, well-capitalized attempt to reopen a question many in industry had tacitly declared settled: </span><strong>is next-token prediction the central path to advanced intelligence, or just a useful but ultimately narrow substrate?</strong>"
+        "html": "<span>AMI 的重要性在于：它是一项高调且资金充足的尝试，重新打开行业里许多人已默认定论的问题：</span><strong>“下一词预测是否是通往高级智能的核心路径，还是只是一个有用但最终狭窄的基底？”</strong>"
       },
       {
         "type": "heading",
-        "level": 3,
-        "text": "Why the timing is notable"
+        "text": "为何时机值得关注"
       },
       {
         "type": "paragraph",
-        "html": "The launch comes when:"
+        "html": "发布发生在："
       },
       {
         "type": "list",
         "items": [
-          "LLMs and coding agents are commercially successful,",
-          "multimodal systems are improving fast,",
-          "robotics/autonomy/world-model language is resurging,",
-          "and there is growing awareness that benchmark gains in text/code may not directly translate to physical-world competence."
+          "LLM 与编码代理正实现商业成功，",
+          "多模态系统快速改进，",
+          "机器人/自治/世界模型话语复兴，",
+          "并且人们越来越意识到文本/代码基准的提升未必直接转化为物理世界能力。"
         ]
       },
       {
         "type": "paragraph",
-        "html": "This matters especially because frontier AI discourse lately has been dominated by:"
+        "html": "这尤其重要，因为近期前沿 AI 话语被以下内容主导："
       },
       {
         "type": "list",
         "items": [
-          "<strong>agents/harnesses/tool use</strong><span>,</span>",
-          "<strong>reasoning RL</strong><span>,</span>",
-          "<strong>coding automation</strong><span>,</span>",
-          "<span>and </span><strong>inference infrastructure</strong><span>.</span>"
+          "<strong>智能体/编排/工具使用</strong><span>,</span>",
+          "<strong>推理强化学习</strong><span>,</span>",
+          "<strong>编码自动化</strong><span>,</span>",
+          "<span>以及 </span><strong>推理基础设施</strong><span>。</span>"
         ]
       },
       {
         "type": "paragraph",
-        "html": "<span>AMI is an explicit bet that the next frontier is </span><strong>grounded representation learning and predictive modeling of the real world</strong><span>, not just better wrappers around text models.</span>"
+        "html": "<span>AMI 明确押注下一前沿是 </span><strong>对真实世界的有根基表示学习与预测建模</strong><span>，而不是围绕文本模型构建更好的包装层。</span>"
       },
       {
         "type": "heading",
-        "level": 3,
-        "text": "Why LeCun is uniquely positioned"
+        "text": "为何 LeCun 具有独特位置"
       },
       {
         "type": "paragraph",
-        "html": "LeCun has spent years publicly arguing:"
+        "html": "LeCun 多年来公开主张："
       },
       {
         "type": "list",
         "items": [
-          "human and animal intelligence is learned from observation and action in the world,",
-          "language is too low-bandwidth and derivative to be the main training signal,",
-          "systems need latent-variable world models and planning."
+          "人类和动物智能来自对世界的观察与行动学习，",
+          "语言带宽过低且衍生性强，不应是主要训练信号，",
+          "系统需要潜变量世界模型与规划。"
         ]
       },
       {
         "type": "paragraph",
-        "html": "His influence made him one of the most visible skeptics of “LLMs alone get us to AGI.” AMI is therefore not just another startup; it is the most direct institutionalization so far of the anti-token-maximalist view from one of the field’s most prominent figures."
+        "html": "他的影响力使他成为“仅靠 LLM 无法通向 AGI”最显眼的怀疑者之一。因此 AMI 不只是又一家创业公司；它是这位领域最重要人物之一对“反 token 最大化主义”观点的最直接制度化呈现。"
       },
       {
         "type": "heading",
-        "level": 3,
-        "text": "Europe/France implications"
+        "text": "欧洲/法国层面的影响"
       },
       {
         "type": "paragraph",
-        "html": "Political and institutional reactions in France/Europe were unusually strong:"
+        "html": "法国/欧洲的政治与机构反应异常强烈："
       },
       {
         "type": "list",
         "items": [
-          "<span>Macron celebrated it as a new page for AI and “la France des chercheurs, des bâtisseurs” </span><a href=\"https://x.com/EmmanuelMacron/status/2031288199503388717\" target=\"_blank\" rel=\"noreferrer noopener\">@EmmanuelMacron</a>",
-          "<span>Bpifrance’s Nicolas Dufourcq highlighted French pride in backing a company that could “revolutionize global AI” </span><a href=\"https://x.com/NicolasDufourcq/status/2031344671507484896\" target=\"_blank\" rel=\"noreferrer noopener\">@NicolasDufourcq</a>"
+          "<span>Macron 将其庆祝为 AI 的新篇章以及“la France des chercheurs, des bâtisseurs” </span><a href=\"https://x.com/EmmanuelMacron/status/2031288199503388717\" target=\"_blank\" rel=\"noreferrer noopener\">@EmmanuelMacron</a>",
+          "<span>Bpifrance 的 Nicolas Dufourcq 强调法国自豪于支持一家可能“革新全球 AI”的公司 </span><a href=\"https://x.com/NicolasDufourcq/status/2031344671507484896\" target=\"_blank\" rel=\"noreferrer noopener\">@NicolasDufourcq</a>"
         ]
       },
       {
         "type": "paragraph",
-        "html": "<span>So AMI is also being positioned as a </span><strong>European strategic AI champion</strong><span>, not merely a research startup.</span>"
+        "html": "<span>因此 AMI 也被定位为 </span><strong>欧洲战略级 AI 冠军</strong><span>，而不仅仅是一家研究型创业公司。</span>"
       },
       {
         "type": "heading",
-        "level": 2,
-        "text": "All relevant AMI/world-model tweets and what each adds"
+        "text": "所有相关 AMI/世界模型推文及其信息增量"
       },
       {
         "type": "list",
         "items": [
-          "<a href=\"https://x.com/TechCrunch/status/2031234186003288523\" target=\"_blank\" rel=\"noreferrer noopener\">@TechCrunch</a><span>: headline confirmation of the </span><strong>$1.03B</strong><span> raise and world-model framing.</span>",
-          "<a href=\"https://x.com/BFMTV/status/2031234198904746355\" target=\"_blank\" rel=\"noreferrer noopener\">@BFMTV</a><span>: French-language mainstream framing of the raise as historic.</span>",
-          "<a href=\"https://x.com/WIRED/status/2031234619085853009\" target=\"_blank\" rel=\"noreferrer noopener\">@WIRED</a><span>: contextualizes LeCun’s long-running thesis that physical-world mastery, not language alone, is the route to human-level AI.</span>",
-          "<a href=\"https://x.com/business/status/2031234715240251889\" target=\"_blank\" rel=\"noreferrer noopener\">@business</a><span>: Bloomberg confirmation of the funding magnitude.</span>",
-          "<a href=\"https://x.com/iScienceLuvr/status/2031235141524402278\" target=\"_blank\" rel=\"noreferrer noopener\">@iScienceLuvr</a><span>: adds the </span><strong>$3.5B pre-money valuation</strong><span> figure.</span>",
-          "<a href=\"https://x.com/sainingxie/status/2031236308383748267\" target=\"_blank\" rel=\"noreferrer noopener\">@sainingxie</a><span>: AMI is “not a conventional lab,” and Xie joins as cofounder/CSO.</span>",
-          "<a href=\"https://x.com/lxbrun/status/2031237426975268886\" target=\"_blank\" rel=\"noreferrer noopener\">@lxbrun</a><span>: CEO announcement; mission is long-term scientific effort toward real-world understanding.</span>",
-          "<a href=\"https://x.com/ZeffMax/status/2031237938529566877\" target=\"_blank\" rel=\"noreferrer noopener\">@ZeffMax</a><span>: concise summary that AMI is LeCun betting big on world models after years of advocacy.</span>",
-          "<a href=\"https://x.com/teortaxesTex/status/2031242136125866422\" target=\"_blank\" rel=\"noreferrer noopener\">@teortaxesTex</a><span>: “gets a chance to prove his vision.”</span>",
-          "<a href=\"https://x.com/Brian_Bo_Li/status/2031249945660108977\" target=\"_blank\" rel=\"noreferrer noopener\">@Brian_Bo_Li</a><span>: “real intelligence into the real world” slogan.</span>",
-          "<a href=\"https://x.com/sanghyunwoo1219/status/2031252576205778981\" target=\"_blank\" rel=\"noreferrer noopener\">@sanghyunwoo1219</a><span>: joined from day one specifically to work on world models.</span>",
-          "<a href=\"https://x.com/laurentsolly/status/2031254099543371940\" target=\"_blank\" rel=\"noreferrer noopener\">@laurentsolly</a><span>: COO announcement; repeats funding and “next AI frontier models.”</span>",
-          "<a href=\"https://x.com/mavenlin/status/2031254675144716769\" target=\"_blank\" rel=\"noreferrer noopener\">@mavenlin</a><span>: enthusiasm from another team member, signaling depth of founding bench.</span>",
-          "<a href=\"https://x.com/crystalsssup/status/2031266865117540557\" target=\"_blank\" rel=\"noreferrer noopener\">@crystalsssup</a><span>: notes Saining Xie’s presence as a signal of AMI’s seriousness.</span>",
-          "<a href=\"https://x.com/ylecun/status/2031268686984527936\" target=\"_blank\" rel=\"noreferrer noopener\">@ylecun</a><span>: official unveiling; “one of the largest seeds ever,” likely largest for a European company.</span>",
-          "<a href=\"https://x.com/jihanyang13/status/2031269891504808444\" target=\"_blank\" rel=\"noreferrer noopener\">@jihanyang13</a><span>: founding-team join announcement.</span>",
-          "<a href=\"https://x.com/giffmana/status/2031272110656491923\" target=\"_blank\" rel=\"noreferrer noopener\">@giffmana</a><span>: asks whether AMI becomes a </span><strong>PyTorch or JAX</strong><span> shop.</span>",
-          "<a href=\"https://x.com/France24_fr/status/2031275368833777943\" target=\"_blank\" rel=\"noreferrer noopener\">@France24_fr</a><span>: French media framing as a “paradigm shift.”</span>",
-          "<a href=\"https://x.com/TheRundownAI/status/2031275798154330599\" target=\"_blank\" rel=\"noreferrer noopener\">@TheRundownAI</a><span>: short summary of “beyond language models to build world models.”</span>",
-          "<a href=\"https://x.com/pascalefung/status/2031287240375054420\" target=\"_blank\" rel=\"noreferrer noopener\">@pascalefung</a><span>: Fung joins as CRIO; emphasizes “human-centered” AI that perceives, learns, reasons, acts.</span>",
-          "<a href=\"https://x.com/EmmanuelMacron/status/2031288199503388717\" target=\"_blank\" rel=\"noreferrer noopener\">@EmmanuelMacron</a><span>: political endorsement and national strategic framing.</span>",
-          "<a href=\"https://x.com/franceinter/status/2031290441941778472\" target=\"_blank\" rel=\"noreferrer noopener\">@franceinter</a><span>: media amplification around LeCun’s broader claims about jobs and AI transformation.</span>",
-          "<a href=\"https://x.com/mervenoyann/status/2031291463800168870\" target=\"_blank\" rel=\"noreferrer noopener\">@mervenoyann</a><span>: bullish on world models as a leap forward for embodied research and likes the open stance.</span>",
-          "<a href=\"https://x.com/kimmonismus/status/2031291863341162717\" target=\"_blank\" rel=\"noreferrer noopener\">@kimmonismus</a><span>: adds healthcare/Nabla commercialization angle and hallucination-risk framing.</span>",
-          "<a href=\"https://x.com/pascalefung/status/2031292462539403661\" target=\"_blank\" rel=\"noreferrer noopener\">@pascalefung</a><span>: hiring for </span><strong>Paris</strong><span> team.</span>",
-          "<a href=\"https://x.com/zhouxy2017/status/2031378974345982212\" target=\"_blank\" rel=\"noreferrer noopener\">@zhouxy2017</a><span>: founding member working on world models.</span>",
-          "<a href=\"https://x.com/Reuters/status/2031379588668944835\" target=\"_blank\" rel=\"noreferrer noopener\">@Reuters</a><span>: calls AMI an “alternative AI approach.”</span>",
-          "<a href=\"https://x.com/NVIDIAAI/status/2031381911852175868\" target=\"_blank\" rel=\"noreferrer noopener\">@NVIDIAAI</a><span> and related Thinking Machines/NVIDIA posts are not about AMI; omitted from focus.</span>",
-          "<a href=\"https://x.com/chris_j_paxton/status/2031406861782573082\" target=\"_blank\" rel=\"noreferrer noopener\">@chris_j_paxton</a><span>: notes absence of Bay Area in listed locations; suggests geographic differentiation.</span>",
-          "<a href=\"https://x.com/giffmana/status/2031407851202109969\" target=\"_blank\" rel=\"noreferrer noopener\">@giffmana</a><span>: clarifies </span><strong>Zürich</strong><span> is one of the locations.</span>",
-          "<a href=\"https://x.com/lilianweng/status/2031416978385281431\" target=\"_blank\" rel=\"noreferrer noopener\">@lilianweng</a><span>: “building technologies for better human-AI collaboration on next gen hardware at scale.” Indirect but clearly tied to joining/working with the AMI orbit.</span>",
-          "<a href=\"https://x.com/Yuchenj_UW/status/2031375476313436481\" target=\"_blank\" rel=\"noreferrer noopener\">@Yuchenj_UW</a><span>: juxtaposes LeCun’s world-model startup and Meta’s Moltbook acquisition, highlighting the contrast between long-horizon foundational bets and near-term agent/social-product bets.</span>",
-          "<a href=\"https://x.com/LiorOnAI/status/2031479959685067006\" target=\"_blank\" rel=\"noreferrer noopener\">@LiorOnAI</a><span>: the most explicit technical gloss on JEPA and why latent-space predictive modeling may matter.</span>",
-          "<a href=\"https://x.com/sainingxie/status/2031510648383750206\" target=\"_blank\" rel=\"noreferrer noopener\">@sainingxie</a><span>: appreciation reply; minor but confirms continued engagement.</span>",
-          "<a href=\"https://x.com/NandoDF/status/2031494260411764839\" target=\"_blank\" rel=\"noreferrer noopener\">@NandoDF</a><span> </span><a href=\"https://x.com/DrJimFan/status/2031383007047856430\" target=\"_blank\" rel=\"noreferrer noopener\">@DrJimFan</a><span> </span><a href=\"https://x.com/denisyarats/status/2031278762663490002\" target=\"_blank\" rel=\"noreferrer noopener\">@denisyarats</a><span>: peer congratulations; low-information but signal broad respect.</span>"
+          "<a href=\"https://x.com/TechCrunch/status/2031234186003288523\" target=\"_blank\" rel=\"noreferrer noopener\">@TechCrunch</a><span>：头条确认 10.3 亿美元融资与世界模型叙事。</span>",
+          "<a href=\"https://x.com/BFMTV/status/2031234198904746355\" target=\"_blank\" rel=\"noreferrer noopener\">@BFMTV</a><span>：法语主流媒体将融资框定为历史性事件。</span>",
+          "<a href=\"https://x.com/WIRED/status/2031234619085853009\" target=\"_blank\" rel=\"noreferrer noopener\">@WIRED</a><span>：强调 LeCun 长期主张——掌握物理世界，而非仅语言，是通向人类级 AI 的路径。</span>",
+          "<a href=\"https://x.com/business/status/2031234715240251889\" target=\"_blank\" rel=\"noreferrer noopener\">@business</a><span>：Bloomberg 对融资规模的确认。</span>",
+          "<a href=\"https://x.com/iScienceLuvr/status/2031235141524402278\" target=\"_blank\" rel=\"noreferrer noopener\">@iScienceLuvr</a><span>：补充 35 亿美元投前估值数字。</span>",
+          "<a href=\"https://x.com/sainingxie/status/2031236308383748267\" target=\"_blank\" rel=\"noreferrer noopener\">@sainingxie</a><span>：AMI “不是常规实验室”，Xie 加入为联合创始人/CSO。</span>",
+          "<a href=\"https://x.com/lxbrun/status/2031237426975268886\" target=\"_blank\" rel=\"noreferrer noopener\">@lxbrun</a><span>：CEO 发布，使命是面向真实世界理解的长期科学努力。</span>",
+          "<a href=\"https://x.com/ZeffMax/status/2031237938529566877\" target=\"_blank\" rel=\"noreferrer noopener\">@ZeffMax</a><span>：简洁总结 AMI 是 LeCun 在多年倡导后对世界模型的豪赌。</span>",
+          "<a href=\"https://x.com/teortaxesTex/status/2031242136125866422\" target=\"_blank\" rel=\"noreferrer noopener\">@teortaxesTex</a><span>：“终于有机会证明他的愿景。”</span>",
+          "<a href=\"https://x.com/Brian_Bo_Li/status/2031249945660108977\" target=\"_blank\" rel=\"noreferrer noopener\">@Brian_Bo_Li</a><span>：“把真实智能带入真实世界”的口号。</span>",
+          "<a href=\"https://x.com/sanghyunwoo1219/status/2031252576205778981\" target=\"_blank\" rel=\"noreferrer noopener\">@sanghyunwoo1219</a><span>：从第一天起加入，专门做世界模型。</span>",
+          "<a href=\"https://x.com/laurentsolly/status/2031254099543371940\" target=\"_blank\" rel=\"noreferrer noopener\">@laurentsolly</a><span>：COO 发布，重复融资规模与“下一 AI 前沿模型”。</span>",
+          "<a href=\"https://x.com/mavenlin/status/2031254675144716769\" target=\"_blank\" rel=\"noreferrer noopener\">@mavenlin</a><span>：来自另一位团队成员的热情表态，显示创始阵容深度。</span>",
+          "<a href=\"https://x.com/crystalsssup/status/2031266865117540557\" target=\"_blank\" rel=\"noreferrer noopener\">@crystalsssup</a><span>：指出 Saining Xie 的加入是 AMI 认真程度的信号。</span>",
+          "<a href=\"https://x.com/ylecun/status/2031268686984527936\" target=\"_blank\" rel=\"noreferrer noopener\">@ylecun</a><span>：官方发布称“史上最大种子轮之一”，可能是欧洲公司最大。</span>",
+          "<a href=\"https://x.com/jihanyang13/status/2031269891504808444\" target=\"_blank\" rel=\"noreferrer noopener\">@jihanyang13</a><span>：创始团队加入公告。</span>",
+          "<a href=\"https://x.com/giffmana/status/2031272110656491923\" target=\"_blank\" rel=\"noreferrer noopener\">@giffmana</a><span>：询问 AMI 会成为 </span><strong>PyTorch 还是 JAX</strong><span> 阵营。</span>",
+          "<a href=\"https://x.com/France24_fr/status/2031275368833777943\" target=\"_blank\" rel=\"noreferrer noopener\">@France24_fr</a><span>：法媒将其框定为“范式转变”。</span>",
+          "<a href=\"https://x.com/TheRundownAI/status/2031275798154330599\" target=\"_blank\" rel=\"noreferrer noopener\">@TheRundownAI</a><span>：简短总结“超越语言模型以构建世界模型”。</span>",
+          "<a href=\"https://x.com/pascalefung/status/2031287240375054420\" target=\"_blank\" rel=\"noreferrer noopener\">@pascalefung</a><span>：Fung 加入为 CRIO，强调“以人为中心”的 AI 能感知、学习、推理与行动。</span>",
+          "<a href=\"https://x.com/EmmanuelMacron/status/2031288199503388717\" target=\"_blank\" rel=\"noreferrer noopener\">@EmmanuelMacron</a><span>：政治背书与国家战略框定。</span>",
+          "<a href=\"https://x.com/franceinter/status/2031290441941778472\" target=\"_blank\" rel=\"noreferrer noopener\">@franceinter</a><span>：媒体放大 LeCun 关于就业与 AI 转型的更广泛主张。</span>",
+          "<a href=\"https://x.com/mervenoyann/status/2031291463800168870\" target=\"_blank\" rel=\"noreferrer noopener\">@mervenoyann</a><span>：看多世界模型作为具身研究的飞跃，并认可开放姿态。</span>",
+          "<a href=\"https://x.com/kimmonismus/status/2031291863341162717\" target=\"_blank\" rel=\"noreferrer noopener\">@kimmonismus</a><span>：补充医疗/低幻觉商业化方向。</span>",
+          "<a href=\"https://x.com/pascalefung/status/2031292462539403661\" target=\"_blank\" rel=\"noreferrer noopener\">@pascalefung</a><span>：巴黎团队招聘。</span>",
+          "<a href=\"https://x.com/zhouxy2017/status/2031378974345982212\" target=\"_blank\" rel=\"noreferrer noopener\">@zhouxy2017</a><span>：创始成员，研究世界模型。</span>",
+          "<a href=\"https://x.com/Reuters/status/2031379588668944835\" target=\"_blank\" rel=\"noreferrer noopener\">@Reuters</a><span>：称 AMI 为“替代性 AI 路线”。</span>",
+          "<a href=\"https://x.com/NVIDIAAI/status/2031381911852175868\" target=\"_blank\" rel=\"noreferrer noopener\">@NVIDIAAI</a><span> 及相关 Thinking Machines/NVIDIA 帖子与 AMI 无关；已略去。</span>",
+          "<a href=\"https://x.com/chris_j_paxton/status/2031406861782573082\" target=\"_blank\" rel=\"noreferrer noopener\">@chris_j_paxton</a><span>：指出未提湾区，暗示地理差异化。</span>",
+          "<a href=\"https://x.com/giffmana/status/2031407851202109969\" target=\"_blank\" rel=\"noreferrer noopener\">@giffmana</a><span>：澄清苏黎世也是地点之一。</span>",
+          "<a href=\"https://x.com/lilianweng/status/2031416978385281431\" target=\"_blank\" rel=\"noreferrer noopener\">@lilianweng</a><span>：“为下一代硬件规模上的人机协作构建技术。”虽为间接，但与 AMI 轨道明确相关。</span>",
+          "<a href=\"https://x.com/Yuchenj_UW/status/2031375476313436481\" target=\"_blank\" rel=\"noreferrer noopener\">@Yuchenj_UW</a><span>：并列 LeCun 的世界模型创业与 Meta 的 Moltbook 收购，强调长期基础赌注与短期代理/社交产品赌注的对比。</span>",
+          "<a href=\"https://x.com/LiorOnAI/status/2031479959685067006\" target=\"_blank\" rel=\"noreferrer noopener\">@LiorOnAI</a><span>：对 JEPA 与潜在空间预测建模意义的最明确技术注释。</span>",
+          "<a href=\"https://x.com/sainingxie/status/2031510648383750206\" target=\"_blank\" rel=\"noreferrer noopener\">@sainingxie</a><span>：致谢回复；信息量不高，但确认持续互动。</span>",
+          "<a href=\"https://x.com/NandoDF/status/2031494260411764839\" target=\"_blank\" rel=\"noreferrer noopener\">@NandoDF</a><span> </span><a href=\"https://x.com/DrJimFan/status/2031383007047856430\" target=\"_blank\" rel=\"noreferrer noopener\">@DrJimFan</a><span> </span><a href=\"https://x.com/denisyarats/status/2031278762663490002\" target=\"_blank\" rel=\"noreferrer noopener\">@denisyarats</a><span>：同行祝贺；信息量不高但显示广泛尊重。</span>"
         ]
       },
       {
         "type": "heading",
-        "level": 2,
-        "text": "Bottom line"
+        "text": "结论"
       },
       {
         "type": "paragraph",
-        "html": "<span>AMI Labs is the strongest institutional challenge yet to the idea that scaling autoregressive language models is the sole or dominant route to AGI. The hard facts are unusually concrete — </span><strong>$1.03B seed, $3.5B pre-money, elite vision/world-model-heavy team, France/Europe strategic backing</strong><span> — while the technical promise remains largely thesis-level for now: </span><strong>JEPA-style latent predictive world models that learn from real-world sensor data and support planning/action without reconstructing every bit of noise</strong><span>. Supporters view it as the overdue next paradigm; neutrals see a high-stakes test of whether LeCun’s critique of LLMs can finally cash out in products and benchmarks; skeptics, even when not stated bluntly, will judge it on whether world models can outcompete rapidly improving LLM agents before the market closes around the current stack.</span>"
+        "html": "<span>AMI Labs 是迄今对“扩大自回归语言模型是通往 AGI 的唯一或主导路径”这一观点最强的制度性挑战。硬事实异常具体——</span><strong>10.3 亿美元种子轮、35 亿美元投前估值、精英的视觉/世界模型导向团队、法国/欧洲的战略背书</strong><span>——而技术承诺仍主要停留在论题层面： </span><strong>JEPA 式的潜在预测世界模型</strong><span>，从真实世界传感数据学习，并在不重建每一丝噪声的情况下支持规划/行动。支持者认为这是迟到的下一范式；中立者视其为高风险试验，检验 LeCun 对 LLM 的批评能否最终转化为产品与基准；怀疑者则会看世界模型是否能在市场围绕现有技术栈收敛之前，胜过快速进化的 LLM 代理。</span>"
       },
       {
         "type": "paragraph",
-        "html": "<strong>Other Topics</strong>"
+        "html": "<strong>其他话题</strong>"
       },
       {
         "type": "paragraph",
-        "html": "<strong>Agents, coding workflows, and the “builder vs reviewer” shift</strong>"
+        "html": "<strong>智能体、编码工作流，以及“构建者 vs. 评审者”的转变</strong>"
       },
       {
         "type": "list",
         "items": [
-          "<strong>VS Code Agent Hooks</strong><span> for policy enforcement and workflow guidance </span><a href=\"https://x.com/code/status/2031219225906282803\" target=\"_blank\" rel=\"noreferrer noopener\">@code</a>",
-          "<strong>GitHub/Figma MCP</strong><span> closes design↔code loops </span><a href=\"https://x.com/github/status/2031418718501089468\" target=\"_blank\" rel=\"noreferrer noopener\">@github</a>",
-          "<strong>LangGraph deploy</strong><span> and </span><strong>LangGraph 1.1</strong><span> simplify productionization </span><a href=\"https://x.com/LangChain/status/2031427878878065080\" target=\"_blank\" rel=\"noreferrer noopener\">@LangChain</a><span> </span><a href=\"https://x.com/sydneyrunkle/status/2031428770700103777\" target=\"_blank\" rel=\"noreferrer noopener\">@sydneyrunkle</a>",
-          "<strong>Together MCP server</strong><span> and </span><strong>Together GPU Clusters</strong><span> add infra for agent-driven app building and scale </span><a href=\"https://x.com/togethercompute/status/2031419426688610561\" target=\"_blank\" rel=\"noreferrer noopener\">@togethercompute</a><span> </span><a href=\"https://x.com/togethercompute/status/2031471454311821750\" target=\"_blank\" rel=\"noreferrer noopener\">@togethercompute</a>",
-          "<strong>Ollama scheduled prompts in Claude Code</strong><span> adds simple automation loops </span><a href=\"https://x.com/ollama/status/2031482512019759545\" target=\"_blank\" rel=\"noreferrer noopener\">@ollama</a>"
+          "<strong>VS Code Agent Hooks</strong><span> 用于策略执行与工作流指引 </span><a href=\"https://x.com/code/status/2031219225906282803\" target=\"_blank\" rel=\"noreferrer noopener\">@code</a>",
+          "<strong>GitHub/Figma MCP</strong><span> 打通设计↔代码闭环 </span><a href=\"https://x.com/github/status/2031418718501089468\" target=\"_blank\" rel=\"noreferrer noopener\">@github</a>",
+          "<strong>LangGraph deploy</strong><span> 与 </span><strong>LangGraph 1.1</strong><span> 简化生产化 </span><a href=\"https://x.com/LangChain/status/2031427878878065080\" target=\"_blank\" rel=\"noreferrer noopener\">@LangChain</a><span> </span><a href=\"https://x.com/sydneyrunkle/status/2031428770700103777\" target=\"_blank\" rel=\"noreferrer noopener\">@sydneyrunkle</a>",
+          "<strong>Together MCP server</strong><span> 与 </span><strong>Together GPU Clusters</strong><span> 为代理驱动的应用构建与规模化提供基础设施 </span><a href=\"https://x.com/togethercompute/status/2031419426688610561\" target=\"_blank\" rel=\"noreferrer noopener\">@togethercompute</a><span> </span><a href=\"https://x.com/togethercompute/status/2031471454311821750\" target=\"_blank\" rel=\"noreferrer noopener\">@togethercompute</a>",
+          "<strong>Claude Code 中的 Ollama 定时提示</strong><span> 增加简单自动化循环 </span><a href=\"https://x.com/ollama/status/2031482512019759545\" target=\"_blank\" rel=\"noreferrer noopener\">@ollama</a>"
         ]
       },
       {
         "type": "list",
         "items": [
-          "<span>Perplexity Computer replacing routine knowledge work and marketing tasks was cited as a strong founder use case </span><a href=\"https://x.com/GabbbarSingh/status/2031222631417131120\" target=\"_blank\" rel=\"noreferrer noopener\">@GabbbarSingh</a><span> </span><a href=\"https://x.com/AravSrinivas/status/2031246766834856376\" target=\"_blank\" rel=\"noreferrer noopener\">@AravSrinivas</a><span> </span><a href=\"https://x.com/AravSrinivas/status/2031414450046259433\" target=\"_blank\" rel=\"noreferrer noopener\">@AravSrinivas</a>",
-          "<span>But several posts warned against optimizing for “% AI-written code” or abandoning code comprehension entirely </span><a href=\"https://x.com/karrisaarinen/status/2031443070710067344\" target=\"_blank\" rel=\"noreferrer noopener\">@karrisaarinen</a><span> </span><a href=\"https://x.com/dexhorthy/status/2031394747869192431\" target=\"_blank\" rel=\"noreferrer noopener\">@dexhorthy</a><span>.</span>"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "html": "<strong>Benchmarks, evals, and reliability research</strong>"
-      },
-      {
-        "type": "list",
-        "items": [
-          "<strong>Opposite-Narrator Contradictions</strong><span> for sycophancy </span><a href=\"https://x.com/LechMazur/status/2031199671411208568\" target=\"_blank\" rel=\"noreferrer noopener\">@LechMazur</a>",
-          "<strong>OfficeQA Pro</strong><span>: enterprise grounded reasoning remains hard, with frontier agents still </span><strong>&lt;50%</strong><span> </span><a href=\"https://x.com/kristahopsalong/status/2031391216361755069\" target=\"_blank\" rel=\"noreferrer noopener\">@kristahopsalong</a><span> </span><a href=\"https://x.com/DbrxMosaicAI/status/2031399397125390678\" target=\"_blank\" rel=\"noreferrer noopener\">@DbrxMosaicAI</a>",
-          "<strong>SWE-bench Verified</strong><span> appears overstated relative to maintainer reality: maintainers would merge only about </span><strong>half</strong><span> of agent PRs that pass the grader </span><a href=\"https://x.com/whitfill_parker/status/2031408266660503743\" target=\"_blank\" rel=\"noreferrer noopener\">@whitfill_parker</a><span> </span><a href=\"https://x.com/joel_bkr/status/2031423528608952541\" target=\"_blank\" rel=\"noreferrer noopener\">@joel_bkr</a>",
-          "<strong>AuditBench</strong><span> introduces 56 LLMs with implanted hidden behaviors for alignment-auditing evaluation </span><a href=\"https://x.com/abhayesian/status/2031450153966776587\" target=\"_blank\" rel=\"noreferrer noopener\">@abhayesian</a>",
-          "<strong>CodeClash</strong><span> probes long-horizon coding/planning; top models still fare poorly in sustained agentic adversarial settings </span><a href=\"https://x.com/OfirPress/status/2031448805221007686\" target=\"_blank\" rel=\"noreferrer noopener\">@OfirPress</a><span> </span><a href=\"https://x.com/OfirPress/status/2031450305745785261\" target=\"_blank\" rel=\"noreferrer noopener\">@OfirPress</a>"
+          "<span>Perplexity Computer 替代常规知识工作与营销任务被视为强力创始人用例 </span><a href=\"https://x.com/GabbbarSingh/status/2031222631417131120\" target=\"_blank\" rel=\"noreferrer noopener\">@GabbbarSingh</a><span> </span><a href=\"https://x.com/AravSrinivas/status/2031246766834856376\" target=\"_blank\" rel=\"noreferrer noopener\">@AravSrinivas</a><span> </span><a href=\"https://x.com/AravSrinivas/status/2031414450046259433\" target=\"_blank\" rel=\"noreferrer noopener\">@AravSrinivas</a>",
+          "<span>但也有多条帖子警告不要优化“AI 编写代码占比”，或完全放弃代码理解 </span><a href=\"https://x.com/karrisaarinen/status/2031443070710067344\" target=\"_blank\" rel=\"noreferrer noopener\">@karrisaarinen</a><span> </span><a href=\"https://x.com/dexhorthy/status/2031394747869192431\" target=\"_blank\" rel=\"noreferrer noopener\">@dexhorthy</a><span>。</span>"
         ]
       },
       {
         "type": "paragraph",
-        "html": "<strong>Models, infrastructure, and training systems</strong>"
+        "html": "<strong>基准、评测与可靠性研究</strong>"
       },
       {
         "type": "list",
         "items": [
-          "<span>single embedding space for </span><strong>text, images, video, audio, docs</strong>",
-          "<strong>8,192-token</strong><span> text inputs</span>",
-          "<strong>100+ languages</strong>",
-          "<span>output dims </span><strong>3072 / 1536 / 768</strong><span> via MRL</span>",
-          "<span>up to </span><strong>6 images</strong><span>, </span><strong>120s video</strong><span>, </span><strong>6-page PDFs</strong><span> per request </span><a href=\"https://x.com/OfficialLoganK/status/2031411916489298156\" target=\"_blank\" rel=\"noreferrer noopener\">@OfficialLoganK</a><span> </span><a href=\"https://x.com/_philschmid/status/2031412260162138428\" target=\"_blank\" rel=\"noreferrer noopener\">@_philschmid</a><span> </span><a href=\"https://x.com/googleaidevs/status/2031421430718415051\" target=\"_blank\" rel=\"noreferrer noopener\">@googleaidevs</a><span>.</span>"
-        ]
-      },
-      {
-        "type": "list",
-        "items": [
-          "<strong>RWKV-7 G1e</strong><span> in </span><strong>13B/7B/3B/1B</strong><span> sizes </span><a href=\"https://x.com/BlinkDL_AI/status/2031226189654966418\" target=\"_blank\" rel=\"noreferrer noopener\">@BlinkDL_AI</a>",
-          "<strong>Hume TADA</strong><span> open-source TTS model: zero content hallucinations across </span><strong>1,000+</strong><span> test samples, </span><strong>5x faster</strong><span> than comparable LLM-TTS, and </span><strong>2,048 tokens ≈ 700s</strong><span> of audio </span><a href=\"https://x.com/hume_ai/status/2031401003078062578\" target=\"_blank\" rel=\"noreferrer noopener\">@hume_ai</a>",
-          "<strong>Phi-4-reasoning-vision-15B</strong><span> highlighted as a compact open multimodal model </span><a href=\"https://x.com/dl_weekly/status/2031415180383437304\" target=\"_blank\" rel=\"noreferrer noopener\">@dl_weekly</a>",
-          "<span>Baseten/Harvard prefix-caching collaboration for inference efficiency </span><a href=\"https://x.com/chutes_ai/status/2031446918316917131\" target=\"_blank\" rel=\"noreferrer noopener\">@chutes_ai</a>"
+          "<strong>Opposite-Narrator Contradictions</strong><span> 用于迎合性（sycophancy） </span><a href=\"https://x.com/LechMazur/status/2031199671411208568\" target=\"_blank\" rel=\"noreferrer noopener\">@LechMazur</a>",
+          "<strong>OfficeQA Pro</strong><span>：企业级有根基推理仍很难，前沿代理仍低于 </span><strong>50%</strong><span> </span><a href=\"https://x.com/kristahopsalong/status/2031391216361755069\" target=\"_blank\" rel=\"noreferrer noopener\">@kristahopsalong</a><span> </span><a href=\"https://x.com/DbrxMosaicAI/status/2031399397125390678\" target=\"_blank\" rel=\"noreferrer noopener\">@DbrxMosaicAI</a>",
+          "<strong>SWE-bench Verified</strong><span> 可能被高估：维护者仅会合并约 </span><strong>一半</strong><span> 通过评分器的代理 PR </span><a href=\"https://x.com/whitfill_parker/status/2031408266660503743\" target=\"_blank\" rel=\"noreferrer noopener\">@whitfill_parker</a><span> </span><a href=\"https://x.com/joel_bkr/status/2031423528608952541\" target=\"_blank\" rel=\"noreferrer noopener\">@joel_bkr</a>",
+          "<strong>AuditBench</strong><span> 引入 56 个植入隐藏行为的 LLM 以进行对齐审计评测 </span><a href=\"https://x.com/abhayesian/status/2031450153966776587\" target=\"_blank\" rel=\"noreferrer noopener\">@abhayesian</a>",
+          "<strong>CodeClash</strong><span> 探测长程编码/规划；顶尖模型在持续代理对抗场景中仍表现不佳 </span><a href=\"https://x.com/OfirPress/status/2031448805221007686\" target=\"_blank\" rel=\"noreferrer noopener\">@OfirPress</a><span> </span><a href=\"https://x.com/OfirPress/status/2031450305745785261\" target=\"_blank\" rel=\"noreferrer noopener\">@OfirPress</a>"
         ]
       },
       {
         "type": "paragraph",
-        "html": "<strong>Autonomous research, AlphaGo lineage, and recursive improvement</strong>"
+        "html": "<strong>模型、基础设施与训练系统</strong>"
       },
       {
         "type": "list",
         "items": [
-          "<span>Karpathy’s </span><strong>autoresearch</strong><span> concept — overnight experiment loops with code edits, short training runs, and metric-based keep/discard logic — was widely discussed </span><a href=\"https://x.com/NerdyRodent/status/2031350068473684263\" target=\"_blank\" rel=\"noreferrer noopener\">@NerdyRodent</a><span> </span><a href=\"https://x.com/_philschmid/status/2031356521553043824\" target=\"_blank\" rel=\"noreferrer noopener\">@_philschmid</a>",
-          "<span>Yuchen Jin ran a Claude-driven “chief scientist” loop for </span><strong>11+ hours</strong><span>, </span><strong>568 experiments</strong><span>, on </span><strong>8 GPUs</strong><span>, observing a progression from broad exploration to focused refinement to heavy validation </span><a href=\"https://x.com/Yuchenj_UW/status/2031423349071687878\" target=\"_blank\" rel=\"noreferrer noopener\">@Yuchenj_UW</a>",
-          "<span>Karpathy hinted at </span><strong>AgentHub</strong><span>, “GitHub for agents,” as the next layer for multi-agent research collaboration </span><a href=\"https://x.com/karpathy/status/2031435625854021730\" target=\"_blank\" rel=\"noreferrer noopener\">@karpathy</a><span> </span><a href=\"https://x.com/Yuchenj_UW/status/2031438602383798514\" target=\"_blank\" rel=\"noreferrer noopener\">@Yuchenj_UW</a>"
+          "<span>统一的嵌入空间覆盖 </span><strong>文本、图像、视频、音频、文档</strong>",
+          "<strong>8,192 token</strong><span> 的文本输入</span>",
+          "<strong>100+ 语言</strong>",
+          "<span>输出维度 </span><strong>3072 / 1536 / 768</strong><span>（MRL）</span>",
+          "<span>单次请求最多 </span><strong>6 张图片</strong><span>、</span><strong>120 秒视频</strong><span>、</span><strong>6 页 PDF</strong><span> </span><a href=\"https://x.com/OfficialLoganK/status/2031411916489298156\" target=\"_blank\" rel=\"noreferrer noopener\">@OfficialLoganK</a><span> </span><a href=\"https://x.com/_philschmid/status/2031412260162138428\" target=\"_blank\" rel=\"noreferrer noopener\">@_philschmid</a><span> </span><a href=\"https://x.com/googleaidevs/status/2031421430718415051\" target=\"_blank\" rel=\"noreferrer noopener\">@googleaidevs</a><span>。</span>"
         ]
       },
       {
         "type": "list",
         "items": [
-          "<span>Demis Hassabis argued AlphaGo’s search-and-planning ideas remain central to AGI and science </span><a href=\"https://x.com/demishassabis/status/2031387915348062567\" target=\"_blank\" rel=\"noreferrer noopener\">@demishassabis</a>",
-          "<span>Google/DeepMind linked AlphaGo to AlphaEvolve and broader compute/science optimization </span><a href=\"https://x.com/Google/status/2031450539150774714\" target=\"_blank\" rel=\"noreferrer noopener\">@Google</a><span> </span><a href=\"https://x.com/GoogleDeepMind/status/2031399096267718847\" target=\"_blank\" rel=\"noreferrer noopener\">@GoogleDeepMind</a>",
-          "<span>Noam Brown-style framing that current reasoning models follow the AlphaGo recipe: imitation, inference-time search, then RL </span><a href=\"https://x.com/polynoamial/status/2031404079583473953\" target=\"_blank\" rel=\"noreferrer noopener\">@polynoamial</a>"
-        ]
-      },
-      {
-        "type": "list",
-        "items": [
-          "<span>Schmidhuber resurfaced his long-running meta-learning/RSI work </span><a href=\"https://x.com/SchmidhuberAI/status/2031397968511717584\" target=\"_blank\" rel=\"noreferrer noopener\">@SchmidhuberAI</a>",
-          "<span>Commentary on unsupervised RLVR suggested naive recursive improvement currently hits ceilings </span><a href=\"https://x.com/teortaxesTex/status/2031359466516492731\" target=\"_blank\" rel=\"noreferrer noopener\">@teortaxesTex</a>"
+          "<strong>RWKV-7 G1e</strong><span> 提供 </span><strong>13B/7B/3B/1B</strong><span> 规模 </span><a href=\"https://x.com/BlinkDL_AI/status/2031226189654966418\" target=\"_blank\" rel=\"noreferrer noopener\">@BlinkDL_AI</a>",
+          "<strong>Hume TADA</strong><span> 开源 TTS 模型：在 1000+ 测试样本中零内容幻觉，速度比同类 LLM-TTS 快 </span><strong>5 倍</strong><span>，</span><strong>2,048 tokens ≈ 700s</strong><span> 音频 </span><a href=\"https://x.com/hume_ai/status/2031401003078062578\" target=\"_blank\" rel=\"noreferrer noopener\">@hume_ai</a>",
+          "<strong>Phi-4-reasoning-vision-15B</strong><span> 被强调为紧凑的开源多模态模型 </span><a href=\"https://x.com/dl_weekly/status/2031415180383437304\" target=\"_blank\" rel=\"noreferrer noopener\">@dl_weekly</a>",
+          "<span>Baseten/Harvard 的前缀缓存协作，用于推理效率 </span><a href=\"https://x.com/chutes_ai/status/2031446918316917131\" target=\"_blank\" rel=\"noreferrer noopener\">@chutes_ai</a>"
         ]
       },
       {
         "type": "paragraph",
-        "html": "<strong>Capability milestones, applications, and deployment</strong>"
+        "html": "<strong>自动化研究、AlphaGo 传承与递归改进</strong>"
       },
       {
         "type": "list",
         "items": [
-          "<span>One of the most striking capability claims: a possible AI-assisted resolution of a </span><strong>FrontierMath open problem</strong><span>, first from users claiming GPT-5.4 Pro solved it and later from observers noting this could be the first FrontierMath open problem solved by AI if validated </span><a href=\"https://x.com/spicey_lemonade/status/2031315804537434305\" target=\"_blank\" rel=\"noreferrer noopener\">@spicey_lemonade</a><span> </span><a href=\"https://x.com/kevinweil/status/2031378978527641822\" target=\"_blank\" rel=\"noreferrer noopener\">@kevinweil</a><span> </span><a href=\"https://x.com/GregHBurnham/status/2031451554151022838\" target=\"_blank\" rel=\"noreferrer noopener\">@GregHBurnham</a><span> </span><a href=\"https://x.com/AcerFur/status/2031458080458739757\" target=\"_blank\" rel=\"noreferrer noopener\">@AcerFur</a><span>.</span>",
-          "<span>Google reported a </span><strong>prospective clinical study</strong><span> of </span><strong>AMIE</strong><span> in urgent care workflows: blinded evaluation found similar differential-diagnosis and management-plan quality overall versus PCPs, but PCPs outperformed on practicality and cost effectiveness (</span><strong>p=0.003</strong><span>, </span><strong>p=0.004</strong><span>) </span><a href=\"https://x.com/iScienceLuvr/status/2031296370053923302\" target=\"_blank\" rel=\"noreferrer noopener\">@iScienceLuvr</a><span>.</span>",
-          "<span>Google Sheets with Gemini reached </span><strong>70.48%</strong><span> on </span><strong>SpreadsheetBench</strong><span>, described as near human-expert ability </span><a href=\"https://x.com/GoogleAI/status/2031356545552847091\" target=\"_blank\" rel=\"noreferrer noopener\">@GoogleAI</a><span>.</span>",
-          "<span>Google Workspace/Gemini rollout expanded across Docs, Sheets, Slides, and Drive, with claims of Sheets tasks </span><strong>9x faster</strong><span>, AI-generated slide layouts, and Drive-level cross-document answers </span><a href=\"https://x.com/Google/status/2031359339236143301\" target=\"_blank\" rel=\"noreferrer noopener\">@Google</a><span> </span><a href=\"https://x.com/sundarpichai/status/2031380361696129261\" target=\"_blank\" rel=\"noreferrer noopener\">@sundarpichai</a><span>.</span>",
-          "<span>Microsoft reported health as the </span><strong>#1 topic</strong><span> for Copilot mobile users in 2025, based on analysis of </span><strong>500k+</strong><span> conversations </span><a href=\"https://x.com/mustafasuleyman/status/2031362017211355581\" target=\"_blank\" rel=\"noreferrer noopener\">@mustafasuleyman</a><span>.</span>",
-          "<span>Sharon Zhou claimed </span><strong>superhuman performance on AI kernel optimization</strong><span> in production settings, suggesting automatic GPU-porting/optimization may soon be practical </span><a href=\"https://x.com/realSharonZhou/status/2031399933266309291\" target=\"_blank\" rel=\"noreferrer noopener\">@realSharonZhou</a><span>.</span>"
+          "<span>Karpathy 的 </span><strong>autoresearch</strong><span> 概念——夜间实验循环、代码编辑、短训练与基于指标的保留/淘汰——被广泛讨论 </span><a href=\"https://x.com/NerdyRodent/status/2031350068473684263\" target=\"_blank\" rel=\"noreferrer noopener\">@NerdyRodent</a><span> </span><a href=\"https://x.com/_philschmid/status/2031356521553043824\" target=\"_blank\" rel=\"noreferrer noopener\">@_philschmid</a>",
+          "<span>Yuchen Jin 运行了由 Claude 驱动的“首席科学家”循环 </span><strong>11+ 小时</strong><span>、</span><strong>568 次实验</strong><span>、使用 </span><strong>8 张 GPU</strong><span>，观察到从广泛探索到聚焦改进再到重度验证的进程 </span><a href=\"https://x.com/Yuchenj_UW/status/2031423349071687878\" target=\"_blank\" rel=\"noreferrer noopener\">@Yuchenj_UW</a>",
+          "<span>Karpathy 暗示 </span><strong>AgentHub</strong><span>（“GitHub for agents”）将成为多智能体研究协作的下一层 </span><a href=\"https://x.com/karpathy/status/2031435625854021730\" target=\"_blank\" rel=\"noreferrer noopener\">@karpathy</a><span> </span><a href=\"https://x.com/Yuchenj_UW/status/2031438602383798514\" target=\"_blank\" rel=\"noreferrer noopener\">@Yuchenj_UW</a>"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "<span>Demis Hassabis 认为 AlphaGo 的搜索/规划思想仍是 AGI 与科学的核心 </span><a href=\"https://x.com/demishassabis/status/2031387915348062567\" target=\"_blank\" rel=\"noreferrer noopener\">@demishassabis</a>",
+          "<span>Google/DeepMind 将 AlphaGo 与 AlphaEvolve 及更广泛的计算/科学优化联系起来 </span><a href=\"https://x.com/Google/status/2031450539150774714\" target=\"_blank\" rel=\"noreferrer noopener\">@Google</a><span> </span><a href=\"https://x.com/GoogleDeepMind/status/2031399096267718847\" target=\"_blank\" rel=\"noreferrer noopener\">@GoogleDeepMind</a>",
+          "<span>Noam Brown 风格的表述：当前推理模型遵循 AlphaGo 配方——模仿、推理时搜索，然后 RL </span><a href=\"https://x.com/polynoamial/status/2031404079583473953\" target=\"_blank\" rel=\"noreferrer noopener\">@polynoamial</a>"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "<span>Schmidhuber 重新提及其长期的元学习/RSI 工作 </span><a href=\"https://x.com/SchmidhuberAI/status/2031397968511717584\" target=\"_blank\" rel=\"noreferrer noopener\">@SchmidhuberAI</a>",
+          "<span>关于无监督 RLVR 的评论认为朴素递归改进目前会触顶 </span><a href=\"https://x.com/teortaxesTex/status/2031359466516492731\" target=\"_blank\" rel=\"noreferrer noopener\">@teortaxesTex</a>"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "html": "<strong>能力里程碑、应用与部署</strong>"
+      },
+      {
+        "type": "list",
+        "items": [
+          "<span>最引人注目的能力主张之一：可能由 AI 协助解决了一个 </span><strong>FrontierMath 未解题</strong><span>，最初来自用户称 GPT-5.4 Pro 已解决，后来观察者指出这可能是 AI 首次解决 FrontierMath 未解题（若验证属实） </span><a href=\"https://x.com/spicey_lemonade/status/2031315804537434305\" target=\"_blank\" rel=\"noreferrer noopener\">@spicey_lemonade</a><span> </span><a href=\"https://x.com/kevinweil/status/2031378978527641822\" target=\"_blank\" rel=\"noreferrer noopener\">@kevinweil</a><span> </span><a href=\"https://x.com/GregHBurnham/status/2031451554151022838\" target=\"_blank\" rel=\"noreferrer noopener\">@GregHBurnham</a><span> </span><a href=\"https://x.com/AcerFur/status/2031458080458739757\" target=\"_blank\" rel=\"noreferrer noopener\">@AcerFur</a><span>。</span>",
+          "<span>Google 报告了一项 </span><strong>AMIE</strong><span> 在急诊护理流程中的前瞻性临床研究：盲评显示其鉴别诊断与管理计划质量总体与全科医生相当，但医生在实用性与成本效益上更好（</span><strong>p=0.003</strong><span>、</span><strong>p=0.004</strong><span>） </span><a href=\"https://x.com/iScienceLuvr/status/2031296370053923302\" target=\"_blank\" rel=\"noreferrer noopener\">@iScienceLuvr</a><span>。</span>",
+          "<span>Google Sheets with Gemini 在 </span><strong>SpreadsheetBench</strong><span> 上达到 </span><strong>70.48%</strong><span>，被描述为接近人类专家水平 </span><a href=\"https://x.com/GoogleAI/status/2031356545552847091\" target=\"_blank\" rel=\"noreferrer noopener\">@GoogleAI</a><span>。</span>",
+          "<span>Google Workspace/Gemini 推广扩展到 Docs、Sheets、Slides 与 Drive，宣称 Sheets 任务 </span><strong>快 9 倍</strong><span>、AI 生成幻灯片布局、Drive 级跨文档回答 </span><a href=\"https://x.com/Google/status/2031359339236143301\" target=\"_blank\" rel=\"noreferrer noopener\">@Google</a><span> </span><a href=\"https://x.com/sundarpichai/status/2031380361696129261\" target=\"_blank\" rel=\"noreferrer noopener\">@sundarpichai</a><span>。</span>",
+          "<span>Microsoft 报告 2025 年 Copilot 移动端用户话题中</span><strong>健康</strong><span>位居第一，基于对 </span><strong>50 万+</strong><span> 对话的分析 </span><a href=\"https://x.com/mustafasuleyman/status/2031362017211355581\" target=\"_blank\" rel=\"noreferrer noopener\">@mustafasuleyman</a><span>。</span>",
+          "<span>Sharon Zhou 声称在生产环境中实现 </span><strong>AI 内核优化的超人类表现</strong><span>，暗示自动 GPU 端口化/优化可能即将可行 </span><a href=\"https://x.com/realSharonZhou/status/2031399933266309291\" target=\"_blank\" rel=\"noreferrer noopener\">@realSharonZhou</a><span>。</span>"
         ]
       },
       {
         "type": "heading",
-        "level": 2,
-        "text": "AI Reddit Recap"
+        "text": "AI Reddit 回顾"
       },
       {
         "type": "heading",
-        "level": 2,
-        "text": "/r/LocalLlama + /r/localLLM Recap"
+        "text": "/r/LocalLlama + /r/localLLM 回顾"
       },
       {
         "type": "heading",
-        "level": 2,
-        "text": "Keep reading with a 7-day free trial"
-      }
-    ],
-    "refineErrors": [
-      {
-        "index": 2,
-        "type": "paragraph",
-        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
-      },
-      {
-        "index": 3,
-        "type": "paragraph",
-        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
-      },
-      {
-        "index": 4,
-        "type": "heading",
-        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
-      },
-      {
-        "index": 5,
-        "type": "paragraph",
-        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+        "text": "继续阅读可享 7 天免费试用"
       }
     ]
   },
