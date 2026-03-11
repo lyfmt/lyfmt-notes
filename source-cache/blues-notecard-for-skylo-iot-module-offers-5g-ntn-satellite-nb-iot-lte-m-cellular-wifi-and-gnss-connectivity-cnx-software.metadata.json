@@ -1,0 +1,20 @@
+{
+  "item": {
+    "id": 2709,
+    "title": "Blues Notecard for Skylo IoT module offers 5G NTN satellite, NB-IoT/LTE-M cellular, WiFi, and GNSS connectivity",
+    "blog": "CNX Software",
+    "url": "https://www.cnx-software.com/2026/03/11/blues-notecard-for-skylo-iot-module-offers-5g-ntn-satellite-nb-iot-lte-m-cellular-wifi-and-gnss-connectivity/",
+    "published": "2026-03-11T11:09:51Z",
+    "discovered": "2026-03-11T12:00:16.272675468Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://www.cnx-software.com/2026/03/11/blues-notecard-for-skylo-iot-module-offers-5g-ntn-satellite-nb-iot-lte-m-cellular-wifi-and-gnss-connectivity/",
+    "ok": true,
+    "title": "Blues Notecard for Skylo IoT module offers 5G NTN satellite, NB-IoT/LTE-M cellular, WiFi, and GNSS connectivity - CNX Software",
+    "description": "Blues Notecard for Skylo is an IoT module combining subscription-free 5G NTN satellite, NB-IoT or LTE-M cellular, WiFi, and GNSS connectivity for asset",
+    "fetched_bytes": 237781,
+    "error": null
+  },
+  "classification": "normal"
+}

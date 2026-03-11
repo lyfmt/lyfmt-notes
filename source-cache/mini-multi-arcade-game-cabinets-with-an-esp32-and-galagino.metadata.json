@@ -1,0 +1,20 @@
+{
+  "item": {
+    "id": 2710,
+    "title": "Mini Multi-Arcade Game Cabinets with an ESP32 and Galagino",
+    "blog": "Hackaday",
+    "url": "https://hackaday.com/2026/03/11/mini-multi-arcade-game-cabinets-with-an-esp32-and-galagino/",
+    "published": "2026-03-11T11:00:08Z",
+    "discovered": "2026-03-11T12:00:16.508606061Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://hackaday.com/2026/03/11/mini-multi-arcade-game-cabinets-with-an-esp32-and-galagino/",
+    "ok": true,
+    "title": "Mini Multi-Arcade Game Cabinets With An ESP32 And Galagino",
+    "description": "Most people love arcade games, but putting a full-sized arcade cabinet in the living room can lead to certain unpleasant complications. Ergo the market for fun-sized cabinets has exploded alongside…",
+    "fetched_bytes": 83272,
+    "error": null
+  },
+  "classification": "normal"
+}

@@ -1,0 +1,148 @@
+{
+  "slug": "mini-multi-arcade-game-cabinets-with-an-esp32-and-galagino",
+  "title": "Mini Multi-Arcade Game Cabinets With An ESP32 And Galagino",
+  "author": "Hackaday",
+  "publishedAt": "2026-03-11",
+  "source": "Hackaday",
+  "url": "https://hackaday.com/2026/03/11/mini-multi-arcade-game-cabinets-with-an-esp32-and-galagino/",
+  "tags": [
+    "Hardware",
+    "AI"
+  ],
+  "excerpt": "这篇文章围绕“Mini Multi-Arcade Game Cabinets With An ESP32 And Galagino”展开，RSS 摘要提到：Most people love arcade games, but putting a full-sized arcade cabinet in the living room can lead to certain unpleasant complications. E...",
+  "content": [
+    {
+      "heading": "文章核心",
+      "paragraphs": [
+        "基于 RSS 摘要与页面元数据，原文重点是：Most people love arcade games, but putting a full-sized arcade cabinet in the living room can lead to certain unpleasant complications. Ergo the market for fun-sized cabinets has exploded alongside…",
+        "来源信息：Hackaday｜2026-03-11。"
+      ]
+    },
+    {
+      "heading": "值得继续补充的点",
+      "paragraphs": [
+        "如果后续补齐详情视图，重点可以继续展开芯片规格、接口能力、功耗指标和适用场景。",
+        "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+      ]
+    }
+  ],
+  "detail": {
+    "available": true,
+    "layout": "detail-zh",
+    "translatedFrom": "https://hackaday.com/2026/03/11/mini-multi-arcade-game-cabinets-with-an-esp32-and-galagino/",
+    "sourceName": "Hackaday",
+    "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+    "blocks": [
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Hackaday"
+      },
+      {
+        "type": "list",
+        "items": [
+          "by:"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "<a href=\"https://www.facebook.com/sharer/sharer.php?u=https://hackaday.com/2026/03/11/mini-multi-arcade-game-cabinets-with-an-esp32-and-galagino/\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>",
+          "<a href=\"https://twitter.com/intent/tweet?text=Mini%20Multi-Arcade%20Game%20Cabinets%20With%20An%20ESP32%20And%20Galagino%20via%20@hackaday&amp;url=https://hackaday.com/2026/03/11/mini-multi-arcade-game-cabinets-with-an-esp32-and-galagino/\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>",
+          "<a href=\"https://news.ycombinator.com/submitlink?u=https://hackaday.com/2026/03/11/mini-multi-arcade-game-cabinets-with-an-esp32-and-galagino/&amp;t=Mini%20Multi-Arcade%20Game%20Cabinets%20With%20An%20ESP32%20And%20Galagino\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>",
+          "<a href=\"https://www.reddit.com/submit?url=https://hackaday.com/2026/03/11/mini-multi-arcade-game-cabinets-with-an-esp32-and-galagino/\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>"
+        ]
+      },
+      {
+        "type": "image",
+        "src": "https://hackaday.com/wp-content/uploads/2026/03/galagino_cabinets_survivalhacking_github.jpg?w=800",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "type": "paragraph",
+        "html": "Most people love arcade games, but putting a full-sized arcade cabinet in the living room can lead to certain unpleasant complications. Ergo the market for fun-sized cabinets has exploded alongside the availability of cheap SBCs and MCUs that can run classical arcade titles. Microcontrollers like the ESP32 with its dual 240 MHz cores can run circles around the CPU grunt of 1980s arcade hardware. Cue [Till Harbaum]’s <a href=\"https://github.com/harbaum/galagino\" target=\"_blank\" rel=\"noreferrer noopener\">Galagino ESP32-based arcade</a> emulator project, that recently saw some community versions and cabinet takes."
+      },
+      {
+        "type": "paragraph",
+        "html": "There was a <a href=\"https://github.com/speckhoiler/galagino\" target=\"_blank\" rel=\"noreferrer noopener\">port to the PlatformIO</a> framework by [speckhoiler] which also added a few more arcade titles and repurposed the enclosure of an off-the-shelf ‘My Arcade’ by stuffing in an ESP32-based ‘<a href=\"https://hackaday.com/2025/01/07/more-things-to-do-with-your-cheap-yellow-display/\" target=\"_blank\" rel=\"noreferrer noopener\">Cheap Yellow Display</a>‘ (CYD) board instead. These boards include the ESP32 module, a touch display, micro SD card slot, sound output, and more; making it an interesting all-in-one solution for this purpose."
+      },
+      {
+        "type": "paragraph",
+        "html": "Most recently [Davide Gatti] and friends <a href=\"https://github.com/SurvivalHacking/galagino3\" target=\"_blank\" rel=\"noreferrer noopener\">ported the Galagino software</a> to the Arduino platform and added a 3D printed enclosure, though you will still need to source a stack of parts which are listed in the bill of materials. What you do get is a top display that displays the current game title in addition to the display of the usual CYD core, along with an enclosure that can be printed both in single- or multi-color."
+      },
+      {
+        "type": "paragraph",
+        "html": "There’s also <a href=\"https://www.youtube.com/watch?v=Nz3LRrY3Ukw\" target=\"_blank\" rel=\"noreferrer noopener\">a build video</a> that [Davide Gatti] made, but it’s only in Italian, so a bit of a crash course in this language may be required for some finer details."
+      },
+      {
+        "type": "paragraph",
+        "html": "<span></span>"
+      },
+      {
+        "type": "embed",
+        "provider": "youtube",
+        "src": "https://www.youtube.com/embed/Nz3LRrY3Ukw?feature=oembed",
+        "title": "DG005 - GALAGINO V3.0 - Il mini CABINATO ancora più GRANDE"
+      },
+      {
+        "type": "paragraph",
+        "html": "Thanks to [ZT] for the tip."
+      },
+      {
+        "type": "image",
+        "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_face.png",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_twitter.png",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_in.png",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_mail1.png",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "type": "list",
+        "items": [
+          "<a href=\"https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhackaday.com%2F2026%2F03%2F11%2Fmini-multi-arcade-game-cabinets-with-an-esp32-and-galagino%2F\" target=\"_blank\" rel=\"noreferrer noopener\"> <i> </i> </a>",
+          "<a href=\"https://twitter.com/intent/tweet?text=Mini%20Multi-Arcade%20Game%20Cabinets%20With%20An%20ESP32%20And%20Galagino%20via%20@hackaday&amp;url=https://hackaday.com/2026/03/11/mini-multi-arcade-game-cabinets-with-an-esp32-and-galagino/\" target=\"_blank\" rel=\"noreferrer noopener\"> <i></i> </a>",
+          "<a href=\"https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fhackaday.com%2F2026%2F03%2F11%2Fmini-multi-arcade-game-cabinets-with-an-esp32-and-galagino%2F\" target=\"_blank\" rel=\"noreferrer noopener\"> <i></i> </a>",
+          "<a href=\"mailto:?subject=Mini+Multi-Arcade+Game+Cabinets+With+An+ESP32+And+Galagino | Hackaday&amp;body=https%3A%2F%2Fhackaday.com%2F2026%2F03%2F11%2Fmini-multi-arcade-game-cabinets-with-an-esp32-and-galagino%2F\" target=\"_blank\" rel=\"noreferrer noopener\"> <i></i> </a>"
+        ]
+      }
+    ],
+    "refineErrors": [
+      {
+        "index": 1,
+        "type": "list",
+        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+      },
+      {
+        "index": 2,
+        "type": "list",
+        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+      },
+      {
+        "index": 4,
+        "type": "paragraph",
+        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+      }
+    ]
+  },
+  "workflow": {
+    "articleId": 2710,
+    "rssTitle": "Mini Multi-Arcade Game Cabinets with an ESP32 and Galagino"
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "available": false,
+  "layout": "draft",
+  "translatedFrom": "https://www.cnx-software.com/2026/03/11/blues-notecard-for-skylo-iot-module-offers-5g-ntn-satellite-nb-iot-lte-m-cellular-wifi-and-gnss-connectivity/",
+  "sourceName": "CNX Software",
+  "sourceDescription": "以下为根据原文结构自动生成的详情草稿，已保留段落层次、图片与媒体；默认尚未完成中文翻译润色。",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "html": "Blues Notecard for Skylo is an IoT module combining subscription-free 5G NTN satellite, NB-IoT or LTE-M cellular, WiFi, and GNSS connectivity for asset tracking applications in transportation and logistics, energy, and commercial equipment."
+    },
+    {
+      "type": "paragraph",
+      "html": "provides an all-in-one satellite IoT solution that doesn’t require additional hardware or a satellite subscription contract. By default, the module connects over WiFi and switches to cellular when out of range. It only falls back to pay-as-you-go Skylo satellite connectivity when neither WiFi nor cellular connectivity is available, and ensures IoT connectivity at most times."
+    },
+    {
+      "type": "image",
+      "src": "https://www.cnx-software.com/wp-content/uploads/2026/03/NOTE-NBGKWX-720x432.webp",
+      "alt": "Blues Notecard for Skylo (NOTE-NBGKWX)",
+      "caption": "Blues Notecard for Skylo top and bottom"
+    },
+    {
+      "type": "paragraph",
+      "html": "Blues Notecard for Skylo (NOTE-NBGLWX) specifications:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Cellular: 500MB valid for 10 years",
+        "Skylo: 10KB; enough to send 1 message a day for 6 months. Additional data is priced at $0.00075 per byte, with a minimum of 50 bytes per transmitted or received satellite data packet"
+      ]
+    },
+    {
+      "type": "list",
+      "items": [
+        "MAIN u.FL connector for both cellular and satellite communications",
+        "GPS u.FL connector for GNSS",
+        "Onboard ceramic antenna for WiFi"
+      ]
+    },
+    {
+      "type": "list",
+      "items": [
+        "Integrated STSAFE Secure Element with hardware crypto",
+        "True hardware random number generator",
+        "Factory-installed ECC P-384 certificate, provisioned at chip manufacture (valid until November 16, 2047)"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "html": "While you’d eventually integrate the Notecard for Skylo into your own design, you can quickly get started with compatible NOTECARRIER boards such as the ones shown below."
+    },
+    {
+      "type": "image",
+      "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtAAAAJiAQAAAADGLshPAAAAAnRSTlMAAHaTzTgAAABMSURBVHja7cGBAAAAAMOg+1NfYQDVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACA6NjWAAFWVehpAAAAAElFTkSuQmCC",
+      "alt": "NOTECARRIER-F V1.3",
+      "caption": "NOTECARRIER-F V1.3"
+    },
+    {
+      "type": "image",
+      "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtAAAAIOAQAAAAC5GAduAAAAAnRSTlMAAHaTzTgAAABFSURBVHja7cExAQAAAMKg9U9tDQ+gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPgwuvoAASMSGnEAAAAASUVORK5CYII=",
+      "alt": "Notecard for Skylo with NTN Satellite/NB-IoT Cellular antenna, GNSS antenna, ceramic WiFi antenna",
+      "caption": "Notecard for Skylo connected to NOTECARRIER-CX, Satellite/Cellular antenna, and GNSS antenna"
+    },
+    {
+      "type": "paragraph",
+      "html": "Packets (“Notes”) transferred by the Notecard can be tagged with time (GPS or Cellular) and location (GPS). The data is securely transmitted to the cloud, and the module is optimized to save power with low idle current consumption."
+    },
+    {
+      "type": "paragraph",
+      "html": "All instructions to get started, and additional information (e.g., coverage), can be found on the <a href=\"https://dev.blues.io/datasheets/notecard-datasheet/note-nbglwx/\" target=\"_blank\" rel=\"noreferrer noopener\">online datasheet</a>. While it’s probably best to get a module and carrier board, you don’t need one to evaluate the cloud platform since a simulator is provided. The datasheet also includes an in-browser terminal. Note that Firefox is not working since it requires WebSerial, so you’d need to use Chrome, Opera, or Edge, or download the Notecard CLI."
+    },
+    {
+      "type": "image",
+      "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtAAAAGXAQAAAACymVp4AAAAAnRSTlMAAHaTzTgAAAA7SURBVHja7cExAQAAAMKg9U9tDQ+gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAKwOQrQABxe4tlAAAAABJRU5ErkJggg==",
+      "alt": "Notecard Simulator",
+      "caption": "Notecard documentation and simulator/terminal"
+    },
+    {
+      "type": "paragraph",
+      "html": "It’s not the first time we’ve come across an IoT module with Skylo NTN satellite support, and the <a href=\"https://www.cnx-software.com/2024/02/27/blues-starnote-an-affordable-satellite-iiot-module-with-18-kb-of-data-for-skylo-service/\" target=\"_blank\" rel=\"noreferrer noopener\">Blues Starnote</a> and <a href=\"https://www.cnx-software.com/2024/01/30/quectel-cc660d-ls-iot-ntn-module-is-built-for-skylos-satellite-network/\" target=\"_blank\" rel=\"noreferrer noopener\">Quectel CC660D-LS</a> are some earlier examples. The new Notecard for Skylo is unique as it implements 5G NTN satellite, NB-IoT/LTE-M cellular, WiFi, and GNSS connectivity into a single module."
+    },
+    {
+      "type": "paragraph",
+      "html": "Contrary to most other products introduced at <a href=\"https://www.cnx-software.com/news/embedded-world-2026/\" target=\"_blank\" rel=\"noreferrer noopener\">Embedded World 2026</a>, the Notecard for Skylo is available for purchase <a href=\"https://shop.blues.com/products/notecard-for-skylo\" target=\"_blank\" rel=\"noreferrer noopener\">for $89 on the Blues store</a>, and the Notecarrier-F board is available as a $25 option. The <a href=\"https://blues.com/press-release/blues-and-skylo-launch/\" target=\"_blank\" rel=\"noreferrer noopener\">press release</a> may have a few more details."
+    },
+    {
+      "type": "paragraph",
+      "html": "Thanks to TLS for the tip."
+    },
+    {
+      "type": "image",
+      "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0AQAAAAAVtjufAAAAAnRSTlMAAHaTzTgAAAAbSURBVFjD7cEBDQAAAMKg909tDjegAAAAAL4NEOAAAf2XIG8AAAAASUVORK5CYII=",
+      "alt": "Jean Luc Aufranc",
+      "caption": "Jean Luc Aufranc"
+    },
+    {
+      "type": "paragraph",
+      "html": "Jean-Luc started CNX Software in 2010 as a part-time endeavor, before quitting his job as a software engineering manager, and starting to write daily news, and reviews full time later in 2011."
+    },
+    {
+      "type": "paragraph",
+      "html": "<strong>Support CNX Software! Donate via <a href=\"https://www.cnx-software.com/donate-cryptocurrencies/\" target=\"_blank\" rel=\"noreferrer noopener\">cryptocurrencies</a>, <a href=\"https://www.patreon.com/cnxsoft\" target=\"_blank\" rel=\"noreferrer noopener\">become a Patron</a> on Patreon, or purchase goods on <a href=\"https://amzn.to/3SXubZ0\" target=\"_blank\" rel=\"noreferrer noopener\">Amazon</a> or <a href=\"https://s.click.aliexpress.com/e/_DmGIIRT\" target=\"_blank\" rel=\"noreferrer noopener\">Aliexpress</a></strong>. We also use affiliate links in articles to earn commissions if you make a purchase after clicking on those links."
+    }
+  ]
+}
