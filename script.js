@@ -139,12 +139,13 @@ function setText(id, text) {
   }
 }
 
-function renderMarkdownNodes(markdown) {
+function renderMarkdownNodes(markdown, options = {}) {
   const nodes = [];
   if (typeof markdown !== "string" || !markdown.trim()) {
     return nodes;
   }
 
+  const { skipH1 = false } = options;
   const lines = markdown.split(/\r?\n/);
   let buffer = [];
 
@@ -177,7 +178,9 @@ function renderMarkdownNodes(markdown) {
     }
     if (line.startsWith("# ")) {
       flushParagraph();
-      nodes.push(createElement("h1", "", line.slice(2).trim()));
+      if (!skipH1) {
+        nodes.push(createElement("h1", "", line.slice(2).trim()));
+      }
       return;
     }
     buffer.push(line);
@@ -187,24 +190,24 @@ function renderMarkdownNodes(markdown) {
   return nodes;
 }
 
-function renderMarkdownInto(target, markdown) {
+function renderMarkdownInto(target, markdown, options) {
   if (!target) {
     return;
   }
-  const nodes = renderMarkdownNodes(markdown);
+  const nodes = renderMarkdownNodes(markdown, options || {});
   if (!nodes.length) {
     return;
   }
   nodes.forEach((node) => target.appendChild(node));
 }
 
-function setMarkdown(id, markdown) {
+function setMarkdown(id, markdown, options) {
   const node = qs(id);
   if (!node) {
     return;
   }
   clear(node);
-  renderMarkdownInto(node, markdown);
+  renderMarkdownInto(node, markdown, options || {});
 }
 
 function setHref(id, href) {
@@ -537,7 +540,9 @@ function renderFeatured(site, posts, activeTag) {
   }
 
   setText("featured-title", featured.title);
-  setMarkdown("featured-excerpt", featured.excerpt || "这篇文章暂无摘要。");
+  const featuredExcerpt = featured.excerpt || "这篇文章暂无摘要。";
+  const excerptIsMarkdown = typeof featuredExcerpt === "string" && featuredExcerpt.trim().startsWith("# ");
+  setMarkdown("featured-excerpt", featuredExcerpt, { skipH1: excerptIsMarkdown });
   setText("featured-meta", createMetaLine(featured));
   setHref("hero-primary-link", buildPostHref(featured.slug));
   renderTags("featured-tags", featured.tags);
@@ -803,7 +808,7 @@ function renderHome(site, posts) {
     title.appendChild(titleLink);
 
     const excerpt = createElement("div", "post-card__excerpt");
-    renderMarkdownInto(excerpt, post.excerpt || "");
+    renderMarkdownInto(excerpt, post.excerpt || "", { skipH1: true });
     const footer = createElement("div", "post-card__footer");
     const more = createElement("a", "post-card__more", "阅读详情 →");
     more.href = buildPostHref(post.slug);
@@ -835,7 +840,7 @@ function renderArchivePostCards(container, posts) {
     title.appendChild(titleLink);
 
     const excerpt = createElement("div", "post-card__excerpt");
-    renderMarkdownInto(excerpt, post.excerpt || "");
+    renderMarkdownInto(excerpt, post.excerpt || "", { skipH1: true });
     const footer = createElement("div", "post-card__footer");
     const more = createElement("a", "post-card__more", "阅读详情 →");
     more.href = buildPostHref(post.slug);
@@ -1097,7 +1102,7 @@ function renderSummaryContent(post) {
     const sectionNode = createElement("section", "article-section");
 
     if (typeof section === "string") {
-      renderMarkdownInto(sectionNode, section);
+      renderMarkdownInto(sectionNode, section, { skipH1: true });
       contentWrap.appendChild(sectionNode);
       return;
     }
@@ -1110,7 +1115,7 @@ function renderSummaryContent(post) {
       section.paragraphs
         .filter((paragraph) => typeof paragraph === "string" && paragraph.trim())
         .forEach((paragraph) => {
-          renderMarkdownInto(sectionNode, paragraph.trim());
+          renderMarkdownInto(sectionNode, paragraph.trim(), { skipH1: true });
         });
     }
 
@@ -1261,7 +1266,7 @@ function renderPost(post, relatedPosts) {
   const title = createElement("h1", "article-title", post.title);
   const meta = createElement("p", "article-meta", createMetaLine(post));
   const excerpt = createElement("div", "article-excerpt");
-  renderMarkdownInto(excerpt, post.excerpt || "");
+  renderMarkdownInto(excerpt, post.excerpt || "", { skipH1: true });
 
   header.append(source, title);
   if (meta.textContent) {
