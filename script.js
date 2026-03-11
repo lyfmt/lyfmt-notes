@@ -190,6 +190,21 @@ function renderMarkdownNodes(markdown, options = {}) {
   return nodes;
 }
 
+
+function extractMarkdownTitle(markdown) {
+  if (typeof markdown !== "string") {
+    return "";
+  }
+  const lines = markdown.split(/\r?\n/);
+  for (const raw of lines) {
+    const line = raw.trim();
+    if (line.startsWith("# ")) {
+      return line.slice(2).trim();
+    }
+  }
+  return "";
+}
+
 function renderMarkdownInto(target, markdown, options) {
   if (!target) {
     return;
@@ -1257,6 +1272,10 @@ function renderPost(post, relatedPosts) {
 
   const activeView = getPostViewFromQuery();
   const effectiveView = activeView === "detail" && post?.detail?.available ? "detail" : "summary";
+  const excerptTitle = extractMarkdownTitle(post.excerpt || "");
+  if (excerptTitle) {
+    post.title = excerptTitle;
+  }
   article.dataset.viewMode = effectiveView;
   article.dataset.detailLayout = effectiveView === "detail" ? (post?.detail?.layout || "default") : "summary";
   document.title = `${post.title} — ${effectiveView === "detail" ? "详情" : "总结"} — lyfmt's Notes`;
