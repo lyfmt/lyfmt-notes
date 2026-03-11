@@ -1267,7 +1267,9 @@ function renderPost(post, relatedPosts) {
   if (meta.textContent) {
     header.appendChild(meta);
   }
-  if (excerpt.textContent) {
+
+  const excerptIsMarkdown = typeof post.excerpt === "string" && post.excerpt.trim().startsWith("# ");
+  if (!(effectiveView === "summary" && excerptIsMarkdown) && excerpt.textContent) {
     header.appendChild(excerpt);
   }
 
