@@ -1,0 +1,20 @@
+{
+  "item": {
+    "id": 2717,
+    "title": "Code Concepts: A Large-Scale Synthetic Dataset Generated from Programming Concept Seeds",
+    "blog": "Hugging Face Blog",
+    "url": "https://huggingface.co/blog/nvidia/synthetic-code-concepts",
+    "published": "2026-03-11T15:50:15Z",
+    "discovered": "2026-03-11T16:00:41.11897271Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://huggingface.co/blog/nvidia/synthetic-code-concepts",
+    "ok": true,
+    "title": "Code Concepts: A Large-Scale Synthetic Dataset Generated from Programming Concept Seeds",
+    "description": "A Blog post by NVIDIA on Hugging Face",
+    "fetched_bytes": 56220,
+    "error": null
+  },
+  "classification": "normal"
+}

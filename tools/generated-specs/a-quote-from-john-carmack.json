@@ -1,0 +1,132 @@
+{
+  "slug": "a-quote-from-john-carmack",
+  "title": "A quote from John Carmack",
+  "author": "Simon Willison",
+  "publishedAt": "2026-03-11",
+  "source": "Simon Willison",
+  "url": "https://simonwillison.net/2026/Mar/11/john-carmack/#atom-everything",
+  "tags": [
+    "AI",
+    "Tools",
+    "DevTools"
+  ],
+  "excerpt": "这篇文章围绕“A quote from John Carmack”展开，RSS 摘要提到：It is hard for less experienced developers to appreciate how rarely architecting for future requirements / applications turns out net-pos...",
+  "content": [
+    {
+      "heading": "文章核心",
+      "paragraphs": [
+        "基于 RSS 摘要与页面元数据，原文重点是：It is hard for less experienced developers to appreciate how rarely architecting for future requirements / applications turns out net-positive.",
+        "来源信息：Simon Willison｜2026-03-11。"
+      ]
+    },
+    {
+      "heading": "值得继续补充的点",
+      "paragraphs": [
+        "如果后续补齐详情视图，可以继续沿着原文结构展开关键论点、案例、约束条件与结论。",
+        "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+      ]
+    }
+  ],
+  "detail": {
+    "available": true,
+    "layout": "detail-zh",
+    "translatedFrom": "https://simonwillison.net/2026/Mar/11/john-carmack/#atom-everything",
+    "sourceName": "Simon Willison",
+    "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+    "blocks": [
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Simon Willison’s Weblog"
+      },
+      {
+        "type": "paragraph",
+        "html": "11th March 2026"
+      },
+      {
+        "type": "paragraph",
+        "html": "It is hard for less experienced developers to appreciate how rarely architecting for future requirements / applications turns out net-positive."
+      },
+      {
+        "type": "paragraph",
+        "html": "— <a href=\"https://twitter.com/ID_AA_Carmack/status/1405932642005041153\" target=\"_blank\" rel=\"noreferrer noopener\">John Carmack</a>, <span>a tweet in June 2021</span>"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Recent articles"
+      },
+      {
+        "type": "list",
+        "items": [
+          "<a href=\"https://simonwillison.net/2026/Mar/9/not-so-boring/\" target=\"_blank\" rel=\"noreferrer noopener\">Perhaps not Boring Technology after all</a> - 9th March 2026",
+          "<a href=\"https://simonwillison.net/2026/Mar/5/chardet/\" target=\"_blank\" rel=\"noreferrer noopener\">Can coding agents relicense open source through a “clean room” implementation of code?</a> - 5th March 2026",
+          "<a href=\"https://simonwillison.net/2026/Mar/4/qwen/\" target=\"_blank\" rel=\"noreferrer noopener\">Something is afoot in the land of Qwen</a> - 4th March 2026"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "html": "This is a <strong>quotation</strong> collected by Simon Willison, posted on <a href=\"https://simonwillison.net/2026/Mar/11/\" target=\"_blank\" rel=\"noreferrer noopener\">11th March 2026</a>."
+      },
+      {
+        "type": "list",
+        "items": [
+          "<a href=\"https://simonwillison.net/about/#disclosures\" target=\"_blank\" rel=\"noreferrer noopener\">Disclosures</a>",
+          "<a href=\"https://simonwillison.net/about/#about-site\" target=\"_blank\" rel=\"noreferrer noopener\">Colophon</a>",
+          "©",
+          "<a href=\"https://simonwillison.net/2002/\" target=\"_blank\" rel=\"noreferrer noopener\">2002</a>",
+          "<a href=\"https://simonwillison.net/2003/\" target=\"_blank\" rel=\"noreferrer noopener\">2003</a>",
+          "<a href=\"https://simonwillison.net/2004/\" target=\"_blank\" rel=\"noreferrer noopener\">2004</a>",
+          "<a href=\"https://simonwillison.net/2005/\" target=\"_blank\" rel=\"noreferrer noopener\">2005</a>",
+          "<a href=\"https://simonwillison.net/2006/\" target=\"_blank\" rel=\"noreferrer noopener\">2006</a>",
+          "<a href=\"https://simonwillison.net/2007/\" target=\"_blank\" rel=\"noreferrer noopener\">2007</a>",
+          "<a href=\"https://simonwillison.net/2008/\" target=\"_blank\" rel=\"noreferrer noopener\">2008</a>",
+          "<a href=\"https://simonwillison.net/2009/\" target=\"_blank\" rel=\"noreferrer noopener\">2009</a>",
+          "<a href=\"https://simonwillison.net/2010/\" target=\"_blank\" rel=\"noreferrer noopener\">2010</a>",
+          "<a href=\"https://simonwillison.net/2011/\" target=\"_blank\" rel=\"noreferrer noopener\">2011</a>",
+          "<a href=\"https://simonwillison.net/2012/\" target=\"_blank\" rel=\"noreferrer noopener\">2012</a>",
+          "<a href=\"https://simonwillison.net/2013/\" target=\"_blank\" rel=\"noreferrer noopener\">2013</a>",
+          "<a href=\"https://simonwillison.net/2014/\" target=\"_blank\" rel=\"noreferrer noopener\">2014</a>",
+          "<a href=\"https://simonwillison.net/2015/\" target=\"_blank\" rel=\"noreferrer noopener\">2015</a>",
+          "<a href=\"https://simonwillison.net/2016/\" target=\"_blank\" rel=\"noreferrer noopener\">2016</a>",
+          "<a href=\"https://simonwillison.net/2017/\" target=\"_blank\" rel=\"noreferrer noopener\">2017</a>",
+          "<a href=\"https://simonwillison.net/2018/\" target=\"_blank\" rel=\"noreferrer noopener\">2018</a>",
+          "<a href=\"https://simonwillison.net/2019/\" target=\"_blank\" rel=\"noreferrer noopener\">2019</a>",
+          "<a href=\"https://simonwillison.net/2020/\" target=\"_blank\" rel=\"noreferrer noopener\">2020</a>",
+          "<a href=\"https://simonwillison.net/2021/\" target=\"_blank\" rel=\"noreferrer noopener\">2021</a>",
+          "<a href=\"https://simonwillison.net/2022/\" target=\"_blank\" rel=\"noreferrer noopener\">2022</a>",
+          "<a href=\"https://simonwillison.net/2023/\" target=\"_blank\" rel=\"noreferrer noopener\">2023</a>",
+          "<a href=\"https://simonwillison.net/2024/\" target=\"_blank\" rel=\"noreferrer noopener\">2024</a>",
+          "<a href=\"https://simonwillison.net/2025/\" target=\"_blank\" rel=\"noreferrer noopener\">2025</a>",
+          "<a href=\"https://simonwillison.net/2026/\" target=\"_blank\" rel=\"noreferrer noopener\">2026</a>"
+        ]
+      }
+    ],
+    "refineErrors": [
+      {
+        "index": 1,
+        "type": "paragraph",
+        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+      },
+      {
+        "index": 2,
+        "type": "paragraph",
+        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+      },
+      {
+        "index": 3,
+        "type": "paragraph",
+        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+      },
+      {
+        "index": 4,
+        "type": "heading",
+        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+      }
+    ]
+  },
+  "workflow": {
+    "articleId": 2715,
+    "rssTitle": "Quoting John Carmack"
+  }
+}

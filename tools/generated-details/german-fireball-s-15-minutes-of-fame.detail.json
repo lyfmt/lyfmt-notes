@@ -1,0 +1,155 @@
+{
+  "available": false,
+  "layout": "draft",
+  "translatedFrom": "https://hackaday.com/2026/03/11/german-fireballs-15-minutes-of-fame/",
+  "sourceName": "Hackaday",
+  "sourceDescription": "以下为根据原文结构自动生成的详情草稿，已保留段落层次、图片与媒体；默认尚未完成中文翻译润色。",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Hackaday"
+    },
+    {
+      "type": "list",
+      "items": [
+        "by:"
+      ]
+    },
+    {
+      "type": "list",
+      "items": [
+        "<a href=\"https://www.facebook.com/sharer/sharer.php?u=https://hackaday.com/2026/03/11/german-fireballs-15-minutes-of-fame/\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>",
+        "<a href=\"https://twitter.com/intent/tweet?text=German%20Fireball’s%2015%20Minutes%20Of%20Fame%20via%20@hackaday&amp;url=https://hackaday.com/2026/03/11/german-fireballs-15-minutes-of-fame/\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>",
+        "<a href=\"https://news.ycombinator.com/submitlink?u=https://hackaday.com/2026/03/11/german-fireballs-15-minutes-of-fame/&amp;t=German%20Fireball’s%2015%20Minutes%20Of%20Fame\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>",
+        "<a href=\"https://www.reddit.com/submit?url=https://hackaday.com/2026/03/11/german-fireballs-15-minutes-of-fame/\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>"
+      ]
+    },
+    {
+      "type": "image",
+      "src": "https://hackaday.com/wp-content/uploads/2019/08/Micrometeorites.jpg?w=800",
+      "alt": "",
+      "caption": ""
+    },
+    {
+      "type": "paragraph",
+      "html": "Sunday night, around 7:00 PM local time, a bright fireball streaked across the western German sky, exploded, and rained chunks of space rock down on the region around Koblenz. <a href=\"https://www.zdfheute.de/panorama/meteoriten-lichter-himmel-schaeden-100.html\" target=\"_blank\" rel=\"noreferrer noopener\">One of the largest known chunks put a soccer-ball-sized hole in someone’s roof</a>, landing in their bedroom. Fortunately, nobody was hurt. But given the apparent size of the explosion, there must be many more pieces out there for the finding, and a wave of hopeful meteorite hunters has descended upon the region."
+    },
+    {
+      "type": "paragraph",
+      "html": "But if you wanted a piece of the action, where exactly would you start looking? How do scientists find meteorites anyway? And what should you do if you happen to see a similar fireball in the night sky?"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Citizen Science"
+    },
+    {
+      "type": "image",
+      "src": "https://hackaday.com/wp-content/uploads/2026/03/ams-event-1467-2026-caught-from-heerlen-nl-gkyfxvshuu-webm-shot0003_thumbnail.png?w=400",
+      "alt": "",
+      "caption": "Meteorite video-bombs a boring parking lot in Heerlen, NL."
+    },
+    {
+      "type": "paragraph",
+      "html": "In the age of always-on dashboard cameras, ubiquitous smartphones, and other video recording devices, it’s hard for a shy meteorite to find a quiet spot out of the public eye. That makes them a lot easier to find than they were in the past. Indeed, the International Meteor Organization, which aggregates amateur meteor observations, <a href=\"https://fireballs.imo.net/members/imo_view/event/2026/1467?org=imo\" target=\"_blank\" rel=\"noreferrer noopener\">received more than 3,200 reports of this one</a>, including several with video documentation. <a href=\"https://fireballs.imo.net/members/imo_video/view_video?video_id=21143\" target=\"_blank\" rel=\"noreferrer noopener\">Some are stunning,</a> and others may not even be of the event at all."
+    },
+    {
+      "type": "paragraph",
+      "html": "By collecting reports from many locations, they can hope to piece together the meteorite’s trajectory. However, if you look at the individual reports, it’s clear that this is a difficult task. Nobody is expecting a bright fireball to streak across the night sky, so many of the reports are reasonably vague on the details and heavy on the awe."
+    },
+    {
+      "type": "paragraph",
+      "html": "<a href=\"https://fireballs.imo.net/members/imo_view/report/409398\" target=\"_blank\" rel=\"noreferrer noopener\">This report from [Sophie Z]</a>, for instance, is typical. She records where she was and roughly the location in the night sky where the meteorite passed, along with the comment “I’ve never seen anything so amazing and large before in my life.” Other amateur observers are more precise. [David C] (“I have a Ph.D in physics”) managed to record the start and the end heading of the meteorite to a couple of decimal places. He must have had a camera."
+    },
+    {
+      "type": "paragraph",
+      "html": "We’d love to know the exact algorithm used for combining the reports. It’s worth noting that reporters get an experience score, and the system presumably takes this into account when producing the average track. However, the system works, though, with 3,200 reports of a once-in-a-lifetime meteorite, it’s bound to come up with a pretty good estimate. But for smaller meteorites, <a href=\"https://fireballs.imo.net/members/imo_view/event/2026/1608\" target=\"_blank\" rel=\"noreferrer noopener\">like this one that flew by on Monday night</a>, there are fewer observers, and deducing the actual track is a lot more difficult."
+    },
+    {
+      "type": "paragraph",
+      "html": "Everyday meteorites are better tracked by taking a more systematic approach. We’ve covered a few of these networks before, because the equipment needed to contribute meaningfully isn’t all that much more complicated than a single-board computer with a network connection, a camera module, and a weatherproof housing to keep it working all year round. We’ve <a href=\"https://hackaday.com/2016/12/04/fripon-is-french-for-meteorite-hunting/\" target=\"_blank\" rel=\"noreferrer noopener\">covered the French meteorite-hunting network, Fripon</a>, before, and <a href=\"https://hackaday.io/project/175041-cheap-all-sky-camera-project-with-raspberry-pi\" target=\"_blank\" rel=\"noreferrer noopener\">have featured other amateur sky-camera builds to boot</a>. But we’re not amateur astronomers, so we’re not in the loop on what the current state of the art is. If you know about coordinated citizen-science meteorite tracking efforts, let us know in the comments."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Geologists Get Into The Astronomy Game"
+    },
+    {
+      "type": "paragraph",
+      "html": "This meteorite was big enough and loud enough when it exploded that participation in tracking wasn’t limited to those who are looking up. Geologists at the Karlsruhe Institute for Technology (KIT) <a href=\"https://idw-online.de/en/news867223\" target=\"_blank\" rel=\"noreferrer noopener\">found that the explosion registered on their seismometers</a>. (Via <a href=\"https://www.heise.de/news/Feuerball-ueber-Westdeutschland-Mit-Seismometern-die-genaue-Flugbahn-ermittelt-11205142.html\" target=\"_blank\" rel=\"noreferrer noopener\">Heise Online</a>.) These have the advantage that they are in very well-known locations with extremely precise timestamps. After all, that’s what they’re used for every day, although the medium that the pressure waves travel through is usually the earth rather than the air."
+    },
+    {
+      "type": "paragraph",
+      "html": "This was also a particularly lucky event for the KIT team because it happened over a particularly dense network of seismological stations in the Eifel mountains, allowing for greater resolution. And as they point out, using the sound of the explosion has the additional advantage of not being hindered by light conditions during the day or clouds at night. This makes us think of how easy it would be to set up a distributed system of microphones to do something similar."
+    },
+    {
+      "type": "image",
+      "src": "https://hackaday.com/wp-content/uploads/2026/03/meteorit-trajektorien-konturlinien-sektion.png",
+      "alt": "",
+      "caption": ""
+    },
+    {
+      "type": "paragraph",
+      "html": "<a href=\"https://hackaday.com/wp-content/uploads/2026/03/meteorit-trajektorien-konturlinien-sektion.png\" target=\"_blank\" rel=\"noreferrer noopener\"></a>"
+    },
+    {
+      "type": "paragraph",
+      "html": "The KIT track estimate lines up fairly well with the aggregated estimate from amateur observers, but it’s not exactly the same. Who is right? We’ll see where more of the meteorites are found on the ground, presumably, in the next few weeks."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Meteorite Hunting"
+    },
+    {
+      "type": "paragraph",
+      "html": "If the meteorite fell through our roof and <a href=\"https://merkurist.de/koblenz/meteoriten-einschlag-nach-einschlag-in-koblenz-so-sieht-der-meteorit-aus_GgLU/CuQc\" target=\"_blank\" rel=\"noreferrer noopener\">chunks were scattered all around our bedroom</a>, we’d count ourselves lucky. But would we get to keep it? Of course, it depends on the local laws, and in Germany, you can keep the meteorites in most cases, unless the state decides that it’s of special value for whatever reason, and then they get first dibs."
+    },
+    {
+      "type": "paragraph",
+      "html": "Apparently, <a href=\"https://www.tagesschau.de/inland/regional/rheinlandpfalz/swr-teile-von-meteoriten-wer-darf-sie-behalten-und-wie-viel-sind-sie-wert-100.html\" target=\"_blank\" rel=\"noreferrer noopener\">the going rate for meteorites is between 1€ and 5,000€ per gram</a>, so we’re not entirely sure that it will cover the damage. Maybe our homeowners’ insurance would? We’ll have to go dig out our policy to be sure, but however that plays out, we’d just be stoked to have the meteorite chunks and a good story."
+    },
+    {
+      "type": "paragraph",
+      "html": "While very big fireballs like this are rare, NASA estimates that around 44,000 kg of meteoritic material falls on the Earth every day. (Whoah!) Most of this burns up in the atmosphere, but some falls to the ground. Most of <em>that</em> fraction is in the form of micrometeorites, which are sand-grain-sized bits that are very likely raining down on us every day. Indeed, if you’re interested, you can try to collect them, <a href=\"https://hackaday.com/2019/08/21/fantastic-micrometeorites-and-where-to-find-them/\" target=\"_blank\" rel=\"noreferrer noopener\">and all you need is a tarp on the roof or a magnet in your downspout, a good microscope, and a bit of knowledge</a>. So if all you want is some extraterrestrial rock, and you’re not worried so much about the size, maybe micrometeorite hunting is the path to success."
+    },
+    {
+      "type": "paragraph",
+      "html": "Have you gone looking for meteorites? Know of any up-to-date amateur fireball-hunting networks? Sound off in the comments!"
+    },
+    {
+      "type": "image",
+      "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_face.png",
+      "alt": "",
+      "caption": ""
+    },
+    {
+      "type": "image",
+      "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_twitter.png",
+      "alt": "",
+      "caption": ""
+    },
+    {
+      "type": "image",
+      "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_in.png",
+      "alt": "",
+      "caption": ""
+    },
+    {
+      "type": "image",
+      "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_mail1.png",
+      "alt": "",
+      "caption": ""
+    },
+    {
+      "type": "list",
+      "items": [
+        "<a href=\"https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhackaday.com%2F2026%2F03%2F11%2Fgerman-fireballs-15-minutes-of-fame%2F\" target=\"_blank\" rel=\"noreferrer noopener\"> <i> </i> </a>",
+        "<a href=\"https://twitter.com/intent/tweet?text=German%20Fireball’s%2015%20Minutes%20Of%20Fame%20via%20@hackaday&amp;url=https://hackaday.com/2026/03/11/german-fireballs-15-minutes-of-fame/\" target=\"_blank\" rel=\"noreferrer noopener\"> <i></i> </a>",
+        "<a href=\"https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fhackaday.com%2F2026%2F03%2F11%2Fgerman-fireballs-15-minutes-of-fame%2F\" target=\"_blank\" rel=\"noreferrer noopener\"> <i></i> </a>",
+        "<a href=\"mailto:?subject=German+Fireball%E2%80%99s+15+Minutes+Of+Fame | Hackaday&amp;body=https%3A%2F%2Fhackaday.com%2F2026%2F03%2F11%2Fgerman-fireballs-15-minutes-of-fame%2F\" target=\"_blank\" rel=\"noreferrer noopener\"> <i></i> </a>"
+      ]
+    }
+  ]
+}

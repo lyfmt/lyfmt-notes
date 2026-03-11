@@ -11,7 +11,7 @@
       "publishedAt": "2026-03-11",
       "source": "Hugging Face Blog",
       "url": "https://huggingface.co/blog/nvidia/synthetic-code-concepts",
-      "excerpt": "# Code Concepts: A Large-Scale Synthetic Dataset Generated from Programming Concept Seeds\n\n### 内容分类\n【AI】\n\n### 内容总结\n详情内容显示当前缓存仍为站点反爬或挑战页，尚未获取到可靠正文，因此仅保留草稿入口，无法生成可发布的详情内容。该条信息没有提供文章主体、方法、结论或数据细节，现有信息仅说明内容抓取失败与处理结果，无法据此展开更多描述。",
+      "excerpt": "# Code Concepts: A Large-Scale Synthetic Dataset Generated from Programming Concept Seeds\n\n### 内容分类\n【AI】\n\n### 内容总结\n该文介绍一种面向大规模语言模型预训练的概念驱动合成数据生成方法，强调数据质量与特异性的重要性。作者基于对 Nemotron‑Pretraining‑Code‑{v1,v2} 数据集的大规模标注构建了层级化编程知识分类体系，覆盖从基础构造到高级算法与数据结构模式，并支持按概念组合进行有针对性的生成，控制难度、多样性与概念平衡。作为实践应用，团队从 HumanEval 提示中筛选出 91 个核心概念，生成约 1500 万个可运行的 Python 编程问题，并用 ast.parse 验证可执行性，作为 Nemotron-Pretraining-Specialized-v1.1 中的子集发布。将该数据用于 Nemotron‑Nano‑v3 预训练最后 1000 亿 tokens，可在 HumanEval 上提升 6 分。文中还通过图示展示了从概念种子到问题生成与筛选的流程。",
       "tags": [
         "DevTools"
       ],
@@ -21,7 +21,7 @@
           "paragraphs": [
             "# Code Concepts: A Large-Scale Synthetic Dataset Generated from Programming Concept Seeds",
             "### 内容分类\n【AI】",
-            "### 内容总结\n详情内容显示当前缓存仍为站点反爬或挑战页，尚未获取到可靠正文，因此仅保留草稿入口，无法生成可发布的详情内容。该条信息没有提供文章主体、方法、结论或数据细节，现有信息仅说明内容抓取失败与处理结果，无法据此展开更多描述。"
+            "### 内容总结\n该文介绍一种面向大规模语言模型预训练的概念驱动合成数据生成方法，强调数据质量与特异性的重要性。作者基于对 Nemotron‑Pretraining‑Code‑{v1,v2} 数据集的大规模标注构建了层级化编程知识分类体系，覆盖从基础构造到高级算法与数据结构模式，并支持按概念组合进行有针对性的生成，控制难度、多样性与概念平衡。作为实践应用，团队从 HumanEval 提示中筛选出 91 个核心概念，生成约 1500 万个可运行的 Python 编程问题，并用 ast.parse 验证可执行性，作为 Nemotron-Pretraining-Specialized-v1.1 中的子集发布。将该数据用于 Nemotron‑Nano‑v3 预训练最后 1000 亿 tokens，可在 HumanEval 上提升 6 分。文中还通过图示展示了从概念种子到问题生成与筛选的流程。"
           ]
         }
       ],
@@ -34,23 +34,23 @@
         "blocks": [
           {
             "type": "paragraph",
-            "html": "在大规模 LLM 开发中，提升模型质量不仅取决于数据数量，还取决于数据质量和特异性。虽然预训练数据集通常包含广泛的信息，但它们可能缺乏强化特定技能（如推理或编程熟练度）所需的概念性针对。为应对这一挑战，我们设计了一种可扩展、以概念驱动的合成数据生成方法——一种使研究人员能够生成与期望模型能力对齐的数据的工作流程。作为初步应用，我们构建了一个由 1500 万个 Python 编程问题组成的预训练规模合成数据集，作为 Nemotron-Pretraining-Specialized-v1.1 数据集的 Nemotron-Pretraining-Code-Concepts 子集发布。我们显示，在 Nemotron-Nano-v3 预训练的最后 1000 亿个 token 中包含这些数据，在 HumanEval 基准上带来 6 分的提升。"
+            "html": "在大规模 LLM 开发中，提升模型质量不仅取决于数据数量，还取决于数据质量和特异性。虽然预训练数据集通常包含广泛的信息范围，但它们可能缺少强化特定技能所需的概念性针对性，例如推理或编程熟练度。为了解决这一挑战，我们设计了一种可扩展、由概念驱动的合成数据生成方法——一种使研究人员能够生成与期望模型能力对齐的数据的工作流。作为初始应用，我们构建了一个预训练规模的合成数据集，由 1500 万个 Python 编程问题组成，作为 Nemotron-Pretraining-Specialized-v1.1 数据集的 Nemotron-Pretraining-Code-Concepts 子集发布。我们表明，在 Nemotron-Nano-v3 预训练的最后 1000 亿 tokens 中包含这些数据，会在 HumanEval 基准上带来 6 分的提升。"
           },
           {
             "type": "paragraph",
-            "html": "我们的工作流程以一个经过整理的编程知识分类体系为中心，该体系来自对 Nemotron‑Pretraining‑Code‑{v1,v2} 数据集的大规模标注。该分类体系以层级结构编码了数千个编程概念，从基础构造（例如，字符串、递归）到高级的算法和数据结构模式。使用该分类体系，开发者可以通过选定概念的组合与提炼来进行有针对性的数据生成，使实验者能够控制生成数据的难度、多样性和概念平衡。"
+            "html": "我们的工作流以一个经过策划的编程知识分类体系为中心，该体系源自对 Nemotron‑Pretraining‑Code‑{v1,v2} 数据集的大规模标注。该分类体系编码了成千上万的编程概念，并以层级方式组织，从基础构造（例如，字符串、递归）到高级算法和数据结构模式。使用该分类体系，开发者可以通过对选定概念的组合与蒸馏来进行有针对性的数据生成，使实验者能够控制生成数据的难度、多样性以及概念平衡。"
           },
           {
             "type": "paragraph",
-            "html": "为了在实践中评估这一工作流程，我们将其应用于创建一个大规模合成数据集，旨在增强 LLM 预训练中的基础 Python 编程技能。我们首先通过在我们的分类体系内对其代码补全提示进行分类，确定了与 HumanEval 基准最相关的 91 个核心概念（尽管仍能广泛代表真实的编程知识）。在这些概念的组合引导下，我们生成了约 1500 万个合成 Python 编程问题，并验证每个问题都由可运行的 Python 代码组成（使用 Python 的 ast.parse 函数）。图 1 提供了我们将工作流程应用于合成 Code Concepts 数据集的可视化总结，图 2 提供了问题生成过程的可视化以及一个概念种子与合成问题配对的示例。"
+            "html": "为了在实践中评估这一工作流程，我们将其应用于创建一个大规模合成数据集，旨在增强 LLM 预训练中的基础 Python 编程技能。我们首先通过在我们的分类体系中对其代码补全提示进行分类，确定了与 HumanEval 基准最相关的 91 个核心概念（尽管仍然广泛代表真实的编程知识）。在这些概念组合的指导下，我们生成了大约 1500 万个合成的 Python 编程问题，其中每一个都被验证为包含可运行的 Python 代码（使用 Python 的 ast.parse 函数）。图 1 提供了我们将该工作流程应用于合成 Code Concepts 数据集的可视化摘要，图 2 提供了问题生成过程的可视化以及一个概念种子与合成问题对的示例。"
           },
           {
             "type": "paragraph",
-            "html": "图 1：用于生成 Code Concepts 数据集的概念驱动数据生成。使用从 Nemotron-Pretraining-Code-{v1,v2} 数据集中构建的分类体系，我们从 HumanEval 提示中提取编程概念，并将其用于开放式生成。我们的工作流程产生了约 1500 万个源自 91 种不同编程概念的 Python 编程问题。"
+            "html": "图 1：用于生成 Code Concepts 数据集的概念驱动数据生成。使用从 Nemotron-Pretraining-Code-{v1,v2} 数据集构建的分类体系，我们从 HumanEval 提示中提取编程概念，并用这些进行开放式生成。我们的工作流生成了约 1500 万个 Python 编程问题，源自 91 个不同的编程概念。"
           },
           {
             "type": "paragraph",
-            "html": "图2：作为我们概念驱动的数据生成工作流程一部分的 Python 编程问题生成的可视化表示。提示由概念组合（包含在蓝色框中并使用点记法表示）、一条指令和一些约束构建。使用 GPT-OSS 120B 生成一个问题，然后解析并过滤以保证质量。对于这个特定示例，概念 data-structures.sets.operation、algorithms.arrays.processing 和 algorithms.geometry.computational 的组合有所贡献"
+            "html": "图2：作为我们概念驱动的数据生成工作流的一部分，Python 编程问题生成的可视化表示。一个提示由概念的组合（包含在蓝色框中并使用点表示法表示）、一条指令和一些约束构建。使用 GPT-OSS 120B 生成一个问题，然后解析并进行质量筛选。对于这个特定示例，概念 data-structures.sets.operation、algorithms.arrays.processing 和 algorithms.geometry.computational 的组合贡献"
           }
         ]
       },
@@ -66,7 +66,7 @@
       "publishedAt": "2026-03-11",
       "source": "Hackaday",
       "url": "https://hackaday.com/2026/03/11/german-fireballs-15-minutes-of-fame/",
-      "excerpt": "# German Fireball’s 15 Minutes of Fame\n\n### 内容分类\n【Reading】\n\n### 内容总结\n文章讲述德国西部周日晚出现明亮火流星并在科布伦茨附近爆炸，碎块甚至打穿屋顶但无人受伤，引发陨石猎人关注。大量业余观测报告被收集用于估算轨迹，但精度参差不齐；现代行车记录仪与手机让发现更容易。文中提到公民科学网络与专用摄像系统对日常陨石追踪的价值。卡尔斯鲁厄理工学院地质学家利用地震仪记录冲击波，给出轨迹估计并与业余观测结果接近但不完全一致。最后讨论德国法律下陨石归属、陨石价格区间，以及微陨石收集方法与地球每天接收陨石物质的规模。",
+      "excerpt": "# German Fireball’s 15 Minutes of Fame\n\n### 内容分类\n【Hardware】\n\n### 内容总结\n文章描述德国西部夜空出现明亮火流星并在科布伦茨附近爆炸，碎片落入民宅屋顶但无人受伤，引发陨石猎人涌入。大量行车记录仪与手机视频让追踪更容易，国际陨石组织收集到3200多份报告，通过多点观测拼接轨迹，但因目击者描述含糊而有难度。文中提到公民科学网络与业余观测设备的作用，并举例更系统的陨石搜寻网络。卡尔斯鲁厄理工学院利用地震仪记录爆炸声波辅助定位，结果与业余估计接近但不完全一致。还讨论德国法律下陨石归属、价格区间与保险问题，并说明每天有大量陨石物质落地，多为微陨石，可用简单工具尝试收集。",
       "tags": [
         "Hardware"
       ],
@@ -75,8 +75,8 @@
           "heading": "总结",
           "paragraphs": [
             "# German Fireball’s 15 Minutes of Fame",
-            "### 内容分类\n【Reading】",
-            "### 内容总结\n文章讲述德国西部周日晚出现明亮火流星并在科布伦茨附近爆炸，碎块甚至打穿屋顶但无人受伤，引发陨石猎人关注。大量业余观测报告被收集用于估算轨迹，但精度参差不齐；现代行车记录仪与手机让发现更容易。文中提到公民科学网络与专用摄像系统对日常陨石追踪的价值。卡尔斯鲁厄理工学院地质学家利用地震仪记录冲击波，给出轨迹估计并与业余观测结果接近但不完全一致。最后讨论德国法律下陨石归属、陨石价格区间，以及微陨石收集方法与地球每天接收陨石物质的规模。"
+            "### 内容分类\n【Hardware】",
+            "### 内容总结\n文章描述德国西部夜空出现明亮火流星并在科布伦茨附近爆炸，碎片落入民宅屋顶但无人受伤，引发陨石猎人涌入。大量行车记录仪与手机视频让追踪更容易，国际陨石组织收集到3200多份报告，通过多点观测拼接轨迹，但因目击者描述含糊而有难度。文中提到公民科学网络与业余观测设备的作用，并举例更系统的陨石搜寻网络。卡尔斯鲁厄理工学院利用地震仪记录爆炸声波辅助定位，结果与业余估计接近但不完全一致。还讨论德国法律下陨石归属、价格区间与保险问题，并说明每天有大量陨石物质落地，多为微陨石，可用简单工具尝试收集。"
           ]
         }
       ],
@@ -115,11 +115,11 @@
           },
           {
             "type": "paragraph",
-            "html": "周日晚上，当地时间约 7:00，一颗明亮的火流星划过德国西部的天空，爆炸，并在科布伦茨周边地区落下太空岩石碎块。<a href=\"https://www.zdfheute.de/panorama/meteoriten-lichter-himmel-schaeden-100.html\" target=\"_blank\" rel=\"noreferrer noopener\">已知最大的碎块之一在某人屋顶上打出了一个足球大小的洞</a>，落在了他们的卧室里。幸运的是，没有人受伤。但鉴于爆炸的明显规模，外面一定还有更多碎片等待被找到，一波充满希望的陨石猎人已经涌向该地区。"
+            "html": "周日晚上，当地时间约 7:00 PM，一颗明亮的火流星划过德国西部的天空，爆炸，并把太空岩石碎块洒落在科布伦茨周边地区。<a href=\"https://www.zdfheute.de/panorama/meteoriten-lichter-himmel-schaeden-100.html\" target=\"_blank\" rel=\"noreferrer noopener\">已知最大的一块在某人的屋顶上砸出一个足球大小的洞</a>，落在了他们的卧室里。幸运的是，没有人受伤。但鉴于爆炸的明显规模，外面一定还有更多碎片可供寻找，于是大批满怀希望的陨石猎人涌入该地区。"
           },
           {
             "type": "paragraph",
-            "html": "但如果你想分一杯羹，你究竟该从哪里开始找？科学家们到底是如何找到陨石的？如果你碰巧在夜空中看到类似的火球，你应该做什么？"
+            "html": "但是如果你想分一杯羹，你到底应该从哪里开始找？科学家到底是如何找到陨石的？如果你碰巧在夜空中看到类似的火球，你应该怎么做？"
           },
           {
             "type": "heading",
@@ -134,36 +134,36 @@
           },
           {
             "type": "paragraph",
-            "html": "在始终开启的行车记录仪、无处不在的智能手机和其他视频记录设备的时代，害羞的陨石很难找到一个远离公众视线的安静地点。这让它们比过去更容易被找到。确实，汇总业余陨石观测的 International Meteor Organization，<a href=\"https://fireballs.imo.net/members/imo_view/event/2026/1467?org=imo\" target=\"_blank\" rel=\"noreferrer noopener\">收到了超过 3,200 份关于这次事件的报告</a>，其中包括几份带有视频记录的。<a href=\"https://fireballs.imo.net/members/imo_video/view_video?video_id=21143\" target=\"_blank\" rel=\"noreferrer noopener\">有些令人惊叹，</a>而另一些可能根本不是这次事件的。"
+            "html": "在始终开启的行车记录仪、无处不在的智能手机以及其他视频记录设备的时代，一块害羞的陨石很难找到一个不在公众视线中的安静地点。这使它们比过去更容易被找到。确实，汇集业余陨石观测的 International Meteor Organization，<a href=\"https://fireballs.imo.net/members/imo_view/event/2026/1467?org=imo\" target=\"_blank\" rel=\"noreferrer noopener\">收到了关于这一次的超过 3,200 份报告</a>，其中包括几份带有视频记录的。<a href=\"https://fireballs.imo.net/members/imo_video/view_video?video_id=21143\" target=\"_blank\" rel=\"noreferrer noopener\">有些令人惊叹，</a>而另一些甚至可能根本不是这一事件。"
           },
           {
             "type": "paragraph",
-            "html": "通过收集来自许多地点的报告，他们可以希望拼凑出陨石的轨迹。然而，如果你看各个报告，很明显这是一项困难的任务。没有人会期待一颗明亮的火球划过夜空，所以许多报告在细节上相当含糊，而在惊叹上分量很重。"
+            "html": "通过收集来自许多地点的报告，他们可以希望拼凑出这块陨石的轨迹。然而，如果你查看这些单独的报告，很明显这是一项困难的任务。没有人期待一枚明亮的火球划过夜空，所以许多报告在细节上相当含糊，并且充满了敬畏。"
           },
           {
             "type": "paragraph",
-            "html": "<a href=\"https://fireballs.imo.net/members/imo_view/report/409398\" target=\"_blank\" rel=\"noreferrer noopener\">来自 [Sophie Z]</a> 的这份报告，例如，就是典型的。她记录了她所在的位置以及夜空中陨石经过的大致位置，并附上评论“我一生中从未见过如此令人惊叹而且如此巨大的东西。”其他业余观察者更为精确。[David C]（“我有物理学博士学位”）设法把陨石的起始和终止方位角记录到两位小数。他一定有一台相机。"
+            "html": "<a href=\"https://fireballs.imo.net/members/imo_view/report/409398\" target=\"_blank\" rel=\"noreferrer noopener\">来自[Sophie Z]的这份报告</a>，例如，是典型的。她记录了她当时所在的位置以及陨石经过的夜空中的大致位置，并附上了评论“我这辈子从未见过如此令人惊叹又巨大的东西。”其他业余观测者更为精确。[David C]（“I have a Ph.D in physics”）成功把陨石的起始和结束方位记录到小数点后两位。他一定有一台相机。"
           },
           {
             "type": "paragraph",
-            "html": "我们很想知道用于合并这些报告的确切算法。值得注意的是，报告者会得到一个经验分数，系统在生成平均轨迹时可能会把这一点考虑在内。不过，这个系统确实有效，凭借一生仅一次的陨石拥有 3,200 份报告，它一定能得出相当不错的估计。但对于更小的陨石，<a href=\"https://fireballs.imo.net/members/imo_view/event/2026/1608\" target=\"_blank\" rel=\"noreferrer noopener\">像这次在周一晚上飞过的这颗</a>，观察者更少，推断实际轨迹要困难得多。"
+            "html": "我们很想知道用于合并报告的确切算法。值得注意的是，报告者会得到一个经验评分，而且该系统很可能在生成平均轨迹时将其考虑在内。不过，该系统确实有效，因为有 3,200 份关于一次千载难逢的陨石的报告，它必定会给出一个相当不错的估计。但对于较小的陨石，<a href=\"https://fireballs.imo.net/members/imo_view/event/2026/1608\" target=\"_blank\" rel=\"noreferrer noopener\">比如这个在周一晚上飞过的</a>，观察者更少，推导实际轨迹要困难得多。"
           },
           {
             "type": "paragraph",
-            "html": "日常陨石通过采用更系统的方法能被更好地追踪。我们之前报道过这些网络中的几个，因为要做出有意义的贡献所需的设备并不比一台带网络连接的单板计算机、一个摄像头模块以及一个用于让它全年运作的防风雨外壳复杂多少。我们之前<a href=\"https://hackaday.com/2016/12/04/fripon-is-french-for-meteorite-hunting/\" target=\"_blank\" rel=\"noreferrer noopener\">报道过法国的陨石猎寻网络 Fripon</a>，并且还<a href=\"https://hackaday.io/project/175041-cheap-all-sky-camera-project-with-raspberry-pi\" target=\"_blank\" rel=\"noreferrer noopener\">介绍过其他业余天空摄像头的构建</a>。但我们不是业余天文学家，所以我们不了解当前技术的现状。如果你知道协调的公民科学陨石追踪努力，请在评论中告诉我们。"
+            "html": "日常陨石通过采取更系统化的方法能被更好地追踪。我们之前报道过其中一些网络，因为要有意义地做出贡献所需的设备并没有比一台带网络连接的单板计算机、一个相机模块以及一个防风雨外壳以便全年保持其工作复杂多少。我们以前<a href=\"https://hackaday.com/2016/12/04/fripon-is-french-for-meteorite-hunting/\" target=\"_blank\" rel=\"noreferrer noopener\">报道过法国陨石搜寻网络 Fripon</a>，并且<a href=\"https://hackaday.io/project/175041-cheap-all-sky-camera-project-with-raspberry-pi\" target=\"_blank\" rel=\"noreferrer noopener\">也介绍过其他业余天空相机构建作为补充</a>。但我们不是业余天文学家，所以我们并不了解当前最先进的水平是什么。如果你知道协调的公民科学陨石追踪行动，请在评论中告诉我们。"
           },
           {
             "type": "heading",
             "level": 2,
-            "text": "地质学家进入天文学游戏"
+            "text": "地质学家进入天文学领域"
           },
           {
             "type": "paragraph",
-            "html": "这块陨石在爆炸时的规模足够大、声响足够大，因此参与追踪的不仅限于那些抬头看的人。卡尔斯鲁厄理工学院（KIT）的地质学家<a href=\"https://idw-online.de/en/news867223\" target=\"_blank\" rel=\"noreferrer noopener\">发现这次爆炸在他们的地震仪上被记录</a>。（通过<a href=\"https://www.heise.de/news/Feuerball-ueber-Westdeutschland-Mit-Seismometern-die-genaue-Flugbahn-ermittelt-11205142.html\" target=\"_blank\" rel=\"noreferrer noopener\">Heise Online</a>。）这些有一个优点，即它们位于非常明确的位置，并且时间戳极其精确。毕竟，这正是它们每天要用的，尽管压力波传播的介质通常是地球而不是空气。"
+            "html": "这颗陨石在爆炸时足够大且足够响亮，以至于参与追踪的人不限于那些仰望天空的人。卡尔斯鲁厄理工学院（KIT）的地质学家<a href=\"https://idw-online.de/en/news867223\" target=\"_blank\" rel=\"noreferrer noopener\">发现爆炸在他们的地震仪上有记录</a>。（通过<a href=\"https://www.heise.de/news/Feuerball-ueber-Westdeutschland-Mit-Seismometern-die-genaue-Flugbahn-ermittelt-11205142.html\" target=\"_blank\" rel=\"noreferrer noopener\">Heise Online</a>。）这些的优势在于它们位于非常众所周知的位置，并且具有极其精确的时间戳。毕竟，这正是它们每天被使用的用途，尽管压力波通常穿过的介质是地球而不是空气。"
           },
           {
             "type": "paragraph",
-            "html": "这对 KIT 团队来说也是一个特别幸运的事件，因为它发生在埃费尔山区一个特别密集的地震监测站网络上，从而允许更高的分辨率。正如他们指出的那样，使用爆炸的声音还有一个额外的优势，即不会受到白天光照条件或夜间云层的影响。这让我们想到，搭建一个分布式麦克风系统来做类似的事情会有多么容易。"
+            "html": "这对KIT团队来说也是一个特别幸运的事件，因为它发生在艾费尔山脉一个特别密集的地震台站网络之上，从而允许更高的分辨率。而且正如他们指出的那样，使用爆炸的声音还有一个额外的优势，即不受白天的光照条件或夜晚的云层阻碍。这让我们想到，建立一个分布式麦克风系统来做类似的事情会有多容易。"
           },
           {
             "type": "image",
@@ -177,7 +177,7 @@
           },
           {
             "type": "paragraph",
-            "html": "KIT 轨迹估计与业余观测者的汇总估计相当吻合，但并不完全相同。谁是对的？我们将在接下来的几周里看到更多陨石在地面上被发现，想必如此。"
+            "html": "KIT 轨迹估计与业余观测者汇总的估计相当吻合，但并不完全相同。谁是对的？我们将在接下来的几周内看到更多陨石在地面上被发现，想必如此。"
           },
           {
             "type": "heading",
@@ -186,19 +186,19 @@
           },
           {
             "type": "paragraph",
-            "html": "如果陨石落穿了我们的屋顶并且<a href=\"https://merkurist.de/koblenz/meteoriten-einschlag-nach-einschlag-in-koblenz-so-sieht-der-meteorit-aus_GgLU/CuQc\" target=\"_blank\" rel=\"noreferrer noopener\">碎块散落在我们卧室各处</a>，我们会认为自己很幸运。但我们能保留它吗？当然，这取决于当地法律，而在德国，在大多数情况下你可以保留陨石，除非国家决定出于任何原因它具有特殊价值，那么他们就有优先权。"
+            "html": "如果陨石穿过我们的屋顶并且<a href=\"https://merkurist.de/koblenz/meteoriten-einschlag-nach-einschlag-in-koblenz-so-sieht-der-meteorit-aus_GgLU/CuQc\" target=\"_blank\" rel=\"noreferrer noopener\">碎块散落在我们卧室各处</a>，我们会认为自己很幸运。但我们能保留它吗？当然，这取决于当地法律，在德国，大多数情况下你可以保留陨石，除非国家出于任何原因认为它具有特殊价值，那样他们就拥有优先选择权。"
           },
           {
             "type": "paragraph",
-            "html": "显然，<a href=\"https://www.tagesschau.de/inland/regional/rheinlandpfalz/swr-teile-von-meteoriten-wer-darf-sie-behalten-und-wie-viel-sind-sie-wert-100.html\" target=\"_blank\" rel=\"noreferrer noopener\">陨石的行情价格在每克 1€ 到 5,000€ 之间</a>，所以我们不完全确定这是否能覆盖损失。也许我们的房主保险可以？我们得去翻出保单才能确定，但不管结果如何，我们都会很兴奋能有这些陨石碎块和一个好故事。"
+            "html": "显然，<a href=\"https://www.tagesschau.de/inland/regional/rheinlandpfalz/swr-teile-von-meteoriten-wer-darf-sie-behalten-und-wie-viel-sind-sie-wert-100.html\" target=\"_blank\" rel=\"noreferrer noopener\">陨石的行情价在每克1€到5,000€之间</a>，所以我们不完全确定它是否能覆盖损失。也许我们的房主保险可以？我们得去把保单翻出来才能确定，但无论结果如何，我们都会因为拥有这些陨石碎块和一个好故事而兴奋。"
           },
           {
             "type": "paragraph",
-            "html": "虽然像这样的非常大的火球很罕见，NASA 估计每天大约有 44,000 kg 的陨石物质落到地球上。（哇！）其中大部分在大气中烧掉，但有些落到地面。大多数 <em>那</em> 一部分以微陨石的形式存在，它们是沙粒大小的碎片，很可能每天都在落到我们身上。的确，如果你有兴趣，你可以试着收集它们，<a href=\"https://hackaday.com/2019/08/21/fantastic-micrometeorites-and-where-to-find-them/\" target=\"_blank\" rel=\"noreferrer noopener\">而你所需要的只是屋顶上的一块防水布或落水管里的一个磁铁、一台好的显微镜，以及一点知识</a>。所以如果你只想要一些外星岩石，并且不太担心大小，也许微陨石狩猎是通往成功的道路。"
+            "html": "虽然像这样的非常大的火球很罕见，NASA 估计每天大约有 44,000 公斤的陨石物质落到地球上。（哇哦！）其中大部分在大气层中烧尽，但有些落到地面。其中 <em>那</em> 部分的大多数是以微陨石的形式，它们是沙粒大小的碎屑，很可能每天都在落到我们身上。确实，如果你感兴趣，你可以尝试收集它们，<a href=\"https://hackaday.com/2019/08/21/fantastic-micrometeorites-and-where-to-find-them/\" target=\"_blank\" rel=\"noreferrer noopener\">而你所需要的只是屋顶上的一块防水布或落水管里的一个磁铁、一个好的显微镜，以及一点知识</a>。所以如果你只想要一些外星岩石，并且你不太担心大小，也许微陨石狩猎是通向成功的道路。"
           },
           {
             "type": "paragraph",
-            "html": "你去找过陨石吗？知道任何最新的业余火球狩猎网络吗？在评论里说说！"
+            "html": "你去找过陨石吗？知道任何最新的业余火球狩猎网络吗？在评论里说说吧！"
           },
           {
             "type": "image",
@@ -247,7 +247,7 @@
       "publishedAt": "2026-03-11",
       "source": "Simon Willison",
       "url": "https://simonwillison.net/2026/Mar/11/john-carmack/#atom-everything",
-      "excerpt": "# Quoting John Carmack\n\n### 内容分类\n【Reading】\n\n### 内容总结\n这篇内容来自 Simon Willison 的博客，日期为 2026 年 3 月 11 日。文章核心是一段 John Carmack 在 2021 年 6 月推文中的观点：经验较少的开发者往往难以体会，为未来需求或应用进行架构设计最终产生净正效益是非常罕见的。页面还列出了近期文章列表与站点年份归档信息，并标明这是一条被收集的引述。",
+      "excerpt": "# Quoting John Carmack\n\n### 内容分类\n【Reading】\n\n### 内容总结\n该条目来自 Simon Willison 的博客，标题为“Quoting John Carmack”，发布时间为2026年3月11日，内容为收集的一则引语。引语出自 John Carmack 在2021年6月的一条推文，指出对经验较少的开发者而言，很难体会到为未来需求或应用进行架构设计通常很少带来净正收益。页面同时列出近期文章列表，并注明该引语由 Simon Willison 收集发布。",
       "tags": [
         "AI",
         "Tools"
@@ -258,7 +258,7 @@
           "paragraphs": [
             "# Quoting John Carmack",
             "### 内容分类\n【Reading】",
-            "### 内容总结\n这篇内容来自 Simon Willison 的博客，日期为 2026 年 3 月 11 日。文章核心是一段 John Carmack 在 2021 年 6 月推文中的观点：经验较少的开发者往往难以体会，为未来需求或应用进行架构设计最终产生净正效益是非常罕见的。页面还列出了近期文章列表与站点年份归档信息，并标明这是一条被收集的引述。"
+            "### 内容总结\n该条目来自 Simon Willison 的博客，标题为“Quoting John Carmack”，发布时间为2026年3月11日，内容为收集的一则引语。引语出自 John Carmack 在2021年6月的一条推文，指出对经验较少的开发者而言，很难体会到为未来需求或应用进行架构设计通常很少带来净正收益。页面同时列出近期文章列表，并注明该引语由 Simon Willison 收集发布。"
           ]
         }
       ],
@@ -280,7 +280,7 @@
           },
           {
             "type": "paragraph",
-            "html": "经验较少的开发者很难体会到，为未来需求/应用做架构设计最终产生净正效益是多么罕见。"
+            "html": "对经验较少的开发者来说，很难体会到，为未来需求/应用进行架构设计最终很少会带来净正收益。"
           },
           {
             "type": "paragraph",
@@ -294,20 +294,20 @@
           {
             "type": "list",
             "items": [
-              "<a href=\"https://simonwillison.net/2026/Mar/9/not-so-boring/\" target=\"_blank\" rel=\"noreferrer noopener\">也许终究不是无聊技术</a> - 9th March 2026",
-              "<a href=\"https://simonwillison.net/2026/Mar/5/chardet/\" target=\"_blank\" rel=\"noreferrer noopener\">编码代理能否通过代码的“洁净室”实现对开源重新许可？</a> - 5th March 2026",
-              "<a href=\"https://simonwillison.net/2026/Mar/4/qwen/\" target=\"_blank\" rel=\"noreferrer noopener\">Qwen 领域里有些动静</a> - 4th March 2026"
+              "<a href=\"https://simonwillison.net/2026/Mar/9/not-so-boring/\" target=\"_blank\" rel=\"noreferrer noopener\">也许并非无聊技术，毕竟</a> - 9th March 2026",
+              "<a href=\"https://simonwillison.net/2026/Mar/5/chardet/\" target=\"_blank\" rel=\"noreferrer noopener\">编码代理能通过代码的“洁净室”实现重新许可开源吗？</a> - 5th March 2026",
+              "<a href=\"https://simonwillison.net/2026/Mar/4/qwen/\" target=\"_blank\" rel=\"noreferrer noopener\">Qwen之地有事在发生</a> - 4th March 2026"
             ]
           },
           {
             "type": "paragraph",
-            "html": "这是 Simon Willison 收集的一段 <strong>quotation</strong>，发表于 <a href=\"https://simonwillison.net/2026/Mar/11/\" target=\"_blank\" rel=\"noreferrer noopener\">2026 年 3 月 11 日</a>。"
+            "html": "这是由Simon Willison收集的一个<strong>quotation</strong>，发布于<a href=\"https://simonwillison.net/2026/Mar/11/\" target=\"_blank\" rel=\"noreferrer noopener\">2026年3月11日</a>。"
           },
           {
             "type": "list",
             "items": [
               "<a href=\"https://simonwillison.net/about/#disclosures\" target=\"_blank\" rel=\"noreferrer noopener\">披露</a>",
-              "<a href=\"https://simonwillison.net/about/#about-site\" target=\"_blank\" rel=\"noreferrer noopener\">版本说明</a>",
+              "<a href=\"https://simonwillison.net/about/#about-site\" target=\"_blank\" rel=\"noreferrer noopener\">版式说明</a>",
               "©",
               "<a href=\"https://simonwillison.net/2002/\" target=\"_blank\" rel=\"noreferrer noopener\">2002</a>",
               "<a href=\"https://simonwillison.net/2003/\" target=\"_blank\" rel=\"noreferrer noopener\">2003</a>",

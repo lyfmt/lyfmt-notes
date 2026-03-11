@@ -1,0 +1,76 @@
+{
+  "available": false,
+  "layout": "draft",
+  "translatedFrom": "https://simonwillison.net/2026/Mar/11/john-carmack/#atom-everything",
+  "sourceName": "Simon Willison",
+  "sourceDescription": "以下为根据原文结构自动生成的详情草稿，已保留段落层次、图片与媒体；默认尚未完成中文翻译润色。",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Simon Willison’s Weblog"
+    },
+    {
+      "type": "paragraph",
+      "html": "11th March 2026"
+    },
+    {
+      "type": "paragraph",
+      "html": "It is hard for less experienced developers to appreciate how rarely architecting for future requirements / applications turns out net-positive."
+    },
+    {
+      "type": "paragraph",
+      "html": "— <a href=\"https://twitter.com/ID_AA_Carmack/status/1405932642005041153\" target=\"_blank\" rel=\"noreferrer noopener\">John Carmack</a>, <span>a tweet in June 2021</span>"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Recent articles"
+    },
+    {
+      "type": "list",
+      "items": [
+        "<a href=\"https://simonwillison.net/2026/Mar/9/not-so-boring/\" target=\"_blank\" rel=\"noreferrer noopener\">Perhaps not Boring Technology after all</a> - 9th March 2026",
+        "<a href=\"https://simonwillison.net/2026/Mar/5/chardet/\" target=\"_blank\" rel=\"noreferrer noopener\">Can coding agents relicense open source through a “clean room” implementation of code?</a> - 5th March 2026",
+        "<a href=\"https://simonwillison.net/2026/Mar/4/qwen/\" target=\"_blank\" rel=\"noreferrer noopener\">Something is afoot in the land of Qwen</a> - 4th March 2026"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "html": "This is a <strong>quotation</strong> collected by Simon Willison, posted on <a href=\"https://simonwillison.net/2026/Mar/11/\" target=\"_blank\" rel=\"noreferrer noopener\">11th March 2026</a>."
+    },
+    {
+      "type": "list",
+      "items": [
+        "<a href=\"https://simonwillison.net/about/#disclosures\" target=\"_blank\" rel=\"noreferrer noopener\">Disclosures</a>",
+        "<a href=\"https://simonwillison.net/about/#about-site\" target=\"_blank\" rel=\"noreferrer noopener\">Colophon</a>",
+        "©",
+        "<a href=\"https://simonwillison.net/2002/\" target=\"_blank\" rel=\"noreferrer noopener\">2002</a>",
+        "<a href=\"https://simonwillison.net/2003/\" target=\"_blank\" rel=\"noreferrer noopener\">2003</a>",
+        "<a href=\"https://simonwillison.net/2004/\" target=\"_blank\" rel=\"noreferrer noopener\">2004</a>",
+        "<a href=\"https://simonwillison.net/2005/\" target=\"_blank\" rel=\"noreferrer noopener\">2005</a>",
+        "<a href=\"https://simonwillison.net/2006/\" target=\"_blank\" rel=\"noreferrer noopener\">2006</a>",
+        "<a href=\"https://simonwillison.net/2007/\" target=\"_blank\" rel=\"noreferrer noopener\">2007</a>",
+        "<a href=\"https://simonwillison.net/2008/\" target=\"_blank\" rel=\"noreferrer noopener\">2008</a>",
+        "<a href=\"https://simonwillison.net/2009/\" target=\"_blank\" rel=\"noreferrer noopener\">2009</a>",
+        "<a href=\"https://simonwillison.net/2010/\" target=\"_blank\" rel=\"noreferrer noopener\">2010</a>",
+        "<a href=\"https://simonwillison.net/2011/\" target=\"_blank\" rel=\"noreferrer noopener\">2011</a>",
+        "<a href=\"https://simonwillison.net/2012/\" target=\"_blank\" rel=\"noreferrer noopener\">2012</a>",
+        "<a href=\"https://simonwillison.net/2013/\" target=\"_blank\" rel=\"noreferrer noopener\">2013</a>",
+        "<a href=\"https://simonwillison.net/2014/\" target=\"_blank\" rel=\"noreferrer noopener\">2014</a>",
+        "<a href=\"https://simonwillison.net/2015/\" target=\"_blank\" rel=\"noreferrer noopener\">2015</a>",
+        "<a href=\"https://simonwillison.net/2016/\" target=\"_blank\" rel=\"noreferrer noopener\">2016</a>",
+        "<a href=\"https://simonwillison.net/2017/\" target=\"_blank\" rel=\"noreferrer noopener\">2017</a>",
+        "<a href=\"https://simonwillison.net/2018/\" target=\"_blank\" rel=\"noreferrer noopener\">2018</a>",
+        "<a href=\"https://simonwillison.net/2019/\" target=\"_blank\" rel=\"noreferrer noopener\">2019</a>",
+        "<a href=\"https://simonwillison.net/2020/\" target=\"_blank\" rel=\"noreferrer noopener\">2020</a>",
+        "<a href=\"https://simonwillison.net/2021/\" target=\"_blank\" rel=\"noreferrer noopener\">2021</a>",
+        "<a href=\"https://simonwillison.net/2022/\" target=\"_blank\" rel=\"noreferrer noopener\">2022</a>",
+        "<a href=\"https://simonwillison.net/2023/\" target=\"_blank\" rel=\"noreferrer noopener\">2023</a>",
+        "<a href=\"https://simonwillison.net/2024/\" target=\"_blank\" rel=\"noreferrer noopener\">2024</a>",
+        "<a href=\"https://simonwillison.net/2025/\" target=\"_blank\" rel=\"noreferrer noopener\">2025</a>",
+        "<a href=\"https://simonwillison.net/2026/\" target=\"_blank\" rel=\"noreferrer noopener\">2026</a>"
+      ]
+    }
+  ]
+}

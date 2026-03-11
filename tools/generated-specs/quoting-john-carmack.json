@@ -1,0 +1,103 @@
+{
+  "slug": "quoting-john-carmack",
+  "title": "Quoting John Carmack",
+  "author": "Simon Willison",
+  "publishedAt": "2026-03-11",
+  "source": "Simon Willison",
+  "url": "https://simonwillison.net/2026/Mar/11/john-carmack/#atom-everything",
+  "tags": [
+    "AI",
+    "Tools"
+  ],
+  "excerpt": "# Quoting John Carmack\n\n### 内容分类\n【Reading】\n\n### 内容总结\n该条目来自 Simon Willison 的博客，标题为“Quoting John Carmack”，发布时间为2026年3月11日，内容为收集的一则引语。引语出自 John Carmack 在2021年6月的一条推文，指出对经验较少的开发者而言，很难体会到为未来需求或应用进行架构设计通常很少带来净正收益。页面同时列出近期文章列表，并注明该引语由 Simon Willison 收集发布。",
+  "content": [
+    {
+      "heading": "总结",
+      "paragraphs": [
+        "# Quoting John Carmack",
+        "### 内容分类\n【Reading】",
+        "### 内容总结\n该条目来自 Simon Willison 的博客，标题为“Quoting John Carmack”，发布时间为2026年3月11日，内容为收集的一则引语。引语出自 John Carmack 在2021年6月的一条推文，指出对经验较少的开发者而言，很难体会到为未来需求或应用进行架构设计通常很少带来净正收益。页面同时列出近期文章列表，并注明该引语由 Simon Willison 收集发布。"
+      ]
+    }
+  ],
+  "detail": {
+    "available": true,
+    "layout": "detail-zh",
+    "translatedFrom": "https://simonwillison.net/2026/Mar/11/john-carmack/#atom-everything",
+    "sourceName": "Simon Willison",
+    "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+    "blocks": [
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Simon Willison’s Weblog"
+      },
+      {
+        "type": "paragraph",
+        "html": "2026年3月11日"
+      },
+      {
+        "type": "paragraph",
+        "html": "对经验较少的开发者来说，很难体会到，为未来需求/应用进行架构设计最终很少会带来净正收益。"
+      },
+      {
+        "type": "paragraph",
+        "html": "— <a href=\"https://twitter.com/ID_AA_Carmack/status/1405932642005041153\" target=\"_blank\" rel=\"noreferrer noopener\">John Carmack</a>，<span>2021年6月的一条推文</span>"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "近期文章"
+      },
+      {
+        "type": "list",
+        "items": [
+          "<a href=\"https://simonwillison.net/2026/Mar/9/not-so-boring/\" target=\"_blank\" rel=\"noreferrer noopener\">也许并非无聊技术，毕竟</a> - 9th March 2026",
+          "<a href=\"https://simonwillison.net/2026/Mar/5/chardet/\" target=\"_blank\" rel=\"noreferrer noopener\">编码代理能通过代码的“洁净室”实现重新许可开源吗？</a> - 5th March 2026",
+          "<a href=\"https://simonwillison.net/2026/Mar/4/qwen/\" target=\"_blank\" rel=\"noreferrer noopener\">Qwen之地有事在发生</a> - 4th March 2026"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "html": "这是由Simon Willison收集的一个<strong>quotation</strong>，发布于<a href=\"https://simonwillison.net/2026/Mar/11/\" target=\"_blank\" rel=\"noreferrer noopener\">2026年3月11日</a>。"
+      },
+      {
+        "type": "list",
+        "items": [
+          "<a href=\"https://simonwillison.net/about/#disclosures\" target=\"_blank\" rel=\"noreferrer noopener\">披露</a>",
+          "<a href=\"https://simonwillison.net/about/#about-site\" target=\"_blank\" rel=\"noreferrer noopener\">版式说明</a>",
+          "©",
+          "<a href=\"https://simonwillison.net/2002/\" target=\"_blank\" rel=\"noreferrer noopener\">2002</a>",
+          "<a href=\"https://simonwillison.net/2003/\" target=\"_blank\" rel=\"noreferrer noopener\">2003</a>",
+          "<a href=\"https://simonwillison.net/2004/\" target=\"_blank\" rel=\"noreferrer noopener\">2004</a>",
+          "<a href=\"https://simonwillison.net/2005/\" target=\"_blank\" rel=\"noreferrer noopener\">2005</a>",
+          "<a href=\"https://simonwillison.net/2006/\" target=\"_blank\" rel=\"noreferrer noopener\">2006</a>",
+          "<a href=\"https://simonwillison.net/2007/\" target=\"_blank\" rel=\"noreferrer noopener\">2007</a>",
+          "<a href=\"https://simonwillison.net/2008/\" target=\"_blank\" rel=\"noreferrer noopener\">2008</a>",
+          "<a href=\"https://simonwillison.net/2009/\" target=\"_blank\" rel=\"noreferrer noopener\">2009</a>",
+          "<a href=\"https://simonwillison.net/2010/\" target=\"_blank\" rel=\"noreferrer noopener\">2010</a>",
+          "<a href=\"https://simonwillison.net/2011/\" target=\"_blank\" rel=\"noreferrer noopener\">2011</a>",
+          "<a href=\"https://simonwillison.net/2012/\" target=\"_blank\" rel=\"noreferrer noopener\">2012</a>",
+          "<a href=\"https://simonwillison.net/2013/\" target=\"_blank\" rel=\"noreferrer noopener\">2013</a>",
+          "<a href=\"https://simonwillison.net/2014/\" target=\"_blank\" rel=\"noreferrer noopener\">2014</a>",
+          "<a href=\"https://simonwillison.net/2015/\" target=\"_blank\" rel=\"noreferrer noopener\">2015</a>",
+          "<a href=\"https://simonwillison.net/2016/\" target=\"_blank\" rel=\"noreferrer noopener\">2016</a>",
+          "<a href=\"https://simonwillison.net/2017/\" target=\"_blank\" rel=\"noreferrer noopener\">2017</a>",
+          "<a href=\"https://simonwillison.net/2018/\" target=\"_blank\" rel=\"noreferrer noopener\">2018</a>",
+          "<a href=\"https://simonwillison.net/2019/\" target=\"_blank\" rel=\"noreferrer noopener\">2019</a>",
+          "<a href=\"https://simonwillison.net/2020/\" target=\"_blank\" rel=\"noreferrer noopener\">2020</a>",
+          "<a href=\"https://simonwillison.net/2021/\" target=\"_blank\" rel=\"noreferrer noopener\">2021</a>",
+          "<a href=\"https://simonwillison.net/2022/\" target=\"_blank\" rel=\"noreferrer noopener\">2022</a>",
+          "<a href=\"https://simonwillison.net/2023/\" target=\"_blank\" rel=\"noreferrer noopener\">2023</a>",
+          "<a href=\"https://simonwillison.net/2024/\" target=\"_blank\" rel=\"noreferrer noopener\">2024</a>",
+          "<a href=\"https://simonwillison.net/2025/\" target=\"_blank\" rel=\"noreferrer noopener\">2025</a>",
+          "<a href=\"https://simonwillison.net/2026/\" target=\"_blank\" rel=\"noreferrer noopener\">2026</a>"
+        ]
+      }
+    ]
+  },
+  "workflow": {
+    "articleId": 2715,
+    "Title": "Quoting John Carmack"
+  }
+}
