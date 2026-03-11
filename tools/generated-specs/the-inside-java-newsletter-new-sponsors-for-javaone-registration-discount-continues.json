@@ -1,0 +1,63 @@
+{
+  "slug": "the-inside-java-newsletter-new-sponsors-for-javaone-registration-discount-continues",
+  "title": "The Inside Java Newsletter: New Sponsors for JavaOne! Registration Discount Continues!",
+  "author": "Inside Java",
+  "publishedAt": "2026-03-11",
+  "source": "Inside Java",
+  "url": "https://inside.java/2026/03/11/inside-java-newsletter/",
+  "tags": [
+    "DevTools"
+  ],
+  "excerpt": "这篇文章围绕“The Inside Java Newsletter: New Sponsors for JavaOne! Registration Discount Continues!”展开，RSS 摘要提到：The Inside Java Newsletter for February 2026 includes a special discount code for JavaOne. Register now and save $150! This issue also hi...",
+  "content": [
+    {
+      "heading": "文章核心",
+      "paragraphs": [
+        "基于 RSS 摘要与页面元数据，原文重点是：The Inside Java Newsletter for February 2026 includes a special discount code for JavaOne. Register now and save $150! This issue also highlights new sponsors that will be at JavaOne, technical content from videos and podcasts, learning and communit…",
+        "来源信息：Inside Java｜2026-03-11。"
+      ]
+    },
+    {
+      "heading": "值得继续补充的点",
+      "paragraphs": [
+        "如果后续补齐详情视图，可以继续沿着原文结构展开关键论点、案例、约束条件与结论。",
+        "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+      ]
+    }
+  ],
+  "detail": {
+    "available": true,
+    "layout": "detail-zh",
+    "translatedFrom": "https://inside.java/2026/03/11/inside-java-newsletter/",
+    "sourceName": "Inside Java",
+    "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+    "blocks": [
+      {
+        "type": "image",
+        "src": "https://inside.java/images/java-cup.png",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Inside Java"
+      },
+      {
+        "type": "paragraph",
+        "html": "News and views from members of the Java team at Oracle"
+      }
+    ],
+    "refineErrors": [
+      {
+        "index": 2,
+        "type": "paragraph",
+        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+      }
+    ]
+  },
+  "workflow": {
+    "articleId": 2707,
+    "rssTitle": "The Inside Java Newsletter: New Sponsors for JavaOne! Registration Discount Continues!"
+  }
+}

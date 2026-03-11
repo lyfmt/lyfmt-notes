@@ -1,0 +1,96 @@
+{
+  "available": true,
+  "layout": "detail-zh",
+  "translatedFrom": "https://www.cnx-software.com/2026/03/11/amd-ryzen-ai-embedded-p100-series-expands-with-up-to-12-zen-5-cores-80-tops-of-ai-performance/",
+  "sourceName": "CNX Software",
+  "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "html": "At CES 2026, we saw AMD launch its new <a href=\"https://www.cnx-software.com/2026/01/07/amd-launches-ryzen-ai-embedded-p100-and-x100-processors-with-up-to-50-tops-of-ai-performance/\" target=\"_blank\" rel=\"noreferrer noopener\">Ryzen AI Embedded P100 series of SoCs</a>, with four- and six-core models designed for Edge AI. At the time of writing, the lineup had six SKUs, with higher-core variants to be announced later."
+    },
+    {
+      "type": "paragraph",
+      "html": "Now at Embedded World 2026, AMD has <strong>expanded the Ryzen AI Embedded P100</strong> series with <strong>six additional SKUs</strong> available in commercial and industrial temperature grades, while the automotive-grade SoCs remain unchanged."
+    },
+    {
+      "type": "image",
+      "src": "https://www.cnx-software.com/wp-content/uploads/2026/03/AMD-Ryzen-AI-Embedded-P100-series-Embedded-World-2026-720x480.jpg",
+      "alt": "AMD Ryzen AI Embedded P100 series Embedded World 2026",
+      "caption": "AMD Ryzen AI Embedded P100 series Embedded World 2026"
+    },
+    {
+      "type": "paragraph",
+      "html": "<a href=\"https://www.cnx-software.com/wp-content/uploads/2026/03/AMD-Ryzen-AI-Embedded-P100-series-Embedded-World-2026.jpg\" target=\"_blank\" rel=\"noreferrer noopener\"></a>"
+    },
+    {
+      "type": "paragraph",
+      "html": "The new SOCs integrate 8-12 Zen 5 CPU cores (upgrade from 4-6 cores ), RDNA 3.5 graphics, and an XDNA 2 NPU on a single chip to deliver up to 80 TOPS (upgrade from 50 TOPS) of combined/system AI performance"
+    },
+    {
+      "type": "paragraph",
+      "html": "AMD claims up to 39% higher multithreaded CPU performance and 2.1× higher total system TOPS compared to <a href=\"https://www.cnx-software.com/2024/04/04/amd-ryzen-embedded-8000-processors-industrial-ai-16-tops-npu/\" target=\"_blank\" rel=\"noreferrer noopener\">Ryzen Embedded 8000 Series</a>. They support unified CPU-GPU memory, enabling low-latency processing for tasks such as multi-camera machine vision, Visual SLAM, and robotic perception, while the NPU handles low-power AI inference workloads, such as object detection and scene understanding."
+    },
+    {
+      "type": "paragraph",
+      "html": "Another six new SoCs have been added to the Ryzen AI Embedded P100 family: AMD Ryzen AI P164, P174, P185, P164i, P174i, and P185i, targeting commercial and industrial (i) applications. The AMD Ryzen AI Embedded P100 Series is now comprised of 12 different SKUs."
+    },
+    {
+      "type": "paragraph",
+      "html": "The most powerful processors in the series are the Ryzen AI Embedded P185 and P185i, which feature up to 12 Zen 5 CPU cores, 24 MB L3 cache, and GPU frequencies up to 2.9 GHz, while delivering up to 50 TOPS AI performance. One small difference in the specifications is memory support, where the commercial models use slightly faster LPDDR5X memory (up to 8533 MT/s) compared to the industrial variants, which are limited to 8000 MT/s."
+    },
+    {
+      "type": "paragraph",
+      "html": "On the software side, the company notes that the SoCs now support the <a href=\"https://www.amd.com/en/products/software/rocm.html\" target=\"_blank\" rel=\"noreferrer noopener\">AMD ROCm open software stack</a> for running standard AI frameworks (such as PyTorch or TensorFlow) without vendor lock-in. AMD also introduced a virtualized reference stack based on the Xen hypervisor, which allows for the consolidation of mixed-criticality workloads (running a Real-Time OS alongside Windows/Linux) on a single chip. AMD also mentions these chips are optimized for Llama 3.2-Vision, YOLOv12, and MobileSAM."
+    },
+    {
+      "type": "image",
+      "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtAAAAGaAQAAAAAOB0mmAAAAAnRSTlMAAHaTzTgAAAA7SURBVHja7cExAQAAAMKg9U9tDQ+gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAng2RvgABHhOBjQAAAABJRU5ErkJggg==",
+      "alt": "AMD Ryzen AI Embedded P100 Applications",
+      "caption": "AMD Ryzen AI Embedded P100 Applications"
+    },
+    {
+      "type": "paragraph",
+      "html": "Previously, we saw Congatec and Sapphire announce the<a href=\"https://www.cnx-software.com/2026/01/28/congatec-conga-tcrp1-com-express-type-6-module-features-amd-ryzen-ai-embedded-p100-soc-with-50-tops-npu/\" target=\"_blank\" rel=\"noreferrer noopener\"> conga-TCRP1</a>, a COM Express 3.1 Type 6 Compact module, and the <a href=\"https://www.cnx-software.com/2026/01/28/congatec-conga-tcrp1-com-express-type-6-module-features-amd-ryzen-ai-embedded-p100-soc-with-50-tops-npu/\" target=\"_blank\" rel=\"noreferrer noopener\">EDGE+ VPR-7P132 Mini-ITX motherboard</a>, both built around AMD’s Ryzen AI Embedded P100 series. With the release of the new SoCs, more such embedded boards and modules are expected to follow."
+    },
+    {
+      "type": "paragraph",
+      "html": "The new 8- to 12-core SoCs (P164, P174, P185) are already sampling to early access customers, with production shipments expected in July 2026. The 4- to 6-core models (P121, P132) are expected to reach production earlier, in Q2 2026. More information is available in the <a href=\"https://www.amd.com/en/blogs/2026/amd-expands-ryzen-ai-embedded-p100-for-edge-ai.html\" target=\"_blank\" rel=\"noreferrer noopener\">press release</a> and on the <a href=\"https://www.amd.com/en/products/embedded/ryzen-ai/p100-series.html\" target=\"_blank\" rel=\"noreferrer noopener\">P100 Series product page</a>."
+    },
+    {
+      "type": "paragraph",
+      "html": "<span><span>﻿</span>﻿</span>"
+    },
+    {
+      "type": "image",
+      "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkAQAAAABYmaj5AAAAAnRSTlMAAHaTzTgAAAATSURBVHjaYxgFo2AUjIJRQFcAAAV4AAFJqdOkAAAAAElFTkSuQmCC",
+      "alt": "Debashis Das",
+      "caption": "Debashis Das"
+    },
+    {
+      "type": "paragraph",
+      "html": "Debashis Das is a technical content writer and embedded engineer with over five years of experience in the industry. With expertise in Embedded C, PCB Design, and SEO optimization, he effectively blends difficult technical topics with clear communication"
+    },
+    {
+      "type": "paragraph",
+      "html": "<strong>Support CNX Software! Donate via <a href=\"https://www.cnx-software.com/donate-cryptocurrencies/\" target=\"_blank\" rel=\"noreferrer noopener\">cryptocurrencies</a>, <a href=\"https://www.patreon.com/cnxsoft\" target=\"_blank\" rel=\"noreferrer noopener\">become a Patron</a> on Patreon, or purchase goods on <a href=\"https://amzn.to/3SXubZ0\" target=\"_blank\" rel=\"noreferrer noopener\">Amazon</a> or <a href=\"https://s.click.aliexpress.com/e/_DmGIIRT\" target=\"_blank\" rel=\"noreferrer noopener\">Aliexpress</a></strong>. We also use affiliate links in articles to earn commissions if you make a purchase after clicking on those links."
+    }
+  ],
+  "refineErrors": [
+    {
+      "index": 0,
+      "type": "paragraph",
+      "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+    },
+    {
+      "index": 1,
+      "type": "paragraph",
+      "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+    },
+    {
+      "index": 3,
+      "type": "paragraph",
+      "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+    }
+  ]
+}

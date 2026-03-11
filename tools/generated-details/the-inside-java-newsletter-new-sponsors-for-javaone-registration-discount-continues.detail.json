@@ -1,0 +1,24 @@
+{
+  "available": false,
+  "layout": "draft",
+  "translatedFrom": "https://inside.java/2026/03/11/inside-java-newsletter/",
+  "sourceName": "Inside Java",
+  "sourceDescription": "以下为根据原文结构自动生成的详情草稿，已保留段落层次、图片与媒体；默认尚未完成中文翻译润色。",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "https://inside.java/images/java-cup.png",
+      "alt": "",
+      "caption": ""
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Inside Java"
+    },
+    {
+      "type": "paragraph",
+      "html": "News and views from members of the Java team at Oracle"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "item": {
+    "id": 2706,
+    "title": "AMD Ryzen AI Embedded P100 series expands with up to 12 Zen 5 cores, 80 TOPS of AI performance",
+    "blog": "CNX Software",
+    "url": "https://www.cnx-software.com/2026/03/11/amd-ryzen-ai-embedded-p100-series-expands-with-up-to-12-zen-5-cores-80-tops-of-ai-performance/",
+    "published": "2026-03-11T07:21:08Z",
+    "discovered": "2026-03-11T08:00:09.899076973Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://www.cnx-software.com/2026/03/11/amd-ryzen-ai-embedded-p100-series-expands-with-up-to-12-zen-5-cores-80-tops-of-ai-performance/",
+    "ok": true,
+    "title": "AMD Ryzen AI Embedded P100 series expands with up to 12 Zen 5 cores, 80 TOPS of AI performance - CNX Software",
+    "description": "AMD expands the Ryzen AI Embedded P100 series with additional 8-/12-core SKUs (P164, P174, P185) delivering up to 80 TOPS of AI performance.",
+    "fetched_bytes": 245887,
+    "error": null
+  },
+  "classification": "normal"
+}

@@ -1,0 +1,20 @@
+{
+  "item": {
+    "id": 2707,
+    "title": "The Inside Java Newsletter: New Sponsors for JavaOne! Registration Discount Continues!",
+    "blog": "Inside Java",
+    "url": "https://inside.java/2026/03/11/inside-java-newsletter/",
+    "published": "2026-03-11T00:00:00Z",
+    "discovered": "2026-03-11T08:00:10.196194149Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://inside.java/2026/03/11/inside-java-newsletter/",
+    "ok": true,
+    "title": "The Inside Java Newsletter: New Sponsors for JavaOne! Registration Discount Continues!",
+    "description": "The Inside Java Newsletter for February 2026 includes a special discount code for JavaOne. Register now and save $150! This issue also highlights new sponsors that will be at JavaOne, technical content from videos and podcasts, learning and communit…",
+    "fetched_bytes": 6447,
+    "error": null
+  },
+  "classification": "normal"
+}

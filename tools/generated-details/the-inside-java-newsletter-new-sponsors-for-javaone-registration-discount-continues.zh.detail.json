@@ -1,0 +1,31 @@
+{
+  "available": true,
+  "layout": "detail-zh",
+  "translatedFrom": "https://inside.java/2026/03/11/inside-java-newsletter/",
+  "sourceName": "Inside Java",
+  "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "https://inside.java/images/java-cup.png",
+      "alt": "",
+      "caption": ""
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Inside Java"
+    },
+    {
+      "type": "paragraph",
+      "html": "News and views from members of the Java team at Oracle"
+    }
+  ],
+  "refineErrors": [
+    {
+      "index": 2,
+      "type": "paragraph",
+      "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+    }
+  ]
+}
