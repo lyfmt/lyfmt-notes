@@ -205,6 +205,20 @@ function extractMarkdownTitle(markdown) {
   return "";
 }
 
+
+function applyExcerptTitleToPosts(posts) {
+  if (!Array.isArray(posts)) {
+    return posts;
+  }
+  posts.forEach((post) => {
+    const excerptTitle = extractMarkdownTitle(post?.excerpt || "");
+    if (excerptTitle) {
+      post.title = excerptTitle;
+    }
+  });
+  return posts;
+}
+
 function renderMarkdownInto(target, markdown, options) {
   if (!target) {
     return;
@@ -1357,7 +1371,7 @@ async function loadBlog() {
 
     const data = await response.json();
     const site = data && typeof data.site === "object" ? data.site : {};
-    const posts = validatePosts(data?.posts);
+    const posts = applyExcerptTitleToPosts(validatePosts(data?.posts));
 
     cachedSite = site;
     cachedPosts = posts;
