@@ -564,15 +564,14 @@ h2 {
 }
 
 .article-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 320px;
-  gap: 1.4rem;
-  align-items: start;
+  display: block;
 }
 
 .article-main {
   display: grid;
   gap: 0.9rem;
+  max-width: min(100%, 86ch);
+  margin: 0 auto;
 }
 
 .article-shell {
@@ -679,21 +678,7 @@ h2 {
   color: var(--text-soft);
 }
 
-.side-panel__inner {
-  position: sticky;
-  top: 5.5rem;
-  padding: 1.15rem;
-}
-
-.side-list {
-  display: grid;
-  gap: 0.9rem;
-  margin-top: 1rem;
-}
-
-.side-card {
-  padding: 0.9rem;
-}
+/* related posts sidebar removed */
 
 .post-pager {
   margin-top: 1.75rem;
