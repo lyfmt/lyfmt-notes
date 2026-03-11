@@ -5,6 +5,221 @@
   },
   "posts": [
     {
+      "slug": "texas-instruments-mspm0g5187-and-am13ex-mcus-integrate-tinyengine-npu-for-edge-ai-applications-cnx-software",
+      "title": "Texas Instruments MSPM0G5187 and AM13Ex MCUs integrate TinyEngine NPU for Edge AI applications - CNX Software",
+      "author": "CNX Software",
+      "publishedAt": "2026-03-11",
+      "source": "CNX Software",
+      "url": "https://www.cnx-software.com/2026/03/11/texas-instruments-mspm0g5187-and-am13ex-mcus-integrate-tinyengine-npu-for-edge-ai-applications/",
+      "excerpt": "这篇文章围绕“Texas Instruments MSPM0G5187 and AM13Ex MCUs integrate TinyEngine NPU for Edge AI applications - CNX Software”展开，RSS 摘要提到：Texas Instruments MSPM0G5187 and AM13Ex are two new microcontroller (MCU) families featuring the company's TinyEngine neural processing u...",
+      "tags": [
+        "Hardware",
+        "AI",
+        "Networking",
+        "Infrastructure"
+      ],
+      "content": [
+        {
+          "heading": "文章核心",
+          "paragraphs": [
+            "基于 RSS 摘要与页面元数据，原文重点是：Texas Instruments MSPM0G5187 and AM13Ex are two new microcontroller (MCU) families featuring the company's TinyEngine neural processing unit (NPU) to",
+            "来源信息：CNX Software｜2026-03-11。"
+          ]
+        },
+        {
+          "heading": "值得继续补充的点",
+          "paragraphs": [
+            "如果后续补齐详情视图，重点可以继续展开架构取舍、生产约束、性能代价和工程实施方式。",
+            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+          ]
+        }
+      ],
+      "detail": {
+        "available": true,
+        "layout": "detail-zh",
+        "translatedFrom": "https://www.cnx-software.com/2026/03/11/texas-instruments-mspm0g5187-and-am13ex-mcus-integrate-tinyengine-npu-for-edge-ai-applications/",
+        "sourceName": "CNX Software",
+        "sourceDescription": "以下为原文逐段直译，保留原文段落推进与媒体顺序。",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "html": "德州仪器的 MSPM0G5187 与 AM13Ex 是两条新的微控制器（MCU）家族，内置该公司的 TinyEngine 神经处理单元（NPU），可在芯片上实现低延迟、高能效的边缘 AI/机器学习推理。"
+          },
+          {
+            "type": "paragraph",
+            "html": "德州仪器称，TinyEngine NPU 运行 AI 模型时的延迟最多可比没有加速器的类似 MCU 低 90 倍，每次推理的能耗可降低 120 倍以上。MSPM0G5187 是一款通用、低功耗的 Arm Cortex‑M0+ MCU，而 AM13Ex Arm Cortex‑M33 微控制器面向实时电机控制，以 AM13E23019 SKU 率先推出。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "TI MSPM0G5187 通用 Cortex‑M0+ MCU"
+          },
+          {
+            "type": "image",
+            "src": "./assets/posts/texas-instruments-mspm0g5187-and-am13ex-mcus-integrate-tinyengine-npu-for-edge-ai-applications-cnx-software/figure-01.jpg",
+            "alt": "",
+            "caption": ""
+          },
+          {
+            "type": "paragraph",
+            "html": "关键特性与规格："
+          },
+          {
+            "type": "list",
+            "items": [
+              "CPU – Arm Cortex‑M0+ @ 80 MHz",
+              "内存 – 32 KB RAM（带 ECC）",
+              "存储 – 128 KB 闪存（带 ECC），8 KB 数据闪存（带 ECC）",
+              "加速器 – TinyEngine NPU，用于 AI/ML，80MHz 下可达 2.56 GOPS（每秒十亿次运算）",
+              "MATHACL 数学加速器",
+              "外设 – USB：1× USB 2.0（12 Mbps）",
+              "音频 – 数字音频接口，支持 I2S、PCM、TDM 等",
+              "最多 59× GPIO，其中 2× 支持 5V 容忍",
+              "最多 3× UART、2× SPI、1× I2C",
+              "定时器 – 4× 16 位定时器，最多 14× PWM",
+              "2× 窗口式看门狗定时器",
+              "RTC，带闹钟与日历模式",
+              "模拟 – 12‑bit SAR ADC；26 个 ADC 通道；最高 1.6 Msps 采样率",
+              "带 8 引脚 DAC 的比较器",
+              "集成温度传感器",
+              "12‑bit DMA 控制器",
+              "安全 – AES 加密、密码加速、硬件强制隔离、安全启动、安全通信、安全调试、安全固件与软件更新、安全存储、软件 IP 保护",
+              "调试 – 2‑pin SWD",
+              "供电电压 – 1.62V 至 3.6V",
+              "功耗模式 – RUN：103µA/MHz（CoreMark）；SLEEP：34µA/MHz；STOP：4MHz 下 199µA；STANDBY：32kHz 下 1.5µA（含 RTC、全 SRAM 与状态保持）；SHUTDOWN：88nA（支持 IO 唤醒）",
+              "封装 – 64‑pin LQFP（PM）（0.5mm 间距）；48‑pin LQFP（PT）（0.5mm 间距）；48‑pin VQFN（RGZ）（0.5mm 间距）；32‑pin VQFN（RHB）（0.5mm 间距）；28‑pin DSBGA（YCJ）（0.35mm 间距，预览阶段）；28‑pin WQFN（RUY）（0.4mm 间距）；24‑pin VQFN（RGE）（0.5mm 间距）；20‑pin VSSOP（DGS）（0.5mm 间距）",
+              "温度范围 – -40 至 125°C"
+            ]
+          },
+          {
+            "type": "image",
+            "src": "./assets/posts/texas-instruments-mspm0g5187-and-am13ex-mcus-integrate-tinyengine-npu-for-edge-ai-applications-cnx-software/figure-02.webp",
+            "alt": "",
+            "caption": ""
+          },
+          {
+            "type": "paragraph",
+            "html": "MSPM0G5187 微控制器家族由 MSPM0 SDK 支持，包含 FreeRTOS 与 Zephyr RTOS。它面向资源受限设备（包括电池供电产品），受益于 AI/ML 的边缘工作负载。公司还提供 LP‑MSPM0G5187 Launchpad 开发套件用于评估。该套件配有 XDS110 调试探针、40 针 BoosterPack 排针、USB‑C 端口、microSD 卡槽、一个麦克风、一个音频 ADC，以及一些 LED 与按键。"
+          },
+          {
+            "type": "image",
+            "src": "./assets/posts/texas-instruments-mspm0g5187-and-am13ex-mcus-integrate-tinyengine-npu-for-edge-ai-applications-cnx-software/figure-03.webp",
+            "alt": "",
+            "caption": "LP‑MSPM0G5187 Launchpad 开发套件的模糊渲染图"
+          },
+          {
+            "type": "paragraph",
+            "html": "MSPM0G5187 Cortex‑M0+ 微控制器目前已开始量产，1000 片数量起的单价低于 1 美元。LP‑MSPM0G5187 Launchpad 开发套件售价 22 美元。更多细节（含文档与购买链接）可在 <a href=\"https://www.ti.com/product/MSPM0G5187?hqs=epd-tech-inno-mspm0g5187_dce-pr-pf-ew2026-ww_en#features\" target=\"_blank\" rel=\"noreferrer noopener\">产品页面</a>中找到。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "面向实时电机控制的 TI AM13Ex Arm Cortex‑M33 MCU"
+          },
+          {
+            "type": "image",
+            "src": "./assets/posts/texas-instruments-mspm0g5187-and-am13ex-mcus-integrate-tinyengine-npu-for-edge-ai-applications-cnx-software/figure-04.webp",
+            "alt": "",
+            "caption": "AM13E230x block diagram"
+          },
+          {
+            "type": "paragraph",
+            "html": "AM13E23019 规格："
+          },
+          {
+            "type": "list",
+            "items": [
+              "CPU – Arm Cortex‑M33 核心，最高 200 MHz，带 FPU、MPU、DSP、32‑bit 三角函数数学单元（TMU）；310 DMIPS，800 Coremark",
+              "内存 – 128 KB RAM（带 ECC）",
+              "外部外设接口（EPI）支持 SDRAM、ASRAM 或 ASIC/FPGA 外设接口",
+              "存储 – 最高 512 KB 闪存（2×256KB，带 ECC）",
+              "加速器 – TinyEngine NPU，用于 AI/ML",
+              "外设：灵活系统外设",
+              "12 通道 DMA 控制器",
+              "嵌套向量中断控制器（NVIC）",
+              "最多 107× GPIO，支持输入/输出 XBAR 连接",
+              "8× GPIO 支持 Shutdown 唤醒",
+              "1× 窗口式看门狗（WWDT）",
+              "2× 通用定时器：TIMG4（32‑bit）、TIMG12（16‑bit）",
+              "模拟 – 3× 12‑bit SAR ADC，最高 6.67 Msps，每个 ADC 最多 32 通道",
+              "4× 模拟比较器子系统（CMPSS），含 2× 10‑bit 等效 DAC 与 2× 数字滤波器",
+              "3× 可编程增益放大器（PGA）",
+              "ADC、PGA、CMPSS 与 DAC 之间的可编程模拟连接",
+              "实时控制 – 5× 电机控制 PWM（MCPWM）模块",
+              "2× Enhanced Capture（eCAP）模块",
+              "3× Enhanced Quadrature Encoder Pulse（eQEP）",
+              "设备交叉开关（INPUTXBAR、OUTPUTXBAR、PWMXBAR）用于把 GPIO 信号路由到其他模块",
+              "增强串行通信接口：2× 可配置串行接口支持 UART（LIN）或 I2C（SMBus/PMBus）",
+              "4× 可配置串行接口支持 UART、I2C 或 SPI",
+              "1× 模块化 CAN（MCAN），支持 CAN FD",
+              "时钟系统：内部 4MHz/32MHz 振荡器（SYSOSC）",
+              "内部 32kHz 振荡器（LFOSC）",
+              "系统 PLL（SYSPLL）最高 200MHz",
+              "外部 4MHz 至 25MHz 晶振（XTAL）",
+              "外部 4MHz 至 48MHz 时钟输入（HFCLK）",
+              "安全 – 支持 IEC61508 SIL‑2 与 SIL‑3 系统",
+              "安全特性 – 安全启动/固件更新/调试/JTAG 锁定；安全密钥存储与管理；特权/非特权资源分区；闪存写/擦/隐藏保护；设备生命周期管理；AES 加密（128 或 256‑bit 密钥）；唯一识别号（UID）",
+              "调试 – 4‑pin JTAG 与 2‑pin SWD",
+              "Micro Trace Buffer（MTB）",
+              "Embedded Trace Macrocell",
+              "供电电压 – 3.3V",
+              "功耗模式 – RUN：200MHz 下 49mA；STANDBY：1.84mA（CPU 执行恢复与 32kB SRAM 保留）；SHUTDOWN：",
+              "封装 – 128‑pin PDT TQFP（0.4mm 间距）；100‑pin PZ LQFP（0.5mm 间距）；80‑pin PN LQFP（0.5mm 间距）；64‑pin PM LQFP（0.5mm 间距）；48‑pin PT LQFP（0.5mm 间距）；48‑pin RGZ VQFN（0.5mm 间距）",
+              "温度范围 – -40°C 至 +105°C"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "html": "AM13Ex 家族支持 FreeRTOS、Zephyr RTOS 与通过 AM13E2 MCU SDK 进行裸机编程。它面向家电、机器人和工业系统中的电机控制应用，利用机器学习进行自适应控制与预测性维护。目前尚未找到对应的开发板。"
+          },
+          {
+            "type": "paragraph",
+            "html": "AM13E23019 的量产似乎尚未开始，德州仪器表示目前仅提供预量产数量。1K 订购量起的定价为 2.45 美元。更多细节可见 <a href=\"https://www.ti.com/product/AM13E23019?hqs=epd-tech-data-am13ex_edgeai-pr-pf-ew2026-ww_en#order-quality\" target=\"_blank\" rel=\"noreferrer noopener\">产品页面</a>。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "TinyEngine 软件支持"
+          },
+          {
+            "type": "paragraph",
+            "html": "这两款微控制器都由德州仪器的 CCStudio IDE 支持，依靠生成式 AI 支持来加速代码开发、系统配置与调试。该 IDE 还在 <a href=\"https://www.ti.com/tool/EDGE-AI-STUDIO\" target=\"_blank\" rel=\"noreferrer noopener\">CCStudio Edge AI Studio</a> 中集成了 60 多个模型与应用示例。"
+          },
+          {
+            "type": "paragraph",
+            "html": "TinyEngine 的一些代码示例包括："
+          },
+          {
+            "type": "list",
+            "items": [
+              "通用时间序列分类",
+              "电弧故障（AFCI）",
+              "电机故障",
+              "心电图（ECG）"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "html": "该工具还允许用户采集数据、训练与优化自定义模型，并利用内置的开源框架（支持 PyTorch、TensorFlow 与 ONNX）。你也可以查看 <a href=\"https://software-dl.ti.com/mctools/nnc/mcu/users_guide/\" target=\"_blank\" rel=\"noreferrer noopener\">开发者文档</a>来开始使用。"
+          },
+          {
+            "type": "image",
+            "src": "./assets/posts/texas-instruments-mspm0g5187-and-am13ex-mcus-integrate-tinyengine-npu-for-edge-ai-applications-cnx-software/figure-05.webp",
+            "alt": "",
+            "caption": "Texas Instruments Machine Learning Flow for microcontrollers"
+          },
+          {
+            "type": "paragraph",
+            "html": "感谢 TLS 的提示。"
+          }
+        ]
+      },
+      "workflow": {
+        "articleId": 2703,
+        "rssTitle": "Texas Instruments MSPM0G5187 and AM13Ex MCUs integrate TinyEngine NPU for Edge AI applications"
+      }
+    },
+    {
       "slug": "it-s-1979-what-exactly-did-that-key-do",
       "title": "It’s 1979 – What Exactly Did That ∫ Key Do?",
       "author": "Hackaday",
