@@ -30,11 +30,27 @@
     "layout": "detail-zh",
     "translatedFrom": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-opensearch-service-in-place-volume/",
     "sourceName": "AWS Architecture Blog",
-    "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+    "sourceDescription": "以下为原文逐段直译，保留原文段落推进与媒体顺序。",
     "blocks": [
       {
         "type": "paragraph",
-        "html": "<a href=\"https://aws.amazon.com/opensearch-service/\" target=\"_blank\" rel=\"noreferrer noopener\">Amazon OpenSearch Service</a> now extends in-place cluster volume size increases to volumes exceeding 3 TiB. With this enhancement, you can scale storage capacity across all volume sizes without requiring a blue/green deployment. <br> <br> Previously, you could perform volume increases up to 3 TiB on your clusters without a blue/green deployment. This release removes that limitation, making it easier for you to scale up quickly even beyond 3 TiB when required. Domains that already have a volume size above 3 TiB will require a blue/green deployment the first time a volume increase is made; subsequent volume increases will not require a blue/green deployment. <br> <br> Decreasing storage volume size, or making volume increases within short intervals, will still require a blue/green deployment. You can use the <a href=\"https://docs.aws.amazon.com/opensearch-service/latest/developerguide/managedomains-configuration-changes.html#dryrun\" target=\"_blank\" rel=\"noreferrer noopener\">dry-run</a> option to check whether your change requires a blue/green deployment. <br> <br> This feature is available in all AWS Commercial and AWS GovCloud (US) Regions where Amazon OpenSearch Service is available. See <a href=\"https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/\" target=\"_blank\" rel=\"noreferrer noopener\">here</a> for a full list of our Regions. To learn more about Amazon OpenSearch Service configurations, visit the <a href=\"https://docs.aws.amazon.com/opensearch-service/latest/developerguide/managedomains-configuration-changes.html\" target=\"_blank\" rel=\"noreferrer noopener\">documentation page</a>."
+        "html": "发布于：2026 年 3 月 10 日"
+      },
+      {
+        "type": "paragraph",
+        "html": "<a href=\"https://aws.amazon.com/opensearch-service/\" target=\"_blank\" rel=\"noreferrer noopener\">Amazon OpenSearch Service</a> 现已将就地扩容的集群存储卷大小支持扩展到超过 3 TiB 的卷。借助该增强，你可以在所有卷大小范围内扩展存储容量，而无需进行蓝/绿部署。"
+      },
+      {
+        "type": "paragraph",
+        "html": "此前，你可以在不进行蓝/绿部署的情况下，将集群卷大小增加到最多 3 TiB。本次发布移除了这一限制，使你在需要时能够更轻松地将容量扩展到超过 3 TiB。对于已拥有大于 3 TiB 卷大小的域，第一次进行卷扩容仍需要蓝/绿部署；后续的卷扩容将不再需要蓝/绿部署。"
+      },
+      {
+        "type": "paragraph",
+        "html": "降低存储卷大小，或在较短时间间隔内进行卷扩容，仍然需要蓝/绿部署。你可以使用 <a href=\"https://docs.aws.amazon.com/opensearch-service/latest/developerguide/managedomains-configuration-changes.html#dryrun\" target=\"_blank\" rel=\"noreferrer noopener\">dry-run</a> 选项来检查你的变更是否需要蓝/绿部署。"
+      },
+      {
+        "type": "paragraph",
+        "html": "该功能在所有提供 Amazon OpenSearch Service 的 AWS Commercial 和 AWS GovCloud (US) 区域可用。完整区域列表请见 <a href=\"https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/\" target=\"_blank\" rel=\"noreferrer noopener\">这里</a>。要了解更多 Amazon OpenSearch Service 配置信息，请访问 <a href=\"https://docs.aws.amazon.com/opensearch-service/latest/developerguide/managedomains-configuration-changes.html\" target=\"_blank\" rel=\"noreferrer noopener\">文档页面</a>。"
       }
     ],
     "refineErrors": [
