@@ -1160,7 +1160,6 @@ function renderDetailBlocks(detail) {
 
 function renderPost(post, relatedPosts) {
   const article = qs("post-article");
-  const related = qs("related-posts");
 
   if (!article) {
     return;
@@ -1225,37 +1224,10 @@ function renderPost(post, relatedPosts) {
 
   article.appendChild(contentWrap);
   appendPostPager(article, post, relatedPosts, effectiveView);
-
-  if (related) {
-    const listWrap = related.querySelector(".side-list");
-    if (listWrap) {
-      clear(listWrap);
-      related.setAttribute("aria-busy", "false");
-
-      relatedPosts
-        .filter((item) => item.slug !== post.slug)
-        .forEach((item) => {
-          const card = createElement("article", "side-card");
-          const titleNode = createElement("h3", "side-card__title");
-          const link = createElement("a", "side-card__link", item.title);
-          link.href = buildPostHref(item.slug, effectiveView);
-          titleNode.appendChild(link);
-          const metaLine = createElement("p", "side-card__meta", createMetaLine(item));
-          card.append(titleNode, metaLine);
-          listWrap.appendChild(card);
-        });
-
-      if (!listWrap.childNodes.length) {
-        const empty = createElement("article", "empty-state empty-state--compact");
-        empty.appendChild(createElement("p", "", "暂无其他文章。"));
-        listWrap.appendChild(empty);
-      }
-    }
-  }
 }
 
 function renderError(message) {
-  const targetIds = ["home-posts", "author-list", "pagination", "post-article", "related-posts"];
+  const targetIds = ["home-posts", "author-list", "pagination", "post-article"];
 
   targetIds.forEach((id) => {
     const node = qs(id);
@@ -1263,17 +1235,7 @@ function renderError(message) {
       return;
     }
 
-    if (id === "related-posts") {
-      const listWrap = node.querySelector(".side-list");
-      if (listWrap) {
-        clear(listWrap);
-        const box = createElement("article", "empty-state empty-state--compact");
-        box.appendChild(createElement("p", "", message));
-        listWrap.appendChild(box);
-      }
-      node.setAttribute("aria-busy", "false");
-      return;
-    }
+    // related-posts removed
 
     clear(node);
     node.setAttribute("aria-busy", "false");
