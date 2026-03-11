@@ -5,6 +5,183 @@
   },
   "posts": [
     {
+      "slug": "expanding-chrome-s-ai-experiences-to-india-new-zealand-and-canada",
+      "title": "Expanding Chrome’s AI experiences to India, New Zealand and Canada",
+      "author": "Google AI Blog",
+      "publishedAt": "2026-03-11",
+      "source": "Google AI Blog",
+      "url": "https://blog.google/products-and-platforms/products/chrome/chrome-expands-india-new-zealand-canada/",
+      "excerpt": "这篇文章围绕“Expanding Chrome’s AI experiences to India, New Zealand and Canada”展开，RSS 摘要提到：We’re bringing Gemini in Chrome’s powerful AI features to more regions and languages, helping millions of people get the most out of thei...",
+      "tags": [
+        "AI"
+      ],
+      "content": [
+        {
+          "heading": "文章核心",
+          "paragraphs": [
+            "基于 RSS 摘要与页面元数据，原文重点是：We’re bringing Gemini in Chrome’s powerful AI features to more regions and languages, helping millions of people get the most out of their browser.",
+            "来源信息：Google AI Blog｜2026-03-11。"
+          ]
+        },
+        {
+          "heading": "值得继续补充的点",
+          "paragraphs": [
+            "如果后续补齐详情视图，可以继续沿着原文结构展开关键论点、案例、约束条件与结论。",
+            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+          ]
+        }
+      ],
+      "detail": {
+        "available": true,
+        "layout": "detail-zh",
+        "translatedFrom": "https://blog.google/products-and-platforms/products/chrome/chrome-expands-india-new-zealand-canada/",
+        "sourceName": "Google AI Blog",
+        "sourceDescription": "以下为原文逐段直译，保留原文段落推进与媒体顺序。",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "html": "2026 年 3 月 11 日"
+          },
+          {
+            "type": "paragraph",
+            "html": "我们正把 Chrome 强大的 AI 功能带到更多地区和语言，帮助数以百万计的人从浏览器中获得更多价值。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "要点"
+          },
+          {
+            "type": "list",
+            "items": [
+              "“扩展 Chrome 的 AI 体验”把新的 AI 功能带到印度、新西兰和加拿大。",
+              "Chrome 中的 Gemini 让你无需离开当前标签页即可与 AI 助手聊天。",
+              "Chrome 的 AI 与 Gmail、地图、日历和 YouTube 集成，方便访问。",
+              "Gemini 可以跨多个标签页工作，用于比较产品或规划团队活动。",
+              "Nano Banana 2 可直接在 Chrome 中变换图像，安全性是优先事项。"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "html": "摘要由 Google AI 生成。生成式 AI 为实验性功能。"
+          },
+          {
+            "type": "paragraph",
+            "html": "你的浏览器不支持音频元素。"
+          },
+          {
+            "type": "paragraph",
+            "html": "收听本文"
+          },
+          {
+            "type": "paragraph",
+            "html": "本文内容由 Google AI 生成。生成式 AI 为实验性功能。"
+          },
+          {
+            "type": "paragraph",
+            "html": "[[duration]] 分钟"
+          },
+          {
+            "type": "paragraph",
+            "html": "浏览器是我们完成工作、学习新事物并与世界连接的地方。但有时我们在网上做的任务——比如消化一篇冗长的化学论文，或只是为晚餐找点灵感——会显得繁琐、拖慢我们。"
+          },
+          {
+            "type": "paragraph",
+            "html": "这就是为什么我们把 <a href=\"https://blog.google/products-and-platforms/products/chrome/gemini-3-auto-browse/\" target=\"_blank\" rel=\"noreferrer noopener\">AI 直接内置进 Chrome</a>，帮助人们查找与理解信息，无论他们是在备考、为完美礼物购物，还是处理日常琐事。今天，我们把 <a href=\"https://blog.google/products-and-platforms/products/chrome/new-ai-features-for-chrome/\" target=\"_blank\" rel=\"noreferrer noopener\">Chrome 最新的 AI 功能</a>（包括 Chrome 中的 Gemini）带到印度、新西兰和加拿大。我们也在推出对超过 <a href=\"https://support.google.com/chrome/answer/16283624\" target=\"_blank\" rel=\"noreferrer noopener\">50 种新增语言</a>的支持，包括印地语、法语和西班牙语。"
+          },
+          {
+            "type": "paragraph",
+            "html": "这些功能基于 Gemini 3.1 构建，将首先在这些地区的桌面端与 iOS 上提供。在 Android 上，你可以在使用 Chrome 和其他应用时按住电源键来启用 Gemini。"
+          },
+          {
+            "type": "paragraph",
+            "html": "以下是可期待的功能。"
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "无需切换标签页即可与浏览助手聊天"
+          },
+          {
+            "type": "paragraph",
+            "html": "有时你只是需要一个快速答案或一点灵感，而不想在网页中丢失当前位置。借助 Chrome 中的 Gemini，你可以轻松多任务处理，随时获得你正在处理的任何事情的帮助，而完全不必切换标签页。只需点击当前标签页右上角的图标，就能开始与个性化的浏览助手对话。"
+          },
+          {
+            "type": "paragraph",
+            "html": "Chrome 中的 Gemini 正在向印度、新西兰和加拿大的所有 Mac、Windows 与 Chromebook Plus 用户推出。"
+          },
+          {
+            "type": "paragraph",
+            "html": "Chrome 内置 AI 可帮助你总结冗长的网页内容，执行诸如为即将到来的期末考试创建小测验之类的任务，回答像“如何把这份食谱改成纯素？”这样的问题，甚至记住你之前访问过的页面，让你终于可以关闭那些留着“以后再看”的标签页。"
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "通过内置集成获取 Google 的精华"
+          },
+          {
+            "type": "paragraph",
+            "html": "通过与我们最受欢迎的应用（包括 Gmail、地图、日历、YouTube 等）集成，Chrome 让你直接在浏览器中获得 Google 的最佳体验。只需点击几下，你就可以在日历中安排会议，从地图查看地点详情，并就 YouTube 视频提问。"
+          },
+          {
+            "type": "paragraph",
+            "html": "Chrome 中的 Gemini 可让你轻松查看 YouTube 视频的要点。"
+          },
+          {
+            "type": "paragraph",
+            "html": "与 Gmail 的集成意味着你甚至可以在不离开当前页面的情况下撰写并发送邮件。只需打开侧边栏并要求发送一封邮件。完成后，你可以选择进行必要的编辑，然后一键发送。"
+          },
+          {
+            "type": "paragraph",
+            "html": "Chrome 中的 Gemini 可与 Gmail 等其他 Google 应用协作，让你直接在侧边栏起草并发送邮件。"
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "跨标签页更快完成工作"
+          },
+          {
+            "type": "paragraph",
+            "html": "Chrome 中的 Gemini 还能跨多个打开的标签页工作，让你轻松交叉引用并把信息汇总为一个视图。计划一次团建活动？Chrome 可以把你所有的研究资料汇总起来，规划一场完美的线下破冰活动。想购买一款纯素蛋白粉？没问题。借助 Chrome 中的 Gemini，你可以轻松创建一个表格来比较不同网站上产品的关键细节，让购物变得轻松。"
+          },
+          {
+            "type": "paragraph",
+            "html": "Chrome 中的 Gemini 可以利用多个标签页的上下文。"
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "用 Nano Banana 在网页上变换图像"
+          },
+          {
+            "type": "paragraph",
+            "html": "我们还把 <a href=\"https://blog.google/innovation-and-ai/technology/ai/nano-banana-2/\" target=\"_blank\" rel=\"noreferrer noopener\">Nano Banana 2</a> 直接内置到 Chrome 中，让你能随时变换图像。你只需要在侧边栏输入提示，说明你想做什么。Nano Banana 2 会完成其余工作，无需上传文件或打开新标签页就能变换图像。例如，有了 Nano Banana 2，你可以成为自己的室内设计师，在购买之前先混搭家具。"
+          },
+          {
+            "type": "paragraph",
+            "html": "无需复制粘贴或重新上传；Chrome 中的 Gemini 使用 Nano Banana 在你当前的浏览器窗口内变换图像。"
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "以安全为先的 Chrome 设计"
+          },
+          {
+            "type": "paragraph",
+            "html": "Chrome 中的 Gemini 旨在让你掌控一切，并且从一开始就 <a href=\"https://security.googleblog.com/2025/12/architecting-security-for-agentic.html\" target=\"_blank\" rel=\"noreferrer noopener\">以安全为导向</a>构建。我们训练模型识别已知威胁，例如 <a href=\"https://storage.googleapis.com/deepmind-media/Security%20and%20Privacy/Gemini_Security_Paper.pdf\" target=\"_blank\" rel=\"noreferrer noopener\">提示注入</a>，以保障你在浏览时的安全。我们还构建了安全保障机制，在执行某些敏感操作（如发送邮件或向日历添加事件）前要求确认。为验证 Chrome 分层防护的安全性，我们使用自动化红队测试持续强化保护，并利用 Chrome 的自动更新能力快速推出修复，以应对最新威胁。"
+          },
+          {
+            "type": "paragraph",
+            "html": "这些只是我们带给印度、新西兰和加拿大用户的一些全新能力。我们将在全年持续增加更多能力，并扩展到更多地区和语言，敬请期待。"
+          }
+        ]
+      },
+      "workflow": {
+        "articleId": 2701,
+        "rssTitle": "Expanding Chrome’s AI experiences to India, New Zealand and Canada"
+      }
+    },
+    {
       "slug": "ai-should-help-us-produce-better-code-agentic-engineering-patterns",
       "title": "AI should help us produce better code - Agentic Engineering Patterns",
       "author": "Simon Willison",
