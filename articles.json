@@ -5,6 +5,67 @@
   },
   "posts": [
     {
+      "slug": "it-s-1979-what-exactly-did-that-key-do",
+      "title": "It’s 1979 – What Exactly Did That ∫ Key Do?",
+      "author": "Hackaday",
+      "publishedAt": "2026-03-11",
+      "source": "Hackaday",
+      "url": "https://hackaday.com/2026/03/10/its-1979-what-exactly-did-that-%e2%88%ab-key-do/",
+      "excerpt": "这篇文章围绕“It’s 1979 – What Exactly Did That ∫ Key Do?”展开，RSS 摘要提到：[Michel Jean] asked a question few others might: what exactly is going on under the hood of a classic HP scientific calculator when one p...",
+      "tags": [
+        "Hardware"
+      ],
+      "content": [
+        {
+          "heading": "文章核心",
+          "paragraphs": [
+            "基于 RSS 摘要与页面元数据，原文重点是：[Michel Jean] asked a question few others might: what exactly is going on under the hood of a classic HP scientific calculator when one presses the ∫ key? A numerical integration, sure, but how exa…",
+            "来源信息：Hackaday｜2026-03-11。"
+          ]
+        },
+        {
+          "heading": "值得继续补充的点",
+          "paragraphs": [
+            "如果后续补齐详情视图，重点可以继续展开芯片规格、接口能力、功耗指标和适用场景。",
+            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+          ]
+        }
+      ],
+      "detail": {
+        "available": true,
+        "layout": "detail-zh",
+        "translatedFrom": "https://hackaday.com/2026/03/10/its-1979-what-exactly-did-that-%e2%88%ab-key-do/",
+        "sourceName": "Hackaday",
+        "sourceDescription": "以下为原文逐段直译，保留原文段落推进与媒体顺序。",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "html": "[Michel Jean] 提出了一个很少有人会问的问题：当你在一台经典 HP 科学计算器上按下 ∫ 键时，内部 <a href=\"https://axiomelab.gitlab.io/hp-integral/article_hp_en.html\" target=\"_blank\" rel=\"noreferrer noopener\">到底发生了什么</a>？当然是数值积分，但到底是怎么做的？按下积分键时可能会启动多种有用算法，而像所有好奇的黑客一样，[Michel] 决定亲自验证到底发生了什么。"
+          },
+          {
+            "type": "paragraph",
+            "html": "[Michel] 用 C++ 实现了不同的积分算法，并在实验中把它们与 HP 计算器的结果进行对比。通过设定严格的测试，[Michel] 得出结论：这些计算器确实使用了由 HP 数学家 William Kahan 开发的 Romberg‑Kahan 算法。"
+          },
+          {
+            "type": "paragraph",
+            "html": "Romberg‑Kahan 算法在 1979 年被 HP 选中用于其科学计算器，并持续服役了近十年。它是因为速度快、效率高才被选中吗？并非如此。相较于其他算法，它胜在稳健性。有些方法在某些问题类型上极其快速而优雅，但在其他问题上会崩溃。Romberg‑Kahan 算法是唯一一个不会举手投降的算法；它非常适合那种只知道操作者输入内容、除此之外一无所知的通用科学计算器。"
+          },
+          {
+            "type": "paragraph",
+            "html": "这是一个关于经典 HP 计算器的相当有趣的事实，也为这些机器提供了一段有意思的历史背景。如果你想要更具触感的体验，且不介意 DIY，完全可以用现代微控制器重现 <a href=\"https://hackaday.com/2021/11/24/build-your-own-hp41c/\" target=\"_blank\" rel=\"noreferrer noopener\">老式 HP 计算器</a>，配上 3D 打印外壳，做成手持设备。"
+          },
+          {
+            "type": "paragraph",
+            "html": "感谢 [Stephen Walters] 的提示！"
+          }
+        ]
+      },
+      "workflow": {
+        "articleId": 2702,
+        "rssTitle": "It’s 1979 – What Exactly Did That ∫ Key Do?"
+      }
+    },
+    {
       "slug": "expanding-chrome-s-ai-experiences-to-india-new-zealand-and-canada",
       "title": "Expanding Chrome’s AI experiences to India, New Zealand and Canada",
       "author": "Google AI Blog",

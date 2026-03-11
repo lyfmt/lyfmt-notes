@@ -30,103 +30,27 @@
     "layout": "detail-zh",
     "translatedFrom": "https://hackaday.com/2026/03/10/its-1979-what-exactly-did-that-%e2%88%ab-key-do/",
     "sourceName": "Hackaday",
-    "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+    "sourceDescription": "以下为原文逐段直译，保留原文段落推进与媒体顺序。",
     "blocks": [
       {
-        "type": "heading",
-        "level": 2,
-        "text": "Hackaday"
-      },
-      {
-        "type": "list",
-        "items": [
-          "by:"
-        ]
-      },
-      {
-        "type": "list",
-        "items": [
-          "<a href=\"https://www.facebook.com/sharer/sharer.php?u=https://hackaday.com/2026/03/10/its-1979-what-exactly-did-that-%e2%88%ab-key-do/\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>",
-          "<a href=\"https://twitter.com/intent/tweet?text=It’s%201979%20–%20What%20Exactly%20Did%20That%20∫%20Key%20Do?%20via%20@hackaday&amp;url=https://hackaday.com/2026/03/10/its-1979-what-exactly-did-that-%e2%88%ab-key-do/\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>",
-          "<a href=\"https://news.ycombinator.com/submitlink?u=https://hackaday.com/2026/03/10/its-1979-what-exactly-did-that-%e2%88%ab-key-do/&amp;t=It’s%201979%20–%20What%20Exactly%20Did%20That%20∫%20Key%20Do\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>",
-          "<a href=\"https://www.reddit.com/submit?url=https://hackaday.com/2026/03/10/its-1979-what-exactly-did-that-%e2%88%ab-key-do/\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>"
-        ]
-      },
-      {
-        "type": "image",
-        "src": "https://hackaday.com/wp-content/uploads/2026/03/hp34C2-Brett-Maraldo-banner.png?w=800",
-        "alt": "",
-        "caption": ""
+        "type": "paragraph",
+        "html": "[Michel Jean] 提出了一个很少有人会问的问题：当你在一台经典 HP 科学计算器上按下 ∫ 键时，内部 <a href=\"https://axiomelab.gitlab.io/hp-integral/article_hp_en.html\" target=\"_blank\" rel=\"noreferrer noopener\">到底发生了什么</a>？当然是数值积分，但到底是怎么做的？按下积分键时可能会启动多种有用算法，而像所有好奇的黑客一样，[Michel] 决定亲自验证到底发生了什么。"
       },
       {
         "type": "paragraph",
-        "html": "[Michel Jean] asked a question few others might: <a href=\"https://axiomelab.gitlab.io/hp-integral/article_hp_en.html\" target=\"_blank\" rel=\"noreferrer noopener\">what <em>exactly</em> is going on under the hood of a classic HP scientific calculator when one presses the <code>∫</code> key</a>? A numerical integration, sure, but how exactly? There are a number of useful algorithms that could be firing up when the integral button is pressed, and like any curious hacker [Michel] decided to personally verify what was happening."
+        "html": "[Michel] 用 C++ 实现了不同的积分算法，并在实验中把它们与 HP 计算器的结果进行对比。通过设定严格的测试，[Michel] 得出结论：这些计算器确实使用了由 HP 数学家 William Kahan 开发的 Romberg‑Kahan 算法。"
       },
       {
         "type": "paragraph",
-        "html": "[Michel] implemented different integration algorithms in C++ and experimentally compared them against HP calculator results. By setting up rigorous tests, [Michel] was able to conclude that the calculators definitely use Romberg-Kahan, developed by HP Mathematician William Kahan."
+        "html": "Romberg‑Kahan 算法在 1979 年被 HP 选中用于其科学计算器，并持续服役了近十年。它是因为速度快、效率高才被选中吗？并非如此。相较于其他算法，它胜在稳健性。有些方法在某些问题类型上极其快速而优雅，但在其他问题上会崩溃。Romberg‑Kahan 算法是唯一一个不会举手投降的算法；它非常适合那种只知道操作者输入内容、除此之外一无所知的通用科学计算器。"
       },
       {
         "type": "paragraph",
-        "html": "Selected by HP in 1979 for use in their scientific calculators, the <a href=\"https://axiomelab.gitlab.io/hp34c/\" target=\"_blank\" rel=\"noreferrer noopener\">Romberg-Kahan algorithm</a> was kept in service for nearly a decade. Was it because the algorithm was fast and efficient? Not really. The reason it was chosen over others was on account of its robustness. Some methods are ridiculously fast and tremendously elegant at certain types of problem, but fall apart when applied to others. The Romberg-Kahan algorithm is the only one that never throws up its hands in failure; ideal for a general-purpose scientific calculator that knows only what its operator keys in, and not a lick more."
+        "html": "这是一个关于经典 HP 计算器的相当有趣的事实，也为这些机器提供了一段有意思的历史背景。如果你想要更具触感的体验，且不介意 DIY，完全可以用现代微控制器重现 <a href=\"https://hackaday.com/2021/11/24/build-your-own-hp41c/\" target=\"_blank\" rel=\"noreferrer noopener\">老式 HP 计算器</a>，配上 3D 打印外壳，做成手持设备。"
       },
       {
         "type": "paragraph",
-        "html": "It’s a pretty neat fact about classic HP calculators, and an interesting bit of historical context for these machines. Should you wish for something a bit more tactile and don’t mind some DIY, it’s entirely possible to <a href=\"https://hackaday.com/2021/11/24/build-your-own-hp41c/\" target=\"_blank\" rel=\"noreferrer noopener\">re-create old HP calculators</a> as handhelds driven by modern microcontrollers, complete with 3D-printed cases."
-      },
-      {
-        "type": "paragraph",
-        "html": "Thanks to [Stephen Walters] for the tip!"
-      },
-      {
-        "type": "image",
-        "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_face.png",
-        "alt": "",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_twitter.png",
-        "alt": "",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_in.png",
-        "alt": "",
-        "caption": ""
-      },
-      {
-        "type": "image",
-        "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_mail1.png",
-        "alt": "",
-        "caption": ""
-      },
-      {
-        "type": "list",
-        "items": [
-          "<a href=\"https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhackaday.com%2F2026%2F03%2F10%2Fits-1979-what-exactly-did-that-%25e2%2588%25ab-key-do%2F\" target=\"_blank\" rel=\"noreferrer noopener\"> <i> </i> </a>",
-          "<a href=\"https://twitter.com/intent/tweet?text=It’s%201979%20–%20What%20Exactly%20Did%20That%20∫%20Key%20Do?%20via%20@hackaday&amp;url=https://hackaday.com/2026/03/10/its-1979-what-exactly-did-that-%e2%88%ab-key-do/\" target=\"_blank\" rel=\"noreferrer noopener\"> <i></i> </a>",
-          "<a href=\"https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fhackaday.com%2F2026%2F03%2F10%2Fits-1979-what-exactly-did-that-%25e2%2588%25ab-key-do%2F\" target=\"_blank\" rel=\"noreferrer noopener\"> <i></i> </a>",
-          "<a href=\"mailto:?subject=It%E2%80%99s+1979+%E2%80%93+What+Exactly+Did+That+%E2%88%AB+Key+Do%3F | Hackaday&amp;body=https%3A%2F%2Fhackaday.com%2F2026%2F03%2F10%2Fits-1979-what-exactly-did-that-%25e2%2588%25ab-key-do%2F\" target=\"_blank\" rel=\"noreferrer noopener\"> <i></i> </a>"
-        ]
-      }
-    ],
-    "refineErrors": [
-      {
-        "index": 1,
-        "type": "list",
-        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
-      },
-      {
-        "index": 2,
-        "type": "list",
-        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
-      },
-      {
-        "index": 4,
-        "type": "paragraph",
-        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+        "html": "感谢 [Stephen Walters] 的提示！"
       }
     ]
   },
