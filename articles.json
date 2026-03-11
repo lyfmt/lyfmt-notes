@@ -381,23 +381,17 @@
       "publishedAt": "2026-03-11",
       "source": "Latent Space",
       "url": "https://www.latent.space/p/ainews-yann-lecuns-ami-labs-launches",
-      "excerpt": "这篇文章围绕“[AINews] Yann LeCun’s AMI Labs launches with a $1.03B seed to build world models around JEPA”展开，RSS 摘要提到：World Models are what next generation AI needs.",
+      "excerpt": "# Yann LeCun 的 AMI Labs 以 10.3 亿美元种子轮启动，押注 JEPA 世界模型\n\n### 内容分类\n【AI】【研究】【产业】\n\n### 内容总结\n报道聚焦 Yann LeCun 发起的 AMI Labs 获得超大规模种子轮融资，目标是围绕 JEPA 构建“世界模型”，强调理解物理世界与因果关系而非仅做语言预测。团队阵容和公开表态显示其重视视觉、自监督表示学习与可解释的潜在空间建模，意在为具身智能、机器人与安全关键场景提供更可靠的基础。该事件也引发对 LLM 路线的再讨论：行业开始重新评估“下一词预测是否足以通往通用智能”，同时关注开放研究与工程落地的可行性。",
       "tags": [
         "AI"
       ],
       "content": [
         {
-          "heading": "文章核心",
+          "heading": "总结",
           "paragraphs": [
-            "基于 RSS 摘要与页面元数据，原文重点是：World Models are what next generation AI needs.",
-            "来源信息：Latent Space｜2026-03-11。"
-          ]
-        },
-        {
-          "heading": "值得继续补充的点",
-          "paragraphs": [
-            "如果后续补齐详情视图，可以继续沿着原文结构展开关键论点、案例、约束条件与结论。",
-            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+            "# Yann LeCun 的 AMI Labs 以 10.3 亿美元种子轮启动，押注 JEPA 世界模型",
+            "### 内容分类\n【AI】【研究】【产业】",
+            "### 内容总结\n报道聚焦 Yann LeCun 发起的 AMI Labs 获得超大规模种子轮融资，目标是围绕 JEPA 构建“世界模型”，强调理解物理世界与因果关系而非仅做语言预测。团队阵容和公开表态显示其重视视觉、自监督表示学习与可解释的潜在空间建模，意在为具身智能、机器人与安全关键场景提供更可靠的基础。该事件也引发对 LLM 路线的再讨论：行业开始重新评估“下一词预测是否足以通往通用智能”，同时关注开放研究与工程落地的可行性。"
           ]
         }
       ],

@@ -1,0 +1,70 @@
+# Summary Rewrite Tasks (Markdown format)
+
+Rules:
+- Title line as `# ...`
+- Category line as `### 内容分类` + bracketed tags (e.g., 【硬件】【AI】)
+- Summary line as `### 内容总结` with narrative >= 100 Chinese characters
+- Summary must NOT include the string "rss" in any case
+
+Progress:
+- [x] the-inside-java-newsletter-new-sponsors-for-javaone-registration-discount-continues
+- [x] amd-ryzen-ai-embedded-p100-series-expands-with-up-to-12-zen-5-cores-80-tops-of-ai-performance-cnx-software
+- [x] ainews-yann-lecun-s-ami-labs-launches-with-a-1-03b-seed-to-build-world-models-around-jepa
+- [ ] running-ocarina-of-time-on-the-apple-watch
+- [ ] event-driven-architecture-in-java-and-kafka
+- [ ] lenovo-thinkstation-pgx-review-the-nvidia-gb10-128gb-ai-workstation-goes-corporate
+- [ ] nxp-i-mx-937-cost-effective-cortex-a55-m7-m33-mpu-is-a-drop-in-replacement-for-nxp-i-mx-95-soc-family-cnx-software
+- [ ] texas-instruments-mspm0g5187-and-am13ex-mcus-integrate-tinyengine-npu-for-edge-ai-applications-cnx-software
+- [ ] it-s-1979-what-exactly-did-that-key-do
+- [ ] expanding-chrome-s-ai-experiences-to-india-new-zealand-and-canada
+- [ ] ai-should-help-us-produce-better-code-agentic-engineering-patterns
+- [ ] clear-resin-casting-replicates-old-acrylic-for-selectric-repair
+- [ ] turning-a-gdb-coredump-debug-session-into-a-murder-mystery
+- [ ] amazon-bedrock-agentcore-runtime-now-supports-stateful-mcp-server-features-aws
+- [ ] amazon-bedrock-now-supports-observability-of-first-token-latency-and-quota-consumption-aws
+- [ ] amazon-connect-enhances-ai-powered-predictive-insights-aws
+- [ ] aws-builder-id-now-supports-sign-in-with-github-and-amazon-aws
+- [ ] amazon-opensearch-service-now-supports-in-place-volume-increases-for-all-volume-sizes
+- [ ] blood-tests-could-provide-early-warning-of-alzheimers-disease
+- [ ] raspberry-pi-cm0-based-industrial-ai-camera-features-motorized-auto-focus-system-12-pin-ethernet-rs-232-do-aviation-connector-cnx-software
+- [ ] introducing-storage-buckets-on-the-hugging-face-hub
+- [ ] amazon-connect-now-supports-conversational-analytics-for-email-aws
+- [ ] amazon-connect-introduces-ai-powered-manager-assistance-preview-aws
+- [ ] gemini-embedding-2-our-first-natively-multimodal-embedding-model
+- [ ] arduino-s-new-ai-centric-board-is-the-ventuno-q
+- [ ] how-ai-can-improve-breast-cancer-detection-in-the-uk
+- [ ] this-week-in-spring-march-10th-2026
+- [ ] nxp-i-mx-93w-wireless-mpu-sip-pairs-dual-core-arm-cortex-a55-processor-with-nxp-iw610-wifi-6-bluetooth-le-and-805-15-4-radio-cnx-software
+- [ ] seeing-the-world-through-animal-eyes
+- [ ] keep-the-tokens-flowing-lessons-from-16-open-source-rl-libraries
+- [ ] introducing-lottie4j-a-java-fx-library-to-parse-and-play-lottie-animation-files
+- [ ] this-week-in-spring-march-9th-2026
+- [ ] nvidia-s-ai-engineers-agent-inference-at-planetary-scale-and-speed-of-light-nader-khalil-brev-kyle-kranen-dynamo
+- [ ] makerfabs-cm0iq-an-ultra-compact-42x36mm-raspberry-pi-cm0-lite-board-cnx-software
+- [ ] diagnosing-a-mysterious-fault-with-a-commodore-1541-disk-drive
+- [ ] ainews-autoresearch-sparks-of-recursive-self-improvement
+- [ ] the-sweetest-programming-language-mnm
+- [ ] intel-arrow-lake-s-atx-motherboard-supports-up-to-256gb-cu-dimm-ddr5-ram-features-w880-chipset-cnx-software
+- [ ] amazon-quick-suite-launches-user-preferences-for-chat-personalization-aws
+- [ ] building-a-class-100-semiconductor-cleanroom-inside-a-shed
+- [ ] amazon-ec2-g7e-instances-now-available-in-asia-pacific-seoul-and-europe-spain-regions-aws
+- [ ] iam-roles-anywhere-now-supports-post-quantum-digital-certificates
+- [ ] amazon-cognito-is-now-available-in-asia-pacific-taipei-and-asia-pacific-new-zealand-regions-aws
+- [ ] amazon-msk-serverless-expands-to-three-new-aws-regions-aws
+- [ ] amazon-cloudwatch-logs-announces-increased-query-concurrency-and-api-limits-aws
+- [ ] real-time-iss-tracker-shows-off-the-goods
+- [ ] anthropic-launches-a-multi-agent-code-review-tool-for-claude-code
+- [ ] ulysses-sequence-parallelism-training-with-million-token-contexts
+- [ ] lenovo-slim-7i-aura-edition-is-an-lightweight-laptop-with-intel-panther-lake
+- [ ] lerobot-v0-5-0-scaling-every-dimension
+- [ ] granite-4-0-1b-speech-compact-multilingual-and-built-for-the-edge
+- [ ] last-year-in-sbcs
+- [ ] ask-hackaday-what-will-an-llm-be-good-for-in-the-plateau-of-productivity
+- [ ] ai-coding-agents-can-write-code-crafting-wants-to-help-them-ship-it
+- [ ] moving-ai-apps-from-prototype-to-production-requires-enterprise-grade-postgres-infrastructure
+- [ ] perhaps-not-boring-technology-after-all
+- [ ] nordic-semi-unveils-nrf54ls05a-and-nrf54ls05b-entry-level-ultra-low-power-bluetooth-le-socs
+- [ ] secure-communication-buried-in-a-news-app
+- [ ] amd-expands-ryzen-ai-embedded-p100-family-with-8-to-12-core-parts
+- [ ] pi-the-minimal-agent-within-openclaw
+- [ ] ai-and-the-ship-of-theseus
