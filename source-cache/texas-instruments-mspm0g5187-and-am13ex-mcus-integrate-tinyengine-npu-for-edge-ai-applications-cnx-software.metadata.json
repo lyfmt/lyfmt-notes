@@ -1,0 +1,20 @@
+{
+  "item": {
+    "id": 2703,
+    "title": "Texas Instruments MSPM0G5187 and AM13Ex MCUs integrate TinyEngine NPU for Edge AI applications",
+    "blog": "CNX Software",
+    "url": "https://www.cnx-software.com/2026/03/11/texas-instruments-mspm0g5187-and-am13ex-mcus-integrate-tinyengine-npu-for-edge-ai-applications/",
+    "published": "2026-03-11T04:34:17Z",
+    "discovered": "2026-03-11T05:00:09.354160368Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://www.cnx-software.com/2026/03/11/texas-instruments-mspm0g5187-and-am13ex-mcus-integrate-tinyengine-npu-for-edge-ai-applications/",
+    "ok": true,
+    "title": "Texas Instruments MSPM0G5187 and AM13Ex MCUs integrate TinyEngine NPU for Edge AI applications - CNX Software",
+    "description": "Texas Instruments MSPM0G5187 and AM13Ex are two new microcontroller (MCU) families featuring the company's TinyEngine neural processing unit (NPU) to",
+    "fetched_bytes": 247789,
+    "error": null
+  },
+  "classification": "normal"
+}

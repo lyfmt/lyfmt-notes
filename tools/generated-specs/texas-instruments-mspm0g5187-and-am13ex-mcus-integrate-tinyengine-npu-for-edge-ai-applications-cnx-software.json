@@ -1,0 +1,324 @@
+{
+  "slug": "texas-instruments-mspm0g5187-and-am13ex-mcus-integrate-tinyengine-npu-for-edge-ai-applications-cnx-software",
+  "title": "Texas Instruments MSPM0G5187 and AM13Ex MCUs integrate TinyEngine NPU for Edge AI applications - CNX Software",
+  "author": "CNX Software",
+  "publishedAt": "2026-03-11",
+  "source": "CNX Software",
+  "url": "https://www.cnx-software.com/2026/03/11/texas-instruments-mspm0g5187-and-am13ex-mcus-integrate-tinyengine-npu-for-edge-ai-applications/",
+  "tags": [
+    "Hardware",
+    "AI",
+    "Networking",
+    "Infrastructure"
+  ],
+  "excerpt": "这篇文章围绕“Texas Instruments MSPM0G5187 and AM13Ex MCUs integrate TinyEngine NPU for Edge AI applications - CNX Software”展开，RSS 摘要提到：Texas Instruments MSPM0G5187 and AM13Ex are two new microcontroller (MCU) families featuring the company's TinyEngine neural processing u...",
+  "content": [
+    {
+      "heading": "文章核心",
+      "paragraphs": [
+        "基于 RSS 摘要与页面元数据，原文重点是：Texas Instruments MSPM0G5187 and AM13Ex are two new microcontroller (MCU) families featuring the company's TinyEngine neural processing unit (NPU) to",
+        "来源信息：CNX Software｜2026-03-11。"
+      ]
+    },
+    {
+      "heading": "值得继续补充的点",
+      "paragraphs": [
+        "如果后续补齐详情视图，重点可以继续展开架构取舍、生产约束、性能代价和工程实施方式。",
+        "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+      ]
+    }
+  ],
+  "detail": {
+    "available": true,
+    "layout": "detail-zh",
+    "translatedFrom": "https://www.cnx-software.com/2026/03/11/texas-instruments-mspm0g5187-and-am13ex-mcus-integrate-tinyengine-npu-for-edge-ai-applications/",
+    "sourceName": "CNX Software",
+    "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "html": "Texas Instruments MSPM0G5187 and AM13Ex are two new microcontroller (MCU) families featuring the company’s TinyEngine neural processing unit (NPU) to enable low-latency, high-efficiency Edge AI/Machine Learning inference on the chips."
+      },
+      {
+        "type": "paragraph",
+        "html": "TI claims that the TinyEngine NPU can run AI models with up to 90 times lower latency and more than 120 times lower energy utilization per inference than similar MCUs without an accelerator. The MSPM0G5187 is a general-purpose, low-power Arm Cortex-M0+ MCU, while the AM13Ex Arm Cortex-M33 microcontroller targets real-time motor control, starting with the AM13E23019 SKU."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "TI MSPM0G5187 general-purpose Cortex-M0+ MCU"
+      },
+      {
+        "type": "image",
+        "src": "https://www.cnx-software.com/wp-content/uploads/2026/03/MSPM0G5187-TinyEngine-NPU-720x407.jpg",
+        "alt": "MSPM0G5187 TinyEngine NPU",
+        "caption": "MSPM0G5187 TinyEngine NPU"
+      },
+      {
+        "type": "paragraph",
+        "html": "<a href=\"https://www.cnx-software.com/wp-content/uploads/2026/03/MSPM0G5187-TinyEngine-NPU.jpg\" target=\"_blank\" rel=\"noreferrer noopener\"></a>"
+      },
+      {
+        "type": "paragraph",
+        "html": "Key features and specifications:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "TinyEngine NPU for AI/ML delivering up to 2.56GOPS (Giga Operations Per Second) at 80MHz",
+          "MATHACL math accelerator"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "4x 16-bit timers with up to 14x PWM",
+          "2x windowed watchdog timers",
+          "RTC with alarm and calendar mode"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "12-bit SAR ADC; 26 ADC channels; up to 1.6 Mbps sample rate",
+          "Comparator with 8-pin DAC",
+          "Integrated temperature sensor"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "RUN – 103µA/MHz (CoreMark)",
+          "SLEEP – 34µA/MHz",
+          "STOP – 199µA at 4MHz",
+          "STANDBY – 1.5µA at 32kHz with RTC and full SRAM and state retention",
+          "SHUTDOWN – 88nA with IO wake-up capability"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "64-pin LQFP (PM) (0.5mm pitch)",
+          "48-pin LQFP (PT) (0.5mm pitch)",
+          "48-pin VQFN (RGZ) (0.5mm pitch)",
+          "32-pin VQFN (RHB) (0.5mm pitch)",
+          "28-pin DSBGA (YCJ) (0.35mm pitch); note: preview stage",
+          "28-pin WQFN (RUY) (0.4mm pitch)",
+          "24-pin VQFN (RGE) (0.5mm pitch)",
+          "20-pin VSSOP (DGS) (0.5mm pitch)"
+        ]
+      },
+      {
+        "type": "image",
+        "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtAAAALQAQAAAACRLHoxAAAAAnRSTlMAAHaTzTgAAABVSURBVHja7cEBAQAAAIIg/69uSEABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwaP/wAAHdGfkMAAAAAElFTkSuQmCC",
+        "alt": "MSPM0G5187 block diagram",
+        "caption": "MSPM0G5187 block diagram"
+      },
+      {
+        "type": "paragraph",
+        "html": "<a href=\"https://www.cnx-software.com/wp-content/uploads/2026/03/MSPM0G5187-block-diagram.webp\" target=\"_blank\" rel=\"noreferrer noopener\"> </a>"
+      },
+      {
+        "type": "paragraph",
+        "html": "The MSPM0G5187 microcontroller family is supported by the MSPM0 SDK with FreeRTOS and Zephyr RTOS. It targets resource-constrained devices, including battery-powered products, benefiting from AI/ML edge workloads. The company also provides the LP-MSPM0G5187 Launchpad development kit for evaluation. It comes with an XDS110 debug probe, 40-pin BoosterPack headers, a USB-C port, a microSD card slot, one microphone, one audio ADC, and a few LEDs and buttons."
+      },
+      {
+        "type": "image",
+        "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAswAAAGQAQMAAACAu6RIAAAAA1BMVEVHcEyC+tLSAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAADpJREFUeNrtwYEAAAAAw6D5U1/gCFUBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPAMjjAAAWvqgdoAAAAASUVORK5CYII=",
+        "alt": "LP-MSPM0G5187 Launchpad development kit",
+        "caption": "Blurry render of the LP-MSPM0G5187 Launchpad development kit"
+      },
+      {
+        "type": "paragraph",
+        "html": "The MSPM0G5187 Cortex-M0+ microcontrollers are available now in production quantities starting at under $1 in 1,000-unit quantities. The LP-MSPM0G5187 Launchpad development kit sells for $22. More details, including documentation and purchase links, can be found on <a href=\"https://www.ti.com/product/MSPM0G5187?hqs=epd-tech-inno-mspm0g5187_dce-pr-pf-ew2026-ww_en#features\" target=\"_blank\" rel=\"noreferrer noopener\">the product page</a>."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "TI AM13Ex Arm Cortex-M33 MCU for real-time motor control"
+      },
+      {
+        "type": "image",
+        "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtAAAAKbAQAAAAD0s4CeAAAAAnRSTlMAAHaTzTgAAABRSURBVHja7cExAQAAAMIg+6c2xF5gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEB37RkAAYsVvVkAAAAASUVORK5CYII=",
+        "alt": "AM13E230x block diagram",
+        "caption": "AM13E230x block diagram"
+      },
+      {
+        "type": "paragraph",
+        "html": "AM13E23019 Specifications:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "128 KB RAM with ECC",
+          "External Peripheral Interface (EPI) supporting SDRAM, ASRAM, or ASIC/FPGA external interfaces"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "12-channel DMA controller",
+          "Nested Vectored Interrupt Controller (NVIC)",
+          "Up to 107x GPIO with Input/Output XBAR connectivity",
+          "8x GPIOs with Shutdown Wakeup Capability",
+          "1x windowed watchdog timer (WWDT )",
+          "2x general-purpose timers: TIMG4 (32-bit), TIMG12 (16-bit)"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "3x 12-bit SAR ADCs up to 6.67Msps, up to 32 channels per ADC",
+          "4x Analog Comparator Sub-systems (CMPSS) with 2x 10-bit effective DAC and 2x digital filters",
+          "3x Programmable Gain Amplifiers (PGA)",
+          "Programmable analog connections between ADC, PGAs, CMPSS, and DAC"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "5x Motor Control Pulse Width Modulation (MCPWM) modules",
+          "2x Enhanced Capture (eCAP) module",
+          "3x Enhanced Quadrature Encoder Pulse (eQEP)",
+          "Device Crossbars (INPUTXBAR, OUTPUTXBAR, PWMXBAR) for routing signals from GPIO to other modules"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "2x configurable serial interfaces supporting UART (LIN) or I2C (SMBus/PMBus)",
+          "4x configurable serial interfaces supporting UART, I2C, or SPI",
+          "1x Modular Controller Area Network (MCAN) with Flexible Data-rate (CAN FD)"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "Internal 4MHz/32MHz oscillator (SYSOSC)",
+          "Internal 32kHz oscillator (LFOSC)",
+          "System Phase-locked loop (SYSPLL) up to 200MHz",
+          "External 4MHz to 25MHz crystal oscillator (XTAL)",
+          "External 4MHz to 48MHz clock input (HFCLK)"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "Secure Boot/FWU/Debug/JTAG Lock",
+          "Secure Key Storage and Management",
+          "Privileged/Non-Privileged resource partitioning",
+          "Flash Write/Erase/Hide Protections",
+          "Device Life Cycle Management",
+          "AES Encryption with 128- or 256-bit Key",
+          "Unique Identification Number (UID)"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "4-pin JTAG and 2-pin SWD",
+          "Micro Trace Buffer (MTB)",
+          "Embedded Trace Macrocell"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "RUN: 49mA @ 200MHz",
+          "STANDBY: 1.84mA with CPU execution resume and 32kB SRAM retention",
+          "SHUTDOWN: &lt;5µA with IO wake-up capability"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "128-pin PDT Thin Quad Flat Package (TQFP) (0.4mm pitch)",
+          "100-pin PZ Low-profile Quad Flat Pack (LQFP) (0.5mm pitch)",
+          "80-pin PN Low-profile Quad Flat Pack (LQFP) (0.5mm pitch)",
+          "64-pin PM Low-profile Quad Flat Pack (LQFP) (0.5mm pitch)",
+          "48-pin PT Low-profile Quad Flat Pack (LQFP) (0.5mm pitch)",
+          "48-pin RGZ Very Thin Quad Flatpack No-Lead (VQFN) (0.5mm pitch)"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "html": "The AM13Ex family supports FreeRTOS, Zephyr RTOS, and bare metal programming via the AM13E2 MCU SDK. It targets motor control applications in appliances, robotics, and industrial systems, leveraging machine learning for adaptive control and predictive maintenance. It couldn’t find any development kit for it just yet."
+      },
+      {
+        "type": "paragraph",
+        "html": "Mass production for the AM13E23019 does not appear to have started, and instead, Texas Instruments mentions it is only available in preproduction quantities. Pricing starts at $2.45 in 1K orders. Check out the <a href=\"https://www.ti.com/product/AM13E23019?hqs=epd-tech-data-am13ex_edgeai-pr-pf-ew2026-ww_en#order-quality\" target=\"_blank\" rel=\"noreferrer noopener\">product page</a> for more details."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "TinyEngine software support"
+      },
+      {
+        "type": "paragraph",
+        "html": "Both microcontrollers are supported by TI’s CCStudio IDE, relying on generative AI support to accelerate code development, system configuration, and debugging. The IDE also integrates more than 60 models and application examples in <a href=\"https://www.ti.com/tool/EDGE-AI-STUDIO\" target=\"_blank\" rel=\"noreferrer noopener\">CCStudio Edge AI Studio</a>."
+      },
+      {
+        "type": "paragraph",
+        "html": "Some code samples for the TinyEngine include:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Generic time-series classification",
+          "Arc fault (AFCI)",
+          "Motor fault",
+          "Electrocardiogram (ECG)"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "html": "The utility also allows users to capture data, train and optimize custom models, and leverage open-source frameworks built-in supporting PyTorch, TensorFlow, and ONNX. You can also check <a href=\"https://software-dl.ti.com/mctools/nnc/mcu/users_guide/\" target=\"_blank\" rel=\"noreferrer noopener\">the developer documentation</a> to get started."
+      },
+      {
+        "type": "image",
+        "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtAAAAFqAQAAAAAblVC/AAAAAnRSTlMAAHaTzTgAAAA3SURBVHja7cEBDQAAAMKg909tDjegAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAvA4CuAAFqjF3oAAAAAElFTkSuQmCC",
+        "alt": "Texas Instruments Machine Learning Flow TinyEngine NPU",
+        "caption": "Texas Instruments Machine Learning Flow for microcontrollers"
+      },
+      {
+        "type": "paragraph",
+        "html": "Thanks to TLS for the tip."
+      },
+      {
+        "type": "image",
+        "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0AQAAAAAVtjufAAAAAnRSTlMAAHaTzTgAAAAbSURBVFjD7cEBDQAAAMKg909tDjegAAAAAL4NEOAAAf2XIG8AAAAASUVORK5CYII=",
+        "alt": "Jean Luc Aufranc",
+        "caption": "Jean Luc Aufranc"
+      },
+      {
+        "type": "paragraph",
+        "html": "Jean-Luc started CNX Software in 2010 as a part-time endeavor, before quitting his job as a software engineering manager, and starting to write daily news, and reviews full time later in 2011."
+      },
+      {
+        "type": "paragraph",
+        "html": "<strong>Support CNX Software! Donate via <a href=\"https://www.cnx-software.com/donate-cryptocurrencies/\" target=\"_blank\" rel=\"noreferrer noopener\">cryptocurrencies</a>, <a href=\"https://www.patreon.com/cnxsoft\" target=\"_blank\" rel=\"noreferrer noopener\">become a Patron</a> on Patreon, or purchase goods on <a href=\"https://amzn.to/3SXubZ0\" target=\"_blank\" rel=\"noreferrer noopener\">Amazon</a> or <a href=\"https://s.click.aliexpress.com/e/_DmGIIRT\" target=\"_blank\" rel=\"noreferrer noopener\">Aliexpress</a></strong>. We also use affiliate links in articles to earn commissions if you make a purchase after clicking on those links."
+      }
+    ],
+    "refineErrors": [
+      {
+        "index": 0,
+        "type": "paragraph",
+        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+      },
+      {
+        "index": 1,
+        "type": "paragraph",
+        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+      },
+      {
+        "index": 2,
+        "type": "heading",
+        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+      }
+    ]
+  },
+  "workflow": {
+    "articleId": 2703,
+    "rssTitle": "Texas Instruments MSPM0G5187 and AM13Ex MCUs integrate TinyEngine NPU for Edge AI applications"
+  }
+}
