@@ -30,41 +30,19 @@
     "layout": "detail-zh",
     "translatedFrom": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-builder-id-sign-in-github-amazon/",
     "sourceName": "AWS Architecture Blog",
-    "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+    "sourceDescription": "以下为原文逐段直译，保留原文段落推进与媒体顺序。",
     "blocks": [
       {
-        "type": "heading",
-        "level": 2,
-        "text": "AWS Builder ID now supports Sign in with GitHub and Amazon"
+        "type": "paragraph",
+        "html": "AWS Builder ID 是访问 AWS Builder Center、AWS Training and Certification 以及 Kiro 等 AWS 应用的个人档案，如今新增两种社交登录：GitHub 和 Amazon。此次扩展在现有 Google 与 Apple 社交登录能力的基础上，提供 GitHub 与 Amazon 用户无需在 AWS 上管理独立凭据即可访问资源的便捷方式。"
       },
       {
         "type": "paragraph",
-        "html": "AWS Builder ID, your profile for accessing AWS applications including AWS Builder Center, AWS Training and Certification and Kiro, now supports two new social logins: GitHub and Amazon. This expansion of sign-in options builds on the existing Google Apple social sign-in capabilities, providing GitHub and Amazon users with a streamlined way to access AWS resources without managing separate credentials on AWS."
+        "html": "通过“使用 GitHub 和 Amazon 登录”的集成，开发者与构建者现在可使用其 GitHub 或 Amazon 账户凭据访问 AWS Builder ID 档案。这一增强消除了密码管理的复杂性，减少忘记密码问题，并为新用户注册与回访用户登录提供无缝体验。无论你是在 AWS Builder Center 访问开发资源、报名认证项目，还是使用 Kiro 编写下一个应用，你的 GitHub 与 Amazon 账户如今都可以作为通往你的 builder AWS 旅程的安全入口。"
       },
       {
         "type": "paragraph",
-        "html": "With Sign in with Github and Amazon integration, developers and builders can now enjoy access to their AWS Builder ID profile using their GitHub or Amazon Account credentials. This enhancement eliminates password management complexity, reduces forgotten password issues, and provides a frictionless experience for both new user registration and returning user sign-ins. Whether you&#x27;re accessing development resources in AWS Builder Center, enrolling in certification programs or using Kiro to code your next app, your GitHub and Amazon Accounts can now serve as a secure gateway to your builder AWS journey."
-      },
-      {
-        "type": "paragraph",
-        "html": "To learn more about AWS Builder ID and get started with Sign in with GitHub and Amazon, visit the <a href=\"https://docs.aws.amazon.com/signin/latest/userguide/sign-in-builder-id.html\" target=\"_blank\" rel=\"noreferrer noopener\">AWS Builder ID documentation</a>."
-      }
-    ],
-    "refineErrors": [
-      {
-        "index": 1,
-        "type": "paragraph",
-        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
-      },
-      {
-        "index": 2,
-        "type": "paragraph",
-        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
-      },
-      {
-        "index": 3,
-        "type": "paragraph",
-        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+        "html": "要了解更多关于 AWS Builder ID 并开始使用 GitHub 与 Amazon 登录，请访问 <a href=\"https://docs.aws.amazon.com/signin/latest/userguide/sign-in-builder-id.html\" target=\"_blank\" rel=\"noreferrer noopener\">AWS Builder ID 文档</a>。"
       }
     ]
   },

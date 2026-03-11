@@ -5,6 +5,59 @@
   },
   "posts": [
     {
+      "slug": "aws-builder-id-now-supports-sign-in-with-github-and-amazon-aws",
+      "title": "AWS Builder ID now supports Sign in with GitHub and Amazon - AWS",
+      "author": "AWS Architecture Blog",
+      "publishedAt": "2026-03-10",
+      "source": "AWS Architecture Blog",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-builder-id-sign-in-github-amazon/",
+      "excerpt": "这篇文章围绕“AWS Builder ID now supports Sign in with GitHub and Amazon - AWS”展开，RSS 摘要提到：Discover more about what",
+      "tags": [
+        "DevTools"
+      ],
+      "content": [
+        {
+          "heading": "文章核心",
+          "paragraphs": [
+            "基于 RSS 摘要与页面元数据，原文重点是：Discover more about what",
+            "来源信息：AWS Architecture Blog｜2026-03-10。"
+          ]
+        },
+        {
+          "heading": "值得继续补充的点",
+          "paragraphs": [
+            "如果后续补齐详情视图，可以继续沿着原文结构展开关键论点、案例、约束条件与结论。",
+            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+          ]
+        }
+      ],
+      "detail": {
+        "available": true,
+        "layout": "detail-zh",
+        "translatedFrom": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-builder-id-sign-in-github-amazon/",
+        "sourceName": "AWS Architecture Blog",
+        "sourceDescription": "以下为原文逐段直译，保留原文段落推进与媒体顺序。",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "html": "AWS Builder ID 是访问 AWS Builder Center、AWS Training and Certification 以及 Kiro 等 AWS 应用的个人档案，如今新增两种社交登录：GitHub 和 Amazon。此次扩展在现有 Google 与 Apple 社交登录能力的基础上，提供 GitHub 与 Amazon 用户无需在 AWS 上管理独立凭据即可访问资源的便捷方式。"
+          },
+          {
+            "type": "paragraph",
+            "html": "通过“使用 GitHub 和 Amazon 登录”的集成，开发者与构建者现在可使用其 GitHub 或 Amazon 账户凭据访问 AWS Builder ID 档案。这一增强消除了密码管理的复杂性，减少忘记密码问题，并为新用户注册与回访用户登录提供无缝体验。无论你是在 AWS Builder Center 访问开发资源、报名认证项目，还是使用 Kiro 编写下一个应用，你的 GitHub 与 Amazon 账户如今都可以作为通往你的 builder AWS 旅程的安全入口。"
+          },
+          {
+            "type": "paragraph",
+            "html": "要了解更多关于 AWS Builder ID 并开始使用 GitHub 与 Amazon 登录，请访问 <a href=\"https://docs.aws.amazon.com/signin/latest/userguide/sign-in-builder-id.html\" target=\"_blank\" rel=\"noreferrer noopener\">AWS Builder ID 文档</a>。"
+          }
+        ]
+      },
+      "workflow": {
+        "articleId": 2695,
+        "rssTitle": "AWS Builder ID now supports Sign in with GitHub and Amazon"
+      }
+    },
+    {
       "slug": "amazon-opensearch-service-now-supports-in-place-volume-increases-for-all-volume-sizes",
       "title": "Amazon OpenSearch Service now supports in-place volume increases for all volume sizes",
       "author": "AWS Architecture Blog",
