@@ -5,6 +5,97 @@
   },
   "posts": [
     {
+      "slug": "blood-tests-could-provide-early-warning-of-alzheimers-disease",
+      "title": "Blood Tests Could Provide Early Warning of Alzheimers Disease",
+      "author": "Hackaday",
+      "publishedAt": "2026-03-10",
+      "source": "Hackaday",
+      "url": "https://hackaday.com/2026/03/10/blood-tests-could-provide-early-warning-of-alzheimers-disease/",
+      "excerpt": "这篇文章围绕“Blood Tests Could Provide Early Warning of Alzheimers Disease”展开，当前已从 RSS 条目同步到静态博客工作流中。",
+      "tags": [
+        "Hardware"
+      ],
+      "content": [
+        {
+          "heading": "文章核心",
+          "paragraphs": [
+            "当前只拿到了标题、来源和链接，还没有更完整的页面摘要，因此这里只生成一个可继续加工的草稿入口。",
+            "来源信息：Hackaday｜2026-03-10。"
+          ]
+        },
+        {
+          "heading": "值得继续补充的点",
+          "paragraphs": [
+            "如果后续补齐详情视图，重点可以继续展开芯片规格、接口能力、功耗指标和适用场景。",
+            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+          ]
+        }
+      ],
+      "detail": {
+        "available": true,
+        "layout": "detail-zh",
+        "translatedFrom": "https://hackaday.com/2026/03/10/blood-tests-could-provide-early-warning-of-alzheimers-disease/",
+        "sourceName": "Hackaday",
+        "sourceDescription": "以下为原文逐段直译，保留原文段落推进与媒体顺序。",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "html": "阿尔茨海默病仍是一个令全球数百万患者及其家庭极其难以应对的疾病。该病的成因至今仍未被正确理解，而当记忆丧失和认知下降变得明显时，潜在的脑部病理往往已悄然累积了数十年。"
+          },
+          {
+            "type": "paragraph",
+            "html": "然而，很快或许就能在症状出现之前，提前诊断即将发生的阿尔茨海默病。新的研究表明，这可能可以通过一次简单的抽血实现，从而为临床医生与患者争取宝贵时间来管理病情并提前规划。"
+          },
+          {
+            "type": "image",
+            "src": "./assets/posts/blood-tests-could-provide-early-warning-of-alzheimers-disease/figure-01.jpg",
+            "alt": "",
+            "caption": "脑组织中的淀粉样 β 斑块（此处呈棕色染色）是阿尔茨海默病的标志。淀粉样蛋白与 tau 蛋白被认为与该病进展相关，但其具体机制仍在研究中。来源：Nephron，CC BY-SA 3.0"
+          },
+          {
+            "type": "paragraph",
+            "html": "阿尔茨海默病的一个标志性特征是大脑中淀粉样蛋白与 tau 蛋白的堆积。尽管研究了数十年，这些蛋白在疾病中的确切作用仍不十分清楚。通常阿尔茨海默病是通过记忆丧失和认知下降等症状来诊断的，之后的检查会发现大脑中这些蛋白水平升高。此类检查往往需要脑部成像或侵入性且痛苦的脊髓液检测。"
+          },
+          {
+            "type": "paragraph",
+            "html": "然而，研究人员开发了一种新的预测模型，表明可以基于一种类似的标记物来估计一个人何时会开始出现阿尔茨海默病症状。关键因素是另一种名为 p‑tau217 的蛋白，它在血浆中循环，并反映大脑组织内淀粉样蛋白与 tau 蛋白缓慢、持续的累积。"
+          },
+          {
+            "type": "image",
+            "src": "./assets/posts/blood-tests-could-provide-early-warning-of-alzheimers-disease/figure-02.png",
+            "alt": "",
+            "caption": "p‑tau217 水平的上升与之后发生认知障碍高度相关。来源：research paper"
+          },
+          {
+            "type": "paragraph",
+            "html": "早期研究已经证实，p‑tau217 水平倾向于与大脑中淀粉样蛋白和 tau 蛋白堆积的上升同步。这表明血液中的 p‑tau217 水平可作为该疾病进程已发展到何种程度的替代指标。研究指出，这允许估计在症状出现之前还剩多少年，精度可能达到三到四年的误差范围。"
+          },
+          {
+            "type": "paragraph",
+            "html": "该研究基于 603 名老年人的数据，这些参与者来自两个长期研究——华盛顿大学医学院的 Knight Alzheimer Disease Research Center，以及多中心的 Alzheimer’s Disease Neuroimaging Initiative。p‑tau217 通过简单抽血测量。一个更有趣的发现与年龄有关。模型显示，p‑tau217 水平升高到症状出现之间的时间间隔并非固定。若在 60 岁时水平首次上升，一个人可能再过二十年才出现明显认知问题；但若同样的升高出现在 80 岁，症状通常会在约 11 年内出现。这表明年轻大脑似乎能更长期地承受与阿尔茨海默相关的病理，而老年大脑在过程开始后更难抵御蛋白堆积。"
+          },
+          {
+            "type": "image",
+            "src": "./assets/posts/blood-tests-could-provide-early-warning-of-alzheimers-disease/figure-03.png",
+            "alt": "",
+            "caption": "血浆 p‑tau217 阳性出现的年龄对症状显现前的年数影响显著。来源：research paper"
+          },
+          {
+            "type": "paragraph",
+            "html": "目前，p‑tau217 检测主要用于帮助确认已经出现认知问题患者的阿尔茨海默病诊断。不建议在研究环境之外对无症状人群进行筛查。然而，将 p‑tau217 用作预测性标记具有明显潜力。如果预防性阿尔茨海默药物的临床试验能根据预计的症状出现时间线来招募参与者，而不是等待多年后病情下降才发生，那么这些试验可以显著缩短、成本更低，整体效率更高。也许更重要的是，它有潜力让患者更好地理解未来可能发生的情况，使他们在认知症状成为生活无法承受的负担之前就能提前规划。"
+          },
+          {
+            "type": "paragraph",
+            "html": "研究团队已将模型开发代码公开在 <a href=\"https://github.com/WashUFluidBiomarkers/plasma_ptau217_time\" target=\"_blank\" rel=\"noreferrer noopener\">Github</a>，并创建了一个 <a href=\"https://amyloid.shinyapps.io/plasma_ptau217_time/\" target=\"_blank\" rel=\"noreferrer noopener\">基于 Web 的工具</a>，供其他研究者深入探索这些“时钟”模型。展望未来，他们指出将 p‑tau217 与其他与认知下降相关的血液生物标记结合，可能进一步提高预测精度。如今仍是早期阶段，但未来用常规验血作为阿尔茨海默病早期预警系统，比几年前更具可行性。"
+          }
+        ]
+      },
+      "workflow": {
+        "articleId": 2676,
+        "rssTitle": "Blood Tests Could Provide Early Warning of Alzheimers Disease"
+      }
+    },
+    {
       "slug": "raspberry-pi-cm0-based-industrial-ai-camera-features-motorized-auto-focus-system-12-pin-ethernet-rs-232-do-aviation-connector-cnx-software",
       "title": "Raspberry Pi CM0-based industrial AI camera features motorized auto-focus system, 12-pin Ethernet/RS-232/DO aviation connector - CNX Software",
       "author": "CNX Software",
