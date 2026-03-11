@@ -1,5 +1,5 @@
 const THEME_KEY = "pi-blog-demo-theme";
-const DATA_URL = "./articles.json";
+const DATA_URL = "./articles.json?v=20260311-2";
 const HOME_PAGE_SIZE = 4;
 
 const themeToggle = document.getElementById("theme-toggle");
