@@ -1,0 +1,20 @@
+{
+  "item": {
+    "id": 2702,
+    "title": "It’s 1979 – What Exactly Did That ∫ Key Do?",
+    "blog": "Hackaday",
+    "url": "https://hackaday.com/2026/03/10/its-1979-what-exactly-did-that-%e2%88%ab-key-do/",
+    "published": "2026-03-11T02:00:32Z",
+    "discovered": "2026-03-11T03:00:07.892373182Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://hackaday.com/2026/03/10/its-1979-what-exactly-did-that-%e2%88%ab-key-do/",
+    "ok": true,
+    "title": "It’s 1979 – What Exactly Did That ∫ Key Do?",
+    "description": "[Michel Jean] asked a question few others might: what exactly is going on under the hood of a classic HP scientific calculator when one presses the ∫ key? A numerical integration, sure, but how exa…",
+    "fetched_bytes": 82803,
+    "error": null
+  },
+  "classification": "normal"
+}

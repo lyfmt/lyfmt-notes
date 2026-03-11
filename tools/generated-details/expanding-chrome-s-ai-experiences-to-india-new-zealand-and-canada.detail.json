@@ -1,0 +1,135 @@
+{
+  "available": false,
+  "layout": "draft",
+  "translatedFrom": "https://blog.google/products-and-platforms/products/chrome/chrome-expands-india-new-zealand-canada/",
+  "sourceName": "Google AI Blog",
+  "sourceDescription": "以下为根据原文结构自动生成的详情草稿，已保留段落层次、图片与媒体；默认尚未完成中文翻译润色。",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "html": "Mar 11, 2026"
+    },
+    {
+      "type": "paragraph",
+      "html": "We’re bringing Chrome’s powerful AI features to more regions and languages, helping millions of people get the most out of their browser."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Bullet points"
+    },
+    {
+      "type": "list",
+      "items": [
+        "&quot;Expanding Chrome&#x27;s AI Experiences&quot; introduces new AI features to India, New Zealand, and Canada.",
+        "Gemini in Chrome lets you chat with an AI assistant without leaving your current tab.",
+        "Chrome&#x27;s AI integrates with Gmail, Maps, Calendar, and YouTube for easy access.",
+        "Gemini can work across multiple tabs to compare products or plan team activities.",
+        "Nano Banana 2 transforms images directly in Chrome, and security is a priority."
+      ]
+    },
+    {
+      "type": "image",
+      "src": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Chrome_Hero.width-200.format-webp.webp",
+      "alt": "Image of Chrome logo and Gemini logo",
+      "caption": "Image of Chrome logo and Gemini logo"
+    },
+    {
+      "type": "paragraph",
+      "html": "Your browser does not support the audio element."
+    },
+    {
+      "type": "paragraph",
+      "html": "The browser is where we get work done, learn new things and connect with the world. But sometimes, the tasks we do online — like digesting a long chemistry paper or just finding quick inspiration for dinner — can feel tedious and slow us down."
+    },
+    {
+      "type": "paragraph",
+      "html": "That’s why we’ve <a href=\"https://blog.google/products-and-platforms/products/chrome/gemini-3-auto-browse/\" target=\"_blank\" rel=\"noreferrer noopener\">built AI directly into Chrome</a> to help people seek and understand information, whether they’re studying for an exam, shopping for the perfect gift or just taking care of their daily chores. Today, we’re bringing many of <a href=\"https://blog.google/products-and-platforms/products/chrome/new-ai-features-for-chrome/\" target=\"_blank\" rel=\"noreferrer noopener\">Chrome&#x27;s latest AI features</a>, including Gemini in Chrome, to India, New Zealand and Canada. We’re also rolling out support for more than <a href=\"https://support.google.com/chrome/answer/16283624\" target=\"_blank\" rel=\"noreferrer noopener\">50 additional languages</a>, including Hindi, French and Spanish."
+    },
+    {
+      "type": "paragraph",
+      "html": "These features, which are built on Gemini 3.1, will first be available in these regions on desktop and iOS. On Android, you can activate Gemini when using Chrome and other apps by holding the power button."
+    },
+    {
+      "type": "paragraph",
+      "html": "Here are the features to expect."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Chat with your browsing assistant without switching tabs"
+    },
+    {
+      "type": "paragraph",
+      "html": "Sometimes you just need a quick answer or a spark of creativity without losing your place on the web. With Gemini in Chrome, you can multi-task with ease and instantly get help with whatever you’re working on, without ever having to switch tabs. Just click the icon in the top right corner of your current tab and start chatting with your personalized browsing assistant."
+    },
+    {
+      "type": "paragraph",
+      "html": "Gemini in Chrome is rolling out to all Mac, Windows and Chromebook Plus users in India, New Zealand and Canada"
+    },
+    {
+      "type": "paragraph",
+      "html": "Chrome’s built-in AI can help you summarize lengthy web content, perform tasks like creating a pop quiz for your upcoming final, answer questions like “how can I make this recipe vegan?” and even remember pages you’ve previously visited so you can finally close the tabs you’ve set aside for later."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Get the best of Google with built-in integrations"
+    },
+    {
+      "type": "paragraph",
+      "html": "With integrations across our most popular apps, including Gmail, Maps, Calendar, YouTube and more, Chrome gives you the best Google has to offer, directly in your browser. With a few clicks, you can schedule meetings on your Calendar, see location details from Maps and ask questions about YouTube videos."
+    },
+    {
+      "type": "paragraph",
+      "html": "Gemini in Chrome lets you easily see the key points of YouTube videos."
+    },
+    {
+      "type": "paragraph",
+      "html": "Integration with Gmail means you can even compose and send emails without leaving your current page. Just open the side panel and ask to send an email. Once it’s finished, you’ll have the option to make any necessary edits and then get it sent with a single click."
+    },
+    {
+      "type": "paragraph",
+      "html": "Gemini in Chrome works with other Google apps, such as Gmail, letting you draft and send emails directly from the side panel."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Get work done faster across tabs"
+    },
+    {
+      "type": "paragraph",
+      "html": "Gemini in Chrome can also work across multiple open tabs, so you can easily cross reference and consolidate information into a single view. Planning a team building activity? Chrome can bring together all of your research to plan the perfect offsite ice breaker. Shopping for a vegan protein powder? No problem. With Gemini in Chrome, you can easily create a table comparing the key details of products across sites, making shopping a breeze."
+    },
+    {
+      "type": "paragraph",
+      "html": "Gemini in Chrome can work with the context of multiple tabs."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Transform images on the web with Nano Banana"
+    },
+    {
+      "type": "paragraph",
+      "html": "We’ve also built <a href=\"https://blog.google/innovation-and-ai/technology/ai/nano-banana-2/\" target=\"_blank\" rel=\"noreferrer noopener\">Nano Banana 2</a> directly into Chrome so you can transform images on the fly. All you need to do is type a prompt in the side panel to explain what you’re trying to do. Nano Banana 2 will do the rest, transforming the image without needing to upload files or open a new tab. For instance, with Nano Banana 2, you can become your own interior designer, mixing and matching furniture before ever making a purchase."
+    },
+    {
+      "type": "paragraph",
+      "html": "No need for copy-pasting or re-uploading; Gemini in Chrome uses Nano Banana to transform images in your current browser window."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Stay safe with Chrome’s security by design"
+    },
+    {
+      "type": "paragraph",
+      "html": "Gemini in Chrome is designed to keep you in control, and was <a href=\"https://security.googleblog.com/2025/12/architecting-security-for-agentic.html\" target=\"_blank\" rel=\"noreferrer noopener\">built with security</a> in mind from the start. We’ve trained our models to recognize known threats, like <a href=\"https://storage.googleapis.com/deepmind-media/Security%20and%20Privacy/Gemini_Security_Paper.pdf\" target=\"_blank\" rel=\"noreferrer noopener\">prompt injection</a>, in order to keep you safe as you browse. We’ve also built safeguards to ask for confirmation before taking certain sensitive actions, like sending an email or adding an event to your calendar. To validate the security of Chrome’s layered defenses, we use automated red-teaming to continually strengthen our protections, and Chrome’s auto-update capabilities allow us to get fixes out to you quickly, so we can respond to the latest threats."
+    },
+    {
+      "type": "paragraph",
+      "html": "These are just some of the awesome new capabilities we’re bringing to people in India, New Zealand and Canada. We’ll be adding more capabilities and expanding into even more regions and languages throughout the year, so stay tuned."
+    }
+  ]
+}

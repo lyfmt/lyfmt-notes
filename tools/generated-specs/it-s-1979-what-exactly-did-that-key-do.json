@@ -1,0 +1,137 @@
+{
+  "slug": "it-s-1979-what-exactly-did-that-key-do",
+  "title": "It’s 1979 – What Exactly Did That ∫ Key Do?",
+  "author": "Hackaday",
+  "publishedAt": "2026-03-11",
+  "source": "Hackaday",
+  "url": "https://hackaday.com/2026/03/10/its-1979-what-exactly-did-that-%e2%88%ab-key-do/",
+  "tags": [
+    "Hardware"
+  ],
+  "excerpt": "这篇文章围绕“It’s 1979 – What Exactly Did That ∫ Key Do?”展开，RSS 摘要提到：[Michel Jean] asked a question few others might: what exactly is going on under the hood of a classic HP scientific calculator when one p...",
+  "content": [
+    {
+      "heading": "文章核心",
+      "paragraphs": [
+        "基于 RSS 摘要与页面元数据，原文重点是：[Michel Jean] asked a question few others might: what exactly is going on under the hood of a classic HP scientific calculator when one presses the ∫ key? A numerical integration, sure, but how exa…",
+        "来源信息：Hackaday｜2026-03-11。"
+      ]
+    },
+    {
+      "heading": "值得继续补充的点",
+      "paragraphs": [
+        "如果后续补齐详情视图，重点可以继续展开芯片规格、接口能力、功耗指标和适用场景。",
+        "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+      ]
+    }
+  ],
+  "detail": {
+    "available": true,
+    "layout": "detail-zh",
+    "translatedFrom": "https://hackaday.com/2026/03/10/its-1979-what-exactly-did-that-%e2%88%ab-key-do/",
+    "sourceName": "Hackaday",
+    "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+    "blocks": [
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Hackaday"
+      },
+      {
+        "type": "list",
+        "items": [
+          "by:"
+        ]
+      },
+      {
+        "type": "list",
+        "items": [
+          "<a href=\"https://www.facebook.com/sharer/sharer.php?u=https://hackaday.com/2026/03/10/its-1979-what-exactly-did-that-%e2%88%ab-key-do/\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>",
+          "<a href=\"https://twitter.com/intent/tweet?text=It’s%201979%20–%20What%20Exactly%20Did%20That%20∫%20Key%20Do?%20via%20@hackaday&amp;url=https://hackaday.com/2026/03/10/its-1979-what-exactly-did-that-%e2%88%ab-key-do/\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>",
+          "<a href=\"https://news.ycombinator.com/submitlink?u=https://hackaday.com/2026/03/10/its-1979-what-exactly-did-that-%e2%88%ab-key-do/&amp;t=It’s%201979%20–%20What%20Exactly%20Did%20That%20∫%20Key%20Do\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>",
+          "<a href=\"https://www.reddit.com/submit?url=https://hackaday.com/2026/03/10/its-1979-what-exactly-did-that-%e2%88%ab-key-do/\" target=\"_blank\" rel=\"noreferrer noopener\"><span></span></a>"
+        ]
+      },
+      {
+        "type": "image",
+        "src": "https://hackaday.com/wp-content/uploads/2026/03/hp34C2-Brett-Maraldo-banner.png?w=800",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "type": "paragraph",
+        "html": "[Michel Jean] asked a question few others might: <a href=\"https://axiomelab.gitlab.io/hp-integral/article_hp_en.html\" target=\"_blank\" rel=\"noreferrer noopener\">what <em>exactly</em> is going on under the hood of a classic HP scientific calculator when one presses the <code>∫</code> key</a>? A numerical integration, sure, but how exactly? There are a number of useful algorithms that could be firing up when the integral button is pressed, and like any curious hacker [Michel] decided to personally verify what was happening."
+      },
+      {
+        "type": "paragraph",
+        "html": "[Michel] implemented different integration algorithms in C++ and experimentally compared them against HP calculator results. By setting up rigorous tests, [Michel] was able to conclude that the calculators definitely use Romberg-Kahan, developed by HP Mathematician William Kahan."
+      },
+      {
+        "type": "paragraph",
+        "html": "Selected by HP in 1979 for use in their scientific calculators, the <a href=\"https://axiomelab.gitlab.io/hp34c/\" target=\"_blank\" rel=\"noreferrer noopener\">Romberg-Kahan algorithm</a> was kept in service for nearly a decade. Was it because the algorithm was fast and efficient? Not really. The reason it was chosen over others was on account of its robustness. Some methods are ridiculously fast and tremendously elegant at certain types of problem, but fall apart when applied to others. The Romberg-Kahan algorithm is the only one that never throws up its hands in failure; ideal for a general-purpose scientific calculator that knows only what its operator keys in, and not a lick more."
+      },
+      {
+        "type": "paragraph",
+        "html": "It’s a pretty neat fact about classic HP calculators, and an interesting bit of historical context for these machines. Should you wish for something a bit more tactile and don’t mind some DIY, it’s entirely possible to <a href=\"https://hackaday.com/2021/11/24/build-your-own-hp41c/\" target=\"_blank\" rel=\"noreferrer noopener\">re-create old HP calculators</a> as handhelds driven by modern microcontrollers, complete with 3D-printed cases."
+      },
+      {
+        "type": "paragraph",
+        "html": "Thanks to [Stephen Walters] for the tip!"
+      },
+      {
+        "type": "image",
+        "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_face.png",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_twitter.png",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_in.png",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "src": "https://hackaday.com/wp-content/themes/hackaday-2/img/share_mail1.png",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "type": "list",
+        "items": [
+          "<a href=\"https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhackaday.com%2F2026%2F03%2F10%2Fits-1979-what-exactly-did-that-%25e2%2588%25ab-key-do%2F\" target=\"_blank\" rel=\"noreferrer noopener\"> <i> </i> </a>",
+          "<a href=\"https://twitter.com/intent/tweet?text=It’s%201979%20–%20What%20Exactly%20Did%20That%20∫%20Key%20Do?%20via%20@hackaday&amp;url=https://hackaday.com/2026/03/10/its-1979-what-exactly-did-that-%e2%88%ab-key-do/\" target=\"_blank\" rel=\"noreferrer noopener\"> <i></i> </a>",
+          "<a href=\"https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fhackaday.com%2F2026%2F03%2F10%2Fits-1979-what-exactly-did-that-%25e2%2588%25ab-key-do%2F\" target=\"_blank\" rel=\"noreferrer noopener\"> <i></i> </a>",
+          "<a href=\"mailto:?subject=It%E2%80%99s+1979+%E2%80%93+What+Exactly+Did+That+%E2%88%AB+Key+Do%3F | Hackaday&amp;body=https%3A%2F%2Fhackaday.com%2F2026%2F03%2F10%2Fits-1979-what-exactly-did-that-%25e2%2588%25ab-key-do%2F\" target=\"_blank\" rel=\"noreferrer noopener\"> <i></i> </a>"
+        ]
+      }
+    ],
+    "refineErrors": [
+      {
+        "index": 1,
+        "type": "list",
+        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+      },
+      {
+        "index": 2,
+        "type": "list",
+        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+      },
+      {
+        "index": 4,
+        "type": "paragraph",
+        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+      }
+    ]
+  },
+  "workflow": {
+    "articleId": 2702,
+    "rssTitle": "It’s 1979 – What Exactly Did That ∫ Key Do?"
+  }
+}

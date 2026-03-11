@@ -1,0 +1,20 @@
+{
+  "item": {
+    "id": 2701,
+    "title": "Expanding Chrome’s AI experiences to India, New Zealand and Canada",
+    "blog": "Google AI Blog",
+    "url": "https://blog.google/products-and-platforms/products/chrome/chrome-expands-india-new-zealand-canada/",
+    "published": "2026-03-11T02:30:00Z",
+    "discovered": "2026-03-11T03:00:07.460641932Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://blog.google/products-and-platforms/products/chrome/chrome-expands-india-new-zealand-canada/",
+    "ok": true,
+    "title": "Expanding Chrome’s AI experiences to India, New Zealand and Canada",
+    "description": "We’re bringing Gemini in Chrome’s powerful AI features to more regions and languages, helping millions of people get the most out of their browser.",
+    "fetched_bytes": 364735,
+    "error": null
+  },
+  "classification": "normal"
+}
