@@ -32,7 +32,7 @@
         }
       ],
       "detail": {
-        "available": false,
+        "available": true,
         "layout": "detail-zh",
         "translatedFrom": "https://foojay.io/today/event-driven-architecture-in-java-and-kafka/",
         "sourceName": "Foojay",
