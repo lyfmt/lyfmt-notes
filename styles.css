@@ -808,3 +808,39 @@ h2 {
     padding-top: 1rem;
   }
 }
+
+
+/* Markdown rendering tweaks */
+.post-card__excerpt h1,
+.post-card__excerpt h2,
+.post-card__excerpt h3,
+.hero-feature__excerpt h1,
+.hero-feature__excerpt h2,
+.hero-feature__excerpt h3,
+.article-excerpt h1,
+.article-excerpt h2,
+.article-excerpt h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+}
+
+.post-card__excerpt h1,
+.hero-feature__excerpt h1,
+.article-excerpt h1 {
+  font-size: 1.2rem;
+}
+
+.post-card__excerpt p,
+.hero-feature__excerpt p,
+.article-excerpt p {
+  margin: 0 0 0.6rem;
+}
+
+.post-card__excerpt h3,
+.hero-feature__excerpt h3,
+.article-excerpt h3 {
+  font-size: 0.95rem;
+  color: var(--text-soft);
+  text-transform: none;
+  letter-spacing: 0.01em;
+}
