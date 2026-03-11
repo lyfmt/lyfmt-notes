@@ -9,7 +9,7 @@ import sys
 import urllib.request
 from pathlib import Path
 
-from _workflow_utils import (
+from rss_workflow_utils import (
     build_blocked_detail,
     choose_preferred_title,
     classify_web_content,

@@ -35,6 +35,7 @@ DEFAULT_STATE_SCRIPT = WORKSPACE / "scripts" / "rss_hourly_digest_state.py"
 DEFAULT_BUILD_SPEC = TOOLS_DIR / "build_post_spec_from_bundle.py"
 DEFAULT_BUILD_DETAIL = TOOLS_DIR / "build_detail_from_cache.py"
 DEFAULT_REFINE_DETAIL = TOOLS_DIR / "refine_detail_to_chinese.py"
+DEFAULT_SUMMARIZE_SPEC = TOOLS_DIR / "summarize_spec_with_model.py"
 DEFAULT_UPSERT = TOOLS_DIR / "upsert_post_from_spec.py"
 DEFAULT_VALIDATE = TOOLS_DIR / "validate_articles.py"
 DEFAULT_ARTICLES = SITE_ROOT / "articles.json"
@@ -213,6 +214,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--build-spec-script", default=str(DEFAULT_BUILD_SPEC))
     parser.add_argument("--build-detail-script", default=str(DEFAULT_BUILD_DETAIL))
     parser.add_argument("--refine-detail-script", default=str(DEFAULT_REFINE_DETAIL))
+    parser.add_argument("--summarize-script", default=str(DEFAULT_SUMMARIZE_SPEC))
     parser.add_argument("--upsert-script", default=str(DEFAULT_UPSERT))
     parser.add_argument("--validate-script", default=str(DEFAULT_VALIDATE))
     parser.add_argument("--articles", default=str(DEFAULT_ARTICLES))
@@ -227,6 +229,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--html-timeout", type=int, default=120)
     parser.add_argument("--detail-timeout", type=int, default=120)
     parser.add_argument("--upsert-timeout", type=int, default=120)
+    parser.add_argument("--summarize-timeout", type=int, default=120)
     parser.add_argument("--validate-timeout", type=int, default=60)
     parser.add_argument("--max-item-retries", type=int, default=2)
     parser.add_argument("--allow-publish", action="store_true", help="Enable detail.available=true when Chinese detail is fully ready.")
@@ -583,6 +586,47 @@ def process_item(args: argparse.Namespace, run_record: dict[str, Any], bundle: d
                 item_state["soft_fail"] = "refine_timeout"
     else:
         stage_history(item_state, "refine_skipped", challenge_blocked=challenge_blocked, detail_progress=existing_progress)
+
+    # Summarize using main model after translation, before publish
+    summarize_result = run_command(
+        [
+            "python3",
+            args.summarize_script,
+            "--spec",
+            str(spec_path),
+            "--write-spec",
+        ],
+        cwd=SITE_ROOT,
+        timeout=args.summarize_timeout,
+        heartbeat_seconds=30,
+    )
+    stage_attempt(item_state, "summarize", summarize_result)
+    if not summarize_result.get("ok"):
+        # If strict publish is on and detail is not publishable, mark as draft_only
+        # instead of failing the whole item just because summarize failed.
+        if args.strict_publish:
+            spec_for_publish = read_json(spec_path, default={})
+            detail_for_publish = spec_for_publish.get("detail") if isinstance(spec_for_publish.get("detail"), dict) else {}
+            progress = detail_progress(detail_for_publish)
+            should_skip = (
+                (not detail_for_publish.get("available"))
+                or (progress["block_count"] == 0)
+                or (progress["textual_total"] > 0 and progress["textual_cjk"] < progress["textual_total"])
+            )
+            if should_skip:
+                item_state["outcome"] = "draft_only"
+                item_state["terminal"] = True
+                item_state["reasons"] = ["summarize_failed_strict_publish_skipped"]
+                item_state["last_error"] = "summarize_failed"
+                stage_history(item_state, "summarize_failed_strict_publish_skipped", detail_progress=progress)
+                save_item_state(article_id, item_state)
+                return item_state
+        item_state["outcome"] = "failed"
+        item_state["terminal"] = True
+        item_state["last_error"] = "summarize_failed"
+        stage_history(item_state, "summarize_failed")
+        save_item_state(article_id, item_state)
+        return item_state
 
     # Optional strict publish: only insert when detail is publishable
     if args.strict_publish:
