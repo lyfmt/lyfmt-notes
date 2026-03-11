@@ -1,0 +1,30 @@
+{
+  "available": false,
+  "layout": "draft",
+  "translatedFrom": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-bedrock-observability-ttft-quota/",
+  "sourceName": "AWS Architecture Blog",
+  "sourceDescription": "以下为根据原文结构自动生成的详情草稿，已保留段落层次、图片与媒体；默认尚未完成中文翻译润色。",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Amazon Bedrock now supports observability of First Token Latency and Quota Consumption"
+    },
+    {
+      "type": "paragraph",
+      "html": "Amazon Bedrock is a fully managed service for building generative AI applications using high-performing foundation models from leading AI providers. It now supports two new CloudWatch metrics, TimeToFirstToken and EstimatedTPMQuotaUsage, giving you deeper visibility into inference performance and quota consumption."
+    },
+    {
+      "type": "paragraph",
+      "html": "TimeToFirstToken measures the latency from when a request is sent to when the first token is received, for streaming APIs (ConverseStream and InvokeModelWithResponseStream). You can use this metric to set CloudWatch alarms which monitor latency degradation and establish SLA baselines, without any client-side instrumentation. EstimatedTPMQuotaUsage tracks your estimated Tokens Per Minute (TPM) quota consumption, including cache write tokens and <a href=\"https://docs.aws.amazon.com/bedrock/latest/userguide/quotas-token-burndown.html\" target=\"_blank\" rel=\"noreferrer noopener\">output burndown multipliers</a>, across all inference APIs (Converse, InvokeModel, ConverseStream, and InvokeModelWithResponseStream). You can use this metric to set proactive alarms before reaching your quota limit, track your quota consumption across your models, and request further quota increases before usage is rate limited."
+    },
+    {
+      "type": "paragraph",
+      "html": "Both metrics are supported in all commercial Bedrock regions for <a href=\"https://docs.aws.amazon.com/bedrock/latest/userguide/models-region-compatibility.html\" target=\"_blank\" rel=\"noreferrer noopener\">models </a>available via cross-region inference profiles and in-region inference, updated every minute for successfully completed requests. These are available in your CloudWatch out of the box; you pay only for the underlying model inference you consume, with no API changes or opt-in required."
+    },
+    {
+      "type": "paragraph",
+      "html": "To learn more about TimeToFirstToken and EstimatedTPMQuotaUsage, see <a href=\"https://docs.aws.amazon.com/bedrock/latest/userguide/monitoring.html\" target=\"_blank\" rel=\"noreferrer noopener\">our documentation page on Monitoring Amazon Bedrock</a>."
+    }
+  ]
+}

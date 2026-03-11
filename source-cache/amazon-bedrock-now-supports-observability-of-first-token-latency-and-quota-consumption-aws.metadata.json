@@ -1,0 +1,20 @@
+{
+  "item": {
+    "id": 2699,
+    "title": "Amazon Bedrock now supports observability of First Token Latency and Quota Consumption",
+    "blog": "AWS Architecture Blog",
+    "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-bedrock-observability-ttft-quota/",
+    "published": "2026-03-10T22:21:00Z",
+    "discovered": "2026-03-11T01:00:12.76854851Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-bedrock-observability-ttft-quota/",
+    "ok": true,
+    "title": "Amazon Bedrock now supports observability of First Token Latency and Quota Consumption - AWS",
+    "description": "Discover more about what",
+    "fetched_bytes": 181402,
+    "error": null
+  },
+  "classification": "thin"
+}

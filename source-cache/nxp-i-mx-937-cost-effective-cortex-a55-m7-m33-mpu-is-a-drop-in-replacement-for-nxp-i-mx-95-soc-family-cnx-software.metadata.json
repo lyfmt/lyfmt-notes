@@ -1,0 +1,20 @@
+{
+  "item": {
+    "id": 2698,
+    "title": "NXP i.MX 937 cost-effective Cortex-A55/M7/M33 MPU is a drop-in replacement for NXP i.MX 95 SoC family",
+    "blog": "CNX Software",
+    "url": "https://www.cnx-software.com/2026/03/11/nxp-i-mx-937-cost-effective-cortex-a55-m7-m33-mpu-is-a-drop-in-replacement-for-nxp-i-mx-95-soc-family/",
+    "published": "2026-03-11T00:00:22Z",
+    "discovered": "2026-03-11T01:00:12.477699701Z",
+    "is_read": false
+  },
+  "probe": {
+    "url": "https://www.cnx-software.com/2026/03/11/nxp-i-mx-937-cost-effective-cortex-a55-m7-m33-mpu-is-a-drop-in-replacement-for-nxp-i-mx-95-soc-family/",
+    "ok": true,
+    "title": "NXP i.MX 937 cost-effective Cortex-A55/M7/M33 MPU is a drop-in replacement for NXP i.MX 95 SoC family - CNX Software",
+    "description": "The 1 .4 GHz NXP i.MX 937 quad-core Cortex-A55 microprocessor (MPU) for HMI and Edge AI applications aims to fill the gap between entry-level NXP i.MX 93",
+    "fetched_bytes": 234812,
+    "error": null
+  },
+  "classification": "normal"
+}
