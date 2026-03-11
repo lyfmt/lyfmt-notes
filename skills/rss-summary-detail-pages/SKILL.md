@@ -590,6 +590,12 @@ curl 'http://127.0.0.1:8766/post.html?slug=<slug>&view=detail'
 
 而不是凑假内容。
 
+### RSS autopublish 强制规则（新增）
+
+- **strict publish 模式下，只允许提交/推送 `published` 结果**。
+- 若本轮无 `published`，则必须跳过 git commit/push（避免 draft-only 被推送）。
+- `draft_only/blocked` 允许落地到本地工作区供后续补全，但不得推送到远端。
+
 ---
 
 ## 针对当前工作区的补充约定（RSS autopublish）
