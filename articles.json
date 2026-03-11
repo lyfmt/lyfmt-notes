@@ -5,6 +5,116 @@
   },
   "posts": [
     {
+      "slug": "nxp-i-mx-937-cost-effective-cortex-a55-m7-m33-mpu-is-a-drop-in-replacement-for-nxp-i-mx-95-soc-family-cnx-software",
+      "title": "NXP i.MX 937 cost-effective Cortex-A55/M7/M33 MPU is a drop-in replacement for NXP i.MX 95 SoC family - CNX Software",
+      "author": "CNX Software",
+      "publishedAt": "2026-03-11",
+      "source": "CNX Software",
+      "url": "https://www.cnx-software.com/2026/03/11/nxp-i-mx-937-cost-effective-cortex-a55-m7-m33-mpu-is-a-drop-in-replacement-for-nxp-i-mx-95-soc-family/",
+      "excerpt": "这篇文章围绕“NXP i.MX 937 cost-effective Cortex-A55/M7/M33 MPU is a drop-in replacement for NXP i.MX 95 SoC family - CNX Software”展开，RSS 摘要提到：The 1 .4 GHz NXP i.MX 937 quad-core Cortex-A55 microprocessor (MPU) for HMI and Edge AI applications aims to fill the gap between entry-l...",
+      "tags": [
+        "Hardware",
+        "AI",
+        "Networking",
+        "Infrastructure"
+      ],
+      "content": [
+        {
+          "heading": "文章核心",
+          "paragraphs": [
+            "基于 RSS 摘要与页面元数据，原文重点是：The 1 .4 GHz NXP i.MX 937 quad-core Cortex-A55 microprocessor (MPU) for HMI and Edge AI applications aims to fill the gap between entry-level NXP i.MX 93",
+            "来源信息：CNX Software｜2026-03-11。"
+          ]
+        },
+        {
+          "heading": "值得继续补充的点",
+          "paragraphs": [
+            "如果后续补齐详情视图，重点可以继续展开架构取舍、生产约束、性能代价和工程实施方式。",
+            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+          ]
+        }
+      ],
+      "detail": {
+        "available": true,
+        "layout": "detail-zh",
+        "translatedFrom": "https://www.cnx-software.com/2026/03/11/nxp-i-mx-937-cost-effective-cortex-a55-m7-m33-mpu-is-a-drop-in-replacement-for-nxp-i-mx-95-soc-family/",
+        "sourceName": "CNX Software",
+        "sourceDescription": "以下为原文逐段直译，保留原文段落推进与媒体顺序。",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "html": "1.4 GHz 的 NXP i.MX 937 四核 Cortex‑A55 微处理器（MPU）面向 HMI 与边缘 AI 应用，旨在填补入门级 <a href=\"https://www.cnx-software.com/2021/11/10/nxp-i-mx-93-processor-combines-cortex-a55-cores-with-ethos-u65-micronpu/\" target=\"_blank\" rel=\"noreferrer noopener\">NXP i.MX 93 SoC</a> 与更高端部件（如 <a href=\"https://www.cnx-software.com/2025/10/28/nxp-i-mx-952-processor-supports-local-dimming-for-ai-automotive-and-industrial-hmis/\" target=\"_blank\" rel=\"noreferrer noopener\">NXP i.MX 952 处理器</a>家族）之间的空白，同时与后者具备引脚对引脚兼容性。"
+          },
+          {
+            "type": "paragraph",
+            "html": "i.MX 937 MPU 还配备一颗专用的 667 MHz Arm Cortex‑M7 用于实时工作负载，以及一颗低功耗 Arm Cortex‑M33 用于系统管理任务；支持 LPDDR4x 或 LPDDR5 内存，集成 Arm Mali G310 3D GPU、一颗用于 1080p H.26x 视频编解码的 VPU，以及一颗 2 eTOPS 的 NXP eIQ Neutron NPU 用于机器学习（ML）加速。由于它面向 HMI 应用，还提供 MIPI DSI 与 LVDS 显示接口、4‑lane MIPI CSI 相机接口，以及其他多种 I/O。"
+          },
+          {
+            "type": "image",
+            "src": "./assets/posts/nxp-i-mx-937-cost-effective-cortex-a55-m7-m33-mpu-is-a-drop-in-replacement-for-nxp-i-mx-95-soc-family-cnx-software/figure-01.jpg",
+            "alt": "",
+            "caption": ""
+          },
+          {
+            "type": "paragraph",
+            "html": "NXP i.MX 937 规格（与其他 i.MX 93 部件相比，重点以粗体标出）："
+          },
+          {
+            "type": "list",
+            "items": [
+              "CPU – 最多 4× Arm Cortex‑A55 核心，最高 1.4 GHz",
+              "1× Arm Cortex‑M7 核心，最高 667 MHz",
+              "1× Arm Cortex‑M33 低功耗系统管理核心",
+              "GPU – Arm Mali G310 3D GPU",
+              "2D GPU",
+              "VPU – 视频解码：1080p60 H.265/H.264；视频编码：1080p60 H.264；JPEG 编码/解码",
+              "AI 加速器 – NXP eIQ Neutron NPU（2 eTOPS）",
+              "内存 I/F – 最高 4,500 MT/s 的 16‑bit/32‑bit LPDDR5 或最高 3,733 MT/s 的 16‑bit/32‑bit LPDDR4x（带内联 ECC）",
+              "存储 I/F – 3× SD 3.0/SDIO3.0/eMMC 5.1；1× xSPI（支持 SPI NOR 与 SPI NAND）",
+              "显示 I/F – 4‑lane MIPI DSI；1× 8‑lane 或 2× 4‑lane LVDS，最高 1080p60",
+              "相机 I/F – 带 PHY 的 4‑lane MIPI CSI",
+              "音频 – 17× I2S TDM（32‑bit @ 768KHz）；8 通道 PDM 麦克风输入；MQS：中等质量声音输出（sigma‑delta 调制器）",
+              "网络 – 2× 千兆以太网：TSN、AVB 与 IEEE 1588 同步；EEE 低功耗",
+              "USB – 2× USB 2.0（集成 PHY）",
+              "串行 – 2× CAN‑FD；8× UART/USART",
+              "其他外设 – 8× I2C、8× SPI、8‑ch 12‑bit ADC、2× 32‑pin FlexIO 接口（总线或串行 I/O）、1× PCIe Gen3 x1",
+              "安全 – EdgeLock Secure Enclave（Advanced Profile）；EdgeLock Prime Accelerator；后量子密码学（PQC）",
+              "封装（与 NXP i.MX 95 系列引脚对引脚兼容） – 15 × 15 mm, FCBGA, 0.5 mm pitch；19 × 19 mm, FCBGA, 0.7 mm pitch",
+              "温度范围与资质 – 消费级：0ºC 至 90ºC；工业级：-40ºC 至 105ºC；扩展工业级：-40ºC 至 125ºC；车规级：-40ºC 至 125ºC（另有车规“认证”）"
+            ]
+          },
+          {
+            "type": "image",
+            "src": "./assets/posts/nxp-i-mx-937-cost-effective-cortex-a55-m7-m33-mpu-is-a-drop-in-replacement-for-nxp-i-mx-95-soc-family-cnx-software/figure-02.webp",
+            "alt": "",
+            "caption": "Block diagram"
+          },
+          {
+            "type": "paragraph",
+            "html": "NXP 表示新款 MPU 将支持 Linux 与 Android BSP。i.MX 937 的主要“raison d’être”是为入门级与高性能型号之间提供更容易的扩展路径。实践中，这意味着 i.MX 937 与 i.MX 95/952 共享统一的开发生态、相同的 BSP、安全架构与启动结构，因此你可以按需升级或降本。"
+          },
+          {
+            "type": "paragraph",
+            "html": "由于引脚对引脚兼容性，硬件设计也更简化。15 × 15 mm 的 FCBGA 封装与 i.MX 952 家族引脚对引脚兼容，较大的 19 × 19 mm 封装同时兼容 i.MX 952 与 i.MX 95 家族。公司还计划推出 i.MX 937 FRDM 开发板，但尚未提供细节。我推测其设计将更接近下方所示的 FRDM i.MX 95（FRDM‑IMX95）开发板，而不是 FRDM i.MX 93 开发板。"
+          },
+          {
+            "type": "image",
+            "src": "./assets/posts/nxp-i-mx-937-cost-effective-cortex-a55-m7-m33-mpu-is-a-drop-in-replacement-for-nxp-i-mx-95-soc-family-cnx-software/figure-03.webp",
+            "alt": "",
+            "caption": "FRDM-IMX95 development board"
+          },
+          {
+            "type": "paragraph",
+            "html": "与 Embedded World 2026 的多数公告一样，这仍是早期预览。FRDM i.MX 937 开发板将于 2026 年末推出，而 NXP i.MX 937 MPU 预计在 2027 年第一季度上市。更多细节可见 <a href=\"https://www.nxp.com/products/i.MX-937\" target=\"_blank\" rel=\"noreferrer noopener\">产品页面</a> 与 <a href=\"https://www.nxp.com/company/about-nxp/smarter-world-blog/BL-IMX937-APPLICATIONS-PROCESSOR\" target=\"_blank\" rel=\"noreferrer noopener\">相关博文</a>。"
+          }
+        ]
+      },
+      "workflow": {
+        "articleId": 2698,
+        "rssTitle": "NXP i.MX 937 cost-effective Cortex-A55/M7/M33 MPU is a drop-in replacement for NXP i.MX 95 SoC family"
+      }
+    },
+    {
       "slug": "texas-instruments-mspm0g5187-and-am13ex-mcus-integrate-tinyengine-npu-for-edge-ai-applications-cnx-software",
       "title": "Texas Instruments MSPM0G5187 and AM13Ex MCUs integrate TinyEngine NPU for Edge AI applications - CNX Software",
       "author": "CNX Software",
