@@ -5,6 +5,64 @@
   },
   "posts": [
     {
+      "slug": "clear-resin-casting-replicates-old-acrylic-for-selectric-repair",
+      "title": "Clear Resin Casting Replicates Old Acrylic For Selectric Repair",
+      "author": "Hackaday",
+      "publishedAt": "2026-03-10",
+      "source": "Hackaday",
+      "url": "https://hackaday.com/2026/03/10/clear-resin-casting-replicates-old-acrylic-for-selectric-repair/",
+      "excerpt": "这篇文章围绕“Clear Resin Casting Replicates Old Acrylic For Selectric Repair”展开，RSS 摘要提到：IBM Selectric typewriters have a lot of unique parts that can be tricky to source, but one we didn’t think of was the clear acrylic(?) du...",
+      "tags": [
+        "Hardware",
+        "AI"
+      ],
+      "content": [
+        {
+          "heading": "文章核心",
+          "paragraphs": [
+            "基于 RSS 摘要与页面元数据，原文重点是：IBM Selectric typewriters have a lot of unique parts that can be tricky to source, but one we didn’t think of was the clear acrylic(?) dust covers, that are apparently very hard to find in go…",
+            "来源信息：Hackaday｜2026-03-10。"
+          ]
+        },
+        {
+          "heading": "值得继续补充的点",
+          "paragraphs": [
+            "如果后续补齐详情视图，重点可以继续展开芯片规格、接口能力、功耗指标和适用场景。",
+            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+          ]
+        }
+      ],
+      "detail": {
+        "available": true,
+        "layout": "detail-zh",
+        "translatedFrom": "https://hackaday.com/2026/03/10/clear-resin-casting-replicates-old-acrylic-for-selectric-repair/",
+        "sourceName": "Hackaday",
+        "sourceDescription": "以下为原文逐段直译，保留原文段落推进与媒体顺序。",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "html": "IBM Selectric 打字机有许多独特零件，难以采购，但我们没想到其中之一是透明的亚克力（？）防尘罩，它们显然很难找到状态良好的。[Eric Strebel] 有几台 Selectric 都在这些部件上有问题。你可以用亚克力板仔细加热弯折来接近复刻该零件，但 [Eric] 在新视频中尝试了另一种做法：<a href=\"https://www.youtube.com/watch?v=PeIq8qOVnxE\" target=\"_blank\" rel=\"noreferrer noopener\">用树脂浇注来复制</a>。"
+          },
+          {
+            "type": "paragraph",
+            "html": "他使用脱气的锡固化硅胶为原件制作模具，并用一些 3D 打印的 PLA 与泡沫板来固定硅胶形成模具。模具分两步制作成双件式，分离并清理后再注入树脂。原件实际上是带烟熏色的塑料，而不是完全透明，但 [Eric] 通过在透明环氧树脂中加入色料实现了完美匹配。树脂以简单的重力浇注方式倒入模具，同时还用振动器帮助流动。固化在热与压力下进行——60 PSI。效果惊人；当他在一侧补上一点油漆以匹配原件的黑色表面后，几乎很难分辨 [Eric] 的浇注件与母件的区别，除了这些复制件的状态更好。"
+          },
+          {
+            "type": "paragraph",
+            "html": "这个零件非常适合浇注，但用处也不多。虽然你可以通过加热弯折一块烟熏色亚克力来复现大曲面，但零件边缘有唇边，难以再现。[Eric] 需要多个零件用于他的多台打字机，而这种方法由于模具可重复使用，因此在批量制作上非常高效。"
+          },
+          {
+            "type": "paragraph",
+            "html": "即便你没有需要防尘罩的 IBM Selectric，这种技术同样适用于各种透明形状。如果你是树脂浇注新手，我们有一个方便的指南教你<a href=\"https://www.youtube.com/watch?v=PeIq8qOVnxE\" target=\"_blank\" rel=\"noreferrer noopener\">复制塑料零件</a>，帮助你开始这类工作。可复制的不只是大部件：你甚至可以<a href=\"https://hackaday.com/2022/11/01/reproducing-vinyl-records-in-resin/\" target=\"_blank\" rel=\"noreferrer noopener\">复制唱片</a>，树脂浇注的保真度就是这么高。"
+          }
+        ]
+      },
+      "workflow": {
+        "articleId": 2697,
+        "rssTitle": "Clear Resin Casting Replicates Old Acrylic for Selectric Repair"
+      }
+    },
+    {
       "slug": "turning-a-gdb-coredump-debug-session-into-a-murder-mystery",
       "title": "Turning a GDB Coredump Debug Session Into a Murder Mystery",
       "author": "Hackaday",
