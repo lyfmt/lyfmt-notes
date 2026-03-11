@@ -30,50 +30,23 @@
     "layout": "detail-zh",
     "translatedFrom": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-connect-predictive-insights/",
     "sourceName": "AWS Architecture Blog",
-    "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+    "sourceDescription": "以下为原文逐段直译，保留原文段落推进与媒体顺序。",
     "blocks": [
       {
-        "type": "heading",
-        "level": 2,
-        "text": "Amazon Connect enhances AI-powered predictive insights"
+        "type": "paragraph",
+        "html": "今天，Amazon Connect 宣布增强其 AI 驱动的预测洞察，使企业更容易以规模化方式提供主动、个性化的客户体验。在 re:Invent 2025 发布的五种推荐算法基础上，AI 驱动的预测洞察现在支持最多 4,000 万条产品目录条目（提升 8 倍），可用于触发式活动的消息模板，并将模型准确率提高最多 14%。这些增强让企业能够在恰当的时间向客户自动发送恰当的信息，同时减少部署 AI 个性化所需的时间。"
       },
       {
         "type": "paragraph",
-        "html": "Today, Amazon Connect is announcing enhancements to AI-powered predictive insights that make it easier for businesses to deliver proactive, personalized customer experiences at scale. Building on the five recommendation algorithms launched at re:Invent 2025, AI-powered predictive insights now support up to 40 million product catalog items (8X increase), are available in message templates for trigger-based campaigns, and deliver up to 14% improved model accuracy. These enhancements enable businesses to automatically engage customers with the right message at the right time, while reducing the time required to deploy AI-powered personalization."
+        "html": "企业现在可以基于客户行为和预测信号发起触发式活动以进行个性化触达——例如在客户放弃购物车时发送产品推荐，或在购买后提供补充服务。企业还可以基于预测的偏好与行为，为特定客户群体投放定向活动。更高的模型准确率与更短的训练时间意味着企业可以更快部署个性化体验，并对推荐结果更有信心。"
       },
       {
         "type": "paragraph",
-        "html": "Businesses can now deliver trigger-based campaigns to initiate personalized outreach based on customer behavior and predictive signals – such as sending product recommendations when a customer abandons their cart or offering complementary services after a purchase. Businesses can now deliver targeted campaigns for specific customer cohorts based on predicted preferences and behaviors. Improved model accuracy and reduced training time mean businesses can deploy personalized experiences faster with greater confidence in the recommendations provided to customers."
+        "html": "借助 Amazon Connect Customer Profiles，你仅为实际使用的配置文件按量付费。AI 驱动的预测洞察增强功能的公测预览版在欧洲（法兰克福）、美国东部（弗吉尼亚北部）、亚太（首尔）、亚太（东京）、美国西部（俄勒冈）、亚太（新加坡）、亚太（悉尼）、加拿大（中部）可用。"
       },
       {
         "type": "paragraph",
-        "html": "With Amazon Connect Customer Profiles, you only pay-as-you-go for utilized profiles. Public preview for AI-powered predictive insights enhancements is available in Europe (Frankfurt), US East (N. Virginia), Asia Pacific (Seoul), Asia Pacific (Tokyo), US West (Oregon), Asia Pacific (Singapore), Asia Pacific (Sydney), Canada (Central)."
-      },
-      {
-        "type": "paragraph",
-        "html": "To learn more, visit our webpages for Customer Profiles and explore the AI-powered <a href=\"https://docs.aws.amazon.com/connect/latest/adminguide/customer-profiles-predictive-insights.html\" target=\"_blank\" rel=\"noreferrer noopener\">predictive insights documentation</a>."
-      }
-    ],
-    "refineErrors": [
-      {
-        "index": 1,
-        "type": "paragraph",
-        "message": "Empty Pi output."
-      },
-      {
-        "index": 2,
-        "type": "paragraph",
-        "message": "Empty Pi output."
-      },
-      {
-        "index": 3,
-        "type": "paragraph",
-        "message": "Empty Pi output."
-      },
-      {
-        "index": 4,
-        "type": "paragraph",
-        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+        "html": "要了解更多，请访问 Customer Profiles 网页并查看 AI 驱动的 <a href=\"https://docs.aws.amazon.com/connect/latest/adminguide/customer-profiles-predictive-insights.html\" target=\"_blank\" rel=\"noreferrer noopener\">predictive insights 文档</a>。"
       }
     ]
   },
