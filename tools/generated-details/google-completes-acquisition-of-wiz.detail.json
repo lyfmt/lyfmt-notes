@@ -1,0 +1,115 @@
+{
+  "available": false,
+  "layout": "draft",
+  "translatedFrom": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/wiz-acquisition/",
+  "sourceName": "Google AI Blog",
+  "sourceDescription": "以下为根据原文结构自动生成的详情草稿，已保留段落层次、图片与媒体；默认尚未完成中文翻译润色。",
+  "blocks": [
+    {
+      "type": "image",
+      "src": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/06._KeywordGooglexWiz_1920-1080.width-1300.png",
+      "alt": "Google completes acquisition of Wiz",
+      "caption": ""
+    },
+    {
+      "type": "paragraph",
+      "html": "Mar 11, 2026"
+    },
+    {
+      "type": "paragraph",
+      "html": "Your browser does not support the audio element."
+    },
+    {
+      "type": "paragraph",
+      "html": "<i>Today, we announced we&#x27;ve closed the acquisition of Wiz. As a reminder, this deal was</i> <a href=\"https://cloud.google.com/blog/products/identity-security/google-announces-agreement-acquire-wiz?e=48754805?utm_source%3Dlinkedin\" target=\"_blank\" rel=\"noreferrer noopener\"><i>initially announced</i></a><i> in March 2025. Read our press release below, and see more details</i> <a href=\"https://cloud.google.com/blog/products/identity-security/google-completes-acquisition-of-wiz\" target=\"_blank\" rel=\"noreferrer noopener\"><i>on the Cloud blog</i></a><i>.</i>"
+    },
+    {
+      "type": "paragraph",
+      "html": "<b>MOUNTAIN VIEW, Calif. &amp; NEW YORK, N.Y. — March 11, 2026 —</b> Google LLC today announced the completion of its acquisition of Wiz, a leading cloud and AI security platform headquartered in New York. Wiz will join Google Cloud and maintain its brand and commitment to securing customers across all cloud environments."
+    },
+    {
+      "type": "paragraph",
+      "html": "This acquisition is an investment by Google Cloud to improve cloud security and enable organizations to build fast and securely across any cloud or AI platform. In today’s AI era, more businesses and governments are migrating their most important data and systems to the cloud and turning to agile and continuous software development. As these organizations operate in a multicloud environment and adopt AI, attackers are using AI to operate with greater speed and sophistication."
+    },
+    {
+      "type": "paragraph",
+      "html": "Wiz delivers an easy-to-use security platform with deep expertise of cloud environments and code, connecting to all major clouds and helping prevent and respond to cybersecurity incidents. Its capabilities complement Google Cloud’s leadership in cloud infrastructure and deep AI expertise, including AI-powered threat intelligence and security operations tools."
+    },
+    {
+      "type": "paragraph",
+      "html": "Together, Google Cloud and Wiz will provide a unified security platform that improves the speed with which organizations can detect, prevent, and respond to threats. It will help them stay ahead of the curve by detecting emerging threats created using AI models, protecting against threats to AI models, and using AI models to help security professionals hunt for threats more effectively. The platform will also provide a consistent set of tools, processes, and policies across all major cloud environments at every layer, from code to cloud to runtime."
+    },
+    {
+      "type": "paragraph",
+      "html": "The combined capability will also boost the adoption of multicloud security, enhancing companies’ ability to use multiple clouds – further spurring innovation in cloud computing and AI applications. Enterprises and government agencies can vastly improve how security is designed, operated, and automated, scaling cybersecurity teams while lowering the cost of implementing and managing security controls. The combined platform will also help protect small businesses, which often do not have the expertise and resources to protect themselves, from increasingly sophisticated and destructive cyberthreats."
+    },
+    {
+      "type": "paragraph",
+      "html": "Consistent with Google Cloud’s commitment to openness, Wiz products will continue to work and be available across all major clouds, including Amazon Web Services, Google Cloud Platform, Microsoft Azure, and Oracle Cloud, and will be offered through an array of partner security solutions. Google Cloud will also continue to offer customers wide choice through a variety of partner security solutions available in the <a href=\"https://cloud.google.com/marketplace?e=48754805\" target=\"_blank\" rel=\"noreferrer noopener\">Google Cloud Marketplace</a>."
+    },
+    {
+      "type": "paragraph",
+      "html": "You can learn more about what this means for Cloud customers and partners on the <a href=\"https://cloud.google.com/blog/products/identity-security/google-completes-acquisition-of-wiz\" target=\"_blank\" rel=\"noreferrer noopener\">Google Cloud blog</a> and <a href=\"http://wiz.io/blog/google-closes-deal-to-acquire-wiz\" target=\"_blank\" rel=\"noreferrer noopener\">Wiz blog</a>."
+    },
+    {
+      "type": "paragraph",
+      "html": "<b>Quotes</b>"
+    },
+    {
+      "type": "paragraph",
+      "html": "<b>Sundar Pichai, CEO, Google</b>: “Keeping people safe online has always been part of Google’s mission. This job is increasingly important today, as more companies and governments move their work to the cloud and broadly use generative AI. By bringing Wiz and Google Cloud together, we’re making it easier for organizations to innovate with confidence.”"
+    },
+    {
+      "type": "paragraph",
+      "html": "<b>Thomas Kurian, CEO, Google Cloud</b>: “We want to make security a catalyst for innovation, not a barrier. With this acquisition, we will deliver a unified security platform that simplifies the complex task of protecting multicloud environments in the AI era, making a strong security posture accessible to more companies and governments.”"
+    },
+    {
+      "type": "paragraph",
+      "html": "<b>Assaf Rappaport, Co-Founder &amp; CEO, Wiz</b>: “Joining Google Cloud allows us to scale our mission of protecting customers wherever they operate – at machine speed. We remain committed to our open approach, ensuring Wiz continues to support all major cloud and code environments. With Google’s AI leadership and resources, coupled with Wiz’s deep context and knowledge of cloud and code environments, we are in a stronger position to help our partners and customers prevent breaches before they happen.”"
+    },
+    {
+      "type": "paragraph",
+      "html": "<b>Contacts</b>"
+    },
+    {
+      "type": "paragraph",
+      "html": "Investors: <a href=\"mailto:investor-relations@abc.xyz\" target=\"_blank\" rel=\"noreferrer noopener\">investor-relations@abc.xyz</a>"
+    },
+    {
+      "type": "paragraph",
+      "html": "Press: <a href=\"mailto:press@google.com\" target=\"_blank\" rel=\"noreferrer noopener\">press@google.com</a>"
+    },
+    {
+      "type": "paragraph",
+      "html": "<b>About Google</b>"
+    },
+    {
+      "type": "paragraph",
+      "html": "Google&#x27;s mission is to organize the world&#x27;s information and make it universally accessible and useful. Through products and platforms like Search, Maps, Gmail, Android, Google Play, Google Cloud, Chrome and YouTube, Google plays a meaningful role in the daily lives of billions of people and has become one of the most widely-known companies in the world. Google is a subsidiary of Alphabet Inc."
+    },
+    {
+      "type": "paragraph",
+      "html": "<b>About Google Cloud</b>"
+    },
+    {
+      "type": "paragraph",
+      "html": "Google Cloud is the new way to the cloud, providing AI, infrastructure, developer, data, security, and collaboration tools built for today and tomorrow. Google Cloud offers a powerful, fully integrated and optimized AI stack with its own planet-scale infrastructure, custom-built chips, generative AI models and development platform, as well as AI-powered applications, to help organizations transform. Customers in more than 200 countries and territories turn to Google Cloud as their trusted technology partner."
+    },
+    {
+      "type": "paragraph",
+      "html": "<b>About Wiz</b>"
+    },
+    {
+      "type": "paragraph",
+      "html": "Wiz protects everything organizations build and run. The Wiz Security Platform connects code, cloud, and runtime into a single shared context, allowing security and engineering teams to understand real risk, fix issues at the source, and stop threats as they emerge. Built for the cloud and AI era, Wiz enables secure-by-default development, automatic hardening, and continuous risk reduction across the entire application lifecycle. Wiz is trusted by 50% of the Fortune 100 and leading global organizations including Shell, BMW, LVMH, Morgan Stanley, Mars, Salesforce, Takeda, Colgate-Palmolive, and Aon among others."
+    },
+    {
+      "type": "paragraph",
+      "html": "<b>Forward Looking Statement</b>"
+    },
+    {
+      "type": "paragraph",
+      "html": "This release includes forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995 regarding the acquisition of Wiz by Google. These forward-looking statements are based on current expectations and assumptions that are subject to risks and uncertainties, which could cause Alphabet Inc.&#x27;s (the &quot;company&quot;, &quot;we&quot;, &quot;us&quot; or &quot;our&quot;) actual results to differ materially from those reflected in the forward-looking statements. Factors that could cause or contribute to such differences include, but are not limited to, our ability to successfully integrate Wiz or other businesses that we may acquire in the future; our ability to achieve the benefits that we expect to realize as a result of the acquisition of Wiz; the potential negative impact on our financial condition and results of operations if we fail to achieve the benefits that we expect to realize as a result of the acquisition of Wiz or if these benefits take longer to achieve than expected; and other risks and uncertainties discussed in the reports the company has filed previously with the SEC, such as its Annual Report on Form 10-K or 10-Q, as applicable. We undertake no obligation to revise or publicly release the results of any revision to these forward-looking statements, which speak as of the respective date of this release, except as required by law. Given these risks and uncertainties, readers are cautioned not to place undue reliance on such forward-looking statements."
+    }
+  ]
+}
