@@ -42,7 +42,7 @@ DEFAULT_SOURCE_CACHE = SITE_ROOT / "source-cache"
 DEFAULT_SPEC_DIR = TOOLS_DIR / "generated-specs"
 DEFAULT_DETAIL_DIR = TOOLS_DIR / "generated-details"
 TERMINAL_OUTCOMES = {"published", "draft_only", "blocked", "skipped_existing", "failed"}
-COMMITTABLE_OUTCOMES = {"published", "draft_only", "blocked", "skipped_existing"}
+COMMITTABLE_OUTCOMES = {"published"}
 
 
 def utc_now() -> str:
@@ -338,6 +338,13 @@ def maybe_git_commit_and_push(args: argparse.Namespace, run_record: dict[str, An
     if not git_has_changes(SITE_ROOT):
         outcome["note"] = "no_changes"
         return outcome
+
+    allowed_outcomes = COMMITTABLE_OUTCOMES
+    item_outcomes = [item.get("outcome") for item in (run_record.get("items") or [])]
+    if allowed_outcomes is not None and not any(outcome in allowed_outcomes for outcome in item_outcomes):
+        outcome["note"] = "commit_blocked_no_publishable_items"
+        return outcome
+
     if args.git_commit:
         commit_message = f"Harden RSS autopublish run {run_record['run_id']}"
         add_result = run_command(
