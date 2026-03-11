@@ -33,33 +33,19 @@
     "layout": "detail-zh",
     "translatedFrom": "https://simonwillison.net/guides/agentic-engineering-patterns/better-code/#atom-everything",
     "sourceName": "Simon Willison",
-    "sourceDescription": "以下为根据原文结构整理的中文细读版，保留原文段落推进与媒体顺序；内容为中文改写/细读，不是逐字镜像。",
+    "sourceDescription": "以下为原文逐段直译，保留原文段落推进与媒体顺序。",
     "blocks": [
       {
-        "type": "heading",
-        "level": 2,
-        "text": "Simon Willison’s Weblog"
+        "type": "paragraph",
+        "html": "许多开发者担心把代码交给 AI 工具会导致质量下降，生成糟糕代码却产出速度快到让决策者愿意忽视缺陷。"
       },
       {
         "type": "paragraph",
-        "html": "<a href=\"https://simonwillison.net/guides/\" target=\"_blank\" rel=\"noreferrer noopener\">Guides</a> &gt; <a href=\"https://simonwillison.net/guides/agentic-engineering-patterns/\" target=\"_blank\" rel=\"noreferrer noopener\">Agentic Engineering Patterns</a>"
-      },
-      {
-        "type": "heading",
-        "level": 2,
-        "text": "AI should help us produce better code"
+        "html": "如果采用编码代理确实降低了你正在产出的代码与功能质量，你应该直接解决这个问题：找出流程中哪些环节正在伤害输出质量并加以修复。"
       },
       {
         "type": "paragraph",
-        "html": "Many developers worry that outsourcing their code to AI tools will result in a drop in quality, producing bad code that&#x27;s churned out fast enough that decision makers are willing to overlook its flaws."
-      },
-      {
-        "type": "paragraph",
-        "html": "If adopting coding agents demonstrably reduces the quality of the code and features you are producing, you should address that problem directly: figure out which aspects of your process are hurting the quality of your output and fix them."
-      },
-      {
-        "type": "paragraph",
-        "html": "Shipping worse code with agents is a <em>choice</em>. We can choose to ship code that is better instead."
+        "html": "用代理发布更差的代码是一种选择。我们可以选择发布更好的代码。"
       },
       {
         "type": "heading",
@@ -68,28 +54,24 @@
       },
       {
         "type": "paragraph",
-        "html": "I like to think about shipping better code in terms of technical debt. We take on technical debt as the result of trade-offs: doing things &quot;the right way&quot; would take too long, so we work within the time constraints we are under and cross our fingers that our project will survive long enough to pay down the debt later on."
+        "html": "我倾向于从技术债的角度思考如何交付更好的代码。我们承担技术债是权衡的结果：按“正确方式”做会花太久时间，所以我们在既定时间约束下做事，并祈祷项目能存活到以后再还债。"
       },
       {
         "type": "paragraph",
-        "html": "The best mitigation for technical debt is to avoid taking it on in the first place."
+        "html": "避免技术债的最佳缓解方式，是一开始就别背上它。"
       },
       {
         "type": "paragraph",
-        "html": "In my experience, a common category of technical debt fixes is changes that are simple but time-consuming."
+        "html": "按我的经验，技术债修复中常见的一类是那些概念上简单但非常耗时的改动。"
       },
       {
         "type": "list",
         "items": [
-          "Our original API design doesn&#x27;t cover an important case that emerged later on. Fixing that API would require changing code in dozens of different places, making it quicker to add a very slightly different new API and live with the duplication.",
-          "We made a poor choice naming a concept early on - teams rather than groups for example - but cleaning up that nomenclature everywhere in the code is too much work so we only fix it in the UI.",
-          "Our system has grown duplicate but slightly different functionality over time which needs combining and refactoring.",
-          "One of our files has grown to several thousand lines of code which we would ideally split into separate modules."
+          "我们最初的 API 设计没有覆盖后来出现的重要用例。修复这个 API 需要在许多不同地方改代码，于是更快的办法是添加一个几乎相同的新 API 并接受这种重复。",
+          "我们早期把一个概念命名错了——比如叫 teams 而不是 groups——但要在代码中到处清理这种命名太费工，所以只在 UI 中修正。",
+          "我们的系统随着时间增长出现了重复但略有差别的功能，需要合并与重构。",
+          "某个文件已经长到数千行代码，本应拆分成多个模块。"
         ]
-      },
-      {
-        "type": "paragraph",
-        "html": "All of these changes are conceptually simple but still need time dedicated to them, which can be hard to justify given more pressing issues."
       },
       {
         "type": "heading",
@@ -98,23 +80,23 @@
       },
       {
         "type": "paragraph",
-        "html": "Refactoring tasks like this are an <em>ideal</em> application of coding agents."
+        "html": "像这样的重构任务非常适合使用编码代理。"
       },
       {
         "type": "paragraph",
-        "html": "Fire up an agent, tell it what to change and leave it to churn away in a branch or worktree somewhere in the background."
+        "html": "启动一个代理，告诉它要改什么，让它在某个分支或 worktree 中后台跑。"
       },
       {
         "type": "paragraph",
-        "html": "I usually use asynchronous coding agents for this such as <a href=\"https://jules.google.com/\" target=\"_blank\" rel=\"noreferrer noopener\">Gemini Jules</a>, <a href=\"https://developers.openai.com/codex/cloud/\" target=\"_blank\" rel=\"noreferrer noopener\">OpenAI Codex web</a>, or <a href=\"https://code.claude.com/docs/en/claude-code-on-the-web\" target=\"_blank\" rel=\"noreferrer noopener\">Claude Code on the web</a>. That way I can run those refactoring jobs without interrupting my flow on my laptop."
+        "html": "我通常使用异步编码代理，比如 <a href=\"https://jules.google.com/\" target=\"_blank\" rel=\"noreferrer noopener\">Gemini Jules</a>、<a href=\"https://developers.openai.com/codex/cloud/\" target=\"_blank\" rel=\"noreferrer noopener\">OpenAI Codex web</a> 或 <a href=\"https://code.claude.com/docs/en/claude-code-on-the-web\" target=\"_blank\" rel=\"noreferrer noopener\">Claude Code on the web</a>。这样我可以让这些重构任务在后台跑，而不打断我在笔记本上的工作流。"
       },
       {
         "type": "paragraph",
-        "html": "Evaluate the result in a Pull Request. If it&#x27;s good, land it. If it&#x27;s almost there, prompt it and tell it what to do differently. If it&#x27;s bad, throw it away."
+        "html": "在 Pull Request 中评估结果。好就合入；接近就继续提示告诉它需要如何不同；不好就丢弃。"
       },
       {
         "type": "paragraph",
-        "html": "The cost of these code improvements has dropped so low that we can afford a zero tolerance attitude to minor code smells and inconveniences."
+        "html": "代码改进的成本已经降得很低，以至于我们可以对轻微代码异味和不便采取零容忍态度。"
       },
       {
         "type": "heading",
@@ -123,31 +105,31 @@
       },
       {
         "type": "paragraph",
-        "html": "Any software development task comes with a wealth of options for approaching the problem. Some of the most significant technical debt comes from making poor choices at the planning step - missing out on an obvious simple solution, or picking a technology that later turns out not to be exactly the right fit."
+        "html": "任何软件开发任务都伴随大量可选路径。许多最严重的技术债来自规划阶段做出的糟糕选择——错过了显而易见的简单方案，或选择了后来证明并不合适的技术。"
       },
       {
         "type": "paragraph",
-        "html": "LLMs can help ensure we don&#x27;t miss any obvious solutions that may not have crossed our radar before. They&#x27;ll only suggest solutions that are common in their training data but those tend to be the <a href=\"https://boringtechnology.club\" target=\"_blank\" rel=\"noreferrer noopener\">Boring Technology</a> that&#x27;s most likely to work."
+        "html": "LLM 能帮助我们不遗漏那些之前没想到的明显方案。它们只会建议其训练数据中常见的方案，但这些往往是最可能奏效的 <a href=\"https://boringtechnology.club\" target=\"_blank\" rel=\"noreferrer noopener\">Boring Technology</a>。"
       },
       {
         "type": "paragraph",
-        "html": "More importantly, coding agents can help with <strong>exploratory prototyping</strong>."
+        "html": "更重要的是，编码代理可以帮助进行探索性原型开发。"
       },
       {
         "type": "paragraph",
-        "html": "The best way to make confident technology choices is to prove that they are fit for purpose with a prototype."
+        "html": "做出有把握的技术选择的最佳方式，是用一个原型来证明它适用。"
       },
       {
         "type": "paragraph",
-        "html": "Is Redis a good choice for the activity feed on a site which expects thousands of concurrent users?"
+        "html": "Redis 是否适合一个预计会有数千并发用户的网站活动流？"
       },
       {
         "type": "paragraph",
-        "html": "The best way to know for sure is to wire up a simulation of that system and run a load test against it to see what breaks."
+        "html": "要确切知道答案，最好的办法是搭建该系统的模拟并跑一轮负载测试，看看会在哪里出问题。"
       },
       {
         "type": "paragraph",
-        "html": "Coding agents can build this kind of simulation from a single well crafted prompt, which drops the cost of this kind of experiment to almost nothing. And since they&#x27;re so cheap we can run multiple experiments at once, testing several solutions to pick the one that is the best fit for our problem."
+        "html": "编码代理可以通过一个精心编写的提示就构建这种模拟，将这类实验的成本几乎降为零。而且因为它们足够便宜，我们可以同时运行多个实验，测试不同方案并选择最适合问题的那个。"
       },
       {
         "type": "heading",
@@ -156,126 +138,15 @@
       },
       {
         "type": "paragraph",
-        "html": "Agents follow instructions. We can evolve these instructions over time to get better results from future runs, based on what we&#x27;ve learned previously."
+        "html": "代理会遵循指令。我们可以随着时间推移不断改进这些指令，从以前的运行中学习，以获得更好的结果。"
       },
       {
         "type": "paragraph",
-        "html": "Dan Shipper and Kieran Klaassen at Every describe their company&#x27;s approach to working with coding agents as <a href=\"https://every.to/chain-of-thought/compound-engineering-how-every-codes-with-agents\" target=\"_blank\" rel=\"noreferrer noopener\">Compound Engineering</a>. Every coding project they complete ends with a retrospective, which they call the <strong>compound step</strong> where they take what worked and document that for future agent runs."
+        "html": "Every 的 Dan Shipper 和 Kieran Klaassen 把他们公司与编码代理协作的方式称为 <a href=\"https://every.to/chain-of-thought/compound-engineering-how-every-codes-with-agents\" target=\"_blank\" rel=\"noreferrer noopener\">Compound Engineering</a>。他们完成的每个编码项目都会以一次回顾结束，并把这一回顾称为“复利步骤”（compound step），即将有效经验记录下来，用于未来的代理运行。"
       },
       {
         "type": "paragraph",
-        "html": "If we want the best results from our agents, we should aim to continually increase the quality of our codebase over time. Small improvements compound. Quality enhancements that used to be time-consuming have now dropped in cost to the point that there&#x27;s no excuse not to invest in quality at the same time as shipping new features. Coding agents mean we can finally have both."
-      },
-      {
-        "type": "paragraph",
-        "html": "This is a chapter from the guide <strong><a href=\"https://simonwillison.net/guides/agentic-engineering-patterns/\" target=\"_blank\" rel=\"noreferrer noopener\">Agentic Engineering Patterns</a></strong>."
-      },
-      {
-        "type": "paragraph",
-        "html": "<strong>Chapters in this guide</strong>"
-      },
-      {
-        "type": "list",
-        "items": [
-          "<a href=\"https://simonwillison.net/guides/agentic-engineering-patterns/code-is-cheap/\" target=\"_blank\" rel=\"noreferrer noopener\">Writing code is cheap now</a>",
-          "<a href=\"https://simonwillison.net/guides/agentic-engineering-patterns/hoard-things-you-know-how-to-do/\" target=\"_blank\" rel=\"noreferrer noopener\">Hoard things you know how to do</a>",
-          "<a href=\"https://simonwillison.net/guides/agentic-engineering-patterns/anti-patterns/\" target=\"_blank\" rel=\"noreferrer noopener\">Anti-patterns: things to avoid</a>",
-          "<strong>AI should help us produce better code</strong>"
-        ]
-      },
-      {
-        "type": "list",
-        "items": [
-          "<a href=\"https://simonwillison.net/guides/agentic-engineering-patterns/red-green-tdd/\" target=\"_blank\" rel=\"noreferrer noopener\">Red/green TDD</a>",
-          "<a href=\"https://simonwillison.net/guides/agentic-engineering-patterns/first-run-the-tests/\" target=\"_blank\" rel=\"noreferrer noopener\">First run the tests</a>",
-          "<a href=\"https://simonwillison.net/guides/agentic-engineering-patterns/agentic-manual-testing/\" target=\"_blank\" rel=\"noreferrer noopener\">Agentic manual testing</a>"
-        ]
-      },
-      {
-        "type": "list",
-        "items": [
-          "<a href=\"https://simonwillison.net/guides/agentic-engineering-patterns/linear-walkthroughs/\" target=\"_blank\" rel=\"noreferrer noopener\">Linear walkthroughs</a>",
-          "<a href=\"https://simonwillison.net/guides/agentic-engineering-patterns/interactive-explanations/\" target=\"_blank\" rel=\"noreferrer noopener\">Interactive explanations</a>"
-        ]
-      },
-      {
-        "type": "list",
-        "items": [
-          "<a href=\"https://simonwillison.net/guides/agentic-engineering-patterns/gif-optimization/\" target=\"_blank\" rel=\"noreferrer noopener\">GIF optimization tool using WebAssembly and Gifsicle</a>"
-        ]
-      },
-      {
-        "type": "list",
-        "items": [
-          "<a href=\"https://simonwillison.net/guides/agentic-engineering-patterns/prompts/\" target=\"_blank\" rel=\"noreferrer noopener\">Prompts I use</a>"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "html": "Created: 10th March 2026<br> Last modified: 10th March 2026<br> <a href=\"https://simonwillison.net/guides/agentic-engineering-patterns/better-code/changes/\" target=\"_blank\" rel=\"noreferrer noopener\">2 changes</a>"
-      },
-      {
-        "type": "paragraph",
-        "html": "<strong>Previous:</strong> <a href=\"https://simonwillison.net/guides/agentic-engineering-patterns/anti-patterns/\" target=\"_blank\" rel=\"noreferrer noopener\">Anti-patterns: things to avoid</a>"
-      },
-      {
-        "type": "paragraph",
-        "html": "<strong>Next:</strong> <a href=\"https://simonwillison.net/guides/agentic-engineering-patterns/red-green-tdd/\" target=\"_blank\" rel=\"noreferrer noopener\">Red/green TDD</a>"
-      },
-      {
-        "type": "list",
-        "items": [
-          "<a href=\"https://simonwillison.net/about/#disclosures\" target=\"_blank\" rel=\"noreferrer noopener\">Disclosures</a>",
-          "<a href=\"https://simonwillison.net/about/#about-site\" target=\"_blank\" rel=\"noreferrer noopener\">Colophon</a>",
-          "©",
-          "<a href=\"https://simonwillison.net/2002/\" target=\"_blank\" rel=\"noreferrer noopener\">2002</a>",
-          "<a href=\"https://simonwillison.net/2003/\" target=\"_blank\" rel=\"noreferrer noopener\">2003</a>",
-          "<a href=\"https://simonwillison.net/2004/\" target=\"_blank\" rel=\"noreferrer noopener\">2004</a>",
-          "<a href=\"https://simonwillison.net/2005/\" target=\"_blank\" rel=\"noreferrer noopener\">2005</a>",
-          "<a href=\"https://simonwillison.net/2006/\" target=\"_blank\" rel=\"noreferrer noopener\">2006</a>",
-          "<a href=\"https://simonwillison.net/2007/\" target=\"_blank\" rel=\"noreferrer noopener\">2007</a>",
-          "<a href=\"https://simonwillison.net/2008/\" target=\"_blank\" rel=\"noreferrer noopener\">2008</a>",
-          "<a href=\"https://simonwillison.net/2009/\" target=\"_blank\" rel=\"noreferrer noopener\">2009</a>",
-          "<a href=\"https://simonwillison.net/2010/\" target=\"_blank\" rel=\"noreferrer noopener\">2010</a>",
-          "<a href=\"https://simonwillison.net/2011/\" target=\"_blank\" rel=\"noreferrer noopener\">2011</a>",
-          "<a href=\"https://simonwillison.net/2012/\" target=\"_blank\" rel=\"noreferrer noopener\">2012</a>",
-          "<a href=\"https://simonwillison.net/2013/\" target=\"_blank\" rel=\"noreferrer noopener\">2013</a>",
-          "<a href=\"https://simonwillison.net/2014/\" target=\"_blank\" rel=\"noreferrer noopener\">2014</a>",
-          "<a href=\"https://simonwillison.net/2015/\" target=\"_blank\" rel=\"noreferrer noopener\">2015</a>",
-          "<a href=\"https://simonwillison.net/2016/\" target=\"_blank\" rel=\"noreferrer noopener\">2016</a>",
-          "<a href=\"https://simonwillison.net/2017/\" target=\"_blank\" rel=\"noreferrer noopener\">2017</a>",
-          "<a href=\"https://simonwillison.net/2018/\" target=\"_blank\" rel=\"noreferrer noopener\">2018</a>",
-          "<a href=\"https://simonwillison.net/2019/\" target=\"_blank\" rel=\"noreferrer noopener\">2019</a>",
-          "<a href=\"https://simonwillison.net/2020/\" target=\"_blank\" rel=\"noreferrer noopener\">2020</a>",
-          "<a href=\"https://simonwillison.net/2021/\" target=\"_blank\" rel=\"noreferrer noopener\">2021</a>",
-          "<a href=\"https://simonwillison.net/2022/\" target=\"_blank\" rel=\"noreferrer noopener\">2022</a>",
-          "<a href=\"https://simonwillison.net/2023/\" target=\"_blank\" rel=\"noreferrer noopener\">2023</a>",
-          "<a href=\"https://simonwillison.net/2024/\" target=\"_blank\" rel=\"noreferrer noopener\">2024</a>",
-          "<a href=\"https://simonwillison.net/2025/\" target=\"_blank\" rel=\"noreferrer noopener\">2025</a>",
-          "<a href=\"https://simonwillison.net/2026/\" target=\"_blank\" rel=\"noreferrer noopener\">2026</a>"
-        ]
-      }
-    ],
-    "refineErrors": [
-      {
-        "index": 1,
-        "type": "paragraph",
-        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
-      },
-      {
-        "index": 2,
-        "type": "heading",
-        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
-      },
-      {
-        "index": 3,
-        "type": "paragraph",
-        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
-      },
-      {
-        "index": 4,
-        "type": "paragraph",
-        "message": "Pi exited with code 1: 502 unknown provider for model gpt-5.4"
+        "html": "如果我们希望从代理中获得最佳结果，就应该致力于随着时间推移持续提升代码库质量。小的改进会复利。过去耗时的质量提升如今已便宜到没有借口不在发布新功能的同时投资质量。编码代理意味着我们终于可以两者兼得。"
       }
     ]
   },

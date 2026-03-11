@@ -5,6 +5,163 @@
   },
   "posts": [
     {
+      "slug": "ai-should-help-us-produce-better-code-agentic-engineering-patterns",
+      "title": "AI should help us produce better code - Agentic Engineering Patterns",
+      "author": "Simon Willison",
+      "publishedAt": "2026-03-10",
+      "source": "Simon Willison",
+      "url": "https://simonwillison.net/guides/agentic-engineering-patterns/better-code/#atom-everything",
+      "excerpt": "这篇文章围绕“AI should help us produce better code - Agentic Engineering Patterns”展开，RSS 摘要提到：AI should help us produce better code - Agentic Engineering Patterns",
+      "tags": [
+        "AI",
+        "Tools",
+        "Agents",
+        "DevTools"
+      ],
+      "content": [
+        {
+          "heading": "文章核心",
+          "paragraphs": [
+            "基于 RSS 摘要与页面元数据，原文重点是：AI should help us produce better code - Agentic Engineering Patterns",
+            "来源信息：Simon Willison｜2026-03-10。"
+          ]
+        },
+        {
+          "heading": "值得继续补充的点",
+          "paragraphs": [
+            "从趋势上看，这类文章值得关注的点在于 AI 正在从一次性回答工具，进一步走向可持续嵌入工作流的执行层。",
+            "当前 spec 主要用于把 RSS 条目先落成静态站文章入口；如果后续抓到更完整正文，再补 detail.blocks[]。"
+          ]
+        }
+      ],
+      "detail": {
+        "available": false,
+        "layout": "detail-zh",
+        "translatedFrom": "https://simonwillison.net/guides/agentic-engineering-patterns/better-code/#atom-everything",
+        "sourceName": "Simon Willison",
+        "sourceDescription": "以下为原文逐段直译，保留原文段落推进与媒体顺序。",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "html": "许多开发者担心把代码交给 AI 工具会导致质量下降，生成糟糕代码却产出速度快到让决策者愿意忽视缺陷。"
+          },
+          {
+            "type": "paragraph",
+            "html": "如果采用编码代理确实降低了你正在产出的代码与功能质量，你应该直接解决这个问题：找出流程中哪些环节正在伤害输出质量并加以修复。"
+          },
+          {
+            "type": "paragraph",
+            "html": "用代理发布更差的代码是一种选择。我们可以选择发布更好的代码。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Avoiding taking on technical debt"
+          },
+          {
+            "type": "paragraph",
+            "html": "我倾向于从技术债的角度思考如何交付更好的代码。我们承担技术债是权衡的结果：按“正确方式”做会花太久时间，所以我们在既定时间约束下做事，并祈祷项目能存活到以后再还债。"
+          },
+          {
+            "type": "paragraph",
+            "html": "避免技术债的最佳缓解方式，是一开始就别背上它。"
+          },
+          {
+            "type": "paragraph",
+            "html": "按我的经验，技术债修复中常见的一类是那些概念上简单但非常耗时的改动。"
+          },
+          {
+            "type": "list",
+            "items": [
+              "我们最初的 API 设计没有覆盖后来出现的重要用例。修复这个 API 需要在许多不同地方改代码，于是更快的办法是添加一个几乎相同的新 API 并接受这种重复。",
+              "我们早期把一个概念命名错了——比如叫 teams 而不是 groups——但要在代码中到处清理这种命名太费工，所以只在 UI 中修正。",
+              "我们的系统随着时间增长出现了重复但略有差别的功能，需要合并与重构。",
+              "某个文件已经长到数千行代码，本应拆分成多个模块。"
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Coding agents can handle these for us"
+          },
+          {
+            "type": "paragraph",
+            "html": "像这样的重构任务非常适合使用编码代理。"
+          },
+          {
+            "type": "paragraph",
+            "html": "启动一个代理，告诉它要改什么，让它在某个分支或 worktree 中后台跑。"
+          },
+          {
+            "type": "paragraph",
+            "html": "我通常使用异步编码代理，比如 <a href=\"https://jules.google.com/\" target=\"_blank\" rel=\"noreferrer noopener\">Gemini Jules</a>、<a href=\"https://developers.openai.com/codex/cloud/\" target=\"_blank\" rel=\"noreferrer noopener\">OpenAI Codex web</a> 或 <a href=\"https://code.claude.com/docs/en/claude-code-on-the-web\" target=\"_blank\" rel=\"noreferrer noopener\">Claude Code on the web</a>。这样我可以让这些重构任务在后台跑，而不打断我在笔记本上的工作流。"
+          },
+          {
+            "type": "paragraph",
+            "html": "在 Pull Request 中评估结果。好就合入；接近就继续提示告诉它需要如何不同；不好就丢弃。"
+          },
+          {
+            "type": "paragraph",
+            "html": "代码改进的成本已经降得很低，以至于我们可以对轻微代码异味和不便采取零容忍态度。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "AI tools let us consider more options"
+          },
+          {
+            "type": "paragraph",
+            "html": "任何软件开发任务都伴随大量可选路径。许多最严重的技术债来自规划阶段做出的糟糕选择——错过了显而易见的简单方案，或选择了后来证明并不合适的技术。"
+          },
+          {
+            "type": "paragraph",
+            "html": "LLM 能帮助我们不遗漏那些之前没想到的明显方案。它们只会建议其训练数据中常见的方案，但这些往往是最可能奏效的 <a href=\"https://boringtechnology.club\" target=\"_blank\" rel=\"noreferrer noopener\">Boring Technology</a>。"
+          },
+          {
+            "type": "paragraph",
+            "html": "更重要的是，编码代理可以帮助进行探索性原型开发。"
+          },
+          {
+            "type": "paragraph",
+            "html": "做出有把握的技术选择的最佳方式，是用一个原型来证明它适用。"
+          },
+          {
+            "type": "paragraph",
+            "html": "Redis 是否适合一个预计会有数千并发用户的网站活动流？"
+          },
+          {
+            "type": "paragraph",
+            "html": "要确切知道答案，最好的办法是搭建该系统的模拟并跑一轮负载测试，看看会在哪里出问题。"
+          },
+          {
+            "type": "paragraph",
+            "html": "编码代理可以通过一个精心编写的提示就构建这种模拟，将这类实验的成本几乎降为零。而且因为它们足够便宜，我们可以同时运行多个实验，测试不同方案并选择最适合问题的那个。"
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Embrace the compound engineering loop"
+          },
+          {
+            "type": "paragraph",
+            "html": "代理会遵循指令。我们可以随着时间推移不断改进这些指令，从以前的运行中学习，以获得更好的结果。"
+          },
+          {
+            "type": "paragraph",
+            "html": "Every 的 Dan Shipper 和 Kieran Klaassen 把他们公司与编码代理协作的方式称为 <a href=\"https://every.to/chain-of-thought/compound-engineering-how-every-codes-with-agents\" target=\"_blank\" rel=\"noreferrer noopener\">Compound Engineering</a>。他们完成的每个编码项目都会以一次回顾结束，并把这一回顾称为“复利步骤”（compound step），即将有效经验记录下来，用于未来的代理运行。"
+          },
+          {
+            "type": "paragraph",
+            "html": "如果我们希望从代理中获得最佳结果，就应该致力于随着时间推移持续提升代码库质量。小的改进会复利。过去耗时的质量提升如今已便宜到没有借口不在发布新功能的同时投资质量。编码代理意味着我们终于可以两者兼得。"
+          }
+        ]
+      },
+      "workflow": {
+        "articleId": 2696,
+        "rssTitle": "AI should help us produce better code"
+      }
+    },
+    {
       "slug": "clear-resin-casting-replicates-old-acrylic-for-selectric-repair",
       "title": "Clear Resin Casting Replicates Old Acrylic For Selectric Repair",
       "author": "Hackaday",
